@@ -1,9 +1,3 @@
----
-description: >-
-  This page is a hub for finding and navigating between various sections of the
-  documentation.  Each section is designed for a specific audience and.or use
-  case.
----
 
 # Open Horizon Quick Start
 
