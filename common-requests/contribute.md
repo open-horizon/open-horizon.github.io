@@ -16,8 +16,8 @@ The -s option used for both alternatives causes a committer signed-off-by l
 
  In order to use the -s option, you need to make sure you configure your git name (user.name) and email address (user.email):
 ```
-$ git config –global.user.name "John Doe"
-$ git config –global.user.email johndoe@example.com
+$ git config --global user.name "John Doe"
+$ git config --global user.email "johndoe@example.com"
 
 # To check
 $ git config --list
