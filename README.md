@@ -113,7 +113,7 @@ If you go to your repository on GitHub, you'll see a `Compare & pull request but
 
 <img style="float: right;" src="assets/img/compare-and-pull.jpg" alt="create a pull request" />
 
-Now submit the pull request.
+Now submit the pull request by clicking `Create pull request`.
 
 <img style="float: right;" src="assets/img/submit-pull-request.jpg" alt="submit pull request" />
 
