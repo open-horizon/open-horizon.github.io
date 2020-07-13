@@ -6,10 +6,10 @@ We appreciate and recognize all contributors.
 
 # Table of Contents
 
-- [Fork the Repository](#)
-- [Make Necessary Changes](#)
-- [Test in Local and Push Changes to GitHub](#)
-- [Submit a Pull Request for Review](#)
+- [Fork the Repository](#fork-the-repository)
+- [Make Necessary Changes](#make-necessary-changes)
+- [Test in Local and Push Changes to GitHub](#test-in-local-and-push-changes-to-gitHub)
+- [Submit a Pull Request for Review](#submit-a-pull-request-for-review)
 
 # Fork the Repository
 
@@ -89,7 +89,7 @@ Add those changes to the branch you just created using the `git add` command:
 git add <file> 
 ```
 
-All commits should be signed off(`-s` flag on `git commit`). To use `-s` option, follow the [guidance](common-requests/contribute.html#how-to-attest) to make sure you configure your git name (user.name) and email address (user.email).
+All commits should be signed off(`-s` flag on `git commit`). To use `-s` option, follow the [guidance](common-requests/contribute.md#how-to-attest) to make sure you configure your git name (user.name) and email address (user.email).
 
 Now commit those changes using the git commit command:
 
