@@ -10,6 +10,7 @@ We appreciate and recognize all contributors.
 - [Make Necessary Changes](#make-necessary-changes)
 - [Test in Local and Push Changes to GitHub](#test-in-local-and-push-changes-to-gitHub)
 - [Submit a Pull Request for Review](#submit-a-pull-request-for-review)
+- [Clean Up](#clean-up)
 
 # Fork the Repository
 
@@ -118,3 +119,28 @@ Now submit the pull request by clicking `Create pull request`.
 <img style="float: right;" src="assets/img/submit-pull-request.jpg" alt="submit pull request" />
 
 You will get a notification email once the changes have been merged.
+
+# Clean Up
+
+## Delete the branch
+
+Once your Pull Request has been approved/merged, you are safe to delete the branch created ealier. Change to the repository directory on your computer and execute the following commands to delete the branch:
+
+Delete the local branch:
+
+```
+git branch -d <branch-name>
+```
+
+Delete remote branch:
+
+```
+git push origin :<branch-name>
+```
+
+## Syncing a fork
+
+Connect your local repository to the original “upstream” repository by adding it as a remote. Pull in changes from “upstream” often so that you stay up to date so that when you submit your pull request, merge conflicts will be less likely. 
+
+Refer to [Sync a fork of a repository to keep it up-to-date with the upstream repository.](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork)
+
