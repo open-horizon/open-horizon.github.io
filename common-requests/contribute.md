@@ -15,10 +15,11 @@ The -s option used for both alternatives causes a committer signed-off-by l
 `signed-off-by: John Doe johndoe@example.com`
 
  In order to use the -s option, you need to make sure you configure your git name (user.name) and email address (user.email):
-```
-$ git config --global user.name "John Doe"
-$ git config --global user.email "johndoe@example.com"
+
+{% capture code %}git config --global user.name "John Doe"
+git config --global user.email "johndoe@example.com"
 
 # To check
-$ git config --list
-```
+git config --list{% endcapture %}
+
+{% include code_snippet.md code=code language='shell' %}
