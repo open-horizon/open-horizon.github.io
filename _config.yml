@@ -4,7 +4,11 @@ theme: jekyll-theme-tactile
 
 
 # Secondary Parameters
-# baseurl: "/toc-avm/avm"
 header-img: img/hero-dark.jpg
 headercolor: "#FFFFFF"
 logo: img/logos/open-horizon.png
+
+# Tertiary Parameters
+github_username: open-horizon
+project_repository: open-horizon.github.io
+altmetric: true
