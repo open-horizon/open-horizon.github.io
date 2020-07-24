@@ -1,5 +1,8 @@
-
-# Open Horizon Quick Start
+---
+layout: page
+title: "Quick Start"
+description: "A quick start to help you familiar with Open Horizon."
+---
 
 ### Overview
 

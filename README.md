@@ -22,7 +22,7 @@ To make necessary changes, you need to clone the forked repository to your machi
 
 ## Clone the repository
 
-<img align="right" width="300" src="assets/img/clone.jpg" alt="clone this repository" />
+<img align="right" width="300" src="img/clone.jpg" alt="clone this repository" />
 
 Go to your GitHub account, open the forked repository, click on the Code button and then click the *copy to clipboard* icon.
 
@@ -112,11 +112,11 @@ replacing `<add-your-branch-name>` with the name of the branch you created earli
 
 If you go to your repository on GitHub, you'll see a `Compare & pull request button`. Click on that button.
 
-<img style="float: right;" src="assets/img/compare-and-pull.jpg" alt="create a pull request" />
+<img style="float: right;" src="img/compare-and-pull.jpg" alt="create a pull request" />
 
 Now submit the pull request by clicking `Create pull request`.
 
-<img style="float: right;" src="assets/img/submit-pull-request.jpg" alt="submit pull request" />
+<img style="float: right;" src="img/submit-pull-request.jpg" alt="submit pull request" />
 
 You will get a notification email once the changes have been merged.
 
