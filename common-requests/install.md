@@ -14,6 +14,10 @@ To run the [all-in-one instructions](https://github.com/open-horizon/devops/tree
 
 ## Installation
 
-Once you have Ubuntu Server 18.04 running, ensure you are running as root (typically, `sudo -s`).  Then follow the [all-in-one instructions](https://github.com/open-horizon/devops/tree/master/mgmt-hub).  Below is an example video showing the installation process.
+Once you have Ubuntu Server 18.04 running, ensure you are running as root (typically, `sudo -i`).  Then follow the [all-in-one instructions](https://github.com/open-horizon/devops/tree/master/mgmt-hub).  Below is an example video showing the installation process.
 
 {% include youtubePlayer.html id="q4wwaE7z9v8" %}
+
+## Next
+
+After installing, go to [How to Use Open Horizon](./use.html)
