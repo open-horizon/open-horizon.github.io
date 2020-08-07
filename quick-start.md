@@ -11,7 +11,6 @@ Open Horizon is a middleware solution designed to manage the deployment and serv
 To install a simple, developer-friendly version of [all the services on one device](https://github.com/open-horizon/devops/tree/master/mgmt-hub), run the following one-liner as `root` on an x86_64 machine running Ubuntu 18.04:
 
 {% capture code %}curl -sSL https://raw.githubusercontent.com/open-horizon/devops/master/mgmt-hub/deploy-mgmt-hub.sh | bash{% endcapture %}
-
 {% include code_snippet.md code=code language='shell' %}
 
 ### Common Requests

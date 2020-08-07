@@ -1,41 +1,41 @@
 ---
 layout: page
 title: "How to Use Open Horizon"
-description: "TBD"
+description: "Basic instructions and examples for using the Open Horizon project's CLI"
 ---
 
 # How to Use Open Horizon
 
 ## Now that I have it installed, what next?
 
-Let's start by getting familiar with the CLI (Command Line Interface), 
-which is the primary way you can interact directly with the Anax Agent and the Management Hub services.  The CLI uses a short, easy-to-remember synonym for the word "horizon", `hzn`.  If you remember nothing else about how to use Open Horizon, just type in `hzn` from the command prompt to get a complete view of how to get started using the CLI.
+You should become familiar with the Command Line Interface (CLI). This is the primary way to interact with the Anax agent and management hub services.
 
-## Your first command
+> Note: Type `hzn` to view information about getting started with the CLI.
 
-The first command to try can be the simple "version", which will tell you the version numbers of both the CLI and the Agent.  If the CLI can't tell you the Agent version, or it doesn't match the CLI version, you have a problem.  This will most likely not happen.  Give it a try:
+## Try a command
 
-``` shell
-hzn version
-```
+Use "version" to view the CLI and agent version numbers:
 
-At the time we wrote the documentation, that command returned this:
+{% capture code %}hzn version{% endcapture %}
+{% include code_snippet.md code=code language='shell' %}
+
+In this example, the command returns:
 
 ``` text
 Horizon CLI version: 2.26.12
 Horizon Agent version: 2.26.12
 ```
 
-## Get the Agent's configuration
+## Find the edge node's configuration
 
-Now that we've established that the CLI is working, let's use the "node" command to get the node's configuration from the Agent:
+Use `node` to find the node configuration from the agent:
 
-``` shell
-hzn node list
-```
+{% capture code %}hzn node list{% endcapture %}
+{% include code_snippet.md code=code language='shell' %}
 
-Notice that the typical pattern we're following here is [CLI] [Object Noun] [Action Verb]. 
-The response that you will get back will look vaguely like this JSON example:
+> Note the typical [CLI] [Object Noun] [Action Verb] pattern.
+
+The response should be similar to this JSON example:
 
 ``` json
 {
@@ -63,20 +63,22 @@ The response that you will get back will look vaguely like this JSON example:
 }
 ```
 
-This output will require a little more explanation. 
-Beginning with the first two lines, `id` refers to the ID we assigned to this edge node, and `organization` refers to the ad-hoc group that the device "belongs" to. 
+### Example Details
 
-Next, take a look at the `configstate.state` property.  If the value is "configured", then this tells you that the edge node is currently registered for a service.
+In the first two lines, `id` is the ID assigned to this edge node and `organization` is the ad-hoc group that owns the device.
 
-Last, look at the `configuration.exchange_version` property.  If you do not see a version number as the value, this is most likely because the Agent cannot query the Exchange service for the version, which may mean that your Agent is not connected to the Management Hub.  This will most likely not happen using the all-in-one installation.
+If the `configstate.state` property value is **configured**, the edge node is currently registered for a service.
 
-## Look at the Agreement formed when your node registered for a service
+Lastly, if you do not see a version number value in the `configuration.exchange_version` property, this is probably because the agent cannot query the exchange service for the version. This might indicate that your agent is not connected to the management hub, but this is not typical in all-in-one installations.
 
-``` shell
-hzn agreement list
-```
+## Check the agreement
 
-This command will display a JSON array of objects showing one or more active agreements between the edge node and AgBots:
+Check the agreement formed when your edge node registered for a service:
+
+{% capture code %}hzn agreement list{% endcapture %}
+{% include code_snippet.md code=code language='shell' %}
+
+This command displays a JSON array of objects showing one or more active agreements between the edge node and AgBots:
 
 ``` json
 [
@@ -100,25 +102,32 @@ This command will display a JSON array of objects showing one or more active agr
 ]
 ```
 
-Pay attention to the following properties:
-* `0.agreement_creation_time` - When the agreement was proposed by the AgBot
-* `0.agreement_accepted_time` - When the agreement was accepted by the edge node
-* `0.agreement_finalized_time` - When the agreement was completed
-* `0.agreement_execution_start_time` - When the edge node began downloading the container image(s)
+Note the following properties:
 
-Once you see a value for `agreement_execution_start_time`, you should expect to be able to run `docker ps` to see the workloads starting.
+| Property | Description |
+| --- | --- |
+| `0.agreement_creation_time` | When the agreement was proposed by the AgBot |
+| `0.agreement_accepted_time` | When the agreement was accepted by the edge node |
+| `0.agreement_finalized_time` | When the agreement was completed |
+| `0.agreement_execution_start_time` | When the edge node began downloading the container image(s) |
 
-## Other things to try
+After you see the `agreement_execution_start_time` value, you can run `docker ps` to confirm that the workloads have started.
 
-To see the logs of the sample "helloworld" service installed by default, try `hzn service log -f ibm.helloworld`.
+## More activities
 
-To view all of the steps logged in the process of negotiating an agreement, type `hzn eventlog list`.
+| Task | Command |
+| --- | --- |
+| View the default "helloworld" sample service | `hzn service log -f ibm.helloworld` |
+| View the agreement negotiation's logged steps | `hzn eventlog list` |
+| View the node's policy | `hzn policy list` |
 
-And to view the node's policy that triggered deployment of the "helloworld" service, try `hzn policy list`.
+## Communicate with the exchange
 
-## One last thing ...
+To use the exchange communication commands, set up two environment variables.
 
-We've been using the CLI to communicate with the Anax agent.  There's a whole other set of commands to run that have you communicating with the Exchange.  To get those working, you'll need to set two environment variables.  To do so, you'll need one important bit of information from the all-in-one installation summary message.  Hopefully you saved that information.  It should look something like this:
+### Prerequisite
+
+You need this information from the all-in-one installation summary message displayed when you installed the management hub, agent, and CLI.  The summary message is similar to this example:
 
 ``` text
 ----------- Summary of what was done:
@@ -137,21 +146,31 @@ We've been using the CLI to communicate with the Anax agent.  There's a whole ot
 For what to do next, see: https://github.com/open-horizon/devops/blob/master/mgmt-hub/README.md#all-in-1-what-next
 ```
 
-Using the "User org admin user generated password" from the message above, export the following two environment variables with the substitution shown below:
+Use the "User org admin user generated password" in the previous message to export the following environment variables, using the substitution shown below:
 
 ``` shell
 export HZN_ORG_ID=myorg
 export HZN_EXCHANGE_USER_AUTH=admin:[User org admin user generated password]
 ```
 
-Once you've done that, you should be able to connect to the Exchange with the CLI.  Try `hzn exchange status` or `hzn exchange node list` to confirrm that it is working with no errors.  Also, `hzn exchange user list` will show you what user account you are currently using, and if it is successfully authenticated.
+> Now, you should be able to connect to the exchange with the CLI.
 
-Here are three commands you can now run:
+Use `hzn exchange status` or `hzn exchange node list` to confirm that it works with no errors. Additionally, `hzn exchange user list` displays the user account that you are currently using and if it is authenticated successfully.
 
-* View the example edge services: `hzn exchange service list IBM/`
-* View the example patterns: `hzn exchange pattern list IBM/`
-* View the example deployment policies: `hzn exchange deployment listpolicy`
+These commands are available now:
 
-## Want some more?
+| Task | Command |
+| --- | --- |
+| View the example edge services | `hzn exchange service list IBM/` |
+| View the example patterns | `hzn exchange pattern list IBM/` |
+| View the example deployment policies | `hzn exchange deployment listpolicy` |
 
-To view other commands to run, try exploring by using the following pattern "hzn [command] (sub-command) -h".
+## More information
+
+Use the hzn [command] (sub-command) -h pattern to explore other commands.
+
+Example:
+
+* `hzn -h`
+* `hzn exchange -h`
+* `hzn exchange status -h`
