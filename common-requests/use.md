@@ -1,10 +1,10 @@
 ---
 layout: page
-title: "How to Use Open Horizon"
-description: "Basic instructions and examples for using the Open Horizon project's CLI"
+title: "How to use Open Horizon"
+description: "Basic instructions and examples for using the Open Horizon projects CLI"
 ---
 
-# How to Use Open Horizon
+# How to use Open Horizon
 
 ## Now that I have it installed, what next?
 
@@ -26,7 +26,7 @@ Horizon CLI version: 2.26.12
 Horizon Agent version: 2.26.12
 ```
 
-## Find the edge node's configuration
+## Find the edge nodes configuration
 
 Use `node` to find the node configuration from the agent:
 
@@ -63,7 +63,7 @@ The response should be similar to this JSON example:
 }
 ```
 
-### Example Details
+### Example details
 
 In the first two lines, `id` is the ID assigned to this edge node and `organization` is the ad-hoc group that owns the device.
 
@@ -118,14 +118,14 @@ After you see the `agreement_execution_start_time` value, you can run `docker ps
 | Task | Command |
 | --- | --- |
 | View the default "helloworld" sample service | `hzn service log -f ibm.helloworld` |
-| View the agreement negotiation's logged steps | `hzn eventlog list` |
-| View the node's policy | `hzn policy list` |
+| View the agreement negotiation logged steps | `hzn eventlog list` |
+| View the node policy | `hzn policy list` |
 
 ## Communicate with the exchange
 
 To use the exchange communication commands, set up two environment variables.
 
-### Prerequisite
+### Pre-requisite
 
 You need this information from the all-in-one installation summary message displayed when you installed the management hub, agent, and CLI.  The summary message is similar to this example:
 
