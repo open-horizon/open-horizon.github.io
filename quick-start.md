@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Quick Start"
-description: "A quick start to help you familiar with Open Horizon."
+description: "A guide to get you using Open Horizon in minutes."
 ---
 
 ### Overview
