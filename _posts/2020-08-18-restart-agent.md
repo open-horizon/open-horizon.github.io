@@ -1,11 +1,12 @@
 ---
-layout: post
-title: "How do I (re)start the agent?"
-description: ""
-tags:
- - agent
-excerpt_separator: <!--more-->
+layout:             post
+title:              "How do I (re)start the agent?"
+description:        ""
+tags:               Agent
+author:             joewxboy
+excerpt_separator:  <!--more-->
 ---
+
 # How do I (re)start the agent?
 
 To start the native binary agent (usually on Linux), you would need to run it as root:
