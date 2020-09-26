@@ -12,6 +12,7 @@ author: edeediong
 ## Technical Support
 
 Open Horizon uses [Slack](https://slack.com/help/articles/115004071768-What-is-Slack-) for internal communication.
+
 For Open Horizon technical support, join the LF Edge [Slack workspace](https://join.slack.com/t/lfedge/shared_invite/zt-7kavdtmq-SeyFzM2CEABBcKYGEVCgkw) if you haven't.
 When you join the LF Edge *#open-horizon-help* slack channel, you can post technical and non-technical inquiries receive help team responses.
 
