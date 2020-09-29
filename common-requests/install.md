@@ -10,7 +10,7 @@ description: "Instructions for installing the Open Horizon project's Management 
 
 To run the [all-in-one instructions](https://github.com/open-horizon/devops/tree/master/mgmt-hub) for the Management Hub, Agent, and CLI all in one VM, you need a VM with: 
 
-* >= 4GB RAM 
+* &gt;= 4GB RAM
 * 20GB storage 
 * Ubuntu Server 18.04 LTS
 
