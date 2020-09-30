@@ -9,8 +9,11 @@ tags:
 author: clementkng
 ---
 
-## Report an Issue
+# Report an issue
 
-If you would like to report an issue, visit the Github [issues section](https://github.com/open-horizon/open-horizon.github.io/issues), click the New issue button, and then fill out issue details.
-
-Please fill out a short, descriptive title for the issue and use the bigger text box to describe details such as current behavior, desired behavior, and what browser version you're seeing the issue on.
+To report issues:
+1. Navigate to the [Github issues section](https://github.com/open-horizon/open-horizon.github.io/issues).
+2. Click **New issue**.
+3. In the **Title** field, type a descriptive title for the issue.
+4. In the **Write** tab field, enter details such as current behavior, desired behavior, operating system and version, architecture (arm32, arm64, x86, power, z1, quantum), device, and any other operating parameters that will help us replicate the issue.
+5. Click **Submit new issue**.
