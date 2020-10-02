@@ -18,7 +18,7 @@ This video shows an example of installing Ubuntu Server on VirtualBox 6.1 on OSX
 
 {% include youtubePlayer.html id="YQqFnRNL98s" %}
 The links for installation
-* [Ubuntu Server 18.04 LTS for AMD64](http://cdimage.ubuntu.com/ubuntu/releases/18.04/release/ubuntu-18.04.5-server-amd64.iso)
+* [Ubuntu Server 18.04 LTS for AMD64.](http://cdimage.ubuntu.com/ubuntu/releases/18.04/release/ubuntu-18.04.5-server-amd64.iso)
 * [VirtualBox 6.1](https://www.virtualbox.org/wiki/Downloads)
 * [Open Horizon Management Hub installation instructions](https://github.com/open-horizon/devops/blob/master/mgmt-hub/README.md)
 * [Open Horizon project](https://www.lfedge.org/projects/openhorizon/)  
