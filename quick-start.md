@@ -26,4 +26,4 @@ To install a simple, developer-friendly version of [all the services on one devi
 📚 How to [get support for Open Horizon](common-requests/get-technical-support.md)
 
 ### Learn More
-About Open Horizon Project [here](https://www.youtube.com/playlist?list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix).
+From [Open-Horizon Project Playlist](https://www.youtube.com/playlist?list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix) on YouTube.
