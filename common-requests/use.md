@@ -37,7 +37,7 @@ Use `node` to find the node configuration from the agent:
 
 The response should be similar to this JSON example:
 
-``` json
+``` javascript
 {
   "id": "node1",
   "organization": "myorg",
@@ -80,7 +80,7 @@ Check the agreement formed when your edge node registered for a service:
 
 This command displays a JSON array of objects showing one or more active agreements between the edge node and AgBots:
 
-``` json
+``` javascript
 [
   {
     "name": "Policy for myorg/node1 merged with myorg/policy-ibm.helloworld_1.0.0",
