@@ -34,11 +34,11 @@ Optionally, you can install [{{site.data.keyword.open_shift_cp}} cluster logging
 Two supported database configurations impact sizing considerations for the {{site.data.keyword.ieam}} management hub:
 
 * **Local** databases are installed (by default) as {{site.data.keyword.open_shift}} resources onto your {{site.data.keyword.open_shift}} cluster.
-* **remote** databases are databases that you provisioned, which can be on-premises, cloud provider SaaS offerings, and so on.
+* **Remote** databases are databases that you provisioned, which can be on-premises, cloud provider SaaS offerings, and so on.
 
 ### {{site.data.keyword.ieam}} local database storage requirements
 
-**local** databases require persistent storage, which uses dynamic storage classes that are configured for your {{site.data.keyword.open_shift}} cluster.
+**Local** databases require persistent storage, which uses dynamic storage classes that are configured for your {{site.data.keyword.open_shift}} cluster.
 
 For more information, see [supported dynamic {{site.data.keyword.open_shift}} storage options and configuration instructions ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://docs.openshift.com/container-platform/4.4/storage/understanding-persistent-storage.html).
 
@@ -51,7 +51,7 @@ oc get storageclass <desired storage class> -o json | jq .allowVolumeExpansion
 
 If the storage class allows volume expansion, sizing can be adjusted post installation (given the underlying storage space is available for allocation). If the storage class does not allow volume expansion, you must pre-allocate storage for your use case. 
 
-If more storage is necessary after initial installation with a storage class that does not allow for volume expansion, you will need to run through a re-installation using the steps that are described in the [backup and recovery](../admin/backup_recovery.md) page.
+If more storage is necessary after initial installation with a storage class that does not allow for volume expansion, you will need to run through a re-installation using the steps that are described in the [backup and recovery](../admin/) page.
 
 The allocations can be changed before the {{site.data.keyword.ieam}} Management Hub installation by modifying the **Storage** values as described on the [configuration](configuration.md) page. The allocations are set to the following default values:
 
@@ -66,17 +66,6 @@ The allocations can be changed before the {{site.data.keyword.ieam}} Management 
 
 * **Notes:**
   * {{site.data.keyword.ieam}} volumes are created with the **ReadWriteOnce** access mode.
-  * IBM Cloud Platform Common Services has more storage requirements for its services. The following volumes are created in the **ibm-common-services** namespace when installing with {{site.data.keyword.ieam}} defaults:
-    ```
-    NAME                                                                                     STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
-    alertmanager-ibm-monitoring-alertmanager-db-alertmanager-ibm-monitoring-alertmanager-0   Bound    pvc-3979805f-8e3b-44d6-a039-cd438a3dbb25   10Gi       RWO            csi-cephfs     20h
-    mongodbdir-icp-mongodb-0                                                                 Bound    pvc-e21604a7-14e4-4049-824e-a5a9feb472c8   20Gi       RWO            csi-cephfs     20h
-    mongodbdir-icp-mongodb-1                                                                 Bound    pvc-eaecfa29-5c6a-45c2-9d26-58a393103791   20Gi       RWO            csi-cephfs     20h
-    mongodbdir-icp-mongodb-2                                                                 Bound    pvc-42282c2b-bde8-4adf-86ad-006d2f07df91   20Gi       RWO            csi-cephfs     19h
-    prometheus-ibm-monitoring-prometheus-db-prometheus-ibm-monitoring-prometheus-0           Bound    pvc-90237949-6f13-481b-8afa-7d86883b8a4f   10Gi       RWO            csi-cephfs     20h
-    ```
-
-    You can learn more about IBM Cloud Platform Common Services storage requirements and configuration options [here](https://www.ibm.com/support/knowledgecenter/SSHKN6/installer/3.x.x/custom_resource.html).
 
 ### {{site.data.keyword.ieam}} remote database considerations
 

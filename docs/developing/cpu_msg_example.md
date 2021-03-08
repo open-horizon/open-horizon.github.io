@@ -60,7 +60,7 @@ The cpu2evtstreams edge service is an example of a service that depends on two o
     ],
 ```
 
-### Configuration Variables
+### Configuration variables
 {: #cpu_msg_config_var}
 
 The **cpu2evtstreams** service requires some configuration before it can run. Edge services can declare configuration variables, stating their type and providing default values. You can see these configuration variables in **horizon/service.definition.json**, in the **userInput** section:
