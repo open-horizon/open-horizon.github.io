@@ -105,7 +105,7 @@ open_shift_cp:
 semver:
   4.2.0
 tech_prev:
-  Important&colon; This content is a technical preview, and should not be relied on in a production environment&period;
+  Important&colon; This content is a technical preview and should not be relied on in a production environment&period;
 windows:
   Windows&trade;
 windows_notm:

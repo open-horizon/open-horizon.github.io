@@ -17,7 +17,7 @@ lastupdated: "2021-02-20"
 # Overview of {{site.data.keyword.edge_notm}}
 {: #overviewofedge}
 
-This section provides an overview of {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}).
+This section provides an overview of {{site.data.keyword.edge_notm}} ({{site.data.keyword.edge_abbr}}).
 
 ## {{site.data.keyword.ieam}} capabilities
 {: #capabilities}

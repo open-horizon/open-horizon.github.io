@@ -22,7 +22,7 @@ You will be creating workloads that will operate in the edge – at compute faci
 ## Best practices for developing edge services
 {: #best_practices}
 
-The following best practices and guidelines help you design and develop edge services for use with {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}).
+The following best practices and guidelines help you design and develop edge services for use with {{site.data.keyword.edge_notm}} ({{site.data.keyword.edge_abbr}}).
 {:shortdesc}
 
 Automating the running of services at the edge is different from automating services in the cloud in the following ways:
@@ -30,11 +30,11 @@ Automating the running of services at the edge is different from automating serv
 * The number of edge nodes can be much greater.
 * The networks to edge nodes can be unreliable and much slower. Edge nodes are often behind firewalls so connections usually cannot be initiated from the cloud to the edge nodes.
 * Edge nodes are resource-constrained.
-* A driving force behind operating workloads at the edge is the ability to reduce latency and optimize network bandwidth. This makes workload placement in relation to where data an important factor. 
+* A driving force behind operating workloads at the edge is the ability to reduce latency and optimize network bandwidth. This makes workload placement in relation to where data is generated an important factor. 
 * Typically, edge nodes are in remote locations and are not set up by operations staff. After an edge node is set up, staff might not be available to administer the node.
 * Edge nodes are also usually less trusted environments than cloud servers.
 
-These differences require different techniques to deploy and manage software on edge nodes. {{site.data.keyword.ieam}} is designed for managing edge nodes. When you are creating services, adhere to the following guidelines to ensure that your services are designed for working with edge nodes.
+These differences require different techniques to deploy and manage software on edge nodes. {{site.data.keyword.edge_abbr}} is designed for managing edge nodes. When you are creating services, adhere to the following guidelines to ensure that your services are designed for working with edge nodes.
 
 ## Guidelines for developing services
 {: #service_guidelines}
