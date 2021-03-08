@@ -48,7 +48,6 @@ The {{site.data.keyword.ieam}} management hub is designed specifically for edge 
 |**{{site.data.keyword.ieam}} management hub**|4.2.0|The {{site.data.keyword.ieam}} management hub manages the edge nodes and the edge service software lifecycle on each edge node.|
 |Agbot|2.27.0|Agreement bot (agbot) instances are created centrally and are responsible for deploying workloads and machine learning models to {{site.data.keyword.ieam}} edge nodes.|
 |Exchange|2.54.0|The Exchange provides a REST API to all of the {{site.data.keyword.ieam}} resources (patterns, policies, services, nodes, and so on) used by all the other components in {{site.data.keyword.ieam}}.|
-|UI Management console |4.2.0|The web UI used by {{site.data.keyword.ieam}} administrators to view and manage the other components of  {{site.data.keyword.ieam}}.|
 |MMS|1.4.1|The Model Management System (MMS) facilitates the storage, delivery, and security of models and files needed by edge services. This enables edge nodes to easily send and receive models and files to and from the management hub.|
 |SDO|1.8.6|The Secure Device Onboarding (SDO) service enables SDO-enabled edge devices to be configured with zero touch.|
 |**Edge node**| |Any edge device, edge cluster, or edge gateway where edge computing takes place.|
