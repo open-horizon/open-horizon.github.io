@@ -50,20 +50,20 @@
 		 M1494.8,381v4h-2v-4H1494.8z M1494.8,373v4h-2v-4H1494.8z M1494.8,365v4h-2v-4H1494.8z M1494.8,357v4h-2v-4H1494.8z M1494.8,349v4
 		h-2v-4H1494.8z M1494.8,341v4h-2v-4H1494.8z"/>
 	<rect x="365.1" y="231.1" class="st8" width="184" height="15.6"/>
-	<text transform="matrix(1 0 0 1 365.1083 242.9885)" class="st9 st10 st11">IEAM management hub</text>
+	<text transform="matrix(1 0 0 1 365.1083 242.9885)" class="st9 st10 st11">OH management hub</text>
 	<rect x="139.7" y="533.2" class="st8" width="319.6" height="15.6"/>
-	<text transform="matrix(1 0 0 1 139.7278 544.9918)" class="st9 st10 st11">Red Hat® OpenShift® Container Platform</text>
+	<text transform="matrix(1 0 0 1 139.7278 544.9918)" class="st9 st10 st11">Optional Kubernetes container platform</text>
 	<rect id="Rectangle-Copy-14" x="868.8" y="513" class="st12" width="117" height="100"/>
 	<rect x="884.8" y="533.2" class="st8" width="94.6" height="15.6"/>
 	<text transform="matrix(1 0 0 1 884.827 544.9918)" class="st9 st10 st11">Edge node</text>
 	<rect x="139.7" y="231.1" class="st8" width="148" height="57"/>
-	<text transform="matrix(1 0 0 1 139.7274 242.9885)"><tspan x="0" y="0" class="st9 st10 st11">IBM Cloud Platform </tspan><tspan x="0" y="22" class="st9 st10 st11">Common Services</tspan></text>
+	<text transform="matrix(1 0 0 1 139.7274 242.9885)"><tspan x="0" y="0" class="st9 st10 st11">Optional cloud platform </tspan><tspan x="0" y="22" class="st9 st10 st11">utilities and services</tspan></text>
 	<rect x="10" y="51.6" class="st8" width="99.9" height="17.9"/>
-	<text transform="matrix(1 0 0 1 13.4691 61.9691)" class="st13 st14 st15">Cloud installer</text>
+	<text transform="matrix(1 0 0 1 13.4691 61.9691)" class="st13 st14 st15">Management hub installation</text>
 	<rect x="67.6" y="98.6" class="st8" width="99.9" height="56"/>
-	<text transform="matrix(1 0 0 1 67.587 108.967)" class="st13 st14 st15">1. Sets up OCP</text>
+	<text transform="matrix(1 0 0 1 67.587 108.967)" class="st13 st14 st15">1. Sets up Kube</text>
 	<rect x="195.6" y="98.6" class="st8" width="149.1" height="56"/>
-	<text transform="matrix(1 0 0 1 195.5871 108.967)"><tspan x="0" y="0" class="st13 st14 st15">2. Installs IBM Cloud </tspan><tspan x="0" y="20" class="st13 st14 st15">Platform Common </tspan><tspan x="0" y="40" class="st13 st14 st15">Services</tspan></text>
+	<text transform="matrix(1 0 0 1 195.5871 108.967)"><tspan x="0" y="0" class="st13 st14 st15">2. Installs any needed </tspan><tspan x="0" y="20" class="st13 st14 st15">utilities and </tspan><tspan x="0" y="40" class="st13 st14 st15">services</tspan></text>
 	<rect x="385.6" y="98.6" class="st8" width="149.1" height="56"/>
 	<text transform="matrix(1 0 0 1 385.5871 108.967)"><tspan x="0" y="0" class="st13 st14 st15">3. Installs the </tspan><tspan x="0" y="20" class="st13 st14 st15">components on the </tspan><tspan x="0" y="40" class="st13 st14 st15">management hub</tspan></text>
 	<rect x="562.6" y="98.6" class="st8" width="172" height="56"/>

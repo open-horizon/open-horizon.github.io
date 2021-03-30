@@ -22,7 +22,7 @@
 	.st16{font-size:12px;}
 	.st17{fill:none;}
 </style>
-<title>01_IEAM_overview</title>
+<title>01_OH_overview</title>
 <g id="Group-2" transform="translate(21.000000, 0.000000)">
 	<circle id="Oval-Copy-3" class="st0" cx="24" cy="205" r="24"/>
 	<g id="icon_x2F_policy-admin" transform="translate(8.000000, 8.000000)">
@@ -138,7 +138,7 @@
 <rect x="745" y="144.9" class="st12" width="162.3" height="15.6"/>
 <text transform="matrix(1 0 0 1 744.9996 156.7782)" class="st13 st14 st15">Container registry</text>
 <rect x="245.8" y="147.1" class="st12" width="236.1" height="15.6"/>
-<text transform="matrix(1 0 0 1 245.8172 158.9718)" class="st13 st14 st15">IEAM management hub</text>
+<text transform="matrix(1 0 0 1 245.8172 158.9718)" class="st13 st14 st15">OH management hub</text>
 <rect x="469" y="343.2" class="st12" width="95" height="15.6"/>
 <text transform="matrix(1 0 0 1 469.0002 355.0536)" class="st13 st14 st15">Edge node</text>
 <rect x="174" y="346.6" class="st12" width="90.6" height="87.4"/>

@@ -59,7 +59,7 @@
 	C190.1,426,191,425.1,191,424L191,424z"/>
 <polygon id="Fill-4" class="st2" points="163,420 166,420 166,432 168,432 168,420 171,420 171,418 163,418 "/>
 <rect x="450" y="20" class="st6" width="236.1" height="15.6"/>
-<text transform="matrix(1 0 0 1 450.0001 31.8297)" class="st7 st8 st9">IEAM management hub</text>
+<text transform="matrix(1 0 0 1 450.0001 31.8297)" class="st7 st8 st9">OH management hub</text>
 <rect x="326" y="303.2" class="st6" width="236.1" height="15.6"/>
 <text transform="matrix(1 0 0 1 326.0002 315.0536)" class="st7 st8 st9">Edge device</text>
 <rect x="646" y="192.7" class="st6" width="126.2" height="70.5"/>

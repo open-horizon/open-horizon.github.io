@@ -58,7 +58,7 @@
 	c0-0.8-0.6-1.6-1.3-1.8l-0.1,0l-0.8-0.2l0-0.8C427.6,96,426.4,94.9,425,94.9z"/>
 <path id="Line-13" class="st6" d="M88,31l-14-7l14-7v6l41.5,0v80l254.2,0v2H127.5V25H88V31z"/>
 <rect x="505" y="20.2" class="st7" width="236.1" height="15.6"/>
-<text transform="matrix(1 0 0 1 505.0149 32.0152)" class="st8 st9 st10">IEAM management hub</text>
+<text transform="matrix(1 0 0 1 505.0149 32.0152)" class="st8 st9 st10">OH management hub</text>
 <rect x="374" y="303.2" class="st7" width="236.1" height="15.6"/>
 <text transform="matrix(1 0 0 1 373.9993 314.9901)" class="st8 st9 st10">Kubernetes edge cluster</text>
 <rect x="701" y="192.6" class="st7" width="133.1" height="76.7"/>

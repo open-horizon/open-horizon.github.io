@@ -5,3 +5,5 @@ _site/
 .DS_Store
 **/.DS_Store
 .tree.txt.swp
+vendor
+.bundle

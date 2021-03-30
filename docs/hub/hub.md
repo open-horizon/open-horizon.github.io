@@ -30,7 +30,7 @@ Complete the management hub installation and configuration before starting the {
 
 ## Management hub installation flow
 
-<img src="../images/edge/06_IEAM_management_hub_install.svg" style="margin: 3%" alt="Management hub installation overview">
+<img src="../images/edge/06_OH_management_hub_install.svg" style="margin: 3%" alt="Management hub installation overview">
 
 ## Related information
 

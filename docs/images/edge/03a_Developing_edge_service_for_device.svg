@@ -93,7 +93,7 @@
 <rect x="863" y="18.6" class="st14" width="100" height="15.4"/>
 <text transform="matrix(1 0 0 1 863.0299 28.9986)" class="st15 st8 st9">Administrator</text>
 <rect x="390" y="20.2" class="st14" width="236.1" height="15.6"/>
-<text transform="matrix(1 0 0 1 390.0002 32.033)" class="st16 st17 st18">IEAM management hub</text>
+<text transform="matrix(1 0 0 1 390.0002 32.033)" class="st16 st17 st18">OH management hub</text>
 <rect x="622" y="362.2" class="st14" width="236.1" height="15.6"/>
 <text transform="matrix(1 0 0 1 622.0001 374.0536)" class="st16 st17 st18">Edge node</text>
 <rect x="677.9" y="90.6" class="st14" width="80" height="14.9"/>
@@ -105,7 +105,7 @@
 <rect x="680.3" y="416.6" class="st14" width="111.2" height="13.7"/>
 <text transform="matrix(1 0 0 1 711.843 427.004)" class="st16 st8 st9">7. Runs</text>
 <rect x="581.9" y="90.6" class="st14" width="80" height="14.9"/>
-<text transform="matrix(1 0 0 1 614.286 100.9758)" class="st15 st8 st9">UI</text>
+<text transform="matrix(1 0 0 1 614.286 100.9758)" class="st15 st8 st9">SDO</text>
 <rect x="485.9" y="90.6" class="st14" width="80" height="14.9"/>
 <text transform="matrix(1 0 0 1 494.9906 100.9758)" class="st15 st8 st9">Exchange</text>
 <rect x="389.9" y="90.6" class="st14" width="80" height="14.9"/>
