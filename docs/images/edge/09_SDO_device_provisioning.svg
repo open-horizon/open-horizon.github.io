@@ -49,7 +49,7 @@
 	<text transform="matrix(1 0 0 1 580.8308 184.1176)"><tspan x="0" y="0" class="st3 st4 st5">SDO</tspan><tspan x="-9.6" y="20" class="st3 st4 st5">Service</tspan></text>
 </g>
 <rect x="221.7" y="35.8" class="st2" width="236.1" height="15.6"/>
-<text transform="matrix(1 0 0 1 221.7151 47.6527)" class="st6 st7 st8">IEAM management hub</text>
+<text transform="matrix(1 0 0 1 221.7151 47.6527)" class="st6 st7 st8">OH management hub</text>
 <g>
 	<rect id="Rectangle-Copy-14_1_" x="825.7" y="15.7" class="st9" width="174" height="99.3"/>
 	<rect x="841.7" y="35.8" class="st2" width="150.2" height="59.4"/>
@@ -337,11 +337,11 @@
 <rect x="863.1" y="149.4" class="st2" width="130.7" height="35.4"/>
 <text transform="matrix(1 0 0 1 863.1127 159.7205)"><tspan x="0" y="0" class="st3 st4 st5">6. Contacts </tspan><tspan x="0" y="20" class="st3 st4 st5">rendezvous server</tspan></text>
 <rect x="863.1" y="204.8" class="st2" width="136.9" height="60.4"/>
-<text transform="matrix(1 0 0 1 863.1122 215.1472)"><tspan x="0" y="0" class="st3 st4 st5">7. Redirects edge </tspan><tspan x="0" y="20" class="st3 st4 st5">nodes to IEAM </tspan><tspan x="0" y="40" class="st3 st4 st5">management hub</tspan></text>
+<text transform="matrix(1 0 0 1 863.1122 215.1472)"><tspan x="0" y="0" class="st3 st4 st5">7. Redirects edge </tspan><tspan x="0" y="20" class="st3 st4 st5">nodes to OH </tspan><tspan x="0" y="40" class="st3 st4 st5">management hub</tspan></text>
 <rect x="694" y="209.3" class="st2" width="106.7" height="43.1"/>
 <text transform="matrix(1 0 0 1 694.0245 219.634)"><tspan x="0" y="0" class="st3 st4 st5">8. Requests </tspan><tspan x="0" y="20" class="st3 st4 st5">configuration</tspan></text>
 <rect x="694" y="271.7" class="st2" width="147.3" height="57.9"/>
-<text transform="matrix(1 0 0 1 694.0245 282.102)"><tspan x="0" y="0" class="st3 st4 st5">9. Installs and </tspan><tspan x="0" y="20" class="st3 st4 st5">registers IEAM agent, </tspan><tspan x="0" y="40" class="st3 st4 st5">deploys edge services</tspan></text>
+<text transform="matrix(1 0 0 1 694.0245 282.102)"><tspan x="0" y="0" class="st3 st4 st5">9. Installs and </tspan><tspan x="0" y="20" class="st3 st4 st5">registers OH agent, </tspan><tspan x="0" y="40" class="st3 st4 st5">deploys edge services</tspan></text>
 <rect x="107.3" y="149" class="st2" width="80.2" height="40.3"/>
 <text transform="matrix(1 0 0 1 107.306 159.3489)"><tspan x="0" y="0" class="st3 st4 st5">3. Imports </tspan><tspan x="0" y="20" class="st3 st4 st5">vouchers</tspan></text>
 <rect x="661.9" y="43.6" class="st2" width="153" height="18.1"/>

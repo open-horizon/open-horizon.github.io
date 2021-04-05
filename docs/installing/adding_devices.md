@@ -36,7 +36,7 @@ The following instructions guide you through the process of installing the requi
 **Notes**: 
 
 * Installation of edge devices with Fedora or SuSE is only supported by the [Advanced manual agent installation and registration](../installing/advanced_man_install.md) method.
-* CentOS and Red Hat Enterprise Linux&reg; currently support Docker only as a container engine in IEAM 4.2.
+* CentOS and Red Hat Enterprise Linux&reg; currently support Docker only as a container engine in Open Horizon.
 
 ## Sizing
 {: #size}

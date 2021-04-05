@@ -1,9 +1,9 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "[Intel SDO](https://software.intel.com/en-us/secure-device-onboard) (Secure Device Onboard) is a technology that is created by Intel to make it easy and secure to configure edge devices and associate them with an IEAM instance. IEAM has added support for SDO-enabled devices so that the agent will be installed on the device and registered to the IEAM management hub with zero touch (by simply powering on the device).<br><br>Examples of using this API:<br><br>`curl -sS $HZN_SDO_SVC_URL/version && echo`<br>`curl -sS -w %{http_code} -u $HZN_ORG_ID/$HZN_EXCHANGE_USER_AUTH $HZN_SDO_SVC_URL/vouchers | jq`<br><br>Note: Some of these APIs can also be run via the `hzn` command.",
+    "description": "[Intel SDO](https://software.intel.com/en-us/secure-device-onboard) (Secure Device Onboard) is a technology that is created by Intel to make it easy and secure to configure edge devices and associate them with an OH instance. OH has added support for SDO-enabled devices so that the agent will be installed on the device and registered to the OH management hub with zero touch (by simply powering on the device).<br><br>Examples of using this API:<br><br>`curl -sS $HZN_SDO_SVC_URL/version && echo`<br>`curl -sS -w %{http_code} -u $HZN_ORG_ID/$HZN_EXCHANGE_USER_AUTH $HZN_SDO_SVC_URL/vouchers | jq`<br><br>Note: Some of these APIs can also be run via the `hzn` command.",
     "version": "1.8",
-    "title": "IEAM Support for SDO",
+    "title": "OH Support for SDO",
     "license": {
       "name": "Apache 2.0",
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"

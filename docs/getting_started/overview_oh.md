@@ -34,7 +34,7 @@ These edge nodes can be installed in remote on-premises locations to make your a
 
 The following diagram depicts the high-level topology for a typical edge computing setup:
 
-<img src="../images/edge/01_OH_overview.svg" style="margin: 3%" alt="IEAM overview">
+<img src="../images/edge/01_OH_overview.svg" style="margin: 3%" alt="OH overview">
 
 The {{site.data.keyword.ieam}} management hub is designed specifically for edge node management to minimize deployment risks and to manage the service software lifecycle on edge nodes fully autonomously. A Cloud installer installs and manages the {{site.data.keyword.ieam}} management hub components. Software developers develop and publish edge services to the management hub. Administrators define the deployment policies that control where edge services are deployed. {{site.data.keyword.ieam}} handles everything else.
 

@@ -383,7 +383,7 @@ This error occurs when docker encounters an error when it starts the service con
 ## How to uninstall Podman on RHEL?
 {: #uninstall_podman}
 
-If you currently have Podman installed since it is not yet supported you will need to remove Podman to install Docker on RHEL. Please follow these instructions for doing so to a clean state and ensure you have no other workloads on this device that requires the use of Podman. Podman is planned for future support in future IEAM versions TBA.
+If you currently have Podman installed since it is not yet supported you will need to remove Podman to install Docker on RHEL. Please follow these instructions for doing so to a clean state and ensure you have no other workloads on this device that requires the use of Podman. Podman is planned for future support in future OH versions TBA.
 
 1. Uninstall Packages:
 ```
@@ -404,7 +404,7 @@ cd ~ && rm -rf /.local/share/containers/
 {: codeblock}
 
 4. Install Docker by following the instructions for [Docker CENTOS Installation ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://docs.docker.com/engine/install/centos/).
-	NOTE: The latest version of Docker is not supported with RHEL 8 by Red Hat, however it is tested to be installable and runs with IEAM on RHEL 8.
+	NOTE: The latest version of Docker is not supported with RHEL 8 by Red Hat, however it is tested to be installable and runs with OH on RHEL 8.
 
 ### OCP edge cluster TLS internal error
 
