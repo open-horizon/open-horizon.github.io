@@ -56,7 +56,7 @@ Note: See [Conventions used in this document](../getting_started/document_conven
 2. Determine if a default route for the {{site.data.keyword.open_shift}} image registry has been create such that it is accessible from outside of the cluster:
 
    ```bash
-   oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}'
+   oc get route default-route -n openshift-image-registry --template=''
    ```
    {: codeblock}
 
@@ -70,7 +70,7 @@ Note: See [Conventions used in this document](../getting_started/document_conven
 3. Retrieve the repository route name you need to use:
 
    ```bash
-   export OCP_DOCKER_HOST=`oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}'`
+   export OCP_DOCKER_HOST=`oc get route default-route -n openshift-image-registry --template=''`
    ```
    {: codeblock}
 
