@@ -76,7 +76,7 @@
 <rect x="150" y="343.7" class="st7" width="185.2" height="43"/>
 <text transform="matrix(1 0 0 1 150 354.0115)"><tspan x="0" y="0" class="st11 st12 st13">5. Runs agent install script </tspan><tspan x="0" y="20" class="st11 st12 st13">and installs agent</tspan></text>
 <rect x="350.4" y="138.6" class="st7" width="132" height="16.3"/>
-<text transform="matrix(1 0 0 1 369.8981 148.9975)" class="st11 st12 st13">Cloud installer</text>
+<text transform="matrix(1 0 0 1 369.8981 148.9975)" class="st11 st12 st13">Administrator</text>
 <rect x="2.9" y="58.6" class="st7" width="80.2" height="16.3"/>
 <text transform="matrix(1 0 0 1 4.1999 68.997)" class="st11 st12 st13">Node owner</text>
 <rect x="505" y="65.6" class="st7" width="261.7" height="16.3"/>

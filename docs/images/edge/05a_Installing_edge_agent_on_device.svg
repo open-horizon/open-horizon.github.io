@@ -73,7 +73,7 @@
 <rect x="305.9" y="528.7" class="st6" width="368" height="12.7"/>
 <text transform="matrix(1 0 0 1 458.5167 539.0148)" class="st10 st11 st12">Hardware</text>
 <rect x="344.4" y="118.5" class="st6" width="81.9" height="40.3"/>
-<text transform="matrix(1 0 0 1 366.8772 128.8982)"><tspan x="0" y="0" class="st10 st11 st12">Cloud </tspan><tspan x="-7.7" y="20" class="st10 st11 st12">installer</tspan></text>
+<text transform="matrix(1 0 0 1 366.8772 128.8982)"><tspan x="0" y="0" class="st10 st11 st12">Admin</tspan></text>
 <rect x="139.5" y="59.6" class="st6" width="216.9" height="15.5"/>
 <text transform="matrix(1 0 0 1 139.499 69.9475)" class="st10 st11 st12">3a. Shares agent install tar file</text>
 <rect y="59.6" class="st6" width="84.7" height="15.7"/>

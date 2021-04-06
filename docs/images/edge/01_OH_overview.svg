@@ -104,7 +104,6 @@
 <g>
 	<rect id="Rectangle-Copy-16" x="499" y="185" class="st3" width="70.5" height="81"/>
 	<rect id="Rectangle-Copy-16_4_" x="583.5" y="185" class="st3" width="70.5" height="81"/>
-	<rect id="Rectangle-Copy-16_1_" x="414.5" y="185" class="st3" width="70.5" height="81"/>
 	<rect id="Rectangle-Copy-16_2_" x="330" y="185" class="st3" width="70.5" height="81"/>
 	<rect id="Rectangle-Copy-16_3_" x="245.5" y="185" class="st3" width="70.5" height="81"/>
 </g>
@@ -121,8 +120,6 @@
 <text transform="matrix(1 0 0 1 261.7957 228.6866)" class="st6 st7 st8">Agbot</text>
 <rect x="330.1" y="218.3" class="st12" width="70.4" height="15.6"/>
 <text transform="matrix(1 0 0 1 334.3782 228.6866)" class="st6 st7 st8">Exchange</text>
-<rect x="414.5" y="218.3" class="st12" width="70.5" height="15.6"/>
-<text transform="matrix(1 0 0 1 442.1425 228.6866)" class="st6 st7 st8">UI</text>
 <rect x="499" y="218.3" class="st12" width="70.5" height="15.6"/>
 <text transform="matrix(1 0 0 1 518.6974 228.6866)" class="st6 st7 st8">MMS</text>
 <rect x="583.5" y="218.3" class="st12" width="70.6" height="15.6"/>
@@ -130,7 +127,7 @@
 <rect x="459.5" y="82.6" class="st12" width="143.7" height="15.6"/>
 <text transform="matrix(1 0 0 1 468.6895 92.9777)" class="st6 st7 st8">Software developer</text>
 <rect x="180.5" y="82.6" class="st12" width="143.7" height="15.6"/>
-<text transform="matrix(1 0 0 1 205.796 92.9337)" class="st6 st7 st8">Cloud installer</text>
+<text transform="matrix(1 0 0 1 205.796 92.9337)" class="st6 st7 st8">Administrator</text>
 <rect x="807" y="343.4" class="st12" width="97.1" height="41.6"/>
 <text transform="matrix(1 0 0 1 807.0001 353.7596)"><tspan x="0" y="0" class="st6 st7 st8">Pulls </tspan><tspan x="0" y="20" class="st6 st7 st8">containers</tspan></text>
 <rect x="563.8" y="23.7" class="st12" width="232" height="15.6"/>

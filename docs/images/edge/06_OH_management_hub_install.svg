@@ -57,9 +57,9 @@
 	<rect x="884.8" y="533.2" class="st8" width="94.6" height="15.6"/>
 	<text transform="matrix(1 0 0 1 884.827 544.9918)" class="st9 st10 st11">Edge node</text>
 	<rect x="139.7" y="231.1" class="st8" width="148" height="57"/>
-	<text transform="matrix(1 0 0 1 139.7274 242.9885)"><tspan x="0" y="0" class="st9 st10 st11">Optional cloud platform </tspan><tspan x="0" y="22" class="st9 st10 st11">utilities and services</tspan></text>
+	<text transform="matrix(1 0 0 1 139.7274 242.9885)"><tspan x="0" y="0" class="st9 st10 st11">Optional cloud-based</tspan><tspan x="0" y="22" class="st9 st10 st11">utilities and services</tspan></text>
 	<rect x="10" y="51.6" class="st8" width="99.9" height="17.9"/>
-	<text transform="matrix(1 0 0 1 13.4691 61.9691)" class="st13 st14 st15">Management hub installation</text>
+	<text transform="matrix(1 0 0 1 13.4691 61.9691)" class="st13 st14 st15">Management hub administrator</text>
 	<rect x="67.6" y="98.6" class="st8" width="99.9" height="56"/>
 	<text transform="matrix(1 0 0 1 67.587 108.967)" class="st13 st14 st15">1. Sets up Kube</text>
 	<rect x="195.6" y="98.6" class="st8" width="149.1" height="56"/>
@@ -67,7 +67,7 @@
 	<rect x="385.6" y="98.6" class="st8" width="149.1" height="56"/>
 	<text transform="matrix(1 0 0 1 385.5871 108.967)"><tspan x="0" y="0" class="st13 st14 st15">3. Installs the </tspan><tspan x="0" y="20" class="st13 st14 st15">components on the </tspan><tspan x="0" y="40" class="st13 st14 st15">management hub</tspan></text>
 	<rect x="562.6" y="98.6" class="st8" width="172" height="56"/>
-	<text transform="matrix(1 0 0 1 562.5871 108.9675)"><tspan x="0" y="0" class="st13 st14 st15">4. Sets up authentication </tspan><tspan x="0" y="20" class="st13 st14 st15">for Identity and Access </tspan><tspan x="0" y="40" class="st13 st14 st15">Manager (IAM)</tspan></text>
+	<text transform="matrix(1 0 0 1 562.5871 108.9675)"><tspan x="0" y="0" class="st13 st14 st15">4. Set up optional </tspan><tspan x="0" y="20" class="st13 st14 st15">utilities and services</tspan><tspan x="0" y="40" class="st13 st14 st15">like Kafka</tspan></text>
 	<rect x="755.6" y="98.6" class="st8" width="135.2" height="56"/>
 	<text transform="matrix(1 0 0 1 755.5872 108.9675)"><tspan x="0" y="0" class="st13 st14 st15">5. Populates the </tspan><tspan x="0" y="20" class="st13 st14 st15">exchange with Open </tspan><tspan x="0" y="40" class="st13 st14 st15">Horizon examples</tspan></text>
 	<rect x="939.4" y="98.6" class="st8" width="130.3" height="38.4"/>
@@ -119,11 +119,6 @@
 		<text transform="matrix(1 0 0 1 775.883 329.9869)" class="st13 st14 st15">MMS</text>
 	</g>
 	<g>
-		<rect id="Rectangle-Copy-16_1_" x="560.3" y="286" class="st16" width="80" height="81"/>
-		<rect x="560.3" y="319.6" class="st8" width="80" height="14.9"/>
-		<text transform="matrix(1 0 0 1 592.7087 329.9869)" class="st13 st14 st15">UI</text>
-	</g>
-	<g>
 		<rect id="Rectangle-Copy-16_2_" x="464.8" y="286" class="st16" width="80" height="81"/>
 		<rect x="464.8" y="319.6" class="st8" width="80" height="14.9"/>
 		<text transform="matrix(1 0 0 1 473.8431 329.9869)" class="st13 st14 st15">Exchange</text>
@@ -136,7 +131,7 @@
 	<g>
 		<rect id="Rectangle-Copy-16_7_" x="139.7" y="397" class="st16" width="80" height="81"/>
 		<rect x="139.6" y="430.7" class="st8" width="80" height="14.9"/>
-		<text transform="matrix(1 0 0 1 166.5116 441.0553)" class="st13 st14 st15">IAM</text>
+		<text transform="matrix(1 0 0 1 166.5116 441.0553)" class="st13 st14 st15">Kafka</text>
 	</g>
 	<g>
 		<rect id="Rectangle-Copy-16_4_" x="369.2" y="410" class="st17" width="80" height="68"/>
