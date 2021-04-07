@@ -3,3 +3,7 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 .DS_Store
+**/.DS_Store
+.tree.txt.swp
+vendor
+.bundle

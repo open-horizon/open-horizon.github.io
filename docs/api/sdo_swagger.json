@@ -1,0 +1,286 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "[Intel SDO](https://software.intel.com/en-us/secure-device-onboard) (Secure Device Onboard) is a technology that is created by Intel to make it easy and secure to configure edge devices and associate them with an OH instance. OH has added support for SDO-enabled devices so that the agent will be installed on the device and registered to the OH management hub with zero touch (by simply powering on the device).<br><br>Examples of using this API:<br><br>`curl -sS $HZN_SDO_SVC_URL/version && echo`<br>`curl -sS -w %{http_code} -u $HZN_ORG_ID/$HZN_EXCHANGE_USER_AUTH $HZN_SDO_SVC_URL/vouchers | jq`<br><br>Note: Some of these APIs can also be run via the `hzn` command.",
+    "version": "1.8",
+    "title": "OH Support for SDO",
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/version": {
+      "get": {
+        "tags": [
+          "OCS-API"
+        ],
+        "summary": "Get SDO Owner Services version",
+        "description": "Note: This API does not require credentials.",
+        "operationId": "getVersion",
+        "produces": [
+          "application/text"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Version"
+            }
+          }
+        }
+      }
+    },
+    "/vouchers": {
+      "post": {
+        "tags": [
+          "OCS-API"
+        ],
+        "summary": "Import a voucher into the management hub",
+        "description": "",
+        "operationId": "importVoucher",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Voucher to be imported",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Voucher"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Voucher imported"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Invalid credentials"
+          },
+          "403": {
+            "description": "Permission denied"
+          },
+          "500": {
+            "description": "Error importing voucher"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "OCS-API"
+        ],
+        "summary": "Get list of imported voucher IDs",
+        "description": "",
+        "operationId": "getVouchers",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/VoucherIdList"
+            }
+          },
+          "401": {
+            "description": "Invalid credentials"
+          },
+          "403": {
+            "description": "Permission denied"
+          }
+        }
+      }
+    },
+    "/vouchers/{device-id}": {
+      "get": {
+        "tags": [
+          "OCS-API"
+        ],
+        "summary": "Get one imported voucher",
+        "description": "",
+        "operationId": "getVoucher",
+        "parameters": [
+          {
+            "name": "device-id",
+            "in": "path",
+            "description": "ID of the device you want the voucher for",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Voucher"
+            }
+          },
+          "400": {
+            "description": "Invalid voucher id"
+          },
+          "401": {
+            "description": "Invalid credentials"
+          },
+          "403": {
+            "description": "Permission denied"
+          }
+        }
+      }
+    },
+    "/rereadagentinstall": {
+      "post": {
+        "tags": [
+          "OCS-API"
+        ],
+        "summary": "Have the management hub read a more recent version of agent-install.sh",
+        "description": "",
+        "operationId": "rereadAgentInstall",
+        "responses": {
+          "200": {
+            "description": "Reread successful"
+          },
+          "401": {
+            "description": "Invalid credentials"
+          },
+          "403": {
+            "description": "Permission denied"
+          },
+          "500": {
+            "description": "Error getting agent-install.sh"
+          }
+        }
+      }
+    },
+    "/keys": {
+      "post": {
+        "tags": [
+          "OCS-API"
+        ],
+        "summary": "Import owner private keys into the management hub",
+        "description": "",
+        "operationId": "importKeys",
+        "consumes": [
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Private keys tar file to be imported",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/KeysTarFile"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Keys imported"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Invalid credentials"
+          },
+          "403": {
+            "description": "Permission denied"
+          },
+          "500": {
+            "description": "Error importing keys"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Version": {
+      "type": "string"
+    },
+    "Voucher": {
+      "type": "object",
+      "properties": {
+        "sz": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "oh": {
+          "type": "object",
+          "properties": {
+            "pv": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "pe": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "r": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            },
+            "g": {
+              "type": "string",
+              "description": "base64 encoded"
+            },
+            "d": {
+              "type": "string"
+            },
+            "pk": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "hmac": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "en": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "xml": {
+        "name": "Voucher"
+      }
+    },
+    "VoucherIdList": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "voucher device id"
+      }
+    },
+    "KeysTarFile": {
+      "type": "string",
+      "description": "gzipped tar file of private keys",
+      "xml": {
+        "name": "KeysTarFile"
+      }
+    }
+  }
+}
