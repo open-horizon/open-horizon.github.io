@@ -17,38 +17,54 @@ This is a set of resources compiled from new developers who have found them to b
 
 > NOTE: this section is contributed by Debabrata Mandal.
 
-Having spent about a week learning Open Horizon and its different components I think that there is already enough resources for an absolute beginner. It is just they are a bit scattered over the place and not properly hyperlinked. Although I have just scratched the surface, I feel the ones below could be helpful for any newcomer:
+The following set of resources consisting of links to past Open Horizon meetings, videos and readme sections are useful to get started with the various segments of the Open Horizon project (excluding the SDO-services and Edge Sync Service). 
 
 1. Introduction:
 
-    a. [https://www.lfedge.org/projects/openhorizon/](https://www.lfedge.org/projects/openhorizon/)
+    a. Get an idea of what Open Horizon is all about from [https://www.lfedge.org/projects/openhorizon/](https://www.lfedge.org/projects/openhorizon/)
 
-    b. Glen Darling’s introductory videos [1](https://www.youtube.com/watch?v=g59RTLV22fw&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=2), [2](https://www.youtube.com/watch?v=WyZaKiI4wLE&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=7).
+    b. Introductory videos by OH member Glen Darling 
+    1. An overview of Open Horizon - [video](https://www.youtube.com/watch?v=g59RTLV22fw&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=2).
+    2. More technical details - [video](https://www.youtube.com/watch?v=WyZaKiI4wLE&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=7).
 
-    c. First [meeting recording](https://zoom.us/rec/share/tPFREb__zGpObc-V10GPVPA6IKT7eaa81iUbrPcOz0nRkgZlvoon4BvQjZ_73kqH?startTime=1595863993000) of the Agent Working Group.
+    c. An overview of the Agent's role in OH - First [meeting recording](https://zoom.us/rec/share/tPFREb__zGpObc-V10GPVPA6IKT7eaa81iUbrPcOz0nRkgZlvoon4BvQjZ_73kqH?startTime=1595863993000) of the Agent WG.
 
-    d. First [meeting recording](https://zoom.us/rec/play/87yiQniSZ0VtHPh6Roz_HLyfOGcDV6Cpx2nosQhR4Z9Ed52JlGB3bxYBbAVYwDzZpWJxu-UfaToBTab8.85GZKncg_KFrO0uP?continueMode=true&_x_zm_rtaid=oC4Wb8hjTtCHn49H1M6i9g.1613742221653.b2e466b17a6979e0fba21e9209e5acfc&_x_zm_rhtaid=626) of the QA Working Group.
+    d. Another descriptory video from the [meeting recording](https://zoom.us/rec/play/87yiQniSZ0VtHPh6Roz_HLyfOGcDV6Cpx2nosQhR4Z9Ed52JlGB3bxYBbAVYwDzZpWJxu-UfaToBTab8.85GZKncg_KFrO0uP?continueMode=true&_x_zm_rtaid=oC4Wb8hjTtCHn49H1M6i9g.1613742221653.b2e466b17a6979e0fba21e9209e5acfc&_x_zm_rhtaid=626) of the QA Working Group.
 
-2. Detailed explanation of services, policies and patterns
+2. Services, policies and patterns (Important)
 
-    a. Glen’s videos [1](https://www.youtube.com/watch?v=alcHKc3Upbk&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=4), [2](https://www.youtube.com/watch?v=jUeMvr87jz8&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=8).
+    a. Glen’s introductory [video](https://www.youtube.com/watch?v=alcHKc3Upbk&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=4) on patterns and policies. 
 
-    b. Agent Working Group’s [meeting recording](https://zoom.us/rec/share/6eheFpXwq3JLYo3duXDBf7wDLp-5T6a82nRN-vRfzUuBm-ELkKqZmz1kthR-uAAf?startTime=1598282577000).
+    b. An [introduction](https://zoom.us/rec/share/6eheFpXwq3JLYo3duXDBf7wDLp-5T6a82nRN-vRfzUuBm-ELkKqZmz1kthR-uAAf?startTime=1598282577000) to services.
 
-    c. [Service networking](https://www.youtube.com/watch?v=jUeMvr87jz8&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=9) video.
+    c. [Service networking](https://www.youtube.com/watch?v=jUeMvr87jz8&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=8) demo.
 
 3. Getting started:
-    a. Anax - meeting [recording](https://zoom.us/rec/play/uJV_dOqhp2g3TNLGswSDAqMvW47uffmsgylM8_AMzE_hWngLYACmbrEQYbR6DRGSdV9GsMJms2rXWT5P).
 
-    b. Installation - from docs [1](https://open-horizon.github.io/common-requests/install.html), [2](https://open-horizon.github.io/common-requests/use.html).
+    a. Get [started](https://zoom.us/rec/play/uJV_dOqhp2g3TNLGswSDAqMvW47uffmsgylM8_AMzE_hWngLYACmbrEQYbR6DRGSdV9GsMJms2rXWT5P) with contributing to Anax.
 
-    c. Using the all-in-one deployment (for the hands on practicals) - Management Hub’s [meeting recording](https://zoom.us/rec/play/IlrDE_zkKkCcjYrqNp5RSo1-Up2EcIrkTlMndE3BtjtPK8GvZ8FGD3914gZGjZMRp4rltFFrslaEo5Xq.0QGVy6YtQRaZTZ55?startTime=1598534658000&_x_zm_rtaid=oC4Wb8hjTtCHn49H1M6i9g.1613742221653.b2e466b17a6979e0fba21e9209e5acfc&_x_zm_rhtaid=626), [doc](https://github.com/open-horizon/devops/tree/master/mgmt-hub).
+    b. Helpful installation guides from the docs - 
+    1. [Install and setup environment](https://open-horizon.github.io/common-requests/install.html) 
+    2. [How to use](https://open-horizon.github.io/common-requests/use.html).
 
-    d. Hands on practical - Mosquito's Easy Open Horizon [repo](https://github.com/TheMosquito/easy-open-horizon) and videos [1](https://www.youtube.com/watch?v=Fk9zJyExELU&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=3), [2](https://www.youtube.com/watch?v=vgUuOIefamA&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=5).
+    c. Using the all-in-one deployment (for the hands on practicals next) 
+    1. [Recording](https://zoom.us/rec/play/IlrDE_zkKkCcjYrqNp5RSo1-Up2EcIrkTlMndE3BtjtPK8GvZ8FGD3914gZGjZMRp4rltFFrslaEo5Xq.0QGVy6YtQRaZTZ55?startTime=1598534658000&_x_zm_rtaid=oC4Wb8hjTtCHn49H1M6i9g.1613742221653.b2e466b17a6979e0fba21e9209e5acfc&_x_zm_rhtaid=626) from the Management Hub WG.
+    2. [Readme](https://github.com/open-horizon/devops/tree/master/mgmt-hub) guide.
 
-    e. [Quick start](https://github.com/dcmartin/open-horizon/blob/master/QUICKSTART.md) and [helloworld example](https://github.com/dcmartin/open-horizon/blob/master/docs/HELLO_WORLD.md) from dcmartin’s repo.
+    d. Hands on practical - 
+    1. [Demo](https://www.youtube.com/watch?v=Fk9zJyExELU&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=3) - without policies.
+    2. [Advanced](https://www.youtube.com/watch?v=vgUuOIefamA&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=5) - deploying with patterns vs policies.
+    3. Glen's Easy Open Horizon [repository](https://github.com/TheMosquito/easy-open-horizon).
 
-4. There is also a lot of information available in these specific readme files ([1](https://github.com/open-horizon/anax/tree/master/test), [2](https://github.com/open-horizon/examples/tree/master/edge/services/helloworld), [3](https://github.com/open-horizon/exchange-api/blob/master/README.md)) of the project's repositories.
+4. Useful references
+
+    a. [Setup](https://github.com/open-horizon/anax/tree/master/test) ededev test environment
+
+    b. [Create](https://github.com/open-horizon/examples/blob/master/edge/services/helloworld/CreateService.md) your own service.
+
+    c. [Deploy](https://github.com/open-horizon/examples/tree/master/edge/services/helloworld) your own service. 
+    
+    d. Get [started](https://github.com/open-horizon/exchange-api/blob/master/README.md) with contributions to exchange-api.
 
 ## Sequential tasks to gradually introduce you to common features
 
