@@ -36,6 +36,33 @@ The following diagram depicts the high-level topology for a typical edge computi
 
 <img src="../images/edge/01_OH_overview.svg" style="margin: 3%" alt="OH overview">
 
+<div class="mermaid">
+flowchart TD
+    cr -- Pulls containers --> es
+    mh -- Gets service deployment instructions --> ea
+    en --> no -- Registers node with management hub --> mh
+    sd -- Develops and publishes service --> mh & cr
+    ad -- Manages deployment --> mh
+    am -- Installs management hub --> mh
+    cr[(Container registry)]
+    no("#128578; Node owner")
+    ad("#128578; Administrator")
+    am("#128578; Administrator")
+    sd("#128578; Software developer")
+    subgraph en["Edge node (cluster or device)"]
+        ea(Edge agent) -- runs --> es(Edge service)
+    end
+    subgraph mh[Management hub]
+        a[Agbot]
+        e[Exchange]
+        m[MMS]
+        s[SDO]
+    end
+    style cr color:#fff,fill:#128C86,stroke:#000
+    style en fill:#316CEE,color:#fff
+    style mh fill:#060E61,color:#fff
+</div>
+
 The {{site.data.keyword.ieam}} management hub is designed specifically for edge node management to minimize deployment risks and to manage the service software lifecycle on edge nodes fully autonomously. A Cloud installer installs and manages the {{site.data.keyword.ieam}} management hub components. Software developers develop and publish edge services to the management hub. Administrators define the deployment policies that control where edge services are deployed. {{site.data.keyword.ieam}} handles everything else.
 
 # Components
