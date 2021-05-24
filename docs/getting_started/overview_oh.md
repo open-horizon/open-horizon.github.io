@@ -38,29 +38,43 @@ The following diagram depicts the high-level topology for a typical edge computi
 
 <div class="mermaid">
 flowchart TD
-    cr -- Pulls containers --> es
+    cr -- Pulls containers --> ea
     mh -- Gets service deployment instructions --> ea
-    en --> no -- Registers node with management hub --> mh
     sd -- Develops and publishes service --> mh & cr
     ad -- Manages deployment --> mh
     am -- Installs management hub --> mh
+    no -- Registers node with management hub --> mh
+    classDef people fill:#fff,stroke:#000,color:#000;
     cr[(Container registry)]
     no("#128578; Node owner")
+    class no people
     ad("#128578; Administrator")
+    class ad people
     am("#128578; Administrator")
+    class am people
     sd("#128578; Software developer")
+    class sd people
+    classDef box fill:#fff,stroke:#000,color:#000;
     subgraph en["Edge node (cluster or device)"]
-        ea(Edge agent) -- runs --> es(Edge service)
+       ea[Edge agent] -- runs --> es[Edge service]
+       class ea box
+       class es box
     end
     subgraph mh[Management hub]
         a[Agbot]
+        class a box
         e[Exchange]
+        class e box
         m[MMS]
+        class m box
         s[SDO]
+        class s box
     end
-    style cr color:#fff,fill:#128C86,stroke:#000
-    style en fill:#316CEE,color:#fff
-    style mh fill:#060E61,color:#fff
+    linkStyle default fill:none,color:#000,stroke-width:2px,stroke:#bebebe
+    style sd fill:#fff,stroke:#000,color:#000
+    style cr fill:#449a97,stroke:#000,color:#fff
+    style en fill:#518cf4,stroke:#000,color:#fff
+    style mh fill:#081e6d,stroke:#000,color:#fff
 </div>
 
 The {{site.data.keyword.ieam}} management hub is designed specifically for edge node management to minimize deployment risks and to manage the service software lifecycle on edge nodes fully autonomously. A Cloud installer installs and manages the {{site.data.keyword.ieam}} management hub components. Software developers develop and publish edge services to the management hub. Administrators define the deployment policies that control where edge services are deployed. {{site.data.keyword.ieam}} handles everything else.
