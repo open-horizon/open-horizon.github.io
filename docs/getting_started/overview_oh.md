@@ -50,6 +50,7 @@ The {{site.data.keyword.ieam}} management hub is designed specifically for edge 
 |Exchange|2.54.0|The Exchange provides a REST API to all of the {{site.data.keyword.ieam}} resources (patterns, policies, services, nodes, and so on) used by all the other components in {{site.data.keyword.ieam}}.|
 |MMS|1.4.1|The Model Management System (MMS) facilitates the storage, delivery, and security of models and files needed by edge services. This enables edge nodes to easily send and receive models and files to and from the management hub.|
 |SDO|1.8.6|The Secure Device Onboarding (SDO) service enables SDO-enabled edge devices to be configured with zero touch.|
+|Secrets Manager|1.0.0|The Secrets Manager is the repository for secrets deployed to edge devices, enabling services to securely receive credentials used to authenticate to their upstream dependencies.|
 |**Edge node**| |Any edge device, edge cluster, or edge gateway where edge computing takes place.|
 |Edge cluster agent|2.27.0|The agent that is installed on edge clusters to enable node workload management by {{site.data.keyword.ieam}}.|
 |Edge device agent|2.27.0|The agent that is installed on edge devices to enable node workload management by {{site.data.keyword.ieam}}.|

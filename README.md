@@ -73,6 +73,7 @@ This GitHub Pages site is built with Jekyll. Before you can use Jekyll to test a
 Change to the repository directory on your computer and execute the following command to run the Jekyll site locally.
 
 ```
+bundle install
 bundle exec jekyll serve
 ```
 
