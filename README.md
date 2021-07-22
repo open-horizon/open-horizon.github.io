@@ -72,6 +72,8 @@ This GitHub Pages site is built with Jekyll. Before you can use Jekyll to test a
 
 Change to the repository directory on your computer and execute the following command to run the Jekyll site locally.
 
+NOTE: The first time you run locally, and any time the `Gemfile.lock` file is updated, run `bundle install` before the step below to install or update any required Jekyll modules.
+
 ```
 bundle exec jekyll serve
 ```
