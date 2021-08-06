@@ -151,7 +151,6 @@ GEM
       jekyll (>= 3.8, < 5.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-swagger (1.0.2)
     jekyll-swiss (1.0.0)
     jekyll-theme-architect (0.1.1)
       jekyll (~> 3.5)
@@ -267,4 +266,4 @@ DEPENDENCIES
   github-pages
 
 BUNDLED WITH
-   2.1.4
+   2.2.24
