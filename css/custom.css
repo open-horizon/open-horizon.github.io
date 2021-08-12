@@ -1,0 +1,18 @@
+.doc-card {
+    min-height: 200px;
+    border: 1px solid lightgray;
+    margin: 20px;
+    padding: 10px 30px;
+}
+
+.doc-card li {
+    list-style: none;
+}
+
+.doc-help-container .ibm-card__bottom {
+    padding-left: 25px;
+}
+
+.doc-help-container .ibm-card__bottom a{
+    text-decoration: none;
+}
