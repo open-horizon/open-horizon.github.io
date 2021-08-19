@@ -38,6 +38,8 @@ Each of these development examples demonstrates a few more aspects of developing
 
 * [Hello world using model management](model_management_system.md) - Demonstrates how to develop an edge service that uses the model management service. The model management service asynchronously provides file updates to edge services on edge nodes, for example to dynamically update a machine learning model each time it evolves.
 
+* [Hello world using secrets](developing_secrets.md) - Demonstrates how to develop an edge service that uses secrets. Secrets are used to protect sensitive data like login credentials or private keys. Secrets are deployed securely to services running on the edge.
+
 * [Updating an edge service with rollback](../using_edge_services/service_rollbacks.md) - Demonstrates how to monitor the success of the deployment, and if it fails on any edge node, revert the node back to the previous version of the edge service.
 
 After you finish building these example services, review the following documentation for more detailed information about developing services for {{site.data.keyword.ieam}}:
