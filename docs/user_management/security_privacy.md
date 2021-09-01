@@ -65,6 +65,11 @@ A compromised agbot can attempt to propose malicious workload deployments, but t
 
 The {{site.data.keyword.ieam}} management hub is a centralized service. Centralized services in typical cloud based environments are generally vulnerable to denial-of-service attacks. The agent requires a connection only when it is first registered to the hub or when it is negotiating the deployment of a workload. At all other times, the agent continues to operate normally even while disconnected from the {{site.data.keyword.ieam}} management hub.  This ensures that the {{site.data.keyword.ieam}} agent remains active on edge node even if the management hub is under attack.
 
+## Model Management System
+{: #malware}
+
+{{site.data.keyword.ieam}} does not perform a malware or virus scan on data that is uploaded to the MMS. Ensure that any uploaded data has been scanned before uploading it to the MMS.
+
 ## Data at REST
 {: #drest}
 
