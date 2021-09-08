@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 24.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 903 817" style="enable-background:new 0 0 903 817;" xml:space="preserve">
 <style type="text/css">
@@ -29,7 +29,7 @@
 <circle id="Oval-Copy-3" class="st1" cx="58" cy="180" r="24"/>
 <path id="Shape" class="st2" d="M53,183c2.8,0,5,2.2,5,5v6h-2v-6c0-1.7-1.3-3-3-3h-4c-1.7,0-3,1.3-3,3v6h-2v-6c0-2.8,2.2-5,5-5H53z
 	 M51,171c2.8,0,5,2.2,5,5s-2.2,5-5,5s-5-2.2-5-5S48.2,171,51,171z M72,172v8h-2v-8H72z M67,169v11h-2v-11H67z M62,174v6h-2v-6H62z
-	 M51,173c-1.7,0-3,1.3-3,3c0,1.7,1.3,3,3,3c1.7,0,3-1.3,3-3S52.7,173,51,173z"/>
+	 M51,173c-1.7,0-3,1.3-3,3c0,1.7,1.3,3,3,3s3-1.3,3-3S52.7,173,51,173z"/>
 <circle id="Oval-Copy-3_1_" class="st1" cx="529" cy="88" r="24"/>
 <path id="Shape_1_" class="st2" d="M524,91c2.8,0,5,2.2,5,5v6h-2v-6c0-1.7-1.3-3-3-3h-4c-1.7,0-3,1.3-3,3v6h-2v-6c0-2.8,2.2-5,5-5
 	H524z M522,79c2.8,0,5,2.2,5,5s-2.2,5-5,5s-5-2.2-5-5S519.2,79,522,79z M537.1,77.9l1.8,0.4l-2.4,10.4l-1.8-0.4L537.1,77.9z
@@ -41,9 +41,6 @@
 <rect id="Rectangle-Copy-9" x="496" y="720" class="st6" width="80" height="81"/>
 <rect id="Rectangle-Copy-24" x="1" y="422" class="st7" width="400" height="155"/>
 <rect id="Rectangle-Copy-16" x="305" y="479" class="st6" width="80" height="81"/>
-<rect id="Rectangle-Copy-16_1_" x="209" y="479" class="st6" width="80" height="81"/>
-<rect id="Rectangle-Copy-16_2_" x="113" y="479" class="st6" width="80" height="81"/>
-<rect id="Rectangle-Copy-16_3_" x="17" y="479" class="st6" width="80" height="81"/>
 <rect id="Rectangle-Copy-18" x="673" y="64" class="st8" width="104" height="81"/>
 <rect id="Rectangle-Copy-18_1_" x="785" y="196" class="st8" width="85" height="106"/>
 <rect id="Rectangle-Copy-18_2_" x="749" y="695" class="st8" width="85" height="106"/>
@@ -76,12 +73,6 @@
 <text transform="matrix(1 0 0 1 518.9951 755.1068)"><tspan x="0" y="0" class="st11 st12 st13">Edge </tspan><tspan x="-2.1" y="20" class="st11 st12 st13">agent</tspan></text>
 <rect x="749" y="736.7" class="st10" width="84.8" height="16.4"/>
 <text transform="matrix(1 0 0 1 759.3896 747.0668)" class="st14 st12 st13">AI service</text>
-<rect x="209" y="512.8" class="st10" width="80" height="14.9"/>
-<text transform="matrix(1 0 0 1 241.3772 523.149)" class="st11 st12 st13">UI</text>
-<rect x="113" y="512.8" class="st10" width="80" height="14.9"/>
-<text transform="matrix(1 0 0 1 122.0818 523.149)" class="st11 st12 st13">Exchange</text>
-<rect x="17" y="512.8" class="st10" width="80" height="14.9"/>
-<text transform="matrix(1 0 0 1 38.0725 523.149)" class="st11 st12 st13">Agbot</text>
 <rect x="673" y="96.8" class="st10" width="104" height="14.9"/>
 <text transform="matrix(1 0 0 1 702.3762 107.1315)" class="st14 st12 st13">Docker</text>
 <rect x="784.9" y="237.7" class="st10" width="85" height="14.9"/>
@@ -89,7 +80,7 @@
 <rect x="496.8" y="230.2" class="st10" width="85.2" height="34.7"/>
 <text transform="matrix(1 0 0 1 519.9266 240.5443)"><tspan x="0" y="0" class="st14 st12 st13">AI/ML </tspan><tspan x="-16.2" y="20" class="st14 st12 st13">application</tspan></text>
 <rect x="17" y="442.3" class="st10" width="236.1" height="15.6"/>
-<text transform="matrix(1 0 0 1 17.0002 454.0923)" class="st14 st15 st16">OH management hub</text>
+<text transform="matrix(1 0 0 1 17.0002 454.0923)" class="st14 st15 st16">Management hub</text>
 <rect x="496" y="657.3" class="st10" width="236.1" height="15.6"/>
 <text transform="matrix(1 0 0 1 496.0002 669.1191)" class="st14 st15 st16">Edge node</text>
 <rect x="34" y="92.3" class="st10" width="236.1" height="15.6"/>

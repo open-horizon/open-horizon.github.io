@@ -14,6 +14,11 @@ lastupdated: "2021-08-16"
 {:tip: .tip}
 {:download: .download}
 
+# Developing a service using secrets
+{: #using secrets}
+
+<img src="../images/edge/10_Secrets.svg" style="margin: 3%" alt="Developing a service using secrets"> 
+
 # Secrets Manager details
 {: #secrets_details}
 
