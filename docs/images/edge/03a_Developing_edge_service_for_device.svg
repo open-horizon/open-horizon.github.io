@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 24.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1020 514" style="enable-background:new 0 0 1020 514;" xml:space="preserve">
 <style type="text/css">
@@ -41,9 +41,9 @@
 	c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5l0-0.1C608,363.4,608.4,363,609,363z M612,367h-8
 	c-0.5,0-0.9,0.4-1,0.9l0,0.1v5c0,0.5,0.4,0.9,0.9,1l0.1,0h8c0.5,0,0.9-0.4,1-0.9l0-0.1v-5c0-0.5-0.4-0.9-0.9-1L612,367z M610.5,372
 	c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5H610.5z M605.5,368c0.8,0,1.5,0.7,1.5,1.5
-	s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5S604.7,368,605.5,368z M610.5,368c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5
-	S609.7,368,610.5,368z M605.5,369c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S605.8,369,605.5,369z M610.5,369
-	c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S610.8,369,610.5,369z"/>
+	s-0.7,1.5-1.5,1.5c-0.8,0-1.5-0.7-1.5-1.5S604.7,368,605.5,368z M610.5,368c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5
+	c-0.8,0-1.5-0.7-1.5-1.5S609.7,368,610.5,368z M605.5,369c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5c0.3,0,0.5-0.2,0.5-0.5
+	S605.8,369,605.5,369z M610.5,369c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5c0.3,0,0.5-0.2,0.5-0.5S610.8,369,610.5,369z"/>
 <rect id="Rectangle-Copy-16" x="600" y="401" class="st6" width="80" height="81"/>
 <text transform="matrix(1 0 0 1 656.3878 436)" class="st7 st8 st9"> </text>
 <rect id="Rectangle-Copy-16_1_" x="806" y="401" class="st6" width="80" height="81"/>
@@ -73,7 +73,7 @@
 <rect x="401" y="227.6" class="st14" width="131.8" height="59.5"/>
 <text transform="matrix(1 0 0 1 401 237.9822)"><tspan x="0" y="0" class="st15 st8 st9">2. Publishes service </tspan><tspan x="0" y="20" class="st15 st8 st9">metadata to the </tspan><tspan x="0" y="40" class="st15 st8 st9">management hub</tspan></text>
 <rect x="37" y="351.7" class="st14" width="95.9" height="42.2"/>
-<text transform="matrix(1 0 0 1 37 362.0197)"><tspan x="0" y="0" class="st15 st8 st9">1. Publishes </tspan><tspan x="0" y="20" class="st15 st8 st9">containers</tspan></text>
+<text transform="matrix(1 0 0 1 37 362.0197)"><tspan x="0" y="0" class="st15 st8 st9">1. Pushes </tspan><tspan x="0" y="20" class="st15 st8 st9">containers</tspan></text>
 <rect x="13.9" y="79.6" class="st14" width="20" height="12.2"/>
 <text transform="matrix(1 0 0 1 19.4355 90.0013)" class="st15 st8 st9">A</text>
 <rect x="13.9" y="151.6" class="st14" width="20" height="13.4"/>
@@ -82,8 +82,8 @@
 <text transform="matrix(1 0 0 1 19.5756 250.0154)" class="st15 st8 st9">C</text>
 <rect x="577" y="227.6" class="st14" width="75.9" height="59.5"/>
 <text transform="matrix(1 0 0 1 577 237.9817)"><tspan x="0" y="0" class="st15 st8 st9">5. Deploys </tspan><tspan x="0" y="20" class="st15 st8 st9">service</tspan></text>
-<rect x="748" y="285.6" class="st14" width="130.8" height="42"/>
-<text transform="matrix(1 0 0 1 748 295.9965)"><tspan x="0" y="0" class="st15 st8 st9">4. Registers node </tspan><tspan x="0" y="20" class="st15 st8 st9">with node policy</tspan></text>
+<rect x="748" y="285.6" class="st14" width="165" height="42"/>
+<text transform="matrix(1 0 0 1 748 295.9965)"><tspan x="0" y="0" class="st15 st8 st9">4. Registers with a </tspan><tspan x="0" y="20" class="st15 st8 st9">pattern or node policy</tspan></text>
 <rect x="401.4" y="430.6" class="st14" width="163" height="21"/>
 <text transform="matrix(1 0 0 1 423.4774 440.9973)" class="st15 st8 st9">6. Pulls containers</text>
 <rect x="843" y="66.6" class="st14" width="175.7" height="57.4"/>
@@ -93,7 +93,7 @@
 <rect x="863" y="18.6" class="st14" width="100" height="15.4"/>
 <text transform="matrix(1 0 0 1 863.0299 28.9986)" class="st15 st8 st9">Administrator</text>
 <rect x="390" y="20.2" class="st14" width="236.1" height="15.6"/>
-<text transform="matrix(1 0 0 1 390.0002 32.033)" class="st16 st17 st18">OH management hub</text>
+<text transform="matrix(1 0 0 1 390.0002 32.033)" class="st16 st17 st18">Management hub</text>
 <rect x="622" y="362.2" class="st14" width="236.1" height="15.6"/>
 <text transform="matrix(1 0 0 1 622.0001 374.0536)" class="st16 st17 st18">Edge node</text>
 <rect x="677.9" y="90.6" class="st14" width="80" height="14.9"/>
@@ -104,12 +104,12 @@
 <text transform="matrix(1 0 0 1 624.5421 436.0142)"><tspan x="0" y="0" class="st15 st8 st9">Edge </tspan><tspan x="-2.1" y="20" class="st15 st8 st9">agent</tspan></text>
 <rect x="680.3" y="416.6" class="st14" width="111.2" height="13.7"/>
 <text transform="matrix(1 0 0 1 711.843 427.004)" class="st16 st8 st9">7. Runs</text>
-<rect x="581.9" y="90.6" class="st14" width="80" height="14.9"/>
-<text transform="matrix(1 0 0 1 614.286 100.9758)" class="st15 st8 st9">SDO</text>
+<rect x="581.9" y="80.9" class="st14" width="80" height="36.4"/>
+<text transform="matrix(1 0 0 1 597.7382 91.2301)"><tspan x="0" y="0" class="st15 st8 st9">Secrets </tspan><tspan x="-4" y="20" class="st15 st8 st9">manager</tspan></text>
 <rect x="485.9" y="90.6" class="st14" width="80" height="14.9"/>
 <text transform="matrix(1 0 0 1 494.9906 100.9758)" class="st15 st8 st9">Exchange</text>
 <rect x="389.9" y="90.6" class="st14" width="80" height="14.9"/>
-<text transform="matrix(1 0 0 1 410.9813 100.9758)" class="st15 st8 st9">Agbot</text>
+<text transform="matrix(1 0 0 1 410.9814 100.9758)" class="st15 st8 st9">Agbot</text>
 <rect x="45" y="79.6" class="st14" width="203" height="15.7"/>
 <text transform="matrix(1 0 0 1 45 90.0018)" class="st15 st8 st9">Creates developer credentials</text>
 <rect x="63" y="18.6" class="st14" width="172.6" height="15.7"/>

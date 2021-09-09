@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 24.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1183 926" style="enable-background:new 0 0 1183 926;" xml:space="preserve">
 <style type="text/css">
@@ -82,11 +82,11 @@
 <rect x="37" y="283.2" class="st11" width="236.1" height="15.6"/>
 <text transform="matrix(1 0 0 1 37.0001 295.0103)" class="st12 st13 st14">Node policy</text>
 <rect x="150" y="13.1" class="st11" width="237.4" height="19.1"/>
-<text transform="matrix(1 0 0 1 150 24.9894)" class="st15 st17 st14">Node policy</text>
+<text transform="matrix(1 0 0 1 150 24.9895)" class="st15 st17 st14">Node policy</text>
 <rect x="5" y="50.2" class="st11" width="129.5" height="19.1"/>
 <text transform="matrix(1 0 0 1 5 62.0046)" class="st15 st17 st14">Role</text>
 <rect x="5" y="127.1" class="st11" width="129.5" height="19.1"/>
-<text transform="matrix(1 0 0 1 5 138.9762)" class="st15 st17 st14">Purpose</text>
+<text transform="matrix(1 0 0 1 5 138.9763)" class="st15 st17 st14">Purpose</text>
 <rect x="150" y="50.2" class="st11" width="250.5" height="59.6"/>
 <text transform="matrix(1 0 0 1 150 62.0051)"><tspan x="0" y="0" class="st15 st16 st14">Node owner provides when </tspan><tspan x="0" y="20" class="st15 st16 st14">registering the node</tspan></text>
 <rect x="150" y="127.1" class="st11" width="250.5" height="59.6"/>
@@ -110,19 +110,19 @@
 <rect x="81" y="408.7" class="st11" width="142.2" height="17.6"/>
 <text transform="matrix(1 0 0 1 81 419.0175)" class="st15 st16 st18">camera-type=motion</text>
 <rect x="409" y="13.1" class="st11" width="237.4" height="19.1"/>
-<text transform="matrix(1 0 0 1 409 24.9894)" class="st15 st17 st14">Service policy</text>
+<text transform="matrix(1 0 0 1 409 24.9895)" class="st15 st17 st14">Service policy</text>
 <rect x="409" y="50.2" class="st11" width="250.5" height="59.6"/>
 <text transform="matrix(1 0 0 1 409 62.0051)"><tspan x="0" y="0" class="st15 st16 st14">Service developer provides when </tspan><tspan x="0" y="20" class="st15 st16 st14">publishing the service</tspan></text>
 <rect x="409" y="127.1" class="st11" width="250.5" height="59.6"/>
 <text transform="matrix(1 0 0 1 409 138.9767)"><tspan x="0" y="0" class="st15 st16 st14">Define what the service needs on </tspan><tspan x="0" y="20" class="st15 st16 st14">an edge node to run properly and </tspan><tspan x="0" y="40" class="st15 st16 st14">its intent</tspan></text>
 <rect x="669" y="13.1" class="st11" width="237.4" height="19.1"/>
-<text transform="matrix(1 0 0 1 669.0275 24.9894)" class="st15 st17 st14">Deployment policy</text>
+<text transform="matrix(1 0 0 1 669.0275 24.9895)" class="st15 st17 st14">Deployment policy</text>
 <rect x="669" y="50.2" class="st11" width="250.5" height="59.6"/>
 <text transform="matrix(1 0 0 1 669.0275 62.0051)"><tspan x="0" y="0" class="st15 st16 st14">Policy administrator provides </tspan><tspan x="0" y="20" class="st15 st16 st14">when deploying the service</tspan></text>
 <rect x="669" y="127.1" class="st11" width="250.5" height="59.6"/>
 <text transform="matrix(1 0 0 1 669.0275 138.9767)"><tspan x="0" y="0" class="st15 st16 st14">Define where the service should </tspan><tspan x="0" y="20" class="st15 st16 st14">run</tspan></text>
 <rect x="929" y="13.1" class="st11" width="237.4" height="19.1"/>
-<text transform="matrix(1 0 0 1 929 24.9894)" class="st15 st17 st14">Model policy</text>
+<text transform="matrix(1 0 0 1 929 24.9895)" class="st15 st17 st14">Model policy</text>
 <rect x="929" y="50.2" class="st11" width="239.4" height="59.6"/>
 <text transform="matrix(1 0 0 1 929 62.0046)"><tspan x="0" y="0" class="st15 st16 st14">Model creator or data scientist </tspan><tspan x="0" y="20" class="st15 st16 st14">provides when creating the </tspan><tspan x="0" y="40" class="st15 st16 st14">model</tspan></text>
 <rect x="929" y="127.1" class="st11" width="250.5" height="59.6"/>

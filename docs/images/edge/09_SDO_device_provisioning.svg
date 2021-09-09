@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1000 611.1" style="enable-background:new 0 0 1000 611.1;" xml:space="preserve">
+	 viewBox="0 0 1000 650.6" style="enable-background:new 0 0 1000 650.6;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#051B75;}
 	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
@@ -31,34 +31,32 @@
 	.st25{fill-rule:evenodd;clip-rule:evenodd;fill:#408BFC;}
 	.st26{fill-rule:evenodd;clip-rule:evenodd;fill:#F4F4F4;}
 	.st27{fill:none;stroke:#00BAB6;stroke-width:2;stroke-dasharray:7;}
+	.st28{fill-rule:evenodd;clip-rule:evenodd;fill:#161616;}
+	.st29{font-size:12px;}
+	.st30{fill:none;stroke:#BEBEBE;stroke-width:2;stroke-dasharray:7;}
 </style>
-<rect id="Rectangle-Copy-12" x="206.1" y="15.7" class="st0" width="439.2" height="231.6"/>
+<rect id="Rectangle-Copy-12" x="282" y="15.7" class="st0" width="363.3" height="231.6"/>
 <g>
-	<rect id="Rectangle-Copy-16_2_" x="429.5" y="73.7" class="st1" width="70.5" height="81"/>
-	<rect x="429.6" y="107" class="st2" width="70.4" height="15.6"/>
-	<text transform="matrix(1 0 0 1 433.87 117.3675)" class="st3 st4 st5">Exchange</text>
-</g>
-<g>
-	<rect id="Rectangle-Copy-16_1_" x="223.2" y="149.9" class="st1" width="70.5" height="81"/>
-	<rect x="223.2" y="183.2" class="st2" width="70.5" height="15.6"/>
-	<text transform="matrix(1 0 0 1 250.8789 193.5708)" class="st3 st4 st5">UI</text>
+	<rect id="Rectangle-Copy-16_2_" x="470.8" y="69.4" class="st1" width="70.5" height="81"/>
+	<rect x="470.9" y="102.8" class="st2" width="70.4" height="15.6"/>
+	<text transform="matrix(1 0 0 1 475.1807 113.1318)" class="st3 st4 st5">Exchange</text>
 </g>
 <g>
 	<rect id="Rectangle-Copy-16_4_" x="559.5" y="149.4" class="st1" width="70.5" height="81"/>
 	<rect x="559.4" y="173.8" class="st2" width="70.6" height="33.5"/>
 	<text transform="matrix(1 0 0 1 580.8308 184.1176)"><tspan x="0" y="0" class="st3 st4 st5">SDO</tspan><tspan x="-9.6" y="20" class="st3 st4 st5">Service</tspan></text>
 </g>
-<rect x="221.7" y="35.8" class="st2" width="236.1" height="15.6"/>
-<text transform="matrix(1 0 0 1 221.7151 47.6527)" class="st6 st7 st8">OH management hub</text>
+<rect x="299.1" y="35.8" class="st2" width="236.1" height="15.6"/>
+<text transform="matrix(1 0 0 1 299.1044 47.6527)" class="st6 st7 st8">Management hub</text>
 <g>
 	<rect id="Rectangle-Copy-14_1_" x="825.7" y="15.7" class="st9" width="174" height="99.3"/>
 	<rect x="841.7" y="35.8" class="st2" width="150.2" height="59.4"/>
 	<text transform="matrix(1 0 0 1 841.6833 47.6526)"><tspan x="0" y="0" class="st6 st7 st8">Intel Corp.</tspan><tspan x="0" y="20" class="st6 st7 st8">Rendezvous Server</tspan></text>
 </g>
 <g>
-	<rect id="Rectangle-Copy-16_3_" x="231.7" y="328.7" class="st10" width="146.7" height="81"/>
-	<rect x="247.7" y="347.2" class="st2" width="112.9" height="29.7"/>
-	<text transform="matrix(1 0 0 1 247.7004 359.0474)" class="st11 st7 st8">Loading dock</text>
+	<rect id="Rectangle-Copy-16_3_" x="231.7" y="317.5" class="st10" width="146.7" height="81"/>
+	<rect x="247.7" y="336.1" class="st2" width="112.9" height="29.7"/>
+	<text transform="matrix(1 0 0 1 247.7004 347.8973)" class="st11 st7 st8">Loading dock</text>
 </g>
 <g>
 	<rect x="325.2" y="476.1" class="st2" width="118.7" height="15.5"/>
@@ -118,35 +116,35 @@
 </g>
 <g>
 	<g>
-		<polyline class="st20" points="583,240.5 583,271.7 187.1,271.7 35.7,271.7 35.7,15.7 		"/>
+		<polyline class="st20" points="593.5,240.5 593.5,284.4 60.9,284.4 60.9,267.2 		"/>
 		<g>
-			<polygon class="st21" points="576,242.5 583,230.4 589.9,242.5 			"/>
+			<polygon class="st21" points="586.5,242.5 593.5,230.4 600.4,242.5 			"/>
 		</g>
 	</g>
 </g>
 <g>
 	<g>
-		<line class="st20" x1="105.2" y1="331.5" x2="105.2" y2="482.8"/>
+		<polyline class="st20" points="48.9,487.9 48.9,328.7 32.5,328.7 32.5,277.3 		"/>
 		<g>
-			<polygon class="st21" points="98.2,333.6 105.2,321.5 112.2,333.6 			"/>
+			<polygon class="st21" points="55.9,485.9 48.9,498 41.9,485.9 			"/>
 		</g>
 		<g>
-			<polygon class="st21" points="98.2,480.7 105.2,492.8 112.2,480.7 			"/>
+			<polygon class="st21" points="39.4,279.3 32.5,267.2 25.5,279.3 			"/>
 		</g>
 	</g>
 </g>
 <g>
 	<g>
-		<polyline class="st20" points="124.8,521.9 288.9,521.9 288.9,419.7 		"/>
+		<polyline class="st20" points="72.7,521.9 288.9,521.9 288.9,408.6 		"/>
 		<g>
-			<polygon class="st21" points="295.9,421.7 288.9,409.7 281.9,421.7 			"/>
+			<polygon class="st21" points="295.9,410.6 288.9,398.5 281.9,410.6 			"/>
 		</g>
 	</g>
 </g>
-<polyline class="st20" points="360.6,442.5 321.6,442.5 321.6,409.7 "/>
+<polyline class="st20" points="351.5,442.5 321.6,442.5 321.6,398.5 "/>
 <g>
 	<g>
-		<line class="st20" x1="768.3" y1="442.5" x2="408.6" y2="442.5"/>
+		<line class="st20" x1="768.3" y1="442.5" x2="416.2" y2="442.5"/>
 		<g>
 			<polygon class="st21" points="766.2,435.5 778.3,442.5 766.2,449.5 			"/>
 		</g>
@@ -154,9 +152,9 @@
 </g>
 <g>
 	<g>
-		<polyline class="st22" points="258.5,149.9 258.5,114.2 419.4,114.2 		"/>
+		<line class="st22" x1="251.3" y1="135.6" x2="460.7" y2="135.6"/>
 		<g>
-			<polygon class="st21" points="417.4,121.2 429.5,114.2 417.4,107.2 			"/>
+			<polygon class="st21" points="458.7,142.6 470.8,135.6 458.7,128.6 			"/>
 		</g>
 	</g>
 </g>
@@ -184,7 +182,7 @@
 </g>
 <g>
 	<g>
-		<line class="st22" x1="549.4" y1="189.9" x2="295.6" y2="189.9"/>
+		<line class="st22" x1="549.4" y1="189.9" x2="251.3" y2="189.9"/>
 		<g>
 			<polygon class="st21" points="547.4,182.9 559.4,189.9 547.4,196.9 			"/>
 		</g>
@@ -199,13 +197,13 @@
 	</g>
 </g>
 <g>
-	<rect x="47.9" y="554.2" class="st2" width="106" height="33.3"/>
-	<text transform="matrix(1 0 0 1 79.4453 564.5863)"><tspan x="0" y="0" class="st3 st4 st5">Device </tspan><tspan x="-22.1" y="20" class="st3 st4 st5">manufacturer</tspan></text>
+	<rect y="554.2" class="st2" width="97.7" height="33.3"/>
+	<text transform="matrix(1 0 0 1 27.375 564.5863)"><tspan x="0" y="0" class="st3 st4 st5">Device </tspan><tspan x="-22.1" y="20" class="st3 st4 st5">manufacturer</tspan></text>
 	<g>
-		<rect x="77.1" y="498" class="st23" width="47.8" height="47.8"/>
-		<path class="st24" d="M114.5,513c-0.3-0.2-0.7-0.2-1,0l-8.5,4.2v-3.4c0-0.6-0.5-1-1-1c-0.2,0-0.3,0-0.4,0.1l-8.6,4.3v-7.4
-			c0-0.6-0.4-1-1-1h-6c-0.6,0-1,0.4-1,1v25h28v-21C114.9,513.5,114.8,513.2,114.5,513z M106.9,532.9h-4v-7h4V532.9z M112.9,532.9h-4
-			v-8c0-0.6-0.4-1-1-1h-6c-0.6,0-1,0.4-1,1v8h-12v-22h4v9.6l10-5v5l10-5V532.9z"/>
+		<rect x="25" y="498" class="st23" width="47.8" height="47.8"/>
+		<path class="st24" d="M62.4,513c-0.3-0.2-0.7-0.2-1,0l-8.5,4.2v-3.4c0-0.6-0.5-1-1-1c-0.2,0-0.3,0-0.4,0.1l-8.5,4.3v-7.4
+			c0-0.6-0.4-1-1-1h-6c-0.6,0-1,0.4-1,1v25h28v-21C62.9,513.5,62.7,513.2,62.4,513z M54.9,532.9h-4v-7h4V532.9z M60.9,532.9h-4v-8
+			c0-0.6-0.4-1-1-1h-6c-0.6,0-1,0.4-1,1v8h-12v-22h4v9.6l10-5v5l10-5V532.9z"/>
 	</g>
 </g>
 <g>
@@ -325,51 +323,60 @@
 	<rect x="810.3" y="341.3" class="st2" width="147.7" height="15.6"/>
 	<text transform="matrix(1 0 0 1 810.3135 353.1496)" class="st3 st7 st8">Edge nodes</text>
 </g>
-<rect x="46.2" y="365.5" class="st11" width="148.6" height="85.6"/>
-<rect x="53.1" y="15.7" class="st2" width="115.4" height="81.4"/>
-<text transform="matrix(1 0 0 1 53.1382 26.041)"><tspan x="0" y="0" class="st3 st4 st5">1. Generates SDO </tspan><tspan x="0" y="20" class="st3 st4 st5">ownership key </tspan><tspan x="0" y="40" class="st3 st4 st5">and imports</tspan><tspan x="0" y="60" class="st3 st4 st5">(first time only)</tspan></text>
-<rect x="53.1" y="373.5" class="st2" width="144.4" height="79.2"/>
-<text transform="matrix(1 0 0 1 53.1382 383.8354)"><tspan x="0" y="0" class="st3 st4 st5">2. Orders devices, </tspan><tspan x="0" y="20" class="st3 st4 st5">providing SDO owner </tspan><tspan x="0" y="40" class="st3 st4 st5">public key. Receives </tspan><tspan x="0" y="60" class="st3 st4 st5">ownership vouchers.</tspan></text>
-<rect x="150.6" y="501.7" class="st2" width="112.5" height="18.3"/>
-<text transform="matrix(1 0 0 1 150.6095 512.0771)" class="st3 st4 st5">4. Ships devices</text>
+<rect x="108.3" y="263.9" class="st2" width="428.2" height="19.5"/>
+<text transform="matrix(1 0 0 1 126.1944 274.2462)" class="st3 st4 st5">1. Generates SDO ownership key and imports (first time only)</text>
+<rect x="61.8" y="367.2" class="st2" width="144.4" height="79.2"/>
+<text transform="matrix(1 0 0 1 61.8214 377.555)"><tspan x="0" y="0" class="st3 st4 st5">2. Orders devices, </tspan><tspan x="0" y="20" class="st3 st4 st5">providing SDO owner </tspan><tspan x="0" y="40" class="st3 st4 st5">public key. Receives </tspan><tspan x="0" y="60" class="st3 st4 st5">ownership vouchers.</tspan></text>
+<rect x="129.2" y="501.7" class="st2" width="112.5" height="18.3"/>
+<text transform="matrix(1 0 0 1 129.1732 512.0771)" class="st3 st4 st5">4. Ships devices</text>
 <rect x="438.5" y="403.8" class="st2" width="240" height="35.4"/>
 <text transform="matrix(1 0 0 1 438.4693 414.1839)"><tspan x="0" y="0" class="st3 st4 st5">5. Places in the field, connects </tspan><tspan x="0" y="20" class="st3 st4 st5">network and power, then turns on</tspan></text>
 <rect x="863.1" y="149.4" class="st2" width="130.7" height="35.4"/>
 <text transform="matrix(1 0 0 1 863.1127 159.7205)"><tspan x="0" y="0" class="st3 st4 st5">6. Contacts </tspan><tspan x="0" y="20" class="st3 st4 st5">rendezvous server</tspan></text>
 <rect x="863.1" y="204.8" class="st2" width="136.9" height="60.4"/>
-<text transform="matrix(1 0 0 1 863.1122 215.1472)"><tspan x="0" y="0" class="st3 st4 st5">7. Redirects edge </tspan><tspan x="0" y="20" class="st3 st4 st5">nodes to OH </tspan><tspan x="0" y="40" class="st3 st4 st5">management hub</tspan></text>
+<text transform="matrix(1 0 0 1 863.1122 215.1472)"><tspan x="0" y="0" class="st3 st4 st5">7. Redirects edge </tspan><tspan x="0" y="20" class="st3 st4 st5">nodes to </tspan><tspan x="0" y="40" class="st3 st4 st5">management hub</tspan></text>
 <rect x="694" y="209.3" class="st2" width="106.7" height="43.1"/>
 <text transform="matrix(1 0 0 1 694.0245 219.634)"><tspan x="0" y="0" class="st3 st4 st5">8. Requests </tspan><tspan x="0" y="20" class="st3 st4 st5">configuration</tspan></text>
 <rect x="694" y="271.7" class="st2" width="147.3" height="57.9"/>
-<text transform="matrix(1 0 0 1 694.0245 282.102)"><tspan x="0" y="0" class="st3 st4 st5">9. Installs and </tspan><tspan x="0" y="20" class="st3 st4 st5">registers OH agent, </tspan><tspan x="0" y="40" class="st3 st4 st5">deploys edge services</tspan></text>
-<rect x="107.3" y="149" class="st2" width="80.2" height="40.3"/>
-<text transform="matrix(1 0 0 1 107.306 159.3489)"><tspan x="0" y="0" class="st3 st4 st5">3. Imports </tspan><tspan x="0" y="20" class="st3 st4 st5">vouchers</tspan></text>
+<text transform="matrix(1 0 0 1 694.0245 282.102)"><tspan x="0" y="0" class="st3 st4 st5">9. Installs and </tspan><tspan x="0" y="20" class="st3 st4 st5">registers edge agent, </tspan><tspan x="0" y="40" class="st3 st4 st5">deploys edge services</tspan></text>
+<rect x="113" y="50.2" class="st2" width="127.6" height="37.5"/>
+<text transform="matrix(1 0 0 1 113.0072 60.5782)"><tspan x="0" y="0" class="st3 st4 st5">3. Receives and </tspan><tspan x="0" y="20" class="st3 st4 st5">imports vouchers</tspan></text>
 <rect x="661.9" y="43.6" class="st2" width="153" height="18.1"/>
 <text transform="matrix(1 0 0 1 661.8508 53.9587)" class="st3 st4 st5">3c. Registers vouchers</text>
-<rect x="268.7" y="93.9" class="st2" width="142.1" height="16.5"/>
-<text transform="matrix(1 0 0 1 268.7053 104.2905)" class="st6 st4 st5">3a. Adds edge nodes</text>
-<rect x="355.3" y="170.5" class="st2" width="144.4" height="16.9"/>
-<text transform="matrix(1 0 0 1 355.3115 180.867)" class="st6 st4 st5">3b. Imports vouchers</text>
+<rect x="299.1" y="115.4" class="st2" width="142.1" height="16.5"/>
+<text transform="matrix(1 0 0 1 299.1046 125.7275)" class="st6 st4 st5">3a. Adds edge nodes</text>
+<rect x="299.1" y="170.5" class="st2" width="144.4" height="16.9"/>
+<text transform="matrix(1 0 0 1 299.1041 180.867)" class="st6 st4 st5">3b. Imports vouchers</text>
 <g>
 	<g id="Group-2" transform="translate(21.000000, 0.000000)">
-		<circle id="Oval-Copy-3" class="st12" cx="86.2" cy="271.1" r="24"/>
+		<circle id="Oval-Copy-3" class="st12" cx="27.4" cy="208.9" r="24"/>
 		<g id="icon_x2F_policy-admin" transform="translate(8.000000, 8.000000)">
-			<path id="Shape" class="st13" d="M73.2,266.1c2.8,0,5,2.2,5,5v6h-2v-6c0-1.7-1.3-3-3-3h-4c-1.7,0-3,1.3-3,3v6h-2v-6
-				c0-2.8,2.2-5,5-5H73.2z M71.2,254.1c2.8,0,5,2.2,5,5c0,2.8-2.2,5-5,5s-5-2.2-5-5C66.2,256.4,68.5,254.1,71.2,254.1z M89.8,254.1
-				l1.4,1.4l-7.1,7.1l-3.9-3.9l1.4-1.4l2.5,2.5L89.8,254.1z M71.2,256.1c-1.7,0-3,1.3-3,3c0,1.7,1.3,3,3,3c1.7,0,3-1.3,3-3
-				C74.2,257.5,72.9,256.1,71.2,256.1z"/>
+			<path id="Shape" class="st13" d="M14.4,203.9c2.8,0,5,2.2,5,5v6h-2v-6c0-1.7-1.3-3-3-3h-4c-1.7,0-3,1.3-3,3v6h-2v-6
+				c0-2.8,2.2-5,5-5H14.4z M12.4,191.9c2.8,0,5,2.2,5,5s-2.2,5-5,5s-5-2.2-5-5S9.7,191.9,12.4,191.9z M31,191.8l1.4,1.4l-7.1,7.1
+				l-3.9-3.9l1.4-1.4l2.5,2.5L31,191.8z M12.4,193.9c-1.7,0-3,1.3-3,3c0,1.7,1.3,3,3,3s3-1.3,3-3S14.1,193.9,12.4,193.9z"/>
 		</g>
 	</g>
-	<rect x="59.4" y="305.7" class="st2" width="94.5" height="15.5"/>
-	<text transform="matrix(1 0 0 1 62.5076 316.0647)" class="st3 st4 st5">Administrator</text>
+	<rect x="0.6" y="243.5" class="st2" width="94.5" height="15.5"/>
+	<text transform="matrix(1 0 0 1 3.7344 253.8177)" class="st3 st4 st5">Administrator</text>
 </g>
 <rect x="252.4" y="286.3" class="st11" width="12.3" height="12.3"/>
 <g>
+	<rect id="Rectangle-Copy-16_5_" x="194.9" y="121.9" class="st28" width="70.5" height="81"/>
+	<rect x="194.9" y="155.2" class="st2" width="70.5" height="15.6"/>
+	<text transform="matrix(1 0 0 1 219.3163 165.6074)" class="st6 st4 st5">CLI</text>
+</g>
+<g>
 	<g>
-		<polyline class="st20" points="213.2,190.5 105.2,190.5 105.2,247.1 		"/>
+		<polyline class="st20" points="82.6,209.3 105.6,209.3 105.6,90.6 230.1,90.6 230.1,111.9 		"/>
 		<g>
-			<polygon class="st21" points="211.1,183.5 223.2,190.5 211.1,197.5 			"/>
+			<polygon class="st21" points="223.1,109.8 230.1,121.9 237.1,109.8 			"/>
 		</g>
 	</g>
 </g>
+<rect x="71.3" y="628.4" class="st2" width="89.1" height="14.5"/>
+<text transform="matrix(1 0 0 1 71.3044 637.322)" class="st3 st4 st29">User actions</text>
+<rect x="260.3" y="628.4" class="st2" width="89.1" height="14.5"/>
+<text transform="matrix(1 0 0 1 260.3043 637.322)" class="st3 st4 st29">System actions</text>
+<line class="st20" x1="0" y1="633.7" x2="59.7" y2="633.7"/>
+<line class="st30" x1="187.4" y1="633.7" x2="247.2" y2="633.7"/>
 </svg>
