@@ -35,7 +35,7 @@ cat /etc/default/horizon
 ## Procedure
 {: #secrets_procedure}
 
-This example is part of the [{{site.data.keyword.horizon_open}} ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/) open-source project. Follow the steps in [Creating Your Own Hello Secret Service ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/examples/blob/master/edge/services/helloSecretWorld/CreateService.md)) and then return here.
+This example is part of the [{{site.data.keyword.horizon_open}}](https://github.com/open-horizon/) open-source project. Follow the steps in [Creating Your Own Hello Secret Service](https://github.com/open-horizon/examples/blob/master/edge/services/helloSecretWorld/CreateService.md)) and then return here.
 
 ## What to do next
 {: #secrets_what_next}
