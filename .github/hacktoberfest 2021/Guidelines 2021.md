@@ -1,15 +1,18 @@
 # Guidelines for Hactoberfest 2021 ⚡
 ## Open Horizon 
 Open Horizon is a platform for managing the service software lifecycle of containerized workloads and related machine learning assets. It enables autonomous management of applications deployed to distributed webscale fleets of edge computing nodes and devices without requiring on-premise administrators.
+![Open Horizon](https://github.com/open-horizon/artwork/blob/master/black/open-horizon-black.jpg)
 
 ## What is Hactoberfest? 🌱
 
 Hosted by DigitalOcean for the 8th year in a row, Hacktoberfest encourages participation in giving back to the open source community by completing pull requests, participating in events, and donating to open source projects.
 
+
 All backgrounds and skills levels are encouraged to complete the challenge.
 
+
 ## What is there for you in it?🤝
-- free swags 
+- free swag 
 - networking opportunity
 - growth 
 - chance to learn something new
@@ -30,7 +33,6 @@ Technologies and Tech stacks listed below:
 - Jekyll
 - Markdown
 - Make
-- Travis
 - Git
 - Github Actions
 - yaml
