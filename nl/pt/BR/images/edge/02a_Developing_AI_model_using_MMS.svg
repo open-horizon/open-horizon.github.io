@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 24.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 912 817"
+   style="enable-background:new 0 0 912 817;"
+   xml:space="preserve"
+   inkscape:version="0.48.1 "
+   width="100%"
+   height="100%"
+   sodipodi:docname="02a_Developing_AI_model_using_MMS.svg"><metadata
+   id="metadata180"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs178" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1280"
+   inkscape:window-height="705"
+   id="namedview176"
+   showgrid="false"
+   inkscape:zoom="0.59485924"
+   inkscape:cx="456"
+   inkscape:cy="408.5"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style3">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#408BFC;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#8A3FFC;}
+	.st3{fill:none;stroke:#00BAB6;stroke-width:2;stroke-dasharray:7;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#E3F6FF;}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#0F62FE;}
+	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#009C98;}
+	.st7{fill:#BEBEBE;}
+	.st8{fill-rule:evenodd;clip-rule:evenodd;fill:#051B75;}
+	.st9{fill:#F908ED;}
+	.st10{font-family:'IBMPlexSans';}
+	.st11{font-size:14px;}
+	.st12{fill-rule:evenodd;clip-rule:evenodd;fill:none;}
+	.st13{fill:#161616;}
+	.st14{fill:#F4F4F4;}
+	.st15{font-family:'IBMPlexSans-Medium';}
+	.st16{font-size:16px;}
+	.st17{fill:none;}
+</style>
+<rect
+   id="Rectangle-Copy-14"
+   x="480"
+   y="637"
+   class="st0"
+   width="370"
+   height="180" />
+<rect
+   id="Rectangle-Copy-9"
+   x="496"
+   y="720"
+   class="st1"
+   width="80"
+   height="81" />
+<rect
+   id="Rectangle-Copy-18_1_"
+   x="749"
+   y="695"
+   class="st2"
+   width="85"
+   height="106" />
+<path
+   id="Rectangle-Copy-17"
+   class="st3"
+   d="M505,32h357c22.1,0,40,17.9,40,40v222c0,22.1-17.9,40-40,40H505c-22.1,0-40-17.9-40-40  V72C465,49.9,482.9,32,505,32z" />
+<path
+   id="Rectangle-Copy-22"
+   class="st3"
+   d="M41,120h237c22.1,0,40,17.9,40,40v94c0,22.1-17.9,40-40,40H41c-22.1,0-40-17.9-40-40  v-94C1,137.9,18.9,120,41,120z" />
+<circle
+   id="Oval-Copy-3"
+   class="st4"
+   cx="58"
+   cy="180"
+   r="24" />
+<path
+   id="Shape"
+   class="st5"
+   d="M53,183c2.8,0,5,2.2,5,5v6h-2v-6c0-1.7-1.3-3-3-3h-4c-1.7,0-3,1.3-3,3v6h-2v-6c0-2.8,2.2-5,5-5H53z   M51,171c2.8,0,5,2.2,5,5s-2.2,5-5,5s-5-2.2-5-5S48.2,171,51,171z M72,172v8h-2v-8H72z M67,169v11h-2v-11H67z M62,174v6h-2v-6H62z   M51,173c-1.7,0-3,1.3-3,3c0,1.7,1.3,3,3,3c1.7,0,3-1.3,3-3S52.7,173,51,173z" />
+<circle
+   id="Oval-Copy-3_1_"
+   class="st4"
+   cx="529"
+   cy="88"
+   r="24" />
+<path
+   id="Shape_1_"
+   class="st5"
+   d="M524,91c2.8,0,5,2.2,5,5v6h-2v-6c0-1.7-1.3-3-3-3h-4c-1.7,0-3,1.3-3,3v6h-2v-6c0-2.8,2.2-5,5-5  H524z M522,79c2.8,0,5,2.2,5,5s-2.2,5-5,5s-5-2.2-5-5S519.2,79,522,79z M537.1,77.9l1.8,0.4l-2.4,10.4l-1.8-0.4L537.1,77.9z   M531.9,79.6l1.4,1.2l-2.1,2.6l2.1,2.6l-1.4,1.2l-3.1-3.7L531.9,79.6z M541.7,79.6l3.1,3.7l-3.1,3.7l-1.4-1.2l2.1-2.6l-2.1-2.6  L541.7,79.6z M522,81c-1.7,0-3,1.3-3,3c0,1.7,1.3,3,3,3s3-1.3,3-3S523.7,81,522,81z" />
+<rect
+   id="Rectangle-Copy-14_1_"
+   x="540"
+   y="422"
+   class="st6"
+   width="260"
+   height="155" />
+<path
+   id="Line-2-Copy-37"
+   class="st7"
+   d="M828.5,302v77.3l-357,0V455H415v6l-14-7l14-7v6h54.5v-75.7l357,0V302H828.5z" />
+<path
+   id="Line-5-Copy-3"
+   class="st7"
+   d="M828.3,498.5l0,1L827.8,623l6,0l-7.1,14l-6.9-14l6,0l0.4-122.5H800v-2H828.3z" />
+<path
+   id="Line-5-Copy-4"
+   class="st7"
+   d="M526,447l14,7l-14,7v-6h-55.5v-2H526V447z" />
+<rect
+   id="Rectangle-Copy-18_2_"
+   x="1"
+   y="422"
+   class="st8"
+   width="400"
+   height="155" />
+<text
+   transform="matrix(1 0 0 1 442.8637 174)"
+   class="st9 st10 st11"
+   id="text19"> </text>
+
+<text
+   transform="matrix(1 0 0 1 727.1121 215)"
+   class="st9 st10 st11"
+   id="text21"> </text>
+
+<rect
+   id="Rectangle-Copy-16"
+   x="305"
+   y="479"
+   class="st1"
+   width="80"
+   height="81" />
+<rect
+   id="Rectangle-Copy-16_1_"
+   x="209"
+   y="479"
+   class="st1"
+   width="80"
+   height="81" />
+<rect
+   id="Rectangle-Copy-16_2_"
+   x="113"
+   y="479"
+   class="st1"
+   width="80"
+   height="81" />
+<rect
+   id="Rectangle-Copy-16_3_"
+   x="17"
+   y="479"
+   class="st1"
+   width="80"
+   height="81" />
+<rect
+   id="Rectangle-Copy-18_3_"
+   x="673"
+   y="64"
+   class="st2"
+   width="104"
+   height="81" />
+<rect
+   id="Rectangle-Copy-18_4_"
+   x="785"
+   y="196"
+   class="st2"
+   width="85"
+   height="106" />
+<rect
+   id="Rectangle-Copy-18_5_"
+   x="497"
+   y="196"
+   class="st2"
+   width="85"
+   height="106" />
+<path
+   id="Line-2-Copy-20"
+   class="st7"
+   d="M659,97.1l14,6.9l-14,7.1l0-6l-92,0.4l-1,0l0-2l1,0l92-0.4L659,97.1z" />
+<path
+   id="Line-2-Copy-25"
+   class="st7"
+   d="M187.5,177l14,7l-14,7v-6H94v-2h93.5V177z" />
+<path
+   id="Line-2-Copy-27"
+   class="st7"
+   d="M483,201l14,7l-14,7v-6H286v-2h197V201z" />
+<path
+   id="Line-2-Copy-29"
+   class="st7"
+   d="M771,242l14,7l-14,7v-6H582v-2h189V242z" />
+<rect
+   x="25"
+   y="214.6"
+   class="st12"
+   width="64.9"
+   height="34.7"
+   id="rect34" />
+<text
+   transform="matrix(1 0 0 1 42.5615 224.9954)"
+   id="text36"><tspan
+     x="0"
+     y="0"
+     class="st13 st10 st11"
+     id="tspan38">Cientista de </tspan><tspan
+     x="-12.3"
+     y="20"
+     class="st13 st10 st11"
+     id="tspan40">dados</tspan></text>
+
+<rect
+   x="94"
+   y="162.8"
+   class="st12"
+   width="93.5"
+   height="16.3"
+   id="rect42" />
+<text
+   transform="matrix(1 0 0 1 108.0956 173.1962)"
+   class="st13 st10 st11"
+   id="text44">1. Cria</text>
+
+<rect
+   x="328.8"
+   y="143.6"
+   class="st12"
+   width="125.2"
+   height="64.4"
+   id="rect46" />
+<text
+   transform="matrix(1 0 0 1 349.1719 154.0051)"
+   id="text48"><tspan
+     x="0"
+     y="0"
+     class="st13 st10 st11"
+     id="tspan50">2. Compartilha o </tspan><tspan
+     x="-9"
+     y="20"
+     class="st13 st10 st11"
+     id="tspan52">aplicativo com </tspan><tspan
+     x="-2.1"
+     y="40"
+     class="st13 st10 st11"
+     id="tspan54">o desenvolvedor</tspan></text>
+
+<rect
+   x="582.2"
+   y="204.6"
+   class="st12"
+   width="188.3"
+   height="37.3"
+   id="rect56" />
+<text
+   transform="matrix(1 0 0 1 625.7371 214.9965)"
+   id="text58"><tspan
+     x="0"
+     y="0"
+     class="st13 st10 st11"
+     id="tspan60">3. Empacota o </tspan><tspan
+     x="-29.3"
+     y="20"
+     class="st13 st10 st11"
+     id="tspan62">aplicativo em um serviço</tspan></text>
+
+<rect
+   x="491.3"
+   y="122.6"
+   class="st12"
+   width="74.1"
+   height="34.8"
+   id="rect64" />
+<text
+   transform="matrix(1 0 0 1 499.6205 132.9903)"
+   id="text66"><tspan
+     x="0"
+     y="0"
+     class="st13 st10 st11"
+     id="tspan68">Desenvolvedor de </tspan><tspan
+     x="-3.3"
+     y="20"
+     class="st13 st10 st11"
+     id="tspan70">software</tspan></text>
+
+<rect
+   x="575.9"
+   y="79.6"
+   class="st12"
+   width="74.1"
+   height="14.9"
+   id="rect72" />
+<text
+   transform="matrix(1 0 0 1 588.7766 89.9882)"
+   class="st13 st10 st11"
+   id="text74">Instala</text>
+
+<rect
+   x="630.4"
+   y="354.7"
+   class="st12"
+   width="170.9"
+   height="14.9"
+   id="rect76" />
+<text
+   transform="matrix(1 0 0 1 641.0562 365.0254)"
+   class="st13 st10 st11"
+   id="text78">4. Publica contêineres</text>
+
+<rect
+   x="839"
+   y="545.6"
+   class="st12"
+   width="73"
+   height="39.2"
+   id="rect80" />
+<text
+   transform="matrix(1 0 0 1 838.9998 555.9907)"
+   id="text82"><tspan
+     x="0"
+     y="0"
+     class="st13 st10 st11"
+     id="tspan84">5. Importa </tspan><tspan
+     x="0"
+     y="20"
+     class="st13 st10 st11"
+     id="tspan86">contêineres</tspan></text>
+
+<rect
+   x="305"
+   y="512.7"
+   class="st12"
+   width="80"
+   height="14.9"
+   id="rect88" />
+<text
+   transform="matrix(1 0 0 1 329.4114 523.0237)"
+   class="st13 st10 st11"
+   id="text90">MMS</text>
+
+<rect
+   x="502"
+   y="744.6"
+   class="st12"
+   width="65.8"
+   height="37.9"
+   id="rect92" />
+<text
+   id="text94"
+   x="505.54654"
+   y="751.61938"><tspan
+     x="505.54654"
+     y="751.61938"
+     class="st13 st10 st11"
+     id="tspan96"
+     style="font-size:14px;fill:#161616;font-family:IBMPlexSans">Agente de </tspan><tspan
+     x="503.44653"
+     y="771.61938"
+     class="st13 st10 st11"
+     id="tspan98"
+     style="font-size:14px;fill:#161616;font-family:IBMPlexSans">borda</tspan></text>
+
+<rect
+   x="749"
+   y="736.6"
+   class="st12"
+   width="84.8"
+   height="16.4"
+   id="rect100" />
+<text
+   transform="matrix(1 0 0 1 759.3896 746.9415)"
+   class="st14 st10 st11"
+   id="text102"
+   style="-inkscape-font-specification:Sans;font-family:Sans;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:14px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+   sodipodi:linespacing="125%"><tspan
+     sodipodi:role="line"
+     id="tspan3157">Serviço </tspan><tspan
+     sodipodi:role="line"
+     id="tspan3159">de IA</tspan></text>
+
+<rect
+   x="209"
+   y="512.7"
+   class="st12"
+   width="80"
+   height="14.9"
+   id="rect104" />
+<text
+   transform="matrix(1 0 0 1 241.3772 523.0237)"
+   class="st13 st10 st11"
+   id="text106">IU</text>
+
+<rect
+   x="113"
+   y="512.7"
+   class="st12"
+   width="80"
+   height="14.9"
+   id="rect108" />
+<text
+   transform="matrix(1 0 0 1 122.0818 523.0237)"
+   class="st13 st10 st11"
+   id="text110">Exchange</text>
+
+<rect
+   x="17"
+   y="512.7"
+   class="st12"
+   width="80"
+   height="14.9"
+   id="rect112" />
+<text
+   transform="matrix(1 0 0 1 38.0725 523.0237)"
+   class="st13 st10 st11"
+   id="text114">Agbot</text>
+
+<rect
+   x="673"
+   y="96.6"
+   class="st12"
+   width="104"
+   height="14.9"
+   id="rect116" />
+<text
+   transform="matrix(1 0 0 1 702.3762 107.0062)"
+   class="st14 st10 st11"
+   id="text118">Docker</text>
+
+<rect
+   x="784.9"
+   y="237.6"
+   class="st12"
+   width="85"
+   height="14.9"
+   id="rect120" />
+<text
+   transform="scale(0.91507936,1.0928014)"
+   class="st14 st10 st11"
+   id="text122"
+   x="869.29877"
+   y="226.89612"
+   style="font-size:12.81111145px;fill:#f4f4f4;font-family:IBMPlexSans">Serviço de IA</text>
+
+<rect
+   x="496.8"
+   y="230.1"
+   class="st12"
+   width="85.2"
+   height="34.7"
+   id="rect124" />
+<text
+   transform="matrix(1 0 0 1 519.9266 240.4189)"
+   id="text126"><tspan
+     x="0"
+     y="0"
+     class="st14 st10 st11"
+     id="tspan128">Aplicativo de </tspan><tspan
+     x="-16.2"
+     y="20"
+     class="st14 st10 st11"
+     id="tspan130">AI/ML</tspan></text>
+
+<rect
+   x="17"
+   y="442.1"
+   class="st12"
+   width="236.1"
+   height="15.6"
+   id="rect132" />
+<text
+   transform="matrix(1 0 0 1 17.0002 453.9669)"
+   class="st14 st15 st16"
+   id="text134">Hub de gerenciamento do IEAM</text>
+
+<rect
+   x="496"
+   y="657.2"
+   class="st12"
+   width="236.1"
+   height="15.6"
+   id="rect136" />
+<text
+   transform="matrix(1 0 0 1 496.0002 668.9938)"
+   class="st14 st15 st16"
+   id="text138">Nó de borda</text>
+
+<rect
+   x="34"
+   y="92.2"
+   class="st12"
+   width="236.1"
+   height="15.6"
+   id="rect140" />
+<text
+   transform="matrix(1 0 0 1 33.9919 104.0068)"
+   class="st13 st15 st16"
+   id="text142">Ambiente do cientista de dados</text>
+
+<rect
+   x="497"
+   y="4.2"
+   class="st12"
+   width="236.1"
+   height="15.6"
+   id="rect144" />
+<text
+   transform="matrix(1 0 0 1 497.0002 15.9909)"
+   class="st13 st15 st16"
+   id="text146">Ambiente do desenvolvedor</text>
+
+<rect
+   id="Rectangle-Copy-18_6_"
+   x="201"
+   y="154"
+   class="st2"
+   width="85"
+   height="120" />
+<rect
+   x="203.1"
+   y="176.7"
+   class="st12"
+   width="80.6"
+   height="74.6"
+   id="rect149" />
+<text
+   transform="matrix(1 0 0 1 223.9288 187.0765)"
+   id="text151"
+   style="-inkscape-font-specification:Sans;font-family:Sans;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+   sodipodi:linespacing="125%"><tspan
+     sodipodi:role="line"
+     id="tspan3161"
+     style="-inkscape-font-specification:IBM Plex Sans;font-family:IBM Plex Sans;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;fill:#f9f9f9">Aplicativo </tspan><tspan
+     sodipodi:role="line"
+     id="tspan3163"
+     style="-inkscape-font-specification:IBM Plex Sans;font-family:IBM Plex Sans;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;fill:#f9f9f9">AI/ML</tspan><tspan
+     sodipodi:role="line"
+     id="tspan3165"
+     style="-inkscape-font-specification:IBM Plex Sans;font-family:IBM Plex Sans;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;fill:#f9f9f9">com seu </tspan><tspan
+     sodipodi:role="line"
+     id="tspan3167"
+     style="-inkscape-font-specification:IBM Plex Sans;font-family:IBM Plex Sans;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;fill:#f9f9f9">modelo</tspan></text>
+
+<rect
+   x="576"
+   y="443.1"
+   class="st12"
+   width="162.3"
+   height="15.6"
+   id="rect161" />
+<text
+   transform="matrix(1 0 0 1 575.9996 454.9651)"
+   class="st14 st15 st16"
+   id="text163">Registro de contêiner</text>
+
+<g
+   id="g165">
+	<path
+   class="st14"
+   d="M568,442.7h-8c-0.6,0-1,0.4-1,1v11c0,0.6,0.4,1,1,1h8c0.6,0,1-0.4,1-1v-11C569,443.1,568.6,442.7,568,442.7z    M568,443.7v3h-8v-3H568z M560,450.7v-3h8v3H560z M560,454.7v-3h8v3H560z"
+   id="path167" />
+	<circle
+   class="st14"
+   cx="561.5"
+   cy="445.2"
+   r="0.5"
+   id="circle169" />
+	<circle
+   class="st14"
+   cx="561.5"
+   cy="449.2"
+   r="0.5"
+   id="circle171" />
+	<circle
+   class="st14"
+   cx="561.5"
+   cy="453.2"
+   r="0.5"
+   id="circle173" />
+	<rect
+   id="_x3C_Transparent_Rectangle_x3E__616_"
+   x="556"
+   y="441.2"
+   class="st17"
+   width="16"
+   height="16" />
+</g>
+</svg>

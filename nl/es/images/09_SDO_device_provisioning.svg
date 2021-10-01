@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1036.8 664.8" style="enable-background:new 0 0 1036.8 664.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#051B75;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:none;}
+	.st3{fill:#161616;}
+	.st4{font-family:'IBMPlexSans';}
+	.st5{font-size:14px;}
+	.st6{fill:#F4F4F4;}
+	.st7{font-family:'IBMPlexSans-Medium';}
+	.st8{font-size:16px;}
+	.st9{fill:#009C98;}
+	.st10{fill:#BEBEBE;}
+	.st11{enable-background:new    ;}
+	.st12{fill:#E3F6FF;}
+	.st13{fill:#0F62FE;}
+	.st14{display:none;}
+	.st15{display:inline;fill:#0F62FE;}
+	.st16{fill:none;stroke:#0F62FE;stroke-width:2;stroke-miterlimit:10;}
+	.st17{display:none;fill:none;stroke:#0F62FE;stroke-width:2;stroke-miterlimit:10;}
+	.st18{fill:none;stroke:#BEBEBE;stroke-width:2;}
+	.st19{fill:none;stroke:#BEBEBE;stroke-width:2;stroke-dasharray:7,7;}
+	.st20{fill:#408BFC;}
+	.st21{fill:none;stroke:#00BAB6;stroke-width:2;stroke-dasharray:7;}
+	.st22{font-size:12px;}
+	.st23{fill:none;stroke:#BEBEBE;stroke-width:2;stroke-dasharray:7;}
+</style>
+<rect id="Rectangle-Copy-12" x="300.4" y="22.8" class="st0" width="363.3" height="231.6"/>
+<g>
+	<rect id="Rectangle-Copy-16_2_" x="489.2" y="76.5" class="st1" width="70.5" height="81"/>
+	<rect x="489.3" y="109.9" class="st2" width="70.4" height="15.6"/>
+	<text transform="matrix(1 0 0 1 493.5644 120.2448)" class="st3 st4 st5">Exchange</text>
+</g>
+<g>
+	<rect id="Rectangle-Copy-16_4_" x="577.9" y="156.5" class="st1" width="70.5" height="81"/>
+	<rect x="577.8" y="180.9" class="st2" width="70.6" height="33.5"/>
+</g>
+<rect x="317.5" y="42.9" class="st2" width="236.1" height="15.6"/>
+<text transform="matrix(1 0 0 1 317.4881 54.7657)" class="st6 st7 st8">Centro de gestión</text>
+<g>
+	<rect id="Rectangle-Copy-14_1_" x="844.1" y="22.8" class="st9" width="174" height="99.3"/>
+	<rect x="860.1" y="42.9" class="st2" width="150.2" height="59.4"/>
+</g>
+<g>
+	<rect id="Rectangle-Copy-16_3_" x="250.1" y="324.6" class="st10" width="146.7" height="81"/>
+	<rect x="266.1" y="343.2" class="st2" width="112.9" height="29.7"/>
+	<rect x="269.1" y="350.4" class="st2" width="109.3" height="36.9"/>
+	<text transform="matrix(1 0 0 1 271.9185 364.0103)" class="st11"><tspan x="0" y="0" class="st1 st7 st8">Plataforma de </tspan><tspan x="31.6" y="19.2" class="st1 st7 st8">carga</tspan></text>
+</g>
+<g>
+	<rect x="343.6" y="483.2" class="st2" width="118.7" height="15.5"/>
+	<text transform="matrix(1 0 0 1 350.964 493.5501)" class="st3 st4 st5">Técnico de nodo</text>
+	<g id="Group-2_3_" transform="translate(21.000000, 0.000000)">
+		<circle id="Oval-Copy-3_3_" class="st12" cx="382" cy="448.5" r="24"/>
+		<path class="st13" d="M377,451.5c2.8,0,5,2.2,5,5v6h-2v-6c0-1.7-1.3-3-3-3h-4c-1.7,0-3,1.3-3,3v6h-2v-6c0-2.8,2.2-5,5-5H377z"/>
+		<g>
+			<g>
+				<path class="st13" d="M375,439.5c-2.8,0-5,2.2-5,5s2.2,5,5,5s5-2.2,5-5S377.8,439.5,375,439.5z M375,447.5c-1.7,0-3-1.3-3-3
+					s1.3-3,3-3s3,1.3,3,3S376.6,447.5,375,447.5z"/>
+			</g>
+		</g>
+		<g class="st14">
+			<rect x="404" y="447.5" class="st15" width="2" height="2"/>
+			<rect x="409" y="447.5" class="st15" width="2" height="2"/>
+			<rect x="412" y="444.5" class="st15" width="2" height="2"/>
+			<rect x="401" y="444.5" class="st15" width="2" height="2"/>
+			<rect x="404" y="439.5" class="st15" width="7" height="7"/>
+			<rect x="406" y="441.5" class="st15" width="3" height="3"/>
+			<rect x="412" y="439.5" class="st15" width="2" height="2"/>
+			<rect x="401" y="439.5" class="st15" width="2" height="2"/>
+			<rect x="404" y="436.5" class="st15" width="2" height="2"/>
+			<rect x="409" y="436.5" class="st15" width="2" height="2"/>
+		</g>
+		<g class="st14">
+			<path class="st15" d="M403,445.5c-1.1,0-2,0.9-2,2s0.9,2,2,2s2-0.9,2-2S404.1,445.5,403,445.5L403,445.5z"/>
+		</g>
+		<g>
+			<line class="st16" x1="394.4" y1="452.8" x2="394.4" y2="438.2"/>
+			<line class="st17" x1="408.5" y1="442.2" x2="408.5" y2="438.2"/>
+			<line class="st16" x1="398.4" y1="440.2" x2="390.4" y2="440.2"/>
+		</g>
+		<g>
+			<path class="st16" d="M387.3,438.5c0.8,0.8,0.8,2,0,2.8s-2,0.8-2.8,0s-0.8-2,0-2.8"/>
+			<line class="st16" x1="385.8" y1="452.8" x2="385.8" y2="442.1"/>
+		</g>
+	</g>
+</g>
+<g class="st14">
+	<rect x="135.6" y="432.8" class="st15" width="2" height="2"/>
+	<rect x="140.6" y="432.8" class="st15" width="2" height="2"/>
+	<rect x="143.6" y="429.8" class="st15" width="2" height="2"/>
+	<rect x="132.6" y="429.8" class="st15" width="2" height="2"/>
+	<rect x="135.6" y="424.8" class="st15" width="7" height="7"/>
+	<rect x="137.6" y="426.8" class="st15" width="3" height="3"/>
+	<rect x="143.6" y="424.8" class="st15" width="2" height="2"/>
+	<rect x="132.6" y="424.8" class="st15" width="2" height="2"/>
+	<rect x="135.6" y="421.8" class="st15" width="2" height="2"/>
+	<rect x="140.6" y="421.8" class="st15" width="2" height="2"/>
+</g>
+<g class="st14">
+	<path class="st15" d="M134.6,430.8c-1.1,0-2,0.9-2,2s0.9,2,2,2c1.1,0,2-0.9,2-2S135.7,430.8,134.6,430.8L134.6,430.8z"/>
+</g>
+<g>
+	<g>
+		<polyline class="st18" points="611.9,247.6 611.9,291.5 79.3,291.5 79.3,274.3 		"/>
+		<g>
+			<polygon class="st10" points="604.9,249.6 611.9,237.5 618.8,249.6 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<polyline class="st18" points="67.3,495 67.3,335.8 50.9,335.8 50.9,284.4 		"/>
+		<g>
+			<polygon class="st10" points="74.3,493 67.3,505.1 60.3,493 			"/>
+		</g>
+		<g>
+			<polygon class="st10" points="57.8,286.4 50.9,274.3 43.9,286.4 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<polyline class="st18" points="91.1,529 307.3,529 307.3,415.7 		"/>
+		<g>
+			<polygon class="st10" points="314.3,417.7 307.3,405.6 300.3,417.7 			"/>
+		</g>
+	</g>
+</g>
+<polyline class="st18" points="369.9,449.6 340,449.6 340,405.6 "/>
+<g>
+	<g>
+		<line class="st18" x1="786.7" y1="449.6" x2="434.6" y2="449.6"/>
+		<g>
+			<polygon class="st10" points="784.6,442.6 796.7,449.6 784.6,456.6 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st19" x1="269.7" y1="142.7" x2="479.1" y2="142.7"/>
+		<g>
+			<polygon class="st10" points="477.1,149.7 489.2,142.7 477.1,135.7 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<polyline class="st19" points="658.4,214.4 696.8,214.4 696.8,424.5 786.7,424.5 		"/>
+		<g>
+			<polygon class="st10" points="660.5,221.4 648.4,214.4 660.5,207.4 			"/>
+		</g>
+		<g>
+			<polygon class="st10" points="784.6,431.5 796.7,424.5 784.6,417.6 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<polyline class="st19" points="950,366.2 950,283.1 866.6,283.1 866.6,132.1 		"/>
+		<g>
+			<polygon class="st10" points="956.9,364.2 950,376.3 943,364.2 			"/>
+		</g>
+		<g>
+			<polygon class="st10" points="873.5,134.1 866.6,122 859.6,134.1 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st19" x1="567.8" y1="197" x2="269.7" y2="197"/>
+		<g>
+			<polygon class="st10" points="565.8,190 577.8,197 565.8,204 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<polyline class="st19" points="648.4,197 684.4,197 684.4,69.4 834,69.4 		"/>
+		<g>
+			<polygon class="st10" points="832,76.4 844.1,69.4 832,62.4 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<rect x="43.4" y="505.1" class="st12" width="47.8" height="47.8"/>
+		<path class="st13" d="M80.8,520.1c-0.3-0.2-0.7-0.2-1,0l-8.5,4.2v-3.4c0-0.6-0.5-1-1-1c-0.2,0-0.3,0-0.4,0.1l-8.5,4.3v-7.4
+			c0-0.6-0.4-1-1-1h-6c-0.6,0-1,0.4-1,1v25h28v-21C81.3,520.6,81.1,520.3,80.8,520.1z M73.3,540h-4v-7h4V540z M79.3,540h-4v-8
+			c0-0.6-0.4-1-1-1h-6c-0.6,0-1,0.4-1,1v8h-12v-22h4v9.6l10-5v5l10-5V540z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<rect id="Rectangle-Copy-14" x="824.1" y="400.8" class="st20" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_4_" class="st6" d="M155.5,68.9c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5
+				c0,1.1-0.9,2-2,2h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5v-0.1
+				C154.5,69.3,154.9,68.9,155.5,68.9z M158.5,72.9h-8c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8c0.5,0,0.9-0.4,1-0.9
+				v-0.1v-5c0-0.5-0.4-0.9-0.9-1H158.5z M157,77.9c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5c-0.3,0-0.5-0.2-0.5-0.5
+				s0.2-0.5,0.5-0.5H157z M152,73.9c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5C150.5,74.5,151.2,73.9,152,73.9z
+				 M157,73.9c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5C155.5,74.5,156.2,73.9,157,73.9z M152,74.9
+				c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S152.3,74.9,152,74.9z M157,74.9c-0.3,0-0.5,0.2-0.5,0.5
+				s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S157.3,74.9,157,74.9z"/>
+		</g>
+	</g>
+	<g>
+		<rect id="Rectangle-Copy-14_2_" x="870.2" y="400.8" class="st20" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16_1_" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_2_" class="st6" d="M201.6,68.9c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5
+				c0,1.1-0.9,2-2,2h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5v-0.1
+				C200.6,69.3,201,68.9,201.6,68.9z M204.6,72.9h-8c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8c0.5,0,0.9-0.4,1-0.9
+				v-0.1v-5c0-0.5-0.4-0.9-0.9-1H204.6z M203.1,77.9c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5c-0.3,0-0.5-0.2-0.5-0.5
+				s0.2-0.5,0.5-0.5H203.1z M198.1,73.9c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5C196.6,74.5,197.2,73.9,198.1,73.9
+				z M203.1,73.9c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5C201.6,74.5,202.2,73.9,203.1,73.9z M198.1,74.9
+				c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S198.3,74.9,198.1,74.9z M203.1,74.9c-0.3,0-0.5,0.2-0.5,0.5
+				s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S203.3,74.9,203.1,74.9z"/>
+		</g>
+	</g>
+	<g>
+		<rect id="Rectangle-Copy-14_3_" x="916" y="400.8" class="st20" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16_2_" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_3_" class="st6" d="M247.4,68.9c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5
+				c0,1.1-0.9,2-2,2h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5v-0.1
+				C246.4,69.3,246.8,68.9,247.4,68.9z M250.4,72.9h-8c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8c0.5,0,0.9-0.4,1-0.9
+				v-0.1v-5c0-0.5-0.4-0.9-0.9-1H250.4z M248.9,77.9c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5c-0.3,0-0.5-0.2-0.5-0.5
+				s0.2-0.5,0.5-0.5H248.9z M243.9,73.9c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5C242.4,74.5,243,73.9,243.9,73.9z
+				 M248.9,73.9c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5C247.4,74.5,248,73.9,248.9,73.9z M243.9,74.9
+				c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S244.1,74.9,243.9,74.9z M248.9,74.9c-0.3,0-0.5,0.2-0.5,0.5
+				s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S249.1,74.9,248.9,74.9z"/>
+		</g>
+	</g>
+	<g>
+		<rect id="Rectangle-Copy-14_6_" x="824.1" y="443.3" class="st20" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16_5_" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_7_" class="st6" d="M155.5,111.4c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5
+				c0,1.1-0.9,2-2,2h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5v-0.1
+				C154.5,111.9,154.9,111.4,155.5,111.4z M158.5,115.4h-8c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8
+				c0.5,0,0.9-0.4,1-0.9v-0.1v-5c0-0.5-0.4-0.9-0.9-1H158.5z M157,120.4c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5
+				c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5H157z M152,116.4c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5
+				S151.2,116.4,152,116.4z M157,116.4c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5S156.2,116.4,157,116.4z M152,117.4
+				c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S152.3,117.4,152,117.4z M157,117.4c-0.3,0-0.5,0.2-0.5,0.5
+				s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S157.3,117.4,157,117.4z"/>
+		</g>
+	</g>
+	<g>
+		<rect id="Rectangle-Copy-14_5_" x="870.2" y="443.3" class="st20" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16_4_" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_6_" class="st6" d="M201.6,111.4c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5
+				c0,1.1-0.9,2-2,2h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5v-0.1
+				C200.6,111.9,201,111.4,201.6,111.4z M204.6,115.4h-8c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8c0.5,0,0.9-0.4,1-0.9
+				v-0.1v-5c0-0.5-0.4-0.9-0.9-1H204.6z M203.1,120.4c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5c-0.3,0-0.5-0.2-0.5-0.5
+				s0.2-0.5,0.5-0.5H203.1z M198.1,116.4c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5S197.2,116.4,198.1,116.4z
+				 M203.1,116.4c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5S202.2,116.4,203.1,116.4z M198.1,117.4
+				c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S198.3,117.4,198.1,117.4z M203.1,117.4c-0.3,0-0.5,0.2-0.5,0.5
+				s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S203.3,117.4,203.1,117.4z"/>
+		</g>
+	</g>
+	<g>
+		<rect id="Rectangle-Copy-14_4_" x="916" y="443.3" class="st20" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16_3_" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_5_" class="st6" d="M247.4,111.4c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5
+				c0,1.1-0.9,2-2,2h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5v-0.1
+				C246.4,111.9,246.8,111.4,247.4,111.4z M250.4,115.4h-8c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8
+				c0.5,0,0.9-0.4,1-0.9v-0.1v-5c0-0.5-0.4-0.9-0.9-1H250.4z M248.9,120.4c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5
+				c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5H248.9z M243.9,116.4c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5
+				S243,116.4,243.9,116.4z M248.9,116.4c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5S248,116.4,248.9,116.4z
+				 M243.9,117.4c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S244.1,117.4,243.9,117.4z M248.9,117.4
+				c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S249.1,117.4,248.9,117.4z"/>
+		</g>
+	</g>
+	<g>
+		<rect id="Rectangle-Copy-14_8_" x="959.9" y="400.8" class="st20" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16_7_" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_9_" class="st6" d="M291.3,68.9c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5
+				c0,1.1-0.9,2-2,2h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5v-0.1
+				C290.3,69.3,290.8,68.9,291.3,68.9z M294.3,72.9h-8c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8c0.5,0,0.9-0.4,1-0.9
+				v-0.1v-5c0-0.5-0.4-0.9-0.9-1H294.3z M292.8,77.9c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5c-0.3,0-0.5-0.2-0.5-0.5
+				s0.2-0.5,0.5-0.5H292.8z M287.8,73.9c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5C286.3,74.5,287,73.9,287.8,73.9z
+				 M292.8,73.9c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5C291.3,74.5,292,73.9,292.8,73.9z M287.8,74.9
+				c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S288.1,74.9,287.8,74.9z M292.8,74.9c-0.3,0-0.5,0.2-0.5,0.5
+				s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S293.1,74.9,292.8,74.9z"/>
+		</g>
+	</g>
+	<g>
+		<rect id="Rectangle-Copy-14_7_" x="959.9" y="443.3" class="st20" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16_6_" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_8_" class="st6" d="M291.3,111.4c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5
+				c0,1.1-0.9,2-2,2h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5v-0.1
+				C290.3,111.9,290.8,111.4,291.3,111.4z M294.3,115.4h-8c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8
+				c0.5,0,0.9-0.4,1-0.9v-0.1v-5c0-0.5-0.4-0.9-0.9-1H294.3z M292.8,120.4c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5
+				c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5H292.8z M287.8,116.4c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5
+				S287,116.4,287.8,116.4z M292.8,116.4c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5S292,116.4,292.8,116.4z
+				 M287.8,117.4c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S288.1,117.4,287.8,117.4z M292.8,117.4
+				c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S293.1,117.4,292.8,117.4z"/>
+		</g>
+	</g>
+	<path id="Rectangle-Copy-17" class="st21" d="M836.7,376.3h140.4c22.1,0,40,17.9,40,40v43.1c0,22.1-17.9,40-40,40H836.7
+		c-22.1,0-40-17.9-40-40v-43.1C796.7,394.2,814.6,376.3,836.7,376.3z"/>
+	<rect x="828.7" y="348.4" class="st2" width="147.7" height="15.6"/>
+	<rect x="829.4" y="333.3" class="st2" width="95" height="37"/>
+	<text transform="matrix(1 0 0 1 829.3638 346.9292)" class="st11"><tspan x="0" y="0" class="st3 st7 st8">Nodos </tspan><tspan x="0" y="19.2" class="st3 st7 st8">periféricos</tspan></text>
+</g>
+<rect x="126.7" y="271" class="st2" width="428.2" height="19.5"/>
+<text transform="matrix(1 0 0 1 120.5781 281.3591)" class="st3 st4 st5">1. Genera la clave de propiedad de SDO y la importa (solo la primera vez)</text>
+<rect x="147.6" y="508.8" class="st2" width="112.5" height="18.3"/>
+<text transform="matrix(1 0 0 1 132.5569 519.1901)" class="st3 st4 st5">4. Envía dispositivos</text>
+<rect x="680.3" y="50.7" class="st2" width="153" height="18.1"/>
+<text transform="matrix(1 0 0 1 685.5678 61.0716)" class="st3 st4 st5">3c. Registra cupones</text>
+<rect x="317.5" y="122.5" class="st2" width="142.1" height="16.5"/>
+<rect x="317.5" y="109" class="st2" width="131.6" height="29.4"/>
+<text transform="matrix(1 0 0 1 317.4883 120.8405)" class="st11"><tspan x="0" y="0" class="st6 st4 st5">3a. Añade nodos </tspan><tspan x="0" y="16.8" class="st6 st4 st5">periféricos</tspan></text>
+<rect x="317.5" y="177.6" class="st2" width="144.4" height="16.9"/>
+<text transform="matrix(1 0 0 1 317.4878 187.9799)" class="st6 st4 st5">3b. Importa cupones</text>
+<g>
+	<g id="Group-2" transform="translate(21.000000, 0.000000)">
+		<circle id="Oval-Copy-3" class="st12" cx="45.8" cy="216" r="24"/>
+		<g id="icon_x2F_policy-admin" transform="translate(8.000000, 8.000000)">
+			<path id="Shape" class="st13" d="M32.8,211c2.8,0,5,2.2,5,5v6h-2v-6c0-1.7-1.3-3-3-3h-4c-1.7,0-3,1.3-3,3v6h-2v-6
+				c0-2.8,2.2-5,5-5H32.8z M30.8,199c2.8,0,5,2.2,5,5s-2.2,5-5,5s-5-2.2-5-5S28.1,199,30.8,199z M49.4,198.9l1.4,1.4l-7.1,7.1
+				l-3.9-3.9l1.4-1.4l2.5,2.5L49.4,198.9z M30.8,201c-1.7,0-3,1.3-3,3s1.3,3,3,3c1.7,0,3-1.3,3-3S32.5,201,30.8,201z"/>
+		</g>
+	</g>
+	<rect x="19" y="250.6" class="st2" width="94.5" height="15.5"/>
+	<text transform="matrix(1 0 0 1 19.4514 256.9306)" class="st3 st4 st5">Administrador</text>
+</g>
+<rect x="270.8" y="293.4" class="st1" width="12.3" height="12.3"/>
+<g>
+	<rect id="Rectangle-Copy-16_5_" x="213.3" y="129" class="st3" width="70.5" height="81"/>
+	<rect x="213.3" y="162.3" class="st2" width="70.5" height="15.6"/>
+	<text transform="matrix(1 0 0 1 237.7 172.7204)" class="st6 st4 st5">CLI</text>
+</g>
+<g>
+	<g>
+		<polyline class="st18" points="101,216.4 124,216.4 124,97.7 248.5,97.7 248.5,119 		"/>
+		<g>
+			<polygon class="st10" points="241.5,116.9 248.5,129 255.5,116.9 			"/>
+		</g>
+	</g>
+</g>
+<rect x="89.7" y="635.5" class="st2" width="89.1" height="14.5"/>
+<text transform="matrix(1 0 0 1 89.6881 644.435)" class="st3 st4 st22">Acciones de usuario</text>
+<rect x="278.7" y="635.5" class="st2" width="89.1" height="14.5"/>
+<text transform="matrix(1 0 0 1 278.688 644.435)" class="st3 st4 st22">Acciones del sistema</text>
+<line class="st18" x1="18.4" y1="640.8" x2="78.1" y2="640.8"/>
+<line class="st23" x1="205.8" y1="640.8" x2="265.6" y2="640.8"/>
+<rect x="123.4" y="61.1" class="st2" width="125.7" height="30.6"/>
+<text transform="matrix(1 0 0 1 123.3837 71.4195)"><tspan x="0" y="0" class="st3 st4 st5">3. Recibe e importa </tspan><tspan x="0" y="16.8" class="st3 st4 st5">cupones</tspan></text>
+<rect x="79.4" y="363.4" class="st2" width="154" height="97.8"/>
+<text transform="matrix(1 0 0 1 79.3837 373.7523)"><tspan x="0" y="0" class="st3 st4 st5">2. Ordena los </tspan><tspan x="0" y="16.8" class="st3 st4 st5">dispositivos, </tspan><tspan x="0" y="33.6" class="st3 st4 st5">proporcionando la clave </tspan><tspan x="0" y="50.4" class="st3 st4 st5">pública del propietario </tspan><tspan x="0" y="67.2" class="st3 st4 st5">de SDO. Recibe cupones </tspan><tspan x="0" y="84" class="st3 st4 st5">de propiedad.</tspan></text>
+<rect x="435.4" y="412.4" class="st2" width="239" height="30.6"/>
+<text transform="matrix(1 0 0 1 435.3837 422.7523)"><tspan x="0" y="0" class="st3 st4 st5">5. Se coloca en el campo, conecta la </tspan><tspan x="0" y="16.8" class="st3 st4 st5">red y la alimentación, y se enciende</tspan></text>
+<rect x="12.4" y="561.4" class="st2" width="109" height="30.6"/>
+<text transform="matrix(1 0 0 1 23.7645 571.7524)"><tspan x="0" y="0" class="st3 st4 st5">Fabricante de </tspan><tspan x="9.2" y="16.8" class="st3 st4 st5">dispositivo</tspan></text>
+<rect x="581.4" y="182.4" class="st2" width="61" height="30.6"/>
+<text transform="matrix(1 0 0 1 587.0204 192.7523)"><tspan x="0" y="0" class="st3 st4 st5">Servicio </tspan><tspan x="1.6" y="16.8" class="st3 st4 st5">de SDO</tspan></text>
+<rect x="702.1" y="196.4" class="st2" width="159" height="13.8"/>
+<text transform="matrix(1 0 0 1 702.0504 206.7528)" class="st3 st4 st5">8. Solicita configuración</text>
+<rect x="708.7" y="260.4" class="st2" width="133.7" height="64.2"/>
+<text transform="matrix(1 0 0 1 708.717 270.7528)"><tspan x="0" y="0" class="st3 st4 st5">9. Instala y registra </tspan><tspan x="0" y="16.8" class="st3 st4 st5">el agente periférico, </tspan><tspan x="0" y="33.6" class="st3 st4 st5">despliega servicios </tspan><tspan x="0" y="50.4" class="st3 st4 st5">periféricos</tspan></text>
+<rect x="857.4" y="36.4" class="st2" width="149" height="68"/>
+<text transform="matrix(1 0 0 1 857.3837 48.2328)"><tspan x="0" y="0" class="st6 st7 st8">Intel Corp.Servidor </tspan><tspan x="0" y="19.2" class="st6 st7 st8">de encuentro</tspan></text>
+<rect x="878.4" y="142.4" class="st2" width="130" height="47.4"/>
+<text transform="matrix(1 0 0 1 878.3837 152.7528)"><tspan x="0" y="0" class="st3 st4 st5">6. Contacta el </tspan><tspan x="0" y="16.8" class="st3 st4 st5">servidor de </tspan><tspan x="0" y="33.6" class="st3 st4 st5">encuentro</tspan></text>
+<rect x="879.1" y="217.1" class="st2" width="123.3" height="64.2"/>
+<text transform="matrix(1 0 0 1 879.0507 227.4195)"><tspan x="0" y="0" class="st3 st4 st5">7. Redirige los </tspan><tspan x="0" y="16.8" class="st3 st4 st5">nodos periféricos </tspan><tspan x="0" y="33.6" class="st3 st4 st5">al centro de </tspan><tspan x="0" y="50.4" class="st3 st4 st5">gestión</tspan></text>
+</svg>

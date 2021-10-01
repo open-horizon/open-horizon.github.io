@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 640 496.4" style="enable-background:new 0 0 640 496.4;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#408BFC;}
+	.st1{fill:none;stroke:#00BAB6;stroke-width:2;stroke-dasharray:7;}
+	.st2{fill:#4F2196;}
+	.st3{fill:#FFFFFF;}
+	.st4{fill:#BEBEBE;}
+	.st5{fill:#E3F6FF;}
+	.st6{fill:#0062FF;}
+	.st7{fill:none;}
+	.st8{fill:#161616;}
+	.st9{font-family:'IBMPlexSans';}
+	.st10{font-size:14px;}
+	.st11{enable-background:new    ;}
+	.st12{fill:#F4F4F4;}
+	.st13{font-family:'IBMPlexSans-Medium';}
+	.st14{font-size:16px;}
+</style>
+<g>
+	<rect id="Rectangle-Copy-14_1_" x="173" y="401.7" class="st0" width="141.2" height="56"/>
+	<rect id="Rectangle-Copy-54" x="38" y="401.7" class="st0" width="120.4" height="56"/>
+	<rect id="Rectangle-Copy-14_2_" x="328.8" y="401.7" class="st0" width="141.2" height="56"/>
+</g>
+<path id="Rectangle" class="st1" d="M54,14.7h400c22.1,0,40,17.9,40,40v387c0,22.1-17.9,40-40,40H54c-22.1,0-40-17.9-40-40v-387
+	C14,32.6,31.9,14.7,54,14.7z"/>
+<rect id="Rectangle-Copy-14" x="38" y="78.7" class="st2" width="432" height="267"/>
+<rect id="Rectangle-Copy-16" x="262" y="145.2" class="st3" width="192" height="56"/>
+<rect id="Rectangle-Copy-53" x="54" y="273.7" class="st3" width="192" height="56"/>
+<rect id="Rectangle-Copy-44" x="262" y="273.2" class="st3" width="192" height="56"/>
+<path id="Line-11-Copy-7" class="st4" d="M251,345.7l6.9,14h-6l-0.3,28h6l-7.1,14l-6.9-14h6l0.3-28h-6L251,345.7z"/>
+<path id="Line-11-Copy-8" class="st4" d="M96,345.7l6.9,14h-6l-0.3,28h6l-7.1,14l-6.9-14h6l0.3-28h-6L96,345.7z"/>
+<path id="Line-11-Copy-6" class="st4" d="M248,166.7l14,7l-14,7v-6h-92.5l-0.4,85h6l-7.1,14l-6.9-14h6l0.4-86v-1H248V166.7z"/>
+<path id="Line-11-Copy-9" class="st4" d="M519,166.7l14,7l-14,7v-6h-51v6l-14-7l14-7v6h51V166.7z"/>
+<circle id="Oval" class="st5" cx="573.5" cy="171.2" r="32.5"/>
+<path id="Shape" class="st6" d="M582.5,180.7h-17c-4.1,0-7.5-3.4-7.5-7.5c0-3.6,2.6-6.7,6.1-7.4c0,0,0.1,0,0.1-0.1
+	c1-4.7,5.1-8,9.8-8c0.6,0,1.3,0.1,1.9,0.2c4,0.8,7.1,3.9,7.9,7.9c0,0,0,0.1,0.1,0.1c4,0.8,6.7,4.7,6,8.7
+	C589.2,178.1,586.1,180.7,582.5,180.7z M565.5,178.7h17c2.7,0,4.9-1.9,5.4-4.5c0.3-1.8-0.2-3.6-1.5-4.9c-0.8-0.8-1.8-1.3-2.8-1.5
+	l-0.3-0.1l-1.1-0.2c0,0-0.1,0-0.1-0.1l0,0l-0.2-1c-0.6-3.2-3-5.8-6.1-6.5c-0.9-0.2-1.9-0.3-2.8-0.1c-3.4,0.5-6,3.1-6.8,6.5l-0.1,0.3
+	l-0.2,0.9c0,0,0,0.1-0.1,0.1l0,0l-1,0.2c-2.4,0.4-4.4,2.3-4.7,4.7C559.6,175.8,562.2,178.7,565.5,178.7z"/>
+<rect x="263.5" y="368.3" class="st7" width="142.9" height="13.9"/>
+<text transform="matrix(1 0 0 1 263.4992 378.6632)" class="st8 st9 st10">Acesso de hardware</text>
+<rect x="108.3" y="368.3" class="st7" width="77.2" height="13.9"/>
+<text transform="matrix(1 0 0 1 108.3404 378.6627)" class="st8 st9 st10">Acesso ao SO</text>
+<rect x="261.9" y="154.3" class="st7" width="192" height="39.6"/>
+<rect x="261.9" y="282.3" class="st7" width="192" height="39.6"/>
+<rect x="53.9" y="282.3" class="st7" width="192" height="39.6"/>
+<rect x="185.5" y="422.9" class="st7" width="128.7" height="15.6"/>
+<rect x="197.5" y="415.4" class="st7" width="102.2" height="29.6"/>
+<text transform="matrix(1 0 0 1 209.3288 427.3248)" class="st11"><tspan x="0" y="0" class="st12 st13 st10">Sensores de </tspan><tspan x="8.5" y="16.8" class="st12 st13 st10">hardware</tspan></text>
+<rect x="340.6" y="422.9" class="st7" width="111" height="15.6"/>
+<rect x="334.3" y="414.1" class="st7" width="129.1" height="32.3"/>
+<text transform="matrix(1 0 0 1 334.7732 425.9915)" class="st11"><tspan x="0" y="0" class="st12 st13 st10">Tempo de execução </tspan><tspan x="31.6" y="16.8" class="st12 st13 st10">do Docker</tspan></text>
+<rect x="52" y="422.9" class="st7" width="91.7" height="15.6"/>
+<text transform="matrix(1 0 0 1 51.9894 434.3997)" class="st12 st13 st10">Serviços do SO</text>
+<rect x="54" y="99" class="st7" width="236.1" height="15.6"/>
+<text transform="matrix(1 0 0 1 54.0002 110.8407)" class="st12 st13 st14">Padrão de implementação</text>
+<rect x="38" y="42.9" class="st7" width="236.1" height="15.6"/>
+<text transform="matrix(1 0 0 1 38.0038 54.7181)" class="st8 st13 st14">Nó de borda</text>
+<rect x="81" y="284.6" class="st7" width="145.5" height="36"/>
+<text transform="matrix(1 0 0 1 142.1934 295.0068)"><tspan x="0" y="0" class="st8 st9 st10">cpu </tspan><tspan x="-45.1" y="16.8" class="st8 st9 st10">(serviço de borda)</tspan></text>
+<rect x="297" y="287.4" class="st7" width="129.5" height="30.6"/>
+<text transform="matrix(1 0 0 1 350.585 297.7119)"><tspan x="0" y="0" class="st8 st9 st10">gps </tspan><tspan x="-45.5" y="16.8" class="st8 st9 st10">(serviço de borda)</tspan></text>
+<rect x="323.5" y="217.5" class="st7" width="123" height="38.5"/>
+<text transform="matrix(1 0 0 1 323.5 227.8599)"><tspan x="0" y="0" class="st12 st9 st10">Redes privadas </tspan><tspan x="0" y="16.8" class="st12 st9 st10">virtuais do Docker</tspan></text>
+<rect x="297" y="156.5" class="st7" width="117" height="30.6"/>
+<text transform="matrix(1 0 0 1 314.5156 166.8599)"><tspan x="0" y="0" class="st8 st9 st10">cpu2msghub </tspan><tspan x="-15.7" y="16.8" class="st8 st9 st10">(serviço de borda)</tspan></text>
+<rect x="517.5" y="210.5" class="st7" width="113" height="30.6"/>
+<text transform="matrix(1 0 0 1 528.9209 220.8599)"><tspan x="0" y="0" class="st8 st9 st10">Servidores em </tspan><tspan x="-9.4" y="16.8" class="st8 st9 st10">nuvem (opcional)</tspan></text>
+</svg>

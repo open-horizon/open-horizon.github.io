@@ -1,0 +1,3065 @@
+{
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": {
+    "description": "Este é o pacote principal do serviço de sincronização de borda",
+    "title": "Serviço de sincronização de borda",
+    "version": "0.0.1"
+  },
+  "host": "localhost",
+  "basePath": "/",
+  "paths": {
+    "/api/v1/destinations/{orgID}": {
+      "get": {
+        "description": "Fornece uma lista de destinos para uma organização, ou seja, nós do ESS (pertencentes ao orgID) que se registraram com o CSS.\nEsta é uma API apenas CSS.",
+        "produces": [
+          "application/json",
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Liste todos os destinos conhecidos.",
+        "operationId": "handleDestinations",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O orgID dos destinos a ser retornado.",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resposta de destinos",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Destination"
+              }
+            }
+          },
+          "404": {
+            "description": "Nenhum destino localizado",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao recuperar os destinos",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/destinations/{orgID}/{destType}/{destID}/objects": {
+      "get": {
+        "description": "Fornece uma lista de objetos que estão em uso pelo nó do destino ESS.\nEsta é uma API apenas CSS.",
+        "produces": [
+          "application/json",
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Liste todos os objetos que estão em uso pelo destino.",
+        "operationId": "handleDestinationObjects",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O orgID do destino para o qual objetos serão recuperados.",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O destType do destino para o qual objetos serão recuperados.",
+            "name": "destType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O destID do destino para o qual objetos serão recuperados.",
+            "name": "destID",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resposta de objetos",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ObjectStatus"
+              }
+            }
+          },
+          "404": {
+            "description": "Nenhum objeto foi encontrado",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao recuperar os objetos",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/health": {
+      "get": {
+        "description": "Obtenha o status de funcionamento do nó de serviço de sincronização.",
+        "produces": [
+          "application/json",
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS",
+          "ESS"
+        ],
+        "summary": "Obtenha o status de funcionamento do nó de serviço de sincronização.",
+        "operationId": "handleHealth",
+        "parameters": [
+          {
+            "type": "boolean",
+            "description": "Se deve incluir ou não o status de funcionamento detalhado",
+            "name": "- Detalhes",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Status de funcionamento",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/healthReport"
+              }
+            }
+          },
+          "500": {
+            "description": "Falha ao enviar status de funcionamento.",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{objectType}": {
+      "get": {
+        "description": "Obtenha os objetos do tipo de objeto especificado. Obtenha todos os objetos ou apenas aqueles objetos que possuem atualizações pendentes (não consumidas).\nUm aplicativo geralmente chamaria a última API periodicamente para verificar as atualizações (uma alternativa é usar um webhook).",
+        "produces": [
+          "application/json",
+          "texto/simples"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "Obtenha objetos do tipo especificado.",
+        "operationId": "handleListObjects",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O tipo dos objetos a serem retornados",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "boolean",
+            "description": "Ao retornar apenas objetos atualizados, se deve ou não incluir os objetos que foram marcados como recebidos pelo aplicativo",
+            "name": "recebidos",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resposta de objetos atualizados",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/MetaData"
+              }
+            }
+          },
+          "404": {
+            "description": "Nenhum objeto atualizado encontrado",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao recuperar os objetos atualizados",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Registre ou exclua um webhook para o tipo de objeto especificado.\nO webhook é usado para processar notificações em atualizações para objetos do tipo de objeto especificado.",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "Registre ou exclua um webhook.",
+        "operationId": "handleWebhook",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O tipo dos objetos para o webhook",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "description": "Os dados do webhook",
+            "name": "Carga útil",
+            "in": "corpo",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/webhookUpdate"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Webhook registrado ou excluído",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao atualizar os dados do webhook",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{objectType}/{objectID}": {
+      "get": {
+        "description": "Obtenha os metadados de um objeto do tipo de objeto e do ID de objeto especificados.\nOs metadados indicam se os objetos incluem dados que podem, então, ser obtidos usando a API apropriada.",
+        "produces": [
+          "application/json",
+          "texto/simples"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "Obtenha um objeto.",
+        "operationId": "handleGetObject",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O tipo do objeto a ser retornado",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do objeto a ser retornado",
+            "name": "objectID",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resposta do objeto",
+            "schema": {
+              "$ref": "#/definitions/MetaData"
+            }
+          },
+          "404": {
+            "description": "Objeto não localizado",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao recuperar o objeto",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Atualize ou crie o objeto do tipo de objeto e do ID de objeto especificados.\nSe um objeto com o mesmo tipo e ID existe, esse objeto é atualizado, caso contrário, um novo objeto é criado.",
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "Atualize ou crie um objeto.",
+        "operationId": "handleUpdateObject",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O tipo do objeto a ser atualizado ou criado",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do objeto a ser atualizado ou criado",
+            "name": "objectID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "name": "Carga útil",
+            "in": "corpo",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/objectUpdate"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Objeto atualizado",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao atualizar ou criar o objeto",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Exclua o objeto do tipo de objeto e do ID de objeto especificados.\nOs destinos do objeto serão notificados de que o objeto foi excluído.",
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "Excluir um objeto.",
+        "operationId": "handleDeleteObject",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O tipo do objeto a ser excluído",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do objeto a ser excluído",
+            "name": "objectID",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Objeto excluído",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao excluir o objeto",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{objectType}/{objectID}/activate": {
+      "put": {
+        "description": "Marque o objeto do tipo de objeto e do ID de objeto especificados como ativo.\nUm objeto pode ser criado como inativo, o que significa que ele não é entregue em seus destinos.\nEsta API é usada para ativar esses objetos e iniciar a distribuição do objeto para seus destinos.",
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "Marque um objeto como ativo.",
+        "operationId": "handleActivateObject",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O tipo do objeto a ser marcado como ativo",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do objeto a ser marcado como ativo",
+            "name": "objectID",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Objeto marcado como ativo",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao marcar o objeto ativo",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{objectType}/{objectID}/consumed": {
+      "put": {
+        "description": "Marque o objeto do tipo de objeto e do ID de objeto especificados como tendo sido consumido pelo aplicativo.\nDepois que o objeto for marcado como consumido, ele não será entregue ao aplicativo novamente (mesmo se o serviço de sincronização for reiniciado).",
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "Marque um objeto como consumido.",
+        "operationId": "handleObjectConsumed",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O tipo do objeto a ser marcado como consumido",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do objeto a ser marcado como consumido",
+            "name": "objectID",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Objeto marcado como consumido",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao marcar o objeto consumido",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{objectType}/{objectID}/data": {
+      "get": {
+        "description": "Obtenha os dados do objeto do tipo de objeto e do ID de objeto especificados.\nOs metadados do objeto indicam se o objeto inclui dados (noData é false).",
+        "produces": [
+          "application/octet-stream",
+          "texto/simples"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "Obtenha os dados de um objeto.",
+        "operationId": "handleObjectGetData",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O tipo do objeto cujos dados serão recuperados",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do objeto cujos dados serão recuperados",
+            "name": "objectID",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Dados do objeto",
+            "schema": {
+              "type": "sequência",
+              "format": "binary"
+            }
+          },
+          "500": {
+            "description": "Falha ao recuperar os dados do objeto",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Atualize os dados do objeto do tipo de objeto e do ID de objeto especificados.\nOs dados podem ser atualizados sem modificar os metadados do objeto.",
+        "consumes": [
+          "application/octet-stream"
+        ],
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "Atualize os dados de um objeto.",
+        "operationId": "handleObjectPutData",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O tipo do objeto cujos dados serão atualizados",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do objeto cujos dados serão atualizados",
+            "name": "objectID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "description": "Os novos dados do objeto. Ao ler bytes de dados de um arquivo, configure o application/octet-stream como Content-Type no cabeçalho.",
+            "name": "Carga útil",
+            "in": "corpo",
+            "required": true,
+            "schema": {
+              "type": "sequência",
+              "format": "binary"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Dados do objeto atualizados",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "404": {
+            "description": "O objeto especificado não existe",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao atualizar os dados do objeto",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{objectType}/{objectID}/policyreceived": {
+      "put": {
+        "description": "Marque o objeto do tipo de objeto e do ID de objeto especificados como tendo sua política de destino recebida \nDepois que o objeto é marcado como tal, ele não será entregue ao aplicativo listando objetos com \numa política de destino, a menos que \"received=true\" seja incluído nos parâmetros de consulta.",
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "Marque a política de destino de um objeto como tendo sido recebida.",
+        "operationId": "handlePolicyReceived",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O tipo do objeto a ser marcado como tendo sua política de destino recebida",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do objeto a ser marcado como tendo sua política de destino recebida",
+            "name": "objectID",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Objeto marcado como tendo sua política de destino recebida",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao marcar o objeto como tendo sua política de destino recebida",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{objectType}/{objectID}/received": {
+      "put": {
+        "description": "Marque o objeto do tipo de objeto e do ID de objeto especificados como tendo sido recebido pelo aplicativo.\nDepois que o objeto for marcado como recebido, ele será entregue ao aplicativo novamente apenas se especificado na solicitação de objetos.",
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "Marque um objeto como recebido.",
+        "operationId": "handleObjectReceived",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O tipo do objeto a ser marcado como recebido",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do objeto a ser marcado como recebido",
+            "name": "objectID",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Objeto marcado como recebido",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao marcar o objeto recebido",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{objectType}/{objectID}/status": {
+      "get": {
+        "description": "Obtenha o status do objeto do tipo de objeto e do ID de objeto especificados.\nO status pode ser um dos seguintes: \nnotReady - o objeto não está pronto para ser enviado para os destinos.\nready - o objeto está pronto para ser enviado para os destinos.\nreceived - os metadados do objeto foram recebidos, mas não todos os seus dados.\ncompletelyReceived - o objeto integral (metadados e dados) foi recebido.\nconsumed - o objeto foi consumido pelo aplicativo.\ndeleted - o objeto foi excluído.",
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "Obtenha o status de um objeto.",
+        "operationId": "handleObjectStatus",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O tipo do objeto cujo status será recuperado",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do objeto cujo status será recuperado",
+            "name": "objectID",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Status do objeto",
+            "schema": {
+              "type": "sequência",
+              "enum": [
+                "notReady",
+                "ready",
+                "recebidos",
+                "completelyReceived",
+                "consumidas",
+                "excluído"
+              ]
+            }
+          },
+          "500": {
+            "description": "Falha ao recuperar o status do objeto",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}/{objectType}": {
+      "get": {
+        "description": "Obtenha os objetos do tipo de objeto especificado. Obtenha todos os objetos ou apenas aqueles objetos que possuem atualizações pendentes (não consumidas).\nUm aplicativo geralmente chamaria a última API periodicamente para verificar as atualizações (uma alternativa é usar um webhook).",
+        "produces": [
+          "application/json",
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Obtenha objetos do tipo especificado.",
+        "operationId": "handleListObjects",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O orgID dos objetos a serem retornados",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O tipo dos objetos a serem retornados",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "boolean",
+            "description": "Ao retornar apenas objetos atualizados, se deve ou não incluir os objetos que foram marcados como recebidos pelo aplicativo",
+            "name": "recebidos",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resposta de objetos atualizados",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/MetaData"
+              }
+            }
+          },
+          "404": {
+            "description": "Nenhum objeto atualizado encontrado",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao recuperar os objetos atualizados",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Registre ou exclua um webhook para o tipo de objeto especificado.\nO webhook é usado para processar notificações em atualizações para objetos do tipo de objeto especificado.",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Registre ou exclua um webhook.",
+        "operationId": "handleWebhook",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O orgID dos objetos para o webhook",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O tipo dos objetos para o webhook",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "description": "Os dados do webhook",
+            "name": "Carga útil",
+            "in": "corpo",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/webhookUpdate"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Webhook registrado ou excluído",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao atualizar os dados do webhook",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}/{objectType}/{objectID}": {
+      "get": {
+        "description": "Obtenha os metadados de um objeto do tipo de objeto e do ID de objeto especificados.\nOs metadados indicam se os objetos incluem dados que podem, então, ser obtidos usando a API apropriada.",
+        "produces": [
+          "application/json",
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Obtenha um objeto.",
+        "operationId": "handleGetObject",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O orgID do objeto a ser retornado.",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O tipo do objeto a ser retornado",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do objeto a ser retornado",
+            "name": "objectID",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resposta do objeto",
+            "schema": {
+              "$ref": "#/definitions/MetaData"
+            }
+          },
+          "404": {
+            "description": "Objeto não localizado",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao recuperar o objeto",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Atualize ou crie o objeto do tipo de objeto e do ID de objeto especificados.\nSe um objeto com o mesmo tipo e ID existe, esse objeto é atualizado, caso contrário, um novo objeto é criado.",
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Atualize ou crie um objeto.",
+        "operationId": "handleUpdateObject",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O orgID do objeto a ser atualizado ou criado.",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O tipo do objeto a ser atualizado ou criado",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do objeto a ser atualizado ou criado",
+            "name": "objectID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "name": "Carga útil",
+            "in": "corpo",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/objectUpdate"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Objeto atualizado",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao atualizar ou criar o objeto",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Exclua o objeto do tipo de objeto e do ID de objeto especificados.\nOs destinos do objeto serão notificados de que o objeto foi excluído.",
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Excluir um objeto.",
+        "operationId": "handleDeleteObject",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O orgID do objeto a ser excluído.",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O tipo do objeto a ser excluído",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do objeto a ser excluído",
+            "name": "objectID",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Objeto excluído",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao excluir o objeto",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}/{objectType}/{objectID}/activate": {
+      "put": {
+        "description": "Marque o objeto do tipo de objeto e do ID de objeto especificados como ativo.\nUm objeto pode ser criado como inativo, o que significa que ele não é entregue em seus destinos.\nEsta API é usada para ativar esses objetos e iniciar a distribuição do objeto para seus destinos.",
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Marque um objeto como ativo.",
+        "operationId": "handleActivateObject",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O orgID do objeto a ser assinalado como ativo",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O tipo do objeto a ser marcado como ativo",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do objeto a ser marcado como ativo",
+            "name": "objectID",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Objeto marcado como ativo",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao marcar o objeto ativo",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}/{objectType}/{objectID}/consumed": {
+      "put": {
+        "description": "Marque o objeto do tipo de objeto e do ID de objeto especificados como tendo sido consumido pelo aplicativo.\nDepois que o objeto for marcado como consumido, ele não será entregue ao aplicativo novamente (mesmo se o serviço de sincronização for reiniciado).",
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Marque um objeto como consumido.",
+        "operationId": "handleObjectConsumed",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O orgID do objeto a ser marcado como consumido.",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O tipo do objeto a ser marcado como consumido",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do objeto a ser marcado como consumido",
+            "name": "objectID",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Objeto marcado como consumido",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao marcar o objeto consumido",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}/{objectType}/{objectID}/data": {
+      "get": {
+        "description": "Obtenha os dados do objeto do tipo de objeto e do ID de objeto especificados.\nOs metadados do objeto indicam se o objeto inclui dados (noData é false).",
+        "produces": [
+          "application/octet-stream",
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Obtenha os dados de um objeto.",
+        "operationId": "handleObjectGetData",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O orgID do objeto cujos dados serão recuperados",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O tipo do objeto cujos dados serão recuperados",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do objeto cujos dados serão recuperados",
+            "name": "objectID",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Dados do objeto",
+            "schema": {
+              "type": "sequência",
+              "format": "binary"
+            }
+          },
+          "500": {
+            "description": "Falha ao recuperar os dados do objeto",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Atualize os dados do objeto do tipo de objeto e do ID de objeto especificados.\nOs dados podem ser atualizados sem modificar os metadados do objeto.",
+        "consumes": [
+          "application/octet-stream"
+        ],
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Atualize os dados de um objeto.",
+        "operationId": "handleObjectPutData",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O orgID do objeto cujos dados serão atualizados",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O tipo do objeto cujos dados serão atualizados",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do objeto cujos dados serão atualizados",
+            "name": "objectID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "description": "Os novos dados do objeto. Ao ler bytes de dados de um arquivo, configure o application/octet-stream como Content-Type no cabeçalho.",
+            "name": "Carga útil",
+            "in": "corpo",
+            "required": true,
+            "schema": {
+              "type": "sequência",
+              "format": "binary"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Dados do objeto atualizados",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "404": {
+            "description": "O objeto especificado não existe",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao atualizar os dados do objeto",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}/{objectType}/{objectID}/deleted": {
+      "put": {
+        "description": "Confirme a exclusão do objeto do tipo de objeto e do ID de objeto especificados pelo aplicativo.\nO aplicativo deve chamar esta API depois de ter concluído as ações associadas à exclusão do objeto.",
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS",
+          "ESS"
+        ],
+        "summary": "O serviço confirma a exclusão do objeto.",
+        "operationId": "handleObjectDeleted",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O orgID do objeto para confirmar sua exclusão. Presente apenas ao trabalhar com um CSS, removido do caminho ao trabalhar com um ESS",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O tipo do objeto para confirmar sua exclusão",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do objeto para confirmar sua exclusão",
+            "name": "objectID",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Exclusão do objeto confirmada",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao confirmar a exclusão do objeto",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}/{objectType}/{objectID}/destinations": {
+      "get": {
+        "description": "Obtenha a lista de nós de serviço de sincronização (ESS) que são os destinos do objeto do tipo de objeto e do ID de objeto especificados.\nO status de entrega do objeto é fornecido para cada destino juntamente com seu tipo e seu ID.\nEsta é uma API apenas CSS.",
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Obtenha os destinos de um objeto.",
+        "operationId": "handleObjectDestinations",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O orgID do objeto cujos destinos serão recuperados. Presente apenas ao trabalhar com um CSS, removido do caminho ao trabalhar com um ESS",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O tipo do objeto cujos destinos serão recuperados",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do objeto cujos destinos serão recuperados",
+            "name": "objectID",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Destinos de objetos e seu status",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/DestinationsStatus"
+              }
+            }
+          },
+          "500": {
+            "description": "Falha ao recuperar os destinos do objeto",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Configure a lista de nós de serviço de sincronização (ESS) para que sejam os destinos do objeto do tipo de objeto e do ID de objeto especificados.\nEsta é uma API apenas CSS.",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Configure os destinos de um objeto.",
+        "operationId": "handleObjectDestinationsUpdate",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O orgID do objeto cujos destinos serão atualizados",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O tipo do objeto cujos destinos serão atualizados",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do objeto cujos destinos serão atualizados",
+            "name": "objectID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "description": "A lista de destinos do objeto",
+            "name": "Carga útil",
+            "in": "corpo",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "sequência"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Destinos de objetos atualizados",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao atualizar os destinos do objeto",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}/{objectType}/{objectID}/policyreceived": {
+      "put": {
+        "description": "Marque o objeto do tipo de objeto e do ID de objeto especificados como tendo sua política de destino recebida \nDepois que o objeto é marcado como tal, ele não será entregue ao aplicativo listando objetos com \numa política de destino, a menos que \"received=true\" seja incluído nos parâmetros de consulta.",
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Marque a política de destino de um objeto como tendo sido recebida.",
+        "operationId": "handlePolicyReceived",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O orgID do objeto a ser marcado como tendo sua política de destino recebida.",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O tipo do objeto a ser marcado como tendo sua política de destino recebida",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do objeto a ser marcado como tendo sua política de destino recebida",
+            "name": "objectID",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Objeto marcado como tendo sua política de destino recebida",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao marcar o objeto como tendo sua política de destino recebida",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}/{objectType}/{objectID}/received": {
+      "put": {
+        "description": "Marque o objeto do tipo de objeto e do ID de objeto especificados como tendo sido recebido pelo aplicativo.\nDepois que o objeto for marcado como recebido, ele será entregue ao aplicativo novamente apenas se especificado na solicitação de objetos.",
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Marque um objeto como recebido.",
+        "operationId": "handleObjectReceived",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O orgID do objeto a ser marcado como recebido",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O tipo do objeto a ser marcado como recebido",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do objeto a ser marcado como recebido",
+            "name": "objectID",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Objeto marcado como recebido",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao marcar o objeto recebido",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}/{objectType}/{objectID}/status": {
+      "get": {
+        "description": "Obtenha o status do objeto do tipo de objeto e do ID de objeto especificados.\nO status pode ser um dos seguintes: \nnotReady - o objeto não está pronto para ser enviado para os destinos.\nready - o objeto está pronto para ser enviado para os destinos.\nreceived - os metadados do objeto foram recebidos, mas não todos os seus dados.\ncompletelyReceived - o objeto integral (metadados e dados) foi recebido.\nconsumed - o objeto foi consumido pelo aplicativo.\ndeleted - o objeto foi excluído.",
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Obtenha o status de um objeto.",
+        "operationId": "handleObjectStatus",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O orgID do objeto cujo status será recuperado",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O tipo do objeto cujo status será recuperado",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do objeto cujo status será recuperado",
+            "name": "objectID",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Status do objeto",
+            "schema": {
+              "type": "sequência",
+              "enum": [
+                "notReady",
+                "ready",
+                "recebidos",
+                "completelyReceived",
+                "consumidas",
+                "excluído"
+              ]
+            }
+          },
+          "500": {
+            "description": "Falha ao recuperar o status do objeto",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}/{objectType}?all_objects=true": {
+      "get": {
+        "description": "Obtenha todos os objetos do tipo de objeto especificado que tenham uma política de destino.",
+        "produces": [
+          "application/json",
+          "texto/simples"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "Obtenha objetos com uma política de destino do tipo especificado.",
+        "operationId": "handleListAllObjects",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O tipo dos objetos a serem retornados",
+            "name": "objectType",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "boolean",
+            "description": "Se deve ou não incluir todos os objetos. Se false, somente objetos atualizados serão retornados.",
+            "name": "all_objects",
+            "in": "query",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Objetos com uma resposta de política de destino",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ObjectDestinationPolicy"
+              }
+            }
+          },
+          "404": {
+            "description": "Nenhum objeto com uma política de destino localizada",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao recuperar os objetos atualizados",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}?destination_policy=true": {
+      "get": {
+        "description": "Obtenha a lista dos objetos que possuem políticas de destino.\nUm aplicativo geralmente chamaria esta API periodicamente para verificar as atualizações.",
+        "produces": [
+          "application/json",
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Obtenha objetos que tenham políticas de destino.",
+        "operationId": "handleListObjectsWithDestinationPolicy",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O orgID dos objetos atualizados a serem retornados",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "boolean",
+            "description": "Deve ser true para indicar que os objetos com destinationPolicy devem ser recuperados",
+            "name": "destination_policy",
+            "in": "query",
+            "required": true
+          },
+          {
+            "type": "boolean",
+            "description": "Se deve incluir ou não os objetos que foram marcados como recebidos pelo aplicativo",
+            "name": "recebidos",
+            "in": "query"
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do serviço (orgID/serviceName) com o qual os objetos têm afinidade, cuja Política de Destino deve ser buscada.",
+            "name": "service",
+            "in": "query"
+          },
+          {
+            "type": "integer",
+            "format": "int64",
+            "description": "Os objetos que possuem uma Política de Destino que foi atualizada desde o tempo UTC especificado em nanossegundos devem ser buscados.",
+            "name": "desde",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resposta da política de destino do objeto",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ObjectDestinationPolicy"
+              }
+            }
+          },
+          "404": {
+            "description": "Nenhum objeto atualizado encontrado",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao recuperar os objetos atualizados",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}?filters=true": {
+      "get": {
+        "description": "Obtenha a lista de objetos que satisfazem os filtros fornecidos \nEsta é uma API apenas CSS.",
+        "produces": [
+          "application/json",
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Obtenha os objetos satisfazem os filtros fornecidos",
+        "operationId": "handleListObjectsWithFilters",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O orgID dos objetos atualizados a serem retornados. Presente apenas ao trabalhar com um CSS, removido do caminho ao trabalhar com um ESS",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "boolean",
+            "description": "Deve ser true para indicar que os objetos com filtros devem ser recuperados",
+            "name": "Filtros.",
+            "in": "query",
+            "required": true
+          },
+          {
+            "type": "boolean",
+            "description": "Deve ser true para indicar que os objetos com destinationPolicy devem ser recuperados",
+            "name": "destinationPolicy",
+            "in": "query"
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do serviço (orgID/serviceName) com o qual os objetos têm afinidade, cuja Política de Destino deve ser buscada.",
+            "name": "dpService",
+            "in": "query"
+          },
+          {
+            "type": "sequência",
+            "description": "O nome da propriedade definido dentro da política de destino com a qual os objetos têm afinidade, cuja Política de Destino deve ser buscada.",
+            "name": "dpPropertyName",
+            "in": "query"
+          },
+          {
+            "type": "sequência",
+            "description": "Os objetos que possuem uma Política de Destino que foi atualizada desde o registro de data e hora especificado no RFC3339 devem ser buscados.",
+            "name": "desde",
+            "in": "query"
+          },
+          {
+            "type": "sequência",
+            "description": "Busque os objetos com o tipo de objeto determinado",
+            "name": "objectType",
+            "in": "query"
+          },
+          {
+            "type": "sequência",
+            "description": "Busque os objetos com ID de objeto fornecido",
+            "name": "objectID",
+            "in": "query"
+          },
+          {
+            "type": "sequência",
+            "description": "Busque os objetos com o tipo de destino determinado",
+            "name": "destinationType",
+            "in": "query"
+          },
+          {
+            "type": "sequência",
+            "description": "Busque os objetos com ID de destino determinado",
+            "name": "destinationID",
+            "in": "query"
+          },
+          {
+            "type": "boolean",
+            "description": "Busque os objetos com noData marcados como true",
+            "name": "noData",
+            "in": "query"
+          },
+          {
+            "type": "sequência",
+            "description": "Busque os objetos com prazo de expiração antes do registro de data e hora especificado no formato RFC3339",
+            "name": "expirationTimeBefore",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resposta de objetos",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/MetaData"
+              }
+            }
+          },
+          "404": {
+            "description": "Nenhum objeto foi encontrado",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao recuperar os objetos",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects?destination_policy=true": {
+      "get": {
+        "description": "Obtenha a lista dos objetos que possuem políticas de destino.\nUm aplicativo geralmente chamaria esta API periodicamente para verificar as atualizações.",
+        "produces": [
+          "application/json",
+          "texto/simples"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "Obtenha objetos que tenham políticas de destino.",
+        "operationId": "handleListObjectsWithDestinationPolicy",
+        "parameters": [
+          {
+            "type": "boolean",
+            "description": "Deve ser true para indicar que os objetos com destinationPolicy devem ser recuperados",
+            "name": "destination_policy",
+            "in": "query",
+            "required": true
+          },
+          {
+            "type": "boolean",
+            "description": "Se deve incluir ou não os objetos que foram marcados como recebidos pelo aplicativo",
+            "name": "recebidos",
+            "in": "query"
+          },
+          {
+            "type": "sequência",
+            "description": "O ID do serviço (orgID/serviceName) com o qual os objetos têm afinidade, cuja Política de Destino deve ser buscada.",
+            "name": "service",
+            "in": "query"
+          },
+          {
+            "type": "integer",
+            "format": "int64",
+            "description": "Os objetos que possuem uma Política de Destino que foi atualizada desde o tempo UTC especificado em nanossegundos devem ser buscados.",
+            "name": "desde",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resposta da política de destino do objeto",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ObjectDestinationPolicy"
+              }
+            }
+          },
+          "404": {
+            "description": "Nenhum objeto atualizado encontrado",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao recuperar os objetos atualizados",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/organizations": {
+      "get": {
+        "description": "Obtenha a lista de organizações existentes. Relevante apenas para CSS.",
+        "produces": [
+          "application/json",
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Obtenha organizações.",
+        "operationId": "handleGetOrganizations",
+        "responses": {
+          "200": {
+            "description": "Resposta de organizações",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/organization"
+              }
+            }
+          },
+          "404": {
+            "description": "Nenhuma organização localizada",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao recuperar as organizações",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/organizations/{orgID}": {
+      "put": {
+        "description": "Informações da organização do armazenamento. Relevante apenas para CSS.",
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Atualize organização.",
+        "operationId": "handleOrganizations",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O orgID da organização a ser atualizada.",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "name": "Carga útil",
+            "in": "corpo",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Organization"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "A organização foi atualizada com sucesso",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao atualizar a organização",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Remova informações da organização, limpe todos os recursos (objetos, destinos, etc.) e todos os recursos (objetos, destinos, etc.) associados \nà organização excluída. Relevante apenas para CSS.",
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Exclua organização.",
+        "operationId": "handleDeleteOrganization",
+        "parameters": [
+          {
+            "type": "sequência",
+            "description": "O orgID da organização a ser excluída.",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "A organização foi excluída com sucesso",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao excluir a organização",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/resend": {
+      "post": {
+        "description": "Usado por um ESS para pedir que o CSS reenvie todos os objetos (suportados apenas para solicitações do ESS ao CSS).\nUm aplicativo precisa usar essa API apenas quando os dados que ele obteve anteriormente do ESS são perdidos.",
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "Solicitação para reenviar objetos.",
+        "operationId": "handleResend",
+        "responses": {
+          "204": {
+            "description": "A solicitação será enviada",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "400": {
+            "description": "A solicitação não é permitida no Cloud Sync-Service",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/security/{type}/{orgID}": {
+      "get": {
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Recupere a lista de ACLs de destino ou de objeto para uma organização.",
+        "operationId": "handleACLGetAll",
+        "parameters": [
+          {
+            "enum": [
+              "destinos",
+              "objetos"
+            ],
+            "type": "sequência",
+            "description": "O tipo da ACL cuja lista de nomes de usuário deve ser recuperada.",
+            "name": "da mensagem",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O orgID no qual a ACL para o tipo de destino ou o tipo de objeto existe.",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A lista de ACLs recuperadas do tipo especificado.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "sequência"
+              }
+            }
+          },
+          "404": {
+            "description": "Nenhuma ACLs localizada",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao recuperar a lista de ACLs recuperadas do tipo especificado.",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/security/{type}/{orgID}/{key}": {
+      "get": {
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Recupere a lista de nomes de usuários de uma ACL para um tipo de destino ou um tipo de objeto.",
+        "operationId": "handleACLGet",
+        "parameters": [
+          {
+            "enum": [
+              "destinos",
+              "objetos"
+            ],
+            "type": "sequência",
+            "description": "O tipo da ACL cuja lista de nomes de usuário deve ser recuperada.",
+            "name": "da mensagem",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O orgID no qual a ACL para o tipo de destino ou o tipo de objeto existe.",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O tipo de destino ou o tipo de objeto que está sendo protegido pela ACL.",
+            "name": "key",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A lista de nomes de usuários foi recuperada a partir da ACL especificada.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "sequência"
+              }
+            }
+          },
+          "404": {
+            "description": "ACL não localizada",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao recuperar os nomes de usuários da ACL especificada.",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "A inclusão ou remoção em massa de nomes de usuário de uma ACL para um tipo de destino ou um tipo de objeto. Se o \nprimeiro nome do usuário estiver sendo incluído, a ACL será criada. Se o último nome do usuário for removido, a ACL \nserá excluída.",
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "A inclusão ou remoção em massa de nomes de usuário de uma ACL para um tipo de destino ou um tipo de objeto. ",
+        "operationId": "handleBulkACLUpdate",
+        "parameters": [
+          {
+            "enum": [
+              "destinos",
+              "objetos"
+            ],
+            "type": "sequência",
+            "description": "O tipo da ACL para o qual os nomes de usuário especificados serão incluídos ou removidos.",
+            "name": "da mensagem",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O orgID no qual a ACL para o tipo de destino ou o tipo de objeto existe.",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O tipo de destino ou o tipo de objeto que está sendo protegido pela ACL.",
+            "name": "key",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "name": "Carga útil",
+            "in": "corpo",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/bulkACLUpdate"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Os nomes de usuário foram incluídos ou removidos da ACL especificada.",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao incluir ou remover os nomes de usuário da ACL especificada.",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/security/{type}/{orgID}/{key}/{username}": {
+      "put": {
+        "description": "Inclua um nome do usuário em uma ACL para um tipo de destino ou um tipo de objeto. Se o primeiro nome de usuário estiver sendo incluído, \na ACL será criada.",
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Inclua um nome do usuário em uma ACL para um tipo de destino ou um tipo de objeto.",
+        "operationId": "handleACLUpdate",
+        "parameters": [
+          {
+            "enum": [
+              "destinos",
+              "objetos"
+            ],
+            "type": "sequência",
+            "description": "O tipo da ACL para o qual o nome de usuário especificado será incluído.",
+            "name": "da mensagem",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O orgID no qual a ACL para o tipo de destino ou o tipo de objeto existe.",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O tipo de destino ou o tipo de objeto que está sendo protegido pela ACL.",
+            "name": "key",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O nome do usuário a ser incluído na ACL especificada.",
+            "name": "Nome do usuário",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "O nome do usuário foi incluído na ACL especificada.",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao incluir o nome do usuário na ACL especificada.",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Remova um nome do usuário de uma ACL para um tipo de destino ou um tipo de objeto. Se o último nome do usuário for removido,\na ACL também será excluída.",
+        "produces": [
+          "texto/simples"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "Remova um nome do usuário de uma ACL para um tipo de destino ou um tipo de objeto.",
+        "operationId": "handleACLDelete",
+        "parameters": [
+          {
+            "enum": [
+              "destinos",
+              "objetos"
+            ],
+            "type": "sequência",
+            "description": "O tipo da ACL do qual remover o nome do usuário especificado.",
+            "name": "da mensagem",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O orgID no qual a ACL para o tipo de destino ou o tipo de objeto existe.",
+            "name": "orgID",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O tipo de destino ou o tipo de objeto que está sendo protegido pela ACL.",
+            "name": "key",
+            "in": "Caminho",
+            "required": true
+          },
+          {
+            "type": "sequência",
+            "description": "O nome do usuário a ser removido da ACL especificada.",
+            "name": "Nome do usuário",
+            "in": "Caminho",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "O nome do usuário foi removido da ACL especificada.",
+            "schema": {
+              "type": "sequência"
+            }
+          },
+          "500": {
+            "description": "Falha ao remover o nome do usuário da ACL especificada.",
+            "schema": {
+              "type": "sequência"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ConsumedObject": {
+      "description": "O ConsumedObject contém os metadados do objeto consumido e seu registro de data e hora",
+      "type": "object",
+      "properties": {
+        "MetaData": {
+          "$ref": "#/definitions/MetaData"
+        },
+        "Timestamp": {
+          "type": "sequência",
+          "format": "Data/Hora"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "DBHealthStatusInfo": {
+      "description": "O DBHealthStatusInfo descreve o status de funcionamento do banco de dados do nó de sincronização de serviço",
+      "type": "object",
+      "properties": {
+        "dbReadFailures": {
+          "type": "integer",
+          "format": "uint32",
+          "x-go-name": "DBReadFailures"
+        },
+        "dbStatus": {
+          "type": "sequência",
+          "x-go-name": "DBStatus"
+        },
+        "dbWriteFailures": {
+          "type": "integer",
+          "format": "uint32",
+          "x-go-name": "DBWriteFailures"
+        },
+        "disconnectedFromDB": {
+          "type": "boolean",
+          "x-go-name": "DisconnectedFromDB"
+        },
+        "lastDisconnectFromDBDuration": {
+          "type": "integer",
+          "format": "uint64",
+          "x-go-name": "LastDisconnectFromDBDuration"
+        },
+        "timeSinceLastReadWriteError": {
+          "type": "integer",
+          "format": "uint64",
+          "x-go-name": "TimeSinceLastReadWriteError"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "Destination": {
+      "description": "Cada nó de borda do serviço de sincronização (ESS) possui um endereço que é composto pelo ID, pelo tipo e pela organização do nó.\nUm nó do ESS se comunica com o CSS usando o MQTT ou o HTTP.",
+      "type": "object",
+      "title": "O destino descreve um nó de serviço de sincronização.",
+      "required": [
+        "destinationType",
+        "destinationID",
+        "Comunicação",
+        "codeVersion"
+      ],
+      "properties": {
+        "codeVersion": {
+          "description": "CodeVersion é a versão de código de serviço de sincronização utilizada pelo destino",
+          "type": "sequência",
+          "x-go-name": "CodeVersion"
+        },
+        "communication": {
+          "description": "Communication é o protocolo de comunicação usado pelo destino para conexão (pode ser MQTT ou HTTP)",
+          "type": "sequência",
+          "enum": [
+            "HTTP",
+            "MQTT"
+          ],
+          "x-go-name": "Comunicação"
+        },
+        "destinationID": {
+          "description": "DestID é o ID de destino",
+          "type": "sequência",
+          "x-go-name": "DestID"
+        },
+        "destinationOrgID": {
+          "description": "DestOrgID é o ID da organização de destino \nCada objeto de serviço de sincronização pertence a uma única organização",
+          "type": "sequência",
+          "x-go-name": "DestOrgID"
+        },
+        "destinationType": {
+          "description": "DestType é o tipo de destino",
+          "type": "sequência",
+          "x-go-name": "DestType"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "DestinationsStatus": {
+      "description": "O DestinationsStatus descreve o status de entrega de um objeto para um destino\ne também fornece informações sobre o status de entrega de um objeto para um determinado destino.\nO status pode ser um dos seguintes:\nIndicação se o objeto foi entregue ao destino \npending - indica que a entrega deste objeto está pendente para este destino\ndelivering - indica que o objeto está sendo entregue a este destino\ndelivered - indica que o objeto foi entregue a este destino\nconsumed - indica que o objeto foi consumido por este destino\ndeleted - indica que este destino reconheceu a exclusão do objeto\nerror - indica que uma mensagem de erro de feedback foi recebida deste destino",
+      "type": "object",
+      "required": [
+        "destinationType",
+        "destinationID",
+        "status"
+      ],
+      "properties": {
+        "destinationID": {
+          "description": "DestID é o ID de destino",
+          "type": "sequência",
+          "x-go-name": "DestID"
+        },
+        "destinationType": {
+          "description": "DestType é o tipo de destino",
+          "type": "sequência",
+          "x-go-name": "DestType"
+        },
+        "message": {
+          "description": "Message é a mensagem para o destino",
+          "type": "sequência",
+          "x-go-name": "Mensagem"
+        },
+        "status": {
+          "description": "Status é o status de destino",
+          "type": "sequência",
+          "enum": [
+            "pendentes",
+            "entregando",
+            "entregue",
+            "consumidas",
+            "excluído",
+            "error"
+          ],
+          "x-go-name": "Status"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "HealthStatusInfo": {
+      "description": "O HealthStatusInfo descreve o status de funcionamento do nó de sincronização",
+      "type": "object",
+      "properties": {
+        "healthStatus": {
+          "type": "sequência",
+          "x-go-name": "HealthStatus"
+        },
+        "nodeType": {
+          "type": "sequência",
+          "x-go-name": "Tipo de Nó"
+        },
+        "upTime": {
+          "type": "integer",
+          "format": "uint64",
+          "x-go-name": "Tempo de atividade"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "IOError": {
+      "description": "IOError é o erro para solicitações que falharam por causa da E/S",
+      "type": "object",
+      "properties": {
+        "Message": {
+          "type": "sequência"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "InternalError": {
+      "description": "O InternalError é um erro geral",
+      "type": "object",
+      "properties": {
+        "Message": {
+          "type": "sequência"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "Locks": {
+      "description": "Locks é um conjunto de bloqueios de objetos",
+      "type": "object",
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "MQTTHealthStatusInfo": {
+      "description": "O MQTTHealthStatusInfo descreve o status de funcionamento da conexão MQTT do nó de sincronização de serviço",
+      "type": "object",
+      "properties": {
+        "disconnectedFromMQTTBroker": {
+          "type": "boolean",
+          "x-go-name": "DisconnectedFromMQTTBroker"
+        },
+        "lastDisconnectFromBrokerDuration": {
+          "type": "integer",
+          "format": "uint64",
+          "x-go-name": "LastDisconnectFromBrokerDuration"
+        },
+        "mqttConnectionStatus": {
+          "type": "sequência",
+          "x-go-name": "MQTTConnectionStatus"
+        },
+        "publishFailures": {
+          "type": "integer",
+          "format": "uint32",
+          "x-go-name": "PublishFailures"
+        },
+        "subscribeFailures": {
+          "type": "integer",
+          "format": "uint32",
+          "x-go-name": "SubscribeFailures"
+        },
+        "timeSinceLastPublishError": {
+          "type": "integer",
+          "format": "uint64",
+          "x-go-name": "TimeSinceLastPublishError"
+        },
+        "timeSinceLastSubscribeError": {
+          "type": "integer",
+          "format": "uint64",
+          "x-go-name": "TimeSinceLastSubscribeError"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "MessagingGroup": {
+      "description": "O MessagingGroup mapeia organização para seu grupo de mensagens",
+      "type": "object",
+      "properties": {
+        "GroupName": {
+          "type": "sequência"
+        },
+        "OrgID": {
+          "type": "sequência"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "MetaData": {
+      "description": "Cada objeto inclui metadados (obrigatório) e dados (opcional). Os metadados e os dados podem ser atualizados de forma independente.\nCada nó de serviço de sincronização (ESS) possui um endereço que é composto pelo ID, pelo tipo e pela organização do nó.\nPara enviar um objeto para um único nó, configure os campos destinationType e destinationID para corresponder ao Tipo e ao ID do nó.\nPara enviar um objeto para todos os nós de um determinado tipo, configure o destinationType como o tipo apropriado e deixe o destinationID vazio.\nSe o destinationType e o destinationID estiverem vazios, o objeto será enviado para todos os nós.",
+      "type": "object",
+      "title": "O MetaData são os metadados que identificam e definem o objeto de serviço de sincronização.",
+      "required": [
+        "objectID",
+        "objectType"
+      ],
+      "properties": {
+        "activationTime": {
+          "description": "ActivationTime é um registro de data e/ou hora de quando este objeto deve ser ativado automaticamente.\nO registro de data e hora deve ser fornecido em formato RFC3339.\nCampo opcional, se omitido (e se Inactive for true) o objeto nunca será ativado automaticamente.",
+          "type": "sequência",
+          "x-go-name": "ActivationTime"
+        },
+        "autodelete": {
+          "description": "AutoDelete é uma sinalização indicando se deseja excluir o objeto após ele ser entregue a todos os seus destinos a partir do DestinationsList.\nCampo opcional, o padrão é false (não excluir).\nEste campo é usado apenas ao trabalhar com o CSS. Os objetos são sempre excluídos após a entrega no ESS.",
+          "type": "boolean",
+          "x-go-name": "AutoDelete"
+        },
+        "chunkSize": {
+          "description": "O ChunkSize é um campo interno indicando o tamanho máximo de carga útil da mensagem.\nEste campo não deve ser configurado pelos usuários.",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "ChunkSize"
+        },
+        "consumers": {
+          "description": "ExpectedConsumers é o número de aplicativos que são esperados para indicar que eles consumiram o objeto.\nCampo opcional, o padrão é 1.",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "ExpectedConsumers"
+        },
+        "dataID": {
+          "description": "DataID é um ID de dados interno.\nEste campo não deve ser configurado pelos usuários.",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "DataID"
+        },
+        "deleted": {
+          "description": "Deleted é uma sinalização que indica aos aplicativos de pesquisa que atualizações deste objeto foram excluídas.\nCampo somente leitura, não deve ser configurado pelos usuários.",
+          "type": "boolean",
+          "x-go-name": "Excluído"
+        },
+        "description": {
+          "description": "Description é uma descrição textual do objeto.\nCampo opcional, vazio por padrão.",
+          "type": "sequência",
+          "x-go-name": "Descrição"
+        },
+        "destinationDataUri": {
+          "description": "DestinationDataURI é um URI indicando onde o receptor do objeto deve armazená-lo.\nAtualmente, apenas URIs de arquivo são suportados.\nEste campo está disponível apenas ao trabalhar com o CSS.\nCampo opcional, se omitido, o objeto será guardado no armazenamento interno do nó.",
+          "type": "sequência",
+          "x-go-name": "DestinationDataURI"
+        },
+        "destinationID": {
+          "description": "DestID é o ID do destino. Se omitido, o objeto será enviado a todos os ESSs com o mesmo DestType.\nEste campo é ignorado ao trabalhar com o ESS (o destino é o CSS).",
+          "type": "sequência",
+          "x-go-name": "DestID"
+        },
+        "destinationOrgID": {
+          "description": "DestOrgID é o ID da organização do objeto (um objeto pertence a exatamente uma organização).\nEste campo será ignorado ao trabalhar com o ESS (o orgID do ESS será usado).",
+          "type": "sequência",
+          "x-go-name": "DestOrgID"
+        },
+        "destinationPolicy": {
+          "$ref": "#/definitions/Policy"
+        },
+        "destinationType": {
+          "description": "DestType é o tipo de destino para o qual o objeto será enviado.\nSe omitido (e se DestinationsList também for omitido) o objeto será transmitido para todos os destinos conhecidos.\nEste campo é ignorado ao trabalhar com o ESS (o destino é sempre o CSS).",
+          "type": "sequência",
+          "x-go-name": "DestType"
+        },
+        "destinationsList": {
+          "description": "DestinationsList é a lista de destinos como pares type:id para o qual o objeto será enviado.\nQuando um DestinationsList é fornecido, o DestType e o DestID devem ser omitidos.\nEste campo é ignorado ao trabalhar com o ESS (o destino é sempre o CSS).",
+          "type": "array",
+          "items": {
+            "type": "sequência"
+          },
+          "x-go-name": "DestinationsList"
+        },
+        "expiration": {
+          "description": "Expiration é um registro de data e hora ou uma data indicando quando o objeto expira.\nQuando o objeto expira, ele é excluído automaticamente.\nO registro de data e hora deve ser fornecido em formato RFC3339.\nEste campo está disponível apenas ao trabalhar com o CSS.\nCampo opcional, se omitido, o objeto não expirará.",
+          "type": "sequência",
+          "x-go-name": "Expiração"
+        },
+        "inactive": {
+          "description": "Inactive é uma sinalização indicando que este objeto está inativo por enquanto.\nUm objeto pode ser criado como inativo, o que significa que ele não é entregue ao seu destino.O objeto pode ser ativado posteriormente.\nCampo opcional, o padrão é false (objeto ativo).",
+          "type": "boolean",
+          "x-go-name": "Inativo"
+        },
+        "instanceID": {
+          "description": "InstanceID é um ID da instância interna.\nEste campo não deve ser configurado pelos usuários.",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "InstanceID"
+        },
+        "link": {
+          "description": "Link é um link para o local do qual os dados para este objeto podem ser buscados.\nO link é configurado e usado pelo aplicativo. O serviço de sincronização não acessa o link.\nCampo opcional, se omitido, os dados deverão ser fornecidos pelo aplicativo.",
+          "type": "sequência",
+          "x-go-name": "Vincular"
+        },
+        "metaOnly": {
+          "description": "MetaOnly é uma sinalização que indica que essa atualização é apenas dos metadados. Os dados do objeto atual são deixados inalterados.\nCampo opcional, o padrão é false (os dados e metadados são atualizados).",
+          "type": "boolean",
+          "x-go-name": "MetaOnly"
+        },
+        "noData": {
+          "description": "NoData é uma sinalização que indica que não há dados para este objeto.\nOs objetos sem nenhum dado podem ser usados, por exemplo, para enviar notificações.\nCampo opcional, o padrão é false (o objeto inclui dados).",
+          "type": "boolean",
+          "x-go-name": "NoData"
+        },
+        "objectID": {
+          "description": "ObjectID é um identificador exclusivo do objeto",
+          "type": "sequência",
+          "x-go-name": "ObjectID"
+        },
+        "objectSize": {
+          "description": "ObjectSize é um campo interno que indica o tamanho dos dados do objeto.\nEste campo não deve ser configurado pelos usuários.",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "ObjectSize"
+        },
+        "objectType": {
+          "description": "ObjectType é o tipo do objeto.\nO tipo é usado para agrupar diversos objetos, por exemplo, ao verificar as atualizações de objetos.",
+          "type": "sequência",
+          "x-go-name": "ObjectType"
+        },
+        "originID": {
+          "description": "OriginID é o ID de origem do objeto. Configurado pelo código interno.\nCampo somente leitura, não deve ser configurado pelos usuários.",
+          "type": "sequência",
+          "x-go-name": "OriginID"
+        },
+        "originType": {
+          "description": "OriginType é o tipo da origem do objeto. Configurado pelo código interno.\nCampo somente leitura, não deve ser configurado pelos usuários.",
+          "type": "sequência",
+          "x-go-name": "OriginType"
+        },
+        "ownerID": {
+          "description": "O ownerID é um campo interno que indica quem cria o objeto\nEste campo não deve ser configurado pelos usuários",
+          "type": "sequência",
+          "x-go-name": "OwnerID"
+        },
+        "sourceDataUri": {
+          "description": "SourceDataURI é um URI que indica de onde o remetente do objeto deve ler os dados.\nAtualmente, apenas URIs de arquivo são suportados.\nEste campo está disponível apenas ao trabalhar com o ESS.\nCampo opcional. Se omitido, os dados do objeto deverão ser fornecidos pelo usuário.",
+          "type": "sequência",
+          "x-go-name": "SourceDataURI"
+        },
+        "version": {
+          "description": "Version é a versão do objeto (conforme usado pelo aplicativo).\nCampo opcional, vazio por padrão.",
+          "type": "sequência",
+          "x-go-name": "Versão"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "NotFound": {
+      "description": "NotFound é o erro que é retornado quando um objeto não é localizado",
+      "type": "object",
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "NotificationInfo": {
+      "description": "O NotificationInfo contém informações sobre uma mensagem para enviar para o outro lado",
+      "type": "object",
+      "properties": {
+        "DataID": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "DestID": {
+          "type": "sequência"
+        },
+        "DestType": {
+          "type": "sequência"
+        },
+        "InstanceID": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "MetaData": {
+          "$ref": "#/definitions/MetaData"
+        },
+        "NotificationTopic": {
+          "type": "sequência"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "ObjectDestinationPolicy": {
+      "type": "object",
+      "title": "O ObjectDestinationPolicy contém informações sobre um objeto que possui uma Política de Destino.",
+      "required": [
+        "orgID",
+        "objectType",
+        "objectID"
+      ],
+      "properties": {
+        "destinationPolicy": {
+          "$ref": "#/definitions/Policy"
+        },
+        "destinations": {
+          "description": "Destinations é a lista dos destinos atuais do objeto",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DestinationsStatus"
+          },
+          "x-go-name": "Destinos"
+        },
+        "objectID": {
+          "description": "ObjectID é um identificador exclusivo do objeto",
+          "type": "sequência",
+          "x-go-name": "ObjectID"
+        },
+        "objectType": {
+          "description": "ObjectType é o tipo do objeto.\nO tipo é usado para agrupar diversos objetos, por exemplo, ao verificar as atualizações de objetos.",
+          "type": "sequência",
+          "x-go-name": "ObjectType"
+        },
+        "orgID": {
+          "description": "OrgID é o ID da organização do objeto (um objeto pertence a exatamente uma organização).",
+          "type": "sequência",
+          "x-go-name": "OrgID"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "ObjectStatus": {
+      "description": "O ObjectStatus descreve o status de entrega de um objeto para um destino\nO status pode ser um dos seguintes:\nIndicação se o objeto foi entregue ao destino\ndelivering - indica que o objeto está sendo entregue\ndelivered - indica que o objeto foi entregue\nconsumed - indica que o objeto foi consumido\ndeleted - indica que este destino reconheceu a exclusão do objeto\nerror - indica que uma mensagem de erro de feedback foi recebida",
+      "type": "object",
+      "required": [
+        "objectType",
+        "objectID",
+        "status"
+      ],
+      "properties": {
+        "objectID": {
+          "description": "O ObjectID é o ID do objeto",
+          "type": "sequência",
+          "x-go-name": "ObjectID"
+        },
+        "objectType": {
+          "description": "O ObjectType é o tipo de objeto",
+          "type": "sequência",
+          "x-go-name": "ObjectType"
+        },
+        "orgID": {
+          "description": "OrgID é o ID da organização ",
+          "type": "sequência",
+          "x-go-name": "OrgID"
+        },
+        "status": {
+          "description": "Status é o status do objeto para este destino",
+          "type": "sequência",
+          "enum": [
+            "entregando",
+            "entregue",
+            "consumidas",
+            "excluído",
+            "error"
+          ],
+          "x-go-name": "Status"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "Organization": {
+      "description": "A Organização contém informações da organização",
+      "type": "object",
+      "properties": {
+        "address": {
+          "description": "Address é o endereço do broker a ser usado ao conectar-se a esta organização",
+          "type": "sequência",
+          "x-go-name": "Endereço"
+        },
+        "orgID": {
+          "description": "OrgID é o ID da organização ",
+          "type": "sequência",
+          "x-go-name": "OrgID"
+        },
+        "password": {
+          "description": "Password é a senha a ser usada ao conectar-se a esta organização",
+          "type": "sequência",
+          "x-go-name": "Senha"
+        },
+        "user": {
+          "description": "User é o nome do usuário a ser usado ao conectar-se a esta organização",
+          "type": "sequência",
+          "x-go-name": "Usuário"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "PathError": {
+      "description": "PathError é o erro para problemas de caminho",
+      "type": "object",
+      "properties": {
+        "Message": {
+          "type": "sequência"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "Policy": {
+      "description": "A política descreve uma política formada por um conjunto de propriedades e restrições",
+      "type": "object",
+      "properties": {
+        "constraints": {
+          "description": "Restrictions é um conjunto de expressões que formam as restrições para a política",
+          "type": "array",
+          "items": {
+            "type": "sequência"
+          },
+          "x-go-name": "Restrições"
+        },
+        "properties": {
+          "description": "Properties são o conjunto de propriedades para uma política específica",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PolicyProperty"
+          },
+          "x-go-name": "Propriedades"
+        },
+        "services": {
+          "description": "Services são a lista de serviços para os quais objeto tem afinidade",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ServiceID"
+          },
+          "x-go-name": "Serviços"
+        },
+        "timestamp": {
+          "description": "Timestamp indica quando a política foi atualizada pela última vez (resultado do time.Now().UTC().UnixNano())",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "Registro de data e hora"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "PolicyProperty": {
+      "description": "PolicyProperty é uma propriedade em uma política",
+      "type": "object",
+      "required": [
+        "name",
+        "Value"
+      ],
+      "properties": {
+        "name": {
+          "description": "Name é o nome da propriedade",
+          "type": "sequência",
+          "x-go-name": "Nome"
+        },
+        "type": {
+          "description": "Type é o tipo da propriedade.\nEle é necessário apenas quando o sistema não pode interpretar o valor corretamente pelo contexto.",
+          "type": "sequência",
+          "x-go-name": "Tipo"
+        },
+        "value": {
+          "description": "Value é o valor da propriedade",
+          "type": "object",
+          "x-go-name": "Valor"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "SecurityError": {
+      "description": "SecurityError é o erro para solicitações com falha por causa da segurança",
+      "type": "object",
+      "properties": {
+        "Message": {
+          "type": "sequência"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "ServiceID": {
+      "description": "O ServiceID contém o ID de um serviço com o qual um objeto pode ter afinidade",
+      "type": "object",
+      "properties": {
+        "arch": {
+          "description": "Arch é a arquitetura do serviço",
+          "type": "sequência",
+          "x-go-name": "Arch"
+        },
+        "orgID": {
+          "description": "OrgID é o ID da organização do serviço",
+          "type": "sequência",
+          "x-go-name": "OrgID"
+        },
+        "serviceName": {
+          "description": "ServiceName é o nome do serviço",
+          "type": "sequência",
+          "x-go-name": "ServiceName"
+        },
+        "version": {
+          "description": "Version é a versão do serviço",
+          "type": "sequência",
+          "x-go-name": "Versão"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "StoredOrganization": {
+      "description": "StoredOrganization contém a organização e seu registro de data e hora da atualização",
+      "type": "object",
+      "properties": {
+        "Org": {
+          "$ref": "#/definitions/Organization"
+        },
+        "Timestamp": {
+          "type": "sequência",
+          "format": "Data/Hora"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "SyncServiceVersion": {
+      "description": "SyncServiceVersion é a versão atual do Sync-Service",
+      "type": "object",
+      "properties": {
+        "Major": {
+          "type": "integer",
+          "format": "uint32"
+        },
+        "Minor": {
+          "type": "integer",
+          "format": "uint32"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "UsageInfo": {
+      "description": "UsageInfo descreve o uso do nó de serviço de sincronização",
+      "type": "object",
+      "properties": {
+        "clientRequests": {
+          "type": "integer",
+          "format": "uint64",
+          "x-go-name": "ClientRequests"
+        },
+        "registeredESS": {
+          "type": "integer",
+          "format": "uint32",
+          "x-go-name": "RegisteredESS"
+        },
+        "storedObjects": {
+          "type": "integer",
+          "format": "uint32",
+          "x-go-name": "StoredObjects"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "bulkACLUpdate": {
+      "description": "bulkACLUpdate é a carga útil usada ao executar uma atualização em massa em uma ACL (incluindo nomes de usuários em uma \nACL ou removendo nomes de usuários de uma ACL.",
+      "type": "object",
+      "properties": {
+        "action": {
+          "description": "Action é uma ação, que pode ser inclui (para incluir nomes de usuários) ou remover (para remover nomes de usuários)",
+          "type": "sequência",
+          "x-go-name": "Ação"
+        },
+        "usernames": {
+          "description": "Usernames é uma matriz de nomes de usuários a serem incluídos ou removidos da ACL, conforme apropriado",
+          "type": "array",
+          "items": {
+            "type": "sequência"
+          },
+          "x-go-name": "Nomes de Usuários"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/core/base"
+    },
+    "healthReport": {
+      "type": "object",
+      "properties": {
+        "dbHealth": {
+          "$ref": "#/definitions/DBHealthStatusInfo"
+        },
+        "general": {
+          "$ref": "#/definitions/HealthStatusInfo"
+        },
+        "mqttHealth": {
+          "$ref": "#/definitions/MQTTHealthStatusInfo"
+        },
+        "usage": {
+          "$ref": "#/definitions/UsageInfo"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/core/base"
+    },
+    "objectUpdate": {
+      "description": "objectUpdate inclui os dados e metadados do objeto e o objeto de serviço de sincronização\n inclui metadados e dados opcionalmente binários.\nQuando um objeto é criado, os metadados devem ser fornecidos. Os metadados e os dados podem, então, ser atualizados juntos ou um de cada vez.",
+      "type": "object",
+      "properties": {
+        "data": {
+          "description": "Data é um dado binário do objeto",
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "uint8"
+          },
+          "x-go-name": "Dados"
+        },
+        "meta": {
+          "$ref": "#/definitions/MetaData"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/core/base"
+    },
+    "organization": {
+      "description": "A organização inclui o ID e o endereço do broker da organização",
+      "type": "object",
+      "properties": {
+        "address": {
+          "description": "Endereço do broker",
+          "type": "sequência",
+          "x-go-name": "Endereço"
+        },
+        "org-id": {
+          "description": "ID da organização",
+          "type": "sequência",
+          "x-go-name": "OrgID"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/core/base"
+    },
+    "webhookUpdate": {
+      "description": "webhookUpdate inclui a ação e a URL do webhook\nO webhook pode ser usado para permitir que o serviço de sincronização chame ações quando novas informações se tornam disponíveis.\nUm aplicativo pode escolher entre usar um webhook e pesquisar periodicamente o serviço de sincronização para atualizações.",
+      "type": "object",
+      "properties": {
+        "action": {
+          "description": "Action é uma ação pode ser registrar (criar/atualizar um webhook) ou excluir (excluir o webhook)",
+          "type": "sequência",
+          "x-go-name": "Ação"
+        },
+        "url": {
+          "description": "URL é a URL a ser chamada quando novas informações para o objeto estiverem disponíveis",
+          "type": "sequência",
+          "x-go-name": "URL"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/core/base"
+    }
+  }
+}

@@ -1,0 +1,1202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="09_SDO_device_provisioning.svg"
+   xml:space="preserve"
+   style="enable-background:new 0 0 1000 611.1;"
+   viewBox="0 0 1000 611.1"
+   y="0px"
+   x="0px"
+   id="Layer_1"
+   version="1.1"><metadata
+   id="metadata422"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs420">
+	
+
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+</defs><sodipodi:namedview
+   inkscape:current-layer="Layer_1"
+   inkscape:window-maximized="1"
+   inkscape:window-y="52"
+   inkscape:window-x="-8"
+   inkscape:cy="269.00662"
+   inkscape:cx="659.98609"
+   inkscape:zoom="1.0374735"
+   showgrid="false"
+   id="namedview418"
+   inkscape:window-height="801"
+   inkscape:window-width="1536"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0"
+   guidetolerance="10"
+   gridtolerance="10"
+   objecttolerance="10"
+   borderopacity="1"
+   bordercolor="#666666"
+   pagecolor="#ffffff" />
+<style
+   id="style2"
+   type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#051B75;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:none;}
+	.st3{fill:#161616;}
+	.st4{font-family:'IBMPlexSans';}
+	.st5{font-size:14px;}
+	.st6{fill:#F4F4F4;}
+	.st7{font-family:'IBMPlexSans-Medium';}
+	.st8{font-size:16px;}
+	.st9{fill-rule:evenodd;clip-rule:evenodd;fill:#009C98;}
+	.st10{fill-rule:evenodd;clip-rule:evenodd;fill:#BEBEBE;}
+	.st11{fill:#FFFFFF;}
+	.st12{fill-rule:evenodd;clip-rule:evenodd;fill:#E3F6FF;}
+	.st13{fill-rule:evenodd;clip-rule:evenodd;fill:#0F62FE;}
+	.st14{display:none;}
+	.st15{display:inline;fill-rule:evenodd;clip-rule:evenodd;fill:#0F62FE;}
+	.st16{display:inline;fill:#0F62FE;}
+	.st17{fill:none;stroke:#0F62FE;stroke-width:2;stroke-miterlimit:10;}
+	.st18{display:none;fill:none;stroke:#0F62FE;stroke-width:2;stroke-miterlimit:10;}
+	.st19{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#0F62FE;stroke-width:2;stroke-miterlimit:10;}
+	.st20{fill:none;stroke:#BEBEBE;stroke-width:2;}
+	.st21{fill:#BEBEBE;}
+	.st22{fill:none;stroke:#BEBEBE;stroke-width:2;stroke-dasharray:7,7;}
+	.st23{fill:#E3F6FF;}
+	.st24{fill:#0F62FE;}
+	.st25{fill-rule:evenodd;clip-rule:evenodd;fill:#408BFC;}
+	.st26{fill-rule:evenodd;clip-rule:evenodd;fill:#F4F4F4;}
+	.st27{fill:none;stroke:#00BAB6;stroke-width:2;stroke-dasharray:7;}
+</style>
+<rect
+   height="231.6"
+   width="439.2"
+   class="st0"
+   y="15.7"
+   x="206.1"
+   id="Rectangle-Copy-12" />
+<rect
+   id="Rectangle-Copy-16_2_"
+   x="429.5"
+   y="73.699997"
+   class="st1"
+   width="70.5"
+   height="81" /><rect
+   x="429.60001"
+   y="107"
+   class="st2"
+   width="70.400002"
+   height="15.6"
+   id="rect6" /><text
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"
+   y="117.3675"
+   x="433.87"
+   class="st3 st4 st5"
+   id="text8">Exchange</text>
+<rect
+   id="Rectangle-Copy-16_1_"
+   x="223.2"
+   y="149.89999"
+   class="st1"
+   width="70.5"
+   height="81" /><rect
+   x="223.2"
+   y="183.2"
+   class="st2"
+   width="70.5"
+   height="15.6"
+   id="rect13" /><text
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#161616"
+   y="187.5708"
+   x="257.48682"
+   class="st3 st4 st5"
+   id="text15"><tspan
+     y="187.5708"
+     x="257.48682"
+     id="tspan653"
+     sodipodi:role="line">Interface </tspan><tspan
+     y="205.0708"
+     x="257.48682"
+     id="tspan655"
+     sodipodi:role="line">utilisateur</tspan></text>
+<rect
+   id="Rectangle-Copy-16_4_"
+   x="559.5"
+   y="149.39999"
+   class="st1"
+   width="70.5"
+   height="81" /><rect
+   x="559.40002"
+   y="173.8"
+   class="st2"
+   width="70.599998"
+   height="33.5"
+   id="rect20" /><text
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;line-height:1.3;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle"
+   y="184.1176"
+   x="594.3877"
+   id="text26"><tspan
+     y="184.1176"
+     x="594.3877"
+     id="tspan657"
+     sodipodi:role="line">Service</tspan><tspan
+     y="202.3176"
+     x="594.3877"
+     id="tspan659"
+     sodipodi:role="line">SDO</tspan></text>
+<rect
+   id="rect30"
+   height="15.6"
+   width="236.1"
+   class="st2"
+   y="35.8"
+   x="221.7" />
+<text
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"
+   id="text32"
+   class="st6 st7 st8"
+   transform="matrix(1 0 0 1 221.7151 47.6527)">Concentrateur de gestion IEAM</text>
+<rect
+   id="Rectangle-Copy-14_1_"
+   x="825.70001"
+   y="15.7"
+   class="st9"
+   width="174"
+   height="99.300003" /><rect
+   x="841.70001"
+   y="35.799999"
+   class="st2"
+   width="150.2"
+   height="59.400002"
+   id="rect35" /><text
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.3;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#f9f9f9"
+   y="47.652599"
+   x="911.78094"
+   id="text41"><tspan
+     y="47.652599"
+     x="911.78094"
+     id="tspan679"
+     sodipodi:role="line">Serveur </tspan><tspan
+     y="68.452599"
+     x="911.78094"
+     id="tspan681"
+     sodipodi:role="line">Rendezvous</tspan><tspan
+     y="89.252594"
+     x="911.78094"
+     id="tspan683"
+     sodipodi:role="line">Intel Corp.</tspan></text>
+<rect
+   id="Rectangle-Copy-16_3_"
+   x="231.7"
+   y="328.70001"
+   class="st10"
+   width="146.7"
+   height="81" /><rect
+   x="247.7"
+   y="347.20001"
+   class="st2"
+   width="112.9"
+   height="29.700001"
+   id="rect46" /><text
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.3;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff"
+   y="359.04739"
+   x="307.30194"
+   class="st11 st7 st8"
+   id="text48"><tspan
+     y="359.04739"
+     x="307.30194"
+     id="tspan635"
+     sodipodi:role="line">Chargement </tspan><tspan
+     y="379.84738"
+     x="307.30194"
+     id="tspan637"
+     sodipodi:role="line">du quai</tspan></text>
+<rect
+   x="325.20001"
+   y="476.10001"
+   class="st2"
+   width="118.7"
+   height="15.5"
+   id="rect52" /><text
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#161616"
+   y="486.43719"
+   x="384.76926"
+   class="st3 st4 st5"
+   id="text54"><tspan
+     y="486.43719"
+     x="384.76926"
+     id="tspan595"
+     sodipodi:role="line">Technicien chargé</tspan><tspan
+     y="503.93719"
+     x="384.76926"
+     id="tspan597"
+     sodipodi:role="line">des noeuds</tspan></text><g
+   id="Group-2_3_"
+   transform="translate(21)">
+		<circle
+   id="Oval-Copy-3_3_"
+   class="st12"
+   cx="363.60001"
+   cy="441.39999"
+   r="24" />
+		<path
+   class="st13"
+   d="m 358.6,444.4 c 2.8,0 5,2.2 5,5 v 6 h -2 v -6 c 0,-1.7 -1.3,-3 -3,-3 h -4 c -1.7,0 -3,1.3 -3,3 v 6 h -2 v -6 c 0,-2.8 2.2,-5 5,-5 z"
+   id="path57" />
+		<g
+   id="g63">
+			<g
+   id="g61">
+				<path
+   class="st13"
+   d="m 356.6,432.4 c -2.8,0 -5,2.2 -5,5 0,2.8 2.2,5 5,5 2.8,0 5,-2.2 5,-5 0,-2.8 -2.2,-5 -5,-5 z m 0,8 c -1.7,0 -3,-1.3 -3,-3 0,-1.7 1.3,-3 3,-3 1.7,0 3,1.3 3,3 0,1.7 -1.4,3 -3,3 z"
+   id="path59" />
+			</g>
+		</g>
+		<g
+   class="st14"
+   id="g85">
+			<rect
+   x="385.60001"
+   y="440.39999"
+   class="st15"
+   width="2"
+   height="2"
+   id="rect65" />
+			<rect
+   x="390.60001"
+   y="440.39999"
+   class="st15"
+   width="2"
+   height="2"
+   id="rect67" />
+			<rect
+   x="393.60001"
+   y="437.39999"
+   class="st15"
+   width="2"
+   height="2"
+   id="rect69" />
+			<rect
+   x="382.60001"
+   y="437.39999"
+   class="st15"
+   width="2"
+   height="2"
+   id="rect71" />
+			<rect
+   x="385.60001"
+   y="432.39999"
+   class="st15"
+   width="7"
+   height="7"
+   id="rect73" />
+			<rect
+   x="387.60001"
+   y="434.39999"
+   class="st15"
+   width="3"
+   height="3"
+   id="rect75" />
+			<rect
+   x="393.60001"
+   y="432.39999"
+   class="st15"
+   width="2"
+   height="2"
+   id="rect77" />
+			<rect
+   x="382.60001"
+   y="432.39999"
+   class="st15"
+   width="2"
+   height="2"
+   id="rect79" />
+			<rect
+   x="385.60001"
+   y="429.39999"
+   class="st15"
+   width="2"
+   height="2"
+   id="rect81" />
+			<rect
+   x="390.60001"
+   y="429.39999"
+   class="st15"
+   width="2"
+   height="2"
+   id="rect83" />
+		</g>
+		<g
+   class="st14"
+   id="g89">
+			<path
+   class="st16"
+   d="m 384.6,438.4 c -1.1,0 -2,0.9 -2,2 0,1.1 0.9,2 2,2 1.1,0 2,-0.9 2,-2 0,-1.1 -0.9,-2 -2,-2 z"
+   id="path87" />
+		</g>
+		<g
+   id="g97">
+			<line
+   class="st17"
+   x1="376"
+   y1="445.70001"
+   x2="376"
+   y2="431.10001"
+   id="line91" />
+			<line
+   class="st18"
+   x1="390.10001"
+   y1="435.10001"
+   x2="390.10001"
+   y2="431.10001"
+   id="line93" />
+			<line
+   class="st17"
+   x1="380"
+   y1="433.10001"
+   x2="372"
+   y2="433.10001"
+   id="line95" />
+		</g>
+		<g
+   id="g103">
+			<path
+   class="st19"
+   d="m 368.9,431.4 c 0.8,0.8 0.8,2 0,2.8 -0.8,0.8 -2,0.8 -2.8,0 -0.8,-0.8 -0.8,-2 0,-2.8"
+   id="path99" />
+			<line
+   class="st17"
+   x1="367.39999"
+   y1="445.70001"
+   x2="367.39999"
+   y2="435"
+   id="line101" />
+		</g>
+	</g>
+<g
+   id="g128"
+   class="st14">
+	<rect
+   id="rect108"
+   height="2"
+   width="2"
+   class="st15"
+   y="425.7"
+   x="117.2" />
+	<rect
+   id="rect110"
+   height="2"
+   width="2"
+   class="st15"
+   y="425.7"
+   x="122.2" />
+	<rect
+   id="rect112"
+   height="2"
+   width="2"
+   class="st15"
+   y="422.7"
+   x="125.2" />
+	<rect
+   id="rect114"
+   height="2"
+   width="2"
+   class="st15"
+   y="422.7"
+   x="114.2" />
+	<rect
+   id="rect116"
+   height="7"
+   width="7"
+   class="st15"
+   y="417.7"
+   x="117.2" />
+	<rect
+   id="rect118"
+   height="3"
+   width="3"
+   class="st15"
+   y="419.7"
+   x="119.2" />
+	<rect
+   id="rect120"
+   height="2"
+   width="2"
+   class="st15"
+   y="417.7"
+   x="125.2" />
+	<rect
+   id="rect122"
+   height="2"
+   width="2"
+   class="st15"
+   y="417.7"
+   x="114.2" />
+	<rect
+   id="rect124"
+   height="2"
+   width="2"
+   class="st15"
+   y="414.7"
+   x="117.2" />
+	<rect
+   id="rect126"
+   height="2"
+   width="2"
+   class="st15"
+   y="414.7"
+   x="122.2" />
+</g>
+<g
+   id="g132"
+   class="st14">
+	<path
+   id="path130"
+   d="M116.2,423.7c-1.1,0-2,0.9-2,2c0,1.1,0.9,2,2,2s2-0.9,2-2C118.2,424.6,117.3,423.7,116.2,423.7L116.2,423.7z"
+   class="st16" />
+</g>
+<g
+   id="g140">
+		<polyline
+   class="st20"
+   points="583,240.5 583,271.7 187.1,271.7 35.7,271.7 35.7,15.7   "
+   id="polyline134" />
+		<g
+   id="g138">
+			<polygon
+   class="st21"
+   points="589.9,242.5 576,242.5 583,230.4 "
+   id="polygon136" />
+		</g>
+	</g>
+<g
+   id="g154">
+		<line
+   class="st20"
+   x1="105.2"
+   y1="331.5"
+   x2="105.2"
+   y2="482.79999"
+   id="line144" />
+		<g
+   id="g148">
+			<polygon
+   class="st21"
+   points="112.2,333.6 98.2,333.6 105.2,321.5 "
+   id="polygon146" />
+		</g>
+		<g
+   id="g152">
+			<polygon
+   class="st21"
+   points="112.2,480.7 98.2,480.7 105.2,492.8 "
+   id="polygon150" />
+		</g>
+	</g>
+<g
+   id="g164">
+		<polyline
+   class="st20"
+   points="124.8,521.9 288.9,521.9 288.9,419.7   "
+   id="polyline158" />
+		<g
+   id="g162">
+			<polygon
+   class="st21"
+   points="281.9,421.7 295.9,421.7 288.9,409.7 "
+   id="polygon160" />
+		</g>
+	</g>
+<polyline
+   id="polyline168"
+   points="360.6,442.5 321.6,442.5 321.6,409.7 "
+   class="st20" />
+<g
+   id="g176">
+		<line
+   class="st20"
+   x1="768.29999"
+   y1="442.5"
+   x2="408.60001"
+   y2="442.5"
+   id="line170" />
+		<g
+   id="g174">
+			<polygon
+   class="st21"
+   points="766.2,449.5 766.2,435.5 778.3,442.5 "
+   id="polygon172" />
+		</g>
+	</g>
+<g
+   id="g186">
+		<polyline
+   class="st22"
+   points="258.5,149.9 258.5,114.2 419.4,114.2   "
+   id="polyline180" />
+		<g
+   id="g184">
+			<polygon
+   class="st21"
+   points="417.4,107.2 417.4,121.2 429.5,114.2 "
+   id="polygon182" />
+		</g>
+	</g>
+<g
+   id="g200">
+		<polyline
+   class="st22"
+   points="640,207.3 678.4,207.3 678.4,417.4 768.3,417.4   "
+   id="polyline190" />
+		<g
+   id="g194">
+			<polygon
+   class="st21"
+   points="642.1,200.3 642.1,214.3 630,207.3 "
+   id="polygon192" />
+		</g>
+		<g
+   id="g198">
+			<polygon
+   class="st21"
+   points="766.2,410.5 766.2,424.4 778.3,417.4 "
+   id="polygon196" />
+		</g>
+	</g>
+<g
+   id="g214">
+		<polyline
+   class="st22"
+   points="931.6,359.1 931.6,276 848.2,276 848.2,125   "
+   id="polyline204" />
+		<g
+   id="g208">
+			<polygon
+   class="st21"
+   points="924.6,357.1 938.5,357.1 931.6,369.2 "
+   id="polygon206" />
+		</g>
+		<g
+   id="g212">
+			<polygon
+   class="st21"
+   points="841.2,127 855.1,127 848.2,114.9 "
+   id="polygon210" />
+		</g>
+	</g>
+<g
+   id="g224">
+		<line
+   class="st22"
+   x1="549.40002"
+   y1="189.89999"
+   x2="295.60001"
+   y2="189.89999"
+   id="line218" />
+		<g
+   id="g222">
+			<polygon
+   class="st21"
+   points="547.4,196.9 547.4,182.9 559.4,189.9 "
+   id="polygon220" />
+		</g>
+	</g>
+<g
+   id="g234">
+		<polyline
+   class="st22"
+   points="630,189.9 666,189.9 666,62.3 815.6,62.3   "
+   id="polyline228" />
+		<g
+   id="g232">
+			<polygon
+   class="st21"
+   points="813.6,55.3 813.6,69.3 825.7,62.3 "
+   id="polygon230" />
+		</g>
+	</g>
+<rect
+   x="47.900002"
+   y="554.20001"
+   class="st2"
+   width="106"
+   height="33.299999"
+   id="rect238" /><text
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"
+   y="564.5863"
+   x="79.445297"
+   id="text244"><tspan
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"
+     x="79.445297"
+     y="564.5863"
+     class="st3 st4 st5"
+     id="tspan240">Fabricant du </tspan><tspan
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"
+     x="57.345299"
+     y="584.5863"
+     class="st3 st4 st5"
+     id="tspan242">dispositif</tspan></text><g
+   id="g250">
+		<rect
+   x="77.099998"
+   y="498"
+   class="st23"
+   width="47.799999"
+   height="47.799999"
+   id="rect246" />
+		<path
+   class="st24"
+   d="m 114.5,513 c -0.3,-0.2 -0.7,-0.2 -1,0 l -8.5,4.2 v -3.4 c 0,-0.6 -0.5,-1 -1,-1 -0.2,0 -0.3,0 -0.4,0.1 l -8.6,4.3 v -7.4 c 0,-0.6 -0.4,-1 -1,-1 h -6 c -0.6,0 -1,0.4 -1,1 v 25 h 28 v -21 c -0.1,-0.3 -0.2,-0.6 -0.5,-0.8 z m -7.6,19.9 h -4 v -7 h 4 z m 6,0 h -4 v -8 c 0,-0.6 -0.4,-1 -1,-1 h -6 c -0.6,0 -1,0.4 -1,1 v 8 h -12 v -22 h 4 v 9.6 l 10,-5 v 5 l 10,-5 z"
+   id="path248" />
+	</g>
+<g
+   id="g257">
+		<rect
+   id="Rectangle-Copy-14"
+   x="805.70001"
+   y="393.70001"
+   class="st25"
+   width="30.799999"
+   height="29.200001" />
+		<g
+   id="icon_x2F_device_x2F_16"
+   transform="translate(685,339)">
+			<path
+   id="Shape_4_"
+   class="st26"
+   d="m 137.1,61.8 c 0.6,0 1,0.4 1,1 0,0.5 -0.4,0.9 -0.8,1 l -0.4,1 h 3.3 c 1.1,0 2,0.9 2,2 v 5 c 0,1.1 -0.9,2 -2,2 h -8 c -1.1,0 -2,-0.9 -2,-2 v -5 c 0,-1.1 0.9,-2 2,-2 h 3.7 l 0.6,-1.4 c -0.1,-0.1 -0.2,-0.3 -0.2,-0.5 v -0.1 c -0.2,-0.6 0.2,-1 0.8,-1 z m 3,4 h -8 c -0.5,0 -0.9,0.4 -1,0.9 v 0.1 5 c 0,0.5 0.4,0.9 0.9,1 h 0.1 8 c 0.5,0 0.9,-0.4 1,-0.9 v -0.1 -5 c 0,-0.5 -0.4,-0.9 -0.9,-1 z m -1.5,5 c 0.3,0 0.5,0.2 0.5,0.5 0,0.3 -0.2,0.5 -0.5,0.5 h -5 c -0.3,0 -0.5,-0.2 -0.5,-0.5 0,-0.3 0.2,-0.5 0.5,-0.5 z m -5,-4 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.9 0.7,-1.5 1.5,-1.5 z m 5,0 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.9 0.7,-1.5 1.5,-1.5 z m -5,1 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.2,-0.5 -0.5,-0.5 z m 5,0 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.2,-0.5 -0.5,-0.5 z" />
+		</g>
+	</g><g
+   id="g262">
+		<rect
+   id="Rectangle-Copy-14_2_"
+   x="851.79999"
+   y="393.70001"
+   class="st25"
+   width="30.799999"
+   height="29.200001" />
+		<g
+   id="icon_x2F_device_x2F_16_1_"
+   transform="translate(685,339)">
+			<path
+   id="Shape_2_"
+   class="st26"
+   d="m 183.2,61.8 c 0.6,0 1,0.4 1,1 0,0.5 -0.4,0.9 -0.8,1 l -0.4,1 h 3.3 c 1.1,0 2,0.9 2,2 v 5 c 0,1.1 -0.9,2 -2,2 h -8 c -1.1,0 -2,-0.9 -2,-2 v -5 c 0,-1.1 0.9,-2 2,-2 h 3.7 l 0.6,-1.4 c -0.1,-0.1 -0.2,-0.3 -0.2,-0.5 v -0.1 c -0.2,-0.6 0.2,-1 0.8,-1 z m 3,4 h -8 c -0.5,0 -0.9,0.4 -1,0.9 v 0.1 5 c 0,0.5 0.4,0.9 0.9,1 h 0.1 8 c 0.5,0 0.9,-0.4 1,-0.9 v -0.1 -5 c 0,-0.5 -0.4,-0.9 -0.9,-1 z m -1.5,5 c 0.3,0 0.5,0.2 0.5,0.5 0,0.3 -0.2,0.5 -0.5,0.5 h -5 c -0.3,0 -0.5,-0.2 -0.5,-0.5 0,-0.3 0.2,-0.5 0.5,-0.5 z m -5,-4 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.9 0.6,-1.5 1.5,-1.5 z m 5,0 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.9 0.6,-1.5 1.5,-1.5 z m -5,1 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.3,-0.5 -0.5,-0.5 z m 5,0 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.3,-0.5 -0.5,-0.5 z" />
+		</g>
+	</g><g
+   id="g267">
+		<rect
+   id="Rectangle-Copy-14_3_"
+   x="897.59998"
+   y="393.70001"
+   class="st25"
+   width="30.799999"
+   height="29.200001" />
+		<g
+   id="icon_x2F_device_x2F_16_2_"
+   transform="translate(685,339)">
+			<path
+   id="Shape_3_"
+   class="st26"
+   d="m 229,61.8 c 0.6,0 1,0.4 1,1 0,0.5 -0.4,0.9 -0.8,1 l -0.4,1 h 3.3 c 1.1,0 2,0.9 2,2 v 5 c 0,1.1 -0.9,2 -2,2 h -8 c -1.1,0 -2,-0.9 -2,-2 v -5 c 0,-1.1 0.9,-2 2,-2 h 3.7 l 0.6,-1.4 c -0.1,-0.1 -0.2,-0.3 -0.2,-0.5 v -0.1 c -0.2,-0.6 0.2,-1 0.8,-1 z m 3,4 h -8 c -0.5,0 -0.9,0.4 -1,0.9 v 0.1 5 c 0,0.5 0.4,0.9 0.9,1 h 0.1 8 c 0.5,0 0.9,-0.4 1,-0.9 v -0.1 -5 c 0,-0.5 -0.4,-0.9 -0.9,-1 z m -1.5,5 c 0.3,0 0.5,0.2 0.5,0.5 0,0.3 -0.2,0.5 -0.5,0.5 h -5 c -0.3,0 -0.5,-0.2 -0.5,-0.5 0,-0.3 0.2,-0.5 0.5,-0.5 z m -5,-4 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.9 0.6,-1.5 1.5,-1.5 z m 5,0 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.9 0.6,-1.5 1.5,-1.5 z m -5,1 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.3,-0.5 -0.5,-0.5 z m 5,0 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.3,-0.5 -0.5,-0.5 z" />
+		</g>
+	</g><g
+   id="g272">
+		<rect
+   id="Rectangle-Copy-14_6_"
+   x="805.70001"
+   y="436.20001"
+   class="st25"
+   width="30.799999"
+   height="29.200001" />
+		<g
+   id="icon_x2F_device_x2F_16_5_"
+   transform="translate(685,339)">
+			<path
+   id="Shape_7_"
+   class="st26"
+   d="m 137.1,104.3 c 0.6,0 1,0.4 1,1 0,0.5 -0.4,0.9 -0.8,1 l -0.4,1 h 3.3 c 1.1,0 2,0.9 2,2 v 5 c 0,1.1 -0.9,2 -2,2 h -8 c -1.1,0 -2,-0.9 -2,-2 v -5 c 0,-1.1 0.9,-2 2,-2 h 3.7 l 0.6,-1.4 c -0.1,-0.1 -0.2,-0.3 -0.2,-0.5 v -0.1 c -0.2,-0.5 0.2,-1 0.8,-1 z m 3,4 h -8 c -0.5,0 -0.9,0.4 -1,0.9 v 0.1 5 c 0,0.5 0.4,0.9 0.9,1 h 0.1 8 c 0.5,0 0.9,-0.4 1,-0.9 v -0.1 -5 c 0,-0.5 -0.4,-0.9 -0.9,-1 z m -1.5,5 c 0.3,0 0.5,0.2 0.5,0.5 0,0.3 -0.2,0.5 -0.5,0.5 h -5 c -0.3,0 -0.5,-0.2 -0.5,-0.5 0,-0.3 0.2,-0.5 0.5,-0.5 z m -5,-4 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.8 0.7,-1.5 1.5,-1.5 z m 5,0 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.8 0.7,-1.5 1.5,-1.5 z m -5,1 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.2,-0.5 -0.5,-0.5 z m 5,0 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.2,-0.5 -0.5,-0.5 z" />
+		</g>
+	</g><g
+   id="g277">
+		<rect
+   id="Rectangle-Copy-14_5_"
+   x="851.79999"
+   y="436.20001"
+   class="st25"
+   width="30.799999"
+   height="29.200001" />
+		<g
+   id="icon_x2F_device_x2F_16_4_"
+   transform="translate(685,339)">
+			<path
+   id="Shape_6_"
+   class="st26"
+   d="m 183.2,104.3 c 0.6,0 1,0.4 1,1 0,0.5 -0.4,0.9 -0.8,1 l -0.4,1 h 3.3 c 1.1,0 2,0.9 2,2 v 5 c 0,1.1 -0.9,2 -2,2 h -8 c -1.1,0 -2,-0.9 -2,-2 v -5 c 0,-1.1 0.9,-2 2,-2 h 3.7 l 0.6,-1.4 c -0.1,-0.1 -0.2,-0.3 -0.2,-0.5 v -0.1 c -0.2,-0.5 0.2,-1 0.8,-1 z m 3,4 h -8 c -0.5,0 -0.9,0.4 -1,0.9 v 0.1 5 c 0,0.5 0.4,0.9 0.9,1 h 0.1 8 c 0.5,0 0.9,-0.4 1,-0.9 v -0.1 -5 c 0,-0.5 -0.4,-0.9 -0.9,-1 z m -1.5,5 c 0.3,0 0.5,0.2 0.5,0.5 0,0.3 -0.2,0.5 -0.5,0.5 h -5 c -0.3,0 -0.5,-0.2 -0.5,-0.5 0,-0.3 0.2,-0.5 0.5,-0.5 z m -5,-4 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.8 0.6,-1.5 1.5,-1.5 z m 5,0 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.8 0.6,-1.5 1.5,-1.5 z m -5,1 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.3,-0.5 -0.5,-0.5 z m 5,0 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.3,-0.5 -0.5,-0.5 z" />
+		</g>
+	</g><g
+   id="g282">
+		<rect
+   id="Rectangle-Copy-14_4_"
+   x="897.59998"
+   y="436.20001"
+   class="st25"
+   width="30.799999"
+   height="29.200001" />
+		<g
+   id="icon_x2F_device_x2F_16_3_"
+   transform="translate(685,339)">
+			<path
+   id="Shape_5_"
+   class="st26"
+   d="m 229,104.3 c 0.6,0 1,0.4 1,1 0,0.5 -0.4,0.9 -0.8,1 l -0.4,1 h 3.3 c 1.1,0 2,0.9 2,2 v 5 c 0,1.1 -0.9,2 -2,2 h -8 c -1.1,0 -2,-0.9 -2,-2 v -5 c 0,-1.1 0.9,-2 2,-2 h 3.7 l 0.6,-1.4 c -0.1,-0.1 -0.2,-0.3 -0.2,-0.5 v -0.1 c -0.2,-0.5 0.2,-1 0.8,-1 z m 3,4 h -8 c -0.5,0 -0.9,0.4 -1,0.9 v 0.1 5 c 0,0.5 0.4,0.9 0.9,1 h 0.1 8 c 0.5,0 0.9,-0.4 1,-0.9 v -0.1 -5 c 0,-0.5 -0.4,-0.9 -0.9,-1 z m -1.5,5 c 0.3,0 0.5,0.2 0.5,0.5 0,0.3 -0.2,0.5 -0.5,0.5 h -5 c -0.3,0 -0.5,-0.2 -0.5,-0.5 0,-0.3 0.2,-0.5 0.5,-0.5 z m -5,-4 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.8 0.6,-1.5 1.5,-1.5 z m 5,0 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.8 0.6,-1.5 1.5,-1.5 z m -5,1 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.3,-0.5 -0.5,-0.5 z m 5,0 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.3,-0.5 -0.5,-0.5 z" />
+		</g>
+	</g><g
+   id="g287">
+		<rect
+   id="Rectangle-Copy-14_8_"
+   x="941.5"
+   y="393.70001"
+   class="st25"
+   width="30.799999"
+   height="29.200001" />
+		<g
+   id="icon_x2F_device_x2F_16_7_"
+   transform="translate(685,339)">
+			<path
+   id="Shape_9_"
+   class="st26"
+   d="m 272.9,61.8 c 0.6,0 1,0.4 1,1 0,0.5 -0.4,0.9 -0.8,1 l -0.4,1 h 3.3 c 1.1,0 2,0.9 2,2 v 5 c 0,1.1 -0.9,2 -2,2 h -8 c -1.1,0 -2,-0.9 -2,-2 v -5 c 0,-1.1 0.9,-2 2,-2 h 3.7 l 0.6,-1.4 c -0.1,-0.1 -0.2,-0.3 -0.2,-0.5 v -0.1 c -0.2,-0.6 0.3,-1 0.8,-1 z m 3,4 h -8 c -0.5,0 -0.9,0.4 -1,0.9 v 0.1 5 c 0,0.5 0.4,0.9 0.9,1 h 0.1 8 c 0.5,0 0.9,-0.4 1,-0.9 v -0.1 -5 c 0,-0.5 -0.4,-0.9 -0.9,-1 z m -1.5,5 c 0.3,0 0.5,0.2 0.5,0.5 0,0.3 -0.2,0.5 -0.5,0.5 h -5 c -0.3,0 -0.5,-0.2 -0.5,-0.5 0,-0.3 0.2,-0.5 0.5,-0.5 z m -5,-4 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.9 0.7,-1.5 1.5,-1.5 z m 5,0 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.9 0.7,-1.5 1.5,-1.5 z m -5,1 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.2,-0.5 -0.5,-0.5 z m 5,0 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.2,-0.5 -0.5,-0.5 z" />
+		</g>
+	</g><g
+   id="g292">
+		<rect
+   id="Rectangle-Copy-14_7_"
+   x="941.5"
+   y="436.20001"
+   class="st25"
+   width="30.799999"
+   height="29.200001" />
+		<g
+   id="icon_x2F_device_x2F_16_6_"
+   transform="translate(685,339)">
+			<path
+   id="Shape_8_"
+   class="st26"
+   d="m 272.9,104.3 c 0.6,0 1,0.4 1,1 0,0.5 -0.4,0.9 -0.8,1 l -0.4,1 h 3.3 c 1.1,0 2,0.9 2,2 v 5 c 0,1.1 -0.9,2 -2,2 h -8 c -1.1,0 -2,-0.9 -2,-2 v -5 c 0,-1.1 0.9,-2 2,-2 h 3.7 l 0.6,-1.4 c -0.1,-0.1 -0.2,-0.3 -0.2,-0.5 v -0.1 c -0.2,-0.5 0.3,-1 0.8,-1 z m 3,4 h -8 c -0.5,0 -0.9,0.4 -1,0.9 v 0.1 5 c 0,0.5 0.4,0.9 0.9,1 h 0.1 8 c 0.5,0 0.9,-0.4 1,-0.9 v -0.1 -5 c 0,-0.5 -0.4,-0.9 -0.9,-1 z m -1.5,5 c 0.3,0 0.5,0.2 0.5,0.5 0,0.3 -0.2,0.5 -0.5,0.5 h -5 c -0.3,0 -0.5,-0.2 -0.5,-0.5 0,-0.3 0.2,-0.5 0.5,-0.5 z m -5,-4 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.8 0.7,-1.5 1.5,-1.5 z m 5,0 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.8 0.7,-1.5 1.5,-1.5 z m -5,1 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.2,-0.5 -0.5,-0.5 z m 5,0 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.2,-0.5 -0.5,-0.5 z" />
+		</g>
+	</g><path
+   id="Rectangle-Copy-17"
+   class="st27"
+   d="m 818.3,369.2 h 140.4 c 22.1,0 40,17.9 40,40 v 43.1 c 0,22.1 -17.9,40 -40,40 H 818.3 c -22.1,0 -40,-17.9 -40,-40 v -43.1 c 0,-22.1 17.9,-40 40,-40 z" /><rect
+   x="810.29999"
+   y="341.29999"
+   class="st2"
+   width="147.7"
+   height="15.6"
+   id="rect295" /><text
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+   y="353.1496"
+   x="768.31348"
+   class="st3 st7 st8"
+   id="text297">Noeuds de périphérie</text>
+<rect
+   id="rect301"
+   height="85.6"
+   width="148.6"
+   class="st11"
+   y="365.5"
+   x="46.2" />
+<rect
+   id="rect303"
+   height="81.4"
+   width="115.4"
+   class="st2"
+   y="15.7"
+   x="53.1" />
+<text
+   y="26.507166"
+   x="52.171913"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.2506px;line-height:1.3;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.0179"
+   id="text313"
+   transform="scale(1.0179012,0.98241362)"><tspan
+     style="stroke-width:1.0179"
+     y="26.507166"
+     x="52.171913"
+     id="tspan639"
+     sodipodi:role="line">1. Génère la clé de </tspan><tspan
+     style="stroke-width:1.0179"
+     y="45.032967"
+     x="52.171913"
+     id="tspan641"
+     sodipodi:role="line">propriété SDO et </tspan><tspan
+     style="stroke-width:1.0179"
+     y="63.558769"
+     x="52.171913"
+     id="tspan643"
+     sodipodi:role="line">l'importe (uniquement </tspan><tspan
+     style="stroke-width:1.0179"
+     y="82.084572"
+     x="52.171913"
+     id="tspan645"
+     sodipodi:role="line">la première fois).</tspan></text>
+<rect
+   id="rect315"
+   height="79.2"
+   width="144.4"
+   class="st2"
+   y="373.5"
+   x="53.1" />
+<text
+   y="383.83539"
+   x="41.138199"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;line-height:1.3;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+   id="text325"><tspan
+     y="383.83539"
+     x="41.138199"
+     id="tspan611"
+     sodipodi:role="line">2. Commande les dispositifs, </tspan><tspan
+     y="402.0354"
+     x="41.138199"
+     id="tspan613"
+     sodipodi:role="line">en fournissant la clé publique </tspan><tspan
+     y="420.23538"
+     x="41.138199"
+     id="tspan615"
+     sodipodi:role="line">propriétaire SDO. Reçoit les </tspan><tspan
+     y="438.43539"
+     x="41.138199"
+     id="tspan617"
+     sodipodi:role="line">coupons de propriété.</tspan></text>
+<rect
+   id="rect327"
+   height="18.3"
+   width="112.5"
+   class="st2"
+   y="501.7"
+   x="150.6" />
+<text
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"
+   id="text329"
+   class="st3 st4 st5"
+   transform="matrix(1 0 0 1 150.6095 512.0771)">4. Expédie les dispositifs.</text>
+<rect
+   id="rect331"
+   height="35.4"
+   width="240"
+   class="st2"
+   y="403.8"
+   x="438.5" />
+<text
+   y="394.1839"
+   x="438.4693"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;line-height:1.3;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+   id="text337"><tspan
+     y="394.1839"
+     x="438.4693"
+     id="tspan647"
+     sodipodi:role="line">5. Place dans la zone, connecte le </tspan><tspan
+     y="412.38391"
+     x="438.4693"
+     id="tspan649"
+     sodipodi:role="line">réseau et l'alimentation, puis met </tspan><tspan
+     y="430.58389"
+     x="438.4693"
+     id="tspan651"
+     sodipodi:role="line">sous tension.</tspan></text>
+<rect
+   id="rect339"
+   height="35.4"
+   width="130.7"
+   class="st2"
+   y="149.4"
+   x="863.1" />
+<text
+   y="159.7205"
+   x="859.11267"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+   id="text345"><tspan
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+     id="tspan341"
+     class="st3 st4 st5"
+     y="159.7205"
+     x="859.11267">6. Contacte le </tspan><tspan
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+     id="tspan343"
+     class="st3 st4 st5"
+     y="179.7205"
+     x="859.11267">serveur rendezvous.</tspan></text>
+<rect
+   id="rect347"
+   height="60.4"
+   width="136.9"
+   class="st2"
+   y="204.8"
+   x="863.1" />
+<text
+   y="215.1472"
+   x="859.11218"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;line-height:1.3;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+   id="text355"><tspan
+     y="215.1472"
+     x="859.11218"
+     id="tspan569"
+     sodipodi:role="line">7. Redirige les noeuds </tspan><tspan
+     y="233.3472"
+     x="859.11218"
+     id="tspan571"
+     sodipodi:role="line">de périphérie vers le </tspan><tspan
+     y="251.5472"
+     x="859.11218"
+     id="tspan573"
+     sodipodi:role="line">concentrateur de </tspan><tspan
+     y="269.74719"
+     x="859.11218"
+     id="tspan575"
+     sodipodi:role="line">gestion IEAM.</tspan></text>
+<rect
+   id="rect357"
+   height="43.1"
+   width="106.7"
+   class="st2"
+   y="209.3"
+   x="694" />
+<text
+   y="223.11288"
+   x="683.18573"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.2218px;line-height:1.3;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.01584"
+   id="text363"
+   transform="scale(1.0158394,0.98440753)"><tspan
+     style="stroke-width:1.01584"
+     y="223.11288"
+     x="683.18573"
+     id="tspan661"
+     sodipodi:role="line">8. Demande la </tspan><tspan
+     style="stroke-width:1.01584"
+     y="241.60123"
+     x="683.18573"
+     id="tspan663"
+     sodipodi:role="line">configuration.</tspan></text>
+<rect
+   id="rect365"
+   height="57.9"
+   width="147.3"
+   class="st2"
+   y="271.7"
+   x="694" />
+<text
+   y="270.10199"
+   x="694.02448"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;line-height:1.3;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+   id="text373"><tspan
+     y="270.10199"
+     x="694.02448"
+     id="tspan671"
+     sodipodi:role="line">9. Installe et enregistre </tspan><tspan
+     y="288.302"
+     x="694.02448"
+     id="tspan673"
+     sodipodi:role="line">l'agent IEAM, déploie </tspan><tspan
+     y="306.50198"
+     x="694.02448"
+     id="tspan675"
+     sodipodi:role="line">les services de </tspan><tspan
+     y="324.702"
+     x="694.02448"
+     id="tspan677"
+     sodipodi:role="line">périphérie.</tspan></text>
+<rect
+   id="rect375"
+   height="40.3"
+   width="80.2"
+   class="st2"
+   y="149"
+   x="107.3" />
+<text
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"
+   id="text381"
+   transform="matrix(1 0 0 1 107.306 159.3489)"><tspan
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"
+     id="tspan377"
+     class="st3 st4 st5"
+     y="0"
+     x="0">3. Importe les </tspan><tspan
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"
+     id="tspan379"
+     class="st3 st4 st5"
+     y="20"
+     x="0">coupons.</tspan></text>
+<rect
+   id="rect383"
+   height="18.1"
+   width="153"
+   class="st2"
+   y="43.6"
+   x="661.9" />
+<text
+   y="39.958698"
+   x="667.85083"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#161616"
+   id="text385"
+   class="st3 st4 st5"><tspan
+     y="39.958698"
+     x="667.85083"
+     id="tspan587"
+     sodipodi:role="line">3c. Enregistre les </tspan><tspan
+     y="57.458698"
+     x="667.85083"
+     id="tspan589"
+     sodipodi:role="line">coupons.</tspan></text>
+<rect
+   id="rect387"
+   height="16.5"
+   width="142.1"
+   class="st2"
+   y="93.9"
+   x="268.7" />
+<text
+   y="86.290497"
+   x="260.70529"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;line-height:1.3;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#f4f4f4"
+   id="text389"
+   class="st6 st4 st5"><tspan
+     y="86.290497"
+     x="260.70529"
+     id="tspan599"
+     sodipodi:role="line">3a. Ajoute les noeuds </tspan><tspan
+     y="104.49049"
+     x="260.70529"
+     id="tspan601"
+     sodipodi:role="line">de périphérie.</tspan></text>
+<rect
+   id="rect391"
+   height="16.9"
+   width="144.4"
+   class="st2"
+   y="170.5"
+   x="355.3" />
+<text
+   y="180.867"
+   x="345.31149"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+   id="text393"
+   class="st6 st4 st5">3b. Importe les coupons.</text>
+<g
+   id="Group-2"
+   transform="translate(21)">
+		<circle
+   id="Oval-Copy-3"
+   class="st12"
+   cx="86.199997"
+   cy="271.10001"
+   r="24" />
+		<g
+   id="icon_x2F_policy-admin"
+   transform="translate(8,8)">
+			<path
+   id="Shape"
+   class="st13"
+   d="m 73.2,266.1 c 2.8,0 5,2.2 5,5 v 6 h -2 v -6 c 0,-1.7 -1.3,-3 -3,-3 h -4 c -1.7,0 -3,1.3 -3,3 v 6 h -2 v -6 c 0,-2.8 2.2,-5 5,-5 z m -2,-12 c 2.8,0 5,2.2 5,5 0,2.8 -2.2,5 -5,5 -2.8,0 -5,-2.2 -5,-5 0,-2.7 2.3,-5 5,-5 z m 18.6,0 1.4,1.4 -7.1,7.1 -3.9,-3.9 1.4,-1.4 2.5,2.5 z m -18.6,2 c -1.7,0 -3,1.3 -3,3 0,1.7 1.3,3 3,3 1.7,0 3,-1.3 3,-3 0,-1.6 -1.3,-3 -3,-3 z" />
+		</g>
+	</g><rect
+   x="59.400002"
+   y="305.70001"
+   class="st2"
+   width="94.5"
+   height="15.5"
+   id="rect399" /><text
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"
+   y="316.0647"
+   x="62.507599"
+   class="st3 st4 st5"
+   id="text401">Administrateur</text>
+<rect
+   id="rect405"
+   height="12.3"
+   width="12.3"
+   class="st11"
+   y="286.3"
+   x="252.4" />
+<g
+   id="g413">
+		<polyline
+   class="st20"
+   points="213.2,190.5 105.2,190.5 105.2,247.1   "
+   id="polyline407" />
+		<g
+   id="g411">
+			<polygon
+   class="st21"
+   points="211.1,197.5 211.1,183.5 223.2,190.5 "
+   id="polygon409" />
+		</g>
+	</g>
+</svg>

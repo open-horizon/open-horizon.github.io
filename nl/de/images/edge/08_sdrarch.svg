@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1204px" height="794px" viewBox="0 0 1204 794" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 29</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-29">
+            <g id="Group-25" transform="translate(0.000000, 153.000000)">
+                <circle id="Oval-Copy-8" fill="#E3F6FF" cx="46.5" cy="32.5" r="32.5"></circle>
+                <text id="Cloud" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="0.159999996" fill="#161616">
+                    <tspan x="27.393" y="83">Cloud</tspan>
+                </text>
+                <g id="Group-11-Copy-4" transform="translate(31.000000, 19.000000)" fill="#0062FF">
+                    <path d="M24.5077,23.0004 L7.4917,23.0004 C3.3457,22.9914 -0.0083,19.6254 -0.000328512204,15.4814 C0.0077,11.8874 2.5647,8.8074 6.0897,8.1304 C6.1387,8.1214 6.1767,8.0834 6.1857,8.0344 C7.1387,3.2944 11.3197,0.0034 15.9937,0.0004 C16.6197,0.0004 17.2527,0.0594 17.8897,0.1814 C21.8847,0.9494 25.0137,4.0554 25.8127,8.0354 C25.8227,8.0844 25.8607,8.1214 25.9097,8.1304 C29.9447,8.9054 32.6127,12.7844 31.8787,16.8344 C31.2327,20.3984 28.1317,22.9924 24.5077,23.0004 Z M7.4957,21.0004 L24.5077,21.0004 C27.1627,20.9944 29.4367,19.0924 29.9107,16.4774 C30.2317,14.7054 29.6827,12.9094 28.3707,11.5864 C27.6054692,10.8147077 26.5973982,10.3344237 25.53604,10.1007159 L25.2697,10.0474 L24.2117,9.8554 C24.1727,9.8479 24.139325,9.8229625 24.1208562,9.789025 L24.1077,9.7524 L23.9127,8.7434 C23.3007,5.5584 20.9317,2.9044 17.7657,2.1984 C16.8217,1.9884 15.8887,1.9424 14.9187,2.0744 C11.5269564,2.53527179 8.87477627,5.22432768 8.12677542,8.55328693 L8.0717,8.8174 L7.8917,9.7524 C7.8842,9.7914 7.8587,9.8242125 7.82405937,9.8424 L7.7867,9.8554 L6.7707,10.0394 C4.3887,10.4704 2.3967,12.3024 2.0567,14.6994 C1.5777,18.0804 4.2007,20.9934 7.4957,21.0004 Z" id="Shape"></path>
+                </g>
+            </g>
+            <g id="Group-26" transform="translate(2.000000, 546.500000)">
+                <text id="Edge-node" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="0.159999996" fill="#161616">
+                    <tspan x="12.261" y="83">Edge-Knoten</tspan>
+                </text>
+                <circle id="Oval-Copy-9" fill="#E3F6FF" cx="45.5" cy="32.5" r="32.5"></circle>
+                <path d="M53,26 L54,26 L54,25 L53,25 L53,26 Z M54.76,23 L52.24,23 C51.556,23 51,23.557 51,24.24 L51,26.76 C51,27.443 51.556,28 52.24,28 L54.76,28 C55.444,28 56,27.443 56,26.76 L56,24.24 C56,23.557 55.444,23 54.76,23 L54.76,23 Z M39.997,39 L39.997,31 L47.997,31 L47.999,39 L39.997,39 Z M47.997,29 L47,29 L47,27.001 L45,27.001 L45,29 L43,29 L43,27.001 L41,27.001 L41,29 L39.997,29 C38.895,29 37.997,29.897 37.997,31 L37.997,32.001 L36,32.001 L36,34.001 L37.997,34.001 L37.997,36.001 L36,36.001 L36,38.001 L37.997,38.001 L37.997,39 C37.997,40.103 38.895,41 39.997,41 L47.997,41 C49.1,41 49.997,40.103 49.997,39 L49.997,31 C49.997,29.897 49.1,29 47.997,29 L47.997,29 Z M50,38 L52,38 L52,36 L50,36 L50,38 Z M50,34 L52,34 L52,32 L50,32 L50,34 Z M45,43.001 L47,43.001 L47,41.001 L45,41.001 L45,43.001 Z M41,43.001 L43,43.001 L43,41.001 L41,41.001 L41,43.001 Z M55,33 C54.448,33 54,33.448 54,34 C54,34.552 54.448,35 55,35 C55.552,35 56,34.552 56,34 C56,33.448 55.552,33 55,33 L55,33 Z M55,37 C54.448,37 54,37.448 54,38 C54,38.552 54.448,39 55,39 C55.552,39 56,38.552 56,38 C56,37.448 55.552,37 55,37 L55,37 Z M37,25 C37.552,25 38,24.552 38,24 C38,23.448 37.552,23 37,23 C36.448,23 36,23.448 36,24 C36,24.552 36.448,25 37,25 L37,25 Z M55,41 C54.448,41 54,41.448 54,42 C54,42.552 54.448,43 55,43 C55.552,43 56,42.552 56,42 C56,41.448 55.552,41 55,41 L55,41 Z M58,44.818 C58,44.918 57.918,45 57.818,45 L34.182,45 C34.082,45 34,44.918 34,44.818 L34,21.182 C34,21.082 34.082,21 34.182,21 L57.818,21 C57.918,21 58,21.082 58,21.182 L58,44.818 Z M57.818,19 L34.182,19 C32.979,19 32,19.979 32,21.182 L32,44.818 C32,46.021 32.979,47 34.182,47 L57.818,47 C59.021,47 60,46.021 60,44.818 L60,21.182 C60,19.979 59.021,19 57.818,19 L57.818,19 Z" id="Fill-1-Copy-2" fill="#0062FF"></path>
+            </g>
+            <g id="Group-23">
+                <circle id="Oval-Copy-2" fill="#E3F6FF" cx="45.5" cy="32.5" r="32.5"></circle>
+                <text id="Web-browser" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="0.159999996" fill="#161616">
+                    <tspan x="3.77100002" y="83">Web-Browser</tspan>
+                </text>
+                <path d="M34,38 L58,38 L58,22 L34,22 L34,38 Z M44,44 L48,44 L48,40 L44,40 L44,44 Z M58,20 L34,20 C32.896,20 32,20.896 32,22 L32,38 C32,39.104 32.896,40 34,40 L42,40 L42,44 L38,44 L38,46 L54,46 L54,44 L50,44 L50,40 L58,40 C59.104,40 60,39.104 60,38 L60,22 C60,20.896 59.104,20 58,20 L58,20 Z" id="Fill-1" fill="#0062FF"></path>
+            </g>
+            <g id="Group-24" transform="translate(630.000000, 15.000000)">
+                <circle id="Oval-Copy-10" fill="#E3F6FF" cx="45.5" cy="32.5" r="32.5"></circle>
+                <text id="User" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="0.159999996" fill="#161616">
+                    <tspan x="31.113" y="83">Benutzer</tspan>
+                </text>
+                <g id="Group-5-Copy-3" transform="translate(36.000000, 18.000000)" fill="#0062FF">
+                    <path d="M10.0002,0 C6.1342,0 3.0002,3.134 3.0002,7 C3.0002,10.866 6.1342,14 10.0002,14 C13.8662,14 17.0002,10.866 17.0002,7 C17.0002,3.134 13.8662,0 10.0002,0 M10.0002,2 C12.7612,2 15.0002,4.239 15.0002,7 C15.0002,9.761 12.7612,12 10.0002,12 C7.2382,12 5.0002,9.761 5.0002,7 C5.0032,4.24 7.2392,2.003 10.0002,2" id="Fill-1"></path>
+                    <path d="M20.0002,28 L18.0002,28 L18.0002,23 C17.9962,20.24 15.7602,18.003 13.0002,18 L7.0002,18 C4.2392,18.003 2.0032,20.24 2.0002,23 L2.0002,28 L0.0002,28 L0.0002,23 C0.0042,19.136 3.1362,16.005 7.0002,16 L13.0002,16 C16.8642,16.005 19.9952,19.136 20.0002,23 L20.0002,28 Z" id="Fill-3"></path>
+                </g>
+            </g>
+            <g id="Group-27" transform="translate(208.000000, 541.500000)">
+                <rect id="Rectangle-Copy-18" fill="#8A3FFC" x="0" y="0" width="209" height="48"></rect>
+                <text id="AI-service" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="0.159999996" fill="#F4F4F4">
+                    <tspan x="39.605" y="27.5">sdr2msghub-Service</tspan>
+                </text>
+            </g>
+            <g id="Group-27-Copy-3" transform="translate(208.000000, 175.000000)">
+                <rect id="Rectangle-Copy-18" fill="#92EEEE" x="0" y="0" width="209" height="48"></rect>
+                <text id="Node.js,-Express,-Gr" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="0.159999996" fill="#161616">
+                    <tspan x="19.277" y="27.5">Node.js, Express, GraphQL</tspan>
+                </text>
+            </g>
+            <g id="Group-27-Copy-5" transform="translate(208.000000, 15.000000)">
+                <rect id="Rectangle-Copy-18" fill="#408BFC" x="0" y="0" width="209" height="66"></rect>
+                <text id="Provides-data-views" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="0.159999996" fill="#F4F4F4">
+                    <tspan x="20.834" y="27">Stellt Datenansichten bereit</tspan>
+                    <tspan x="49.397" y="47">(React, GraphQL)</tspan>
+                </text>
+            </g>
+            <g id="Group-27-Copy-4" transform="translate(208.000000, 277.000000)">
+                <rect id="Rectangle-Copy-18" fill="#92EEEE" x="0" y="0" width="209" height="48"></rect>
+                <text id="Compose-Postgres-dat" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="0.159999996" fill="#161616">
+                    <tspan x="13.292" y="27.5">Postgres-Datenbank erstellen</tspan>
+                </text>
+            </g>
+            <g id="Group-27-Copy" transform="translate(208.000000, 643.500000)">
+                <rect id="Rectangle-Copy-18" fill="#8A3FFC" x="0" y="0" width="209" height="48"></rect>
+                <text id="sdr-service" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="0.159999996" fill="#F4F4F4">
+                    <tspan x="69.523" y="27.5">sdr-Service</tspan>
+                </text>
+            </g>
+            <g id="Group-28" transform="translate(580.000000, 639.500000)">
+                <rect id="Rectangle-Copy-14" fill="#408BFC" x="0" y="0" width="192" height="56"></rect>
+                <text id="Open-Horizon-agent" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="16" font-weight="500" line-spacing="22" fill="#F4F4F4">
+                    <tspan x="22.736" y="32">Open Horizon-Agent</tspan>
+                </text>
+            </g>
+            <g id="Group-28-Copy" transform="translate(532.000000, 170.000000)">
+                <rect id="Rectangle-Copy-14" fill="#408BFC" x="0" y="0" width="288" height="117"></rect>
+                <text id="IBM-functions" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="16" font-weight="500" line-spacing="22" fill="#F4F4F4">
+                    <tspan x="16" y="32">IBM Funktionen</tspan>
+                </text>
+            </g>
+            <g id="Group-27-Copy-2" transform="translate(208.000000, 745.500000)">
+                <rect id="Rectangle-Copy-18" fill="#8A3FFC" x="0" y="0" width="209" height="48"></rect>
+                <text id="sdr-sensor" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="0.159999996" fill="#F4F4F4">
+                    <tspan x="70.884" y="27.5">sdr-Sensor</tspan>
+                </text>
+            </g>
+            <rect id="Rectangle-Copy-66" fill="#009C98" x="572" y="427" width="208" height="56" rx="14"></rect>
+            <rect id="Rectangle-Copy-72" fill="#009C98" x="896" y="170" width="288" height="76" rx="14"></rect>
+            <rect id="Rectangle-Copy-73" fill="#009C98" x="896" y="262" width="288" height="76" rx="14"></rect>
+            <text id="Retrieve-audio-clips" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="0.159999996" fill="#161616">
+                <tspan x="325" y="710.5">Empfängt Audioclips </tspan>
+                <tspan x="325" y="730.5">von Radiosendern </tspan>
+            </text>
+            <text id="Message-triggers-sof" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="0.159999996" fill="#161616">
+                <tspan x="688" y="394">Nachricht löst software-</tspan>
+                <tspan x="688" y="414">definierte Radioaktion aus</tspan>
+            </text>
+            <text id="Use-machine-learning-Copy" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="0.159999996" fill="#161616">
+                <tspan x="325" y="610.5">Verwendet maschinelles Lernen, um die besten Sender </tspan>
+                <tspan x="325" y="630.5">mit Wortbeiträgen zu finden; sendet Audio an die Cloud </tspan>
+            </text>
+            <text id="Stores-only-insights" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="0.159999996" fill="#161616">
+                <tspan x="325" y="244">Speichert nur Einblicke </tspan>
+                <tspan x="325" y="264">(Stimmungen) in der Datenbank</tspan>
+            </text>
+            <text id="Serves-the-UI,-trans" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="0.159999996" fill="#161616">
+                <tspan x="325" y="144">Bedient die UI, sendet </tspan>
+                <tspan x="325" y="164">Daten an den Browser </tspan>
+            </text>
+            <text id="Provide-data-views" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="0.159999996" fill="#161616">
+                <tspan x="436.823" y="34">Stellt Datenansichten bereit</tspan>
+            </text>
+            <text id="Convert-audio-text," font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="0.159999996" fill="#161616">
+                <tspan x="845.307" y="156">Audio in Text konvertieren, Stimmungen analysieren</tspan>
+            </text>
+            <text id="IBM-Event-Streams" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="16" font-weight="500" line-spacing="22" fill="#F4F4F4">
+                <tspan x="604.8" y="459">IBM Event Streams</tspan>
+            </text>
+            <text id="IBM-Watson-Speech-to" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="16" font-weight="500" line-spacing="22" fill="#F4F4F4">
+                <tspan x="994.64" y="202">IBM Watson</tspan>
+                <tspan x="984.856" y="224">Speech to Text</tspan>
+            </text>
+            <text id="IBM-Watson-Natural-L" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="16" font-weight="500" line-spacing="22" fill="#F4F4F4">
+                <tspan x="997.64" y="294">IBM Watson</tspan>
+                <tspan x="920.768" y="316">Natural Language Understanding</tspan>
+            </text>
+            <path id="Path-2-Copy-16" d="M622.876953,41 L636.876953,48 L622.876953,55 L622.876,49 L431,49 L431,55 L417,48 L431,41 L431,47 L622.876,47 L622.876953,41 Z" fill="#BEBEBE" fill-rule="nonzero"></path>
+            <path id="Path-2-Copy-12" d="M313,691.5 L320,705.5 L314,705.5 L314,731.5 L320,731.5 L313,745.5 L306,731.5 L312,731.5 L312,705.5 L306,705.5 L313,691.5 Z" fill="#BEBEBE" fill-rule="nonzero"></path>
+            <path id="Path-2-Copy-17" d="M676,373 L683,387 L677,387 L677,427 L675,427 L675,387 L669,387 L676,373 Z" fill="#BEBEBE" fill-rule="nonzero"></path>
+            <path id="Path-2-Copy-13" d="M313,589.5 L320,603.5 L314,603.5 L314,629.5 L320,629.5 L313,643.5 L306,629.5 L312,629.5 L312,603.5 L306,603.5 L313,589.5 Z" fill="#BEBEBE" fill-rule="nonzero"></path>
+            <path id="Path-2-Copy-22" d="M676,483 L683,497 L677,496.999 L677,569 L417,569 L417,567 L675,566.999 L675,496.999 L669,497 L676,483 Z" fill="#BEBEBE" fill-rule="nonzero"></path>
+            <path id="Path-2-Copy-14" d="M313,223 L320,237 L314,237 L314,277 L312,277 L312,237 L306,237 L313,223 Z" fill="#BEBEBE" fill-rule="nonzero"></path>
+            <path id="Path-2-Copy-15" d="M313,81 L320,95 L314,95 L314,161 L320,161 L313,175 L306,161 L312,161 L312,95 L306,95 L313,81 Z" fill="#BEBEBE" fill-rule="nonzero"></path>
+            <line x1="3.79536424" y1="121.5" x2="1203.20464" y2="121.5" id="Line-12" stroke="#00BAB6" stroke-width="2" stroke-dasharray="7"></line>
+            <line x1="3.79536424" y1="514.5" x2="1203.20464" y2="514.5" id="Line-12-Copy" stroke="#00BAB6" stroke-width="2" stroke-dasharray="7"></line>
+            <g id="Group-27-Copy-6" transform="translate(548.000000, 223.000000)">
+                <rect id="Rectangle-Copy-18" fill="#8A3FFC" x="0" y="0" width="256" height="48"></rect>
+                <text id="Software-defined-rad" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="0.159999996" fill="#F4F4F4">
+                    <tspan x="32.3030001" y="27">Softwaredefinierte Radioaktion</tspan>
+                </text>
+            </g>
+            <g id="Group-27-Copy-7" transform="translate(548.000000, 325.000000)">
+                <rect id="Rectangle-Copy-18" fill="#8A3FFC" x="0" y="0" width="256" height="48"></rect>
+                <text id="Trigger" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="0.159999996" fill="#F4F4F4">
+                    <tspan x="105.656" y="27">Auslöser</tspan>
+                </text>
+            </g>
+            <path id="Path-2-Copy-18" d="M676,271 L683,285 L677,285 L677,325 L675,325 L675,285 L669,285 L676,271 Z" fill="#BEBEBE" fill-rule="nonzero"></path>
+            <path id="Path-2-Copy-19" d="M548,245 L548,247 L513,247 L513,302 L432.5,302 L432.5,308 L418.5,301 L432.5,294 L432.5,300 L511,300 L511,245 L548,245 Z" fill="#BEBEBE" fill-rule="nonzero"></path>
+            <path id="Path-2-Copy-20" d="M882,201 L896,208 L882,215 L882,208.999 L842.925,208.999 L842.925781,236 L818,235.999 L818,242 L804,235 L818,228 L818,233.999 L840.925,233.999 L840.925781,207 L882,206.999 L882,201 Z" fill="#BEBEBE" fill-rule="nonzero"></path>
+            <path id="Path-2-Copy-21" d="M818,265 L804,258 L818,251 L818,257 L843.248047,257 L843.248,299 L882,299 L882,293 L896,300 L882,307 L882,301 L841.248047,301 L841.248,259 L818,259 L818,265 Z" fill="#BEBEBE" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 924 445.8"
+   style="enable-background:new 0 0 924 445.8;"
+   xml:space="preserve"
+   sodipodi:docname="05b_Installing_edge_agent_on_cluster.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"><metadata
+   id="metadata109"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs107" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1366"
+   inkscape:window-height="705"
+   id="namedview105"
+   showgrid="false"
+   inkscape:zoom="1.0587708"
+   inkscape:cx="707.44439"
+   inkscape:cy="192.81784"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style2">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#051B75;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#408BFC;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#F4F4F4;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#E3F6FF;}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#0F62FE;}
+	.st6{fill:#BEBEBE;}
+	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:none;}
+	.st8{fill:#F4F4F4;}
+	.st9{font-family:'IBMPlexSans-Medium';}
+	.st10{font-size:16px;}
+	.st11{fill:#161616;}
+	.st12{font-family:'IBMPlexSans';}
+	.st13{font-size:14px;}
+	.st14{font-size:12px;}
+</style>
+<rect
+   id="Rectangle-Copy-25"
+   x="489"
+   class="st0"
+   width="400"
+   height="155"
+   style="" />
+<rect
+   id="Rectangle-Copy-14"
+   x="338"
+   y="283"
+   class="st1"
+   width="400"
+   height="159"
+   style="" />
+<rect
+   id="Rectangle-Copy-16"
+   x="354"
+   y="360"
+   class="st2"
+   width="368"
+   height="66"
+   style="" />
+<path
+   id="Shape"
+   class="st3"
+   d="M362,305.5c0.8,0,1.5-0.7,1.5-1.5s-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5S361.2,305.5,362,305.5z   M362,303.5c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5c-0.3,0-0.5-0.2-0.5-0.5S361.7,303.5,362,303.5z M366.8,307.9  c0.8,0,1.5-0.7,1.5-1.5s-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5S366,307.9,366.8,307.9z M366.8,305.9c0.3,0,0.5,0.2,0.5,0.5  c0,0.3-0.2,0.5-0.5,0.5s-0.5-0.2-0.5-0.5C366.3,306.1,366.5,305.9,366.8,305.9L366.8,305.9z M356.2,310.1c-0.8,0-1.5,0.7-1.5,1.5  s0.7,1.5,1.5,1.5c0.8,0,1.5-0.7,1.5-1.5S357.1,310.1,356.2,310.1z M356.2,312.1c-0.3,0-0.5-0.2-0.5-0.5c0-0.3,0.2-0.5,0.5-0.5  c0.3,0,0.5,0.2,0.5,0.5C356.7,311.9,356.5,312.1,356.2,312.1z M357.2,307.9c0.8,0,1.5-0.7,1.5-1.5s-0.7-1.5-1.5-1.5  c-0.8,0-1.5,0.7-1.5,1.5C355.7,307.2,356.4,307.9,357.2,307.9L357.2,307.9z M357.2,305.9c0.3,0,0.5,0.2,0.5,0.5  c0,0.3-0.2,0.5-0.5,0.5c-0.3,0-0.5-0.2-0.5-0.5C356.7,306.1,356.9,305.9,357.2,305.9L357.2,305.9z M367.8,310.1  c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5S368.6,310.1,367.8,310.1z M367.8,312.1c-0.3,0-0.5-0.2-0.5-0.5  c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5C368.3,311.9,368,312.1,367.8,312.1z M364.4,314c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5  s1.5-0.7,1.5-1.5S365.3,314,364.4,314L364.4,314z M364.4,316c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5c0.3,0,0.5,0.2,0.5,0.5  c0,0.1-0.1,0.3-0.1,0.4C364.7,315.9,364.6,316,364.4,316z M359.6,314c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5  S360.4,314,359.6,314L359.6,314z M359.6,316c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5c0.3,0,0.5,0.2,0.5,0.5  C360.1,315.8,359.8,316,359.6,316z M365,310c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3s1.3,3,3,3C363.7,313,365,311.7,365,310z M362,312  c-1.1,0-2-0.9-2-2c0-1.1,0.9-2,2-2c1.1,0,2,0.9,2,2c0,0.5-0.2,1-0.6,1.4C363,311.8,362.5,312,362,312z"
+   style="" />
+<circle
+   id="Oval-Copy-3"
+   class="st4"
+   cx="43"
+   cy="24"
+   r="24"
+   style="" />
+<path
+   id="Shape_1_"
+   class="st5"
+   d="M38,27c2.8,0,5,2.2,5,5v6h-2v-6c0-1.7-1.3-3-3-3h-4c-1.7,0-3,1.3-3,3v6h-2v-6c0-2.8,2.2-5,5-5H38  z M36,15c2.8,0,5,2.2,5,5s-2.2,5-5,5s-5-2.2-5-5S33.2,15,36,15z M49,23v2h-2v-2H49z M54,23v2h-2v-2H54z M36,17c-1.7,0-3,1.3-3,3  c0,1.7,1.3,3,3,3s3-1.3,3-3S37.7,17,36,17z M57,20v2h-2v-2H57z M46,20v2h-2v-2H46z M54,15v7h-7v-7H54z M52,17h-3v3h3V17z M57,15v2  h-2v-2H57z M46,15v2h-2v-2H46z M49,12v2h-2v-2H49z M54,12v2h-2v-2H54z"
+   style="" />
+<path
+   id="Line-10"
+   class="st6"
+   d="M688.8,154.5l7,14l-6,0l0.5,191.5l-2,0l-0.5-191.5l-6,0L688.8,154.5z"
+   style="" />
+<path
+   id="Path-6"
+   class="st6"
+   d="M43,82v89h352v98h6l-7,14l-7-14h6v-96H41V82H43z"
+   style="" />
+<path
+   id="Path-6-Copy"
+   class="st6"
+   d="M75,196v45.7l288,0V269h6l-7,14l-7-14h6v-25.3l-288,0V196H75z"
+   style="" />
+<path
+   id="Path-6-Copy-12"
+   class="st6"
+   d="m 121.14638,339 v 50 h 217.85751 v -6 l 15.02466,7 -15.02466,7 v -6 H 119 v -52 z"
+   style="fill:#bebebe;stroke-width:1.03594875"
+   inkscape:connector-curvature="0" />
+<path
+   id="Path-6-Copy-11"
+   class="st6"
+   d="M105,267v47h219v-6l14,7l-14,7v-6H103v-49H105z"
+   style="" />
+<polygon
+   id="Rectangle-Copy-27"
+   class="st4"
+   points="923.7,346 923.7,445.8 744.6,445.8 744.6,346 "
+   style="clip-rule:evenodd;fill:#e3f6ff;fill-rule:evenodd"
+   transform="matrix(0.9322578,0,0,1.1703492,50.440832,-75.94166)" />
+<rect
+   id="Rectangle-Copy-42"
+   x="733"
+   y="383"
+   transform="matrix(0.7071 -0.7071 0.7071 0.7071 -61.1019 642.4869)"
+   class="st4"
+   width="24"
+   height="24"
+   style="" />
+<circle
+   id="Oval-Copy-3_1_"
+   class="st4"
+   cx="417"
+   cy="104"
+   r="24"
+   style="" />
+<path
+   id="Shape_2_"
+   class="st5"
+   d="M412,107c2.8,0,5,2.2,5,5v6h-2v-6c0-1.7-1.3-3-3-3h-4c-1.7,0-3,1.3-3,3v6h-2v-6c0-2.8,2.2-5,5-5  H412z M410,95c2.8,0,5,2.2,5,5s-2.2,5-5,5s-5-2.2-5-5S407.2,95,410,95z M425,92.9c2.1,0,3.9,1.4,4.5,3.4l0.1,0.2l0,0.1l0,0  c1.3,0.5,2.2,1.7,2.3,3.1l0,0.2l0,0.2c0,2.1-1.6,3.7-3.7,3.9l-0.2,0h-6.3c-2.1,0-3.9-1.7-3.9-3.9c0-1.5,0.9-2.8,2.2-3.5l0.2-0.1  l0-0.1c0.5-1.9,2.1-3.4,4.1-3.6l0.2,0L425,92.9z M410,97c-1.7,0-3,1.3-3,3c0,1.7,1.3,3,3,3s3-1.3,3-3S411.7,97,410,97z M425,94.9  c-1.4,0-2.5,1-2.7,2.4l0,0.2l0,0.8l-0.8,0.2c-0.9,0.2-1.5,0.9-1.5,1.8c0,1,0.8,1.8,1.7,1.9l0.1,0h6.3c1,0,1.9-0.8,1.9-1.9  c0-0.8-0.6-1.6-1.3-1.8l-0.1,0l-0.8-0.2l0-0.8C427.6,96,426.4,94.9,425,94.9z"
+   style="" />
+<path
+   id="Line-13"
+   class="st6"
+   d="M88,31l-14-7l14-7v6l41.5,0v80l254.2,0v2H127.5V25H88V31z"
+   style="" />
+<rect
+   x="505"
+   y="20.2"
+   class="st7"
+   width="236.1"
+   height="15.6"
+   id="rect20"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 505.0149 32.0152)"
+   class="st8 st9 st10"
+   id="text22"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">管理ハブ</text>
+
+
+<rect
+   x="374"
+   y="303.2"
+   class="st7"
+   width="236.1"
+   height="15.6"
+   id="rect24"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 373.9993 314.9901)"
+   class="st8 st9 st10"
+   id="text26"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">Kubernetes エッジ・クラスター</text>
+
+
+<rect
+   x="701"
+   y="192.6"
+   class="st7"
+   width="133.1"
+   height="76.7"
+   id="rect28"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 701 202.9873)"
+   id="text36"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st11 st12 st13"
+     id="tspan30"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">6. ポリシーまたはパターンを</tspan><tspan
+     x="0"
+     y="20"
+     class="st11 st12 st13"
+     id="tspan32"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">使用してエッジ・クラスターを</tspan><tspan
+     x="0"
+     y="40"
+     class="st11 st12 st13"
+     id="tspan34"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">登録する</tspan></text>
+
+
+<rect
+   x="354"
+   y="385.6"
+   class="st7"
+   width="368"
+   height="14.8"
+   id="rect38"
+   style="" />
+<text
+   class="st11 st12 st13"
+   id="text40"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#161616"
+   x="478.26529"
+   y="397.96481">エッジ・エージェント</text>
+
+
+<rect
+   x="756.6"
+   y="361.7"
+   class="st7"
+   width="146.1"
+   height="14.8"
+   id="rect42"
+   style="" />
+<text
+   class="st11 st12 st13"
+   id="text44"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#161616"
+   x="756.62708"
+   y="354.02261"><tspan
+     sodipodi:role="line"
+     id="tspan69"
+     x="756.62708"
+     y="354.02261">サポートされる</tspan><tspan
+     sodipodi:role="line"
+     id="tspan71"
+     x="756.62708"
+     y="371.52261">プラットフォーム</tspan></text>
+
+
+<rect
+   x="54"
+   y="147.6"
+   class="st7"
+   width="216.9"
+   height="15.5"
+   id="rect46"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 54 157.992)"
+   class="st11 st12 st13"
+   id="text48"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">1. エッジ・クラスターをインストールする</text>
+
+
+<rect
+   x="86"
+   y="198.6"
+   class="st7"
+   width="120.9"
+   height="43"
+   id="rect50"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 86 209.0014)"
+   id="text56"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st11 st12 st13"
+     id="tspan52"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">2. エッジ・クラスターを</tspan><tspan
+     x="0"
+     y="20"
+     class="st11 st12 st13"
+     id="tspan54"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">準備する</tspan></text>
+
+
+<rect
+   x="118"
+   y="271"
+   class="st7"
+   width="185.2"
+   height="43"
+   id="rect58"
+   style="" />
+<text
+   id="text64"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+   x="110"
+   y="285.31821"><tspan
+     sodipodi:role="line"
+     id="tspan125"
+     x="110"
+     y="285.31821">4. 管理者として kubernetes </tspan><tspan
+     sodipodi:role="line"
+     id="tspan127"
+     x="110"
+     y="302.81821">クラスターにログインする</tspan><tspan
+     sodipodi:role="line"
+     id="tspan129"
+     x="110"
+     y="320.31821" /></text>
+
+
+<rect
+   x="150"
+   y="343.7"
+   class="st7"
+   width="185.2"
+   height="43"
+   id="rect66"
+   style="" />
+<text
+   id="text72"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+   x="126"
+   y="348.01151"><tspan
+     sodipodi:role="line"
+     id="tspan115"
+     x="126"
+     y="348.01151">5. エージェント・インストール・</tspan><tspan
+     sodipodi:role="line"
+     id="tspan117"
+     x="126"
+     y="365.51151">スクリプトを実行し、</tspan><tspan
+     sodipodi:role="line"
+     id="tspan119"
+     x="126"
+     y="383.01151">エージェントをインストールする</tspan></text>
+
+
+<rect
+   x="350.4"
+   y="138.6"
+   class="st7"
+   width="132"
+   height="16.3"
+   id="rect74"
+   style="" />
+<text
+   class="st11 st12 st13"
+   id="text76"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#161616"
+   x="415.8981"
+   y="146.9975"><tspan
+     sodipodi:role="line"
+     id="tspan111"
+     x="415.8981"
+     y="146.9975">クラウド・</tspan><tspan
+     sodipodi:role="line"
+     id="tspan113"
+     x="415.8981"
+     y="164.4975">インストーラー</tspan></text>
+
+
+<rect
+   x="2.9"
+   y="58.6"
+   class="st7"
+   width="80.2"
+   height="16.3"
+   id="rect78"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 4.1999 68.997)"
+   class="st11 st12 st13"
+   id="text80"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">ノード所有者</text>
+
+
+<rect
+   x="505"
+   y="65.6"
+   class="st7"
+   width="261.7"
+   height="16.3"
+   id="rect82"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 505.0031 76.0019)"
+   class="st8 st12 st13"
+   id="text84"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">前提条件: 管理ハブのインストール</text>
+
+
+<rect
+   x="142.4"
+   y="59.6"
+   class="st7"
+   width="225.9"
+   height="35.8"
+   id="rect86"
+   style="" />
+<text
+   id="text92"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP'"
+   x="133.5036"
+   y="53.935699"><tspan
+     x="133.5036"
+     y="53.935699"
+     class="st11 st12 st13"
+     id="tspan88"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616">3. エージェント・インストール tar ファイルおよび</tspan><tspan
+     x="148.5036"
+     y="73.935699"
+     class="st11 st12 st13"
+     id="tspan90"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616">クラスター・ログイン資格情報を共有する</tspan></text>
+
+
+<rect
+   x="764.9"
+   y="385.1"
+   class="st7"
+   width="149.2"
+   height="47.6"
+   id="rect94"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 764.9237 393.9989)"
+   id="text102"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st11 st12 st14"
+     id="tspan96"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">• Kubernetes</tspan><tspan
+     x="0"
+     y="16"
+     class="st11 st12 st14"
+     id="tspan98"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">• 軽量 Kubernetes</tspan><tspan
+     x="0"
+     y="32"
+     class="st11 st12 st14"
+     id="tspan100"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">(例: Microk8s and k3s)</tspan></text>
+
+
+</svg>

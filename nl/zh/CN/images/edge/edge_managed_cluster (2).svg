@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="264px" height="155px" viewBox="0 0 264 155" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>edge_managed_cluster</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="edge_managed_cluster" transform="translate(-1.000000, -3.000000)">
+            <rect id="Rectangle" stroke="#A4A4A4" stroke-width="2.11" x="15.67" y="40" width="234" height="81"></rect>
+            <rect id="Rectangle" stroke="#BB8EFF" stroke-width="2.19" x="24.67" y="85" width="216" height="27"></rect>
+            <rect id="Rectangle" stroke="#6EA6FF" stroke-width="1.55" x="24.67" y="49" width="216" height="27"></rect>
+            <text id="OpenShift®-Container" fill="#000000" font-family="IBMPlexSans, IBM Plex Sans" font-size="12.36" font-weight="normal">
+                <tspan x="17.35366" y="139">OpenShift® Container Platform 4.2 集群</tspan>
+                <tspan x="0.04348" y="155">（在远程操作中心单独托管）</tspan>
+            </text>
+            <text id="Klusterlet" fill="#000000" font-family="IBMPlexSans, IBM Plex Sans" font-size="10.82" font-weight="normal">
+                <tspan x="109.25551" y="67">Klusterlet</tspan>
+            </text>
+            <text id="Additional-OpenShift" fill="#000000" font-family="IBMPlexSans, IBM Plex Sans" font-size="8" font-weight="normal">
+                <tspan x="28.332" y="103">其他 OpenShift® Container Platform 4.2 组件</tspan>
+            </text>
+            <g id="Group" transform="translate(13.240000, 0.720000)" fill="#000000" font-family="IBMPlexSans, IBM Plex Sans" font-size="12" font-weight="normal">
+                <text id="E">
+                    <tspan x="86" y="12">边缘服务器</tspan>
+                </text>
+                <text id="d">
+                    <tspan x="93" y="12"></tspan>
+                </text>
+                <text id="g">
+                    <tspan x="100.1" y="12"></tspan>
+                </text>
+                <text id="e-se">
+                    <tspan x="106.47" y="12"></tspan>
+                </text>
+                <text id="r">
+                    <tspan x="128.58" y="12"></tspan>
+                </text>
+                <text id="v">
+                    <tspan x="133.28" y="12"></tspan>
+                </text>
+                <text id="er">
+                    <tspan x="139.33" y="12"></tspan>
+                </text>
+                <text id="(IBM-Mu">
+                    <tspan x="0.45" y="26.4">（IBM Multicloud Manager 管理的 - 集群）</tspan>
+                </text>
+                <text id="l">
+                    <tspan x="46.71" y="26.4"></tspan>
+                </text>
+                <text id="ticloud-Mana">
+                    <tspan x="50.07" y="26.4"></tspan>
+                </text>
+                <text id="g">
+                    <tspan x="119.76" y="26.28"></tspan>
+                </text>
+                <text id="er-mana">
+                    <tspan x="126.14" y="26.28"></tspan>
+                </text>
+                <text id="g">
+                    <tspan x="170.76" y="26.28"></tspan>
+                </text>
+                <text id="ed">
+                    <tspan x="177.14" y="26.28"></tspan>
+                </text>
+                <text id="-">
+                    <tspan x="192.07" y="26.4"></tspan>
+                </text>
+                <text id="clu">
+                    <tspan x="197" y="26.4"></tspan>
+                </text>
+                <text id="s">
+                    <tspan x="213.5" y="26.4"></tspan>
+                </text>
+                <text id="t">
+                    <tspan x="219.35" y="26.4"></tspan>
+                </text>
+                <text id="er)">
+                    <tspan x="223.68" y="26.4"></tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

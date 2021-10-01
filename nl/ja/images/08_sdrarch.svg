@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 1204 794"
+   style="enable-background:new 0 0 1204 794;"
+   xml:space="preserve"
+   sodipodi:docname="08_sdrarch.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"><metadata
+   id="metadata176"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs174" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1366"
+   inkscape:window-height="705"
+   id="namedview172"
+   showgrid="false"
+   inkscape:zoom="0.84069119"
+   inkscape:cx="361.85371"
+   inkscape:cy="582.53053"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style2">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#E3F6FF;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#0062FF;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#8A3FFC;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#92EEEE;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#408BFC;}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#009C98;}
+	.st6{fill:#BEBEBE;}
+	.st7{fill:none;stroke:#00BAB6;stroke-width:2;stroke-dasharray:7;}
+	.st8{fill-rule:evenodd;clip-rule:evenodd;fill:none;}
+	.st9{fill:#F4F4F4;}
+	.st10{font-family:'IBMPlexSans';}
+	.st11{font-size:14px;}
+	.st12{fill:#161616;}
+	.st13{font-family:'IBMPlexSans-Medium';}
+	.st14{font-size:16px;}
+</style>
+<circle
+   id="Oval-Copy-8"
+   class="st0"
+   cx="46.5"
+   cy="185.5"
+   r="32.5"
+   style="" />
+<path
+   id="Shape"
+   class="st1"
+   d="M55.5,195h-17c-4.1,0-7.5-3.4-7.5-7.5c0-3.6,2.6-6.7,6.1-7.4c0,0,0.1,0,0.1-0.1c1-4.7,5.1-8,9.8-8  c0.6,0,1.3,0.1,1.9,0.2c4,0.8,7.1,3.9,7.9,7.9c0,0,0,0.1,0.1,0.1c4,0.8,6.7,4.7,6,8.7C62.2,192.4,59.1,195,55.5,195z M38.5,193h17  c2.7,0,4.9-1.9,5.4-4.5c0.3-1.8-0.2-3.6-1.5-4.9c-0.8-0.8-1.8-1.3-2.8-1.5l-0.3-0.1l-1.1-0.2c0,0-0.1,0-0.1-0.1l0,0l-0.2-1  c-0.6-3.2-3-5.8-6.1-6.5c-0.9-0.2-1.9-0.3-2.8-0.1c-3.4,0.5-6,3.1-6.8,6.5l-0.1,0.3l-0.2,0.9c0,0,0,0.1-0.1,0.1l0,0l-1,0.2  c-2.4,0.4-4.4,2.3-4.7,4.7C32.6,190.1,35.2,193,38.5,193z"
+   style="" />
+<circle
+   id="Oval-Copy-9"
+   class="st0"
+   cx="47.5"
+   cy="579"
+   r="32.5"
+   style="" />
+<path
+   id="Fill-1-Copy-2"
+   class="st1"
+   d="M55,572.5h1v-1h-1V572.5z M56.8,569.5h-2.5c-0.7,0-1.2,0.6-1.2,1.2v2.5  c0,0.7,0.6,1.2,1.2,1.2h2.5c0.7,0,1.2-0.6,1.2-1.2v-2.5C58,570.1,57.4,569.5,56.8,569.5L56.8,569.5z M42,585.5v-8h8l0,8H42z   M50,575.5h-1v-2h-2v2h-2v-2h-2v2h-1c-1.1,0-2,0.9-2,2v1h-2v2h2v2h-2v2h2v1c0,1.1,0.9,2,2,2h8c1.1,0,2-0.9,2-2v-8  C52,576.4,51.1,575.5,50,575.5L50,575.5z M52,584.5h2v-2h-2V584.5z M52,580.5h2v-2h-2V580.5z M47,589.5h2v-2h-2V589.5z M43,589.5h2  v-2h-2V589.5z M57,579.5c-0.6,0-1,0.4-1,1s0.4,1,1,1s1-0.4,1-1S57.6,579.5,57,579.5L57,579.5z M57,583.5c-0.6,0-1,0.4-1,1s0.4,1,1,1  s1-0.4,1-1S57.6,583.5,57,583.5L57,583.5z M39,571.5c0.6,0,1-0.4,1-1s-0.4-1-1-1s-1,0.4-1,1S38.4,571.5,39,571.5L39,571.5z   M57,587.5c-0.6,0-1,0.4-1,1s0.4,1,1,1s1-0.4,1-1S57.6,587.5,57,587.5L57,587.5z M60,591.3c0,0.1-0.1,0.2-0.2,0.2H36.2  c-0.1,0-0.2-0.1-0.2-0.2v-23.6c0-0.1,0.1-0.2,0.2-0.2h23.6c0.1,0,0.2,0.1,0.2,0.2V591.3z M59.8,565.5H36.2c-1.2,0-2.2,1-2.2,2.2  v23.6c0,1.2,1,2.2,2.2,2.2h23.6c1.2,0,2.2-1,2.2-2.2v-23.6C62,566.5,61,565.5,59.8,565.5L59.8,565.5z"
+   style="" />
+<circle
+   id="Oval-Copy-2"
+   class="st0"
+   cx="45.5"
+   cy="32.5"
+   r="32.5"
+   style="" />
+<path
+   id="Fill-1"
+   class="st1"
+   d="M34,38h24V22H34V38z M44,44h4v-4h-4V44z M58,20H34c-1.1,0-2,0.9-2,2v16c0,1.1,0.9,2,2,2h8v4h-4v2  h16v-2h-4v-4h8c1.1,0,2-0.9,2-2V22C60,20.9,59.1,20,58,20L58,20z"
+   style="" />
+<circle
+   id="Oval-Copy-10"
+   class="st0"
+   cx="675.5"
+   cy="47.5"
+   r="32.5"
+   style="" />
+<path
+   id="Fill-1_1_"
+   class="st1"
+   d="M676,33c-3.9,0-7,3.1-7,7s3.1,7,7,7s7-3.1,7-7S679.9,33,676,33 M676,35c2.8,0,5,2.2,5,5  s-2.2,5-5,5c-2.8,0-5-2.2-5-5C671,37.2,673.2,35,676,35"
+   style="" />
+<path
+   id="Fill-3"
+   class="st1"
+   d="M686,61h-2v-5c0-2.8-2.2-5-5-5h-6c-2.8,0-5,2.2-5,5v5h-2v-5c0-3.9,3.1-7,7-7h6c3.9,0,7,3.1,7,7V61z  "
+   style="" />
+<rect
+   id="Rectangle-Copy-18"
+   x="208"
+   y="541.5"
+   class="st2"
+   width="209"
+   height="48"
+   style="" />
+<rect
+   id="Rectangle-Copy-18_1_"
+   x="208"
+   y="175"
+   class="st3"
+   width="209"
+   height="48"
+   style="" />
+<rect
+   id="Rectangle-Copy-18_2_"
+   x="208"
+   y="15"
+   class="st4"
+   width="209"
+   height="66"
+   style="" />
+<rect
+   id="Rectangle-Copy-18_3_"
+   x="208"
+   y="277"
+   class="st3"
+   width="209"
+   height="48"
+   style="" />
+<rect
+   id="Rectangle-Copy-18_4_"
+   x="208"
+   y="643.5"
+   class="st2"
+   width="209"
+   height="48"
+   style="" />
+<rect
+   id="Rectangle-Copy-14"
+   x="580"
+   y="639.5"
+   class="st4"
+   width="192"
+   height="56"
+   style="" />
+<rect
+   id="Rectangle-Copy-14_1_"
+   x="532"
+   y="170"
+   class="st4"
+   width="288"
+   height="117"
+   style="" />
+<rect
+   id="Rectangle-Copy-18_5_"
+   x="208"
+   y="745.5"
+   class="st2"
+   width="209"
+   height="48"
+   style="" />
+<path
+   id="Rectangle-Copy-66"
+   class="st5"
+   d="M586,427h180c7.7,0,14,6.3,14,14v28c0,7.7-6.3,14-14,14H586c-7.7,0-14-6.3-14-14v-28  C572,433.3,578.3,427,586,427z"
+   style="" />
+<path
+   id="Rectangle-Copy-72"
+   class="st5"
+   d="M910,170h260c7.7,0,14,6.3,14,14v48c0,7.7-6.3,14-14,14H910c-7.7,0-14-6.3-14-14v-48  C896,176.3,902.3,170,910,170z"
+   style="" />
+<path
+   id="Rectangle-Copy-73"
+   class="st5"
+   d="M910,262h260c7.7,0,14,6.3,14,14v48c0,7.7-6.3,14-14,14H910c-7.7,0-14-6.3-14-14v-48  C896,268.3,902.3,262,910,262z"
+   style="" />
+<path
+   id="Path-2-Copy-16"
+   class="st6"
+   d="M622.9,41l14,7l-14,7l0-6H431v6l-14-7l14-7v6h191.9L622.9,41z"
+   style="" />
+<path
+   id="Path-2-Copy-12"
+   class="st6"
+   d="M313,691.5l7,14h-6v26h6l-7,14l-7-14h6v-26h-6L313,691.5z"
+   style="" />
+<path
+   id="Path-2-Copy-17"
+   class="st6"
+   d="M676,373l7,14h-6v40h-2v-40h-6L676,373z"
+   style="" />
+<path
+   id="Path-2-Copy-13"
+   class="st6"
+   d="M313,589.5l7,14h-6v26h6l-7,14l-7-14h6v-26h-6L313,589.5z"
+   style="" />
+<path
+   id="Path-2-Copy-22"
+   class="st6"
+   d="M676,483l7,14l-6,0v72H417v-2l258,0v-70l-6,0L676,483z"
+   style="" />
+<path
+   id="Path-2-Copy-14"
+   class="st6"
+   d="M313,223l7,14h-6v40h-2v-40h-6L313,223z"
+   style="" />
+<path
+   id="Path-2-Copy-15"
+   class="st6"
+   d="M313,81l7,14h-6v66h6l-7,14l-7-14h6V95h-6L313,81z"
+   style="" />
+<line
+   id="Line-12"
+   class="st7"
+   x1="3.8"
+   y1="121.5"
+   x2="1203.2"
+   y2="121.5"
+   style="" />
+<line
+   id="Line-12-Copy"
+   class="st7"
+   x1="3.8"
+   y1="514.5"
+   x2="1203.2"
+   y2="514.5"
+   style="" />
+<rect
+   id="Rectangle-Copy-18_6_"
+   x="548"
+   y="223"
+   class="st2"
+   width="256"
+   height="48"
+   style="" />
+<rect
+   id="Rectangle-Copy-18_7_"
+   x="548"
+   y="325"
+   class="st2"
+   width="256"
+   height="48"
+   style="" />
+<path
+   id="Path-2-Copy-18"
+   class="st6"
+   d="M676,271l7,14h-6v40h-2v-40h-6L676,271z"
+   style="" />
+<path
+   id="Path-2-Copy-19"
+   class="st6"
+   d="M548,245v2h-35v55h-80.5v6l-14-7l14-7v6H511v-55H548z"
+   style="" />
+<path
+   id="Path-2-Copy-20"
+   class="st6"
+   d="M882,201l14,7l-14,7v-6h-39.1l0,27l-24.9,0v6l-14-7l14-7v6h22.9l0-27l41.1,0V201z"
+   style="" />
+<path
+   id="Path-2-Copy-21"
+   class="st6"
+   d="M818,265l-14-7l14-7v6h25.2v42H882v-6l14,7l-14,7v-6h-40.8v-42H818V265z"
+   style="" />
+<rect
+   x="207.9"
+   y="558.6"
+   class="st8"
+   width="209"
+   height="17.2"
+   id="rect39"
+   style="" />
+<text
+   class="st9 st10 st11"
+   id="text41"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#f4f4f4"
+   x="243.55859"
+   y="569.00098">sdr2msghub サービス</text>
+
+
+<rect
+   x="207.9"
+   y="31.6"
+   class="st8"
+   width="209"
+   height="38.4"
+   id="rect43"
+   style="" />
+<text
+   id="text49"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
+   x="312.6225"
+   y="41.979401"><tspan
+     sodipodi:role="line"
+     id="tspan186"
+     x="312.6225"
+     y="41.979401">データ・ビューを提供する</tspan><tspan
+     sodipodi:role="line"
+     id="tspan188"
+     x="312.6225"
+     y="59.479401">(React、GraphQL)</tspan></text>
+
+
+<rect
+   x="548"
+   y="341.6"
+   class="st8"
+   width="256"
+   height="17.2"
+   id="rect51"
+   style="" />
+<text
+   class="st9 st10 st11"
+   id="text53"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#f4f4f4"
+   x="647.41107"
+   y="353.98349">トリガー</text>
+
+
+<rect
+   x="547.8"
+   y="239.6"
+   class="st8"
+   width="256"
+   height="17.2"
+   id="rect55"
+   style="" />
+<text
+   class="st9 st10 st11"
+   id="text57"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#f4f4f4"
+   x="582.27692"
+   y="251.99541">ソフトウェア無線アクション</text>
+
+
+<rect
+   x="207.9"
+   y="660.6"
+   class="st8"
+   width="209"
+   height="17.2"
+   id="rect59"
+   style="" />
+<text
+   class="st9 st10 st11"
+   id="text61"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#f4f4f4"
+   x="271.5463"
+   y="671.00427">sdr サービス</text>
+
+
+<rect
+   x="207.9"
+   y="762.6"
+   class="st8"
+   width="209"
+   height="17.2"
+   id="rect63"
+   style="" />
+<text
+   class="st9 st10 st11"
+   id="text65"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#f4f4f4"
+   x="272.8764"
+   y="774.99371">sdr センサー</text>
+
+
+<rect
+   x="325"
+   y="700.1"
+   class="st8"
+   width="145.8"
+   height="37.4"
+   id="rect67"
+   style="" />
+<text
+   id="text73"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP'"
+   x="324.99951"
+   y="712.49872"><tspan
+     x="324.99951"
+     y="712.49872"
+     class="st12 st10 st11"
+     id="tspan69"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616">無線局からオーディオ・</tspan><tspan
+     x="324.99951"
+     y="732.49872"
+     class="st12 st10 st11"
+     id="tspan71"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616">クリップを取得する</tspan></text>
+
+
+<rect
+   x="325"
+   y="600.1"
+   class="st8"
+   width="251.4"
+   height="37.4"
+   id="rect75"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 325 610.4939)"
+   id="text81"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st12 st10 st11"
+     id="tspan77"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">機械学習を使用して最良トーク局を</tspan><tspan
+     x="0"
+     y="20"
+     class="st12 st10 st11"
+     id="tspan79"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">選択し、音声をクラウドに送信する</tspan></text>
+
+
+<rect
+   x="915.3"
+   y="145.6"
+   class="st8"
+   width="288"
+   height="15"
+   id="rect83"
+   style="" />
+<text
+   class="st12 st10 st11"
+   id="text85"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616"
+   x="903.30701"
+   y="156.0011">音声をテキストに変換し、センチメントを分析する</text>
+
+
+<rect
+   x="325"
+   y="133.6"
+   class="st8"
+   width="178.3"
+   height="39.6"
+   id="rect87"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 325.0011 144.001)"
+   id="text93"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st12 st10 st11"
+     id="tspan89"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">UI に作用してデータを</tspan><tspan
+     x="0"
+     y="20"
+     class="st12 st10 st11"
+     id="tspan91"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">ブラウザーに転送する</tspan></text>
+
+
+<rect
+   x="432.2"
+   y="23.6"
+   class="st8"
+   width="189.3"
+   height="17"
+   id="rect95"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 466.5919 33.9992)"
+   class="st12 st10 st11"
+   id="text97"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">データ・ビューの提供</text>
+
+
+<rect
+   x="643.4"
+   y="87.6"
+   class="st8"
+   width="65"
+   height="17"
+   id="rect99"
+   style="" />
+<text
+   class="st12 st10 st11"
+   id="text101"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616"
+   x="647.11243"
+   y="97.993698">ユーザー</text>
+
+
+<rect
+   x="208"
+   y="294.2"
+   class="st8"
+   width="209"
+   height="16.5"
+   id="rect103"
+   style="" />
+<text
+   class="st12 st10 st11"
+   id="text105"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#161616"
+   x="313.1507"
+   y="298.58749"><tspan
+     sodipodi:role="line"
+     id="tspan178"
+     x="313.1507"
+     y="298.58749">Postgres データベースを</tspan><tspan
+     sodipodi:role="line"
+     id="tspan180"
+     x="313.1507"
+     y="316.08749">構成する</tspan></text>
+
+
+<rect
+   x="208"
+   y="192.2"
+   class="st8"
+   width="209"
+   height="16.5"
+   id="rect107"
+   style="" />
+<text
+   class="st12 st10 st11"
+   id="text109"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616"
+   x="223.11501"
+   y="202.5174">Node.js、Express、GraphQL</text>
+
+
+<rect
+   x="10.5"
+   y="225.7"
+   class="st8"
+   width="70.9"
+   height="16.5"
+   id="rect111"
+   style="" />
+<text
+   class="st12 st10 st11"
+   id="text113"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616"
+   x="17.379999"
+   y="236.0175">クラウド</text>
+
+
+<rect
+   x="12.1"
+   y="619"
+   class="st8"
+   width="70.9"
+   height="16.5"
+   id="rect115"
+   style="" />
+<text
+   class="st12 st10 st11"
+   id="text117"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616"
+   x="-2.2465"
+   y="629.35388">エッジ・ノード</text>
+
+
+<rect
+   x="1.9"
+   y="72.6"
+   class="st8"
+   width="88.1"
+   height="16.5"
+   id="rect119"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 3.5789 83)"
+   class="st12 st10 st11"
+   id="text121"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">Web ブラウザー</text>
+
+
+<rect
+   x="325"
+   y="233.6"
+   class="st8"
+   width="178.3"
+   height="39.6"
+   id="rect123"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 325.0011 243.9987)"
+   id="text129"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st12 st10 st11"
+     id="tspan125"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">洞察 (センチメント) のみを</tspan><tspan
+     x="0"
+     y="20"
+     class="st12 st10 st11"
+     id="tspan127"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">データベースに保管する</tspan></text>
+
+
+<rect
+   x="688"
+   y="383.7"
+   class="st8"
+   width="194.8"
+   height="39.6"
+   id="rect131"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 688.0004 394.0139)"
+   id="text137"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st12 st10 st11"
+     id="tspan133"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">メッセージがソフトウェア</tspan><tspan
+     x="0"
+     y="20"
+     class="st12 st10 st11"
+     id="tspan135"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">無線アクションをトリガーする</tspan></text>
+
+
+<rect
+   x="548"
+   y="190.1"
+   class="st8"
+   width="158.1"
+   height="15.6"
+   id="rect139"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 547.9996 201.9881)"
+   class="st9 st13 st14"
+   id="text141"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">IBM 機能</text>
+
+
+<rect
+   x="571.1"
+   y="447.2"
+   class="st8"
+   width="207.9"
+   height="15.6"
+   id="rect143"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 604.6774 458.9965)"
+   class="st9 st13 st14"
+   id="text145"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">IBM Event Streams</text>
+
+
+<rect
+   x="580"
+   y="659.7"
+   class="st8"
+   width="192"
+   height="15.6"
+   id="rect147"
+   style="" />
+<text
+   class="st9 st13 st14"
+   id="text149"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#f4f4f4"
+   x="675.55298"
+   y="663.55359"><tspan
+     sodipodi:role="line"
+     id="tspan182"
+     x="677.34985"
+     y="663.55359">Open Horizon </tspan><tspan
+     sodipodi:role="line"
+     id="tspan184"
+     x="675.55298"
+     y="683.55359">エージェント</tspan></text>
+
+
+<rect
+   x="897"
+   y="282.2"
+   class="st8"
+   width="288"
+   height="41"
+   id="rect151"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 996.1816 293.9906)"
+   id="text157"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st9 st13 st14"
+     id="tspan153"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">IBM Watson</tspan><tspan
+     x="-75.6"
+     y="22"
+     class="st9 st13 st14"
+     id="tspan155"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">Natural Language Understanding</tspan></text>
+
+
+<rect
+   x="896"
+   y="190.2"
+   class="st8"
+   width="288"
+   height="41"
+   id="rect159"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 995.1767 202.0145)"
+   id="text165"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st9 st13 st14"
+     id="tspan161"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">IBM Watson</tspan><tspan
+     x="-9.7"
+     y="22"
+     class="st9 st13 st14"
+     id="tspan163"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">Speech to Text</tspan></text>
+
+
+<rect
+   x="27.3"
+   y="343"
+   class="st8"
+   width="99.4"
+   height="15.6"
+   id="rect167"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 27.3008 354.8401)"
+   class="st12 st13 st14"
+   id="text169"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">エッジ・ノード</text>
+
+
+</svg>

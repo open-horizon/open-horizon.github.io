@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1057.8 682.8" style="enable-background:new 0 0 1057.8 682.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#051B75;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:none;}
+	.st3{fill:#161616;}
+	.st4{font-family:'IBMPlexSans';}
+	.st5{font-size:14px;}
+	.st6{enable-background:new    ;}
+	.st7{fill:#F4F4F4;}
+	.st8{font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H';}
+	.st9{font-size:16px;}
+	.st10{font-family:'IBMPlexSans-Medium';}
+	.st11{fill:#009C98;}
+	.st12{fill:#BEBEBE;}
+	.st13{fill:#E3F6FF;}
+	.st14{fill:#0F62FE;}
+	.st15{display:none;}
+	.st16{display:inline;fill:#0F62FE;}
+	.st17{fill:none;stroke:#0F62FE;stroke-width:2;stroke-miterlimit:10;}
+	.st18{display:none;fill:none;stroke:#0F62FE;stroke-width:2;stroke-miterlimit:10;}
+	.st19{fill:none;stroke:#BEBEBE;stroke-width:2;}
+	.st20{fill:none;stroke:#BEBEBE;stroke-width:2;stroke-dasharray:7,7;}
+	.st21{fill:#408BFC;}
+	.st22{fill:none;stroke:#00BAB6;stroke-width:2;stroke-dasharray:7;}
+	.st23{font-size:12px;}
+	.st24{fill:none;stroke:#BEBEBE;stroke-width:2;stroke-dasharray:7;}
+</style>
+<rect id="Rectangle-Copy-12" x="310.9" y="31.8" class="st0" width="363.3" height="231.6"/>
+<g>
+	<rect id="Rectangle-Copy-16_2_" x="499.7" y="85.5" class="st1" width="70.5" height="81"/>
+	<rect x="499.8" y="118.9" class="st2" width="70.4" height="15.6"/>
+	<text transform="matrix(1 0 0 1 503.0638 129.2443)" class="st3 st4 st5">Exchange</text>
+</g>
+<g>
+	<rect id="Rectangle-Copy-16_4_" x="588.4" y="165.5" class="st1" width="70.5" height="81"/>
+	<rect x="588.3" y="189.9" class="st2" width="70.6" height="33.5"/>
+</g>
+<rect x="328" y="51.9" class="st2" width="236.1" height="15.6"/>
+<text transform="matrix(1 0 0 1 327.9875 63.7652)" class="st6"><tspan x="0" y="0" class="st7 st8 st9">관리</tspan><tspan x="32" y="0" class="st7 st10 st9"> </tspan><tspan x="35.8" y="0" class="st7 st8 st9">허브</tspan></text>
+<g>
+	<rect id="Rectangle-Copy-14_1_" x="854.6" y="31.8" class="st11" width="174" height="99.3"/>
+	<rect x="870.6" y="51.9" class="st2" width="150.2" height="59.4"/>
+</g>
+<g>
+	<rect id="Rectangle-Copy-16_3_" x="260.6" y="333.6" class="st12" width="146.7" height="81"/>
+	<rect x="276.6" y="352.2" class="st2" width="112.9" height="29.7"/>
+	<text transform="matrix(1 0 0 1 276.5836 364.0098)" class="st1 st8 st9">하역장</text>
+</g>
+<g>
+	<rect x="354.1" y="492.2" class="st2" width="118.7" height="15.5"/>
+	<text transform="matrix(1 0 0 1 376.7968 502.5497)" class="st6"><tspan x="0" y="0" class="st3 st8 st5">노드</tspan><tspan x="28" y="0" class="st3 st4 st5"> </tspan><tspan x="31.3" y="0" class="st3 st8 st5">기술자</tspan></text>
+	<g id="Group-2_3_" transform="translate(21.000000, 0.000000)">
+		<circle id="Oval-Copy-3_3_" class="st13" cx="392.5" cy="457.5" r="24"/>
+		<path class="st14" d="M387.5,460.5c2.8,0,5,2.2,5,5v6h-2v-6c0-1.7-1.3-3-3-3h-4c-1.7,0-3,1.3-3,3v6h-2v-6c0-2.8,2.2-5,5-5H387.5z"
+			/>
+		<g>
+			<g>
+				<path class="st14" d="M385.5,448.5c-2.8,0-5,2.2-5,5s2.2,5,5,5s5-2.2,5-5S388.3,448.5,385.5,448.5z M385.5,456.5
+					c-1.7,0-3-1.3-3-3s1.3-3,3-3s3,1.3,3,3S387.1,456.5,385.5,456.5z"/>
+			</g>
+		</g>
+		<g class="st15">
+			<rect x="414.5" y="456.5" class="st16" width="2" height="2"/>
+			<rect x="419.5" y="456.5" class="st16" width="2" height="2"/>
+			<rect x="422.5" y="453.5" class="st16" width="2" height="2"/>
+			<rect x="411.5" y="453.5" class="st16" width="2" height="2"/>
+			<rect x="414.5" y="448.5" class="st16" width="7" height="7"/>
+			<rect x="416.5" y="450.5" class="st16" width="3" height="3"/>
+			<rect x="422.5" y="448.5" class="st16" width="2" height="2"/>
+			<rect x="411.5" y="448.5" class="st16" width="2" height="2"/>
+			<rect x="414.5" y="445.5" class="st16" width="2" height="2"/>
+			<rect x="419.5" y="445.5" class="st16" width="2" height="2"/>
+		</g>
+		<g class="st15">
+			<path class="st16" d="M413.5,454.5c-1.1,0-2,0.9-2,2s0.9,2,2,2s2-0.9,2-2S414.6,454.5,413.5,454.5L413.5,454.5z"/>
+		</g>
+		<g>
+			<line class="st17" x1="404.9" y1="461.8" x2="404.9" y2="447.2"/>
+			<line class="st18" x1="419" y1="451.2" x2="419" y2="447.2"/>
+			<line class="st17" x1="408.9" y1="449.2" x2="400.9" y2="449.2"/>
+		</g>
+		<g>
+			<path class="st17" d="M397.8,447.5c0.8,0.8,0.8,2,0,2.8s-2,0.8-2.8,0s-0.8-2,0-2.8"/>
+			<line class="st17" x1="396.3" y1="461.8" x2="396.3" y2="451.1"/>
+		</g>
+	</g>
+</g>
+<g class="st15">
+	<rect x="146.1" y="441.8" class="st16" width="2" height="2"/>
+	<rect x="151.1" y="441.8" class="st16" width="2" height="2"/>
+	<rect x="154.1" y="438.8" class="st16" width="2" height="2"/>
+	<rect x="143.1" y="438.8" class="st16" width="2" height="2"/>
+	<rect x="146.1" y="433.8" class="st16" width="7" height="7"/>
+	<rect x="148.1" y="435.8" class="st16" width="3" height="3"/>
+	<rect x="154.1" y="433.8" class="st16" width="2" height="2"/>
+	<rect x="143.1" y="433.8" class="st16" width="2" height="2"/>
+	<rect x="146.1" y="430.8" class="st16" width="2" height="2"/>
+	<rect x="151.1" y="430.8" class="st16" width="2" height="2"/>
+</g>
+<g class="st15">
+	<path class="st16" d="M145.1,439.8c-1.1,0-2,0.9-2,2s0.9,2,2,2c1.1,0,2-0.9,2-2S146.2,439.8,145.1,439.8L145.1,439.8z"/>
+</g>
+<g>
+	<g>
+		<polyline class="st19" points="622.4,256.6 622.4,300.5 89.8,300.5 89.8,283.3 		"/>
+		<g>
+			<polygon class="st12" points="615.4,258.6 622.4,246.5 629.3,258.6 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<polyline class="st19" points="77.8,504 77.8,344.8 61.4,344.8 61.4,293.4 		"/>
+		<g>
+			<polygon class="st12" points="84.8,502 77.8,514.1 70.8,502 			"/>
+		</g>
+		<g>
+			<polygon class="st12" points="68.3,295.4 61.4,283.3 54.4,295.4 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<polyline class="st19" points="101.6,538 317.8,538 317.8,424.7 		"/>
+		<g>
+			<polygon class="st12" points="324.8,426.7 317.8,414.6 310.8,426.7 			"/>
+		</g>
+	</g>
+</g>
+<polyline class="st19" points="380.4,458.6 350.5,458.6 350.5,414.6 "/>
+<g>
+	<g>
+		<line class="st19" x1="797.2" y1="458.6" x2="445.1" y2="458.6"/>
+		<g>
+			<polygon class="st12" points="795.1,451.6 807.2,458.6 795.1,465.6 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st20" x1="280.2" y1="151.7" x2="489.6" y2="151.7"/>
+		<g>
+			<polygon class="st12" points="487.6,158.7 499.7,151.7 487.6,144.7 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<polyline class="st20" points="668.9,223.4 707.3,223.4 707.3,433.5 797.2,433.5 		"/>
+		<g>
+			<polygon class="st12" points="671,230.4 658.9,223.4 671,216.4 			"/>
+		</g>
+		<g>
+			<polygon class="st12" points="795.1,440.5 807.2,433.5 795.1,426.6 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<polyline class="st20" points="960.5,375.2 960.5,292.1 877.1,292.1 877.1,141.1 		"/>
+		<g>
+			<polygon class="st12" points="967.4,373.2 960.5,385.3 953.5,373.2 			"/>
+		</g>
+		<g>
+			<polygon class="st12" points="884,143.1 877.1,131 870.1,143.1 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st20" x1="578.3" y1="206" x2="280.2" y2="206"/>
+		<g>
+			<polygon class="st12" points="576.3,199 588.3,206 576.3,213 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<polyline class="st20" points="658.9,206 694.9,206 694.9,78.4 844.5,78.4 		"/>
+		<g>
+			<polygon class="st12" points="842.5,85.4 854.6,78.4 842.5,71.4 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<rect x="53.9" y="514.1" class="st13" width="47.8" height="47.8"/>
+		<path class="st14" d="M91.3,529.1c-0.3-0.2-0.7-0.2-1,0l-8.5,4.2v-3.4c0-0.6-0.5-1-1-1c-0.2,0-0.3,0-0.4,0.1l-8.5,4.3v-7.4
+			c0-0.6-0.4-1-1-1h-6c-0.6,0-1,0.4-1,1v25h28v-21C91.8,529.6,91.6,529.3,91.3,529.1z M83.8,549h-4v-7h4V549z M89.8,549h-4v-8
+			c0-0.6-0.4-1-1-1h-6c-0.6,0-1,0.4-1,1v8h-12v-22h4v9.6l10-5v5l10-5V549z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<rect id="Rectangle-Copy-14" x="834.6" y="409.8" class="st21" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_4_" class="st7" d="M166,77.9c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5c0,1.1-0.9,2-2,2
+				h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5v-0.1C165,78.3,165.4,77.9,166,77.9z M169,81.9h-8
+				c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8c0.5,0,0.9-0.4,1-0.9v-0.1v-5c0-0.5-0.4-0.9-0.9-1H169z M167.5,86.9
+				c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5H167.5z M162.5,82.9c0.8,0,1.5,0.7,1.5,1.5
+				s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5C161,83.5,161.7,82.9,162.5,82.9z M167.5,82.9c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5
+				s-1.5-0.7-1.5-1.5C166,83.5,166.7,82.9,167.5,82.9z M162.5,83.9c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5
+				S162.8,83.9,162.5,83.9z M167.5,83.9c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S167.8,83.9,167.5,83.9z"/>
+		</g>
+	</g>
+	<g>
+		<rect id="Rectangle-Copy-14_2_" x="880.7" y="409.8" class="st21" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16_1_" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_2_" class="st7" d="M212.1,77.9c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5
+				c0,1.1-0.9,2-2,2h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5v-0.1
+				C211.1,78.3,211.5,77.9,212.1,77.9z M215.1,81.9h-8c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8c0.5,0,0.9-0.4,1-0.9
+				v-0.1v-5c0-0.5-0.4-0.9-0.9-1H215.1z M213.6,86.9c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5c-0.3,0-0.5-0.2-0.5-0.5
+				s0.2-0.5,0.5-0.5H213.6z M208.6,82.9c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5C207.1,83.5,207.7,82.9,208.6,82.9
+				z M213.6,82.9c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5C212.1,83.5,212.7,82.9,213.6,82.9z M208.6,83.9
+				c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S208.8,83.9,208.6,83.9z M213.6,83.9c-0.3,0-0.5,0.2-0.5,0.5
+				s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S213.8,83.9,213.6,83.9z"/>
+		</g>
+	</g>
+	<g>
+		<rect id="Rectangle-Copy-14_3_" x="926.5" y="409.8" class="st21" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16_2_" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_3_" class="st7" d="M257.9,77.9c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5
+				c0,1.1-0.9,2-2,2h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5v-0.1
+				C256.9,78.3,257.3,77.9,257.9,77.9z M260.9,81.9h-8c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8c0.5,0,0.9-0.4,1-0.9
+				v-0.1v-5c0-0.5-0.4-0.9-0.9-1H260.9z M259.4,86.9c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5c-0.3,0-0.5-0.2-0.5-0.5
+				s0.2-0.5,0.5-0.5H259.4z M254.4,82.9c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5C252.9,83.5,253.5,82.9,254.4,82.9
+				z M259.4,82.9c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5c-0.8,0-1.5-0.7-1.5-1.5C257.9,83.5,258.5,82.9,259.4,82.9z M254.4,83.9
+				c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S254.6,83.9,254.4,83.9z M259.4,83.9c-0.3,0-0.5,0.2-0.5,0.5
+				s0.2,0.5,0.5,0.5c0.3,0,0.5-0.2,0.5-0.5S259.6,83.9,259.4,83.9z"/>
+		</g>
+	</g>
+	<g>
+		<rect id="Rectangle-Copy-14_6_" x="834.6" y="452.3" class="st21" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16_5_" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_7_" class="st7" d="M166,120.4c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5
+				c0,1.1-0.9,2-2,2h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5v-0.1
+				C165,120.9,165.4,120.4,166,120.4z M169,124.4h-8c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8c0.5,0,0.9-0.4,1-0.9
+				v-0.1v-5c0-0.5-0.4-0.9-0.9-1H169z M167.5,129.4c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5c-0.3,0-0.5-0.2-0.5-0.5
+				s0.2-0.5,0.5-0.5H167.5z M162.5,125.4c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5S161.7,125.4,162.5,125.4z
+				 M167.5,125.4c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5S166.7,125.4,167.5,125.4z M162.5,126.4
+				c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S162.8,126.4,162.5,126.4z M167.5,126.4c-0.3,0-0.5,0.2-0.5,0.5
+				s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S167.8,126.4,167.5,126.4z"/>
+		</g>
+	</g>
+	<g>
+		<rect id="Rectangle-Copy-14_5_" x="880.7" y="452.3" class="st21" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16_4_" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_6_" class="st7" d="M212.1,120.4c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5
+				c0,1.1-0.9,2-2,2h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5v-0.1
+				C211.1,120.9,211.5,120.4,212.1,120.4z M215.1,124.4h-8c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8
+				c0.5,0,0.9-0.4,1-0.9v-0.1v-5c0-0.5-0.4-0.9-0.9-1H215.1z M213.6,129.4c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5
+				c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5H213.6z M208.6,125.4c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5
+				S207.7,125.4,208.6,125.4z M213.6,125.4c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5S212.7,125.4,213.6,125.4z
+				 M208.6,126.4c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S208.8,126.4,208.6,126.4z M213.6,126.4
+				c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S213.8,126.4,213.6,126.4z"/>
+		</g>
+	</g>
+	<g>
+		<rect id="Rectangle-Copy-14_4_" x="926.5" y="452.3" class="st21" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16_3_" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_5_" class="st7" d="M257.9,120.4c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5
+				c0,1.1-0.9,2-2,2h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5v-0.1
+				C256.9,120.9,257.3,120.4,257.9,120.4z M260.9,124.4h-8c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8
+				c0.5,0,0.9-0.4,1-0.9v-0.1v-5c0-0.5-0.4-0.9-0.9-1H260.9z M259.4,129.4c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5
+				c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5H259.4z M254.4,125.4c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5
+				S253.5,125.4,254.4,125.4z M259.4,125.4c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5c-0.8,0-1.5-0.7-1.5-1.5S258.5,125.4,259.4,125.4
+				z M254.4,126.4c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S254.6,126.4,254.4,126.4z M259.4,126.4
+				c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5c0.3,0,0.5-0.2,0.5-0.5S259.6,126.4,259.4,126.4z"/>
+		</g>
+	</g>
+	<g>
+		<rect id="Rectangle-Copy-14_8_" x="970.4" y="409.8" class="st21" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16_7_" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_9_" class="st7" d="M301.8,77.9c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5
+				c0,1.1-0.9,2-2,2h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5v-0.1
+				C300.8,78.3,301.3,77.9,301.8,77.9z M304.8,81.9h-8c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8c0.5,0,0.9-0.4,1-0.9
+				v-0.1v-5c0-0.5-0.4-0.9-0.9-1H304.8z M303.3,86.9c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5c-0.3,0-0.5-0.2-0.5-0.5
+				s0.2-0.5,0.5-0.5H303.3z M298.3,82.9c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5C296.8,83.5,297.5,82.9,298.3,82.9
+				z M303.3,82.9c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5C301.8,83.5,302.5,82.9,303.3,82.9z M298.3,83.9
+				c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S298.6,83.9,298.3,83.9z M303.3,83.9c-0.3,0-0.5,0.2-0.5,0.5
+				s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S303.6,83.9,303.3,83.9z"/>
+		</g>
+	</g>
+	<g>
+		<rect id="Rectangle-Copy-14_7_" x="970.4" y="452.3" class="st21" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16_6_" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_8_" class="st7" d="M301.8,120.4c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5
+				c0,1.1-0.9,2-2,2h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5v-0.1
+				C300.8,120.9,301.3,120.4,301.8,120.4z M304.8,124.4h-8c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8
+				c0.5,0,0.9-0.4,1-0.9v-0.1v-5c0-0.5-0.4-0.9-0.9-1H304.8z M303.3,129.4c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5
+				c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5H303.3z M298.3,125.4c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5
+				S297.5,125.4,298.3,125.4z M303.3,125.4c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5S302.5,125.4,303.3,125.4z
+				 M298.3,126.4c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S298.6,126.4,298.3,126.4z M303.3,126.4
+				c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S303.6,126.4,303.3,126.4z"/>
+		</g>
+	</g>
+	<path id="Rectangle-Copy-17" class="st22" d="M847.2,385.3h140.4c22.1,0,40,17.9,40,40v43.1c0,22.1-17.9,40-40,40H847.2
+		c-22.1,0-40-17.9-40-40v-43.1C807.2,403.2,825.1,385.3,847.2,385.3z"/>
+	<rect x="839.2" y="357.4" class="st2" width="147.7" height="15.6"/>
+	<text transform="matrix(1 0 0 1 836.1968 373.7619)" class="st6"><tspan x="0" y="0" class="st3 st8 st9">에지</tspan><tspan x="32" y="0" class="st3 st10 st9"> </tspan><tspan x="35.8" y="0" class="st3 st8 st9">노드</tspan></text>
+</g>
+<rect x="137.2" y="280" class="st2" width="428.2" height="19.5"/>
+<text transform="matrix(1 0 0 1 155.0776 290.3587)" class="st6"><tspan x="0" y="0" class="st3 st4 st5">1. SDO </tspan><tspan x="46.3" y="0" class="st3 st8 st5">소유권</tspan><tspan x="88.3" y="0" class="st3 st4 st5"> </tspan><tspan x="91.6" y="0" class="st3 st8 st5">키</tspan><tspan x="105.6" y="0" class="st3 st4 st5"> </tspan><tspan x="108.9" y="0" class="st3 st8 st5">생성</tspan><tspan x="136.9" y="0" class="st3 st4 st5"> </tspan><tspan x="140.2" y="0" class="st3 st8 st5">및</tspan><tspan x="154.2" y="0" class="st3 st4 st5"> </tspan><tspan x="157.5" y="0" class="st3 st8 st5">가져오기</tspan><tspan x="213.5" y="0" class="st3 st4 st5">(</tspan><tspan x="218.2" y="0" class="st3 st8 st5">처음에만</tspan><tspan x="274.2" y="0" class="st3 st4 st5"> </tspan><tspan x="277.5" y="0" class="st3 st8 st5">해당</tspan><tspan x="305.5" y="0" class="st3 st4 st5">)</tspan></text>
+<rect x="158.1" y="517.8" class="st2" width="112.5" height="18.3"/>
+<text transform="matrix(1 0 0 1 158.0564 528.1896)" class="st6"><tspan x="0" y="0" class="st3 st4 st5">4. </tspan><tspan x="15.5" y="0" class="st3 st8 st5">디바이스</tspan><tspan x="71.5" y="0" class="st3 st4 st5"> </tspan><tspan x="74.8" y="0" class="st3 st8 st5">배송</tspan></text>
+<rect x="690.8" y="59.7" class="st2" width="153" height="18.1"/>
+<text transform="matrix(1 0 0 1 694.234 70.0712)" class="st6"><tspan x="0" y="0" class="st3 st4 st5">3c. </tspan><tspan x="22.6" y="0" class="st3 st8 st5">바우처</tspan><tspan x="64.6" y="0" class="st3 st4 st5"> </tspan><tspan x="67.9" y="0" class="st3 st8 st5">등록</tspan></text>
+<rect x="328" y="131.5" class="st2" width="142.1" height="16.5"/>
+<text transform="matrix(1 0 0 1 327.9878 141.84)" class="st6"><tspan x="0" y="0" class="st7 st4 st5">3a. </tspan><tspan x="23" y="0" class="st7 st8 st5">에지</tspan><tspan x="51" y="0" class="st7 st4 st5"> </tspan><tspan x="54.3" y="0" class="st7 st8 st5">노드</tspan><tspan x="82.3" y="0" class="st7 st4 st5"> </tspan><tspan x="85.6" y="0" class="st7 st8 st5">추가</tspan></text>
+<rect x="328" y="186.6" class="st2" width="144.4" height="16.9"/>
+<text transform="matrix(1 0 0 1 327.9872 196.9795)" class="st6"><tspan x="0" y="0" class="st7 st4 st5">3b. </tspan><tspan x="23.6" y="0" class="st7 st8 st5">바우처</tspan><tspan x="65.6" y="0" class="st7 st4 st5"> </tspan><tspan x="68.9" y="0" class="st7 st8 st5">가져오기</tspan></text>
+<g>
+	<g id="Group-2" transform="translate(21.000000, 0.000000)">
+		<circle id="Oval-Copy-3" class="st13" cx="56.3" cy="225" r="24"/>
+		<g id="icon_x2F_policy-admin" transform="translate(8.000000, 8.000000)">
+			<path id="Shape" class="st14" d="M43.3,220c2.8,0,5,2.2,5,5v6h-2v-6c0-1.7-1.3-3-3-3h-4c-1.7,0-3,1.3-3,3v6h-2v-6
+				c0-2.8,2.2-5,5-5H43.3z M41.3,208c2.8,0,5,2.2,5,5s-2.2,5-5,5c-2.8,0-5-2.2-5-5S38.6,208,41.3,208z M59.9,207.9l1.4,1.4l-7.1,7.1
+				l-3.9-3.9l1.4-1.4l2.5,2.5L59.9,207.9z M41.3,210c-1.7,0-3,1.3-3,3s1.3,3,3,3c1.7,0,3-1.3,3-3S43,210,41.3,210z"/>
+		</g>
+	</g>
+	<rect x="29.5" y="259.6" class="st2" width="94.5" height="15.5"/>
+	<text transform="matrix(1 0 0 1 55.2842 268.5968)" class="st3 st8 st5">관리자</text>
+</g>
+<rect x="281.3" y="302.4" class="st1" width="12.3" height="12.3"/>
+<g>
+	<rect id="Rectangle-Copy-16_5_" x="223.8" y="138" class="st3" width="70.5" height="81"/>
+	<rect x="223.8" y="171.3" class="st2" width="70.5" height="15.6"/>
+	<text transform="matrix(1 0 0 1 248.1995 181.7199)" class="st7 st4 st5">CLI</text>
+</g>
+<g>
+	<g>
+		<polyline class="st19" points="111.5,225.4 134.5,225.4 134.5,106.7 259,106.7 259,128 		"/>
+		<g>
+			<polygon class="st12" points="252,125.9 259,138 266,125.9 			"/>
+		</g>
+	</g>
+</g>
+<rect x="100.2" y="644.5" class="st2" width="89.1" height="14.5"/>
+<text transform="matrix(1 0 0 1 100.1876 653.4345)" class="st6"><tspan x="0" y="0" class="st3 st8 st23">사용자</tspan><tspan x="36" y="0" class="st3 st4 st23"> </tspan><tspan x="38.8" y="0" class="st3 st8 st23">조치</tspan></text>
+<rect x="289.2" y="644.5" class="st2" width="89.1" height="14.5"/>
+<text transform="matrix(1 0 0 1 289.1874 653.4345)" class="st6"><tspan x="0" y="0" class="st3 st8 st23">시스템</tspan><tspan x="36" y="0" class="st3 st4 st23"> </tspan><tspan x="38.8" y="0" class="st3 st8 st23">조치</tspan></text>
+<line class="st19" x1="28.9" y1="649.8" x2="88.6" y2="649.8"/>
+<line class="st24" x1="216.3" y1="649.8" x2="276.1" y2="649.8"/>
+<rect x="151.2" y="65.4" class="st2" width="91" height="30.6"/>
+<text transform="matrix(1 0 0 1 152.3088 75.7524)"><tspan x="0" y="0" class="st3 st4 st5">3. </tspan><tspan x="15.5" y="0" class="st3 st8 st5">바우처</tspan><tspan x="57.5" y="0" class="st3 st4 st5"> </tspan><tspan x="60.8" y="0" class="st3 st8 st5">받기</tspan><tspan x="88.8" y="0" class="st3 st4 st5"> </tspan><tspan x="7.8" y="16.8" class="st3 st8 st5">및</tspan><tspan x="21.8" y="16.8" class="st3 st4 st5"> </tspan><tspan x="25.1" y="16.8" class="st3 st8 st5">가져오기</tspan></text>
+<rect x="97.9" y="349.1" class="st2" width="139" height="47.4"/>
+<text transform="matrix(1 0 0 1 97.8832 359.4186)"><tspan x="0" y="0" class="st3 st4 st5">2. </tspan><tspan x="15.5" y="0" class="st3 st8 st5">디바이스</tspan><tspan x="71.5" y="0" class="st3 st4 st5"> </tspan><tspan x="74.8" y="0" class="st3 st8 st5">주문</tspan><tspan x="102.8" y="0" class="st3 st4 st5">(SDO </tspan><tspan x="0" y="16.8" class="st3 st8 st5">소유자</tspan><tspan x="42" y="16.8" class="st3 st4 st5"> </tspan><tspan x="45.3" y="16.8" class="st3 st8 st5">공개</tspan><tspan x="73.3" y="16.8" class="st3 st4 st5"> </tspan><tspan x="76.6" y="16.8" class="st3 st8 st5">키</tspan><tspan x="90.6" y="16.8" class="st3 st4 st5"> </tspan><tspan x="93.9" y="16.8" class="st3 st8 st5">제공</tspan><tspan x="121.9" y="16.8" class="st3 st4 st5">). </tspan><tspan x="0" y="33.6" class="st3 st8 st5">소유권</tspan><tspan x="42" y="33.6" class="st3 st4 st5"> </tspan><tspan x="45.3" y="33.6" class="st3 st8 st5">바우처</tspan><tspan x="87.3" y="33.6" class="st3 st4 st5"> </tspan><tspan x="90.6" y="33.6" class="st3 st8 st5">받기</tspan><tspan x="118.6" y="33.6" class="st3 st4 st5">.</tspan></text>
+<text transform="matrix(1 0 0 1 492.5498 426.7519)"><tspan x="0" y="0" class="st3 st4 st5">5. </tspan><tspan x="15.5" y="0" class="st3 st8 st5">현장에</tspan><tspan x="57.5" y="0" class="st3 st4 st5"> </tspan><tspan x="60.8" y="0" class="st3 st8 st5">배치</tspan><tspan x="88.8" y="0" class="st3 st4 st5">, </tspan><tspan x="95.9" y="0" class="st3 st8 st5">네트워크</tspan><tspan x="151.9" y="0" class="st3 st4 st5">  </tspan><tspan x="0" y="16.8" class="st3 st8 st5">및</tspan><tspan x="14" y="16.8" class="st3 st4 st5"> </tspan><tspan x="17.3" y="16.8" class="st3 st8 st5">전원</tspan><tspan x="45.3" y="16.8" class="st3 st4 st5"> </tspan><tspan x="48.6" y="16.8" class="st3 st8 st5">연결</tspan><tspan x="76.6" y="16.8" class="st3 st4 st5">, </tspan><tspan x="83.7" y="16.8" class="st3 st8 st5">전원</tspan><tspan x="111.7" y="16.8" class="st3 st4 st5"> </tspan><tspan x="115" y="16.8" class="st3 st8 st5">켜기</tspan></text>
+<text transform="matrix(1 0 0 1 20.2165 579.7519)"><tspan x="0" y="0" class="st3 st8 st5">디바이스</tspan><tspan x="56" y="0" class="st3 st4 st5"> </tspan><tspan x="59.3" y="0" class="st3 st8 st5">제조업체</tspan></text>
+<rect x="591.9" y="190.4" class="st2" width="61" height="30.6"/>
+<text transform="matrix(1 0 0 1 608.6635 200.7519)"><tspan x="0" y="0" class="st3 st4 st5">SDO </tspan><tspan x="-9.3" y="16.8" class="st3 st4 st5">Service</tspan></text>
+<rect x="715.9" y="203.4" class="st2" width="139" height="61"/>
+<text transform="matrix(1 0 0 1 715.8832 213.7524)"><tspan x="0" y="0" class="st3 st4 st5">8. </tspan><tspan x="15.5" y="0" class="st3 st8 st5">구성</tspan><tspan x="43.5" y="0" class="st3 st4 st5"> </tspan><tspan x="46.8" y="0" class="st3 st8 st5">요청</tspan></text>
+<rect x="721.9" y="273.4" class="st2" width="106" height="47.4"/>
+<text transform="matrix(1 0 0 1 721.8832 283.7524)"><tspan x="0" y="0" class="st3 st4 st5">9. </tspan><tspan x="15.5" y="0" class="st3 st8 st5">에지</tspan><tspan x="43.5" y="0" class="st3 st4 st5"> </tspan><tspan x="46.8" y="0" class="st3 st8 st5">에이전트</tspan><tspan x="102.8" y="0" class="st3 st4 st5"> </tspan><tspan x="0" y="16.8" class="st3 st8 st5">설치</tspan><tspan x="28" y="16.8" class="st3 st4 st5"> </tspan><tspan x="31.3" y="16.8" class="st3 st8 st5">및</tspan><tspan x="45.3" y="16.8" class="st3 st4 st5"> </tspan><tspan x="48.6" y="16.8" class="st3 st8 st5">등록</tspan><tspan x="76.6" y="16.8" class="st3 st4 st5">, </tspan><tspan x="0" y="33.6" class="st3 st8 st5">에지</tspan><tspan x="28" y="33.6" class="st3 st4 st5"> </tspan><tspan x="31.3" y="33.6" class="st3 st8 st5">서비스</tspan><tspan x="73.3" y="33.6" class="st3 st4 st5"> </tspan><tspan x="76.6" y="33.6" class="st3 st8 st5">배치</tspan></text>
+<rect x="867.9" y="45.4" class="st2" width="119.1" height="54.4"/>
+<text transform="matrix(1 0 0 1 867.8832 57.2324)"><tspan x="0" y="0" class="st7 st10 st9">Intel Corp. </tspan><tspan x="0" y="19.2" class="st7 st10 st9">Rendezvous </tspan><tspan x="0" y="38.4" class="st7 st10 st9">Server</tspan></text>
+<rect x="888.9" y="151.4" class="st2" width="130" height="56.7"/>
+<text transform="matrix(1 0 0 1 888.8832 161.7524)"><tspan x="0" y="0" class="st3 st4 st5">6. Rendezvous </tspan><tspan x="0" y="16.8" class="st3 st4 st5">Server </tspan><tspan x="44" y="16.8" class="st3 st8 st5">접속</tspan></text>
+<rect x="889.5" y="219.4" class="st2" width="123.3" height="30.6"/>
+<text transform="matrix(1 0 0 1 889.5502 229.7524)"><tspan x="0" y="0" class="st3 st4 st5">7. </tspan><tspan x="15.5" y="0" class="st3 st8 st5">에지</tspan><tspan x="43.5" y="0" class="st3 st4 st5"> </tspan><tspan x="46.8" y="0" class="st3 st8 st5">노드를</tspan><tspan x="88.8" y="0" class="st3 st4 st5"> </tspan><tspan x="92.1" y="0" class="st3 st8 st5">관리</tspan><tspan x="120.1" y="0" class="st3 st4 st5"> </tspan><tspan x="0" y="16.8" class="st3 st8 st5">허브로</tspan><tspan x="42" y="16.8" class="st3 st4 st5"> </tspan><tspan x="45.3" y="16.8" class="st3 st8 st5">리디렉션</tspan></text>
+</svg>

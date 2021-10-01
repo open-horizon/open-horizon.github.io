@@ -1,0 +1,58 @@
+keyword:
+  cloud: IBM&reg; Cloud
+  cloud_notm: IBM Cloud
+  cloud_registry: IBM Cloud Container Registry
+  common_services: IBM Cloud Platform Common Services
+  contain_soft: IBM Certified Container
+  contain_softs: IBM Certified Container
+  docker: Docker&reg;
+  gui: 管理控制台
+  gui-short: 控制台
+  edge: IBM&reg; Edge Application Manager
+  edge_notm: IBM Edge Application Manager
+  edge_devices_notm: IBM Edge Application Manager
+  edge_shared_notm: IBM Edge Application Manager 共享组件
+  ieam: IEAM
+  edge_profile: edge computing manager 概要文件
+  edge_deploy_pattern: IBM Edge Application Manager 部署模式
+  edge_deploy_patterns: IBM Edge Application Manager 部署模式
+  edge_node: IBM Edge Application Manager 边缘节点
+  edge_nodes: IBM Edge Application Manager 边缘节点
+  edge_service: IBM Edge Application Manager 服务
+  edge_services: IBM Edge Application Manager 服务
+  homebrew: Homebrew&reg;
+  horizon_open: Open Horizon
+  horizon: Horizon
+  horizon_agbot: Horizon agbot
+  horizon_agbots: Horizon agbots
+  horizon_agbot_full: Horizon 协议 bot (agbot)
+  horizon_agent: Horizon 代理程序
+  horizon_agents: Horizon 代理程序
+  horizon_exchange: Horizon Exchange
+  horizon_switch: Horizon 交换板
+  IBM: IBM&reg;
+  intel: Intel&reg;
+  IBM_notm: IBM
+  event_streams: IBM Event Streams Service
+  ibm_cloud: IBM Cloud
+  klust: Klusterlet
+  linux: Linux&reg;
+  linux_notm: Linux
+  linux_bit: Linux&reg; x86_64
+  linux_bit_notm: Linux x86_64
+  linux_ppc64le_notm: Linux ppc64le
+  mac_notm: Mac
+  mac: mac&reg;
+  macOS_notm: macOS
+  macOS: macOS&reg;
+  mgmt_hub: 管理中心 (management hub)
+  message_hub_notm: IBM Event Streams
+  ocp: OCP
+  ocp_tm: Red Hat&reg; OpenShift&reg; Container Platform
+  open_shift: OpenShift
+  open_shift_cp: OpenShift Container Platform
+  semver: 4.2.1
+  tech_prev: 重要：本内容为技术预览，并且不应该依赖于生产环境和周期；
+  windows: Windows&trade;
+  windows_notm: Windows
+  version: 4.2
