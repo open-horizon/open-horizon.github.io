@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 863.27 359.42"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="installers.svg"
+   inkscape:export-filename="C:\Sajan\Proyectos\IEC41\SPA\IEC41ABD001\S003\$artwork\images\edge\installers.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300">
+  <metadata
+     id="metadata635">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="706"
+     id="namedview633"
+     showgrid="false"
+     inkscape:zoom="1.1434673"
+     inkscape:cx="389.76527"
+     inkscape:cy="175.18526"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" />
+  <defs
+     id="defs3">
+    <style
+       id="style5">.cls-1{fill:#2f56a6;}.cls-2{font-size:10.82px;fill:#010101;}.cls-10,.cls-11,.cls-12,.cls-13,.cls-2,.cls-21,.cls-22,.cls-43,.cls-65{font-family:IBMPlexSans, IBM Plex Sans;}.cls-3{letter-spacing:-0.01em;}.cls-4{letter-spacing:0em;}.cls-5{letter-spacing:0em;}.cls-6{font-size:15px;}.cls-27,.cls-53,.cls-6,.cls-65,.cls-71{fill:#231f20;}.cls-16,.cls-17,.cls-18,.cls-27,.cls-53,.cls-6{font-family:IBMPlexSans-Medium, IBM Plex Sans;}.cls-7{letter-spacing:-0.01em;}.cls-8{letter-spacing:0em;}.cls-9{letter-spacing:-0.01em;}.cls-10,.cls-11,.cls-12,.cls-13,.cls-21,.cls-22,.cls-65{font-size:11px;}.cls-11,.cls-26{letter-spacing:0em;}.cls-12,.cls-24{letter-spacing:-0.01em;}.cls-13,.cls-14{letter-spacing:-0.01em;}.cls-15{letter-spacing:-0.01em;}.cls-16,.cls-17,.cls-18,.cls-19,.cls-27{font-size:14px;}.cls-17,.cls-28{letter-spacing:-0.01em;}.cls-18,.cls-29{letter-spacing:-0.01em;}.cls-20{letter-spacing:0em;}.cls-21,.cls-25{letter-spacing:-0.01em;}.cls-22,.cls-23{letter-spacing:0em;}.cls-30{letter-spacing:-0.01em;}.cls-31{letter-spacing:-0.01em;}.cls-32{letter-spacing:-0.01em;}.cls-33{letter-spacing:0em;}.cls-34,.cls-37,.cls-60,.cls-63,.cls-72{fill:none;}.cls-34,.cls-39{stroke:#038571;}.cls-34,.cls-37,.cls-39,.cls-60,.cls-63,.cls-70,.cls-72{stroke-miterlimit:10;}.cls-34,.cls-37,.cls-39,.cls-70,.cls-72{stroke-width:2px;}.cls-35{fill:#038571;}.cls-36{fill:#f2f6fc;}.cls-37{stroke:#983995;}.cls-38{fill:#983995;}.cls-39{fill:#e2e8e6;}.cls-40{fill:#4272b8;}.cls-41{letter-spacing:-0.01em;}.cls-42{letter-spacing:-0.01em;}.cls-43{font-size:9px;}.cls-44{letter-spacing:-0.01em;}.cls-45{letter-spacing:-0.01em;}.cls-46{letter-spacing:0em;}.cls-47{letter-spacing:0.01em;}.cls-48{letter-spacing:-0.01em;}.cls-49{letter-spacing:-0.01em;}.cls-50{letter-spacing:0em;}.cls-51{fill:#e6e7e8;}.cls-52{fill:#58595b;}.cls-53{font-size:13px;}.cls-54{letter-spacing:-0.01em;}.cls-55{letter-spacing:0em;}.cls-56{letter-spacing:-0.01em;}.cls-57{letter-spacing:0.01em;}.cls-58{letter-spacing:-0.02em;}.cls-59{letter-spacing:0em;}.cls-60{stroke:#a4a4a5;stroke-width:2.11px;}.cls-61{letter-spacing:-0.01em;}.cls-62{letter-spacing:0em;}.cls-63{stroke:#7aa0d4;stroke-width:1.55px;}.cls-64{letter-spacing:-0.01em;}.cls-66{letter-spacing:-0.03em;}.cls-67{letter-spacing:0.01em;}.cls-68{letter-spacing:0.01em;}.cls-69{letter-spacing:-0.01em;}.cls-70{fill:#f4dd9d;stroke:#bc9a30;}.cls-71{font-size:21px;font-family:MyriadPro-Regular, Myriad Pro;}.cls-72{stroke:#fbb040;}.cls-73{fill:#fbb040;}</style>
+  </defs>
+  <title
+     id="title7">installers</title>
+  <path
+     class="cls-1"
+     d="M737.65,269.76c9.81,0,17.8,7.7,17.8,17.17s-8,17.17-17.8,17.17-17.8-7.7-17.8-17.17,8-17.17,17.8-17.17m0-3c-11.54,0-20.9,9-20.9,20.16s9.36,20.16,20.9,20.16,20.89-9,20.89-20.16-9.35-20.16-20.89-20.16Z"
+     id="path9" />
+  <path
+     class="cls-1"
+     d="M720.21,311.57h34.89a5,5,0,0,1,5,5v9.93a0,0,0,0,1,0,0H715.21a0,0,0,0,1,0,0v-9.93A5,5,0,0,1,720.21,311.57Z"
+     id="path11" />
+  <path
+     class="cls-1"
+     d="M63.71,269.76c9.81,0,17.79,7.7,17.79,17.17s-8,17.17-17.79,17.17-17.8-7.7-17.8-17.17,8-17.17,17.8-17.17m0-3c-11.54,0-20.9,9-20.9,20.16s9.36,20.16,20.9,20.16,20.89-9,20.89-20.16-9.35-20.16-20.89-20.16Z"
+     id="path23" />
+  <path
+     class="cls-1"
+     d="M46.26,311.57H81.15a5,5,0,0,1,5,5v9.93a0,0,0,0,1,0,0H41.26a0,0,0,0,1,0,0v-9.93A5,5,0,0,1,46.26,311.57Z"
+     id="path25" />
+  <line
+     class="cls-34"
+     x1="266.75"
+     y1="294.79"
+     x2="307.79"
+     y2="294.79"
+     id="line241" />
+  <polygon
+     class="cls-35"
+     points="306.48 299.27 314.25 294.79 306.48 290.3 306.48 299.27"
+     id="polygon243" />
+  <line
+     class="cls-34"
+     x1="266.38"
+     y1="222.67"
+     x2="307.42"
+     y2="222.67"
+     id="line245" />
+  <polygon
+     class="cls-35"
+     points="306.11 227.16 313.88 222.67 306.11 218.18 306.11 227.16"
+     id="polygon247" />
+  <line
+     class="cls-34"
+     x1="266.38"
+     y1="150.63"
+     x2="307.42"
+     y2="150.63"
+     id="line249" />
+  <polygon
+     class="cls-35"
+     points="306.11 155.11 313.88 150.63 306.11 146.14 306.11 155.11"
+     id="polygon251" />
+  <line
+     class="cls-36"
+     x1="259.9"
+     y1="122.6"
+     x2="297.77"
+     y2="75.59"
+     id="line253" />
+  <line
+     class="cls-37"
+     x1="259.9"
+     y1="122.6"
+     x2="293.71"
+     y2="80.61"
+     id="line255" />
+  <polygon
+     class="cls-38"
+     points="296.39 84.45 297.77 75.58 289.4 78.82 296.39 84.45"
+     id="polygon257" />
+  <line
+     class="cls-34"
+     x1="193.12"
+     y1="65.79"
+     x2="193.12"
+     y2="115.13"
+     id="line259" />
+  <polygon
+     class="cls-35"
+     points="188.63 113.82 193.12 121.59 197.61 113.82 188.63 113.82"
+     id="polygon261" />
+  <rect
+     class="cls-39"
+     x="327.97"
+     y="137.05"
+     width="116.32"
+     height="27"
+     id="rect263" />
+  <path
+     class="cls-36"
+     d="M295.63,22H433.82a19.55,19.55,0,0,1,19.55,19.55V49a19.54,19.54,0,0,1-19.54,19.54H295.63A19.55,19.55,0,0,1,276.09,49V41.53A19.55,19.55,0,0,1,295.63,22Z"
+     id="path265" />
+  <path
+     class="cls-40"
+     d="M433.82,23a18.57,18.57,0,0,1,18.55,18.55V49a18.57,18.57,0,0,1-18.55,18.55H295.63A18.56,18.56,0,0,1,277.09,49V41.53A18.56,18.56,0,0,1,295.63,23H433.82m0-2H295.63a20.54,20.54,0,0,0-20.54,20.55V49a20.54,20.54,0,0,0,20.54,20.55H433.82A20.55,20.55,0,0,0,454.37,49V41.53A20.55,20.55,0,0,0,433.82,21Z"
+     id="path267" />
+  <rect
+     class="cls-51"
+     x="113.77"
+     y="21.98"
+     width="137.64"
+     height="46.6"
+     rx="19.55"
+     ry="19.55"
+     id="rect303" />
+  <path
+     class="cls-52"
+     d="M231.86,23a18.57,18.57,0,0,1,18.55,18.55V49a18.57,18.57,0,0,1-18.55,18.55H133.31A18.57,18.57,0,0,1,114.77,49V41.53A18.57,18.57,0,0,1,133.31,23h98.55m0-2H133.31a20.55,20.55,0,0,0-20.54,20.55V49a20.55,20.55,0,0,0,20.54,20.55h98.55A20.55,20.55,0,0,0,252.41,49V41.53A20.55,20.55,0,0,0,231.86,21Z"
+     id="path305" />
+  <rect
+     class="cls-60"
+     x="124.62"
+     y="128.13"
+     width="341.85"
+     height="44.84"
+     id="rect341" />
+  <polygon
+     class="cls-63"
+     points="266.01 164.13 133.48 164.13 133.51 137.13 266.01 137.13 266.01 164.13"
+     id="polygon349" />
+  <rect
+     class="cls-39"
+     x="327.6"
+     y="208.4"
+     width="116.32"
+     height="27"
+     id="rect389" />
+  <rect
+     class="cls-60"
+     x="124.25"
+     y="199.47"
+     width="342.22"
+     height="44.84"
+     id="rect391" />
+  <polygon
+     class="cls-63"
+     points="266.01 235.47 133.17 235.47 133.2 208.47 266.01 208.47 266.01 235.47"
+     id="polygon399" />
+  <rect
+     class="cls-39"
+     x="327.23"
+     y="279.59"
+     width="116.32"
+     height="27"
+     id="rect411" />
+  <rect
+     class="cls-60"
+     x="123.87"
+     y="270.66"
+     width="342.6"
+     height="44.84"
+     id="rect413" />
+  <polygon
+     class="cls-63"
+     points="266.01 306.66 132.85 306.66 132.88 279.66 266.01 279.66 266.01 306.66"
+     id="polygon421" />
+  <line
+     class="cls-34"
+     x1="284.38"
+     y1="65.79"
+     x2="239.61"
+     y2="118.16"
+     id="line465" />
+  <polygon
+     class="cls-35"
+     points="237.06 114.25 235.42 123.07 243.88 120.08 237.06 114.25"
+     id="polygon467" />
+  <rect
+     class="cls-70"
+     x="541.44"
+     y="152.38"
+     width="116.32"
+     height="27"
+     id="rect545" />
+  <rect
+     class="cls-70"
+     x="541.44"
+     y="198.61"
+     width="116.32"
+     height="27"
+     id="rect557" />
+  <rect
+     class="cls-70"
+     x="541.44"
+     y="269.8"
+     width="116.32"
+     height="27"
+     id="rect569" />
+  <text
+     class="cls-71"
+     transform="translate(590.74 248.25)"
+     id="text581">...</text>
+  <text
+     class="cls-71"
+     transform="translate(273.74 258.07)"
+     id="text583">...</text>
+  <line
+     class="cls-36"
+     x1="450.37"
+     y1="210.61"
+     x2="532.55"
+     y2="172.97"
+     id="line593" />
+  <line
+     class="cls-72"
+     x1="456.24"
+     y1="207.92"
+     x2="526.68"
+     y2="175.66"
+     id="line595" />
+  <polygon
+     class="cls-73"
+     points="459.3 211.46 450.37 210.61 455.57 203.3 459.3 211.46"
+     id="polygon597" />
+  <polygon
+     class="cls-73"
+     points="527.35 180.29 532.55 172.97 523.61 172.13 527.35 180.29"
+     id="polygon599" />
+  <line
+     class="cls-36"
+     x1="450.37"
+     y1="235.4"
+     x2="531.26"
+     y2="275.52"
+     id="line601" />
+  <line
+     class="cls-72"
+     x1="456.16"
+     y1="238.27"
+     x2="525.48"
+     y2="272.65"
+     id="line603" />
+  <polygon
+     class="cls-73"
+     points="455.34 242.87 450.37 235.4 459.33 234.83 455.34 242.87"
+     id="polygon605" />
+  <polygon
+     class="cls-73"
+     points="522.31 276.08 531.26 275.52 526.3 268.05 522.31 276.08"
+     id="polygon607" />
+  <line
+     class="cls-36"
+     x1="448.95"
+     y1="296.1"
+     x2="531.27"
+     y2="286.31"
+     id="line609" />
+  <line
+     class="cls-72"
+     x1="455.37"
+     y1="295.33"
+     x2="524.85"
+     y2="287.07"
+     id="line611" />
+  <polygon
+     class="cls-73"
+     points="457.2 299.63 448.95 296.1 456.14 290.72 457.2 299.63"
+     id="polygon613" />
+  <polygon
+     class="cls-73"
+     points="524.08 291.69 531.27 286.31 523.02 282.77 524.08 291.69"
+     id="polygon615" />
+  <line
+     class="cls-36"
+     x1="450.37"
+     y1="224.59"
+     x2="532.68"
+     y2="214.81"
+     id="line617" />
+  <line
+     class="cls-72"
+     x1="456.78"
+     y1="223.83"
+     x2="526.27"
+     y2="215.57"
+     id="line619" />
+  <polygon
+     class="cls-73"
+     points="458.62 228.13 450.37 224.59 457.56 219.22 458.62 228.13"
+     id="polygon621" />
+  <polygon
+     class="cls-73"
+     points="525.49 220.18 532.68 214.81 524.43 211.27 525.49 220.18"
+     id="polygon623" />
+  <line
+     class="cls-36"
+     x1="450.37"
+     y1="150.55"
+     x2="532.68"
+     y2="164.05"
+     id="line625" />
+  <line
+     class="cls-72"
+     x1="456.74"
+     y1="151.59"
+     x2="526.31"
+     y2="163"
+     id="line627" />
+  <polygon
+     class="cls-73"
+     points="457.31 156.23 450.37 150.55 458.76 147.38 457.31 156.23"
+     id="polygon629" />
+  <polygon
+     class="cls-73"
+     points="524.29 167.22 532.68 164.05 525.74 158.36 524.29 167.22"
+     id="polygon631" />
+  <text
+     class="cls-8"
+     id="text31-1-7-6-9-3-7-2-6-2-7"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0em;fill:#231f20"
+     x="157.34344"
+     y="38.863411">
+    <tspan
+       style="font-size:13.75px"
+       id="tspan5682">Registro</tspan>
+  </text>
+  <text
+     class="cls-8"
+     id="text31-1-7-6-9-6-01-8-6-0-6"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0em;fill:#231f20"
+     x="133.34521"
+     y="51.054573">
+    <tspan
+       style="font-size:8.75px"
+       id="tspan5659-8">(</tspan>
+    <tspan
+       id="tspan5686"
+       style="font-size:10px">Docker Hub o Private)</tspan>
+  </text>
+  <text
+     class="cls-8"
+     id="text31-1-7-6-9-3-7-2-6-2-7-7"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0em;fill:#231f20"
+     x="349.01147"
+     y="39.36528">
+    <tspan
+       style="font-size:13.75px"
+       id="tspan5682-2">Exchange</tspan>
+  </text>
+  <text
+     class="cls-8"
+     id="text31-1-7-6-9-6-01-8-6-0-6-2"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0em;fill:#231f20"
+     x="333.01324"
+     y="51.556442">
+    <tspan
+       id="tspan5686-6"
+       style="font-size:10px">(Gestión de patrones</tspan>
+  </text>
+  <text
+     class="cls-8"
+     id="text31-1-7-6-9-6-01-8-6-0-6-2-3"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0em;fill:#231f20"
+     x="341.89526"
+     y="65.677864">
+    <tspan
+       id="tspan5686-6-3"
+       style="font-size:10px">y descubrimiento)</tspan>
+  </text>
+  <text
+     class="cls-8"
+     id="text31-1-7-6-9-3-3"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0em;fill:#231f20"
+     x="145.30106"
+     y="85.912064">Extraer</text>
+  <text
+     class="cls-8"
+     id="text31-1-7-6-9-6-41"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0em;fill:#231f20"
+     x="113.3028"
+     y="98.103233">contenedores</text>
+  <text
+     class="cls-8"
+     id="text31-1-7-6-9-3-4"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0em;fill:#231f20"
+     x="223.586"
+     y="84.959854">Verificar</text>
+  <text
+     class="cls-8"
+     id="text31-1-7-6-9-6-5"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0em;fill:#231f20"
+     x="223.58777"
+     y="97.151016">firmas</text>
+  <text
+     class="cls-8"
+     id="text31-1-7-6-9-3-3-6"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0em;fill:#231f20"
+     x="108.20033"
+     y="123.00484">Nodo periférico</text>
+  <text
+     class="cls-8"
+     id="text31-1-7-6-9-3-3-6-2"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0em;fill:#231f20"
+     x="123.32581"
+     y="194.14745">Nodo periférico</text>
+  <text
+     class="cls-8"
+     id="text31-1-7-6-9-3-3-6-4"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0em;fill:#231f20"
+     x="124.32207"
+     y="266.87036">Nodo periférico</text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="180.15381"
+     y="153.53207"
+     id="text4849"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4851"
+       x="180.15381"
+       y="153.53207"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial">Agente</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="178.51691"
+     y="226.23064"
+     id="text4849-8"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4851-2"
+       x="178.51691"
+       y="226.23064"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial">Agente</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="177.97768"
+     y="297.05289"
+     id="text4849-7"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4851-4"
+       x="177.97768"
+       y="297.05289"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial">Agente</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="269.0658"
+     y="144.73251"
+     id="text4849-87"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4851-43"
+       x="269.0658"
+       y="144.73251"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial">Ejecutar</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="266.99063"
+     y="218.32996"
+     id="text4849-87-6"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4851-43-9"
+       x="266.99063"
+       y="218.32996"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial">Ejecutar</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="267.49249"
+     y="289.70636"
+     id="text4849-87-1"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4851-43-3"
+       x="267.49249"
+       y="289.70636"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial">Ejecutar</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="334.90845"
+     y="153.75867"
+     id="text4849-87-0"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4851-43-5"
+       x="334.90845"
+       y="153.75867"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial">Servicios periféricos</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="334.4129"
+     y="225.71175"
+     id="text4849-87-0-0"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4851-43-5-7"
+       x="334.4129"
+       y="225.71175"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial">Servicios periféricos</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="334.29117"
+     y="297.08813"
+     id="text4849-87-0-7"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4851-43-5-5"
+       x="334.29117"
+       y="297.08813"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial">Servicios periféricos</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="548.42261"
+     y="169.51311"
+     id="text4849-87-0-5"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4851-43-5-9"
+       x="548.42261"
+       y="169.51311"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial">Servicios en la nube</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="547.87225"
+     y="216.0679"
+     id="text4849-87-0-5-7"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4851-43-5-9-9"
+       x="547.87225"
+       y="216.0679"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial">Servicios en la nube</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="549.87225"
+     y="285.06415"
+     id="text4849-87-0-5-9"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4851-43-5-9-2"
+       x="549.87225"
+       y="285.06415"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial">Servicios en la nube</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="684.93048"
+     y="345.36212"
+     id="text4849-87-0-5-6"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4851-43-5-9-3"
+       x="684.93048"
+       y="345.36212"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial">Instalador en la nube</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="480.68939"
+     y="212.22304"
+     id="text4849-87-0-5-6-5"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4851-43-5-9-3-6"
+       x="480.68939"
+       y="212.22304"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial">Vías de</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="481.05457"
+     y="231.17447"
+     id="text4849-87-0-5-6-52"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4851-43-5-9-3-8"
+       x="481.05457"
+       y="231.17447"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial">acceso </tspan><tspan
+       sodipodi:role="line"
+       x="481.05457"
+       y="245.23697"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial"
+       id="tspan5027">de datos</tspan></text>
+  <text
+     class="cls-8"
+     id="text31-1-7-6-9-3-7-4"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0em;fill:#231f20"
+     x="288.54224"
+     y="102.26833">Los agentes se registran</text>
+  <text
+     class="cls-8"
+     id="text31-1-7-6-9-6-01-2"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0em;fill:#231f20"
+     x="288.54401"
+     y="114.45949">para un patrón de despliegue</text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="668.80585"
+     y="175.79588"
+     id="text4849-87-0-5-6-56"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4851-43-5-9-3-9"
+       x="668.80585"
+       y="175.79588"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial"><tspan
+   style="font-size:13.75px"
+   id="tspan5067">Suministrar</tspan> recursos en la nube</tspan><tspan
+       sodipodi:role="line"
+       x="668.80585"
+       y="192.98338"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial"
+       id="tspan5055">(ingesta de datos), <tspan
+   style="font-size:13.75px"
+   id="tspan5069">instalar y</tspan></tspan><tspan
+       sodipodi:role="line"
+       x="668.80585"
+       y="210.17088"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial"
+       id="tspan5059"><tspan
+   style="font-size:13.75px"
+   id="tspan5071">supervisar</tspan> software en la nube</tspan><tspan
+       sodipodi:role="line"
+       x="668.80585"
+       y="224.89819"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial"
+       id="tspan5061">para comunicarse con el</tspan><tspan
+       sodipodi:role="line"
+       x="668.80585"
+       y="238.96069"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial"
+       id="tspan5057">software periférico</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="2.6864166"
+     y="155.38742"
+     id="text4849-87-0-5-6-56-6"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4851-43-5-9-3-9-5"
+       x="2.6864166"
+       y="155.38742"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial"><tspan
+   style="font-size:13.75px"
+   id="tspan5067-8">Instalar</tspan> software de</tspan><tspan
+       sodipodi:role="line"
+       x="2.6864166"
+       y="170.11473"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial"
+       id="tspan5055-2">agente de Horizon en</tspan><tspan
+       sodipodi:role="line"
+       x="2.6864166"
+       y="184.17723"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial"
+       id="tspan5112">cada nodo de IBM</tspan><tspan
+       sodipodi:role="line"
+       x="2.6864166"
+       y="198.23973"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial"
+       id="tspan5115">Edge Computing for</tspan><tspan
+       sodipodi:role="line"
+       x="2.6864166"
+       y="214.76242"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial"
+       id="tspan5118">Devices y <tspan
+   style="font-size:13.75px"
+   id="tspan5069-7">registrarse</tspan></tspan><tspan
+       sodipodi:role="line"
+       x="2.6864166"
+       y="229.48973"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial"
+       id="tspan5059-3">para el patrón de</tspan><tspan
+       sodipodi:role="line"
+       x="2.6864166"
+       y="243.55223"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial"
+       id="tspan5121">despliegue del software</tspan><tspan
+       sodipodi:role="line"
+       x="2.6864166"
+       y="257.61472"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:Arial"
+       id="tspan5057-9">periférico</tspan></text>
+  <text
+     class="cls-8"
+     id="text31-1-7-6-9-3-3-6-5"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0em;fill:#231f20"
+     x="15.027847"
+     y="344.23929">
+    <tspan
+       style="font-size:11.25px"
+       id="tspan5145">Instalador periférico</tspan>
+  </text>
+</svg>

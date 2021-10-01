@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 972.57 558.01"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="sdrarch.svg"
+   inkscape:export-filename="C:\Sajan\Proyectos\IEC41\SPA\IEC41ABD001\S004\$artwork\images\edge\sdrarch.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300">
+  <metadata
+     id="metadata549">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="706"
+     id="namedview547"
+     showgrid="false"
+     inkscape:zoom="1.0149615"
+     inkscape:cx="553.42111"
+     inkscape:cy="349.38249"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" />
+  <defs
+     id="defs3">
+    <style
+       id="style5">.cls-1{fill:#f9f0f6;}.cls-2{fill:#8d3493;}.cls-3,.cls-41,.cls-9{font-size:14px;}.cls-12,.cls-3,.cls-37,.cls-41,.cls-55{fill:#343434;}.cls-12,.cls-3,.cls-37,.cls-55,.cls-9{font-family:IBMPlexSans, IBM Plex Sans;}.cls-4{fill:#983895;}.cls-5{fill:#4272b8;}.cls-6,.cls-7{fill:none;}.cls-6{stroke:#343434;stroke-dasharray:5 3;}.cls-40,.cls-6,.cls-7{stroke-miterlimit:10;stroke-width:2px;}.cls-7{stroke:#4167b0;}.cls-8{fill:#4167b0;}.cls-9{fill:#fff;}.cls-10{letter-spacing:-0.01em;}.cls-11{letter-spacing:0em;}.cls-12{font-size:11px;}.cls-13{letter-spacing:-0.02em;}.cls-14{letter-spacing:-0.01em;}.cls-15{letter-spacing:0em;}.cls-16{letter-spacing:-0.01em;}.cls-17{letter-spacing:0em;}.cls-18{letter-spacing:-0.01em;}.cls-19{letter-spacing:0em;}.cls-20{letter-spacing:0em;}.cls-21{letter-spacing:0.01em;}.cls-22{letter-spacing:0em;}.cls-23{letter-spacing:0em;}.cls-24{letter-spacing:0em;}.cls-25{letter-spacing:-0.01em;}.cls-26{letter-spacing:0em;}.cls-27{letter-spacing:-0.01em;}.cls-28{letter-spacing:0em;}.cls-29{letter-spacing:-0.01em;}.cls-30{letter-spacing:0em;}.cls-31{letter-spacing:-0.01em;}.cls-32{letter-spacing:-0.01em;}.cls-33{letter-spacing:-0.01em;}.cls-34{letter-spacing:0em;}.cls-35{letter-spacing:0em;}.cls-36{letter-spacing:0em;}.cls-37{font-size:16px;}.cls-38{letter-spacing:-0.01em;}.cls-39{letter-spacing:-0.01em;}.cls-40{fill:#f4dd9d;stroke:#bc9a30;}.cls-41{font-family:IBMPlexSans-Bold, IBM Plex Sans;font-weight:700;}.cls-42{letter-spacing:-0.03em;}.cls-43{letter-spacing:-0.01em;}.cls-44{letter-spacing:-0.01em;}.cls-45{letter-spacing:0em;}.cls-46{letter-spacing:0em;}.cls-47{letter-spacing:0em;}.cls-48{letter-spacing:-0.01em;}.cls-49{letter-spacing:-0.06em;}.cls-50{letter-spacing:-0.02em;}.cls-51{letter-spacing:-0.01em;}.cls-52{letter-spacing:-0.01em;}.cls-53{letter-spacing:-0.01em;}.cls-54{fill:#f2f6fc;}.cls-55{font-size:12px;}.cls-56{fill:#faf8ed;}.cls-57{fill:#bc9b2f;}.cls-58{letter-spacing:-0.02em;}.cls-59{letter-spacing:0em;}.cls-60{letter-spacing:0em;}.cls-61{letter-spacing:-0.01em;}.cls-62{letter-spacing:-0.01em;}.cls-63{letter-spacing:0em;}.cls-64{letter-spacing:0em;}.cls-65{letter-spacing:-0.01em;}.cls-66{letter-spacing:-0.02em;}.cls-67{letter-spacing:-0.01em;}.cls-68{letter-spacing:0em;}.cls-69{letter-spacing:-0.02em;}.cls-70{letter-spacing:-0.02em;}.cls-71{letter-spacing:0.01em;}.cls-72{letter-spacing:-0.01em;}.cls-73{letter-spacing:0.01em;}.cls-74{letter-spacing:-0.01em;}.cls-75{letter-spacing:-0.05em;}.cls-76{letter-spacing:0em;}</style>
+  </defs>
+  <title
+     id="title7">sdrarch</title>
+  <rect
+     class="cls-1"
+     x="152.06"
+     y="505.5"
+     width="169.5"
+     height="31.58"
+     id="rect9" />
+  <path
+     class="cls-2"
+     d="M320.56,506.5v29.59H153.06V506.5h167.5m2-2H151.06v33.59h171.5V504.5Z"
+     id="path11" />
+  <rect
+     class="cls-1"
+     x="152.05"
+     y="441.25"
+     width="169.5"
+     height="31.58"
+     id="rect13" />
+  <path
+     class="cls-2"
+     d="M320.56,442.25v29.59H153.06V442.25h167.5m2-2H151.06v33.59h171.5V440.25Z"
+     id="path15" />
+  <path
+     class="cls-4"
+     d="M476,20a11.5,11.5,0,1,1-11.5,11.5A11.51,11.51,0,0,1,476,20m0-2a13.5,13.5,0,1,0,13.5,13.5A13.49,13.49,0,0,0,476,18Z"
+     id="path19" />
+  <path
+     class="cls-4"
+     d="M466.51,48h19a5,5,0,0,1,5,5v5a0,0,0,0,1,0,0h-29a0,0,0,0,1,0,0V53A5,5,0,0,1,466.51,48Z"
+     id="path21" />
+  <path
+     class="cls-5"
+     d="M64.05,107.63A11.2,11.2,0,0,1,75,118l.14,1.72,1.59.57A11.33,11.33,0,0,1,84.09,131a11.19,11.19,0,0,1-11,11.35H48.52a11.35,11.35,0,0,1,0-22.69,9.66,9.66,0,0,1,1.68.15l2.62.41.34-2.71a11.14,11.14,0,0,1,10.89-9.87m0-2.67a13.74,13.74,0,0,0-13.46,12.2,12.75,12.75,0,0,0-2.07-.18,14,14,0,0,0,0,28H73.1a13.81,13.81,0,0,0,13.58-14,14,14,0,0,0-9.11-13.22A13.76,13.76,0,0,0,64.05,105Z"
+     id="path25" />
+  <line
+     id="_Path_"
+     data-name="&lt;Path&gt;"
+     class="cls-6"
+     x1="7.31"
+     y1="89.24"
+     x2="960.77"
+     y2="89.24" />
+  <line
+     class="cls-7"
+     x1="452.87894"
+     y1="40.120762"
+     x2="321.7579"
+     y2="41.029236"
+     id="line28"
+     style="fill:none;stroke:#4167b0;stroke-width:2.05365872px;stroke-miterlimit:10" />
+  <polygon
+     class="cls-8"
+     points="444.57,35.64 452.37,40.08 444.63,44.62 444.57,35.64 "
+     id="polygon30"
+     transform="translate(8,0)"
+     style="fill:#4167b0" />
+  <polygon
+     class="cls-8"
+     points="323.04 36.53 315.31 41.07 323.11 45.5 323.04 36.53"
+     id="polygon32" />
+  <text
+     class="cls-9"
+     transform="translate(495.83 357.54)"
+     id="text34">IBM E<tspan
+   class="cls-10"
+   x="37.58"
+   y="0"
+   id="tspan36">v</tspan>
+<tspan
+   x="44.35"
+   y="0"
+   id="tspan38">ents St</tspan>
+<tspan
+   class="cls-11"
+   x="88.07"
+   y="0"
+   id="tspan40">r</tspan>
+<tspan
+   x="93.14"
+   y="0"
+   id="tspan42">eams</tspan>
+</text>
+  <path
+     class="cls-5"
+     d="M60.56,18.38a20,20,0,1,0,20,20A20,20,0,0,0,60.56,18.38ZM56,21a18.27,18.27,0,0,0-4.31,8.35,17.28,17.28,0,0,1-5.13-2.23A18.08,18.08,0,0,1,56,21Zm-10.6,7.75a19.17,19.17,0,0,0,5.85,2.56,37.14,37.14,0,0,0-.65,6.08h-8A17.77,17.77,0,0,1,45.38,28.74Zm0,19.28a17.81,17.81,0,0,1-2.77-8.64h8a37.26,37.26,0,0,0,.65,6.08A18.93,18.93,0,0,0,45.38,48Zm1.16,1.63a16.78,16.78,0,0,1,5.13-2.23A18.32,18.32,0,0,0,56,55.77,18.08,18.08,0,0,1,46.54,49.65Zm13,6.07C57.05,55,54.87,51.63,53.63,47a36.83,36.83,0,0,1,5.93-.57Zm0-11.32a38.77,38.77,0,0,0-6.38.62,35.7,35.7,0,0,1-.6-5.64h7Zm0-7h-7a35.83,35.83,0,0,1,.6-5.65,38.77,38.77,0,0,0,6.38.62Zm0-7a36.88,36.88,0,0,1-5.93-.56c1.24-4.66,3.42-8,5.93-8.75Zm16.17-1.61a17.89,17.89,0,0,1,2.78,8.64h-8a36.1,36.1,0,0,0-.64-6.08A19.21,19.21,0,0,0,75.73,28.74Zm-1.16-1.63a17.1,17.1,0,0,1-5.12,2.23A18.27,18.27,0,0,0,65.14,21,18,18,0,0,1,74.57,27.11ZM61.56,21c2.51.72,4.69,4.09,5.92,8.75a36.64,36.64,0,0,1-5.92.56Zm0,11.31a38.76,38.76,0,0,0,6.37-.62,33.62,33.62,0,0,1,.6,5.65h-7Zm0,7h7a33.5,33.5,0,0,1-.6,5.64,38.76,38.76,0,0,0-6.37-.62Zm0,16.34V46.4a36.59,36.59,0,0,1,5.92.57C66.25,51.63,64.07,55,61.56,55.72Zm3.58.05a18.32,18.32,0,0,0,4.31-8.35,16.61,16.61,0,0,1,5.12,2.23A18,18,0,0,1,65.14,55.77ZM75.73,48a19,19,0,0,0-5.84-2.56,36.21,36.21,0,0,0,.64-6.08h8A17.92,17.92,0,0,1,75.73,48Z"
+     id="path202" />
+  <line
+     class="cls-7"
+     x1="232.98"
+     y1="70.54"
+     x2="232.98"
+     y2="116.62"
+     id="line204" />
+  <polygon
+     class="cls-8"
+     points="228.49 71.85 232.98 64.08 237.47 71.85 228.49 71.85"
+     id="polygon206" />
+  <polygon
+     class="cls-8"
+     points="228.49 115.31 232.98 123.08 237.47 115.31 228.49 115.31"
+     id="polygon208" />
+  <line
+     class="cls-7"
+     x1="232.98"
+     y1="168.12"
+     x2="232.98"
+     y2="220.66"
+     id="line210" />
+  <polygon
+     class="cls-8"
+     points="228.49 169.43 232.98 161.66 237.47 169.43 228.49 169.43"
+     id="polygon212" />
+  <line
+     class="cls-7"
+     x1="232.98"
+     y1="416.05"
+     x2="232.98"
+     y2="433.8"
+     id="line214" />
+  <polygon
+     class="cls-8"
+     points="228.49 417.36 232.98 409.59 237.47 417.36 228.49 417.36"
+     id="polygon216" />
+  <polygon
+     class="cls-8"
+     points="228.49 432.48 232.98 440.25 237.47 432.48 228.49 432.48"
+     id="polygon218" />
+  <path
+     class="cls-5"
+     d="M77.12,378.32V420H43.38V378.32H77.12M79.94,376H40.57v46.33H79.94V376Z"
+     id="path230" />
+  <rect
+     class="cls-5"
+     x="47.6"
+     y="381.79"
+     width="25.31"
+     height="3.47"
+     id="rect232" />
+  <rect
+     class="cls-5"
+     x="47.6"
+     y="387.58"
+     width="25.31"
+     height="3.47"
+     id="rect234" />
+  <rect
+     class="cls-5"
+     x="47.6"
+     y="393.38"
+     width="25.31"
+     height="3.47"
+     id="rect236" />
+  <ellipse
+     class="cls-5"
+     cx="69.39"
+     cy="413.64"
+     rx="3.51"
+     ry="2.9"
+     id="ellipse238" />
+  <rect
+     class="cls-40"
+     x="413.09"
+     y="288.23"
+     width="178.75"
+     height="48.34"
+     rx="20.55"
+     ry="20.55"
+     id="rect240" />
+  <rect
+     class="cls-40"
+     x="675.79"
+     y="202.26"
+     width="259"
+     height="48.34"
+     rx="20.55"
+     ry="20.55"
+     id="rect256" />
+  <rect
+     class="cls-40"
+     x="675.79"
+     y="126.61"
+     width="259"
+     height="48.34"
+     rx="20.55"
+     ry="20.55"
+     id="rect292" />
+  <rect
+     class="cls-54"
+     x="387.27"
+     y="442.69"
+     width="168.04"
+     height="33.35"
+     id="rect338" />
+  <path
+     class="cls-5"
+     d="M554.31,443.69V475h-166V443.69h166m2-2h-170V477h170V441.69Z"
+     id="path340" />
+  <rect
+     class="cls-56"
+     x="152.31"
+     y="124.08"
+     width="169"
+     height="36.01"
+     id="rect352" />
+  <path
+     class="cls-57"
+     d="M320.31,125.08v34h-167v-34h167m2-2h-171v38h171v-38Z"
+     id="path354" />
+  <rect
+     class="cls-56"
+     x="121.65593"
+     y="218.66"
+     width="199.65407"
+     height="31.58"
+     id="rect356"
+     style="fill:#faf8ed" />
+  <path
+     class="cls-57"
+     d="m 319.9637,219.66 0,29.59 -195.91644,0 0,-29.59 195.91644,0 m 2.3463,-2 -200.60904,0 0,33.59 200.60904,0 0,-33.59 z"
+     id="path358"
+     inkscape:connector-curvature="0"
+     style="fill:#bc9b2f" />
+  <rect
+     class="cls-54"
+     x="153.18788"
+     y="16.73"
+     width="161.11211"
+     height="47.650002"
+     id="rect402"
+     style="fill:#f2f6fc" />
+  <path
+     class="cls-5"
+     d="m 313.04512,17.73 0,45.65 -159.28904,0 0,-45.65 159.28904,0 m 2.26488,-2 -163.8188,0 0,49.65 163.8188,0 0,-49.65 z"
+     id="path404"
+     inkscape:connector-curvature="0"
+     style="fill:#4272b8" />
+  <rect
+     class="cls-54"
+     x="404.4"
+     y="125.33"
+     width="196.91"
+     height="71.51"
+     id="rect432" />
+  <path
+     class="cls-5"
+     d="M600.31,126.33v69.51H405.4V126.33H600.31m2-2H403.4v73.51H602.31V124.33Z"
+     id="path434" />
+  <rect
+     class="cls-1"
+     x="152.23"
+     y="377"
+     width="169.5"
+     height="31.58"
+     id="rect454" />
+  <path
+     class="cls-2"
+     d="M320.73,378v29.59H153.23V378h167.5m2-2H151.23v33.59h171.5V376Z"
+     id="path456" />
+  <rect
+     class="cls-1"
+     x="416.02"
+     y="146.99"
+     width="176.86"
+     height="32.05"
+     id="rect472" />
+  <path
+     class="cls-2"
+     d="M591.87,148v30H417V148H591.87m2-2H415v34H593.87V146Z"
+     id="path474" />
+  <rect
+     class="cls-1"
+     x="412.05"
+     y="218.66"
+     width="180.83"
+     height="31.58"
+     id="rect496" />
+  <path
+     class="cls-2"
+     d="M591.87,219.66v29.59H413.05V219.66H591.87m2-2H411.05v33.59H593.87V217.66Z"
+     id="path498" />
+  <line
+     class="cls-7"
+     x1="327.48"
+     y1="228.54"
+     x2="415.02"
+     y2="163.02"
+     id="line512" />
+  <polygon
+     class="cls-8"
+     points="331.22 231.35 322.31 232.41 325.84 224.16 331.22 231.35"
+     id="polygon514" />
+  <line
+     class="cls-7"
+     x1="504.44"
+     y1="186.5"
+     x2="504.44"
+     y2="217.66"
+     id="line516" />
+  <polygon
+     class="cls-8"
+     points="499.96 187.81 504.44 180.04 508.93 187.81 499.96 187.81"
+     id="polygon518" />
+  <line
+     class="cls-7"
+     x1="502.85"
+     y1="257.07"
+     x2="502.85"
+     y2="288.23"
+     id="line520" />
+  <polygon
+     class="cls-8"
+     points="498.36 258.38 502.85 250.61 507.34 258.38 498.36 258.38"
+     id="polygon522" />
+  <line
+     class="cls-7"
+     x1="599.27"
+     y1="176.14"
+     x2="670.39"
+     y2="222.89"
+     id="line524" />
+  <polygon
+     class="cls-8"
+     points="597.9 180.61 593.87 172.59 602.83 173.11 597.9 180.61"
+     id="polygon526" />
+  <polygon
+     class="cls-8"
+     points="666.83 225.92 675.79 226.44 671.76 218.42 666.83 225.92"
+     id="polygon528" />
+  <line
+     class="cls-7"
+     x1="600.21"
+     y1="161.79"
+     x2="669.45"
+     y2="148.38"
+     id="line530" />
+  <polygon
+     class="cls-8"
+     points="602.36 165.95 593.87 163.02 600.65 157.13 602.36 165.95"
+     id="polygon532" />
+  <polygon
+     class="cls-8"
+     points="669.01 153.04 675.79 147.16 667.3 144.23 669.01 153.04"
+     id="polygon534" />
+  <line
+     id="_Path_2"
+     data-name="&lt;Path&gt;"
+     class="cls-6"
+     x1="7.31"
+     y1="364.59"
+     x2="960.77"
+     y2="364.59" />
+  <line
+     class="cls-7"
+     x1="322.73"
+     y1="395.09"
+     x2="423.26"
+     y2="339.16"
+     id="line537" />
+  <polygon
+     class="cls-8"
+     points="424.3 343.72 428.91 336.02 419.94 335.88 424.3 343.72"
+     id="polygon539" />
+  <line
+     class="cls-7"
+     x1="232.98"
+     y1="480.19"
+     x2="232.98"
+     y2="497.94"
+     id="line541" />
+  <polygon
+     class="cls-8"
+     points="228.49 481.5 232.98 473.73 237.47 481.5 228.49 481.5"
+     id="polygon543" />
+  <polygon
+     class="cls-8"
+     points="228.49 496.63 232.98 504.4 237.47 496.63 228.49 496.63"
+     id="polygon545" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="232.78604"
+     y="34.518776"
+     id="text4677"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4679"
+       x="232.78604"
+       y="34.518776">Proporciona vistas de datos</tspan><tspan
+       sodipodi:role="line"
+       x="232.78604"
+       y="50.143776"
+       id="tspan4681">(React, GraphQL)</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="388.77579"
+     y="31.01178"
+     id="text4677-6"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="388.77579"
+       y="31.01178"
+       id="tspan4681-6"
+       style="font-size:11.25px">Proporcionar vistas de datos</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="475.15268"
+     y="73.966751"
+     id="text4677-4"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="475.15268"
+       y="73.966751"
+       id="tspan4681-9"
+       style="font-size:13.75px">Usuario</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="61.08989"
+     y="72.064659"
+     id="text4677-4-1"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="61.08989"
+       y="72.064659"
+       id="tspan4681-9-1"
+       style="font-size:13.75px">Navegador web</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="151.64111"
+     y="103.09575"
+     id="text4677-6-6"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="151.64111"
+       y="103.09575"
+       id="tspan4681-6-1"
+       style="font-size:11.25px">Sirve a la IU,</tspan><tspan
+       sodipodi:role="line"
+       x="151.64111"
+       y="117.15825"
+       style="font-size:11.25px"
+       id="tspan4754">transportar datos al navegador</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="147.31795"
+     y="187.54362"
+     id="text4677-6-6-5"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="147.31795"
+       y="187.54362"
+       id="tspan4681-6-1-7"
+       style="font-size:11.25px">Solo almacena conocimiento</tspan><tspan
+       sodipodi:role="line"
+       x="147.31795"
+       y="201.60612"
+       style="font-size:11.25px"
+       id="tspan4754-2">(emociones) en la base de datos</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="234.03387"
+     y="146.75127"
+     id="text4677-9"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="234.03387"
+       y="146.75127"
+       id="tspan4681-8">Node.js, Express, GraphQL</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="222.10071"
+     y="236.52231"
+     id="text4677-9-1"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="222.10071"
+       y="236.52231"
+       id="tspan4681-8-2">Componer base de datos Postgres</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="64.327896"
+     y="158.9341"
+     id="text4677-4-1-7"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="64.327896"
+       y="158.9341"
+       id="tspan4681-9-1-6"
+       style="font-size:13.75px">Nube</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="502.67923"
+     y="140.85109"
+     id="text4677-4-1-1"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="502.67923"
+       y="140.85109"
+       id="tspan4681-9-1-7"
+       style="font-size:13.75px">IBM Functions</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="505.23135"
+     y="157.68814"
+     id="text4677-9-0"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="506.96475"
+       y="157.68814"
+       id="tspan4681-8-7">Acción de radio </tspan><tspan
+       sodipodi:role="line"
+       x="505.23135"
+       y="173.31314"
+       id="tspan4882">definida por software</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="502.83374"
+     y="237.02199"
+     id="text4677-9-0-0"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="502.83374"
+       y="237.02199"
+       id="tspan4882-1">Desencadenante</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="506.36682"
+     y="269.5177"
+     id="text4677-6-6-5-6"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="506.36682"
+       y="269.5177"
+       style="font-size:11.25px;text-align:start;text-anchor:start"
+       id="tspan4930">Un mensaje desencadena la acción</tspan><tspan
+       sodipodi:role="line"
+       x="506.36682"
+       y="283.5802"
+       style="font-size:11.25px;text-align:start;text-anchor:start"
+       id="tspan4934">de radio definida por software</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="804.87054"
+     y="145.48656"
+     id="text4677-4-9"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="804.87054"
+       y="145.48656"
+       id="tspan4681-9-3"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold'">IBM Watson</tspan><tspan
+       sodipodi:role="line"
+       x="804.87054"
+       y="162.67406"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold'"
+       id="tspan4954">Speech to Text</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="803.61328"
+     y="220.98315"
+     id="text4677-4-9-0"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="803.61328"
+       y="220.98315"
+       id="tspan4681-9-3-7"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold'">IBM Watson</tspan><tspan
+       sodipodi:role="line"
+       x="803.61328"
+       y="238.17065"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold'"
+       id="tspan4954-9">Natural Language Understanding</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="808.68134"
+     y="119.16674"
+     id="text4677-6-6-57"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="808.68134"
+       y="119.16674"
+       style="font-size:11.25px"
+       id="tspan4754-3">Convertir audiotexto, analizar emociones</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="59.392956"
+     y="436.58981"
+     id="text4677-4-1-7-6"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="59.392956"
+       y="436.58981"
+       id="tspan4681-9-1-6-0"
+       style="font-size:15px">Nodo periférico</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="233.129"
+     y="395.68066"
+     id="text4677-9-1-4"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="233.129"
+       y="395.68066"
+       id="tspan4681-8-2-4">Servicio sdr2msghub</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="232.04276"
+     y="460.20206"
+     id="text4677-9-1-4-4"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="232.04276"
+       y="460.20206"
+       id="tspan4681-8-2-4-3">Servicio sdr</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="233.69441"
+     y="523.88226"
+     id="text4677-9-1-4-9"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="233.69441"
+       y="523.88226"
+       id="tspan4681-8-2-4-1">Sensor sdr</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="239.22772"
+     y="419.25015"
+     id="text4677-6-6-5-8"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="239.22772"
+       y="419.25015"
+       id="tspan4681-6-1-7-6"
+       style="font-size:11.25px;text-align:start;text-anchor:start">Utilizar aprendizaje automático para seleccionar las</tspan><tspan
+       sodipodi:role="line"
+       x="239.22772"
+       y="433.31265"
+       style="font-size:11.25px;text-align:start;text-anchor:start"
+       id="tspan4754-2-9">mejores emisoras de radio; envía audio a la nube</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="239.8161"
+     y="483.90015"
+     id="text4677-6-6-5-8-3"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="239.8161"
+       y="483.90015"
+       id="tspan4681-6-1-7-6-5"
+       style="font-size:11.25px;text-align:start;text-anchor:start">Recuperar clips de audio</tspan><tspan
+       sodipodi:role="line"
+       x="239.8161"
+       y="497.96265"
+       style="font-size:11.25px;text-align:start;text-anchor:start"
+       id="tspan4754-2-9-1">de estaciones de radio</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="471.68356"
+     y="462.32281"
+     id="text4677-9-0-0-5"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="471.68356"
+       y="462.32281"
+       id="tspan4882-1-0">Agente de Horizon</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="502.52039"
+     y="316.34354"
+     id="text4677-4-9-6"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="502.52039"
+       y="316.34354"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold'"
+       id="tspan4954-8">IBM Event Streams</tspan></text>
+</svg>

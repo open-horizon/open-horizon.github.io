@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 902 611"
+   style="enable-background:new 0 0 902 611;"
+   xml:space="preserve"
+   sodipodi:docname="03b_Developing_edge_service_for_cluster.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"><metadata
+   id="metadata231"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs229" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1366"
+   inkscape:window-height="705"
+   id="namedview227"
+   showgrid="false"
+   inkscape:zoom="0.77250409"
+   inkscape:cx="230.78677"
+   inkscape:cy="348.19828"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style2">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#4589FF;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#F4F4F4;}
+	.st2{fill:#BEBEBE;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#E3F6FF;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#0F62FE;}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#009D9A;}
+	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#DCDCDC;}
+	.st8{fill:none;stroke:#BEBEBE;stroke-width:2;}
+	.st9{fill-rule:evenodd;clip-rule:evenodd;fill:#001D6C;}
+	.st10{fill-rule:evenodd;clip-rule:evenodd;fill:none;}
+	.st11{fill:#161616;}
+	.st12{font-family:'IBMPlexSans';}
+	.st13{font-size:14px;}
+	.st14{fill:#F4F4F4;}
+	.st15{font-family:'IBMPlexSans-Medium';}
+	.st16{font-size:16px;}
+	.st17{font-size:12px;}
+	.st18{fill:none;}
+	.st19{fill:none;stroke:#BEBEBE;stroke-width:2;stroke-miterlimit:10;}
+</style>
+<rect
+   id="Rectangle-Copy-52"
+   x="584"
+   y="342"
+   class="st0"
+   width="318"
+   height="269"
+   style="" />
+<path
+   id="Shape"
+   class="st1"
+   d="M608,365.5c0.8,0,1.5-0.7,1.5-1.5s-0.7-1.5-1.5-1.5c-0.8,0-1.5,0.7-1.5,1.5S607.2,365.5,608,365.5z   M608,363.5c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5c-0.3,0-0.5-0.2-0.5-0.5S607.7,363.5,608,363.5z M612.8,367.9  c0.8,0,1.5-0.7,1.5-1.5s-0.7-1.5-1.5-1.5c-0.8,0-1.5,0.7-1.5,1.5S612,367.9,612.8,367.9z M612.8,365.9c0.3,0,0.5,0.2,0.5,0.5  c0,0.3-0.2,0.5-0.5,0.5s-0.5-0.2-0.5-0.5C612.3,366.1,612.5,365.9,612.8,365.9L612.8,365.9z M602.2,370.1c-0.8,0-1.5,0.7-1.5,1.5  s0.7,1.5,1.5,1.5c0.8,0,1.5-0.7,1.5-1.5S603.1,370.1,602.2,370.1z M602.2,372.1c-0.3,0-0.5-0.2-0.5-0.5c0-0.3,0.2-0.5,0.5-0.5  s0.5,0.2,0.5,0.5C602.7,371.9,602.5,372.1,602.2,372.1z M603.2,367.9c0.8,0,1.5-0.7,1.5-1.5s-0.7-1.5-1.5-1.5  c-0.8,0-1.5,0.7-1.5,1.5C601.7,367.2,602.4,367.9,603.2,367.9L603.2,367.9z M603.2,365.9c0.3,0,0.5,0.2,0.5,0.5  c0,0.3-0.2,0.5-0.5,0.5s-0.5-0.2-0.5-0.5C602.7,366.1,602.9,365.9,603.2,365.9L603.2,365.9z M613.8,370.1c-0.8,0-1.5,0.7-1.5,1.5  s0.7,1.5,1.5,1.5c0.8,0,1.5-0.7,1.5-1.5S614.6,370.1,613.8,370.1z M613.8,372.1c-0.3,0-0.5-0.2-0.5-0.5c0-0.3,0.2-0.5,0.5-0.5  c0.3,0,0.5,0.2,0.5,0.5C614.3,371.9,614,372.1,613.8,372.1z M610.4,374c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5  c0.8,0,1.5-0.7,1.5-1.5S611.3,374,610.4,374L610.4,374z M610.4,376c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5c0.3,0,0.5,0.2,0.5,0.5  c0,0.1-0.1,0.3-0.1,0.4C610.7,375.9,610.6,376,610.4,376z M605.6,374c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5c0.8,0,1.5-0.7,1.5-1.5  S606.4,374,605.6,374L605.6,374z M605.6,376c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5c0.3,0,0.5,0.2,0.5,0.5  C606.1,375.8,605.8,376,605.6,376z M611,370c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3s1.3,3,3,3C609.7,373,611,371.7,611,370z M608,372  c-1.1,0-2-0.9-2-2c0-1.1,0.9-2,2-2s2,0.9,2,2c0,0.5-0.2,1-0.6,1.4C609,371.8,608.5,372,608,372z"
+   style="" />
+<path
+   id="Line-4"
+   class="st2"
+   d="M25.5,59.8V316H388V169h-6l7-14l7,14h-6v149H23.5V59.8H25.5z"
+   style="" />
+<circle
+   id="Oval-Copy-3"
+   class="st3"
+   cx="660"
+   cy="25"
+   r="24"
+   style="" />
+<path
+   id="Shape_1_"
+   class="st4"
+   d="M655,28c2.8,0,5,2.2,5,5v6h-2v-6c0-1.7-1.3-3-3-3h-4c-1.7,0-3,1.3-3,3v6h-2v-6c0-2.8,2.2-5,5-5  H655z M653,16c2.8,0,5,2.2,5,5s-2.2,5-5,5s-5-2.2-5-5S650.2,16,653,16z M671.6,16l1.4,1.4l-7.1,7.1l-3.9-3.9l1.4-1.4l2.5,2.5  L671.6,16z M653,18c-1.7,0-3,1.3-3,3c0,1.7,1.3,3,3,3s3-1.3,3-3S654.7,18,653,18z"
+   style="" />
+<circle
+   id="Oval-Copy-3_1_"
+   class="st3"
+   cx="24"
+   cy="25"
+   r="24"
+   style="" />
+<path
+   id="Shape_2_"
+   class="st4"
+   d="M19,28c2.8,0,5,2.2,5,5v6h-2v-6c0-1.7-1.3-3-3-3h-4c-1.7,0-3,1.3-3,3v6h-2v-6c0-2.8,2.2-5,5-5H19  z M17,16c2.8,0,5,2.2,5,5s-2.2,5-5,5s-5-2.2-5-5S14.2,16,17,16z M32.1,14.9l1.8,0.4l-2.4,10.4l-1.8-0.4L32.1,14.9z M26.9,16.6  l1.4,1.2l-2.1,2.6l2.1,2.6L26.9,24l-3.1-3.7L26.9,16.6z M36.7,16.6l3.1,3.7L36.7,24l-1.4-1.2l2.1-2.6l-2.1-2.6L36.7,16.6z M17,18  c-1.7,0-3,1.3-3,3c0,1.7,1.3,3,3,3s3-1.3,3-3S18.7,18,17,18z"
+   style="" />
+<rect
+   id="Rectangle-Copy-14"
+   x="157.47246"
+   y="342"
+   class="st5"
+   width="250"
+   height="172"
+   style="clip-rule:evenodd;fill:#009d9a;fill-rule:evenodd" />
+<rect
+   id="Rectangle-Copy-16"
+   x="600"
+   y="401"
+   class="st6"
+   width="80"
+   height="81"
+   style="" />
+<rect
+   id="Rectangle-Copy-16_1_"
+   x="806"
+   y="401"
+   class="st6"
+   width="80"
+   height="121"
+   style="" />
+<rect
+   id="Rectangle-Copy-16_2_"
+   x="600"
+   y="514"
+   class="st6"
+   width="80"
+   height="81"
+   style="" />
+<path
+   id="Line-2-Copy-24"
+   class="st2"
+   d="M792,434l14,7l-14,7v-6H680v-2h112V434z"
+   style="" />
+<path
+   id="Line-2-Copy-26"
+   class="st2"
+   d="M847,522v35.6l-153,0v6l-14-7l14-7v6h151V522H847z"
+   style="" />
+<circle
+   id="Oval-Copy-3_2_"
+   class="st7"
+   cx="24"
+   cy="82"
+   r="13"
+   style="" />
+<circle
+   id="Oval-Copy-3_3_"
+   class="st7"
+   cx="24"
+   cy="155"
+   r="13"
+   style="" />
+<circle
+   id="Oval-Copy-3_4_"
+   class="st7"
+   cx="24"
+   cy="246"
+   r="13"
+   style="" />
+<circle
+   id="Oval-Copy-3_5_"
+   class="st3"
+   cx="737"
+   cy="232"
+   r="24"
+   style="" />
+<path
+   id="Shape_3_"
+   class="st4"
+   d="M732,235c2.8,0,5,2.2,5,5v6h-2v-6c0-1.7-1.3-3-3-3h-4c-1.7,0-3,1.3-3,3v6h-2v-6c0-2.8,2.2-5,5-5  H732z M730,223c2.8,0,5,2.2,5,5s-2.2,5-5,5s-5-2.2-5-5S727.2,223,730,223z M743,231v2h-2v-2H743z M748,231v2h-2v-2H748z M730,225  c-1.7,0-3,1.3-3,3c0,1.7,1.3,3,3,3s3-1.3,3-3S731.7,225,730,225z M751,228v2h-2v-2H751z M740,228v2h-2v-2H740z M748,223v7h-7v-7H748  z M746,225h-3v3h3V225z M751,223v2h-2v-2H751z M740,223v2h-2v-2H740z M743,220v2h-2v-2H743z M748,220v2h-2v-2H748z"
+   style="" />
+<path
+   id="Line-8"
+   class="st2"
+   d="M25.5,315.5v104H137v-6l14,7l-14,7v-6H23.5v-106H25.5z"
+   style="" />
+<path
+   id="Path-8"
+   class="st2"
+   d="M566,471.8V497h226v-6l14,7l-14,7v-6H564v-25.2l-163,0v-2H566z"
+   style="" />
+<path
+   id="Path-7"
+   class="st2"
+   d="M566,155v270.5h20v-6l14,7l-14,7v-6h-22V155H566z"
+   style="" />
+<line
+   id="Path-9-Copy"
+   class="st8"
+   x1="736.3"
+   y1="342"
+   x2="736.3"
+   y2="266"
+   style="" />
+<rect
+   id="Rectangle-Copy-50"
+   x="374"
+   class="st9"
+   width="210"
+   height="155"
+   style="" />
+<rect
+   id="Rectangle-Copy-16_4_"
+   x="486"
+   y="57"
+   class="st6"
+   width="80"
+   height="81"
+   style="" />
+<rect
+   id="Rectangle-Copy-16_5_"
+   x="390"
+   y="57"
+   class="st6"
+   width="80"
+   height="81"
+   style="" />
+<rect
+   x="401"
+   y="227.7"
+   class="st10"
+   width="131.8"
+   height="59.5"
+   id="rect29"
+   style="" />
+<text
+   id="text37"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP'"
+   x="392.99399"
+   y="238.0347"><tspan
+     x="392.99399"
+     y="238.0347"
+     class="st11 st12 st13"
+     id="tspan31"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616">2. サービス・メタデータを</tspan><tspan
+     x="392.99399"
+     y="258.0347"
+     class="st11 st12 st13"
+     id="tspan33"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616">管理ハブに</tspan><tspan
+     x="392.99399"
+     y="278.0347"
+     class="st11 st12 st13"
+     id="tspan35"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616">公開する</tspan></text>
+
+
+<rect
+   x="37"
+   y="351.7"
+   class="st10"
+   width="95.9"
+   height="42.2"
+   id="rect39"
+   style="" />
+<text
+   id="text45"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP'"
+   x="32.993999"
+   y="362.07211"><tspan
+     x="32.993999"
+     y="362.07211"
+     class="st11 st12 st13"
+     id="tspan41"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616">1. コンテナーを</tspan><tspan
+     x="32.993999"
+     y="382.07211"
+     class="st11 st12 st13"
+     id="tspan43"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616">プッシュする</tspan></text>
+
+
+<rect
+   x="13.9"
+   y="75.7"
+   class="st10"
+   width="20"
+   height="12.2"
+   id="rect47"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 19.4294 86.0119)"
+   class="st11 st12 st13"
+   id="text49"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">A</text>
+
+
+<rect
+   x="13.9"
+   y="148.7"
+   class="st10"
+   width="20"
+   height="13.4"
+   id="rect51"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 19.3455 159.0499)"
+   class="st11 st12 st13"
+   id="text53"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">B</text>
+
+
+<rect
+   x="15.2"
+   y="239.7"
+   class="st10"
+   width="17.5"
+   height="13.4"
+   id="rect55"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 19.5696 250.0679)"
+   class="st11 st12 st13"
+   id="text57"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">C</text>
+
+
+<rect
+   x="577"
+   y="227.7"
+   class="st10"
+   width="88.8"
+   height="59.5"
+   id="rect59"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 576.994 238.0347)"
+   id="text65"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st11 st12 st13"
+     id="tspan61"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">5. サービスを</tspan><tspan
+     x="0"
+     y="20"
+     class="st11 st12 st13"
+     id="tspan63"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">デプロイする</tspan></text>
+
+
+<rect
+   x="748"
+   y="285.7"
+   class="st10"
+   width="130.8"
+   height="43.3"
+   id="rect67"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 747.994 296.0494)"
+   id="text73"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st11 st12 st13"
+     id="tspan69"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">4. パターンまたは</tspan><tspan
+     x="0"
+     y="20"
+     class="st11 st12 st13"
+     id="tspan71"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">ノード・ポリシーに登録する</tspan></text>
+
+
+<rect
+   x="401.4"
+   y="448.6"
+   class="st10"
+   width="163"
+   height="14.6"
+   id="rect75"
+   style="" />
+<text
+   class="st11 st12 st13"
+   id="text77"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616"
+   x="417.4718"
+   y="458.99561">6. コンテナーをプルする</text>
+
+
+<rect
+   x="672"
+   y="66.7"
+   class="st10"
+   width="175.7"
+   height="57.4"
+   id="rect79"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 671.994 77.0378)"
+   id="text87"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st11 st12 st13"
+     id="tspan81"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">3. サービスを正しいエッジ・ノードに</tspan><tspan
+     x="0"
+     y="20"
+     class="st11 st12 st13"
+     id="tspan83"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">デプロイするためのパターンまたは</tspan><tspan
+     x="0"
+     y="40"
+     class="st11 st12 st13"
+     id="tspan85"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">ポリシーを作成する</tspan></text>
+
+
+<rect
+   x="773"
+   y="225.7"
+   class="st10"
+   width="100"
+   height="15.4"
+   id="rect89"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 773.0168 236.0392)"
+   class="st11 st12 st13"
+   id="text91"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">ノード所有者</text>
+
+
+<rect
+   x="692"
+   y="18.7"
+   class="st10"
+   width="100"
+   height="15.4"
+   id="rect93"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 692.0239 29.0511)"
+   class="st11 st12 st13"
+   id="text95"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">管理者</text>
+
+
+<rect
+   x="390"
+   y="20.2"
+   class="st10"
+   width="187"
+   height="15.6"
+   id="rect97"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 389.9941 32.0859)"
+   class="st14 st15 st16"
+   id="text99"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">管理ハブ</text>
+
+
+<rect
+   x="622"
+   y="362.2"
+   class="st10"
+   width="236.1"
+   height="15.6"
+   id="rect101"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 621.9941 374.0154)"
+   class="st14 st15 st16"
+   id="text103"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">エッジ・ノード</text>
+
+
+<rect
+   x="805.9"
+   y="434.6"
+   class="st10"
+   width="80"
+   height="56.3"
+   id="rect105"
+   style="" />
+<text
+   id="text113"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
+   x="847.9978"
+   y="445.0018"><tspan
+     sodipodi:role="line"
+     id="tspan233"
+     x="847.9978"
+     y="445.0018">エッジ・</tspan><tspan
+     sodipodi:role="line"
+     id="tspan235"
+     x="847.9978"
+     y="462.5018">サービス・</tspan><tspan
+     sodipodi:role="line"
+     id="tspan237"
+     x="847.9978"
+     y="480.0018">オペ</tspan><tspan
+     sodipodi:role="line"
+     id="tspan239"
+     x="847.9978"
+     y="497.5018">レーター</tspan></text>
+
+
+<rect
+   x="609.4"
+   y="428.7"
+   class="st10"
+   width="61.1"
+   height="35.7"
+   id="rect115"
+   style="" />
+<text
+   id="text121"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
+   x="642.00928"
+   y="439.0639"><tspan
+     x="642.00928"
+     y="439.0639"
+     class="st11 st12 st13"
+     id="tspan117"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#161616">エッジ・</tspan><tspan
+     x="639.9093"
+     y="459.0639"
+     class="st11 st12 st13"
+     id="tspan119"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#161616">エージェント</tspan></text>
+
+
+<rect
+   x="609.4"
+   y="541.8"
+   class="st10"
+   width="61.1"
+   height="35.7"
+   id="rect123"
+   style="" />
+<text
+   id="text129"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP'"
+   x="616.00928"
+   y="552.11517"><tspan
+     x="616.00928"
+     y="552.11517"
+     class="st11 st12 st13"
+     id="tspan125"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616">エッジ・</tspan><tspan
+     x="609.10931"
+     y="572.11517"
+     class="st11 st12 st13"
+     id="tspan127"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616">サービス</tspan></text>
+
+
+<rect
+   x="679.3"
+   y="416.6"
+   class="st10"
+   width="111.2"
+   height="13.7"
+   id="rect131"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 710.834 427.0049)"
+   class="st14 st12 st13"
+   id="text133"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">7. 実行する</text>
+
+
+<rect
+   x="694.5"
+   y="532.6"
+   class="st10"
+   width="150.7"
+   height="13.7"
+   id="rect135"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 742.8313 543.0037)"
+   class="st14 st12 st13"
+   id="text137"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">8. 開始する</text>
+
+
+<rect
+   x="485.9"
+   y="90.7"
+   class="st10"
+   width="80"
+   height="14.9"
+   id="rect139"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 494.9846 101.0283)"
+   class="st11 st12 st13"
+   id="text141"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">Exchange</text>
+
+
+<rect
+   x="389.9"
+   y="90.7"
+   class="st10"
+   width="80"
+   height="14.9"
+   id="rect143"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 410.9753 101.0283)"
+   class="st11 st12 st13"
+   id="text145"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">Agbot</text>
+
+
+<rect
+   x="45"
+   y="76.6"
+   class="st10"
+   width="280.6"
+   height="15.7"
+   id="rect147"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 44.994 87.0001)"
+   class="st11 st12 st13"
+   id="text149"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">開発者資格情報を作成する</text>
+
+
+<rect
+   x="63"
+   y="18.7"
+   class="st10"
+   width="172.6"
+   height="15.7"
+   id="rect151"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 63.0028 29.0389)"
+   class="st11 st12 st13"
+   id="text153"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">ソフトウェア開発者</text>
+
+
+<rect
+   x="45"
+   y="148.5"
+   class="st10"
+   width="283.4"
+   height="15.7"
+   id="rect155"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 44.994 158.9073)"
+   class="st11 st12 st13"
+   id="text157"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">エッジ・サービス・オペレーターを開発する</text>
+
+
+<rect
+   x="45"
+   y="239.7"
+   class="st10"
+   width="293.1"
+   height="15.7"
+   id="rect159"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 44.994 250.0562)"
+   class="st11 st12 st13"
+   id="text161"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">署名して管理ハブに公開する</text>
+
+
+<rect
+   x="54"
+   y="100.1"
+   class="st10"
+   width="271.6"
+   height="41.3"
+   id="rect163"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 53.994 108.9678)"
+   id="text169"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st11 st12 st17"
+     id="tspan165"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">• ユーザー・アカウントを作成する</tspan><tspan
+     x="0"
+     y="16"
+     class="st11 st12 st17"
+     id="tspan167"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">• 署名鍵ペア (ステップ C で使用) を作成する</tspan></text>
+
+
+<rect
+   x="54"
+   y="172.1"
+   class="st10"
+   width="271.6"
+   height="48.5"
+   id="rect171"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 53.994 181.0086)"
+   id="text179"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st11 st12 st17"
+     id="tspan173"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">• サービスの yaml 定義ファイルを含んでいる</tspan><tspan
+     x="0"
+     y="16"
+     class="st11 st12 st17"
+     id="tspan175"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">アーカイブを作成する</tspan><tspan
+     x="0"
+     y="32"
+     class="st11 st12 st17"
+     id="tspan177"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">• Open Horizon メタデータ・ファイルを作成する</tspan></text>
+
+
+<rect
+   x="54"
+   y="263.2"
+   class="st10"
+   width="271.6"
+   height="31.3"
+   id="rect181"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 53.994 272.0575)"
+   id="text187"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st11 st12 st17"
+     id="tspan183"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">• プッシュし、署名し、コンテナーを公開する</tspan><tspan
+     x="0"
+     y="16"
+     class="st11 st12 st17"
+     id="tspan185"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">• サービス・ポリシー・コンテナーを追加する</tspan></text>
+
+
+<g
+   id="g204"
+   style="">
+	<rect
+   x="187"
+   y="359.9"
+   class="st10"
+   width="162.3"
+   height="15.6"
+   id="rect189"
+   style="" />
+	<text
+   transform="matrix(1 0 0 1 186.9997 371.7318)"
+   class="st14 st15 st16"
+   id="text191"
+   style=""><tspan
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+     id="tspan132">コンテナー・レジストリー</tspan></text>
+
+
+	<g
+   id="g202"
+   style="">
+		<path
+   class="st14"
+   d="M179,359.5h-8c-0.6,0-1,0.4-1,1v11c0,0.6,0.4,1,1,1h8c0.6,0,1-0.4,1-1v-11C180,359.9,179.6,359.5,179,359.5z     M179,360.5v3h-8v-3H179z M171,367.5v-3h8v3H171z M171,371.5v-3h8v3H171z"
+   id="path193"
+   style="" />
+		<circle
+   class="st14"
+   cx="172.5"
+   cy="362"
+   r="0.5"
+   id="circle195"
+   style="" />
+		<circle
+   class="st14"
+   cx="172.5"
+   cy="366"
+   r="0.5"
+   id="circle197"
+   style="" />
+		<circle
+   class="st14"
+   cx="172.5"
+   cy="370"
+   r="0.5"
+   id="circle199"
+   style="" />
+		<rect
+   id="_x3C_Transparent_Rectangle_x3E__616_"
+   x="167"
+   y="358"
+   class="st18"
+   width="16"
+   height="16"
+   style="" />
+	</g>
+</g>
+<g
+   id="g214"
+   style="">
+	<g
+   id="g212"
+   style="">
+		<polyline
+   class="st19"
+   points="736,197 736,141 594,141   "
+   id="polyline206"
+   style="" />
+		<g
+   id="g210"
+   style="">
+			<polygon
+   class="st2"
+   points="596.1,134 584,141 596.1,148    "
+   id="polygon208"
+   style="" />
+		</g>
+	</g>
+</g>
+<g
+   id="g224"
+   style="">
+	<g
+   id="g222"
+   style="">
+		<polyline
+   class="st19"
+   points="660,60.1 660,117 594,117   "
+   id="polyline216"
+   style="" />
+		<g
+   id="g220"
+   style="">
+			<polygon
+   class="st2"
+   points="596.1,110 584,117 596.1,124    "
+   id="polygon218"
+   style="" />
+		</g>
+	</g>
+</g>
+</svg>

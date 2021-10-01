@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1048 688" style="enable-background:new 0 0 1048 688;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#051B75;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:none;}
+	.st3{fill:#161616;}
+	.st4{font-family:'IBMPlexSans';}
+	.st5{font-size:14px;}
+	.st6{fill:#F4F4F4;}
+	.st7{font-family:'IBMPlexSans-Medium';}
+	.st8{font-size:16px;}
+	.st9{fill:#009C98;}
+	.st10{fill:#BEBEBE;}
+	.st11{enable-background:new    ;}
+	.st12{fill:#E3F6FF;}
+	.st13{fill:#0F62FE;}
+	.st14{display:none;}
+	.st15{display:inline;fill:#0F62FE;}
+	.st16{fill:none;stroke:#0F62FE;stroke-width:2;stroke-miterlimit:10;}
+	.st17{display:none;fill:none;stroke:#0F62FE;stroke-width:2;stroke-miterlimit:10;}
+	.st18{fill:none;stroke:#BEBEBE;stroke-width:2;}
+	.st19{fill:none;stroke:#BEBEBE;stroke-width:2;stroke-dasharray:7,7;}
+	.st20{fill:#408BFC;}
+	.st21{fill:none;stroke:#00BAB6;stroke-width:2;stroke-dasharray:7;}
+	.st22{font-size:12px;}
+	.st23{fill:none;stroke:#BEBEBE;stroke-width:2;stroke-dasharray:7;}
+</style>
+<rect id="Rectangle-Copy-12" x="306" y="34.4" class="st0" width="363.3" height="231.6"/>
+<g>
+	<rect id="Rectangle-Copy-16_2_" x="494.8" y="88.1" class="st1" width="70.5" height="81"/>
+	<rect x="494.9" y="121.5" class="st2" width="70.4" height="15.6"/>
+	<text transform="matrix(1 0 0 1 502.514 134.5184)" class="st3 st4 st5">Échange</text>
+</g>
+<g>
+	<rect id="Rectangle-Copy-16_4_" x="583.5" y="168.1" class="st1" width="70.5" height="81"/>
+	<rect x="583.4" y="192.5" class="st2" width="70.6" height="33.5"/>
+</g>
+<rect x="323.1" y="54.5" class="st2" width="236.1" height="15.6"/>
+<text transform="matrix(1 0 0 1 323.1044 66.3727)" class="st6 st7 st8">Concentrateur de gestion</text>
+<g>
+	<rect id="Rectangle-Copy-14_1_" x="849.7" y="34.4" class="st9" width="174" height="99.3"/>
+	<rect x="865.7" y="54.5" class="st2" width="150.2" height="59.4"/>
+</g>
+<g>
+	<rect id="Rectangle-Copy-16_3_" x="255.7" y="336.2" class="st10" width="146.7" height="81"/>
+	<rect x="271.7" y="354.8" class="st2" width="112.9" height="29.7"/>
+	<rect x="266.7" y="349" class="st2" width="117.8" height="36.9"/>
+	<text transform="matrix(1 0 0 1 266.7004 362.6173)" class="st11"><tspan x="0" y="0" class="st1 st7 st8">Quai de </tspan><tspan x="0" y="19.2" class="st1 st7 st8">chargement</tspan></text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 345.9136 503.8239)" class="st3 st4 st5">Technicien de noeud</text>
+	<g id="Group-2_3_" transform="translate(21.000000, 0.000000)">
+		<circle id="Oval-Copy-3_3_" class="st12" cx="387.6" cy="460.1" r="24"/>
+		<path class="st13" d="M382.6,463.1c2.8,0,5,2.2,5,5v6h-2v-6c0-1.7-1.3-3-3-3h-4c-1.7,0-3,1.3-3,3v6h-2v-6c0-2.8,2.2-5,5-5H382.6z"
+			/>
+		<g>
+			<g>
+				<path class="st13" d="M380.6,451.1c-2.8,0-5,2.2-5,5s2.2,5,5,5s5-2.2,5-5S383.4,451.1,380.6,451.1z M380.6,459.1
+					c-1.7,0-3-1.3-3-3s1.3-3,3-3s3,1.3,3,3S382.2,459.1,380.6,459.1z"/>
+			</g>
+		</g>
+		<g class="st14">
+			<rect x="409.6" y="459.1" class="st15" width="2" height="2"/>
+			<rect x="414.6" y="459.1" class="st15" width="2" height="2"/>
+			<rect x="417.6" y="456.1" class="st15" width="2" height="2"/>
+			<rect x="406.6" y="456.1" class="st15" width="2" height="2"/>
+			<rect x="409.6" y="451.1" class="st15" width="7" height="7"/>
+			<rect x="411.6" y="453.1" class="st15" width="3" height="3"/>
+			<rect x="417.6" y="451.1" class="st15" width="2" height="2"/>
+			<rect x="406.6" y="451.1" class="st15" width="2" height="2"/>
+			<rect x="409.6" y="448.1" class="st15" width="2" height="2"/>
+			<rect x="414.6" y="448.1" class="st15" width="2" height="2"/>
+		</g>
+		<g class="st14">
+			<path class="st15" d="M408.6,457.1c-1.1,0-2,0.9-2,2s0.9,2,2,2s2-0.9,2-2S409.7,457.1,408.6,457.1L408.6,457.1z"/>
+		</g>
+		<g>
+			<line class="st16" x1="400" y1="464.4" x2="400" y2="449.8"/>
+			<line class="st17" x1="414.1" y1="453.8" x2="414.1" y2="449.8"/>
+			<line class="st16" x1="404" y1="451.8" x2="396" y2="451.8"/>
+		</g>
+		<g>
+			<path class="st16" d="M392.9,450.1c0.8,0.8,0.8,2,0,2.8s-2,0.8-2.8,0s-0.8-2,0-2.8"/>
+			<line class="st16" x1="391.4" y1="464.4" x2="391.4" y2="453.7"/>
+		</g>
+	</g>
+</g>
+<g class="st14">
+	<rect x="141.2" y="444.4" class="st15" width="2" height="2"/>
+	<rect x="146.2" y="444.4" class="st15" width="2" height="2"/>
+	<rect x="149.2" y="441.4" class="st15" width="2" height="2"/>
+	<rect x="138.2" y="441.4" class="st15" width="2" height="2"/>
+	<rect x="141.2" y="436.4" class="st15" width="7" height="7"/>
+	<rect x="143.2" y="438.4" class="st15" width="3" height="3"/>
+	<rect x="149.2" y="436.4" class="st15" width="2" height="2"/>
+	<rect x="138.2" y="436.4" class="st15" width="2" height="2"/>
+	<rect x="141.2" y="433.4" class="st15" width="2" height="2"/>
+	<rect x="146.2" y="433.4" class="st15" width="2" height="2"/>
+</g>
+<g class="st14">
+	<path class="st15" d="M140.2,442.4c-1.1,0-2,0.9-2,2s0.9,2,2,2s2-0.9,2-2S141.3,442.4,140.2,442.4L140.2,442.4z"/>
+</g>
+<g>
+	<g>
+		<polyline class="st18" points="617.5,259.2 617.5,303.1 84.9,303.1 84.9,285.9 		"/>
+		<g>
+			<polygon class="st10" points="610.5,261.2 617.5,249.1 624.4,261.2 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<polyline class="st18" points="72.9,506.6 72.9,347.4 56.5,347.4 56.5,296 		"/>
+		<g>
+			<polygon class="st10" points="79.9,504.6 72.9,516.7 65.9,504.6 			"/>
+		</g>
+		<g>
+			<polygon class="st10" points="63.4,298 56.5,285.9 49.5,298 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<polyline class="st18" points="96.7,540.6 312.9,540.6 312.9,427.3 		"/>
+		<g>
+			<polygon class="st10" points="319.9,429.3 312.9,417.2 305.9,429.3 			"/>
+		</g>
+	</g>
+</g>
+<polyline class="st18" points="375.5,461.2 345.6,461.2 345.6,417.2 "/>
+<g>
+	<g>
+		<line class="st18" x1="792.3" y1="461.2" x2="440.2" y2="461.2"/>
+		<g>
+			<polygon class="st10" points="790.2,454.2 802.3,461.2 790.2,468.2 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st19" x1="275.3" y1="154.3" x2="484.7" y2="154.3"/>
+		<g>
+			<polygon class="st10" points="482.7,161.3 494.8,154.3 482.7,147.3 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<polyline class="st19" points="664,226 702.4,226 702.4,436.1 792.3,436.1 		"/>
+		<g>
+			<polygon class="st10" points="666.1,233 654,226 666.1,219 			"/>
+		</g>
+		<g>
+			<polygon class="st10" points="790.2,443.1 802.3,436.1 790.2,429.2 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<polyline class="st19" points="955.6,377.8 955.6,294.7 872.2,294.7 872.2,143.7 		"/>
+		<g>
+			<polygon class="st10" points="962.5,375.8 955.6,387.9 948.6,375.8 			"/>
+		</g>
+		<g>
+			<polygon class="st10" points="879.1,145.7 872.2,133.6 865.2,145.7 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st19" x1="573.4" y1="208.6" x2="275.3" y2="208.6"/>
+		<g>
+			<polygon class="st10" points="571.4,201.6 583.4,208.6 571.4,215.6 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<polyline class="st19" points="654,208.6 690,208.6 690,81 839.6,81 		"/>
+		<g>
+			<polygon class="st10" points="837.6,88 849.7,81 837.6,74 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<rect x="49" y="516.7" class="st12" width="47.8" height="47.8"/>
+		<path class="st13" d="M86.4,531.7c-0.3-0.2-0.7-0.2-1,0l-8.5,4.2v-3.4c0-0.6-0.5-1-1-1c-0.2,0-0.3,0-0.4,0.1l-8.5,4.3v-7.4
+			c0-0.6-0.4-1-1-1h-6c-0.6,0-1,0.4-1,1v25h28v-21C86.9,532.2,86.7,531.9,86.4,531.7z M78.9,551.6h-4v-7h4V551.6z M84.9,551.6h-4v-8
+			c0-0.6-0.4-1-1-1h-6c-0.6,0-1,0.4-1,1v8h-12v-22h4v9.6l10-5v5l10-5V551.6z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<rect id="Rectangle-Copy-14" x="829.7" y="412.4" class="st20" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_4_" class="st6" d="M161.1,80.5c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5
+				c0,1.1-0.9,2-2,2h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5v-0.1
+				C160.1,80.9,160.5,80.5,161.1,80.5z M164.1,84.5h-8c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8c0.5,0,0.9-0.4,1-0.9
+				v-0.1v-5c0-0.5-0.4-0.9-0.9-1H164.1z M162.6,89.5c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5c-0.3,0-0.5-0.2-0.5-0.5
+				s0.2-0.5,0.5-0.5H162.6z M157.6,85.5c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5C156.1,86.1,156.8,85.5,157.6,85.5
+				z M162.6,85.5c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5C161.1,86.1,161.8,85.5,162.6,85.5z M157.6,86.5
+				c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S157.9,86.5,157.6,86.5z M162.6,86.5c-0.3,0-0.5,0.2-0.5,0.5
+				s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S162.9,86.5,162.6,86.5z"/>
+		</g>
+	</g>
+	<g>
+		<rect id="Rectangle-Copy-14_2_" x="875.8" y="412.4" class="st20" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16_1_" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_2_" class="st6" d="M207.2,80.5c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5
+				c0,1.1-0.9,2-2,2h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5v-0.1
+				C206.2,80.9,206.6,80.5,207.2,80.5z M210.2,84.5h-8c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8c0.5,0,0.9-0.4,1-0.9
+				v-0.1v-5c0-0.5-0.4-0.9-0.9-1H210.2z M208.7,89.5c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5c-0.3,0-0.5-0.2-0.5-0.5
+				s0.2-0.5,0.5-0.5H208.7z M203.7,85.5c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5C202.2,86.1,202.8,85.5,203.7,85.5
+				z M208.7,85.5c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5C207.2,86.1,207.8,85.5,208.7,85.5z M203.7,86.5
+				c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S203.9,86.5,203.7,86.5z M208.7,86.5c-0.3,0-0.5,0.2-0.5,0.5
+				s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S208.9,86.5,208.7,86.5z"/>
+		</g>
+	</g>
+	<g>
+		<rect id="Rectangle-Copy-14_3_" x="921.6" y="412.4" class="st20" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16_2_" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_3_" class="st6" d="M253,80.5c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5c0,1.1-0.9,2-2,2
+				h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5v-0.1C252,80.9,252.4,80.5,253,80.5z M256,84.5h-8
+				c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8c0.5,0,0.9-0.4,1-0.9v-0.1v-5c0-0.5-0.4-0.9-0.9-1H256z M254.5,89.5
+				c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5H254.5z M249.5,85.5c0.8,0,1.5,0.7,1.5,1.5
+				s-0.7,1.5-1.5,1.5S248,87.8,248,87C248,86.1,248.6,85.5,249.5,85.5z M254.5,85.5c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5
+				S253,87.8,253,87C253,86.1,253.6,85.5,254.5,85.5z M249.5,86.5c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5
+				S249.7,86.5,249.5,86.5z M254.5,86.5c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S254.7,86.5,254.5,86.5z"/>
+		</g>
+	</g>
+	<g>
+		<rect id="Rectangle-Copy-14_6_" x="829.7" y="454.9" class="st20" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16_5_" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_7_" class="st6" d="M161.1,123c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5
+				c0,1.1-0.9,2-2,2h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5V124
+				C160.1,123.5,160.5,123,161.1,123z M164.1,127h-8c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8c0.5,0,0.9-0.4,1-0.9V133
+				v-5c0-0.5-0.4-0.9-0.9-1H164.1z M162.6,132c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5
+				H162.6z M157.6,128c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5S156.8,128,157.6,128z M162.6,128
+				c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5S161.8,128,162.6,128z M157.6,129c-0.3,0-0.5,0.2-0.5,0.5
+				s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S157.9,129,157.6,129z M162.6,129c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5
+				S162.9,129,162.6,129z"/>
+		</g>
+	</g>
+	<g>
+		<rect id="Rectangle-Copy-14_5_" x="875.8" y="454.9" class="st20" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16_4_" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_6_" class="st6" d="M207.2,123c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5
+				c0,1.1-0.9,2-2,2h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5V124
+				C206.2,123.5,206.6,123,207.2,123z M210.2,127h-8c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8c0.5,0,0.9-0.4,1-0.9V133
+				v-5c0-0.5-0.4-0.9-0.9-1H210.2z M208.7,132c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5
+				H208.7z M203.7,128c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5S202.8,128,203.7,128z M208.7,128
+				c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5S207.8,128,208.7,128z M203.7,129c-0.3,0-0.5,0.2-0.5,0.5
+				s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S203.9,129,203.7,129z M208.7,129c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5
+				S208.9,129,208.7,129z"/>
+		</g>
+	</g>
+	<g>
+		<rect id="Rectangle-Copy-14_4_" x="921.6" y="454.9" class="st20" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16_3_" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_5_" class="st6" d="M253,123c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5c0,1.1-0.9,2-2,2
+				h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5V124C252,123.5,252.4,123,253,123z M256,127h-8
+				c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8c0.5,0,0.9-0.4,1-0.9V133v-5c0-0.5-0.4-0.9-0.9-1H256z M254.5,132
+				c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5H254.5z M249.5,128c0.8,0,1.5,0.7,1.5,1.5
+				s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5S248.6,128,249.5,128z M254.5,128c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5
+				S253.6,128,254.5,128z M249.5,129c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S249.7,129,249.5,129z M254.5,129
+				c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S254.7,129,254.5,129z"/>
+		</g>
+	</g>
+	<g>
+		<rect id="Rectangle-Copy-14_8_" x="965.5" y="412.4" class="st20" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16_7_" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_9_" class="st6" d="M296.9,80.5c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5
+				c0,1.1-0.9,2-2,2h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5v-0.1
+				C295.9,80.9,296.4,80.5,296.9,80.5z M299.9,84.5h-8c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8c0.5,0,0.9-0.4,1-0.9
+				v-0.1v-5c0-0.5-0.4-0.9-0.9-1H299.9z M298.4,89.5c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5c-0.3,0-0.5-0.2-0.5-0.5
+				s0.2-0.5,0.5-0.5H298.4z M293.4,85.5c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5C291.9,86.1,292.6,85.5,293.4,85.5
+				z M298.4,85.5c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5C296.9,86.1,297.6,85.5,298.4,85.5z M293.4,86.5
+				c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S293.7,86.5,293.4,86.5z M298.4,86.5c-0.3,0-0.5,0.2-0.5,0.5
+				s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S298.7,86.5,298.4,86.5z"/>
+		</g>
+	</g>
+	<g>
+		<rect id="Rectangle-Copy-14_7_" x="965.5" y="454.9" class="st20" width="30.8" height="29.2"/>
+		<g id="icon_x2F_device_x2F_16_6_" transform="translate(685.000000, 339.000000)">
+			<path id="Shape_8_" class="st6" d="M296.9,123c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5
+				c0,1.1-0.9,2-2,2h-8c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5V124
+				C295.9,123.5,296.4,123,296.9,123z M299.9,127h-8c-0.5,0-0.9,0.4-1,0.9v0.1v5c0,0.5,0.4,0.9,0.9,1h0.1h8c0.5,0,0.9-0.4,1-0.9V133
+				v-5c0-0.5-0.4-0.9-0.9-1H299.9z M298.4,132c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5
+				H298.4z M293.4,128c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5S292.6,128,293.4,128z M298.4,128
+				c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5S297.6,128,298.4,128z M293.4,129c-0.3,0-0.5,0.2-0.5,0.5
+				s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S293.7,129,293.4,129z M298.4,129c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5
+				S298.7,129,298.4,129z"/>
+		</g>
+	</g>
+	<path id="Rectangle-Copy-17" class="st21" d="M842.3,387.9h140.4c22.1,0,40,17.9,40,40V471c0,22.1-17.9,40-40,40H842.3
+		c-22.1,0-40-17.9-40-40v-43.1C802.3,405.8,820.2,387.9,842.3,387.9z"/>
+	<text transform="matrix(1 0 0 1 783.6468 379.2029)" class="st3 st7 st8">Noeuds de périphérie</text>
+</g>
+<rect x="132.3" y="282.6" class="st2" width="428.2" height="19.5"/>
+<text transform="matrix(1 0 0 1 155.1944 293.9662)" class="st3 st4 st5">1. Génère la clé SDO et l&apos;importe (la première fois seulement).</text>
+<rect x="153.2" y="520.4" class="st2" width="112.5" height="18.3"/>
+<text transform="matrix(1 0 0 1 126.5065 530.7971)" class="st3 st4 st5">4. Dispositifs pour navires</text>
+<rect x="685.9" y="62.3" class="st2" width="153" height="18.1"/>
+<text transform="matrix(1 0 0 1 685.8508 72.6786)" class="st3 st4 st5">3c. Enregistre les bons</text>
+<rect x="323.1" y="134.1" class="st2" width="142.1" height="16.5"/>
+<rect x="323.1" y="117.6" class="st2" width="134.9" height="32.1"/>
+<text transform="matrix(1 0 0 1 323.1046 129.4475)" class="st11"><tspan x="0" y="0" class="st6 st4 st5">3a. Ajoute des noeud </tspan><tspan x="0" y="16.8" class="st6 st4 st5">de périphérie</tspan></text>
+<rect x="323.1" y="189.2" class="st2" width="144.4" height="16.9"/>
+<text transform="matrix(1 0 0 1 323.1041 199.587)" class="st6 st4 st5">3b. Importe les bons</text>
+<g>
+	<g id="Group-2" transform="translate(21.000000, 0.000000)">
+		<circle id="Oval-Copy-3" class="st12" cx="51.4" cy="227.6" r="24"/>
+		<g id="icon_x2F_policy-admin" transform="translate(8.000000, 8.000000)">
+			<path id="Shape" class="st13" d="M38.4,222.6c2.8,0,5,2.2,5,5v6h-2v-6c0-1.7-1.3-3-3-3h-4c-1.7,0-3,1.3-3,3v6h-2v-6
+				c0-2.8,2.2-5,5-5H38.4z M36.4,210.6c2.8,0,5,2.2,5,5s-2.2,5-5,5c-2.8,0-5-2.2-5-5S33.7,210.6,36.4,210.6z M55,210.5l1.4,1.4
+				l-7.1,7.1l-3.9-3.9l1.4-1.4l2.5,2.5L55,210.5z M36.4,212.6c-1.7,0-3,1.3-3,3s1.3,3,3,3c1.7,0,3-1.3,3-3S38.1,212.6,36.4,212.6z"
+				/>
+		</g>
+	</g>
+	<rect x="24.6" y="262.2" class="st2" width="94.5" height="15.5"/>
+	<text transform="matrix(1 0 0 1 24.7344 272.5377)" class="st3 st4 st5">Administrateur</text>
+</g>
+<rect x="276.4" y="305" class="st1" width="12.3" height="12.3"/>
+<g>
+	<rect id="Rectangle-Copy-16_5_" x="218.9" y="140.6" class="st3" width="70.5" height="81"/>
+	<rect x="218.9" y="173.9" class="st2" width="70.5" height="15.6"/>
+	<rect x="225.3" y="166.4" class="st2" width="67.7" height="35.6"/>
+	<text transform="matrix(1 0 0 1 225.3163 178.3274)" class="st11"><tspan x="0" y="0" class="st6 st4 st5">Interface </tspan><tspan x="0" y="16.8" class="st6 st4 st5">CLI</tspan></text>
+</g>
+<g>
+	<g>
+		<polyline class="st18" points="106.6,228 129.6,228 129.6,109.3 254.1,109.3 254.1,130.6 		"/>
+		<g>
+			<polygon class="st10" points="247.1,128.5 254.1,140.6 261.1,128.5 			"/>
+		</g>
+	</g>
+</g>
+<rect x="95.3" y="647.1" class="st2" width="89.1" height="14.5"/>
+<text transform="matrix(1 0 0 1 95.3044 656.042)" class="st3 st4 st22">Actions utilisateur</text>
+<rect x="284.3" y="647.1" class="st2" width="89.1" height="14.5"/>
+<text transform="matrix(1 0 0 1 284.3043 656.042)" class="st3 st4 st22">Actions système</text>
+<line class="st18" x1="24" y1="652.4" x2="83.7" y2="652.4"/>
+<line class="st23" x1="211.4" y1="652.4" x2="271.2" y2="652.4"/>
+<rect x="129" y="68" class="st2" width="128" height="30.6"/>
+<text transform="matrix(1 0 0 1 130.96 78.3599)"><tspan x="0" y="0" class="st3 st4 st5">3. Reçoit et importe </tspan><tspan x="35.9" y="16.8" class="st3 st4 st5">les bons</tspan></text>
+<rect x="93" y="367" class="st2" width="139" height="114.6"/>
+<text transform="matrix(1 0 0 1 93 377.3594)"><tspan x="0" y="0" class="st3 st4 st5">2. Commande des </tspan><tspan x="0" y="16.8" class="st3 st4 st5">périphériques, en </tspan><tspan x="0" y="33.6" class="st3 st4 st5">fournissant la clé </tspan><tspan x="0" y="50.4" class="st3 st4 st5">publique du </tspan><tspan x="0" y="67.2" class="st3 st4 st5">propriétaire SDO. </tspan><tspan x="0" y="84" class="st3 st4 st5">Reçoit les bons de </tspan><tspan x="0" y="100.8" class="st3 st4 st5">propriété.</tspan></text>
+<rect x="448.3" y="423.7" class="st2" width="245.7" height="30.6"/>
+<text transform="matrix(1 0 0 1 448.3333 434.026)"><tspan x="0" y="0" class="st3 st4 st5">5. Se place sur le terrain, connecte le </tspan><tspan x="0" y="16.8" class="st3 st4 st5">réseau et l&apos;alimentation, puis s&apos;allume.</tspan></text>
+<rect x="32" y="572" class="st2" width="83.5" height="30.6"/>
+<text transform="matrix(1 0 0 1 34.3408 582.3594)"><tspan x="0" y="0" class="st3 st4 st5">Fabricant du </tspan><tspan x="13.2" y="16.8" class="st3 st4 st5">matériel</tspan></text>
+<rect x="588.5" y="194" class="st2" width="61" height="30.6"/>
+<text transform="matrix(1 0 0 1 595.9629 204.3594)"><tspan x="0" y="0" class="st3 st4 st5">Service </tspan><tspan x="9.3" y="16.8" class="st3 st4 st5">SDO</tspan></text>
+<rect x="711" y="206" class="st2" width="139" height="61"/>
+<text transform="matrix(1 0 0 1 711 216.3599)"><tspan x="0" y="0" class="st3 st4 st5">8. Demande de </tspan><tspan x="0" y="16.8" class="st3 st4 st5">configuration</tspan></text>
+<rect x="717" y="276" class="st2" width="138" height="84"/>
+<text transform="matrix(1 0 0 1 717 286.3599)"><tspan x="0" y="0" class="st3 st4 st5">9. Installe et </tspan><tspan x="0" y="16.8" class="st3 st4 st5">enregistre l&apos;agent </tspan><tspan x="0" y="33.6" class="st3 st4 st5">périphérique, déploie </tspan><tspan x="0" y="50.4" class="st3 st4 st5">les services </tspan><tspan x="0" y="67.2" class="st3 st4 st5">périphériques.</tspan></text>
+<rect x="863" y="48" class="st2" width="149" height="68"/>
+<text transform="matrix(1 0 0 1 863 59.8398)"><tspan x="0" y="0" class="st6 st7 st8">Intel Corp.Serveur </tspan><tspan x="0" y="19.2" class="st6 st7 st8">Rendez-Vous</tspan></text>
+<rect x="884" y="154" class="st2" width="130" height="56.7"/>
+<text transform="matrix(1 0 0 1 884 164.3599)"><tspan x="0" y="0" class="st3 st4 st5">6. Contacte le </tspan><tspan x="0" y="16.8" class="st3 st4 st5">serveur de </tspan><tspan x="0" y="33.6" class="st3 st4 st5">rendez-vous</tspan></text>
+<rect x="884.7" y="222" class="st2" width="136.7" height="63.3"/>
+<text transform="matrix(1 0 0 1 884.667 232.3599)"><tspan x="0" y="0" class="st3 st4 st5">7. Redirige les nœuds </tspan><tspan x="0" y="16.8" class="st3 st4 st5">de périphérie vers le </tspan><tspan x="0" y="33.6" class="st3 st4 st5">concentrateur de </tspan><tspan x="0" y="50.4" class="st3 st4 st5">gestion</tspan></text>
+</svg>

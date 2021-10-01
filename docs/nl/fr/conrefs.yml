@@ -1,0 +1,61 @@
+keyword:
+  cloud: IBM&reg; Cloud
+  cloud_notm: IBM Cloud
+  cloud_registry: IBM Cloud Container Registry
+  common_services: IBM Cloud Platform Common Services
+  contain_soft: IBM Certified Container
+  contain_softs: IBM Certified Containers
+  docker: Docker&reg;
+  gui: console de gestion
+  gui-short: console
+  edge: IBM&reg; Edge Application Manager
+  edge_notm: IBM Edge Application Manager
+  edge_devices_notm: IBM Edge Application Manager
+  edge_shared_notm: composants partagés d'IBM Edge Application Manager
+  ieam: IEAM
+  edge_abbr: IEAM
+  edge_profile: profil Edge Application Manager
+  edge_deploy_pattern: pattern de déploiement d'IBM Edge Application Manager
+  edge_deploy_patterns: patterns de déploiement d'IBM Edge Application Manager
+  edge_node: noeud de périphérie d'IBM Edge Application Manager
+  edge_nodes: noeuds de périphérie d'IBM Edge Application Manager
+  edge_service: service d'IBM Edge Application Manager
+  edge_services: services d'IBM Edge Application Manager
+  homebrew: Homebrew&reg;
+  horizon_open: Open Horizon
+  horizon: Horizon
+  horizon_agbot: agbot Horizon
+  horizon_agbots: agbots Horizon
+  horizon_agbot_full: bot d'accord Horizon (agbot)
+  horizon_agent: agent Horizon
+  horizon_agents: agents Horizon
+  horizon_exchange: Horizon Exchange
+  horizon_switch: carte de commutateur Horizon
+  IBM: IBM&reg;
+  intel: Intel&reg;
+  IBM_notm: IBM
+  event_streams: IBM Event Streams Service
+  ibm_cloud: IBM Cloud
+  klust: Klusterlet
+  linux: Linux&reg;
+  linux_notm: Linux
+  linux_bit: Linux&reg; x86_64
+  linux_bit_notm: Linux x86_64
+  linux_ppc64le_notm: Linux ppc64le
+  mac_notm: Mac
+  mac: mac&reg;
+  macOS_notm: macOS
+  macOS: macOS&reg;
+  mgmt_hub: concentrateur de gestion
+  message_hub_notm: IBM Event Streams
+  ocp: OCP
+  ocp_tm: Red Hat&reg; OpenShift&reg; Container Platform
+  open_shift: OpenShift
+  open_shift_cp: OpenShift Container Platform
+  rhel: Red Hat Enterprise Linux&reg;
+  semver: 4.3.0
+  anax_ver: 2,29,0-595
+  tech_prev: Important &colon; ce contenu, qui est un aperçu technique, ne doit pas être utilisé dans un environnement de production.
+  windows: Windows&trade;
+  windows_notm: Windows
+  version: 4.3

@@ -1,0 +1,3065 @@
+{
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": {
+    "description": "这是边缘同步服务的主要包",
+    "title": "边缘同步服务",
+    "version": "0.0.1"
+  },
+  "host": "localhost",
+  "basePath": "/",
+  "paths": {
+    "/api/v1/destinations/{orgID}": {
+      "get": {
+        "description": "为组织提供目标列表，即使用 CSS 已注册的 ESS 节点（属于 orgID）。\n这是仅限 CSS 的 API。",
+        "produces": [
+          "application/json",
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "列出所有已知目标。",
+        "operationId": "handleDestinations",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要返回的目标的 orgID。",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "目标响应",
+            "schema": {
+              "type": "数组",
+              "items": {
+                "$ref": "#/definitions/Destination"
+              }
+            }
+          },
+          "404": {
+            "description": "找不到目标",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "检索目标失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/destinations/{orgID}/{destType}/{destID}/objects": {
+      "get": {
+        "description": "提供目标 ESS 节点正在使用的对象的列表。\n这是仅限 CSS 的 API。",
+        "produces": [
+          "application/json",
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "列出目标正在使用的所有对象。",
+        "operationId": "handleDestinationObjects",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要针对其检索对象的目标的 orgID。",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要针对其检索对象的目标的 destType。",
+            "name": "destType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要针对其检索对象的目标的 destID。",
+            "name": "destID",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "对象响应",
+            "schema": {
+              "type": "数组",
+              "items": {
+                "$ref": "#/definitions/ObjectStatus"
+              }
+            }
+          },
+          "404": {
+            "description": "找不到对象",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "检索对象失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/health": {
+      "get": {
+        "description": "获取同步服务节点的运行状况。",
+        "produces": [
+          "application/json",
+          "text/plain"
+        ],
+        "tags": [
+          "CSS",
+          "ESS"
+        ],
+        "summary": "获取同步服务节点的运行状况。",
+        "operationId": "handleHealth",
+        "parameters": [
+          {
+            "type": "布尔值",
+            "description": "是否包含详细的运行状况",
+            "name": "详细信息",
+            "in": "查询"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "运行状况",
+            "schema": {
+              "type": "数组",
+              "items": {
+                "$ref": "#/definitions/healthReport"
+              }
+            }
+          },
+          "500": {
+            "description": "发送运行状况失败。",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{objectType}": {
+      "get": {
+        "description": "获取指定对象类型的对象。获取所有对象或仅获取具有暂挂（未使用的）更新的对象。\n应用程序通常会定期调用后面的 API 来检查更新（替代方法是使用 Webhook）。",
+        "produces": [
+          "application/json",
+          "text/plain"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "获取指定类型的对象。",
+        "operationId": "handleListObjects",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要返回的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "布尔值",
+            "description": "当仅返回已更新的对象时，是否包含已标记为“应用程序已接收”的对象",
+            "name": "received",
+            "in": "查询"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "已更新对象响应",
+            "schema": {
+              "type": "数组",
+              "items": {
+                "$ref": "#/definitions/MetaData"
+              }
+            }
+          },
+          "404": {
+            "description": "找不到已更新的对象",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "检索已更新的对象失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "注册或删除指定对象类型的 Webhook。\nWebhook 用于处理指定对象类型的对象的更新通知。",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "注册或删除 Webhook。",
+        "operationId": "handleWebhook",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "针对此 Webhook 的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "description": "Webhook 的数据",
+            "name": "payload",
+            "in": "主体",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/webhookUpdate"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Webhook 已注册/已删除",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "更新 Webhook 的数据失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{objectType}/{objectID}": {
+      "get": {
+        "description": "获取指定对象类型和对象标识的对象的元数据。\n元数据指示对象是否包含可通过使用相应 API 获取的数据。",
+        "produces": [
+          "application/json",
+          "text/plain"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "获取对象。",
+        "operationId": "handleGetObject",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要返回的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要返回的对象的对象标识",
+            "name": "objectID",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "对象响应",
+            "schema": {
+              "$ref": "#/definitions/MetaData"
+            }
+          },
+          "404": {
+            "description": "找不到对象",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "检索对象失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "更新/创建指定对象类型和对象标识的对象。\n如果已存在具有相同类型和标识的对象，那么更新该对象，否则创建新对象。",
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "更新/创建对象。",
+        "operationId": "handleUpdateObject",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要更新/创建的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要更新/创建的对象的对象标识",
+            "name": "objectID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "name": "payload",
+            "in": "主体",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/objectUpdate"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "对象已更新",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "更新/创建对象失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "删除指定对象类型和对象标识的对象。\n将通知此对象的目标此对象已删除。",
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "删除对象。",
+        "operationId": "handleDeleteObject",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要删除的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要删除的对象的对象标识",
+            "name": "objectID",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "对象已删除",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "删除对象失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{objectType}/{objectID}/activate": {
+      "put": {
+        "description": "将指定对象类型和对象标识的对象标记为“活动”。\n对象可作为不活动对象进行创建，这表示未将此对象传递到其目标。\n此 API 用于激活此类对象并启动将对象分发到其目标。",
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "将对象标记为“活动”",
+        "operationId": "handleActivateObject",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要标记为“活动”的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要标记为“活动”的对象的对象标识",
+            "name": "objectID",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "对象已标记为“活动”",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "将对象标记为“活动”失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{objectType}/{objectID}/consumed": {
+      "put": {
+        "description": "将指定对象类型和对象标识的对象标记为“应用程序已使用”。\n将对象标记为“已使用”后，它将不会再传递到此应用程序（即使重新启动同步服务）。",
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "将对象标记为“已使用”。",
+        "operationId": "handleObjectConsumed",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要标记为“已使用”的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要标记为“已使用”的对象的对象标识",
+            "name": "objectID",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "对象已标记为“已使用”",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "将对象标记为“已使用”失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{objectType}/{objectID}/data": {
+      "get": {
+        "description": "获取指定对象类型和对象标识的对象的数据。\n对象的元数据指示对象是否包含数据（noData 为 false）。",
+        "produces": [
+          "application/octet-stream",
+          "text/plain"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "获取对象的数据。",
+        "operationId": "handleObjectGetData",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "将检索其数据的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "将检索其数据的对象的对象标识",
+            "name": "objectID",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "对象数据",
+            "schema": {
+              "type": "字符串",
+              "format": "二进制"
+            }
+          },
+          "500": {
+            "description": "检索对象的数据失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "更新指定对象类型和对象标识的对象的数据。\n可在不修改对象的元数据的情况下更新数据。",
+        "consumes": [
+          "application/octet-stream"
+        ],
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "更新对象的数据。",
+        "operationId": "handleObjectPutData",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "将更新其数据的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "将更新其数据的对象的对象标识",
+            "name": "objectID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "description": "对象的新数据。从文件读取数据字节时，请将 application/octet-stream 设置为头中的内容类型。",
+            "name": "payload",
+            "in": "主体",
+            "required": true,
+            "schema": {
+              "type": "字符串",
+              "format": "二进制"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "对象数据已更新",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "404": {
+            "description": "指定的对象不存在",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "更新对象的数据失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{objectType}/{objectID}/policyreceived": {
+      "put": {
+        "description": "将指定对象类型和对象标识的对象标记为“已接收其目标策略”\n在对此对象做出此标记后，它将不会传递到列示具有目标策略的对象的\n应用程序，除非将“received=true”添加到查询参数。",
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "将对象的目标策略标记为“已接收”。",
+        "operationId": "handlePolicyReceived",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要标记为“已接收其目标策略”的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要标记为“已接收其目标策略”的对象的对象标识",
+            "name": "objectID",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "对象已标记为“已接收其目标策略”",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "将对象标记为“已接收其目标策略”失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{objectType}/{objectID}/received": {
+      "put": {
+        "description": "将指定对象类型和对象标识的对象标记为“应用程序已接收”。\n将对象标记为“已接收”后，它将只会再次传递到此应用程序（如果在对象请求中已指定）。",
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "将对象标记为“已接收”。",
+        "operationId": "handleObjectReceived",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要标记为“已接收”的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要标记为“已接收”的对象的对象标识",
+            "name": "objectID",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "对象已标记为“已接收”",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "将对象标记为“已接收”失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{objectType}/{objectID}/status": {
+      "get": {
+        "description": "获取指定对象类型和对象标识的对象的状态。\n状态可以是以下某一项：\nnotReady - 对象未准备就绪，无法发送到目标。\nready - 对象已准备就绪，可发送到目标。\nreceived - 已接收对象的元数据，但并非其所有数据。\ncompletelyReceived - 已接收完整对象（元数据和数据）。\nconsumed - 应用程序已使用对象。\ndeleted - 已删除对象。",
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "获取对象的状态。",
+        "operationId": "handleObjectStatus",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "将检索其状态的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "将检索其状态的对象的对象标识",
+            "name": "objectID",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "对象状态",
+            "schema": {
+              "type": "字符串",
+              "enum": [
+                "notReady",
+                "ready",
+                "received",
+                "completelyReceived",
+                "consumed",
+                "deleted"
+              ]
+            }
+          },
+          "500": {
+            "description": "检索对象的状态失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}/{objectType}": {
+      "get": {
+        "description": "获取指定对象类型的对象。获取所有对象或仅获取具有暂挂（未使用的）更新的对象。\n应用程序通常会定期调用后面的 API 来检查更新（替代方法是使用 Webhook）。",
+        "produces": [
+          "application/json",
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "获取指定类型的对象。",
+        "operationId": "handleListObjects",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要返回的对象的 orgID",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要返回的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "布尔值",
+            "description": "当仅返回已更新的对象时，是否包含已标记为“应用程序已接收”的对象",
+            "name": "received",
+            "in": "查询"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "已更新对象响应",
+            "schema": {
+              "type": "数组",
+              "items": {
+                "$ref": "#/definitions/MetaData"
+              }
+            }
+          },
+          "404": {
+            "description": "找不到已更新的对象",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "检索已更新的对象失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "注册或删除指定对象类型的 Webhook。\nWebhook 用于处理指定对象类型的对象的更新通知。",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "注册或删除 Webhook。",
+        "operationId": "handleWebhook",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "针对此 Webhook 的对象的 orgID",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "针对此 Webhook 的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "description": "Webhook 的数据",
+            "name": "payload",
+            "in": "主体",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/webhookUpdate"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Webhook 已注册/已删除",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "更新 Webhook 的数据失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}/{objectType}/{objectID}": {
+      "get": {
+        "description": "获取指定对象类型和对象标识的对象的元数据。\n元数据指示对象是否包含可通过使用相应 API 获取的数据。",
+        "produces": [
+          "application/json",
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "获取对象。",
+        "operationId": "handleGetObject",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要返回的对象的 orgID。",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要返回的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要返回的对象的对象标识",
+            "name": "objectID",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "对象响应",
+            "schema": {
+              "$ref": "#/definitions/MetaData"
+            }
+          },
+          "404": {
+            "description": "找不到对象",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "检索对象失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "更新/创建指定对象类型和对象标识的对象。\n如果已存在具有相同类型和标识的对象，那么更新该对象，否则创建新对象。",
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "更新/创建对象。",
+        "operationId": "handleUpdateObject",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要更新/创建的对象的 orgID",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要更新/创建的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要更新/创建的对象的对象标识",
+            "name": "objectID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "name": "payload",
+            "in": "主体",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/objectUpdate"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "对象已更新",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "更新/创建对象失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "删除指定对象类型和对象标识的对象。\n将通知此对象的目标此对象已删除。",
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "删除对象。",
+        "operationId": "handleDeleteObject",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要删除的对象的 orgID。",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要删除的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要删除的对象的对象标识",
+            "name": "objectID",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "对象已删除",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "删除对象失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}/{objectType}/{objectID}/activate": {
+      "put": {
+        "description": "将指定对象类型和对象标识的对象标记为“活动”。\n对象可作为不活动对象进行创建，这表示未将此对象传递到其目标。\n此 API 用于激活此类对象并启动将对象分发到其目标。",
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "将对象标记为“活动”",
+        "operationId": "handleActivateObject",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要标记为“活动”的对象的 orgID",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要标记为“活动”的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要标记为“活动”的对象的对象标识",
+            "name": "objectID",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "对象已标记为“活动”",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "将对象标记为“活动”失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}/{objectType}/{objectID}/consumed": {
+      "put": {
+        "description": "将指定对象类型和对象标识的对象标记为“应用程序已使用”。\n将对象标记为“已使用”后，它将不会再传递到此应用程序（即使重新启动同步服务）。",
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "将对象标记为“已使用”。",
+        "operationId": "handleObjectConsumed",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要标记为“已使用”的对象的 orgID",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要标记为“已使用”的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要标记为“已使用”的对象的对象标识",
+            "name": "objectID",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "对象已标记为“已使用”",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "将对象标记为“已使用”失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}/{objectType}/{objectID}/data": {
+      "get": {
+        "description": "获取指定对象类型和对象标识的对象的数据。\n对象的元数据指示对象是否包含数据（noData 为 false）。",
+        "produces": [
+          "application/octet-stream",
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "获取对象的数据。",
+        "operationId": "handleObjectGetData",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "将检索其数据的对象的 orgID",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "将检索其数据的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "将检索其数据的对象的对象标识",
+            "name": "objectID",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "对象数据",
+            "schema": {
+              "type": "字符串",
+              "format": "二进制"
+            }
+          },
+          "500": {
+            "description": "检索对象的数据失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "更新指定对象类型和对象标识的对象的数据。\n可在不修改对象的元数据的情况下更新数据。",
+        "consumes": [
+          "application/octet-stream"
+        ],
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "更新对象的数据。",
+        "operationId": "handleObjectPutData",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "将更新其数据的对象的 orgID",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "将更新其数据的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "将更新其数据的对象的对象标识",
+            "name": "objectID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "description": "对象的新数据。从文件读取数据字节时，请将 application/octet-stream 设置为头中的内容类型。",
+            "name": "payload",
+            "in": "主体",
+            "required": true,
+            "schema": {
+              "type": "字符串",
+              "format": "二进制"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "对象数据已更新",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "404": {
+            "description": "指定的对象不存在",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "更新对象的数据失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}/{objectType}/{objectID}/deleted": {
+      "put": {
+        "description": "确认应用程序删除了指定对象类型和对象标识的对象。\n此应用程序应该在完成与删除此对象相关联的操作后调用此 API。",
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "CSS",
+          "ESS"
+        ],
+        "summary": "此服务确认对象删除。",
+        "operationId": "handleObjectDeleted",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要确认其已删除的对象的 orgID。仅当使用 CSS 时存在，在使用 ESS 时从路径中移除",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要确认其已删除的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要确认其已删除的对象的对象标识",
+            "name": "objectID",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "已确认对象删除",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "确认对象删除失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}/{objectType}/{objectID}/destinations": {
+      "get": {
+        "description": "获取同步服务 (ESS) 节点的列表，这些节点是指定对象类型和对象标识的对象的目标。\n为每个目标提供对象的传递状态，及其类型和标识。\n这是仅限 CSS 的 API。",
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "获取对象的目标。",
+        "operationId": "handleObjectDestinations",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "将检索其目标的对象的 orgID。仅当使用 CSS 时存在，在使用 ESS 时从路径中移除",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "将检索其目标的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "将检索其目标的对象的对象标识",
+            "name": "objectID",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "对象目标及其状态",
+            "schema": {
+              "type": "数组",
+              "items": {
+                "$ref": "#/definitions/DestinationsStatus"
+              }
+            }
+          },
+          "500": {
+            "description": "检索对象的目标失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "将同步服务 (ESS) 节点的列表设置为指定对象类型和对象标识的对象的目标。\n这是仅限 CSS 的 API。",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "设置对象的目标。",
+        "operationId": "handleObjectDestinationsUpdate",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "将更新其目标的对象的 orgID",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "将更新其目标的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "将更新其目标的对象的对象标识",
+            "name": "objectID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "description": "对象的目标列表",
+            "name": "payload",
+            "in": "主体",
+            "required": true,
+            "schema": {
+              "type": "数组",
+              "items": {
+                "type": "字符串"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "对象目标已更新",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "更新对象的目标失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}/{objectType}/{objectID}/policyreceived": {
+      "put": {
+        "description": "将指定对象类型和对象标识的对象标记为“已接收其目标策略”\n在对此对象做出此标记后，它将不会传递到列示具有目标策略的对象的\n应用程序，除非将“received=true”添加到查询参数。",
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "将对象的目标策略标记为“已接收”。",
+        "operationId": "handlePolicyReceived",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要标记为“已接收其目标策略”的对象的 orgID。",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要标记为“已接收其目标策略”的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要标记为“已接收其目标策略”的对象的对象标识",
+            "name": "objectID",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "对象已标记为“已接收其目标策略”",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "将对象标记为“已接收其目标策略”失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}/{objectType}/{objectID}/received": {
+      "put": {
+        "description": "将指定对象类型和对象标识的对象标记为“应用程序已接收”。\n将对象标记为“已接收”后，它将只会再次传递到此应用程序（如果在对象请求中已指定）。",
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "将对象标记为“已接收”。",
+        "operationId": "handleObjectReceived",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要标记为“已接收”的对象的 orgID",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要标记为“已接收”的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要标记为“已接收”的对象的对象标识",
+            "name": "objectID",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "对象已标记为“已接收”",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "将对象标记为“已接收”失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}/{objectType}/{objectID}/status": {
+      "get": {
+        "description": "获取指定对象类型和对象标识的对象的状态。\n状态可以是以下某一项：\nnotReady - 对象未准备就绪，无法发送到目标。\nready - 对象已准备就绪，可发送到目标。\nreceived - 已接收对象的元数据，但并非其所有数据。\ncompletelyReceived - 已接收完整对象（元数据和数据）。\nconsumed - 应用程序已使用对象。\ndeleted - 已删除对象。",
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "获取对象的状态。",
+        "operationId": "handleObjectStatus",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "将检索其状态的对象的 orgID",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "将检索其状态的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "将检索其状态的对象的对象标识",
+            "name": "objectID",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "对象状态",
+            "schema": {
+              "type": "字符串",
+              "enum": [
+                "notReady",
+                "ready",
+                "received",
+                "completelyReceived",
+                "consumed",
+                "deleted"
+              ]
+            }
+          },
+          "500": {
+            "description": "检索对象的状态失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}/{objectType}?all_objects=true": {
+      "get": {
+        "description": "获取指定对象类型的具有目标策略的所有对象。",
+        "produces": [
+          "application/json",
+          "text/plain"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "获取指定类型的具有目标策略的对象。",
+        "operationId": "handleListAllObjects",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要返回的对象的对象类型",
+            "name": "objectType",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "布尔值",
+            "description": "是否包含所有对象。如果为 false，那么将仅返回已更新的对象。",
+            "name": "all_objects",
+            "in": "查询",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "具有目标策略的对象的响应",
+            "schema": {
+              "type": "数组",
+              "items": {
+                "$ref": "#/definitions/ObjectDestinationPolicy"
+              }
+            }
+          },
+          "404": {
+            "description": "找不到具有目标策略的对象",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "检索已更新的对象失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}?destination_policy=true": {
+      "get": {
+        "description": "获取具有目标策略的对象的列表。\n应用程序通常会定期调用此 API 来检查更新。",
+        "produces": [
+          "application/json",
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "获取具有目标策略的对象。",
+        "operationId": "handleListObjectsWithDestinationPolicy",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要返回的已更新对象的 orgID",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "布尔值",
+            "description": "必须为 true，以指示将检索具有 destinationPolicy 的对象",
+            "name": "destination_policy",
+            "in": "查询",
+            "required": true
+          },
+          {
+            "type": "布尔值",
+            "description": "是否包含已标记为“应用程序已接收”的对象",
+            "name": "received",
+            "in": "查询"
+          },
+          {
+            "type": "字符串",
+            "description": "对象与其具有亲缘关系并且应访存其目标策略的服务的标识 (orgID/serviceName)。",
+            "name": "service",
+            "in": "查询"
+          },
+          {
+            "type": "整数",
+            "format": "int64",
+            "description": "应该访存自指定 UTC 时间（以纳秒为单位）以来已更新其目标策略的对象。",
+            "name": "since",
+            "in": "查询"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "对象目标策略响应",
+            "schema": {
+              "type": "数组",
+              "items": {
+                "$ref": "#/definitions/ObjectDestinationPolicy"
+              }
+            }
+          },
+          "404": {
+            "description": "找不到已更新的对象",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "检索已更新的对象失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{orgID}?filters=true": {
+      "get": {
+        "description": "获取满足给定过滤器的对象的列表\n这是仅限 CSS 的 API。",
+        "produces": [
+          "application/json",
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "获取满足给定过滤器的对象",
+        "operationId": "handleListObjectsWithFilters",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要返回的已更新对象的 orgID。仅当使用 CSS 时存在，在使用 ESS 时从路径中移除",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "布尔值",
+            "description": "必须为 true，以指示将检索具有 filters 的对象",
+            "name": "filters",
+            "in": "查询",
+            "required": true
+          },
+          {
+            "type": "布尔值",
+            "description": "必须为 true，以指示将检索具有 destinationPolicy 的对象",
+            "name": "destinationPolicy",
+            "in": "查询"
+          },
+          {
+            "type": "字符串",
+            "description": "对象与其具有亲缘关系并且应访存其目标策略的服务的标识 (orgID/serviceName)。",
+            "name": "dpService",
+            "in": "查询"
+          },
+          {
+            "type": "字符串",
+            "description": "在目标策略内定义的属性名称，对象与其具有亲缘关系并应访存其目标策略。",
+            "name": "dpPropertyName",
+            "in": "查询"
+          },
+          {
+            "type": "字符串",
+            "description": "应该访存自使用 RFC3339 格式的指定时间戳记以来已更新其目标策略的对象。",
+            "name": "since",
+            "in": "查询"
+          },
+          {
+            "type": "字符串",
+            "description": "访存具有给定对象类型的对象",
+            "name": "objectType",
+            "in": "查询"
+          },
+          {
+            "type": "字符串",
+            "description": "访存具有给定对象标识的对象",
+            "name": "objectID",
+            "in": "查询"
+          },
+          {
+            "type": "字符串",
+            "description": "访存具有给定目标类型的对象",
+            "name": "destinationType",
+            "in": "查询"
+          },
+          {
+            "type": "字符串",
+            "description": "访存具有给定目标标识的对象",
+            "name": "destinationID",
+            "in": "查询"
+          },
+          {
+            "type": "布尔值",
+            "description": "访存已将 noData 标记为 true 的对象",
+            "name": "noData",
+            "in": "查询"
+          },
+          {
+            "type": "字符串",
+            "description": "访存到期时间早于使用 RFC3339 格式的指定时间戳记的对象",
+            "name": "expirationTimeBefore",
+            "in": "查询"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "对象响应",
+            "schema": {
+              "type": "数组",
+              "items": {
+                "$ref": "#/definitions/MetaData"
+              }
+            }
+          },
+          "404": {
+            "description": "找不到对象",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "检索对象失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects?destination_policy=true": {
+      "get": {
+        "description": "获取具有目标策略的对象的列表。\n应用程序通常会定期调用此 API 来检查更新。",
+        "produces": [
+          "application/json",
+          "text/plain"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "获取具有目标策略的对象。",
+        "operationId": "handleListObjectsWithDestinationPolicy",
+        "parameters": [
+          {
+            "type": "布尔值",
+            "description": "必须为 true，以指示将检索具有 destinationPolicy 的对象",
+            "name": "destination_policy",
+            "in": "查询",
+            "required": true
+          },
+          {
+            "type": "布尔值",
+            "description": "是否包含已标记为“应用程序已接收”的对象",
+            "name": "received",
+            "in": "查询"
+          },
+          {
+            "type": "字符串",
+            "description": "对象与其具有亲缘关系并且应访存其目标策略的服务的标识 (orgID/serviceName)。",
+            "name": "service",
+            "in": "查询"
+          },
+          {
+            "type": "整数",
+            "format": "int64",
+            "description": "应该访存自指定 UTC 时间（以纳秒为单位）以来已更新其目标策略的对象。",
+            "name": "since",
+            "in": "查询"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "对象目标策略响应",
+            "schema": {
+              "type": "数组",
+              "items": {
+                "$ref": "#/definitions/ObjectDestinationPolicy"
+              }
+            }
+          },
+          "404": {
+            "description": "找不到已更新的对象",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "检索已更新的对象失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/organizations": {
+      "get": {
+        "description": "获取现有组织的列表。仅与 CSS 有关。",
+        "produces": [
+          "application/json",
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "获取组织。",
+        "operationId": "handleGetOrganizations",
+        "responses": {
+          "200": {
+            "description": "组织响应",
+            "schema": {
+              "type": "数组",
+              "items": {
+                "$ref": "#/definitions/organization"
+              }
+            }
+          },
+          "404": {
+            "description": "找不到组织",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "检索组织失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/organizations/{orgID}": {
+      "put": {
+        "description": "存储组织信息。仅与 CSS 有关。",
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "更新组织。",
+        "operationId": "handleOrganizations",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要更新的组织的 orgID。",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "name": "payload",
+            "in": "主体",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Organization"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "已成功更新组织",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "更新组织失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "移除组织信息并清除与已删除的组织相关联的\n所有资源（对象、目标等）。仅与 CSS 有关。",
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "删除组织。",
+        "operationId": "handleDeleteOrganization",
+        "parameters": [
+          {
+            "type": "字符串",
+            "description": "要删除的组织的 orgID。",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "已成功删除组织",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "删除组织失败",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/resend": {
+      "post": {
+        "description": "ESS 用于请求 CSS 向其重新发送所有对象（仅 ESS 到 CSS 请求支持）。\n应用程序只需要使用此 API 以防它先前从 ESS 获取的数据丢失。",
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "ESS"
+        ],
+        "summary": "请求重新发送对象。",
+        "operationId": "handleResend",
+        "responses": {
+          "204": {
+            "description": "将发送此请求",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "400": {
+            "description": "云同步服务上不允许此请求",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/security/{type}/{orgID}": {
+      "get": {
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "检索组织的目标或对象 ACL 的列表。",
+        "operationId": "handleACLGetAll",
+        "parameters": [
+          {
+            "enum": [
+              "目标",
+              "对象"
+            ],
+            "type": "字符串",
+            "description": "应检索其用户名列表的 ACL 的类型。",
+            "name": "type",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "目标类型或对象类型的 ACL 在其中已存在的 orgID。",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "指定类型的已检索的 ACL 的列表。",
+            "schema": {
+              "type": "数组",
+              "items": {
+                "type": "字符串"
+              }
+            }
+          },
+          "404": {
+            "description": "找不到 ACL",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "检索指定类型的已检索 ACL 的列表失败。",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/security/{type}/{orgID}/{key}": {
+      "get": {
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "从目标类型或对象类型的 ACL 检索用户名的列表。",
+        "operationId": "handleACLGet",
+        "parameters": [
+          {
+            "enum": [
+              "目标",
+              "对象"
+            ],
+            "type": "字符串",
+            "description": "应检索其用户名列表的 ACL 的类型。",
+            "name": "type",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "目标类型或对象类型的 ACL 在其中已存在的 orgID。",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "ACL 正在保护的目标类型或对象类型。",
+            "name": "key",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "已从指定的 ACL 检索用户名的列表。",
+            "schema": {
+              "type": "数组",
+              "items": {
+                "type": "字符串"
+              }
+            }
+          },
+          "404": {
+            "description": "找不到 ACL",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "从指定的 ACL 检索用户名失败。",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "在目标类型或对象类型的 ACL 中批量添加/移除用户名。如果正在添加\n第一个用户名，那么创建 ACL。如果移除了最后一个用户名，那么删除\nACL。",
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "在目标类型或对象类型的 ACL 中批量添加/移除用户名。",
+        "operationId": "handleBulkACLUpdate",
+        "parameters": [
+          {
+            "enum": [
+              "目标",
+              "对象"
+            ],
+            "type": "字符串",
+            "description": "将在其中添加/移除指定用户名的 ACL 的类型。",
+            "name": "type",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "目标类型或对象类型的 ACL 在其中已存在的 orgID。",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "ACL 正在保护的目标类型或对象类型。",
+            "name": "key",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "name": "payload",
+            "in": "主体",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/bulkACLUpdate"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "已在指定的 ACL 中添加/移除用户名。",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "在指定的 ACL 中添加/移除用户名失败。",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/security/{type}/{orgID}/{key}/{username}": {
+      "put": {
+        "description": "将用户名添加到目标类型或对象类型的 ACL。如果正在添加第一个用户名，\n那么创建 ACL。",
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "将用户名添加到目标类型或对象类型的 ACL。",
+        "operationId": "handleACLUpdate",
+        "parameters": [
+          {
+            "enum": [
+              "目标",
+              "对象"
+            ],
+            "type": "字符串",
+            "description": "将向其添加指定用户名的 ACL 的类型。",
+            "name": "type",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "目标类型或对象类型的 ACL 在其中已存在的 orgID。",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "ACL 正在保护的目标类型或对象类型。",
+            "name": "key",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要添加到指定 ACL 的用户名。",
+            "name": "username",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "用户名已添加到指定 ACL。",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "将用户名添加到指定 ACL 失败。",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "从目标类型或对象类型的 ACL 中移除用户名。如果移除了最后一个用户名，\n那么同时也删除 ACL。",
+        "produces": [
+          "text/plain"
+        ],
+        "tags": [
+          "CSS"
+        ],
+        "summary": "从目标类型或对象类型的 ACL 中移除用户名。",
+        "operationId": "handleACLDelete",
+        "parameters": [
+          {
+            "enum": [
+              "目标",
+              "对象"
+            ],
+            "type": "字符串",
+            "description": "要从中移除指定用户名的 ACL 的类型。",
+            "name": "type",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "目标类型或对象类型的 ACL 在其中已存在的 orgID。",
+            "name": "orgID",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "ACL 正在保护的目标类型或对象类型。",
+            "name": "key",
+            "in": "路径",
+            "required": true
+          },
+          {
+            "type": "字符串",
+            "description": "要从指定 ACL 中移除的用户名。",
+            "name": "username",
+            "in": "路径",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "已从指定 ACL 中移除用户名。",
+            "schema": {
+              "type": "字符串"
+            }
+          },
+          "500": {
+            "description": "从指定 ACL 中移除用户名失败。",
+            "schema": {
+              "type": "字符串"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ConsumedObject": {
+      "description": "ConsumedObject 包含已使用对象的元数据及其时间戳记",
+      "type": "对象",
+      "properties": {
+        "MetaData": {
+          "$ref": "#/definitions/MetaData"
+        },
+        "Timestamp": {
+          "type": "字符串",
+          "format": "日期/时间"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "DBHealthStatusInfo": {
+      "description": "DBHealthStatusInfo 描述同步服务节点的数据库的运行状况",
+      "type": "对象",
+      "properties": {
+        "dbReadFailures": {
+          "type": "整数",
+          "format": "uint32",
+          "x-go-name": "DBReadFailures"
+        },
+        "dbStatus": {
+          "type": "字符串",
+          "x-go-name": "DBStatus"
+        },
+        "dbWriteFailures": {
+          "type": "整数",
+          "format": "uint32",
+          "x-go-name": "DBWriteFailures"
+        },
+        "disconnectedFromDB": {
+          "type": "布尔值",
+          "x-go-name": "DisconnectedFromDB"
+        },
+        "lastDisconnectFromDBDuration": {
+          "type": "整数",
+          "format": "uint64",
+          "x-go-name": "LastDisconnectFromDBDuration"
+        },
+        "timeSinceLastReadWriteError": {
+          "type": "整数",
+          "format": "uint64",
+          "x-go-name": "TimeSinceLastReadWriteError"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "Destination": {
+      "description": "每个同步服务边缘节点 (ESS) 都有一个由节点的标识、类型和组织组成的地址。\nESS 节点使用 MQTT 或 HTTP 与 CSS 通信。",
+      "type": "对象",
+      "title": "目标描述同步服务节点。",
+      "required": [
+        "destinationType",
+        "destinationID",
+        "communication",
+        "codeVersion"
+      ],
+      "properties": {
+        "codeVersion": {
+          "description": "CodeVersion 是目标使用的同步服务代码版本",
+          "type": "字符串",
+          "x-go-name": "CodeVersion"
+        },
+        "communication": {
+          "description": "Communication 是目标用于连接的通信协议（可以是 MQTT 或 HTTP）",
+          "type": "字符串",
+          "enum": [
+            "HTTP",
+            "MQTT"
+          ],
+          "x-go-name": "Communication"
+        },
+        "destinationID": {
+          "description": "DestID 是目标标识",
+          "type": "字符串",
+          "x-go-name": "DestID"
+        },
+        "destinationOrgID": {
+          "description": "DestOrgID 是目标组织标识\n每个同步服务对象都属于单个组织",
+          "type": "字符串",
+          "x-go-name": "DestOrgID"
+        },
+        "destinationType": {
+          "description": "DestType 是目标类型",
+          "type": "字符串",
+          "x-go-name": "DestType"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "DestinationsStatus": {
+      "description": "DestinationsStatus 描述目标的对象的传递状态\nDestinationsStatus 提供有关特定目标的对象传递状态的信息。\n状态可以是以下某一项：\n此对象是否已传递到目标的指示\n暂挂 - 指示此对象正等待传递到此目标\n正在传递 - 指示此对象正在传递到此目标\n已传递 - 指示此对象已传递到此目标\n已使用 - 指示此目标已使用此对象\n已删除 - 指示此目标已确认删除此对象\n错误 - 指示已从此目标接收反馈错误消息",
+      "type": "对象",
+      "required": [
+        "destinationType",
+        "destinationID",
+        "status"
+      ],
+      "properties": {
+        "destinationID": {
+          "description": "DestID 是目标标识",
+          "type": "字符串",
+          "x-go-name": "DestID"
+        },
+        "destinationType": {
+          "description": "DestType 是目标类型",
+          "type": "字符串",
+          "x-go-name": "DestType"
+        },
+        "message": {
+          "description": "Message 是目标的消息",
+          "type": "字符串",
+          "x-go-name": "Message"
+        },
+        "status": {
+          "description": "Status 是目标状态",
+          "type": "字符串",
+          "enum": [
+            "暂挂",
+            "正在传递",
+            "已传递",
+            "已使用",
+            "已删除",
+            "错误"
+          ],
+          "x-go-name": "Status"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "HealthStatusInfo": {
+      "description": "HealthStatusInfo 描述同步服务节点的运行状况",
+      "type": "对象",
+      "properties": {
+        "healthStatus": {
+          "type": "字符串",
+          "x-go-name": "HealthStatus"
+        },
+        "nodeType": {
+          "type": "字符串",
+          "x-go-name": "NodeType"
+        },
+        "upTime": {
+          "type": "整数",
+          "format": "uint64",
+          "x-go-name": "UpTime"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "IOError": {
+      "description": "IOError 是针对因 IO 而失败的请求的错误",
+      "type": "对象",
+      "properties": {
+        "Message": {
+          "type": "字符串"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "InternalError": {
+      "description": "InternalError 是一般错误",
+      "type": "对象",
+      "properties": {
+        "Message": {
+          "type": "字符串"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "Locks": {
+      "description": "Locks 是一组对象锁定",
+      "type": "对象",
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "MQTTHealthStatusInfo": {
+      "description": "MQTTHealthStatusInfo 描述同步服务节点的 MQTT 连接的运行状况",
+      "type": "对象",
+      "properties": {
+        "disconnectedFromMQTTBroker": {
+          "type": "布尔值",
+          "x-go-name": "DisconnectedFromMQTTBroker"
+        },
+        "lastDisconnectFromBrokerDuration": {
+          "type": "整数",
+          "format": "uint64",
+          "x-go-name": "LastDisconnectFromBrokerDuration"
+        },
+        "mqttConnectionStatus": {
+          "type": "字符串",
+          "x-go-name": "MQTTConnectionStatus"
+        },
+        "publishFailures": {
+          "type": "整数",
+          "format": "uint32",
+          "x-go-name": "PublishFailures"
+        },
+        "subscribeFailures": {
+          "type": "整数",
+          "format": "uint32",
+          "x-go-name": "SubscribeFailures"
+        },
+        "timeSinceLastPublishError": {
+          "type": "整数",
+          "format": "uint64",
+          "x-go-name": "TimeSinceLastPublishError"
+        },
+        "timeSinceLastSubscribeError": {
+          "type": "整数",
+          "format": "uint64",
+          "x-go-name": "TimeSinceLastSubscribeError"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "MessagingGroup": {
+      "description": "MessagingGroup 将组织映射到其消息传递组",
+      "type": "对象",
+      "properties": {
+        "GroupName": {
+          "type": "字符串"
+        },
+        "OrgID": {
+          "type": "字符串"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "MetaData": {
+      "description": "每个对象都包含元数据（必需）和数据（可选）。元数据和数据可以独立地更新。\n每个同步服务节点 (ESS) 都有一个由节点的标识、类型和组织组成的地址。\n要将对象发送到单个节点，请设置 destinationType 和 destinationID 字段以与节点的类型和标识匹配。\n要将对象发送到特定类型的所有节点，请将 destinationType 设置为相应类型并将 destinationID 保留为空。\n如果 destinationType 和 destinationID 为空，那么对象发送到所有节点。",
+      "type": "对象",
+      "title": "MetaData 是标识和定义同步服务对象的元数据。",
+      "required": [
+        "objectID",
+        "objectType"
+      ],
+      "properties": {
+        "activationTime": {
+          "description": "ActivationTime 是应自动激活此对象的时间戳记/日期。\n时间戳记应该以 RFC3339 格式提供。\n这是可选字段，如果省略（且 Inactive 为 true），那么永不自动激活此对象。",
+          "type": "字符串",
+          "x-go-name": "ActivationTime"
+        },
+        "autodelete": {
+          "description": "AutoDelete 是指示在将此对象传递到 DestinationsList 中其所有目标后是否删除此对象的标志。\n这是可选字段，缺省值为 false（不删除）。\n此字段仅在使用 CSS 时使用。对象在 ESS 上传递后始终删除。",
+          "type": "布尔值",
+          "x-go-name": "AutoDelete"
+        },
+        "chunkSize": {
+          "description": "ChunkSize 是指示消息有效内容最大大小的内部字段。\n此字段不应该由用户设置。",
+          "type": "整数",
+          "format": "int64",
+          "x-go-name": "ChunkSize"
+        },
+        "consumers": {
+          "description": "ExpectedConsumers 是指示已使用此对象的应用程序的期望数量。\n这是可选字段，缺省值为 1。",
+          "type": "整数",
+          "format": "int64",
+          "x-go-name": "ExpectedConsumers"
+        },
+        "dataID": {
+          "description": "DataID 是内部数据表示。\n此字段不应该由用户设置。",
+          "type": "整数",
+          "format": "int64",
+          "x-go-name": "DataID"
+        },
+        "deleted": {
+          "description": "Deleted 是一个标志，用于指示应用程序轮询以获取此对象已删除的更新。\n这是只读字段，不应该由用户设置。",
+          "type": "布尔值",
+          "x-go-name": "Deleted"
+        },
+        "description": {
+          "description": "Description 是对象的文本描述。\n这是可选字段，缺省情况下为空。",
+          "type": "字符串",
+          "x-go-name": "Description"
+        },
+        "destinationDataUri": {
+          "description": "DestinationDataURI 是指示对象接收方应该将其存储到的位置的 URI。\n目前仅支持文件 URI。\n此字段仅在使用 CSS 时可用。\n这是可选字段，如果省略，那么对象存储在节点的内部存储器中。",
+          "type": "字符串",
+          "x-go-name": "DestinationDataURI"
+        },
+        "destinationID": {
+          "description": "DestID 是目标的标识。如果省略，那么对象将发送到具有相同 DestType 的所有 ESS。\n此字段在使用 ESS 时忽略（目标为 CSS）。",
+          "type": "字符串",
+          "x-go-name": "DestID"
+        },
+        "destinationOrgID": {
+          "description": "DestOrgID 是对象的组织标识（一个对象只属于一个组织）。\n此字段在使用 ESS 时忽略（使用 ESS 的 orgID）。",
+          "type": "字符串",
+          "x-go-name": "DestOrgID"
+        },
+        "destinationPolicy": {
+          "$ref": "#/definitions/Policy"
+        },
+        "destinationType": {
+          "description": "DestType 是将对象发送到的目标的类型。\n如果省略 DestType（且如果还省略了 DestinationsList），那么对象将广播到所有已知目标。\n此字段在使用 ESS 时忽略（目标始终为 CSS）。",
+          "type": "字符串",
+          "x-go-name": "DestType"
+        },
+        "destinationsList": {
+          "description": "DestinationsList 是对象将发送到的作为 type:id 对的目标的列表。\n当提供 DestinationsList 时，必须省略 DestType and DestID。\n此字段在使用 ESS 时忽略（目标始终为 CSS）。",
+          "type": "数组",
+          "items": {
+            "type": "字符串"
+          },
+          "x-go-name": "DestinationsList"
+        },
+        "expiration": {
+          "description": "Expiration 是指示对象到期的时间戳记/日期。\n对象到期时，它自动删除。\n时间戳记应该以 RFC3339 格式提供。\n此字段仅在使用 CSS 时可用。\n这是可选字段，如果省略，那么对象不到期。",
+          "type": "字符串",
+          "x-go-name": "Expiration"
+        },
+        "inactive": {
+          "description": "Inactive 是指示此对象现在处于不活动状态的标志。\n对象可作为不活动对象进行创建，这表示未将此对象传递到其目标。对象可稍后激活。\n这是可选字段，缺省值为 false（对象处于活动状态）。",
+          "type": "布尔值",
+          "x-go-name": "Inactive"
+        },
+        "instanceID": {
+          "description": "InstanceID 是内部实例标识。\n此字段不应该由用户设置。",
+          "type": "整数",
+          "format": "int64",
+          "x-go-name": "InstanceID"
+        },
+        "link": {
+          "description": "Link 是可从中访存此对象数据的位置的链接。\n链接由应用程序设置和使用。同步服务不访问此链接。\n这是可选字段，如果省略，那么数据必须由应用程序提供。",
+          "type": "字符串",
+          "x-go-name": "Link"
+        },
+        "metaOnly": {
+          "description": "MetaOnly 是指示此更新仅属于元数据的标志。当前对象的数据保持不变。\n这是可选字段，缺省值为 false（更新数据和元数据）。",
+          "type": "布尔值",
+          "x-go-name": "MetaOnly"
+        },
+        "noData": {
+          "description": "NoData 是指示此对象没有数据的标志。\n例如，可使用不含数据的对象发送通知。\n这是可选字段，缺省值为 false（对象包含数据）。",
+          "type": "布尔值",
+          "x-go-name": "NoData"
+        },
+        "objectID": {
+          "description": "ObjectID 是对象的唯一标识",
+          "type": "字符串",
+          "x-go-name": "ObjectID"
+        },
+        "objectSize": {
+          "description": "ObjectSize 是指示对象数据大小的内部字段。\n此字段不应该由用户设置。",
+          "type": "整数",
+          "format": "int64",
+          "x-go-name": "ObjectSize"
+        },
+        "objectType": {
+          "description": "ObjectType 是对象的类型。\n例如，在检查对象更新时，类型用于对多个对象进行分组。",
+          "type": "字符串",
+          "x-go-name": "ObjectType"
+        },
+        "originID": {
+          "description": "OriginID 是对象的来源标识。按内部代码设置。\n这是只读字段，不应该由用户设置。",
+          "type": "字符串",
+          "x-go-name": "OriginID"
+        },
+        "originType": {
+          "description": "OriginType 是对象的来源类型。按内部代码设置。\n这是只读字段，不应该由用户设置。",
+          "type": "字符串",
+          "x-go-name": "OriginType"
+        },
+        "ownerID": {
+          "description": "OwnerID 是指示创建对象的人员的内部字段\n此字段不应该由用户设置",
+          "type": "字符串",
+          "x-go-name": "OwnerID"
+        },
+        "sourceDataUri": {
+          "description": "SourceDataURI 是指示对象发送方应从中读取数据的位置的 URI。\n目前仅支持文件 URI。\n此字段仅在使用 ESS 时可用。\n这是可选字段，如果省略，那么对象的数据必须由用户提供。",
+          "type": "字符串",
+          "x-go-name": "SourceDataURI"
+        },
+        "version": {
+          "description": "Version 是对象的版本（由应用程序使用）。\n这是可选字段，缺省情况下为空。",
+          "type": "字符串",
+          "x-go-name": "Version"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "NotFound": {
+      "description": "NotFound 是在找不到对象时返回的错误",
+      "type": "对象",
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "NotificationInfo": {
+      "description": "NotificationInfo 包含要发送到另一端的消息的相关信息",
+      "type": "对象",
+      "properties": {
+        "DataID": {
+          "type": "整数",
+          "format": "int64"
+        },
+        "DestID": {
+          "type": "字符串"
+        },
+        "DestType": {
+          "type": "字符串"
+        },
+        "InstanceID": {
+          "type": "整数",
+          "format": "int64"
+        },
+        "MetaData": {
+          "$ref": "#/definitions/MetaData"
+        },
+        "NotificationTopic": {
+          "type": "字符串"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "ObjectDestinationPolicy": {
+      "type": "对象",
+      "title": "ObjectDestinationPolicy 包含具有目标策略的对象的相关信息。",
+      "required": [
+        "orgID",
+        "objectType",
+        "objectID"
+      ],
+      "properties": {
+        "destinationPolicy": {
+          "$ref": "#/definitions/Policy"
+        },
+        "destinations": {
+          "description": "Destinations 是对象的当前目标的列表",
+          "type": "数组",
+          "items": {
+            "$ref": "#/definitions/DestinationsStatus"
+          },
+          "x-go-name": "Destinations"
+        },
+        "objectID": {
+          "description": "ObjectID 是对象的唯一标识",
+          "type": "字符串",
+          "x-go-name": "ObjectID"
+        },
+        "objectType": {
+          "description": "ObjectType 是对象的类型。\n例如，在检查对象更新时，类型用于对多个对象进行分组。",
+          "type": "字符串",
+          "x-go-name": "ObjectType"
+        },
+        "orgID": {
+          "description": "OrgID 是对象的组织标识（一个对象只属于一个组织）。",
+          "type": "字符串",
+          "x-go-name": "OrgID"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "ObjectStatus": {
+      "description": "ObjectStatus 描述目标的对象的传递状态\n状态可以是以下某一项：\n此对象是否已传递到目标的指示\n正在传递 - 指示正在传递此对象\n已传递 - 指示已传递此对象\n已使用 - 指示已使用此对象\n已删除 - 指示此目标已确认删除此对象\n错误 - 指示已收到反馈错误消息",
+      "type": "对象",
+      "required": [
+        "objectType",
+        "objectID",
+        "status"
+      ],
+      "properties": {
+        "objectID": {
+          "description": "ObjectID 是对象标识",
+          "type": "字符串",
+          "x-go-name": "ObjectID"
+        },
+        "objectType": {
+          "description": "ObjectType 是对象类型",
+          "type": "字符串",
+          "x-go-name": "ObjectType"
+        },
+        "orgID": {
+          "description": "OrgID 是组织的组织标识",
+          "type": "字符串",
+          "x-go-name": "OrgID"
+        },
+        "status": {
+          "description": "Status 是此目标的对象状态",
+          "type": "字符串",
+          "enum": [
+            "正在传递",
+            "已传递",
+            "已使用",
+            "已删除",
+            "错误"
+          ],
+          "x-go-name": "Status"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "Organization": {
+      "description": "Organization 包含组织的信息",
+      "type": "对象",
+      "properties": {
+        "address": {
+          "description": "Address 是在连接到此组织时要使用的代理地址",
+          "type": "字符串",
+          "x-go-name": "地址"
+        },
+        "orgID": {
+          "description": "OrgID 是组织的组织标识",
+          "type": "字符串",
+          "x-go-name": "OrgID"
+        },
+        "password": {
+          "description": "Password 是在连接到此组织时要使用的密码",
+          "type": "字符串",
+          "x-go-name": "Password"
+        },
+        "user": {
+          "description": "User 是在连接到此组织时要使用的用户名",
+          "type": "字符串",
+          "x-go-name": "User"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "PathError": {
+      "description": "PathError 是针对路径问题的错误",
+      "type": "对象",
+      "properties": {
+        "Message": {
+          "type": "字符串"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "Policy": {
+      "description": "Policy 描述由一组属性和约束组成的策略",
+      "type": "对象",
+      "properties": {
+        "constraints": {
+          "description": "Constraints 是构成策略约束的一组表达式",
+          "type": "数组",
+          "items": {
+            "type": "字符串"
+          },
+          "x-go-name": "Constraints"
+        },
+        "properties": {
+          "description": "Properties 是特定策略的属性的集合",
+          "type": "数组",
+          "items": {
+            "$ref": "#/definitions/PolicyProperty"
+          },
+          "x-go-name": "Properties"
+        },
+        "services": {
+          "description": "Services 是此对象与其具有亲缘关系的服务的列表",
+          "type": "数组",
+          "items": {
+            "$ref": "#/definitions/ServiceID"
+          },
+          "x-go-name": "Services"
+        },
+        "timestamp": {
+          "description": "Timestamp 指示上次更新策略的时间（time.Now().UTC().UnixNano() 的结果）",
+          "type": "整数",
+          "format": "int64",
+          "x-go-name": "Timestamp"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "PolicyProperty": {
+      "description": "PolicyProperty 是策略中的属性",
+      "type": "对象",
+      "required": [
+        "名称",
+        "值"
+      ],
+      "properties": {
+        "name": {
+          "description": "Name 是属性的名称",
+          "type": "字符串",
+          "x-go-name": "Name"
+        },
+        "type": {
+          "description": "Type 是属性的类型。\n仅在系统无法按上下文正确解释此值的情况下才需要。",
+          "type": "字符串",
+          "x-go-name": "Type"
+        },
+        "value": {
+          "description": "Value 是属性的值",
+          "type": "对象",
+          "x-go-name": "Value"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "SecurityError": {
+      "description": "SecurityError 是针对因安全性而失败的请求的错误",
+      "type": "对象",
+      "properties": {
+        "Message": {
+          "type": "字符串"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "ServiceID": {
+      "description": "ServiceID 包含对象可能与其具有亲缘关系的服务的标识",
+      "type": "对象",
+      "properties": {
+        "arch": {
+          "description": "Arch 是范围的体系结构",
+          "type": "字符串",
+          "x-go-name": "Arch"
+        },
+        "orgID": {
+          "description": "OrgID 是服务的组织标识",
+          "type": "字符串",
+          "x-go-name": "OrgID"
+        },
+        "serviceName": {
+          "description": "ServiceName 是服务的名称",
+          "type": "字符串",
+          "x-go-name": "ServiceName"
+        },
+        "version": {
+          "description": "Version 是服务的版本",
+          "type": "字符串",
+          "x-go-name": "Version"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "StoredOrganization": {
+      "description": "StoredOrganization 包含组织及其更新时间戳记",
+      "type": "对象",
+      "properties": {
+        "Org": {
+          "$ref": "#/definitions/Organization"
+        },
+        "Timestamp": {
+          "type": "字符串",
+          "format": "日期/时间"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "SyncServiceVersion": {
+      "description": "SyncServiceVersion 是同步服务的当前版本",
+      "type": "对象",
+      "properties": {
+        "Major": {
+          "type": "整数",
+          "format": "uint32"
+        },
+        "Minor": {
+          "type": "整数",
+          "format": "uint32"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "UsageInfo": {
+      "description": "UsageInfo 描述同步服务节点的使用情况",
+      "type": "对象",
+      "properties": {
+        "clientRequests": {
+          "type": "整数",
+          "format": "uint64",
+          "x-go-name": "ClientRequests"
+        },
+        "registeredESS": {
+          "type": "整数",
+          "format": "uint32",
+          "x-go-name": "RegisteredESS"
+        },
+        "storedObjects": {
+          "type": "整数",
+          "format": "uint32",
+          "x-go-name": "StoredObjects"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/common"
+    },
+    "bulkACLUpdate": {
+      "description": "bulkACLUpdate 是对 ACL 执行批量更新时使用的有效内容（将用户名添加到\nACL 或从 ACL 中移除用户名）。",
+      "type": "对象",
+      "properties": {
+        "action": {
+          "description": "Action 是操作，可以添加（添加用户名）或移除（移除用户名）",
+          "type": "字符串",
+          "x-go-name": "Action"
+        },
+        "usernames": {
+          "description": "Usernames 是视情况而定要在 ACL 中添加或移除的用户名的数组",
+          "type": "数组",
+          "items": {
+            "type": "字符串"
+          },
+          "x-go-name": "Usernames"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/core/base"
+    },
+    "healthReport": {
+      "type": "对象",
+      "properties": {
+        "dbHealth": {
+          "$ref": "#/definitions/DBHealthStatusInfo"
+        },
+        "general": {
+          "$ref": "#/definitions/HealthStatusInfo"
+        },
+        "mqttHealth": {
+          "$ref": "#/definitions/MQTTHealthStatusInfo"
+        },
+        "usage": {
+          "$ref": "#/definitions/UsageInfo"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/core/base"
+    },
+    "objectUpdate": {
+      "description": "objectUpdate 包含对象的元数据和数据\n同步服务对象包含元数据和（可选）二进制数据。\n创建对象时，必须提供元数据。然后，元数据和数据可以一起更新或一次更新一个。",
+      "type": "对象",
+      "properties": {
+        "data": {
+          "description": "Data 是对象的二进制数据",
+          "type": "数组",
+          "items": {
+            "type": "整数",
+            "format": "uint8"
+          },
+          "x-go-name": "Data"
+        },
+        "meta": {
+          "$ref": "#/definitions/MetaData"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/core/base"
+    },
+    "organization": {
+      "description": "organization 包含组织的标识和代理地址",
+      "type": "对象",
+      "properties": {
+        "address": {
+          "description": "代理地址",
+          "type": "字符串",
+          "x-go-name": "Address"
+        },
+        "org-id": {
+          "description": "组织标识",
+          "type": "字符串",
+          "x-go-name": "OrgID"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/core/base"
+    },
+    "webhookUpdate": {
+      "description": "webhookUpdate 包含 Webhook 的操作和 URL\nwebhook 可用于允许同步服务在新信息变得可用时调用操作。\n应用程序可在使用 Webhook 和定期轮询同步服务以获取更新之间进行选择。",
+      "type": "对象",
+      "properties": {
+        "action": {
+          "description": "Action 是操作，可以是注册（创建/更新 Webhook）或删除（删除 Webhook）",
+          "type": "字符串",
+          "x-go-name": "Action"
+        },
+        "url": {
+          "description": "URL 是在对象的新信息可用时要调用的 URL",
+          "type": "字符串",
+          "x-go-name": "URL"
+        }
+      },
+      "x-go-package": "github.com/open-horizon/edge-sync-service/core/base"
+    }
+  }
+}

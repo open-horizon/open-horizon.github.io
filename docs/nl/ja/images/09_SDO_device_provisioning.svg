@@ -1,0 +1,1358 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 1000 650.6"
+   style="enable-background:new 0 0 1000 650.6;"
+   xml:space="preserve"
+   sodipodi:docname="09_SDO_device_provisioning.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"><metadata
+   id="metadata424"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs422">
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+</defs><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1366"
+   inkscape:window-height="705"
+   id="namedview420"
+   showgrid="false"
+   inkscape:zoom="0.7254842"
+   inkscape:cx="388.70606"
+   inkscape:cy="343.56793"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style2">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#051B75;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:none;}
+	.st3{fill:#161616;}
+	.st4{font-family:'IBMPlexSans';}
+	.st5{font-size:14px;}
+	.st6{fill:#F4F4F4;}
+	.st7{font-family:'IBMPlexSans-Medium';}
+	.st8{font-size:16px;}
+	.st9{fill-rule:evenodd;clip-rule:evenodd;fill:#009C98;}
+	.st10{fill-rule:evenodd;clip-rule:evenodd;fill:#BEBEBE;}
+	.st11{fill:#FFFFFF;}
+	.st12{fill-rule:evenodd;clip-rule:evenodd;fill:#E3F6FF;}
+	.st13{fill-rule:evenodd;clip-rule:evenodd;fill:#0F62FE;}
+	.st14{display:none;}
+	.st15{display:inline;fill-rule:evenodd;clip-rule:evenodd;fill:#0F62FE;}
+	.st16{display:inline;fill:#0F62FE;}
+	.st17{fill:none;stroke:#0F62FE;stroke-width:2;stroke-miterlimit:10;}
+	.st18{display:none;fill:none;stroke:#0F62FE;stroke-width:2;stroke-miterlimit:10;}
+	.st19{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#0F62FE;stroke-width:2;stroke-miterlimit:10;}
+	.st20{fill:none;stroke:#BEBEBE;stroke-width:2;}
+	.st21{fill:#BEBEBE;}
+	.st22{fill:none;stroke:#BEBEBE;stroke-width:2;stroke-dasharray:7,7;}
+	.st23{fill:#E3F6FF;}
+	.st24{fill:#0F62FE;}
+	.st25{fill-rule:evenodd;clip-rule:evenodd;fill:#408BFC;}
+	.st26{fill-rule:evenodd;clip-rule:evenodd;fill:#F4F4F4;}
+	.st27{fill:none;stroke:#00BAB6;stroke-width:2;stroke-dasharray:7;}
+	.st28{fill-rule:evenodd;clip-rule:evenodd;fill:#161616;}
+	.st29{font-size:12px;}
+	.st30{fill:none;stroke:#BEBEBE;stroke-width:2;stroke-dasharray:7;}
+</style>
+<rect
+   id="Rectangle-Copy-12"
+   x="282"
+   y="15.7"
+   class="st0"
+   width="363.3"
+   height="231.6"
+   style="" />
+<rect
+   style="clip-rule:evenodd;fill:#ffffff;fill-rule:evenodd"
+   height="81"
+   width="70.5"
+   class="st1"
+   y="69.400002"
+   x="470.79999"
+   id="Rectangle-Copy-16_2_" /><rect
+   style="clip-rule:evenodd;fill:none;fill-rule:evenodd"
+   id="rect6"
+   height="15.6"
+   width="70.400002"
+   class="st2"
+   y="102.8"
+   x="470.89999" /><text
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#161616"
+   id="text8"
+   class="st3 st4 st5"
+   x="473.18069"
+   y="113.1318">Exchange</text>
+
+<rect
+   style="clip-rule:evenodd;fill:#ffffff;fill-rule:evenodd"
+   height="81"
+   width="70.5"
+   class="st1"
+   y="149.39999"
+   x="559.5"
+   id="Rectangle-Copy-16_4_" /><rect
+   style="clip-rule:evenodd;fill:none;fill-rule:evenodd"
+   id="rect13"
+   height="33.5"
+   width="70.599998"
+   class="st2"
+   y="173.8"
+   x="559.40002" /><text
+   id="text19"
+   x="594.83081"
+   y="186.1176"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"><tspan
+     sodipodi:role="line"
+     id="tspan517"
+     x="594.83081"
+     y="186.1176">SDO</tspan><tspan
+     sodipodi:role="line"
+     id="tspan519"
+     x="594.83081"
+     y="203.6176">サービス</tspan></text>
+
+<rect
+   x="299.1"
+   y="35.8"
+   class="st2"
+   width="236.1"
+   height="15.6"
+   id="rect23"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 299.1044 47.6527)"
+   class="st6 st7 st8"
+   id="text25"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">管理ハブ</text>
+
+<rect
+   style="clip-rule:evenodd;fill:#009c98;fill-rule:evenodd"
+   height="99.300003"
+   width="174"
+   class="st9"
+   y="15.7"
+   x="825.70001"
+   id="Rectangle-Copy-14_1_" /><rect
+   style="clip-rule:evenodd;fill:none;fill-rule:evenodd"
+   id="rect28"
+   height="59.400002"
+   width="150.2"
+   class="st2"
+   y="35.799999"
+   x="841.70001" /><text
+   id="text34"
+   x="835.68329"
+   y="47.652599"><tspan
+     style="font-size:16px;font-family:IBMPlexSans-Medium;fill:#f4f4f4"
+     id="tspan30"
+     class="st6 st7 st8"
+     y="47.652599"
+     x="835.68329">Intel Corp.</tspan><tspan
+     style="font-size:16px;font-family:IBMPlexSans-Medium;fill:#f4f4f4"
+     id="tspan32"
+     class="st6 st7 st8"
+     y="67.652603"
+     x="835.68329">Rendezvous Server</tspan></text>
+
+<g
+   id="g43"
+   style="">
+	<rect
+   id="Rectangle-Copy-16_3_"
+   x="231.7"
+   y="317.5"
+   class="st10"
+   width="146.7"
+   height="81"
+   style="" />
+	<rect
+   x="247.7"
+   y="336.1"
+   class="st2"
+   width="112.9"
+   height="29.7"
+   id="rect39"
+   style="" />
+	<text
+   transform="matrix(1 0 0 1 247.7004 347.8973)"
+   class="st11 st7 st8"
+   id="text41"
+   style="">積載ドック</text>
+
+</g>
+<rect
+   style="clip-rule:evenodd;fill:none;fill-rule:evenodd"
+   id="rect45"
+   height="15.5"
+   width="118.7"
+   class="st2"
+   y="476.10001"
+   x="325.20001" /><text
+   style="font-size:14px;font-family:'Source Han Sans JP';fill:#161616;-inkscape-font-specification:'Source Han Sans JP, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+   id="text47"
+   class="st3 st4 st5"
+   x="342.58029"
+   y="486.43719">ノード技術者</text>
+<g
+   transform="translate(21)"
+   id="Group-2_3_">
+		<circle
+   style="clip-rule:evenodd;fill:#e3f6ff;fill-rule:evenodd"
+   r="24"
+   cy="441.39999"
+   cx="363.60001"
+   class="st12"
+   id="Oval-Copy-3_3_" />
+		<path
+   inkscape:connector-curvature="0"
+   style="clip-rule:evenodd;fill:#0f62fe;fill-rule:evenodd"
+   id="path50"
+   d="m 358.6,444.4 c 2.8,0 5,2.2 5,5 v 6 h -2 v -6 c 0,-1.7 -1.3,-3 -3,-3 h -4 c -1.7,0 -3,1.3 -3,3 v 6 h -2 v -6 c 0,-2.8 2.2,-5 5,-5 z"
+   class="st13" />
+		<g
+   id="g56">
+			<g
+   id="g54">
+				<path
+   inkscape:connector-curvature="0"
+   style="clip-rule:evenodd;fill:#0f62fe;fill-rule:evenodd"
+   id="path52"
+   d="m 356.6,432.4 c -2.8,0 -5,2.2 -5,5 0,2.8 2.2,5 5,5 2.8,0 5,-2.2 5,-5 0,-2.8 -2.2,-5 -5,-5 z m 0,8 c -1.7,0 -3,-1.3 -3,-3 0,-1.7 1.3,-3 3,-3 1.7,0 3,1.3 3,3 0,1.7 -1.4,3 -3,3 z"
+   class="st13" />
+			</g>
+		</g>
+		<g
+   style="display:none"
+   id="g78"
+   class="st14">
+			<rect
+   style="clip-rule:evenodd;display:inline;fill:#0f62fe;fill-rule:evenodd"
+   id="rect58"
+   height="2"
+   width="2"
+   class="st15"
+   y="440.39999"
+   x="385.60001" />
+			<rect
+   style="clip-rule:evenodd;display:inline;fill:#0f62fe;fill-rule:evenodd"
+   id="rect60"
+   height="2"
+   width="2"
+   class="st15"
+   y="440.39999"
+   x="390.60001" />
+			<rect
+   style="clip-rule:evenodd;display:inline;fill:#0f62fe;fill-rule:evenodd"
+   id="rect62"
+   height="2"
+   width="2"
+   class="st15"
+   y="437.39999"
+   x="393.60001" />
+			<rect
+   style="clip-rule:evenodd;display:inline;fill:#0f62fe;fill-rule:evenodd"
+   id="rect64"
+   height="2"
+   width="2"
+   class="st15"
+   y="437.39999"
+   x="382.60001" />
+			<rect
+   style="clip-rule:evenodd;display:inline;fill:#0f62fe;fill-rule:evenodd"
+   id="rect66"
+   height="7"
+   width="7"
+   class="st15"
+   y="432.39999"
+   x="385.60001" />
+			<rect
+   style="clip-rule:evenodd;display:inline;fill:#0f62fe;fill-rule:evenodd"
+   id="rect68"
+   height="3"
+   width="3"
+   class="st15"
+   y="434.39999"
+   x="387.60001" />
+			<rect
+   style="clip-rule:evenodd;display:inline;fill:#0f62fe;fill-rule:evenodd"
+   id="rect70"
+   height="2"
+   width="2"
+   class="st15"
+   y="432.39999"
+   x="393.60001" />
+			<rect
+   style="clip-rule:evenodd;display:inline;fill:#0f62fe;fill-rule:evenodd"
+   id="rect72"
+   height="2"
+   width="2"
+   class="st15"
+   y="432.39999"
+   x="382.60001" />
+			<rect
+   style="clip-rule:evenodd;display:inline;fill:#0f62fe;fill-rule:evenodd"
+   id="rect74"
+   height="2"
+   width="2"
+   class="st15"
+   y="429.39999"
+   x="385.60001" />
+			<rect
+   style="clip-rule:evenodd;display:inline;fill:#0f62fe;fill-rule:evenodd"
+   id="rect76"
+   height="2"
+   width="2"
+   class="st15"
+   y="429.39999"
+   x="390.60001" />
+		</g>
+		<g
+   style="display:none"
+   id="g82"
+   class="st14">
+			<path
+   inkscape:connector-curvature="0"
+   style="display:inline;fill:#0f62fe"
+   id="path80"
+   d="m 384.6,438.4 c -1.1,0 -2,0.9 -2,2 0,1.1 0.9,2 2,2 1.1,0 2,-0.9 2,-2 0,-1.1 -0.9,-2 -2,-2 z"
+   class="st16" />
+		</g>
+		<g
+   id="g90">
+			<line
+   style="fill:none;stroke:#0f62fe;stroke-width:2;stroke-miterlimit:10"
+   id="line84"
+   y2="431.10001"
+   x2="376"
+   y1="445.70001"
+   x1="376"
+   class="st17" />
+			<line
+   style="display:none;fill:none;stroke:#0f62fe;stroke-width:2;stroke-miterlimit:10"
+   id="line86"
+   y2="431.10001"
+   x2="390.10001"
+   y1="435.10001"
+   x1="390.10001"
+   class="st18" />
+			<line
+   style="fill:none;stroke:#0f62fe;stroke-width:2;stroke-miterlimit:10"
+   id="line88"
+   y2="433.10001"
+   x2="372"
+   y1="433.10001"
+   x1="380"
+   class="st17" />
+		</g>
+		<g
+   id="g96">
+			<path
+   inkscape:connector-curvature="0"
+   style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:#0f62fe;stroke-width:2;stroke-miterlimit:10"
+   id="path92"
+   d="m 368.9,431.4 c 0.8,0.8 0.8,2 0,2.8 -0.8,0.8 -2,0.8 -2.8,0 -0.8,-0.8 -0.8,-2 0,-2.8"
+   class="st19" />
+			<line
+   style="fill:none;stroke:#0f62fe;stroke-width:2;stroke-miterlimit:10"
+   id="line94"
+   y2="435"
+   x2="367.39999"
+   y1="445.70001"
+   x1="367.39999"
+   class="st17" />
+		</g>
+	</g>
+<g
+   class="st14"
+   id="g121">
+	<rect
+   x="117.2"
+   y="425.7"
+   class="st15"
+   width="2"
+   height="2"
+   id="rect101" />
+	<rect
+   x="122.2"
+   y="425.7"
+   class="st15"
+   width="2"
+   height="2"
+   id="rect103" />
+	<rect
+   x="125.2"
+   y="422.7"
+   class="st15"
+   width="2"
+   height="2"
+   id="rect105" />
+	<rect
+   x="114.2"
+   y="422.7"
+   class="st15"
+   width="2"
+   height="2"
+   id="rect107" />
+	<rect
+   x="117.2"
+   y="417.7"
+   class="st15"
+   width="7"
+   height="7"
+   id="rect109" />
+	<rect
+   x="119.2"
+   y="419.7"
+   class="st15"
+   width="3"
+   height="3"
+   id="rect111" />
+	<rect
+   x="125.2"
+   y="417.7"
+   class="st15"
+   width="2"
+   height="2"
+   id="rect113" />
+	<rect
+   x="114.2"
+   y="417.7"
+   class="st15"
+   width="2"
+   height="2"
+   id="rect115" />
+	<rect
+   x="117.2"
+   y="414.7"
+   class="st15"
+   width="2"
+   height="2"
+   id="rect117" />
+	<rect
+   x="122.2"
+   y="414.7"
+   class="st15"
+   width="2"
+   height="2"
+   id="rect119" />
+</g>
+<g
+   class="st14"
+   id="g125">
+	<path
+   class="st16"
+   d="M116.2,423.7c-1.1,0-2,0.9-2,2c0,1.1,0.9,2,2,2s2-0.9,2-2C118.2,424.6,117.3,423.7,116.2,423.7L116.2,423.7z"
+   id="path123" />
+</g>
+<g
+   id="g135"
+   style="">
+	<g
+   id="g133"
+   style="">
+		<polyline
+   class="st20"
+   points="593.5,240.5 593.5,284.4 60.9,284.4 60.9,267.2   "
+   id="polyline127"
+   style="" />
+		<g
+   id="g131"
+   style="">
+			<polygon
+   class="st21"
+   points="586.5,242.5 593.5,230.4 600.4,242.5    "
+   id="polygon129"
+   style="" />
+		</g>
+	</g>
+</g>
+<g
+   id="g149"
+   style="">
+	<g
+   id="g147"
+   style="">
+		<polyline
+   class="st20"
+   points="48.9,487.9 48.9,328.7 32.5,328.7 32.5,277.3   "
+   id="polyline137"
+   style="" />
+		<g
+   id="g141"
+   style="">
+			<polygon
+   class="st21"
+   points="55.9,485.9 48.9,498 41.9,485.9    "
+   id="polygon139"
+   style="" />
+		</g>
+		<g
+   id="g145"
+   style="">
+			<polygon
+   class="st21"
+   points="39.4,279.3 32.5,267.2 25.5,279.3    "
+   id="polygon143"
+   style="" />
+		</g>
+	</g>
+</g>
+<g
+   id="g159"
+   style="">
+	<g
+   id="g157"
+   style="">
+		<polyline
+   class="st20"
+   points="72.7,521.9 288.9,521.9 288.9,408.6   "
+   id="polyline151"
+   style="" />
+		<g
+   id="g155"
+   style="">
+			<polygon
+   class="st21"
+   points="295.9,410.6 288.9,398.5 281.9,410.6    "
+   id="polygon153"
+   style="" />
+		</g>
+	</g>
+</g>
+<polyline
+   class="st20"
+   points="351.5,442.5 321.6,442.5 321.6,398.5 "
+   id="polyline161"
+   style="" />
+<g
+   id="g171"
+   style="">
+	<g
+   id="g169"
+   style="">
+		<line
+   class="st20"
+   x1="768.3"
+   y1="442.5"
+   x2="416.2"
+   y2="442.5"
+   id="line163"
+   style="" />
+		<g
+   id="g167"
+   style="">
+			<polygon
+   class="st21"
+   points="766.2,435.5 778.3,442.5 766.2,449.5    "
+   id="polygon165"
+   style="" />
+		</g>
+	</g>
+</g>
+<g
+   id="g181"
+   style="">
+	<g
+   id="g179"
+   style="">
+		<line
+   class="st22"
+   x1="251.3"
+   y1="135.6"
+   x2="460.7"
+   y2="135.6"
+   id="line173"
+   style="" />
+		<g
+   id="g177"
+   style="">
+			<polygon
+   class="st21"
+   points="458.7,142.6 470.8,135.6 458.7,128.6    "
+   id="polygon175"
+   style="" />
+		</g>
+	</g>
+</g>
+<g
+   id="g195"
+   style="">
+	<g
+   id="g193"
+   style="">
+		<polyline
+   class="st22"
+   points="640,207.3 678.4,207.3 678.4,417.4 768.3,417.4   "
+   id="polyline183"
+   style="" />
+		<g
+   id="g187"
+   style="">
+			<polygon
+   class="st21"
+   points="642.1,214.3 630,207.3 642.1,200.3    "
+   id="polygon185"
+   style="" />
+		</g>
+		<g
+   id="g191"
+   style="">
+			<polygon
+   class="st21"
+   points="766.2,424.4 778.3,417.4 766.2,410.5    "
+   id="polygon189"
+   style="" />
+		</g>
+	</g>
+</g>
+<g
+   id="g209"
+   style="">
+	<g
+   id="g207"
+   style="">
+		<polyline
+   class="st22"
+   points="931.6,359.1 931.6,276 848.2,276 848.2,125   "
+   id="polyline197"
+   style="" />
+		<g
+   id="g201"
+   style="">
+			<polygon
+   class="st21"
+   points="938.5,357.1 931.6,369.2 924.6,357.1    "
+   id="polygon199"
+   style="" />
+		</g>
+		<g
+   id="g205"
+   style="">
+			<polygon
+   class="st21"
+   points="855.1,127 848.2,114.9 841.2,127    "
+   id="polygon203"
+   style="" />
+		</g>
+	</g>
+</g>
+<g
+   id="g219"
+   style="">
+	<g
+   id="g217"
+   style="">
+		<line
+   class="st22"
+   x1="549.4"
+   y1="189.9"
+   x2="251.3"
+   y2="189.9"
+   id="line211"
+   style="" />
+		<g
+   id="g215"
+   style="">
+			<polygon
+   class="st21"
+   points="547.4,182.9 559.4,189.9 547.4,196.9    "
+   id="polygon213"
+   style="" />
+		</g>
+	</g>
+</g>
+<g
+   id="g229"
+   style="">
+	<g
+   id="g227"
+   style="">
+		<polyline
+   class="st22"
+   points="630,189.9 666,189.9 666,62.3 815.6,62.3   "
+   id="polyline221"
+   style="" />
+		<g
+   id="g225"
+   style="">
+			<polygon
+   class="st21"
+   points="813.6,69.3 825.7,62.3 813.6,55.3    "
+   id="polygon223"
+   style="" />
+		</g>
+	</g>
+</g>
+<rect
+   x="0"
+   style="clip-rule:evenodd;fill:none;fill-rule:evenodd"
+   id="rect231"
+   height="33.299999"
+   width="97.699997"
+   class="st2"
+   y="554.20001" /><text
+   id="text237"
+   x="47.375"
+   y="564.5863"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr;text-anchor:middle;"><tspan
+     sodipodi:role="line"
+     id="tspan437"
+     x="47.375"
+     y="564.5863">デバイス</tspan><tspan
+     sodipodi:role="line"
+     id="tspan439"
+     x="47.375"
+     y="583.09491">製造元</tspan></text>
+<g
+   id="g243">
+		<rect
+   style="fill:#e3f6ff"
+   id="rect239"
+   height="47.799999"
+   width="47.799999"
+   class="st23"
+   y="498"
+   x="25" />
+		<path
+   inkscape:connector-curvature="0"
+   style="fill:#0f62fe"
+   id="path241"
+   d="m 62.4,513 c -0.3,-0.2 -0.7,-0.2 -1,0 l -8.5,4.2 v -3.4 c 0,-0.6 -0.5,-1 -1,-1 -0.2,0 -0.3,0 -0.4,0.1 l -8.5,4.3 v -7.4 c 0,-0.6 -0.4,-1 -1,-1 h -6 c -0.6,0 -1,0.4 -1,1 v 25 h 28 v -21 c -0.1,-0.3 -0.3,-0.6 -0.6,-0.8 z m -7.5,19.9 h -4 v -7 h 4 z m 6,0 h -4 v -8 c 0,-0.6 -0.4,-1 -1,-1 h -6 c -0.6,0 -1,0.4 -1,1 v 8 h -12 v -22 h 4 v 9.6 l 10,-5 v 5 l 10,-5 z"
+   class="st24" />
+	</g>
+<g
+   id="g250">
+		<rect
+   style="clip-rule:evenodd;fill:#408bfc;fill-rule:evenodd"
+   height="29.200001"
+   width="30.799999"
+   class="st25"
+   y="393.70001"
+   x="805.70001"
+   id="Rectangle-Copy-14" />
+		<g
+   transform="translate(685,339)"
+   id="icon_x2F_device_x2F_16">
+			<path
+   inkscape:connector-curvature="0"
+   style="clip-rule:evenodd;fill:#f4f4f4;fill-rule:evenodd"
+   d="m 137.1,61.8 c 0.6,0 1,0.4 1,1 0,0.5 -0.4,0.9 -0.8,1 l -0.4,1 h 3.3 c 1.1,0 2,0.9 2,2 v 5 c 0,1.1 -0.9,2 -2,2 h -8 c -1.1,0 -2,-0.9 -2,-2 v -5 c 0,-1.1 0.9,-2 2,-2 h 3.7 l 0.6,-1.4 c -0.1,-0.1 -0.2,-0.3 -0.2,-0.5 v -0.1 c -0.2,-0.6 0.2,-1 0.8,-1 z m 3,4 h -8 c -0.5,0 -0.9,0.4 -1,0.9 v 0.1 5 c 0,0.5 0.4,0.9 0.9,1 h 0.1 8 c 0.5,0 0.9,-0.4 1,-0.9 v -0.1 -5 c 0,-0.5 -0.4,-0.9 -0.9,-1 z m -1.5,5 c 0.3,0 0.5,0.2 0.5,0.5 0,0.3 -0.2,0.5 -0.5,0.5 h -5 c -0.3,0 -0.5,-0.2 -0.5,-0.5 0,-0.3 0.2,-0.5 0.5,-0.5 z m -5,-4 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.9 0.7,-1.5 1.5,-1.5 z m 5,0 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.9 0.7,-1.5 1.5,-1.5 z m -5,1 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.2,-0.5 -0.5,-0.5 z m 5,0 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.2,-0.5 -0.5,-0.5 z"
+   class="st26"
+   id="Shape_4_" />
+		</g>
+	</g><g
+   id="g255">
+		<rect
+   style="clip-rule:evenodd;fill:#408bfc;fill-rule:evenodd"
+   height="29.200001"
+   width="30.799999"
+   class="st25"
+   y="393.70001"
+   x="851.79999"
+   id="Rectangle-Copy-14_2_" />
+		<g
+   transform="translate(685,339)"
+   id="icon_x2F_device_x2F_16_1_">
+			<path
+   inkscape:connector-curvature="0"
+   style="clip-rule:evenodd;fill:#f4f4f4;fill-rule:evenodd"
+   d="m 183.2,61.8 c 0.6,0 1,0.4 1,1 0,0.5 -0.4,0.9 -0.8,1 l -0.4,1 h 3.3 c 1.1,0 2,0.9 2,2 v 5 c 0,1.1 -0.9,2 -2,2 h -8 c -1.1,0 -2,-0.9 -2,-2 v -5 c 0,-1.1 0.9,-2 2,-2 h 3.7 l 0.6,-1.4 c -0.1,-0.1 -0.2,-0.3 -0.2,-0.5 v -0.1 c -0.2,-0.6 0.2,-1 0.8,-1 z m 3,4 h -8 c -0.5,0 -0.9,0.4 -1,0.9 v 0.1 5 c 0,0.5 0.4,0.9 0.9,1 h 0.1 8 c 0.5,0 0.9,-0.4 1,-0.9 v -0.1 -5 c 0,-0.5 -0.4,-0.9 -0.9,-1 z m -1.5,5 c 0.3,0 0.5,0.2 0.5,0.5 0,0.3 -0.2,0.5 -0.5,0.5 h -5 c -0.3,0 -0.5,-0.2 -0.5,-0.5 0,-0.3 0.2,-0.5 0.5,-0.5 z m -5,-4 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.9 0.6,-1.5 1.5,-1.5 z m 5,0 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.9 0.6,-1.5 1.5,-1.5 z m -5,1 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.3,-0.5 -0.5,-0.5 z m 5,0 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.3,-0.5 -0.5,-0.5 z"
+   class="st26"
+   id="Shape_2_" />
+		</g>
+	</g><g
+   id="g260">
+		<rect
+   style="clip-rule:evenodd;fill:#408bfc;fill-rule:evenodd"
+   height="29.200001"
+   width="30.799999"
+   class="st25"
+   y="393.70001"
+   x="897.59998"
+   id="Rectangle-Copy-14_3_" />
+		<g
+   transform="translate(685,339)"
+   id="icon_x2F_device_x2F_16_2_">
+			<path
+   inkscape:connector-curvature="0"
+   style="clip-rule:evenodd;fill:#f4f4f4;fill-rule:evenodd"
+   d="m 229,61.8 c 0.6,0 1,0.4 1,1 0,0.5 -0.4,0.9 -0.8,1 l -0.4,1 h 3.3 c 1.1,0 2,0.9 2,2 v 5 c 0,1.1 -0.9,2 -2,2 h -8 c -1.1,0 -2,-0.9 -2,-2 v -5 c 0,-1.1 0.9,-2 2,-2 h 3.7 l 0.6,-1.4 c -0.1,-0.1 -0.2,-0.3 -0.2,-0.5 v -0.1 c -0.2,-0.6 0.2,-1 0.8,-1 z m 3,4 h -8 c -0.5,0 -0.9,0.4 -1,0.9 v 0.1 5 c 0,0.5 0.4,0.9 0.9,1 h 0.1 8 c 0.5,0 0.9,-0.4 1,-0.9 v -0.1 -5 c 0,-0.5 -0.4,-0.9 -0.9,-1 z m -1.5,5 c 0.3,0 0.5,0.2 0.5,0.5 0,0.3 -0.2,0.5 -0.5,0.5 h -5 c -0.3,0 -0.5,-0.2 -0.5,-0.5 0,-0.3 0.2,-0.5 0.5,-0.5 z m -5,-4 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.9 0.6,-1.5 1.5,-1.5 z m 5,0 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.9 0.6,-1.5 1.5,-1.5 z m -5,1 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.3,-0.5 -0.5,-0.5 z m 5,0 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.3,-0.5 -0.5,-0.5 z"
+   class="st26"
+   id="Shape_3_" />
+		</g>
+	</g><g
+   id="g265">
+		<rect
+   style="clip-rule:evenodd;fill:#408bfc;fill-rule:evenodd"
+   height="29.200001"
+   width="30.799999"
+   class="st25"
+   y="436.20001"
+   x="805.70001"
+   id="Rectangle-Copy-14_6_" />
+		<g
+   transform="translate(685,339)"
+   id="icon_x2F_device_x2F_16_5_">
+			<path
+   inkscape:connector-curvature="0"
+   style="clip-rule:evenodd;fill:#f4f4f4;fill-rule:evenodd"
+   d="m 137.1,104.3 c 0.6,0 1,0.4 1,1 0,0.5 -0.4,0.9 -0.8,1 l -0.4,1 h 3.3 c 1.1,0 2,0.9 2,2 v 5 c 0,1.1 -0.9,2 -2,2 h -8 c -1.1,0 -2,-0.9 -2,-2 v -5 c 0,-1.1 0.9,-2 2,-2 h 3.7 l 0.6,-1.4 c -0.1,-0.1 -0.2,-0.3 -0.2,-0.5 v -0.1 c -0.2,-0.5 0.2,-1 0.8,-1 z m 3,4 h -8 c -0.5,0 -0.9,0.4 -1,0.9 v 0.1 5 c 0,0.5 0.4,0.9 0.9,1 h 0.1 8 c 0.5,0 0.9,-0.4 1,-0.9 v -0.1 -5 c 0,-0.5 -0.4,-0.9 -0.9,-1 z m -1.5,5 c 0.3,0 0.5,0.2 0.5,0.5 0,0.3 -0.2,0.5 -0.5,0.5 h -5 c -0.3,0 -0.5,-0.2 -0.5,-0.5 0,-0.3 0.2,-0.5 0.5,-0.5 z m -5,-4 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.8 0.7,-1.5 1.5,-1.5 z m 5,0 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.8 0.7,-1.5 1.5,-1.5 z m -5,1 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.2,-0.5 -0.5,-0.5 z m 5,0 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.2,-0.5 -0.5,-0.5 z"
+   class="st26"
+   id="Shape_7_" />
+		</g>
+	</g><g
+   id="g270">
+		<rect
+   style="clip-rule:evenodd;fill:#408bfc;fill-rule:evenodd"
+   height="29.200001"
+   width="30.799999"
+   class="st25"
+   y="436.20001"
+   x="851.79999"
+   id="Rectangle-Copy-14_5_" />
+		<g
+   transform="translate(685,339)"
+   id="icon_x2F_device_x2F_16_4_">
+			<path
+   inkscape:connector-curvature="0"
+   style="clip-rule:evenodd;fill:#f4f4f4;fill-rule:evenodd"
+   d="m 183.2,104.3 c 0.6,0 1,0.4 1,1 0,0.5 -0.4,0.9 -0.8,1 l -0.4,1 h 3.3 c 1.1,0 2,0.9 2,2 v 5 c 0,1.1 -0.9,2 -2,2 h -8 c -1.1,0 -2,-0.9 -2,-2 v -5 c 0,-1.1 0.9,-2 2,-2 h 3.7 l 0.6,-1.4 c -0.1,-0.1 -0.2,-0.3 -0.2,-0.5 v -0.1 c -0.2,-0.5 0.2,-1 0.8,-1 z m 3,4 h -8 c -0.5,0 -0.9,0.4 -1,0.9 v 0.1 5 c 0,0.5 0.4,0.9 0.9,1 h 0.1 8 c 0.5,0 0.9,-0.4 1,-0.9 v -0.1 -5 c 0,-0.5 -0.4,-0.9 -0.9,-1 z m -1.5,5 c 0.3,0 0.5,0.2 0.5,0.5 0,0.3 -0.2,0.5 -0.5,0.5 h -5 c -0.3,0 -0.5,-0.2 -0.5,-0.5 0,-0.3 0.2,-0.5 0.5,-0.5 z m -5,-4 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.8 0.6,-1.5 1.5,-1.5 z m 5,0 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.8 0.6,-1.5 1.5,-1.5 z m -5,1 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.3,-0.5 -0.5,-0.5 z m 5,0 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.3,-0.5 -0.5,-0.5 z"
+   class="st26"
+   id="Shape_6_" />
+		</g>
+	</g><g
+   id="g275">
+		<rect
+   style="clip-rule:evenodd;fill:#408bfc;fill-rule:evenodd"
+   height="29.200001"
+   width="30.799999"
+   class="st25"
+   y="436.20001"
+   x="897.59998"
+   id="Rectangle-Copy-14_4_" />
+		<g
+   transform="translate(685,339)"
+   id="icon_x2F_device_x2F_16_3_">
+			<path
+   inkscape:connector-curvature="0"
+   style="clip-rule:evenodd;fill:#f4f4f4;fill-rule:evenodd"
+   d="m 229,104.3 c 0.6,0 1,0.4 1,1 0,0.5 -0.4,0.9 -0.8,1 l -0.4,1 h 3.3 c 1.1,0 2,0.9 2,2 v 5 c 0,1.1 -0.9,2 -2,2 h -8 c -1.1,0 -2,-0.9 -2,-2 v -5 c 0,-1.1 0.9,-2 2,-2 h 3.7 l 0.6,-1.4 c -0.1,-0.1 -0.2,-0.3 -0.2,-0.5 v -0.1 c -0.2,-0.5 0.2,-1 0.8,-1 z m 3,4 h -8 c -0.5,0 -0.9,0.4 -1,0.9 v 0.1 5 c 0,0.5 0.4,0.9 0.9,1 h 0.1 8 c 0.5,0 0.9,-0.4 1,-0.9 v -0.1 -5 c 0,-0.5 -0.4,-0.9 -0.9,-1 z m -1.5,5 c 0.3,0 0.5,0.2 0.5,0.5 0,0.3 -0.2,0.5 -0.5,0.5 h -5 c -0.3,0 -0.5,-0.2 -0.5,-0.5 0,-0.3 0.2,-0.5 0.5,-0.5 z m -5,-4 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.8 0.6,-1.5 1.5,-1.5 z m 5,0 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.8 0.6,-1.5 1.5,-1.5 z m -5,1 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.3,-0.5 -0.5,-0.5 z m 5,0 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.3,-0.5 -0.5,-0.5 z"
+   class="st26"
+   id="Shape_5_" />
+		</g>
+	</g><g
+   id="g280">
+		<rect
+   style="clip-rule:evenodd;fill:#408bfc;fill-rule:evenodd"
+   height="29.200001"
+   width="30.799999"
+   class="st25"
+   y="393.70001"
+   x="941.5"
+   id="Rectangle-Copy-14_8_" />
+		<g
+   transform="translate(685,339)"
+   id="icon_x2F_device_x2F_16_7_">
+			<path
+   inkscape:connector-curvature="0"
+   style="clip-rule:evenodd;fill:#f4f4f4;fill-rule:evenodd"
+   d="m 272.9,61.8 c 0.6,0 1,0.4 1,1 0,0.5 -0.4,0.9 -0.8,1 l -0.4,1 h 3.3 c 1.1,0 2,0.9 2,2 v 5 c 0,1.1 -0.9,2 -2,2 h -8 c -1.1,0 -2,-0.9 -2,-2 v -5 c 0,-1.1 0.9,-2 2,-2 h 3.7 l 0.6,-1.4 c -0.1,-0.1 -0.2,-0.3 -0.2,-0.5 v -0.1 c -0.2,-0.6 0.3,-1 0.8,-1 z m 3,4 h -8 c -0.5,0 -0.9,0.4 -1,0.9 v 0.1 5 c 0,0.5 0.4,0.9 0.9,1 h 0.1 8 c 0.5,0 0.9,-0.4 1,-0.9 v -0.1 -5 c 0,-0.5 -0.4,-0.9 -0.9,-1 z m -1.5,5 c 0.3,0 0.5,0.2 0.5,0.5 0,0.3 -0.2,0.5 -0.5,0.5 h -5 c -0.3,0 -0.5,-0.2 -0.5,-0.5 0,-0.3 0.2,-0.5 0.5,-0.5 z m -5,-4 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.9 0.7,-1.5 1.5,-1.5 z m 5,0 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.9 0.7,-1.5 1.5,-1.5 z m -5,1 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.2,-0.5 -0.5,-0.5 z m 5,0 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.2,-0.5 -0.5,-0.5 z"
+   class="st26"
+   id="Shape_9_" />
+		</g>
+	</g><g
+   id="g285">
+		<rect
+   style="clip-rule:evenodd;fill:#408bfc;fill-rule:evenodd"
+   height="29.200001"
+   width="30.799999"
+   class="st25"
+   y="436.20001"
+   x="941.5"
+   id="Rectangle-Copy-14_7_" />
+		<g
+   transform="translate(685,339)"
+   id="icon_x2F_device_x2F_16_6_">
+			<path
+   inkscape:connector-curvature="0"
+   style="clip-rule:evenodd;fill:#f4f4f4;fill-rule:evenodd"
+   d="m 272.9,104.3 c 0.6,0 1,0.4 1,1 0,0.5 -0.4,0.9 -0.8,1 l -0.4,1 h 3.3 c 1.1,0 2,0.9 2,2 v 5 c 0,1.1 -0.9,2 -2,2 h -8 c -1.1,0 -2,-0.9 -2,-2 v -5 c 0,-1.1 0.9,-2 2,-2 h 3.7 l 0.6,-1.4 c -0.1,-0.1 -0.2,-0.3 -0.2,-0.5 v -0.1 c -0.2,-0.5 0.3,-1 0.8,-1 z m 3,4 h -8 c -0.5,0 -0.9,0.4 -1,0.9 v 0.1 5 c 0,0.5 0.4,0.9 0.9,1 h 0.1 8 c 0.5,0 0.9,-0.4 1,-0.9 v -0.1 -5 c 0,-0.5 -0.4,-0.9 -0.9,-1 z m -1.5,5 c 0.3,0 0.5,0.2 0.5,0.5 0,0.3 -0.2,0.5 -0.5,0.5 h -5 c -0.3,0 -0.5,-0.2 -0.5,-0.5 0,-0.3 0.2,-0.5 0.5,-0.5 z m -5,-4 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.8 0.7,-1.5 1.5,-1.5 z m 5,0 c 0.8,0 1.5,0.7 1.5,1.5 0,0.8 -0.7,1.5 -1.5,1.5 -0.8,0 -1.5,-0.7 -1.5,-1.5 0,-0.8 0.7,-1.5 1.5,-1.5 z m -5,1 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.2,-0.5 -0.5,-0.5 z m 5,0 c -0.3,0 -0.5,0.2 -0.5,0.5 0,0.3 0.2,0.5 0.5,0.5 0.3,0 0.5,-0.2 0.5,-0.5 0,-0.3 -0.2,-0.5 -0.5,-0.5 z"
+   class="st26"
+   id="Shape_8_" />
+		</g>
+	</g><path
+   inkscape:connector-curvature="0"
+   style="fill:none;stroke:#00bab6;stroke-width:2;stroke-dasharray:7"
+   d="m 818.3,369.2 h 140.4 c 22.1,0 40,17.9 40,40 v 43.1 c 0,22.1 -17.9,40 -40,40 H 818.3 c -22.1,0 -40,-17.9 -40,-40 v -43.1 c 0,-22.1 17.9,-40 40,-40 z"
+   class="st27"
+   id="Rectangle-Copy-17" /><rect
+   style="clip-rule:evenodd;fill:none;fill-rule:evenodd"
+   id="rect288"
+   height="15.6"
+   width="147.7"
+   class="st2"
+   y="341.29999"
+   x="810.29999" /><text
+   style="font-size:16px;font-family:'Source Han Sans JP';fill:#161616;-inkscape-font-specification:'Source Han Sans JP, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+   id="text290"
+   class="st3 st7 st8"
+   x="810.31348"
+   y="359.1496">エッジ・ノード</text>
+
+<rect
+   x="108.3"
+   y="263.9"
+   class="st2"
+   width="428.2"
+   height="19.5"
+   id="rect294"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 126.1944 274.2462)"
+   class="st3 st4 st5"
+   id="text296"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">1. SDO 所有権鍵を生成し、インポートする (初回のみ)</text>
+
+<rect
+   x="61.8"
+   y="367.2"
+   class="st2"
+   width="144.4"
+   height="79.2"
+   id="rect298"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 61.8214 377.555)"
+   id="text308"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st3 st4 st5"
+     id="tspan300"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">2. SDO 所有者</tspan><tspan
+     x="0"
+     y="20"
+     class="st3 st4 st5"
+     id="tspan302"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">公開鍵を提供して、</tspan><tspan
+     x="0"
+     y="40"
+     class="st3 st4 st5"
+     id="tspan304"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">デバイスを注文する。 </tspan><tspan
+     x="0"
+     y="60"
+     class="st3 st4 st5"
+     id="tspan306"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">所有権証明書を受け取る。</tspan></text>
+
+<rect
+   x="129.2"
+   y="501.7"
+   class="st2"
+   width="112.5"
+   height="18.3"
+   id="rect310"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 129.1732 512.0771)"
+   class="st3 st4 st5"
+   id="text312"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">4. デバイスを出荷する</text>
+
+<rect
+   x="438.5"
+   y="403.8"
+   class="st2"
+   width="240"
+   height="35.4"
+   id="rect314"
+   style="" />
+<text
+   id="text320"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP'"
+   x="428.4693"
+   y="414.1839"><tspan
+     x="428.4693"
+     y="414.1839"
+     class="st3 st4 st5"
+     id="tspan316"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616">5. フィールドに配置し、</tspan><tspan
+     x="428.4693"
+     y="434.1839"
+     class="st3 st4 st5"
+     id="tspan318"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616">ネットワークと電源を接続し、オンにする</tspan></text>
+
+<rect
+   x="863.1"
+   y="149.4"
+   class="st2"
+   width="130.7"
+   height="35.4"
+   id="rect322"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 863.1127 159.7205)"
+   id="text328"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st3 st4 st5"
+     id="tspan324"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">6. Rendezvous Server に</tspan><tspan
+     x="0"
+     y="20"
+     class="st3 st4 st5"
+     id="tspan326"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">接触する</tspan></text>
+
+<rect
+   x="863.1"
+   y="204.8"
+   class="st2"
+   width="136.9"
+   height="60.4"
+   id="rect330"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 863.1122 215.1472)"
+   id="text338"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st3 st4 st5"
+     id="tspan332"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">7. エッジ・ノードを</tspan><tspan
+     x="0"
+     y="20"
+     class="st3 st4 st5"
+     id="tspan334"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">管理ハブに</tspan><tspan
+     x="0"
+     y="40"
+     class="st3 st4 st5"
+     id="tspan336"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">リダイレクトする</tspan></text>
+
+<rect
+   x="694"
+   y="209.3"
+   class="st2"
+   width="106.7"
+   height="43.1"
+   id="rect340"
+   style="" />
+<text
+   id="text346"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP'"
+   x="688.02448"
+   y="219.634"><tspan
+     x="688.02448"
+     y="219.634"
+     class="st3 st4 st5"
+     id="tspan342"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616">8. 構成を</tspan><tspan
+     x="688.02448"
+     y="239.634"
+     class="st3 st4 st5"
+     id="tspan344"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616">要求する</tspan></text>
+
+<rect
+   x="694"
+   y="271.7"
+   class="st2"
+   width="147.3"
+   height="57.9"
+   id="rect348"
+   style="" />
+<text
+   id="text356"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP'"
+   x="684.02448"
+   y="292.10199"><tspan
+     x="684.02448"
+     y="292.10199"
+     class="st3 st4 st5"
+     id="tspan350"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616">9. エッジ・エージェントを</tspan><tspan
+     x="684.02448"
+     y="312.10199"
+     class="st3 st4 st5"
+     id="tspan352"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616">インストールして登録し、</tspan><tspan
+     x="684.02448"
+     y="332.10199"
+     class="st3 st4 st5"
+     id="tspan354"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#161616">エッジ・サービスをデプロイする</tspan></text>
+
+<rect
+   x="113"
+   y="50.2"
+   class="st2"
+   width="127.6"
+   height="37.5"
+   id="rect358"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 113.0072 60.5782)"
+   id="text364"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st3 st4 st5"
+     id="tspan360"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">3. 証明書を受け取って</tspan><tspan
+     x="0"
+     y="20"
+     class="st3 st4 st5"
+     id="tspan362"
+     style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">インポートする</tspan></text>
+
+<rect
+   x="661.9"
+   y="43.6"
+   class="st2"
+   width="153"
+   height="18.1"
+   id="rect366"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 661.8508 53.9587)"
+   class="st3 st4 st5"
+   id="text368"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">3c. 証明書を登録する</text>
+
+<rect
+   x="299.1"
+   y="115.4"
+   class="st2"
+   width="142.1"
+   height="16.5"
+   id="rect370"
+   style="" />
+<text
+   class="st6 st4 st5"
+   id="text372"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#f4f4f4"
+   x="297.10461"
+   y="111.7275"><tspan
+     sodipodi:role="line"
+     id="tspan426"
+     x="297.10461"
+     y="111.7275">3a. エッジ・ノードを</tspan><tspan
+     sodipodi:role="line"
+     id="tspan428"
+     x="297.10461"
+     y="129.22751">追加する</tspan></text>
+
+<rect
+   x="299.1"
+   y="170.5"
+   class="st2"
+   width="144.4"
+   height="16.9"
+   id="rect374"
+   style="" />
+<text
+   class="st6 st4 st5"
+   id="text376"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'Source Han Sans JP';-inkscape-font-specification:'Source Han Sans JP';fill:#f4f4f4"
+   x="299.1041"
+   y="180.867">3b. 証明書をインポートする</text>
+
+<g
+   transform="translate(21)"
+   id="Group-2">
+		<circle
+   style="clip-rule:evenodd;fill:#e3f6ff;fill-rule:evenodd"
+   r="24"
+   cy="208.89999"
+   cx="27.4"
+   class="st12"
+   id="Oval-Copy-3" />
+		<g
+   transform="translate(8,8)"
+   id="icon_x2F_policy-admin">
+			<path
+   inkscape:connector-curvature="0"
+   style="clip-rule:evenodd;fill:#0f62fe;fill-rule:evenodd"
+   d="m 14.4,203.9 c 2.8,0 5,2.2 5,5 v 6 h -2 v -6 c 0,-1.7 -1.3,-3 -3,-3 h -4 c -1.7,0 -3,1.3 -3,3 v 6 h -2 v -6 c 0,-2.8 2.2,-5 5,-5 z m -2,-12 c 2.8,0 5,2.2 5,5 0,2.8 -2.2,5 -5,5 -2.8,0 -5,-2.2 -5,-5 0,-2.8 2.3,-5 5,-5 z m 18.6,-0.1 1.4,1.4 -7.1,7.1 -3.9,-3.9 1.4,-1.4 2.5,2.5 z m -18.6,2.1 c -1.7,0 -3,1.3 -3,3 0,1.7 1.3,3 3,3 1.7,0 3,-1.3 3,-3 0,-1.7 -1.3,-3 -3,-3 z"
+   class="st13"
+   id="Shape" />
+		</g>
+	</g><rect
+   style="clip-rule:evenodd;fill:none;fill-rule:evenodd"
+   id="rect382"
+   height="15.5"
+   width="94.5"
+   class="st2"
+   y="243.5"
+   x="0.60000002" /><text
+   style="font-size:14px;font-family:IBMPlexSans;fill:#161616"
+   id="text384"
+   class="st3 st4 st5"
+   x="23.7344"
+   y="253.8177">管理者</text>
+
+<rect
+   x="252.4"
+   y="286.3"
+   class="st11"
+   width="12.3"
+   height="12.3"
+   id="rect388"
+   style="" />
+<g
+   id="g395"
+   style="">
+	<rect
+   id="Rectangle-Copy-16_5_"
+   x="194.9"
+   y="121.9"
+   class="st28"
+   width="70.5"
+   height="81"
+   style="" />
+	<rect
+   x="194.9"
+   y="155.2"
+   class="st2"
+   width="70.5"
+   height="15.6"
+   id="rect391"
+   style="" />
+	<text
+   transform="matrix(1 0 0 1 219.3163 165.6074)"
+   class="st6 st4 st5"
+   id="text393"
+   style="">CLI</text>
+
+</g>
+<g
+   id="g405"
+   style="">
+	<g
+   id="g403"
+   style="">
+		<polyline
+   class="st20"
+   points="82.6,209.3 105.6,209.3 105.6,90.6 230.1,90.6 230.1,111.9   "
+   id="polyline397"
+   style="" />
+		<g
+   id="g401"
+   style="">
+			<polygon
+   class="st21"
+   points="223.1,109.8 230.1,121.9 237.1,109.8    "
+   id="polygon399"
+   style="" />
+		</g>
+	</g>
+</g>
+<rect
+   x="71.3"
+   y="628.4"
+   class="st2"
+   width="89.1"
+   height="14.5"
+   id="rect407"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 71.3044 637.322)"
+   class="st3 st4 st29"
+   id="text409"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">ユーザー処置</text>
+
+<rect
+   x="260.3"
+   y="628.4"
+   class="st2"
+   width="89.1"
+   height="14.5"
+   id="rect411"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 260.3043 637.322)"
+   class="st3 st4 st29"
+   id="text413"
+   style="-inkscape-font-specification:'Source Han Sans JP';font-family:'Source Han Sans JP';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">システム処置</text>
+
+<line
+   class="st20"
+   x1="0"
+   y1="633.7"
+   x2="59.7"
+   y2="633.7"
+   id="line415"
+   style="" />
+<line
+   class="st30"
+   x1="187.4"
+   y1="633.7"
+   x2="247.2"
+   y2="633.7"
+   id="line417"
+   style="" />
+</svg>

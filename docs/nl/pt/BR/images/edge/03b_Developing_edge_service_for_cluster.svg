@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 24.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 1020 611"
+   style="enable-background:new 0 0 1020 611;"
+   xml:space="preserve"
+   inkscape:version="0.48.1 "
+   width="100%"
+   height="100%"
+   sodipodi:docname="03b_Developing_edge_service_for_cluster.svg"><metadata
+   id="metadata218"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs216" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1280"
+   inkscape:window-height="705"
+   id="namedview214"
+   showgrid="false"
+   inkscape:zoom="0.79541735"
+   inkscape:cx="510"
+   inkscape:cy="305.5"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style3">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#408BFC;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#F4F4F4;}
+	.st2{fill:#BEBEBE;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#E3F6FF;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#0F62FE;}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#009C98;}
+	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#DCDCDC;}
+	.st8{fill:none;stroke:#BEBEBE;stroke-width:2;}
+	.st9{fill-rule:evenodd;clip-rule:evenodd;fill:#051B75;}
+	.st10{fill-rule:evenodd;clip-rule:evenodd;fill:none;}
+	.st11{fill:#161616;}
+	.st12{font-family:'IBMPlexSans';}
+	.st13{font-size:14px;}
+	.st14{fill:#F4F4F4;}
+	.st15{font-family:'IBMPlexSans-Medium';}
+	.st16{font-size:16px;}
+	.st17{font-size:12px;}
+	.st18{fill:none;}
+</style>
+<rect
+   id="Rectangle-Copy-52"
+   x="584"
+   y="342"
+   class="st0"
+   width="318"
+   height="269" />
+<path
+   id="Shape"
+   class="st1"
+   d="M608,365.5c0.8,0,1.5-0.7,1.5-1.5s-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5S607.2,365.5,608,365.5z   M608,363.5c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5s-0.5-0.2-0.5-0.5S607.7,363.5,608,363.5z M612.8,367.9c0.8,0,1.5-0.7,1.5-1.5  s-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5S612,367.9,612.8,367.9z M612.8,365.9c0.3,0,0.5,0.2,0.5,0.5c0,0.3-0.2,0.5-0.5,0.5  c-0.3,0-0.5-0.2-0.5-0.5C612.3,366.1,612.5,365.9,612.8,365.9L612.8,365.9z M602.2,370.1c-0.8,0-1.5,0.7-1.5,1.5  c0,0.8,0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5C603.7,370.8,603.1,370.1,602.2,370.1z M602.2,372.1c-0.3,0-0.5-0.2-0.5-0.5  c0-0.3,0.2-0.5,0.5-0.5c0.3,0,0.5,0.2,0.5,0.5C602.7,371.9,602.5,372.1,602.2,372.1z M603.2,367.9c0.8,0,1.5-0.7,1.5-1.5  c0-0.8-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5C601.7,367.2,602.4,367.9,603.2,367.9L603.2,367.9z M603.2,365.9c0.3,0,0.5,0.2,0.5,0.5  c0,0.3-0.2,0.5-0.5,0.5c-0.3,0-0.5-0.2-0.5-0.5C602.7,366.1,602.9,365.9,603.2,365.9L603.2,365.9z M613.8,370.1  c-0.8,0-1.5,0.7-1.5,1.5c0,0.8,0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5C615.3,370.8,614.6,370.1,613.8,370.1z M613.8,372.1  c-0.3,0-0.5-0.2-0.5-0.5c0-0.3,0.2-0.5,0.5-0.5c0.3,0,0.5,0.2,0.5,0.5C614.3,371.9,614,372.1,613.8,372.1z M610.4,374  c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5S611.3,374,610.4,374L610.4,374z M610.4,376c-0.3,0-0.5-0.2-0.5-0.5  s0.2-0.5,0.5-0.5c0.3,0,0.5,0.2,0.5,0.5c0,0.1-0.1,0.3-0.1,0.4C610.7,375.9,610.6,376,610.4,376z M605.6,374c-0.8,0-1.5,0.7-1.5,1.5  s0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5S606.4,374,605.6,374L605.6,374z M605.6,376c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5  c0.3,0,0.5,0.2,0.5,0.5C606.1,375.8,605.8,376,605.6,376z M611,370c0-1.7-1.3-3-3-3s-3,1.3-3,3s1.3,3,3,3S611,371.7,611,370z   M608,372c-1.1,0-2-0.9-2-2s0.9-2,2-2s2,0.9,2,2c0,0.5-0.2,1-0.6,1.4C609,371.8,608.5,372,608,372z" />
+<path
+   id="Line-4"
+   class="st2"
+   d="M25.5,59.8V316H388V169h-6l7-14l7,14h-6v149H23.5V59.8H25.5z" />
+<path
+   id="Line-4-Copy-2"
+   class="st2"
+   d="M831.5,59.8v59.8l-44.5,0l0,6l-14-7l14-7l0,6h42.5l0-57.8H831.5z" />
+<circle
+   id="Oval-Copy-3"
+   class="st3"
+   cx="831"
+   cy="25"
+   r="24" />
+<path
+   id="Shape_1_"
+   class="st4"
+   d="M826,28c2.8,0,5,2.2,5,5v6h-2v-6c0-1.7-1.3-3-3-3h-4c-1.7,0-3,1.3-3,3v6h-2v-6c0-2.8,2.2-5,5-5  H826z M824,16c2.8,0,5,2.2,5,5s-2.2,5-5,5s-5-2.2-5-5S821.2,16,824,16z M842.6,16l1.4,1.4l-7.1,7.1l-3.9-3.9l1.4-1.4l2.5,2.5  L842.6,16z M824,18c-1.7,0-3,1.3-3,3c0,1.7,1.3,3,3,3s3-1.3,3-3S825.7,18,824,18z" />
+<circle
+   id="Oval-Copy-3_1_"
+   class="st3"
+   cx="24"
+   cy="25"
+   r="24" />
+<path
+   id="Shape_2_"
+   class="st4"
+   d="M19,28c2.8,0,5,2.2,5,5v6h-2v-6c0-1.7-1.3-3-3-3h-4c-1.7,0-3,1.3-3,3v6h-2v-6c0-2.8,2.2-5,5-5H19  z M17,16c2.8,0,5,2.2,5,5s-2.2,5-5,5s-5-2.2-5-5S14.2,16,17,16z M32.1,14.9l1.8,0.4l-2.4,10.4l-1.8-0.4L32.1,14.9z M26.9,16.6  l1.4,1.2l-2.1,2.6l2.1,2.6L26.9,24l-3.1-3.7L26.9,16.6z M36.7,16.6l3.1,3.7L36.7,24l-1.4-1.2l2.1-2.6l-2.1-2.6L36.7,16.6z M17,18  c-1.7,0-3,1.3-3,3c0,1.7,1.3,3,3,3s3-1.3,3-3S18.7,18,17,18z" />
+<rect
+   id="Rectangle-Copy-14"
+   x="151"
+   y="342"
+   class="st5"
+   width="250"
+   height="172" />
+<rect
+   id="Rectangle-Copy-16"
+   x="600"
+   y="401"
+   class="st6"
+   width="80"
+   height="81" />
+<rect
+   id="Rectangle-Copy-16_1_"
+   x="806"
+   y="401"
+   class="st6"
+   width="80"
+   height="121" />
+<rect
+   id="Rectangle-Copy-16_2_"
+   x="600"
+   y="514"
+   class="st6"
+   width="80"
+   height="81" />
+<path
+   id="Line-2-Copy-24"
+   class="st2"
+   d="M792,434l14,7l-14,7v-6H680v-2h112V434z" />
+<path
+   id="Line-2-Copy-26"
+   class="st2"
+   d="M847,522v35.6l-153,0v6l-14-7l14-7v6h151V522H847z" />
+<circle
+   id="Oval-Copy-3_2_"
+   class="st7"
+   cx="24"
+   cy="82"
+   r="13" />
+<circle
+   id="Oval-Copy-3_3_"
+   class="st7"
+   cx="24"
+   cy="155"
+   r="13" />
+<circle
+   id="Oval-Copy-3_4_"
+   class="st7"
+   cx="24"
+   cy="246"
+   r="13" />
+<circle
+   id="Oval-Copy-3_5_"
+   class="st3"
+   cx="737"
+   cy="232"
+   r="24" />
+<path
+   id="Shape_3_"
+   class="st4"
+   d="M732,235c2.8,0,5,2.2,5,5v6h-2v-6c0-1.7-1.3-3-3-3h-4c-1.7,0-3,1.3-3,3v6h-2v-6c0-2.8,2.2-5,5-5  H732z M730,223c2.8,0,5,2.2,5,5s-2.2,5-5,5s-5-2.2-5-5S727.2,223,730,223z M743,231v2h-2v-2H743z M748,231v2h-2v-2H748z M730,225  c-1.7,0-3,1.3-3,3c0,1.7,1.3,3,3,3s3-1.3,3-3S731.7,225,730,225z M751,228v2h-2v-2H751z M740,228v2h-2v-2H740z M748,223v7h-7v-7H748  z M746,225h-3v3h3V225z M751,223v2h-2v-2H751z M740,223v2h-2v-2H740z M743,220v2h-2v-2H743z M748,220v2h-2v-2H748z" />
+<path
+   id="Line-8"
+   class="st2"
+   d="M25.5,315.5v104H137v-6l14,7l-14,7v-6H23.5v-106H25.5z" />
+<path
+   id="Path-8"
+   class="st2"
+   d="M566,471.8V497h226v-6l14,7l-14,7v-6H564v-25.2l-163,0v-2H566z" />
+<path
+   id="Path-7"
+   class="st2"
+   d="M566,155v270.5h20v-6l14,7l-14,7v-6h-22V155H566z" />
+<path
+   id="Path-9"
+   class="st2"
+   d="M736,155l7.1,14l-6,0l0.2,28.4l-2,0l-0.2-28.4l-6,0L736,155z" />
+<line
+   id="Path-9-Copy"
+   class="st8"
+   x1="736.3"
+   y1="342"
+   x2="736.3"
+   y2="266" />
+<rect
+   id="Rectangle-Copy-50"
+   x="374"
+   class="st9"
+   width="400"
+   height="155" />
+<rect
+   id="Rectangle-Copy-16_3_"
+   x="582"
+   y="57"
+   class="st6"
+   width="80"
+   height="81" />
+<rect
+   id="Rectangle-Copy-16_4_"
+   x="486"
+   y="57"
+   class="st6"
+   width="80"
+   height="81" />
+<rect
+   id="Rectangle-Copy-16_5_"
+   x="390"
+   y="57"
+   class="st6"
+   width="80"
+   height="81" />
+<rect
+   x="401"
+   y="227.7"
+   class="st10"
+   width="131.8"
+   height="59.5"
+   id="rect33" />
+<text
+   transform="matrix(1 0 0 1 400.994 238.0347)"
+   id="text35"
+   style="-inkscape-font-specification:Sans;font-family:Sans;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:14px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+   sodipodi:linespacing="125%"><tspan
+     sodipodi:role="line"
+     id="tspan3203">2. Publica os metadados </tspan><tspan
+     sodipodi:role="line"
+     id="tspan3205">do serviço no hub de </tspan><tspan
+     sodipodi:role="line"
+     id="tspan3207">gerenciamento</tspan></text>
+
+<rect
+   x="37"
+   y="351.7"
+   class="st10"
+   width="95.9"
+   height="42.2"
+   id="rect43" />
+<text
+   transform="matrix(1 0 0 1 36.994 362.0721)"
+   id="text45"><tspan
+     x="0"
+     y="0"
+     class="st11 st12 st13"
+     id="tspan47">1. Publica </tspan><tspan
+     x="0"
+     y="20"
+     class="st11 st12 st13"
+     id="tspan49">contêineres</tspan></text>
+
+<rect
+   x="13.9"
+   y="75.7"
+   class="st10"
+   width="20"
+   height="12.2"
+   id="rect51" />
+<text
+   transform="matrix(1 0 0 1 19.4294 86.0119)"
+   class="st11 st12 st13"
+   id="text53">A</text>
+
+<rect
+   x="13.9"
+   y="148.7"
+   class="st10"
+   width="20"
+   height="13.4"
+   id="rect55" />
+<text
+   transform="matrix(1 0 0 1 19.3455 159.0499)"
+   class="st11 st12 st13"
+   id="text57">B</text>
+
+<rect
+   x="15.2"
+   y="239.7"
+   class="st10"
+   width="17.5"
+   height="13.4"
+   id="rect59" />
+<text
+   transform="matrix(1 0 0 1 19.5696 250.0679)"
+   class="st11 st12 st13"
+   id="text61">C</text>
+
+<rect
+   x="577"
+   y="227.7"
+   class="st10"
+   width="88.8"
+   height="59.5"
+   id="rect63" />
+<text
+   transform="matrix(1 0 0 1 576.994 238.0347)"
+   id="text65"><tspan
+     x="0"
+     y="0"
+     class="st11 st12 st13"
+     id="tspan67">5. Implementa o </tspan><tspan
+     x="0"
+     y="20"
+     class="st11 st12 st13"
+     id="tspan69">serviço</tspan></text>
+
+<rect
+   x="748"
+   y="285.7"
+   class="st10"
+   width="130.8"
+   height="42"
+   id="rect71" />
+<text
+   transform="matrix(1 0 0 1 747.994 296.049)"
+   id="text73"><tspan
+     x="0"
+     y="0"
+     class="st11 st12 st13"
+     id="tspan75">4. Registra o nó </tspan><tspan
+     x="0"
+     y="20"
+     class="st11 st12 st13"
+     id="tspan77">com a política de nó</tspan></text>
+
+<rect
+   x="401.4"
+   y="448.6"
+   class="st10"
+   width="163"
+   height="14.6"
+   id="rect79" />
+<text
+   transform="matrix(1 0 0 1 423.4718 458.9956)"
+   class="st11 st12 st13"
+   id="text81">6. Importa contêineres</text>
+
+<rect
+   x="843"
+   y="66.7"
+   class="st10"
+   width="175.7"
+   height="57.4"
+   id="rect83" />
+<text
+   transform="scale(0.96227357,1.0392055)"
+   id="text85"
+   x="876.08606"
+   y="74.131439"
+   style="font-size:13.47183046px;-inkscape-font-specification:Sans;font-family:Sans;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+   sodipodi:linespacing="125%"><tspan
+     sodipodi:role="line"
+     id="tspan3195">3. Cria um padrão ou política </tspan><tspan
+     sodipodi:role="line"
+     id="tspan3197">para a implementação do</tspan><tspan
+     sodipodi:role="line"
+     id="tspan3199"> serviço para corrigir os nós </tspan><tspan
+     sodipodi:role="line"
+     id="tspan3201">de borda</tspan></text>
+
+<rect
+   x="773"
+   y="225.7"
+   class="st10"
+   width="100"
+   height="15.4"
+   id="rect93" />
+<text
+   transform="matrix(1 0 0 1 773.0168 236.0392)"
+   class="st11 st12 st13"
+   id="text95">Proprietário do nó</text>
+
+<rect
+   x="863"
+   y="18.7"
+   class="st10"
+   width="100"
+   height="15.4"
+   id="rect97" />
+<text
+   transform="matrix(1 0 0 1 863.0239 29.0511)"
+   class="st11 st12 st13"
+   id="text99">Administrador</text>
+
+<rect
+   x="390"
+   y="20.2"
+   class="st10"
+   width="236.1"
+   height="15.6"
+   id="rect101" />
+<text
+   transform="matrix(1 0 0 1 389.9941 32.0854)"
+   class="st14 st15 st16"
+   id="text103">Hub de gerenciamento do IEAM</text>
+
+<rect
+   x="622"
+   y="362.2"
+   class="st10"
+   width="236.1"
+   height="15.6"
+   id="rect105" />
+<text
+   transform="matrix(1 0 0 1 621.9941 374.0154)"
+   class="st14 st15 st16"
+   id="text107">Nó de borda</text>
+
+<rect
+   x="805.9"
+   y="434.6"
+   class="st10"
+   width="80"
+   height="56.3"
+   id="rect109" />
+<text
+   id="text111"
+   style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Sans;-inkscape-font-specification:Sans"
+   sodipodi:linespacing="125%"
+   x="817.42578"
+   y="443.7446"><tspan
+     sodipodi:role="line"
+     id="tspan3225"
+     x="817.42578"
+     y="443.7446">Operador </tspan><tspan
+     sodipodi:role="line"
+     id="tspan3227"
+     x="817.42578"
+     y="461.2446">do serviço </tspan><tspan
+     sodipodi:role="line"
+     id="tspan3229"
+     x="817.42578"
+     y="478.7446">de borda</tspan></text>
+
+<rect
+   x="609.4"
+   y="428.7"
+   class="st10"
+   width="61.1"
+   height="35.7"
+   id="rect119" />
+<text
+   id="text121"
+   style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Sans;-inkscape-font-specification:Sans"
+   sodipodi:linespacing="125%"
+   x="621.49487"
+   y="431.52069"><tspan
+     sodipodi:role="line"
+     id="tspan3213"
+     x="621.49487"
+     y="431.52069">Agente </tspan><tspan
+     sodipodi:role="line"
+     id="tspan3215"
+     x="621.49487"
+     y="449.02069">de</tspan><tspan
+     sodipodi:role="line"
+     id="tspan3217"
+     x="621.49487"
+     y="466.52069">borda</tspan></text>
+
+<rect
+   x="609.4"
+   y="541.8"
+   class="st10"
+   width="61.1"
+   height="35.7"
+   id="rect127" />
+<text
+   id="text129"
+   style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Sans;-inkscape-font-specification:Sans"
+   sodipodi:linespacing="125%"
+   x="618.98047"
+   y="544.57196"><tspan
+     sodipodi:role="line"
+     id="tspan3219"
+     x="618.98047"
+     y="544.57196">Serviço </tspan><tspan
+     sodipodi:role="line"
+     id="tspan3221"
+     x="618.98047"
+     y="562.07196">de </tspan><tspan
+     sodipodi:role="line"
+     id="tspan3223"
+     x="618.98047"
+     y="579.57196">borda</tspan></text>
+
+<rect
+   x="679.3"
+   y="416.6"
+   class="st10"
+   width="111.2"
+   height="13.7"
+   id="rect135" />
+<text
+   transform="matrix(1 0 0 1 710.834 427.0049)"
+   class="st14 st12 st13"
+   id="text137">7. Executa</text>
+
+<rect
+   x="694.5"
+   y="532.6"
+   class="st10"
+   width="150.7"
+   height="13.7"
+   id="rect139" />
+<text
+   transform="matrix(1 0 0 1 742.8313 543.0037)"
+   class="st14 st12 st13"
+   id="text141">8. Inicia</text>
+
+<rect
+   x="581.9"
+   y="90.7"
+   class="st10"
+   width="80"
+   height="14.9"
+   id="rect143" />
+<text
+   transform="matrix(1 0 0 1 614.28 101.0283)"
+   class="st11 st12 st13"
+   id="text145">IU</text>
+
+<rect
+   x="485.9"
+   y="90.7"
+   class="st10"
+   width="80"
+   height="14.9"
+   id="rect147" />
+<text
+   transform="matrix(1 0 0 1 494.9846 101.0283)"
+   class="st11 st12 st13"
+   id="text149">Exchange</text>
+
+<rect
+   x="389.9"
+   y="90.7"
+   class="st10"
+   width="80"
+   height="14.9"
+   id="rect151" />
+<text
+   transform="matrix(1 0 0 1 410.9753 101.0283)"
+   class="st11 st12 st13"
+   id="text153">Agbot</text>
+
+<rect
+   x="45"
+   y="76.6"
+   class="st10"
+   width="280.6"
+   height="15.7"
+   id="rect155" />
+<text
+   transform="matrix(1 0 0 1 44.994 87)"
+   class="st11 st12 st13"
+   id="text157">Cria credenciais do desenvolvedor</text>
+
+<rect
+   x="63"
+   y="18.7"
+   class="st10"
+   width="172.6"
+   height="15.7"
+   id="rect159" />
+<text
+   transform="matrix(1 0 0 1 63.0028 29.0389)"
+   class="st11 st12 st13"
+   id="text161">Desenvolvedor de software</text>
+
+<rect
+   x="45"
+   y="148.5"
+   class="st10"
+   width="283.4"
+   height="15.7"
+   id="rect163" />
+<text
+   transform="matrix(1 0 0 1 44.994 158.9073)"
+   class="st11 st12 st13"
+   id="text165">Desenvolve o operador do serviço de borda</text>
+
+<rect
+   x="45"
+   y="239.7"
+   class="st10"
+   width="293.1"
+   height="15.7"
+   id="rect167" />
+<text
+   transform="matrix(1 0 0 1 44.994 250.0562)"
+   class="st11 st12 st13"
+   id="text169">Assina e publica no hub de gerenciamento</text>
+
+<rect
+   x="54"
+   y="100.1"
+   class="st10"
+   width="271.6"
+   height="41.3"
+   id="rect171" />
+<text
+   transform="matrix(1 0 0 1 53.994 108.9678)"
+   id="text173"><tspan
+     x="0"
+     y="0"
+     class="st11 st12 st17"
+     id="tspan175">• Cria a conta do usuário</tspan><tspan
+     x="0"
+     y="16"
+     class="st11 st12 st17"
+     id="tspan177">• Cria o par de chaves de segurança (usado na etapa C)</tspan></text>
+
+<rect
+   x="54"
+   y="172.1"
+   class="st10"
+   width="271.6"
+   height="48.5"
+   id="rect179" />
+<text
+   transform="matrix(1 0 0 1 53.994 181.0086)"
+   id="text181"><tspan
+     x="0"
+     y="0"
+     class="st11 st12 st17"
+     id="tspan183">• Cria um archive contendo os arquivos YAML </tspan><tspan
+     x="0"
+     y="16"
+     class="st11 st12 st17"
+     id="tspan185">de definição do serviço</tspan><tspan
+     x="0"
+     y="32"
+     class="st11 st12 st17"
+     id="tspan187">• Cria arquivos de metadados do Open Horizon</tspan></text>
+
+<rect
+   x="54"
+   y="263.2"
+   class="st10"
+   width="271.6"
+   height="31.3"
+   id="rect189" />
+<text
+   transform="matrix(1 0 0 1 53.994 272.0575)"
+   id="text191"><tspan
+     x="0"
+     y="0"
+     class="st11 st12 st17"
+     id="tspan193">• Importa, assina e publica contêineres</tspan><tspan
+     x="0"
+     y="16"
+     class="st11 st12 st17"
+     id="tspan195">• Inclui restrições de políticas de serviços</tspan></text>
+
+<g
+   id="g197">
+	<rect
+   x="187"
+   y="359.9"
+   class="st10"
+   width="162.3"
+   height="15.6"
+   id="rect199" />
+	<text
+   transform="matrix(1 0 0 1 186.9997 371.7318)"
+   class="st14 st15 st16"
+   id="text201">Registro de contêiner</text>
+
+	<g
+   id="g203">
+		<path
+   class="st14"
+   d="M179,359.5h-8c-0.6,0-1,0.4-1,1v11c0,0.6,0.4,1,1,1h8c0.6,0,1-0.4,1-1v-11C180,359.9,179.6,359.5,179,359.5z     M179,360.5v3h-8v-3H179z M171,367.5v-3h8v3H171z M171,371.5v-3h8v3H171z"
+   id="path205" />
+		<circle
+   class="st14"
+   cx="172.5"
+   cy="362"
+   r="0.5"
+   id="circle207" />
+		<circle
+   class="st14"
+   cx="172.5"
+   cy="366"
+   r="0.5"
+   id="circle209" />
+		<circle
+   class="st14"
+   cx="172.5"
+   cy="370"
+   r="0.5"
+   id="circle211" />
+		<rect
+   id="_x3C_Transparent_Rectangle_x3E__616_"
+   x="167"
+   y="358"
+   class="st18"
+   width="16"
+   height="16" />
+	</g>
+</g>
+</svg>

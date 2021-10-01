@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="514px"
+   height="235px"
+   viewBox="0 0 514 235"
+   version="1.1"
+   id="svg2"
+   inkscape:version="0.48.1 "
+   sodipodi:docname="edge_server_data_center.svg">
+  <metadata
+     id="metadata126">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs124" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1280"
+     inkscape:window-height="705"
+     id="namedview122"
+     showgrid="false"
+     inkscape:zoom="0.9922179"
+     inkscape:cx="257"
+     inkscape:cy="117.5"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="edge_server_data_center" />
+  <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+  <title
+     id="title4">edge_server_data_center</title>
+  <desc
+     id="desc6">Created with Sketch.</desc>
+  <g
+     id="Page-1"
+     stroke="none"
+     stroke-width="1"
+     fill="none"
+     fill-rule="evenodd">
+    <g
+       id="edge_server_data_center"
+       transform="translate(0.000000, -4.000000)">
+      <rect
+         id="Rectangle"
+         stroke="#A4A4A4"
+         x="288.5"
+         y="31.05"
+         width="225"
+         height="207" />
+      <rect
+         id="rect11"
+         stroke="#A4A4A4"
+         x="0.5"
+         y="31.05"
+         width="225"
+         height="207" />
+      <rect
+         id="rect13"
+         stroke="#6EA6FF"
+         x="18.5"
+         y="49.05"
+         width="189"
+         height="27" />
+      <rect
+         id="rect15"
+         stroke="#BB8EFF"
+         x="19.5"
+         y="94.05"
+         width="189"
+         height="27" />
+      <rect
+         id="rect17"
+         stroke="#BB8EFF"
+         x="19.5"
+         y="139.05"
+         width="189"
+         height="27" />
+      <rect
+         id="rect19"
+         stroke="#BB8EFF"
+         x="19.5"
+         y="184.05"
+         width="189"
+         height="27" />
+      <rect
+         id="rect21"
+         stroke="#6EA6FF"
+         x="306.5"
+         y="50.05"
+         width="189"
+         height="27" />
+      <rect
+         id="rect23"
+         stroke="#BB8EFF"
+         x="307.5"
+         y="94.05"
+         width="189"
+         height="27" />
+      <polyline
+         id="Path"
+         stroke="#A4A4A4"
+         points="496.5 145.55 496.5 148.05 494 148.05" />
+      <line
+         x1="489.03"
+         y1="148.05"
+         x2="312.49"
+         y2="148.05"
+         id="line26"
+         stroke="#A4A4A4"
+         stroke-dasharray="4.97" />
+      <polyline
+         id="polyline28"
+         stroke="#A4A4A4"
+         points="310 148.05 307.5 148.05 307.5 145.55" />
+      <line
+         x1="307.5"
+         y1="141.15"
+         x2="307.5"
+         y2="125.75"
+         id="line30"
+         stroke="#A4A4A4"
+         stroke-dasharray="4.4" />
+      <polyline
+         id="polyline32"
+         stroke="#A4A4A4"
+         points="307.5 123.55 307.5 121.05 310 121.05" />
+      <line
+         x1="314.97"
+         y1="121.05"
+         x2="491.51"
+         y2="121.05"
+         id="line34"
+         stroke="#A4A4A4"
+         stroke-dasharray="4.97" />
+      <polyline
+         id="polyline36"
+         stroke="#A4A4A4"
+         points="494 121.05 496.5 121.05 496.5 123.55" />
+      <line
+         x1="496.5"
+         y1="127.95"
+         x2="496.5"
+         y2="143.35"
+         id="line38"
+         stroke="#A4A4A4"
+         stroke-dasharray="4.4" />
+      <rect
+         id="rect40"
+         stroke="#BB8EFF"
+         x="307.5"
+         y="166.05"
+         width="189"
+         height="27" />
+      <polyline
+         id="polyline42"
+         stroke="#A4A4A4"
+         points="496.5 217.55 496.5 220.05 494 220.05" />
+      <line
+         x1="489.03"
+         y1="220.05"
+         x2="312.49"
+         y2="220.05"
+         id="line44"
+         stroke="#A4A4A4"
+         stroke-dasharray="4.97" />
+      <polyline
+         id="polyline46"
+         stroke="#A4A4A4"
+         points="310 220.05 307.5 220.05 307.5 217.55" />
+      <line
+         x1="307.5"
+         y1="213.15"
+         x2="307.5"
+         y2="197.75"
+         id="line48"
+         stroke="#A4A4A4"
+         stroke-dasharray="4.4" />
+      <polyline
+         id="polyline50"
+         stroke="#A4A4A4"
+         points="307.5 195.55 307.5 193.05 310 193.05" />
+      <line
+         x1="314.97"
+         y1="193.05"
+         x2="491.51"
+         y2="193.05"
+         id="line52"
+         stroke="#A4A4A4"
+         stroke-dasharray="4.97" />
+      <polyline
+         id="polyline54"
+         stroke="#A4A4A4"
+         points="494 193.05 496.5 193.05 496.5 195.55" />
+      <line
+         x1="496.5"
+         y1="199.95"
+         x2="496.5"
+         y2="215.35"
+         id="line56"
+         stroke="#A4A4A4"
+         stroke-dasharray="4.4" />
+      <g
+         id="Group"
+         transform="translate(28.000000, 0.910000)"
+         fill="#000000"
+         font-family="IBMPlexSans, IBM Plex Sans"
+         font-size="14"
+         font-weight="normal">
+        <text
+           id="R">
+          <tspan
+             x="0"
+             y="14"
+             id="tspan60">R</tspan>
+        </text>
+        <text
+           id="emo">
+          <tspan
+             x="8.75"
+             y="14"
+             id="tspan63">emo</tspan>
+        </text>
+        <text
+           id="t">
+          <tspan
+             x="36.5"
+             y="14"
+             id="tspan66">t</tspan>
+        </text>
+        <text
+           id="e-ope">
+          <tspan
+             x="41.36"
+             y="14"
+             id="tspan69">e ope</tspan>
+        </text>
+        <text
+           id="r">
+          <tspan
+             x="75.99"
+             y="14"
+             id="tspan72">r</tspan>
+        </text>
+        <text
+           id="ations">
+          <tspan
+             x="81.07"
+             y="14"
+             id="tspan75">ations</tspan>
+        </text>
+        <text
+           id="c">
+          <tspan
+             x="122.88"
+             y="14"
+             id="tspan78">c</tspan>
+        </text>
+        <text
+           id="en">
+          <tspan
+             x="129.83"
+             y="14"
+             id="tspan81">en</tspan>
+        </text>
+        <text
+           id="text83">
+          <tspan
+             x="145.47"
+             y="14"
+             id="tspan85">t</tspan>
+        </text>
+        <text
+           id="er">
+          <tspan
+             x="150.33"
+             y="14"
+             id="tspan88">er</tspan>
+        </text>
+      </g>
+      <text
+         id="Central-data-center"
+         fill="#000000"
+         font-family="IBMPlexSans, IBM Plex Sans"
+         font-size="14"
+         font-weight="normal">
+        <tspan
+           x="343.258"
+           y="15"
+           id="tspan91">Data center central</tspan>
+      </text>
+      <text
+         id="Applications,-indust"
+         font-size="12"
+         font-weight="normal"
+         x="9.0628843"
+         transform="scale(0.80573894,1.2410968)"
+         style="font-size:9.66886711px;font-weight:normal;fill:#000000;font-family:'IBMPlexSans, IBM Plex Sans'">
+        <tspan
+           x="32.79512"
+           y="53.984509"
+           id="tspan94">Aplicativos, soluções para segmentos de mercado</tspan>
+      </text>
+      <text
+         id="Gateway,-servers"
+         fill="#000000"
+         font-family="IBMPlexSans, IBM Plex Sans"
+         font-size="12"
+         font-weight="normal">
+        <tspan
+           x="67.04"
+           y="112"
+           id="tspan97">Gateway, servidores</tspan>
+      </text>
+      <text
+         id="OpenShift®-Container"
+         font-size="12"
+         font-weight="normal"
+         x="0.49892482"
+         transform="scale(0.98901313,1.0111089)"
+         style="font-size:11.86815739px;font-weight:normal;fill:#000000;font-family:'IBMPlexSans, IBM Plex Sans'">
+        <tspan
+           x="22.257214"
+           y="155.27505"
+           id="tspan100">OpenShift® Container Platform 4.2</tspan>
+      </text>
+      <text
+         id="Linux"
+         fill="#000000"
+         font-family="IBMPlexSans, IBM Plex Sans"
+         font-size="12"
+         font-weight="normal">
+        <tspan
+           x="91"
+           y="202.43"
+           id="tspan103">Linux</tspan>
+      </text>
+      <text
+         id="text105"
+         fill="#000000"
+         font-family="IBMPlexSans, IBM Plex Sans"
+         font-size="12"
+         font-weight="normal">
+        <tspan
+           x="309.154"
+           y="185"
+           id="tspan107">OpenShift® Container Platform 4.2</tspan>
+      </text>
+      <text
+         id="Management-Hub"
+         fill="#000000"
+         font-family="IBMPlexSans, IBM Plex Sans"
+         font-size="12"
+         font-weight="normal">
+        <tspan
+           x="353.794"
+           y="112"
+           id="tspan110">Hub de gerenciamento</tspan>
+      </text>
+      <text
+         id="Cloud-workload-autom"
+         font-size="12"
+         font-weight="normal"
+         x="77.316002"
+         style="font-size:10.41510963px;font-weight:normal;fill:#000000;font-family:'IBMPlexSans, IBM Plex Sans'"
+         transform="scale(0.86792577,1.1521723)">
+        <tspan
+           x="363.04932"
+           y="121.50961"
+           id="tspan113">Automação de carga de trabalho em nuvem</tspan>
+      </text>
+      <text
+         id="text115"
+         font-size="12"
+         font-weight="normal"
+         x="146.07686"
+         transform="scale(0.79632137,1.2557744)"
+         style="font-size:9.5558567px;font-weight:normal;fill:#000000;font-family:'IBMPlexSans, IBM Plex Sans'">
+        <tspan
+           x="399.27042"
+           y="53.353531"
+           id="tspan117">Aplicativos, soluções para segmentos de mercado</tspan>
+      </text>
+      <text
+         id="Cloud-infrastructure"
+         fill="#000000"
+         font-family="IBMPlexSans, IBM Plex Sans"
+         font-size="12"
+         font-weight="normal">
+        <tspan
+           x="348.65"
+           y="210"
+           id="tspan120">Infraestrutura em nuvem</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

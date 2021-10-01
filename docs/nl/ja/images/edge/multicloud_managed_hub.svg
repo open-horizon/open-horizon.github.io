@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="238px" height="174px" viewBox="0 0 238 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>multicloud_managed_hub</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="multicloud_managed_hub" transform="translate(2.000000, -2.000000)">
+            <text id="Additional-OpenShift" fill="#000000" font-family="IBMPlexSans, IBM Plex Sans" font-size="8" font-weight="normal" line-spacing="12">
+                <tspan x="13.332" y="120">追加の OpenShift® Container Platform 4.2 コンポーネント</tspan>
+            </text>
+            <rect id="Rectangle" stroke="#A4A4A4" stroke-width="2.11" x="0" y="23" width="234" height="117"></rect>
+            <rect id="Rectangle" stroke="#BB8EFF" stroke-width="2.19" x="9" y="104" width="216" height="27"></rect>
+            <text id="Controller" fill="#000000" font-family="IBMPlexSans, IBM Plex Sans" font-size="10.82" font-weight="normal">
+                <tspan x="93.27943" y="86">コントローラー</tspan>
+            </text>
+            <text id="CLI" fill="#000000" font-family="IBMPlexSans, IBM Plex Sans" font-size="10.82" font-weight="normal">
+                <tspan x="167" y="50">CLI</tspan>
+            </text>
+            <text id="Console" fill="#000000" font-family="IBMPlexSans, IBM Plex Sans" font-size="10.82" font-weight="normal">
+                <tspan x="38" y="50">コンソール</tspan>
+            </text>
+            <text id="OpenShift®-Container" fill="#000000" font-family="IBMPlexSans, IBM Plex Sans" font-size="12.36" font-weight="normal">
+                <tspan x="22.38362" y="158">OpenShift® Container Platform 4.2</tspan>
+                <tspan x="33.0503" y="174">(中央データ・センターでホストされる)</tspan>
+            </text>
+            <rect id="Rectangle" stroke="#6EA6FF" stroke-width="1.55" x="9" y="68" width="216" height="27"></rect>
+            <rect id="Rectangle" stroke="#6EA6FF" stroke-width="1.55" x="126" y="32" width="99" height="27"></rect>
+            <polygon id="Path" stroke="#6EA6FF" stroke-width="1.55" points="108 59 8.98 59 9 32 108 32"></polygon>
+            <text id="IBM-Multicloud-Manag" fill="#000000" font-family="IBMPlexSans, IBM Plex Sans" font-size="12" font-weight="normal">
+                <tspan x="9.234" y="12">IBM Multicloud Manager Core 1.2 - Edge</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with AI Text Handler 1.0.0 -->
+<ExtractedAITHs>
+<ExtractedAITH file="/images/edge/01_IEAM_overview.ai">
+<text>Administrador</text>
+<text>Proprietário do nó</text>
+<text>Instalador em nuvem</text>
+<text>Desenvolvedor de software</text>
+<text>Hub de gerenciamento do IEAM</text>
+<text>Nó de borda</text>
+<text>Dispositivo</text>
+<text>Executa</text>
+<text>Exchange</text>
+<text>Gerencia a implementação</text>
+<text>Desenvolve e publica serviços</text>
+<text>Agbot</text>
+<text> </text>
+<text>Instala o hub de gerenciamento</text>
+<text>Serviço de borda</text>
+<text>Agente de borda</text>
+<text>Obtém instruções de implementação do serviço</text>
+<text>Cluster ou</text>
+<text>Importa contêineres</text>
+<text>Registro de contêiner</text>
+<text>MMS</text>
+<text>IU</text>
+<text>Registra o nó com o hub de gerenciamento</text>
+</ExtractedAITH>
+<ExtractedAITH file="/images/edge/02a_Developing_AI_model_using_MMS.ai">
+<text>Exchange</text>
+<text>Agbot</text>
+<text>Docker</text>
+<text>Ambiente do cientista de dados</text>
+<text>Nó de borda</text>
+<text>Aplicativo AI/ML com seu modelo</text>
+<text>Serviço de IA</text>
+<text>Agente de borda</text>
+<text>Instala</text>
+<text>Aplicativo de AI/ML</text>
+<text>Serviço de IA</text>
+<text>MMS</text>
+<text>Desenvolvedor de software</text>
+<text>Registro de contêiner</text>
+<text>Hub de gerenciamento do IEAM</text>
+<text>5. Importa contêineres</text>
+<text>Ambiente do desenvolvedor</text>
+<text>Cientista de dados</text>
+<text>IU</text>
+<text>2. Compartilha o aplicativo com o desenvolvedor</text>
+<text> </text>
+<text>1. Cria</text>
+<text>4. Publica contêineres</text>
+<text>3. Empacota o aplicativo em um serviço</text>
+<text> </text>
+</ExtractedAITH>
+<ExtractedAITH file="/images/edge/02b_Updating_AI_model_using_MMS.ai">
+<text>Agbot</text>
+<text>Exchange</text>
+<text>IU</text>
+<text>Serviço de IA</text>
+<text>Agente de borda</text>
+<text>Serviço de IA</text>
+<text>MMS</text>
+<text>Docker</text>
+<text>Desenvolvedor de software</text>
+<text>Ambiente do desenvolvedor</text>
+<text>Ambiente do cientista de dados</text>
+<text>8. Importa atualizações de modelo</text>
+<text>Registro de contêiner</text>
+<text>Cientista de dados</text>
+<text>Nó de borda</text>
+<text>9. Importa modelos usando a API do ESS</text>
+<text>Hub de gerenciamento do IEAM</text>
+<text>Aplicativo de AI/ML</text>
+<text>7. Importa atualizações de modelo usando o MMS</text>
+<text>Aplicativo AI/ML com seu modelo</text>
+<text>6. Faz atualizações</text>
+</ExtractedAITH>
+<ExtractedAITH file="/images/edge/03a_Developing_edge_service_for_device.ai">
+<text>Administrador</text>
+<text>• Importa, assina e publica contêineres
+• Inclui restrições de políticas de serviços</text>
+<text>Hub de gerenciamento do IEAM</text>
+<text>MMS</text>
+<text>2. Publica metadados de serviço no hub de gerenciamento</text>
+<text>Desenvolvedor de software</text>
+<text>1. Publica contêineres</text>
+<text>Exchange</text>
+<text>IU</text>
+<text>Nó de borda</text>
+<text>7. Executa</text>
+<text>A</text>
+<text> </text>
+<text>B</text>
+<text>Serviço de borda</text>
+<text>Agente de borda</text>
+<text>Assina e publica no hub de gerenciamento</text>
+<text> </text>
+<text> </text>
+<text>3. Cria um padrão ou política para a implementação do serviço para corrigir os nós de borda</text>
+<text>Proprietário do nó</text>
+<text>C</text>
+<text>• Implementa o aplicativo no Docker
+• Testa e simula o ambiente de procução
+• Cria arquivos de metadados do Open Horizon</text>
+<text>4. Registra o nó com a política de nó</text>
+<text>Agbot</text>
+<text>5. Implementa o serviço</text>
+<text>6. Importa contêineres</text>
+<text>Cria credenciais do desenvolvedor</text>
+<text> </text>
+<text>• Cria a conta do usuário
+• Cria o par de chaves de assinatura (usado na etapa C)</text>
+<text>Desenvolve o serviço de borda</text>
+<text> </text>
+<text>Registro de contêiner</text>
+</ExtractedAITH>
+<ExtractedAITH file="/images/edge/03b_Developing_edge_service_for_cluster.ai">
+<text>Hub de gerenciamento do IEAM</text>
+<text>Proprietário do nó</text>
+<text>Administrador</text>
+<text>Agbot</text>
+<text>• Cria a conta do usuário
+• Cria o par de chaves de assinatura (usado na etapa C)</text>
+<text>Cria credenciais do desenvolvedor</text>
+<text>Assina e publica no hub de gerenciamento</text>
+<text>1. Publica contêineres</text>
+<text>2. Publica metadados de serviço no hub de gerenciamento</text>
+<text>• Importa, assina e publica contêineres
+• Inclui restrições de políticas de serviços</text>
+<text>IU</text>
+<text>8. Inicia</text>
+<text>A</text>
+<text>Exchange</text>
+<text>Nó de borda</text>
+<text>Agente de borda</text>
+<text>Operador de serviço de borda</text>
+<text>7. Executa</text>
+<text>Registro de contêiner</text>
+<text>Serviço de borda</text>
+<text>Desenvolve o operador do serviço de borda</text>
+<text>• Cria um archive contendo os arquivos YAML de definição do serviço
+• Cria arquivos de metadados do Open Horizon</text>
+<text>Desenvolvedor de software</text>
+<text>3. Cria um padrão ou política para a implementação do serviço para corrigir os nós de borda</text>
+<text>6. Importa contêineres</text>
+<text>4. Registra o nó com a política de nó</text>
+<text>5. Implementa o serviço</text>
+<text>C</text>
+<text>B</text>
+</ExtractedAITH>
+<ExtractedAITH file="/images/edge/04_Defining_an_edge_policy.ai">
+<text>Política de nó</text>
+<text>Propriedades do nó</text>
+<text>OU</text>
+<text>camera-type</text>
+<text>Política de nó</text>
+<text>(Opcional)</text>
+<text>Fornecido pelo proprietário do nó ao registrar o nó</text>
+<text>Função</text>
+<text>Propósito</text>
+<text>Define os recursos que o nó possui e o propósito desejado para o nó</text>
+<text>Define qual é o propósito do serviço e o que é necessário para que ele seja executado corretamente em um nó de borda</text>
+<text>Fornecido pelo desenvolvedor de serviços ao publicar o serviço</text>
+<text>Política de Serviço</text>
+<text>Política de implementação</text>
+<text>Fornecido pelo administrador de política ao implementar o serviço</text>
+<text>Restrições de serviço</text>
+<text>Propriedades</text>
+<text>(Opcional)</text>
+<text>Propriedades de serviço</text>
+<text>Propriedades de implementação</text>
+<text>(Opcional)</text>
+<text>Restrições</text>
+<text>Restrições do nó</text>
+<text>(Opcional)</text>
+<text>Política de implementação</text>
+<text>Definir onde o serviço deve ser executado</text>
+<text>Limitar ainda mais o nó de borda no qual esse modelo está implementado</text>
+<text>Fornecido pelo criador do modelo ou pelo cientista de dados ao criar o modelo</text>
+<text>Política de modelo</text>
+<text>camera-type=motion</text>
+<text>Restrições de implementação</text>
+<text>camera-type</text>
+<text>is equal to</text>
+<text>still</text>
+<text>motion</text>
+<text>is equal to</text>
+</ExtractedAITH>
+<ExtractedAITH file="/images/edge/05a_Installing_edge_agent_on_device.ai">
+<text>Pré-requisito: instale o hub de gerenciamento</text>
+<text>Hub de gerenciamento do IEAM</text>
+<text>Dispositivo de borda</text>
+<text>Proprietário do nó</text>
+<text>4. Instala o agente de borda</text>
+<text>Instalador em nuvem</text>
+<text>3a. Compartilha o arquivo tar de instalação do agente</text>
+<text>Sistema Operacional</text>
+<text>Hardware</text>
+<text>Agente de borda</text>
+<text>2. Prepara o dispositivo de borda</text>
+<text>S.O. suportado</text>
+<text>1. Seleciona o dispositivo de borda</text>
+<text>5. Registra o dispositivo de borda usando a política ou o padrão</text>
+<text>Hardware suportado</text>
+<text>• Ubuntu
+• Debian</text>
+<text>3b. Copia o arquivo tar para o dispositivo</text>
+<text>• Raspian
+• macOS</text>
+<text>• Linux x86-64
+• Máquinas virtuais
+• Linux ARM (32 bits)
+• Linux on ARM (64 bits)
+• mac</text>
+</ExtractedAITH>
+<ExtractedAITH file="/images/edge/05b_Installing_edge_agent_on_cluster.ai">
+<text>Pré-requisito: instale o hub de gerenciamento</text>
+<text>6. Registra o cluster de borda usando a política ou o padrão</text>
+<text>Cluster de borda do Kubernetes</text>
+<text>Agente de borda</text>
+<text>3. Compartilha o arquivo tar de instalação do agente e as credenciais de login do cluster</text>
+<text>Proprietário do nó</text>
+<text>1. Instala o cluster de borda</text>
+<text>Hub de gerenciamento do IEAM</text>
+<text>2. Prepara o cluster de borda</text>
+<text>• Kubernetes
+• Light Kubernetes
+(ex. micro-kub e k3s)</text>
+<text>Instalador em nuvem</text>
+<text>Plataforma suportada</text>
+<text>4. Efetua login no cluster Kubernetes como um administrador</text>
+<text>5. Executa o script de instalação do agente e instala o agente</text>
+</ExtractedAITH>
+<ExtractedAITH file="/images/edge/06_IEAM_management_hub_install.ai">
+<text>Nó de borda</text>
+<text>Hub de gerenciamento do IEAM</text>
+<text>4. Configura a autenticação para o Identity and Access Manager (IAM)</text>
+<text>Exchange</text>
+<text>Postgres DB</text>
+<text>Mongo DB</text>
+<text>Agbot</text>
+<text>Postgres DB</text>
+<text>Posteriormente, precisa do arquivo tar para a instalação do agente</text>
+<text>IU</text>
+<text>3. Instala os componentes no hub de gerenciamento</text>
+<text>MMS</text>
+<text>5. Preenche o Exchange com exemplos do Open Horizon</text>
+<text>2. Instala os Serviços Comuns da Plataforma IBM Cloud</text>
+<text>6. Cria o arquivo tar de instalação do agente</text>
+<text>1. Configura o OCP</text>
+<text>Instalador em nuvem</text>
+<text>IBM Cloud Platform Common Services</text>
+<text>IAM</text>
+<text>Red Hat® OpenShift® Container Platform</text>
+<text>Proprietário do nó</text>
+</ExtractedAITH>
+<ExtractedAITH file="/images/edge/07_What_is_an_edge_node.ai">
+<text>Nó de borda</text>
+<text>Redes privadas virtuais do Docker</text>
+<text>Serviços de S.O.</text>
+<text>Sensores de hardware</text>
+<text>Acesso de hardware</text>
+<text>Servidores em nuvem (opcional)</text>
+<text>Padrão de implementação</text>
+<text>Acesso do S.O.</text>
+<text>cpu2msghub (serviço de borda)</text>
+<text>gps (serviço de borda)</text>
+<text>cpu (serviço de borda)</text>
+</ExtractedAITH>
+<ExtractedAITH file="/images/edge/08_sdrarch.ai">
+<text>Node.js, Express, GraphQL</text>
+<text>Cloud</text>
+<text>Navegador da web</text>
+<text>Nó de borda</text>
+<text>Agente Open Horizon</text>
+<text>Acionador</text>
+<text>Ação de rádio definido por software</text>
+<text>Fornecer visualizações de dados</text>
+<text>Usuário</text>
+<text>Fornece visualizações de dados (React, GraphQL)</text>
+<text>Ação de rádio definido por software dos acionadores de mensagens</text>
+<text>Serviço sdr2msghub</text>
+<text>Atende a IU, transporta dados para o navegador</text>
+<text>Funções da IBM</text>
+<text>Nó de borda</text>
+<text>Armazena somente insights (opiniões) no banco de dados</text>
+<text>Serviço sdr</text>
+<text>Sensor sdr</text>
+<text>Recuperar clipes de áudio a partir de estações de rádio</text>
+<text>Usar aprendizado de máquina para selecionar as melhores estações de áudio e enviar áudio para a nuvem</text>
+<text>Fluxos de Eventos IBM</text>
+<text>Entendimento de língua natural do IBM Watson</text>
+<text>Conversão de voz para texto do IBM Watson</text>
+<text>Converter texto de áudio, analisar opiniões</text>
+<text>Editar banco de dados Postgres</text>
+</ExtractedAITH>
+</ExtractedAITHs>

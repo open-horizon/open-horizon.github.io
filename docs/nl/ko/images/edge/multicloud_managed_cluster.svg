@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 663.84 378.27"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="multicloud_managed_cluster.svg"
+   inkscape:export-filename="T:\PUB\ABD001\ART\WORK\ship1\multicloud_managed_cluster.png"
+   inkscape:export-xdpi="92"
+   inkscape:export-ydpi="92">
+  <metadata
+     id="metadata303">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     id="namedview301"
+     showgrid="false"
+     inkscape:zoom="2.0203845"
+     inkscape:cx="211.97695"
+     inkscape:cy="186.56525"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" />
+  <defs
+     id="defs3">
+    <style
+       id="style5">.cls-1{font-size:11px;}.cls-1,.cls-32{font-family:IBMPlexSans, IBM Plex Sans;}.cls-2{letter-spacing:-0.01em;}.cls-3{letter-spacing:-0.01em;}.cls-4{letter-spacing:0em;}.cls-5{letter-spacing:-0.01em;}.cls-6{letter-spacing:-0.01em;}.cls-7{letter-spacing:-0.01em;}.cls-8{letter-spacing:0em;}.cls-9{letter-spacing:0em;}.cls-10{letter-spacing:-0.01em;}.cls-11{letter-spacing:0em;}.cls-12{letter-spacing:0em;}.cls-13{letter-spacing:0em;}.cls-14{letter-spacing:-0.01em;}.cls-15{letter-spacing:0em;}.cls-16{font-size:12px;font-family:IBMPlexSans-Bold, IBM Plex Sans;font-weight:700;}.cls-17{letter-spacing:-0.01em;}.cls-18{letter-spacing:-0.01em;}.cls-19{letter-spacing:0.01em;}.cls-20{letter-spacing:-0.01em;}.cls-21{letter-spacing:0em;}.cls-22{letter-spacing:0em;}.cls-23{letter-spacing:0.01em;}.cls-24{letter-spacing:0em;}.cls-25{letter-spacing:-0.01em;}.cls-26{letter-spacing:-0.01em;}.cls-27{letter-spacing:-0.02em;}.cls-28{letter-spacing:-0.02em;}.cls-29,.cls-30,.cls-31{fill:none;stroke-miterlimit:10;stroke-width:1.55px;}.cls-29{stroke:#a4a4a4;}.cls-30{stroke:#6ea6ff;}.cls-31{stroke:#bb8eff;}.cls-32{font-size:10.82px;}.cls-33{letter-spacing:-0.01em;}.cls-34{letter-spacing:0em;}.cls-35{letter-spacing:0em;}.cls-36{letter-spacing:0.02em;}.cls-37{letter-spacing:-0.01em;}.cls-38{letter-spacing:0em;}.cls-39{letter-spacing:-0.01em;}.cls-40{letter-spacing:0em;}.cls-41{letter-spacing:-0.01em;}.cls-42{letter-spacing:-0.01em;}.cls-43{letter-spacing:0em;}.cls-44{letter-spacing:-0.02em;}</style>
+  </defs>
+  <title
+     id="title7">multicloud_managed_cluster</title>
+  <text
+     class="cls-1"
+     transform="translate(62.37 54.15)"
+     id="text9"
+     style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">부트 노드</text>
+  <text
+     class="cls-1"
+     id="text11"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     sodipodi:linespacing="125%"
+     x="371.99484"
+     y="350.98999">
+    <tspan
+       sodipodi:role="line"
+       id="tspan4227"
+       x="371.99484"
+       y="350.98999"
+       style="text-align:center;text-anchor:middle">OpenShift<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:IBMPlexSans, 'IBM Plex Sans';-inkscape-font-specification:'IBMPlexSans, IBM Plex Sans'"
+   id="tspan4233">®</tspan>
+ Container Platform 4.2 <tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim"
+   id="tspan4231">에지 디바이스 프로파일</tspan>
+</tspan>
+    <tspan
+       sodipodi:role="line"
+       id="tspan4229"
+       x="371.99484"
+       y="365.95328"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim;text-align:center;text-anchor:middle">(원격운영 센터에 별도로 호스팅됨)</tspan>
+  </text>
+  <text
+     class="cls-16"
+     transform="translate(190.02 27.89)"
+     id="text83"
+     style="stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none">
+    <tspan
+       class="cls-17"
+       id="tspan85"
+       style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none">에지 서버(<tspan
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;stroke:#000000;stroke-opacity:1;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+   id="tspan4431">IBM Multicloud Manager</tspan>
+
+
+ 관리 클러스터)</tspan>
+  </text>
+  <text
+     class="cls-1"
+     transform="translate(221.37 54.15)"
+     id="text121"
+     style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">마스터
+노드<tspan
+   class="cls-25"
+   x="14.81"
+   y="0"
+   id="tspan123"
+   style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+<tspan
+   class="cls-11"
+   x="20.09"
+   y="0"
+   id="tspan125"
+   style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+<tspan
+   x="23.9"
+   y="0"
+   id="tspan127"
+   style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+</text>
+  <text
+     class="cls-1"
+     transform="translate(383.37 54.15)"
+     id="text129"
+     style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">관리 노드<tspan
+   class="cls-26"
+   x="26.93"
+   y="0"
+   id="tspan131"
+   style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+<tspan
+   x="32.67"
+   y="0"
+   id="tspan133"
+   style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+</text>
+  <text
+     class="cls-1"
+     transform="translate(545.37 54.15)"
+     id="text135"
+     style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">
+    <tspan
+       class="cls-27"
+       id="tspan137"
+       style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">작업자 노드</tspan>
+    <tspan
+       x="9.64"
+       y="0"
+       id="tspan139"
+       style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+    <tspan
+       class="cls-28"
+       x="19.83"
+       y="0"
+       id="tspan141"
+       style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+    <tspan
+       class="cls-12"
+       x="25.44"
+       y="0"
+       id="tspan143"
+       style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+  </text>
+  <rect
+     class="cls-29"
+     x="180"
+     y="63.02"
+     width="144"
+     height="270"
+     id="rect145" />
+  <rect
+     class="cls-30"
+     x="189"
+     y="81.02"
+     width="126"
+     height="27"
+     id="rect147" />
+  <rect
+     class="cls-31"
+     x="189"
+     y="117.02"
+     width="126"
+     height="27"
+     id="rect149" />
+  <rect
+     class="cls-31"
+     x="189"
+     y="153.02"
+     width="126"
+     height="27"
+     id="rect151" />
+  <text
+     class="cls-32"
+     transform="translate(228.37 98.95)"
+     id="text153"
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">Klu<tspan
+   class="cls-33"
+   x="15.95"
+   y="0"
+   id="tspan155"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">s</tspan>
+<tspan
+   class="cls-34"
+   x="21.14"
+   y="0"
+   id="tspan157"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">t</tspan>
+<tspan
+   class="cls-35"
+   x="24.89"
+   y="0"
+   id="tspan159"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">erlet</tspan>
+</text>
+  <text
+     class="cls-32"
+     transform="translate(227.03 134.69)"
+     id="text161"
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">Helm(Tiller)<tspan
+   class="cls-36"
+   x="28.53"
+   y="0"
+   id="tspan163"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+<tspan
+   x="32.37"
+   y="0"
+   id="tspan165"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+<tspan
+   class="cls-37"
+   x="41.26"
+   y="0"
+   id="tspan167"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+<tspan
+   x="44.15"
+   y="0"
+   id="tspan169"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+</text>
+  <text
+     class="cls-32"
+     transform="translate(243.78 171.42)"
+     id="text171"
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">e<tspan
+   class="cls-38"
+   x="5.94"
+   y="0"
+   id="tspan173"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">t</tspan>
+<tspan
+   class="cls-39"
+   x="9.69"
+   y="0"
+   id="tspan175"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">c</tspan>
+<tspan
+   x="15.07"
+   y="0"
+   id="tspan177"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">d</tspan>
+</text>
+  <rect
+     class="cls-31"
+     x="189"
+     y="189.02"
+     width="126"
+     height="27"
+     id="rect179" />
+  <rect
+     class="cls-31"
+     x="189"
+     y="225.02"
+     width="126"
+     height="27"
+     id="rect181" />
+  <rect
+     class="cls-31"
+     x="189"
+     y="261.02"
+     width="126"
+     height="27"
+     id="rect183" />
+  <rect
+     class="cls-31"
+     x="189"
+     y="297.02"
+     width="126"
+     height="27"
+     id="rect185" />
+  <text
+     class="cls-32"
+     transform="translate(233.55 207.21)"
+     id="text187"
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">CoreDNS<tspan
+   class="cls-40"
+   x="12.78"
+   y="0"
+   id="tspan189"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+<tspan
+   class="cls-35"
+   x="16.69"
+   y="0"
+   id="tspan191"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+</text>
+  <text
+     class="cls-32"
+     transform="translate(242.37 242.95)"
+     id="text193"
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">
+    <tspan
+       class="cls-41"
+       id="tspan195"
+       style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">Kube</tspan>
+    <tspan
+       x="6.75"
+       y="0"
+       id="tspan197"
+       style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+  </text>
+  <text
+     class="cls-32"
+     transform="translate(236.03 278.69)"
+     id="text199"
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">
+    <tspan
+       class="cls-41"
+       id="tspan201"
+       style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">Kubelet</tspan>
+    <tspan
+       x="6.75"
+       y="0"
+       id="tspan203"
+       style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+  </text>
+  <text
+     class="cls-32"
+     transform="translate(239.78 315.42)"
+     id="text205"
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">Calico<tspan
+   class="cls-39"
+   x="18.14"
+   y="0"
+   id="tspan207"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+<tspan
+   x="23.52"
+   y="0"
+   id="tspan209"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+</text>
+  <rect
+     class="cls-29"
+     x="342"
+     y="63.02"
+     width="144"
+     height="270"
+     id="rect211" />
+  <rect
+     class="cls-31"
+     x="351"
+     y="225.02"
+     width="126"
+     height="27"
+     id="rect213" />
+  <rect
+     class="cls-31"
+     x="351"
+     y="261.02"
+     width="126"
+     height="27"
+     id="rect215" />
+  <polygon
+     class="cls-31"
+     points="477 325.02 351 324.02 351 297.02 477 297.02 477 325.02"
+     id="polygon217" />
+  <text
+     class="cls-32"
+     transform="translate(387.37,242.95)"
+     id="text219"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.82000017px;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;"
+     sodipodi:linespacing="125%">
+    <tspan
+       sodipodi:role="line"
+       id="tspan4443"><tspan
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+   id="tspan4445">Kube</tspan>
+
+
+ 프록시</tspan>
+  </text>
+  <text
+     class="cls-32"
+     transform="translate(396.03 278.69)"
+     id="text231"
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">
+    <tspan
+       class="cls-41"
+       id="tspan233"
+       style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">K</tspan>
+    <tspan
+       x="6.75"
+       y="0"
+       id="tspan235"
+       style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">ubelet</tspan>
+  </text>
+  <text
+     class="cls-32"
+     transform="translate(378.78 315.42)"
+     id="text237"
+     style="-inkscape-font-specification:'Arial, Normal';font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.82000017px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;"
+     sodipodi:linespacing="125%">
+    <tspan
+       sodipodi:role="line"
+       id="tspan4447">Calico <tspan
+   style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+   id="tspan4449">컴포넌트</tspan>
+</tspan>
+  </text>
+  <rect
+     class="cls-29"
+     x="504"
+     y="63.02"
+     width="144"
+     height="270"
+     id="rect247" />
+  <rect
+     class="cls-30"
+     x="513"
+     y="171.02"
+     width="126"
+     height="45"
+     id="rect249" />
+  <rect
+     class="cls-31"
+     x="513"
+     y="225.02"
+     width="126"
+     height="27"
+     id="rect251" />
+  <polygon
+     class="cls-31"
+     points="639 288.64 513 288.02 513 261.02 639 261.02 639 288.64"
+     id="polygon253" />
+  <rect
+     class="cls-31"
+     x="513"
+     y="297.02"
+     width="126"
+     height="27"
+     id="rect255" />
+  <text
+     class="cls-32"
+     transform="translate(521.55 198.21)"
+     id="text257"
+     style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">애플리케이션
+컨테이너<tspan
+   class="cls-39"
+   x="57.61"
+   y="0"
+   id="tspan259"
+   style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+<tspan
+   x="62.99"
+   y="0"
+   id="tspan261"
+   style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+</text>
+  <text
+     class="cls-32"
+     transform="translate(549.37 242.95)"
+     id="text263"
+     style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">
+    <tspan
+       class="cls-41"
+       id="tspan265"
+       style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+   id="tspan4435">Kube</tspan>
+
+
+ 프록시</tspan>
+    <tspan
+       x="6.75"
+       y="0"
+       id="tspan267"
+       style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+    <tspan
+       class="cls-40"
+       x="33.94"
+       y="0"
+       id="tspan269"
+       style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+    <tspan
+       class="cls-42"
+       x="37.85"
+       y="0"
+       id="tspan271"
+       style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+    <tspan
+       class="cls-43"
+       x="43.78"
+       y="0"
+       id="tspan273"
+       style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+  </text>
+  <text
+     class="cls-32"
+     transform="translate(558.03 278.69)"
+     id="text275"
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">
+    <tspan
+       class="cls-41"
+       id="tspan277"
+       style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">K</tspan>
+    <tspan
+       x="6.75"
+       y="0"
+       id="tspan279"
+       style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">ubelet</tspan>
+  </text>
+  <polygon
+     class="cls-29"
+     points="162 333.02 17 333.02 18 63.02 162 63.02 162 333.02"
+     id="polygon281" />
+  <rect
+     class="cls-31"
+     x="27"
+     y="297.02"
+     width="126"
+     height="27"
+     id="rect283" />
+  <text
+     class="cls-32"
+     transform="translate(71.78 315.42)"
+     id="text285"
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">Doc<tspan
+   class="cls-44"
+   x="18.76"
+   y="0"
+   id="tspan287"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">k</tspan>
+<tspan
+   class="cls-35"
+   x="24.28"
+   y="0"
+   id="tspan289"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">er</tspan>
+</text>
+  <text
+     class="cls-32"
+     transform="translate(540.78 315.42)"
+     id="text291"
+     style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.82000017px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;"
+     sodipodi:linespacing="125%">
+    <tspan
+       sodipodi:role="line"
+       id="tspan4451"><tspan
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+   id="tspan4453">Calico</tspan>
+
+
+ 컴포넌트</tspan>
+  </text>
+</svg>

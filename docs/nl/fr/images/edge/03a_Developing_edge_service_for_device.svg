@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 24.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 1020 514"
+   style="enable-background:new 0 0 1020 514;"
+   xml:space="preserve"
+   sodipodi:docname="03a_Developing_edge_service_for_device.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"><metadata
+   id="metadata215"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs213" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1680"
+   inkscape:window-height="987"
+   id="namedview211"
+   showgrid="false"
+   inkscape:zoom="0.98717653"
+   inkscape:cx="545.30058"
+   inkscape:cy="329.61233"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style2">
+	.st0{fill:#BEBEBE;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#E3F6FF;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#0F62FE;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#009C98;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#408BFC;}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#F4F4F4;}
+	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st7{fill:#EA18E5;}
+	.st8{font-family:'IBMPlexSans';}
+	.st9{font-size:14px;}
+	.st10{font-size:12px;}
+	.st11{fill-rule:evenodd;clip-rule:evenodd;fill:#DCDCDC;}
+	.st12{fill:none;stroke:#BEBEBE;stroke-width:2;}
+	.st13{fill-rule:evenodd;clip-rule:evenodd;fill:#051B75;}
+	.st14{fill-rule:evenodd;clip-rule:evenodd;fill:none;}
+	.st15{fill:#161616;}
+	.st16{fill:#F4F4F4;}
+	.st17{font-family:'IBMPlexSans-Medium';}
+	.st18{font-size:16px;}
+	.st19{fill:none;}
+</style>
+<path
+   id="Line-4"
+   class="st0"
+   d="M25.5,59.8V316H388V169h-6l7-14l7,14h-6v149H23.5V59.8H25.5z"
+   style="" />
+<path
+   id="Line-4-Copy-2"
+   class="st0"
+   d="M831.5,59.8v59.8l-44.5,0l0,6l-14-7l14-7l0,6h42.5l0-57.8H831.5z"
+   style="" />
+<circle
+   id="Oval-Copy-3"
+   class="st1"
+   cx="831"
+   cy="25"
+   r="24"
+   style="" />
+<path
+   id="Shape"
+   class="st2"
+   d="M826,28c2.8,0,5,2.2,5,5v6h-2v-6c0-1.7-1.3-3-3-3h-4c-1.7,0-3,1.3-3,3v6h-2v-6c0-2.8,2.2-5,5-5H826z   M824,16c2.8,0,5,2.2,5,5s-2.2,5-5,5s-5-2.2-5-5S821.2,16,824,16z M842.6,16l1.4,1.4l-7.1,7.1l-3.9-3.9l1.4-1.4l2.5,2.5L842.6,16z   M824,18c-1.7,0-3,1.3-3,3c0,1.7,1.3,3,3,3s3-1.3,3-3S825.7,18,824,18z"
+   style="" />
+<circle
+   id="Oval-Copy-3_1_"
+   class="st1"
+   cx="24"
+   cy="25"
+   r="24"
+   style="" />
+<path
+   id="Shape_1_"
+   class="st2"
+   d="M19,28c2.8,0,5,2.2,5,5v6h-2v-6c0-1.7-1.3-3-3-3h-4c-1.7,0-3,1.3-3,3v6h-2v-6c0-2.8,2.2-5,5-5H19  z M17,16c2.8,0,5,2.2,5,5s-2.2,5-5,5s-5-2.2-5-5S14.2,16,17,16z M32.1,14.9l1.8,0.4l-2.4,10.4l-1.8-0.4L32.1,14.9z M26.9,16.6  l1.4,1.2l-2.1,2.6l2.1,2.6L26.9,24l-3.1-3.7L26.9,16.6z M36.7,16.6l3.1,3.7L36.7,24l-1.4-1.2l2.1-2.6l-2.1-2.6L36.7,16.6z M17,18  c-1.7,0-3,1.3-3,3c0,1.7,1.3,3,3,3s3-1.3,3-3S18.7,18,17,18z"
+   style="" />
+<rect
+   id="Rectangle-Copy-14"
+   x="151"
+   y="342"
+   class="st3"
+   width="250"
+   height="172"
+   style="" />
+<rect
+   id="Rectangle-Copy-14_1_"
+   x="584"
+   y="342"
+   class="st4"
+   width="318"
+   height="156"
+   style="" />
+<path
+   id="Shape_2_"
+   class="st5"
+   d="M609,363c0.6,0,1,0.4,1,1c0,0.5-0.4,0.9-0.8,1l-0.4,1h3.3c1.1,0,2,0.9,2,2v5c0,1.1-0.9,2-2,2h-8  c-1.1,0-2-0.9-2-2v-5c0-1.1,0.9-2,2-2h3.7l0.6-1.4c-0.1-0.1-0.2-0.3-0.2-0.5l0-0.1C608,363.4,608.4,363,609,363z M612,367h-8  c-0.5,0-0.9,0.4-1,0.9l0,0.1v5c0,0.5,0.4,0.9,0.9,1l0.1,0h8c0.5,0,0.9-0.4,1-0.9l0-0.1v-5c0-0.5-0.4-0.9-0.9-1L612,367z M610.5,372  c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5h-5c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5H610.5z M605.5,368c0.8,0,1.5,0.7,1.5,1.5  s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5S604.7,368,605.5,368z M610.5,368c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5  S609.7,368,610.5,368z M605.5,369c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S605.8,369,605.5,369z M610.5,369  c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S610.8,369,610.5,369z"
+   style="" />
+<rect
+   id="Rectangle-Copy-16"
+   x="600"
+   y="401"
+   class="st6"
+   width="80"
+   height="81"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 656.3878 436)"
+   class="st7 st8 st9"
+   id="text14"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"> </text>
+
+<rect
+   id="Rectangle-Copy-16_1_"
+   x="806"
+   y="401"
+   class="st6"
+   width="80"
+   height="81"
+   style="" />
+<path
+   id="Line-2-Copy-24"
+   class="st0"
+   d="M792,434l14,7l-14,7v-6H680v-2h112V434z"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 182.2267 112)"
+   class="st7 st8 st10"
+   id="text18"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"> </text>
+
+<text
+   transform="matrix(1 0 0 1 190.6784 184)"
+   class="st7 st8 st10"
+   id="text20"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"> </text>
+
+<text
+   transform="matrix(1 0 0 1 314.8336 200)"
+   class="st7 st8 st10"
+   id="text22"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"> </text>
+
+<text
+   transform="matrix(1 0 0 1 284.9816 272)"
+   class="st7 st8 st10"
+   id="text24"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"> </text>
+
+<circle
+   id="Oval-Copy-3_2_"
+   class="st11"
+   cx="24"
+   cy="86"
+   r="13"
+   style="" />
+<circle
+   id="Oval-Copy-3_3_"
+   class="st11"
+   cx="24"
+   cy="158"
+   r="13"
+   style="" />
+<circle
+   id="Oval-Copy-3_4_"
+   class="st11"
+   cx="24"
+   cy="246"
+   r="13"
+   style="" />
+<circle
+   id="Oval-Copy-3_5_"
+   class="st1"
+   cx="737"
+   cy="232"
+   r="24"
+   style="" />
+<path
+   id="Shape_3_"
+   class="st2"
+   d="M732,235c2.8,0,5,2.2,5,5v6h-2v-6c0-1.7-1.3-3-3-3h-4c-1.7,0-3,1.3-3,3v6h-2v-6c0-2.8,2.2-5,5-5  H732z M730,223c2.8,0,5,2.2,5,5s-2.2,5-5,5s-5-2.2-5-5S727.2,223,730,223z M743,231v2h-2v-2H743z M748,231v2h-2v-2H748z M730,225  c-1.7,0-3,1.3-3,3c0,1.7,1.3,3,3,3s3-1.3,3-3S731.7,225,730,225z M751,228v2h-2v-2H751z M740,228v2h-2v-2H740z M748,223v7h-7v-7H748  z M746,225h-3v3h3V225z M751,223v2h-2v-2H751z M740,223v2h-2v-2H740z M743,220v2h-2v-2H743z M748,220v2h-2v-2H748z"
+   style="" />
+<path
+   id="Line-8"
+   class="st0"
+   d="M25.5,315.5v104H137v-6l14,7l-14,7v-6H23.5v-106H25.5z"
+   style="" />
+<path
+   id="Path-8"
+   class="st0"
+   d="M586,448l14,7l-14,7v-6H401v-2h185V448z"
+   style="" />
+<path
+   id="Path-7"
+   class="st0"
+   d="M566,155v270.5h20v-6l14,7l-14,7v-6h-22V155H566z"
+   style="" />
+<path
+   id="Path-9"
+   class="st0"
+   d="M736,155l7.1,14l-6,0l0.2,28.4l-2,0l-0.2-28.4l-6,0L736,155z"
+   style="" />
+<line
+   id="Path-9-Copy"
+   class="st12"
+   x1="736.3"
+   y1="342"
+   x2="736.3"
+   y2="266"
+   style="" />
+<rect
+   id="Rectangle-Copy-50"
+   x="374"
+   class="st13"
+   width="400"
+   height="155"
+   style="" />
+<rect
+   id="Rectangle-Copy-16_2_"
+   x="678"
+   y="57"
+   class="st6"
+   width="80"
+   height="81"
+   style="" />
+<rect
+   id="Rectangle-Copy-16_3_"
+   x="582"
+   y="57"
+   class="st6"
+   width="80"
+   height="81"
+   style="" />
+<rect
+   id="Rectangle-Copy-16_4_"
+   x="486"
+   y="57"
+   class="st6"
+   width="80"
+   height="81"
+   style="" />
+<rect
+   id="Rectangle-Copy-16_5_"
+   x="390"
+   y="57"
+   class="st6"
+   width="80"
+   height="81"
+   style="" />
+<rect
+   x="401"
+   y="227.6"
+   class="st14"
+   width="131.8"
+   height="59.5"
+   id="rect41"
+   style="" />
+<text
+   id="text49"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+   x="397"
+   y="237.98219"><tspan
+     x="397"
+     y="237.98219"
+     class="st15 st8 st9"
+     id="tspan43"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:Arial;-inkscape-font-specification:Arial;fill:#161616">2. Publie les métadonnées</tspan><tspan
+     x="397"
+     y="257.98221"
+     class="st15 st8 st9"
+     id="tspan45"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:Arial;-inkscape-font-specification:Arial;fill:#161616">du service dans le</tspan><tspan
+     x="397"
+     y="277.98221"
+     class="st15 st8 st9"
+     id="tspan47"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:Arial;-inkscape-font-specification:Arial;fill:#161616">concentrateur de gestion</tspan></text>
+
+<rect
+   x="37"
+   y="351.7"
+   class="st14"
+   width="95.9"
+   height="42.2"
+   id="rect51"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 37 362.0197)"
+   id="text57"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st15 st8 st9"
+     id="tspan53"
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">1. Publie les </tspan><tspan
+     x="0"
+     y="20"
+     class="st15 st8 st9"
+     id="tspan55"
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">conteneurs</tspan></text>
+
+<rect
+   x="13.9"
+   y="79.6"
+   class="st14"
+   width="20"
+   height="12.2"
+   id="rect59"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 19.4355 90.0013)"
+   class="st15 st8 st9"
+   id="text61"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">A</text>
+
+<rect
+   x="13.9"
+   y="151.6"
+   class="st14"
+   width="20"
+   height="13.4"
+   id="rect63"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 19.3515 162.0061)"
+   class="st15 st8 st9"
+   id="text65"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">B</text>
+
+<rect
+   x="15.2"
+   y="239.7"
+   class="st14"
+   width="17.5"
+   height="13.4"
+   id="rect67"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 19.5756 250.0154)"
+   class="st15 st8 st9"
+   id="text69"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">C</text>
+
+<rect
+   x="577"
+   y="227.6"
+   class="st14"
+   width="75.9"
+   height="59.5"
+   id="rect71"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 577 237.9817)"
+   id="text77"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st15 st8 st9"
+     id="tspan73"
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">5. Déploie le </tspan><tspan
+     x="0"
+     y="20"
+     class="st15 st8 st9"
+     id="tspan75"
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">service</tspan></text>
+
+<rect
+   x="748"
+   y="285.6"
+   class="st14"
+   width="130.8"
+   height="42"
+   id="rect79"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 748 295.9965)"
+   id="text85"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st15 st8 st9"
+     id="tspan81"
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">4. Enregistre le noeud </tspan><tspan
+     x="0"
+     y="20"
+     class="st15 st8 st9"
+     id="tspan83"
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">à l'aide de la règle du noeud</tspan></text>
+
+<rect
+   x="401.4"
+   y="430.6"
+   class="st14"
+   width="163"
+   height="21"
+   id="rect87"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 423.4774 440.9973)"
+   class="st15 st8 st9"
+   id="text89"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">6. Extrait les conteneurs</text>
+
+<rect
+   x="843"
+   y="66.6"
+   class="st14"
+   width="175.7"
+   height="57.4"
+   id="rect91"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 843.0001 76.9854)"
+   id="text99"
+   style="-inkscape-font-specification:'Arial, Normal';font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:14px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"><tspan
+     sodipodi:role="line"
+     id="tspan225">3. Crée un pattern ou une </tspan><tspan
+     sodipodi:role="line"
+     id="tspan227">règle pour déployer le </tspan><tspan
+     sodipodi:role="line"
+     id="tspan229">service vers les noeuds </tspan><tspan
+     sodipodi:role="line"
+     id="tspan231">de périphérie appropriés</tspan></text>
+
+<rect
+   x="773"
+   y="225.6"
+   class="st14"
+   width="100"
+   height="15.4"
+   id="rect101"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 773.0228 235.9867)"
+   class="st15 st8 st9"
+   id="text103"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">Propriétaire du noeud</text>
+
+<rect
+   x="863"
+   y="18.6"
+   class="st14"
+   width="100"
+   height="15.4"
+   id="rect105"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 863.0299 28.9986)"
+   class="st15 st8 st9"
+   id="text107"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">Administrateur</text>
+
+<rect
+   x="390"
+   y="20.2"
+   class="st14"
+   width="236.1"
+   height="15.6"
+   id="rect109"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 390.0002 32.033)"
+   class="st16 st17 st18"
+   id="text111"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">Concentrateur de gestion IEAM</text>
+
+<rect
+   x="622"
+   y="362.2"
+   class="st14"
+   width="236.1"
+   height="15.6"
+   id="rect113"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 622.0001 374.0536)"
+   class="st16 st17 st18"
+   id="text115"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">Noeud de périphérie</text>
+
+<rect
+   x="677.9"
+   y="90.6"
+   class="st14"
+   width="80"
+   height="14.9"
+   id="rect117"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 702.3202 100.9758)"
+   class="st15 st8 st9"
+   id="text119"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">MMS</text>
+
+<rect
+   x="806"
+   y="425.7"
+   class="st14"
+   width="80"
+   height="35.7"
+   id="rect121"
+   style="" />
+<text
+   id="text127"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr;text-anchor:middle;"
+   x="848.08911"
+   y="436.01459"><tspan
+     sodipodi:role="line"
+     id="tspan221">Service de </tspan><tspan
+     sodipodi:role="line"
+     id="tspan223">périphérie</tspan></text>
+
+<rect
+   x="609.9"
+   y="425.7"
+   class="st14"
+   width="61.1"
+   height="35.7"
+   id="rect129"
+   style="" />
+<text
+   id="text135"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+   x="612.54211"
+   y="436.01419"><tspan
+     x="612.54211"
+     y="436.01419"
+     class="st15 st8 st9"
+     id="tspan131"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:Arial;-inkscape-font-specification:Arial;fill:#161616">Agent de</tspan><tspan
+     x="610.44208"
+     y="456.01419"
+     class="st15 st8 st9"
+     id="tspan133"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:Arial;-inkscape-font-specification:Arial;fill:#161616">périphérie</tspan></text>
+
+<rect
+   x="680.3"
+   y="416.6"
+   class="st14"
+   width="111.2"
+   height="13.7"
+   id="rect137"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 711.843 427.004)"
+   class="st16 st8 st9"
+   id="text139"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">7. Exécute</text>
+
+<rect
+   x="581.9"
+   y="90.6"
+   class="st14"
+   width="80"
+   height="14.9"
+   id="rect141"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 614.286 100.9758)"
+   class="st15 st8 st9"
+   id="text143"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">UI</text>
+
+<rect
+   x="485.9"
+   y="90.6"
+   class="st14"
+   width="80"
+   height="14.9"
+   id="rect145"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 494.9906 100.9758)"
+   class="st15 st8 st9"
+   id="text147"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">Exchange</text>
+
+<rect
+   x="389.9"
+   y="90.6"
+   class="st14"
+   width="80"
+   height="14.9"
+   id="rect149"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 410.9813 100.9758)"
+   class="st15 st8 st9"
+   id="text151"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">Agbot</text>
+
+<rect
+   x="45"
+   y="79.6"
+   class="st14"
+   width="203"
+   height="15.7"
+   id="rect153"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 45 90.0018)"
+   class="st15 st8 st9"
+   id="text155"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">Crée les données d'identification de développement</text>
+
+<rect
+   x="63"
+   y="18.6"
+   class="st14"
+   width="172.6"
+   height="15.7"
+   id="rect157"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 63.0089 28.9865)"
+   class="st15 st8 st9"
+   id="text159"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">Editeur de logiciels</text>
+
+<rect
+   x="45"
+   y="151.6"
+   class="st14"
+   width="203"
+   height="15.7"
+   id="rect161"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 45 161.9809)"
+   class="st15 st8 st9"
+   id="text163"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">Développe votre service de périphérie</text>
+
+<rect
+   x="45"
+   y="239.6"
+   class="st14"
+   width="293.1"
+   height="15.7"
+   id="rect165"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 45 250.0037)"
+   class="st15 st8 st9"
+   id="text167"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">Signe et publie dans le concentrateur de gestion</text>
+
+<rect
+   x="54"
+   y="103.1"
+   class="st14"
+   width="271.6"
+   height="41.3"
+   id="rect169"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 54 111.9999)"
+   id="text175"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st15 st8 st10"
+     id="tspan171"
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">• Crée un compte utilisateur</tspan><tspan
+     x="0"
+     y="16"
+     class="st15 st8 st10"
+     id="tspan173"
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">• Crée une paire de clés de signature (utilisée à l'étape C)</tspan></text>
+
+<rect
+   x="54"
+   y="175.1"
+   class="st14"
+   width="271.6"
+   height="48.5"
+   id="rect177"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 54 183.9952)"
+   id="text185"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st15 st8 st10"
+     id="tspan179"
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">• Dockerise l'application</tspan><tspan
+     x="0"
+     y="16"
+     class="st15 st8 st10"
+     id="tspan181"
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">• Teste et simule l'environnement de production</tspan><tspan
+     x="0"
+     y="32"
+     class="st15 st8 st10"
+     id="tspan183"
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">• Crée des fichiers de métadonnées Open Horizon</tspan></text>
+
+<rect
+   x="54"
+   y="263.1"
+   class="st14"
+   width="271.6"
+   height="31.3"
+   id="rect187"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 54 272.005)"
+   id="text193"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"><tspan
+     x="0"
+     y="0"
+     class="st15 st8 st10"
+     id="tspan189"
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">• Envoie, signe et publie les conteneurs</tspan><tspan
+     x="0"
+     y="16"
+     class="st15 st8 st10"
+     id="tspan191"
+     style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">• Ajoute des contraintes de règle de service</tspan></text>
+
+<rect
+   x="187"
+   y="359.9"
+   class="st14"
+   width="162.3"
+   height="15.6"
+   id="rect195"
+   style="" />
+<text
+   transform="matrix(1 0 0 1 186.9997 371.7318)"
+   class="st16 st17 st18"
+   id="text197"
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">Registre de conteneur</text>
+
+<g
+   id="g208"
+   style="">
+	<path
+   class="st16"
+   d="M179,359.5h-8c-0.6,0-1,0.4-1,1v11c0,0.6,0.4,1,1,1h8c0.6,0,1-0.4,1-1v-11C180,359.9,179.6,359.5,179,359.5z    M179,360.5v3h-8v-3H179z M171,367.5v-3h8v3H171z M171,371.5v-3h8v3H171z"
+   id="path199"
+   style="" />
+	<circle
+   class="st16"
+   cx="172.5"
+   cy="362"
+   r="0.5"
+   id="circle201"
+   style="" />
+	<circle
+   class="st16"
+   cx="172.5"
+   cy="366"
+   r="0.5"
+   id="circle203"
+   style="" />
+	<circle
+   class="st16"
+   cx="172.5"
+   cy="370"
+   r="0.5"
+   id="circle205"
+   style="" />
+	<rect
+   id="_x3C_Transparent_Rectangle_x3E__616_"
+   x="167"
+   y="358"
+   class="st19"
+   width="16"
+   height="16"
+   style="" />
+</g>
+</svg>

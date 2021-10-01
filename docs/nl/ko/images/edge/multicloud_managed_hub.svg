@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 270.73 204.95"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="multicloud_managed_hub.svg"
+   inkscape:export-filename="T:\PUB\ABD001\ART\WORK\ship1\multicloud_managed_hub.png"
+   inkscape:export-xdpi="92"
+   inkscape:export-ydpi="92">
+  <metadata
+     id="metadata117">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     id="namedview115"
+     showgrid="false"
+     inkscape:zoom="5.0094156"
+     inkscape:cx="143.0595"
+     inkscape:cy="104.40014"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" />
+  <defs
+     id="defs3">
+    <style
+       id="style5">.cls-1{font-size:10.82px;}.cls-1,.cls-12{font-family:IBMPlexSans, IBM Plex Sans;}.cls-2{letter-spacing:-0.01em;}.cls-3{letter-spacing:0em;}.cls-4{letter-spacing:-0.01em;}.cls-5{letter-spacing:0em;}.cls-6{letter-spacing:0em;}.cls-7{letter-spacing:-0.01em;}.cls-24,.cls-8,.cls-9{fill:none;stroke-miterlimit:10;}.cls-8{stroke:#a4a4a4;stroke-width:2.11px;}.cls-9{stroke:#bb8eff;stroke-width:2.19px;}.cls-10{letter-spacing:-0.01em;}.cls-11{letter-spacing:0em;}.cls-12{font-size:12.36px;}.cls-13{letter-spacing:-0.01em;}.cls-14{letter-spacing:0em;}.cls-15{letter-spacing:-0.01em;}.cls-16{letter-spacing:0em;}.cls-17{letter-spacing:-0.01em;}.cls-18{letter-spacing:0em;}.cls-19{letter-spacing:0em;}.cls-20{letter-spacing:-0.01em;}.cls-21{letter-spacing:0em;}.cls-22{letter-spacing:-0.01em;}.cls-23{letter-spacing:-0.01em;}.cls-24{stroke:#6ea6ff;stroke-width:1.55px;}.cls-25{font-size:12px;font-family:IBMPlexSans-Medium, IBM Plex Sans;}.cls-26{letter-spacing:-0.01em;}.cls-27{letter-spacing:0em;}.cls-28{letter-spacing:-0.01em;}.cls-29{letter-spacing:0.01em;}.cls-30{letter-spacing:0em;}.cls-31{letter-spacing:-0.01em;}.cls-32{letter-spacing:0em;}</style>
+  </defs>
+  <title
+     id="title7">multicloud_managed_hub</title>
+  <text
+     class="cls-1"
+     id="text9"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     x="32.290001"
+     y="132.72"
+     sodipodi:linespacing="125%">
+    <tspan
+       sodipodi:role="line"
+       id="tspan4176"
+       style="font-size:9.375px"
+       x="32.290001"
+       y="132.72">추가 <tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.375px;font-family:Arial;-inkscape-font-specification:Arial"
+   id="tspan4178">OpenShift<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.375px;font-family:IBMPlexSans, 'IBM Plex Sans';-inkscape-font-specification:'IBMPlexSans, IBM Plex Sans'"
+   id="tspan4180">®</tspan>
+ Container Platform 4.2</tspan>
+ 컴포넌트</tspan>
+  </text>
+  <rect
+     class="cls-8"
+     x="18"
+     y="34"
+     width="234"
+     height="117"
+     id="rect27" />
+  <rect
+     class="cls-9"
+     x="27"
+     y="115"
+     width="216"
+     height="27"
+     id="rect29" />
+  <text
+     class="cls-1"
+     transform="translate(113.29 97.19)"
+     id="text31"
+     style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">컨트롤러<tspan
+   class="cls-10"
+   x="22.72"
+   y="0"
+   id="tspan33"
+   style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+<tspan
+   x="26.64"
+   y="0"
+   id="tspan35"
+   style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+<tspan
+   class="cls-11"
+   x="32.69"
+   y="0"
+   id="tspan37"
+   style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+<tspan
+   class="cls-6"
+   x="35.58"
+   y="0"
+   id="tspan39"
+   style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" />
+</text>
+  <text
+     class="cls-1"
+     transform="translate(185.29 61.19)"
+     id="text41">
+    <tspan
+       style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+       id="tspan4247">CLI</tspan>
+  </text>
+  <text
+     class="cls-1"
+     transform="translate(68.01 61.19)"
+     id="text43"
+     style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">콘솔</text>
+  <text
+     class="cls-12"
+     id="text45"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.35999966px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     sodipodi:linespacing="125%"
+     x="135.8356"
+     y="168.97">
+    <tspan
+       sodipodi:role="line"
+       id="tspan4190"
+       x="135.8356"
+       y="168.97"
+       style="font-size:11.25px;text-align:center;text-anchor:middle"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
+   id="tspan4194">OpenShift<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:IBMPlexSans, 'IBM Plex Sans';-inkscape-font-specification:'IBMPlexSans, IBM Plex Sans'"
+   id="tspan4196">®</tspan>
+ Container Platform 4.2</tspan>
+ 클러스터</tspan>
+    <tspan
+       sodipodi:role="line"
+       id="tspan4192"
+       x="135.8356"
+       y="184.27336"
+       style="font-size:11.25px;text-align:center;text-anchor:middle">(중앙 데이터 센터에 호스팅됨)</tspan>
+  </text>
+  <rect
+     class="cls-24"
+     x="27"
+     y="79"
+     width="216"
+     height="27"
+     id="rect89" />
+  <rect
+     class="cls-24"
+     x="144"
+     y="43"
+     width="99"
+     height="27"
+     id="rect91" />
+  <polygon
+     class="cls-24"
+     points="126 70 26.98 70 27 43 126 43 126 70"
+     id="polygon93" />
+  <text
+     class="cls-25"
+     transform="translate(25.92,25.22)"
+     id="text95"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000048px;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;"
+     sodipodi:linespacing="125%">
+    <tspan
+       sodipodi:role="line"
+       id="tspan4156"><tspan
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+   id="tspan4158">IBM Multicloud Manager</tspan>
+ 코어 1.2 - 에지</tspan>
+  </text>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot4160"
+     style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Helvetica;font-style:normal;font-weight:normal;font-size:7.5px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:'Helvetica, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"><flowRegion
+       id="flowRegion4162"><rect
+         id="rect4164"
+         width="59.683464"
+         height="16.767262"
+         x="159.6882"
+         y="162.2334" /></flowRegion><flowPara
+       id="flowPara4166"></flowPara></flowRoot>  <flowRoot
+     xml:space="preserve"
+     id="flowRoot4182"
+     style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Helvetica;font-style:normal;font-weight:normal;font-size:7.5px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:'Helvetica, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"><flowRegion
+       id="flowRegion4184"><rect
+         id="rect4186"
+         width="36.730831"
+         height="42.320305"
+         x="3.3936095"
+         y="76.39209" /></flowRegion><flowPara
+       id="flowPara4188"></flowPara></flowRoot></svg>
