@@ -17,6 +17,8 @@ lastupdated: "2021-02-20"
 # Developing an edge service for devices
 {: #developing}
 
+<!--This file is shared w/IEAM-->
+
 To begin developing edge services for {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}), you need to first set up your credentials for publishing content. Because all services must be signed, you must also create a cryptographic signing key pair. Make sure to complete the prerequisite steps, [Preparing to create an edge service](service_containers.md).
 
 This diagram shows the typical interactions between the components within {{site.data.keyword.horizon}}.
