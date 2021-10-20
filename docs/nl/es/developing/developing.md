@@ -21,7 +21,7 @@ Para empezar a desarrollar servicios periféricos para {{site.data.keyword.edge_
 
 Este diagrama muestra las interacciones típicas entre los componentes en {{site.data.keyword.horizon}}.
 
-<img src="../images/edge/03a_Developing_edge_service_for_device.svg" style="margin: 3%" alt="Dispositivos periféricos"> 
+<img src="../images/03a_Developing_edge_service_for_device.svg" style="margin: 3%" alt="Dispositivos periféricos"> 
 
 ## Ejemplos
 {: #edge_devices_ex_examples}
