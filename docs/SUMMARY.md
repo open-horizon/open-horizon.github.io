@@ -70,7 +70,7 @@
       * [Data backup and recovery](admin/backup_recovery.md)
       <!--* [Disaster recovery](user_management/disaster_recovery.md)-->
       <!--* [Monitoring management hub components](user_management/monitoring_infrastructure.md) Q3-->
-      * [Monitoring edge nodes and services](admin/monitoring_edge_nodes.md)
+      * [Monitoring edge nodes and services](admin/monitoring.md)
       * [Accessing management hub logs](admin/accessing_logs.md)
       * [Troubleshooting](admin/troubleshooting.md)
  * [Security](user_management/security.md)
