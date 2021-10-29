@@ -22,6 +22,6 @@ lastupdated: "2021-02-20"
 * [Multi-tenancy](multi_tenancy.md)
 * [Troubleshooting](troubleshooting.md)
 * [Data backup and recovery](backup_recovery.md)
-* [Monitoring edge nodes and services](monitoring_edge_nodes.md)
+* [Monitoring edge nodes and services](monitoring.md)
 * [Accessing management hub logs](accessing_logs.md)
 {: childlinks}
