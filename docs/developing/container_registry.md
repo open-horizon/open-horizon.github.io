@@ -274,7 +274,7 @@ Now {{site.data.keyword.horizon}} has everything that it needs to get this edge 
    ```
    {: codeblock}
 
-   For more information about using **ibmcloud cr**, see [ibmcloud cr CLI web documentation ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://cloud.ibm.com/docs/services/Registry/). Additionally, you can run this command to view help information:
+   For more information about using **ibmcloud cr**, see [ibmcloud cr CLI web documentation ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://cloud.ibm.com/docs/Registry). Additionally, you can run this command to view help information:
 
    ```bash
    ibmcloud cr --help

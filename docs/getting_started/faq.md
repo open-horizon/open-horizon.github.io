@@ -77,7 +77,7 @@ If your software requires access to specific hardware or operating system servic
 ## Is there detailed documentation for the REST APIs provided by the components in {{site.data.keyword.ieam}}?
 {: #rest_doc}
 
-Yes. For more information, see [{{site.data.keyword.ieam}} APIs](../api/edge_rest_apis.md). 
+Yes. For more information, see [{{site.data.keyword.ieam}} APIs](../api/). 
 
 ## Does {{site.data.keyword.ieam}} use Kubernetes?
 {: #use_kube}

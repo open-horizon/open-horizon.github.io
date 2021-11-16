@@ -17,7 +17,7 @@ lastupdated: "2021-02-20"
 # Further reading
 {: #further_reading}
 
-Review the important principles and best practices for [Developing edge services](developing_edge_services.md) for {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) devices.
+Review the important principles and best practices for [Developing edge services](developing.md) for {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) devices.
 
 For more information, see:
 

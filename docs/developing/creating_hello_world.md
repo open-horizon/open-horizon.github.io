@@ -25,6 +25,6 @@ Use this example to learn how to:
 * Use the operator to deploy a service to an edge cluster
 * Expose a port on your edge cluster that you can access externally with the `curl` command
 
-See [Creating Your Own Operator Edge Service ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/examples/blob/master/edge/services/hello-operator/CreateService.md#creating-your-own-operator-edge-service).
+See [Creating Your Own Operator Edge Service ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/examples/blob/master/edge/services/nginx-operator/CreateService.md).
 
-To run the published `hello-operator` service, see [Using the Operator Example Edge Service with Deployment Policy ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/examples/tree/master/edge/services/hello-operator#-using-the-operator-example-edge-service-with-deployment-policy).
+To run the published `nginx-operator` service, see [Using the Operator Example Edge Service with Deployment Policy ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/examples/tree/master/edge/services/nginx-operator#using-operator-policy).
