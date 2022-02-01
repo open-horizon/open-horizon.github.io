@@ -20,7 +20,7 @@ lastupdated: "2021-02-20"
 Review the troubleshooting tips and frequently asked questions to help you troubleshoot issues that you might encounter.
 {:shortdesc}
 
-* [Troubleshooting tips](troubleshooting_devices.md)
+* [Troubleshooting tips](#ts_tips)
 * [Frequently asked questions](../getting_started/faq.md)
 
 The following troubleshooting content describes the main components of {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) and how to investigate the included interfaces to determine the state of the system.

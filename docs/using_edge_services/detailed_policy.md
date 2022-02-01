@@ -19,8 +19,6 @@ lastupdated: "2021-02-20"
 
 You can deploy {{site.data.keyword.edge_notm}} {{site.data.keyword.ieam}} policies using policies or patterns. For a more comprehensive overview of various system components, see [Overview of {{site.data.keyword.edge_notm}}](../getting_started/overview_oh.html) and [Deployment policy use cases](policy_user_cases.md). For a hands-on policy example, see [CI-CD process for Edge services](../developing/cicd_process.md).
 
-Note: You can also create and manage deployment policies or patterns from the management console. See [Using the management console](../console/accessing_ui.md).
-
 This section discusses policy and patterns concepts and includes a use case scenario.
 
 Because an administrator cannot simultaneously manage thousands of edge nodes, scaling up to tens of thousands or beyond creates an impossible situation. To achieve this level of scaling, {{site.data.keyword.edge_notm}} uses policies to determine where and when to autonomously deploy services and machine learning models. 
