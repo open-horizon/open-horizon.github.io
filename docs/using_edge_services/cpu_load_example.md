@@ -19,7 +19,7 @@ lastupdated: "2021-02-20"
 
 Host CPU load percentage is an example of a deployment pattern that consumes CPU load percentage data and makes them available through IBM Event Streams.
 
-This edge service repeatedly queries the edge device CPU load and sends the resulting data to [IBM Event Streams ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://www.ibm.com/cloud/event-streams). This edge service can run on any edge node because it does not require specialized sensor hardware.
+This edge service repeatedly queries the edge device CPU load and sends the resulting data to [IBM Event Streams ](https://www.ibm.com/cloud/event-streams){:target="_blank"}{: .externalLink}. This edge service can run on any edge node because it does not require specialized sensor hardware.
 
 Before performing this task, register and unregister by performing the steps in [Install the Horizon agent on your edge device](../installing/registration.md)
 
@@ -97,18 +97,18 @@ environment variables.
 ## Registering your edge device
 {: #reg_device}
 
-To run the cpu2evtstreams service example on your edge node, you must register your edge node with the `IBM/pattern-ibm.cpu2evtstreams` deployment pattern. Perform the steps in the **first** section in [Horizon CPU To {{site.data.keyword.message_hub_notm}} ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/examples/blob/master/edge/evtstreams/cpu2evtstreams/README.md).
+To run the cpu2evtstreams service example on your edge node, you must register your edge node with the `IBM/pattern-ibm.cpu2evtstreams` deployment pattern. Perform the steps in the **first** section in [Horizon CPU To {{site.data.keyword.message_hub_notm}} ](https://github.com/open-horizon/examples/blob/master/edge/evtstreams/cpu2evtstreams/README.md){:target="_blank"}{: .externalLink}.
 
 ## Additional information
 {: #add_info}
 
-The CPU example source code is available in the [{{site.data.keyword.horizon_open}} examples repository ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/examples) as an example for {{site.data.keyword.edge_notm}} edge service development. This source includes
+The CPU example source code is available in the [{{site.data.keyword.horizon_open}} examples repository ](https://github.com/open-horizon/examples){:target="_blank"}{: .externalLink} as an example for {{site.data.keyword.edge_notm}} edge service development. This source includes
 the code for all three of the services that run on the edge node for this example:
 
-  * The cpu service that provides the CPU load percentage data as a REST service on a local private Docker network. For more information, see [Horizon CPU Percent Service ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/examples/tree/master/edge/services/cpu_percent).
-  * The gps service that provides location information from GPS hardware (if available) or a location that is estimated from the edge nodes IP address. The location data is provided as a REST service on a local private Docker network. For more information, see [Horizon GPS Service ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/examples/tree/master/edge/services/gps).
-  * The cpu2evtstreams service that uses the REST APIs that are provided by the other two services. This service sends the combined data to an {{site.data.keyword.message_hub_notm}} kafka broker in the cloud. For more information about the service, see [{{site.data.keyword.horizon}} CPU To {{site.data.keyword.message_hub_notm}} Service ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/examples/blob/master/edge/evtstreams/cpu2evtstreams/cpu2evtstreams.md).
-  * For more information about the {{site.data.keyword.message_hub_notm}}, see [Event Streams - Overview ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://www.ibm.com/cloud/event-streams?mhsrc=ibmsearch_a&mhq=event%20streams).
+  * The cpu service that provides the CPU load percentage data as a REST service on a local private Docker network. For more information, see [Horizon CPU Percent Service ](https://github.com/open-horizon/examples/tree/master/edge/services/cpu_percent){:target="_blank"}{: .externalLink}.
+  * The gps service that provides location information from GPS hardware (if available) or a location that is estimated from the edge nodes IP address. The location data is provided as a REST service on a local private Docker network. For more information, see [Horizon GPS Service ](https://github.com/open-horizon/examples/tree/master/edge/services/gps){:target="_blank"}{: .externalLink}.
+  * The cpu2evtstreams service that uses the REST APIs that are provided by the other two services. This service sends the combined data to an {{site.data.keyword.message_hub_notm}} kafka broker in the cloud. For more information about the service, see [{{site.data.keyword.horizon}} CPU To {{site.data.keyword.message_hub_notm}} Service ](https://github.com/open-horizon/examples/blob/master/edge/evtstreams/cpu2evtstreams/cpu2evtstreams.md){:target="_blank"}{: .externalLink}.
+  * For more information about the {{site.data.keyword.message_hub_notm}}, see [Event Streams - Overview ](https://www.ibm.com/cloud/event-streams?mhsrc=ibmsearch_a&mhq=event%20streams){:target="_blank"}{: .externalLink}.
 
 ## What to do next
 {: #cpu_next}

@@ -33,9 +33,9 @@ These also serve as examples of how you can use any private image registry with 
 
 ### Before you begin
 
-* If you have not already done so, install the [cloudctl command ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://www.ibm.com/support/knowledgecenter/SSFC4F_1.3.0/cloudctl/install_cli.html)
-* If you have not already done so, install the [{{site.data.keyword.open_shift}} oc command ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html)
-* On {{site.data.keyword.macOS_notm}}, you can install the {{site.data.keyword.open_shift}} **oc** command using [homebrew ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://docs.brew.sh/Installation)
+* If you have not already done so, install the [cloudctl command ](https://www.ibm.com/support/knowledgecenter/SSFC4F_1.3.0/cloudctl/install_cli.html){:target="_blank"}{: .externalLink}
+* If you have not already done so, install the [{{site.data.keyword.open_shift}} oc command ](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html){:target="_blank"}{: .externalLink}
+* On {{site.data.keyword.macOS_notm}}, you can install the {{site.data.keyword.open_shift}} **oc** command using [homebrew ](https://docs.brew.sh/Installation){:target="_blank"}{: .externalLink}
 
     ```bash
     brew install openshift-cli
@@ -60,7 +60,7 @@ Note: See [Conventions used in this document](../getting_started/document_conven
    ```
    {: codeblock}
 
-   If the command response indicates the **default-route** is not found, then create it (see [Exposing the registry ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://docs.openshift.com/container-platform/4.4/registry/securing-exposing-registry.html) for details):
+   If the command response indicates the **default-route** is not found, then create it (see [Exposing the registry ](https://docs.openshift.com/container-platform/4.4/registry/securing-exposing-registry.html){:target="_blank"}{: .externalLink} for details):
 
    ```bash
    oc patch configs.imageregistry.operator.openshift.io/cluster --patch '{"spec":{"defaultRoute":true}}' --type=merge
@@ -227,7 +227,7 @@ Now {{site.data.keyword.horizon}} has everything that it needs to get this edge 
 
 ### Before you begin
 
-* Install the [{{site.data.keyword.cloud_notm}} CLI tool (ibmcloud) ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://cloud.ibm.com/docs/cli?topic=cloud-cli-install-ibmcloud-cli).
+* Install the [{{site.data.keyword.cloud_notm}} CLI tool (ibmcloud) ](https://cloud.ibm.com/docs/cli?topic=cloud-cli-install-ibmcloud-cli){:target="_blank"}{: .externalLink}.
 * Ensure you have **Cluster administrator** or **team administrator** access level in your {{site.data.keyword.cloud_notm}} account.
 
 ### Procedure
@@ -240,7 +240,7 @@ Now {{site.data.keyword.horizon}} has everything that it needs to get this edge 
    ```
    {: codeblock}
 
-   If you do not know your organization ID and space ID, you can log in to the [{{site.data.keyword.cloud_notm}} console ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://cloud.ibm.com/) find or create them.
+   If you do not know your organization ID and space ID, you can log in to the [{{site.data.keyword.cloud_notm}} console ](https://cloud.ibm.com/){:target="_blank"}{: .externalLink} find or create them.
 
 2. Create a cloud API key:
 
@@ -274,7 +274,7 @@ Now {{site.data.keyword.horizon}} has everything that it needs to get this edge 
    ```
    {: codeblock}
 
-   For more information about using **ibmcloud cr**, see [ibmcloud cr CLI web documentation ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://cloud.ibm.com/docs/Registry). Additionally, you can run this command to view help information:
+   For more information about using **ibmcloud cr**, see [ibmcloud cr CLI web documentation ](https://cloud.ibm.com/docs/Registry){:target="_blank"}{: .externalLink}. Additionally, you can run this command to view help information:
 
    ```bash
    ibmcloud cr --help

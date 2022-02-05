@@ -34,7 +34,7 @@ cat /etc/default/horizon
 ## Procedure
 {: #dev_start_ex_procedure}
 
-This example is part of the [{{site.data.keyword.horizon_open}} ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/) open-source project. Follow the steps in [Building and Publishing Your Own Hello World Example Edge Service ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/examples/blob/master/edge/services/helloworld/CreateService.md#build-publish-your-hw) and then return here.
+This example is part of the [{{site.data.keyword.horizon_open}} ](https://github.com/open-horizon/){:target="_blank"}{: .externalLink} open-source project. Follow the steps in [Building and Publishing Your Own Hello World Example Edge Service ](https://github.com/open-horizon/examples/blob/master/edge/services/helloworld/CreateService.md#build-publish-your-hw){:target="_blank"}{: .externalLink} and then return here.
 
 ## What to do next
 {: #dev_start_ex_what_next}
