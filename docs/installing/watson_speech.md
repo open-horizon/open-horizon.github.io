@@ -65,7 +65,7 @@ If an instance is deployed currently, obtain the access information and set the 
 ## Registering your edge device
 {: #watson_reg}
 
-To run the watsons2text service example on your edge node, you must register your edge node with the `IBM/pattern-ibm.watsons2text-arm` deployment pattern. Perform the steps in the [Using Watson Speech to Text to IBM Event Streams Service with Deployment Pattern ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/examples/tree/master/edge/evtstreams/watson_speech2text#-using-the-ibm-watson-speech-to-text-to-ibm-event-streams-service-with-deployment-pattern) section of the readme file.
+To run the watsons2text service example on your edge node, you must register your edge node with the `IBM/pattern-ibm.watsons2text-arm` deployment pattern. Perform the steps in the [Using Watson Speech to Text to IBM Event Streams Service with Deployment Pattern ](https://github.com/open-horizon/examples/tree/master/edge/evtstreams/watson_speech2text#-using-the-ibm-watson-speech-to-text-to-ibm-event-streams-service-with-deployment-pattern){:target="_blank"}{: .externalLink} section of the readme file.
 
 ## Additional information
 
@@ -73,14 +73,14 @@ The `processtect` example source code is also available in the Horizon GitHub re
 
 These services include:
 
-* The [hotworddetect ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/examples/tree/master/edge/services/hotword_detection) service listens and detects the hot word Watson, and then records an audio clip and published it to the mqtt broker.
-* The [watsons2text ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/examples/tree/master/edge/evtstreams/watson_speech2text) service receives an audio clip and sends it to the IBM Speech to Text service and publishes the deciphered text to the mqtt broker.
-* The [stopwordremoval ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/examples/tree/master/edge/services/stopword_removal) service runs as a WSGI server takes a JSON object, such as {"text": "how are you today"} and removes common stop words and returns {"result": "how you today"}.
-* The [mqtt2kafka ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/examples/tree/master/edge/services/mqtt2kafka) service publishes data to {{site.data.keyword.event_streams}} when it receives something on the mqtt topic where it is subscribed.
-* The [mqtt_broker ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/examples/tree/master/edge/services/mqtt_broker) is responsible for all inter-container communication.
+* The [hotworddetect ](https://github.com/open-horizon/examples/tree/master/edge/services/hotword_detection){:target="_blank"}{: .externalLink} service listens and detects the hot word Watson, and then records an audio clip and published it to the mqtt broker.
+* The [watsons2text ](https://github.com/open-horizon/examples/tree/master/edge/evtstreams/watson_speech2text){:target="_blank"}{: .externalLink} service receives an audio clip and sends it to the IBM Speech to Text service and publishes the deciphered text to the mqtt broker.
+* The [stopwordremoval ](https://github.com/open-horizon/examples/tree/master/edge/services/stopword_removal) {:target="_blank"}{: .externalLink}service runs as a WSGI server takes a JSON object, such as {"text": "how are you today"} and removes common stop words and returns {"result": "how you today"}.
+* The [mqtt2kafka ](https://github.com/open-horizon/examples/tree/master/edge/services/mqtt2kafka){:target="_blank"}{: .externalLink} service publishes data to {{site.data.keyword.event_streams}} when it receives something on the mqtt topic where it is subscribed.
+* The [mqtt_broker ](https://github.com/open-horizon/examples/tree/master/edge/services/mqtt_broker){:target="_blank"}{: .externalLink} is responsible for all inter-container communication.
 
 ## What to do next
 
-* For instructions about building and publishing your own version of the Offline Voice Assistant Edge Service, see [Offline Voice Assistant Edge Service ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/examples/blob/master/edge/evtstreams/watson_speech2text/CreateService.md#-building-and-publishing-your-own-version-of-the-watson-speech-to-text-to-ibm-event-streams-service). Follow the steps in the `watson_speech2text` directory of the Open Horizon examples repository.
+* For instructions about building and publishing your own version of the Offline Voice Assistant Edge Service, see [Offline Voice Assistant Edge Service ](https://github.com/open-horizon/examples/blob/master/edge/evtstreams/watson_speech2text/CreateService.md#-building-and-publishing-your-own-version-of-the-watson-speech-to-text-to-ibm-event-streams-service){:target="_blank"}{: .externalLink}. Follow the steps in the `watson_speech2text` directory of the Open Horizon examples repository.
 
-* See the [Open Horizon examples repository ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/examples).
+* See the [Open Horizon examples repository ](https://github.com/open-horizon/examples){:target="_blank"}{: .externalLink}.

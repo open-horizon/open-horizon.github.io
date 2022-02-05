@@ -76,7 +76,7 @@ To install and configure your edge device, click the link that represents your e
 
 Prepare your device by installing a Debian or Ubuntu {{site.data.keyword.linux_notm}}. The instructions in this content are based on a device that uses Ubuntu 18.x.
 
-Install the most recent version of Docker on your device. For more information, see [Install Docker ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://docs.docker.com/engine/install/ubuntu/).
+Install the most recent version of Docker on your device. For more information, see [Install Docker ](https://docs.docker.com/engine/install/ubuntu/){:target="_blank"}{: .externalLink}.
 
 Now that your edge device is prepared, continue on to [Installing the agent](registration.md).
 
@@ -98,9 +98,9 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 {: #proc-pi}
 
 1. Prepare your Raspberry Pi device.
-   1. Flash the [Raspbian ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://www.raspberrypi.org/downloads/raspbian/) {{site.data.keyword.linux_notm}} image onto your MicroSD card.
+   1. Flash the [Raspbian ](https://www.raspberrypi.org/downloads/raspbian/){:target="_blank"}{: .externalLink}{{site.data.keyword.linux_notm}} image onto your MicroSD card.
 
-      For more information about how to flash MicroSD images from many operating systems, see [Raspberry Pi Foundation ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://www.raspberrypi.org/documentation/installation/installing-images/README.md).
+      For more information about how to flash MicroSD images from many operating systems, see [Raspberry Pi Foundation ](https://www.raspberrypi.org/documentation/installation/installing-images/README.md){:target="_blank"}{: .externalLink}.
       These instructions use Raspbian for wifi and SSH configurations.  
 
       **Warning:** Flashing an image onto your MicroSD card permanently erases any data that is already on your card.
@@ -144,7 +144,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
       ```
       {: codeblock}
      
-   8. Install the most recent version of Docker on your device. For more information, see [Install Docker ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://docs.docker.com/engine/install/debian/). 
+   8. Install the most recent version of Docker on your device. For more information, see [Install Docker ](https://docs.docker.com/engine/install/debian/){:target="_blank"}{: .externalLink}. 
 
 Now that your edge device is prepared, continue on to [Installing the agent](registration.md).
 
@@ -166,9 +166,9 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 
 1. Prepare your NVIDIA Jetson device.
    1. Install the most recent NVIDIA JetPack on your device. For more information, see:
-      * (TX1) [Jetson TX1 ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://elinux.org/Jetson_TX1)
-      * (TX2) [Harness AI at the Edge with the Jetson TX2 Developer Kit ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://developer.nvidia.com/embedded/jetson-tx2-developer-kit)
-      * (Nano) [Getting Started With Jetson Nano Developer Kit ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit)
+      * (TX1) [Jetson TX1 ](https://elinux.org/Jetson_TX1){:target="_blank"}{: .externalLink}
+      * (TX2) [Harness AI at the Edge with the Jetson TX2 Developer Kit ](https://developer.nvidia.com/embedded/jetson-tx2-developer-kit){:target="_blank"}{: .externalLink}
+      * (Nano) [Getting Started With Jetson Nano Developer Kit ](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit){:target="_blank"}{: .externalLink}
 
       You need to install this software and any prerequisite software before you install the {{site.data.keyword.horizon}} software.
 
@@ -184,7 +184,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
       ```
       {: codeblock}
       
-   3. Install the most recent version of Docker on your device. For more information, see [Install Docker ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://docs.docker.com/engine/install/debian/). 
+   3. Install the most recent version of Docker on your device. For more information, see [Install Docker ](https://docs.docker.com/engine/install/debian/){:target="_blank"}{: .externalLink}. 
 
 Now that your edge device is prepared, continue on to [Installing the agent](registration.md).
 
@@ -203,11 +203,11 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 {: #proc-mac}
 
 1. Prepare your device.
-   1. Install the most recent version of Docker on your device. For more information, see [Install Docker ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://docs.docker.com/docker-for-mac/install/).
+   1. Install the most recent version of Docker on your device. For more information, see [Install Docker ](https://docs.docker.com/docker-for-mac/install/).
 
    2. **Install socat**. You can use either of the following methods to install socat:
 
-      * [Use Homebrew to install socat ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://brewinstall.org/install-socat-on-mac-with-brew/).
+      * [Use Homebrew to install socat ](https://brewinstall.org/install-socat-on-mac-with-brew/){:target="_blank"}{: .externalLink}{:target="_blank"}{: .externalLink}.
    
       * If MacPorts are already installed, use it to install socat:
         ```

@@ -55,8 +55,8 @@ IBM established a global readiness program that is tasked with preparing IBM's i
 
 ### More information
 
-* [EU GDPR Information Portal ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://gdpr.eu/)
-*  [ibm.com/GDPR website ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://www.ibm.com/data-responsibility/gdpr/)
+* [EU GDPR Information Portal ](https://gdpr.eu/){:target="_blank"}{: .externalLink}
+*  [ibm.com/GDPR website ](https://www.ibm.com/data-responsibility/gdpr/){:target="_blank"}{: .externalLink}
 
 ## Product Configuration – considerations for GDPR Readiness
 {: #productconfig}
@@ -74,7 +74,7 @@ This data is persisted on the {{site.data.keyword.ieam}} on local or remote file
 
 To understand {{site.data.keyword.ieam}} data flows, you must understand how Kubernetes, Docker, and Operators work. These open source components are fundamental to the {{site.data.keyword.ieam}}. You use {{site.data.keyword.ieam}} to place instances of application containers (edge services) on edge nodes. The edge services contain the details about the application, and the Docker images contain all the software packages that your applications need to run.
 
-{{site.data.keyword.ieam}} includes a set of open source edge service examples. To view a list of all the {{site.data.keyword.ieam}} charts, see [open-horizon/examples ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/examples){:new_window}. It is the client’s responsibility to determine and implement any appropriate GDPR controls for open source software.
+{{site.data.keyword.ieam}} includes a set of open source edge service examples. To view a list of all the {{site.data.keyword.ieam}} charts, see [open-horizon/examples ](https://github.com/open-horizon/examples){:target="_blank"}{: .externalLink}{:new_window}. It is the client’s responsibility to determine and implement any appropriate GDPR controls for open source software.
 
 ### What types of data flow through {{site.data.keyword.ieam}}
 
@@ -94,7 +94,7 @@ Information about how this technical data is collected and created, stored, acce
 * Public comments area on pages of {{site.data.keyword.ieam}} product documentation
 * Public comments in the {{site.data.keyword.ieam}} space of dW Answers
 
-Typically, only the client name and email address are used to enable personal replies for the subject of the contact. This use of personal data conforms to the [IBM Online Privacy Statement ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://www.ibm.com/privacy/us/en/){:new_window}.
+Typically, only the client name and email address are used to enable personal replies for the subject of the contact. This use of personal data conforms to the [IBM Online Privacy Statement ](https://www.ibm.com/privacy/us/en/){:target="_blank"}{: .externalLink}{:new_window}.
 
 ### Authentication
 
@@ -191,8 +191,8 @@ As an application, {{site.data.keyword.ieam}} deals with several categories of t
 
 For more information, see:
 
-  * [Kubernetes Logging ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://kubernetes.io/docs/concepts/cluster-administration/logging/){:new_window}
-  * [etcdctl ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/coreos/etcd/blob/master/etcdctl/READMEv2.md){:new_window}
+  * [Kubernetes Logging ](https://kubernetes.io/docs/concepts/cluster-administration/logging/){:target="_blank"}{: .externalLink}{:new_window}
+  * [etcdctl ](https://github.com/coreos/etcd/blob/master/etcdctl/READMEv2.md){:target="_blank"}{: .externalLink}{:new_window}
 
 ### {{site.data.keyword.ieam}} monitoring
 
@@ -206,7 +206,7 @@ For more information, see:
 * How to delete data
   * Search for and delete data by using the Prometheus API
 
-For more information, see [Prometheus Documentation ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://prometheus.io/docs/introduction/overview/){:new_window}.
+For more information, see [Prometheus Documentation ](https://prometheus.io/docs/introduction/overview/){:target="_blank"}{: .externalLink}{:new_window}.
 
 
 ### {{site.data.keyword.ieam}} Kubernetes
@@ -228,7 +228,7 @@ For more information, see [Prometheus Documentation ![Opens in a new tab](../ima
 
 Use care when you are modifying Kubernetes cluster configuration or deleting cluster data.
 
-  For more information, see [Kubernetes kubectl ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://kubernetes.io/docs/reference/kubectl/overview/){:new_window}.
+  For more information, see [Kubernetes kubectl ](https://kubernetes.io/docs/reference/kubectl/overview/){:target="_blank"}{: .externalLink}{:new_window}.
 
 ### {{site.data.keyword.ieam}} Helm API
 
@@ -259,4 +259,4 @@ Use care when you are modifying Kubernetes cluster configuration or deleting clu
       {: codeblock}
 
 
-  For more information, see [Kubernetes kubectl ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://kubernetes.io/docs/reference/kubectl/overview/){:new_window}.
+  For more information, see [Kubernetes kubectl ](https://kubernetes.io/docs/reference/kubectl/overview/){:target="_blank"}{: .externalLink}{:new_window}.

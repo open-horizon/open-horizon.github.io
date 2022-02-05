@@ -24,14 +24,14 @@ After you push, sign, and publish your services, {{site.data.keyword.edge_notm}}
 
 Edge services often use cloud ingest services to store and further process edge analysis results. This process includes the development workflow for edge and cloud code.
 
-{{site.data.keyword.ieam}} is based on the open-source [{{site.data.keyword.horizon_open}} ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/) project and uses the `hzn` {{site.data.keyword.horizon}} {{site.data.keyword.linux_notm}} command to run some processes.
+{{site.data.keyword.ieam}} is based on the open-source [{{site.data.keyword.horizon_open}} ](https://github.com/open-horizon/){:target="_blank"}{: .externalLink} project and uses the `hzn` {{site.data.keyword.horizon}} {{site.data.keyword.linux_notm}} command to run some processes.
 
 ## Before you begin
 {: #service_containers_begin}
 
 1. Configure your development host for use with {{site.data.keyword.ieam}} by installing the {{site.data.keyword.horizon}} agent on your host and register your host with {{site.data.keyword.horizon_exchange}}. See [Install the {{site.data.keyword.horizon}} agent on your edge device and register it with the hello world example](../installing/registration.md).
 
-2. Create a [Docker Hub ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://hub.docker.com/) ID. This is required because the instructions in this section include publishing your service container image to Docker Hub.
+2. Create a [Docker Hub ](https://hub.docker.com/){:target="_blank"}{: .externalLink} ID. This is required because the instructions in this section include publishing your service container image to Docker Hub.
 
 ## Procedure
 {: #service_containers_procedure}
@@ -102,7 +102,7 @@ Note: See [Conventions used in this document](../getting_started/document_conven
   ```
   {: codeblock}
   
-  Note: See [homebrew ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://brew.sh/) for details about installing brew if needed.
+  Note: See [homebrew ](https://brew.sh/){:target="_blank"}{: .externalLink} for details about installing brew if needed.
 
 ## What to do next
 {: #service_containers_what_next}

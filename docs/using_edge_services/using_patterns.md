@@ -102,7 +102,7 @@ hzn register -p pattern-ibm.cpu2evtstreams-arm
 
 This command deploys `ibm.cpu2evtstreams` and any dependent services to your node.
 
-Note: A `userInput.json` file is not passed into the `hzn register` command above, as it would if you were following the steps in [Using the CPU To IBM Event Streams Edge Service with Deployment Pattern ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/examples/tree/master/edge/evtstreams/cpu2evtstreams#-using-the-cpu-to-ibm-event-streams-edge-service-with-deployment-pattern) repository example. Because user inputs were passed with the pattern itself, any edge node that registers automatically has access to those environment variables.
+Note: A `userInput.json` file is not passed into the `hzn register` command above, as it would if you were following the steps in [Using the CPU To IBM Event Streams Edge Service with Deployment Pattern ](https://github.com/open-horizon/examples/tree/master/edge/evtstreams/cpu2evtstreams#-using-the-cpu-to-ibm-event-streams-edge-service-with-deployment-pattern){:target="_blank"}{: .externalLink} repository example. Because user inputs were passed with the pattern itself, any edge node that registers automatically has access to those environment variables.
 
 All `ibm.cpu2evtstreams` workloads can be stopped by unregistering:
 

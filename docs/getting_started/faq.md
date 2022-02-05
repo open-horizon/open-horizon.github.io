@@ -39,12 +39,12 @@ The following are answers to some frequently asked questions (FAQs) about {{site
 ## Is there a way to create a self-contained environment for development purposes?
 {: one_click}
 
-You can install the open source management hub (without the {{site.data.keyword.ieam}} management console) with the “all-in-one” installer for developers. The all-in-one installer creates a complete but minimal management hub, not suitable for production use. It also configures an example edge node. This tool enables open source component developers to get started quickly without the time it takes to configure a complete production {{site.data.keyword.ieam}} management hub. For information about the all-in-one installer, see [Open Horizon - Devops ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/devops/tree/master/mgmt-hub).
+You can install the open source management hub (without the {{site.data.keyword.ieam}} management console) with the “all-in-one” installer for developers. The all-in-one installer creates a complete but minimal management hub, not suitable for production use. It also configures an example edge node. This tool enables open source component developers to get started quickly without the time it takes to configure a complete production {{site.data.keyword.ieam}} management hub. For information about the all-in-one installer, see [Open Horizon - Devops ](https://github.com/open-horizon/devops/tree/master/mgmt-hub){:target="_blank"}{: .externalLink}.
 
 ## Is {{site.data.keyword.ieam}} software open-sourced?
 {: #open_sourced}
 
-{{site.data.keyword.ieam}} is an IBM product. But its core components heavily use the [Open Horizon - EdgeX Project Group ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://wiki.edgexfoundry.org/display/FA/Open+Horizon+-+EdgeX+Project+Group) open source project. Many sample and example programs that are available in the {{site.data.keyword.horizon}} project work with {{site.data.keyword.ieam}}. For more information about the project, see [Open Horizon - EdgeX Project Group ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://wiki.edgexfoundry.org/display/FA/Open+Horizon+-+EdgeX+Project+Group).
+{{site.data.keyword.ieam}} is an IBM product. But its core components heavily use the [Open Horizon - EdgeX Project Group ](https://wiki.edgexfoundry.org/display/FA/Open+Horizon+-+EdgeX+Project+Group){:target="_blank"}{: .externalLink} open source project. Many sample and example programs that are available in the {{site.data.keyword.horizon}} project work with {{site.data.keyword.ieam}}. For more information about the project, see [Open Horizon - EdgeX Project Group ](https://wiki.edgexfoundry.org/display/FA/Open+Horizon+-+EdgeX+Project+Group){:target="_blank"}{: .externalLink}.
 
 ## How can I develop and deploy edge services with {{site.data.keyword.ieam}}?
 {: #dev_dep}
@@ -82,7 +82,7 @@ Yes. For more information, see [{{site.data.keyword.ieam}} APIs](../api/).
 ## Does {{site.data.keyword.ieam}} use Kubernetes?
 {: #use_kube}
 
-Yes. {{site.data.keyword.ieam}} uses [{{site.data.keyword.open_shift_cp}} ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://docs.openshift.com/container-platform/4.4/welcome/index.html) Kubernetes services.
+Yes. {{site.data.keyword.ieam}} uses [{{site.data.keyword.open_shift_cp}} ](https://docs.openshift.com/container-platform/4.4/welcome/index.html){:target="_blank"}{: .externalLink} Kubernetes services.
 
 ## Does {{site.data.keyword.ieam}} use MQTT?
 {: #use_mqtt}
@@ -141,11 +141,11 @@ The docker API is used to download container images. If the docker API terminate
 * System has node and service credentials.
 * Software verification and authenticity using hash verification.
 
-See [Security at the Edge ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://www.ibm.com/cloud/blog/security-at-the-edge).
+See [Security at the Edge ](https://www.ibm.com/cloud/blog/security-at-the-edge){:target="_blank"}{: .externalLink}.
 
 ## How do I manage AI at the Edge with models vs AI on the Cloud?
 {: #ai_cloud}
 
 Typically, AI at the edge enables you to perform on-the-spot machine inferencing with subsecond latency, which enables real-time response based on use case and hardware (for example, RaspberryPi, Intel x86, and Nvidia Jetson nano). {{site.data.keyword.ieam}} model management system enables you to deploy updated AI models without any service downtime.
 
-See [Models Deployed at the Edge ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://www.ibm.com/cloud/blog/models-deployed-at-the-edge).
+See [Models Deployed at the Edge ](https://www.ibm.com/cloud/blog/models-deployed-at-the-edge){:target="_blank"}{: .externalLink}.

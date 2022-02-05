@@ -17,4 +17,4 @@ lastupdated: "2021-02-20"
 # Support
 {: #support}
 
-For more support, see [{{site.data.keyword.ieam}} ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://www.ibm.com/mysupport/s/topic/0TO0z000000ZhYRGA0/Edge-Application-Manager?productId=01t0z000007mfjeAAA&language=en_US)
+For more support, see [{{site.data.keyword.ieam}} ](https://www.ibm.com/mysupport/s/topic/0TO0z000000ZhYRGA0/Edge-Application-Manager?productId=01t0z000007mfjeAAA&language=en_US){:target="_blank"}{: .externalLink}

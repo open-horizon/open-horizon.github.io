@@ -25,7 +25,7 @@ An edge device provides an entry point into enterprise or service provider core 
 * [Installing the agent](../installing/registration.md)
 * [Updating the agent](../installing/updating_the_agent.md)
 
-All edge devices (edge nodes) require the {{site.data.keyword.horizon_agent}} software to be installed. The {{site.data.keyword.horizon_agent}} also depends upon [Docker ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://www.docker.com/) software. 
+All edge devices (edge nodes) require the {{site.data.keyword.horizon_agent}} software to be installed. The {{site.data.keyword.horizon_agent}} also depends upon [Docker ](https://www.docker.com/){:target="_blank"}{: .externalLink} software. 
 
 Focusing in on the edge device, the following diagram shows the flow of the steps you perform to set up the edge device, and what the agent does after it is started.
 
