@@ -210,7 +210,7 @@ You can also run the `docker inspect Y` command on each container, where `Y` is 
 
 Alias names are available to all of the containers on this virtual network, and these names are typically used by the containers in your code deployment pattern for discovering other containers on the virtual network. For example, you can name your service `myservice`. Then, other containers can use that name directly to access it on the network, such as with the command `ping myservice`. The alias name of your container is specified in the `deployment` field of its service definition file that you passed to the `hzn exchange service publish` command.
 
-For more information about the commands supported by the Docker command line interface, see [Docker command reference ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://docs.docker.com/engine/reference/commandline/docker/#child-commands).
+For more information about the commands supported by the Docker command line interface, see [Docker command reference ](https://docs.docker.com/engine/reference/commandline/docker/#child-commands){:target="_blank"}{: .externalLink}.
 
 ## Are the dependency containers reachable within the context of your container?
 {: #setup_correct}
@@ -225,7 +225,7 @@ If your container includes bash, you might want to specify `/bin/bash` at the en
 
 When inside the container context, you can use commands like `ping` or `curl` to interact with the containers it requires and verify connectivity.
 
-For more information about the commands supported by the Docker command line interface, see [Docker command reference ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://docs.docker.com/engine/reference/commandline/docker/#child-commands).
+For more information about the commands supported by the Docker command line interface, see [Docker command reference ](https://docs.docker.com/engine/reference/commandline/docker/#child-commands){:target="_blank"}{: .externalLink}.
 
 ## Are your user-defined containers emitting error messages to the log?
 {: #log_user_container_errors}
@@ -403,7 +403,7 @@ cd ~ && rm -rf /.local/share/containers/
 ```
 {: codeblock}
 
-4. Install Docker by following the instructions for [Docker CENTOS Installation ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://docs.docker.com/engine/install/centos/).
+4. Install Docker by following the instructions for [Docker CENTOS Installation ](https://docs.docker.com/engine/install/centos/){:target="_blank"}{: .externalLink}.
 	NOTE: The latest version of Docker is not supported with RHEL 8 by Red Hat, however it is tested to be installable and runs with OH on RHEL 8.
 
 ### OCP edge cluster TLS internal error

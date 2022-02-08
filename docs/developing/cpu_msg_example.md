@@ -35,7 +35,7 @@ cat /etc/default/horizon
 ## Procedure
 {: #cpu_msg_procedure}
 
-This example is part of the [{{site.data.keyword.horizon_open}} ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/) open-source project. Follow the steps in [Building and Publishing Your Own Version of the CPU To IBM Event Streams Edge Service ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/examples/blob/master/edge/evtstreams/cpu2evtstreams/CreateService.md#-building-and-publishing-your-own-version-of-the-cpu-to-ibm-event-streams-edge-service) and then return here.
+This example is part of the [{{site.data.keyword.horizon_open}} ](https://github.com/open-horizon/){:target="_blank"}{: .externalLink} open-source project. Follow the steps in [Building and Publishing Your Own Version of the CPU To IBM Event Streams Edge Service ](https://github.com/open-horizon/examples/blob/master/edge/evtstreams/cpu2evtstreams/CreateService.md#-building-and-publishing-your-own-version-of-the-cpu-to-ibm-event-streams-edge-service){:target="_blank"}{: .externalLink} and then return here.
 
 ## What you learned in this example
 

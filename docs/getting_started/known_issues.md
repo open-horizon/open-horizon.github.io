@@ -41,8 +41,8 @@ These are known issues and limitations for {{site.data.keyword.edge_notm}} ({{si
 
 ## Limitations
 
-* The {{site.data.keyword.ieam}} agent does not support bidirectional communication between service dependencies. A service that is used as a required service cannot communicate with the service (the requiring service) that depends on it. For more information, see [Agent does not support bidirectional comms between service dependencies ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/anax/issues/2095). To work around this problem, remove the required service and add the required service's containers to the service definition of the requiring service.
+* The {{site.data.keyword.ieam}} agent does not support bidirectional communication between service dependencies. A service that is used as a required service cannot communicate with the service (the requiring service) that depends on it. For more information, see [Agent does not support bidirectional comms between service dependencies ](https://github.com/open-horizon/anax/issues/2095){:target="_blank"}{: .externalLink}. To work around this problem, remove the required service and add the required service's containers to the service definition of the requiring service.
 
 * Installation of edge devices with Fedora or SuSE is only supported by the [Advanced manual agent installation and registration](../installing/advanced_man_install.md) method.
 
-For the full list of open issues for the {{site.data.keyword.ieam}} OpenSource layer, review the GitHub issues in each of the [Open Horizon repositories ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/).
+For the full list of open issues for the {{site.data.keyword.ieam}} OpenSource layer, review the GitHub issues in each of the [Open Horizon repositories ](https://github.com/open-horizon/){:target="_blank"}{: .externalLink}.

@@ -16,3 +16,7 @@
 .doc-help-container .ibm-card__bottom a{
     text-decoration: none;
 }
+
+.externalLink::after{
+    content: url('../img/launch-glyph.svg');
+}

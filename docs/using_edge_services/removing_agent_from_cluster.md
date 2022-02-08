@@ -40,4 +40,4 @@ To unregister an edge cluster and remove the {{site.data.keyword.ieam}} agent fr
    ```
    {: codeblock}
 
-Note: Occasionally, deleting the namespace stalls in the "Terminating" state. In this situation, see [A namespace is stuck in the Terminating state ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.1/troubleshoot/ns_terminating.html) to manually delete namespace.
+Note: Occasionally, deleting the namespace stalls in the "Terminating" state. In this situation, see [A namespace is stuck in the Terminating state ](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.1/troubleshoot/ns_terminating.html){:target="_blank"}{: .externalLink} to manually delete namespace.

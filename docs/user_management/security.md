@@ -17,7 +17,7 @@ lastupdated: "2021-02-20"
 # Security 
 {: #security}
 
-{{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}), based on [Open Horizon ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon), uses several security technologies to ensure that it is secure against attacks and safeguards privacy. For more information about {{site.data.keyword.ieam}} security and roles, see:
+{{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}), based on [Open Horizon ](https://github.com/open-horizon){:target="_blank"}{: .externalLink}, uses several security technologies to ensure that it is secure against attacks and safeguards privacy. For more information about {{site.data.keyword.ieam}} security and roles, see:
 
 * [Security and privacy](security_privacy.md)
 * [Role-based access control](rbac.md)

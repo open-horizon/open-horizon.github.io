@@ -119,7 +119,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
 ## Installing agent on k3s and microk8s edge clusters
 {: #install_lite}
 
-This content describes how to install the {{site.data.keyword.ieam}} agent on [k3s ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://k3s.io/) or [microk8s ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://microk8s.io/), lightweight and small Kubernetes clusters:
+This content describes how to install the {{site.data.keyword.ieam}} agent on [k3s ](https://k3s.io/){:target="_blank"}{: .externalLink} or [microk8s ](https://microk8s.io/){:target="_blank"}{: .externalLink}, lightweight and small Kubernetes clusters:
 
 1. Log in to your edge cluster as **root**.
 
