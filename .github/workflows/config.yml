@@ -1,0 +1,10 @@
+# Configuration for welcome - https://github.com/behaviorbot/welcome
+
+# Configuration for new-issue-welcome - https://github.com/behaviorbot/new-issue-welcome
+
+# Comment to be posted to on first time issues
+newIssueWelcomeComment: |
+  Hello there!👋 Welcome to Open-Horizon!💖
+  Thank you and congratulations 🎉 for opening your very first issue in this project.
+  Please checkout if any of the already existing issue template fits for your isssue or you may open a blank issue as well ✨
+  We will try to get back to you as soon as we can.👀
