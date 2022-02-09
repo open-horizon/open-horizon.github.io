@@ -7,7 +7,7 @@ labels: [documentation]
 body:
   - type: markdown
     attributes:
-      value: Thank you for taking the time to file a Documentation update report.
+      value: Thank you for taking the time to file a Documentation update report
   - type: textarea
     attributes:
       label: What is the current documentation state?
