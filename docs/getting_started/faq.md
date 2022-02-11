@@ -104,16 +104,15 @@ After an agreement list is finalized, you can use the `docker ps` command to vie
 {: #sw_rem}
 
 Yes. If your edge node is registered, unregister the edge node by running: 
-```
-hzn unregister -f -r
-```
-{: codeblock}
+{% capture code %}hzn unregister -f -r{% endcapture %} 
+
+{% include code_snippet.md code=code language='shell' %}
 
 When the edge node is unregistered, you can remove the installed {{site.data.keyword.horizon}} software, for example for Debian-based systems run:
-```
-sudo apt purge -y bluehorizon horizon horizon-cli
-```
-{: codeblock}
+
+{% capture code %}sudo apt purge -y bluehorizon horizon horizon-cli{% endcapture %} 
+
+{% include code_snippet.md code=code language='shell' %}
 
 ## Is there a dashboard for visualizing the agreements and services that are active on an edge node?
 {: #db_node}
@@ -122,12 +121,11 @@ You can use the {{site.data.keyword.ieam}} web UI to observe your edge nodes and
 
 Also, you can use the `hzn` command to obtain information about the active agreements and services by using the local {{site.data.keyword.horizon}} agent REST API on the edge node. Run the following commands to use the API to retrieve the related information:
 
-```
-hzn node list
+{% capture code %}hzn node list
 hzn agreement list
-docker ps
-```
-{: codeblock}
+docker ps{% endcapture %} 
+
+{% include code_snippet.md code=code language='shell' %}
 
 ## What happens if a container image download is interrupted by a network outage?
 {: #image_download}
