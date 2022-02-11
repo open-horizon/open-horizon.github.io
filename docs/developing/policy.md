@@ -32,7 +32,7 @@ Policies provide more control over defining agreements between Horizon Agents on
 ## Using a policy to run the hello world sample
 {: #helloworld_policy}
 
-See [Using the Hello World Example Edge Service with Deployment Policy ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/examples/blob/master/edge/services/helloworld/PolicyRegister.md#using-the-hello-world-example-edge-service-with-deployment-policy).
+See [Using the Hello World Example Edge Service with Deployment Policy ](https://github.com/open-horizon/examples/blob/master/edge/services/helloworld/PolicyRegister.md#using-the-hello-world-example-edge-service-with-deployment-policy){:target="_blank"}{: .externalLink}.
 
 ## Related information
 

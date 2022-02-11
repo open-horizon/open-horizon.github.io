@@ -18,9 +18,9 @@ lastupdated: "2021-02-20"
 
 ## Prerequisites
 
-* [**jq** ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://stedolan.github.io/jq/download/)
-* [**git** ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://git-scm.com/downloads)
-* [**docker** ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://docs.docker.com/get-docker/) version 1.13 or greater
+* [**jq** ](https://stedolan.github.io/jq/download/){:target="_blank"}{: .externalLink}
+* [**git** ](https://git-scm.com/downloads){:target="_blank"}{: .externalLink}
+* [**docker** ](https://docs.docker.com/get-docker/){:target="_blank"}{: .externalLink} version 1.13 or greater
 * **make**
 
 ## Installation verification

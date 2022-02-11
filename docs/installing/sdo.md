@@ -17,7 +17,7 @@ lastupdated: "2021-02-20"
 # SDO agent installation and registration
 {: #sdo}
 
-[SDO ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://software.intel.com/en-us/secure-device-onboard) (Secure Device Onboard), created by Intel, makes it easy and secure to configure edge devices and associate them with an edge management hub. {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) supports SDO-enabled devices so that the agent will be installed on the devices and registered to the {{site.data.keyword.ieam}} management hub with zero touch (by simply powering on the devices).
+[SDO ](https://software.intel.com/en-us/secure-device-onboard){:target="_blank"}{: .externalLink} (Secure Device Onboard), created by Intel, makes it easy and secure to configure edge devices and associate them with an edge management hub. {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) supports SDO-enabled devices so that the agent will be installed on the devices and registered to the {{site.data.keyword.ieam}} management hub with zero touch (by simply powering on the devices).
 
 ## SDO overview
 {: #sdo-overview}
@@ -57,7 +57,7 @@ Even before you purchase SDO-enabled edge devices, you can try out the SDO suppo
    export CURL_CA_BUNDLE=$HZN_MGMT_HUB_CERT_PATH
    ```
 
-3. Follow the steps in the [open-horizon/SDO-support repository ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/SDO-support/blob/master/README.md) to try out SDO and see it automatically install the {{site.data.keyword.ieam}} agent on a device and register it with your {{site.data.keyword.ieam}} management hub.
+3. Follow the steps in the [open-horizon/SDO-support repository ](https://github.com/open-horizon/SDO-support/blob/master/README.md){:target="_blank"}{: .externalLink} to try out SDO and see it automatically install the {{site.data.keyword.ieam}} agent on a device and register it with your {{site.data.keyword.ieam}} management hub.
 
 ## Adding SDO-enabled devices to your {{site.data.keyword.ieam}} domain
 {: #using-sdo}
@@ -78,7 +78,7 @@ If you have purchased SDO-enabled devices and want to incorporate them into your
       export CURL_CA_BUNDLE=$HZN_MGMT_HUB_CERT_PATH
       ```
 
-   3. Perform the steps in just this one section: [Generate Owner Key Pairs ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://github.com/open-horizon/SDO-support/blob/master/README.md#gen-keypair).
+   3. Perform the steps in just this one section: [Generate Owner Key Pairs ](https://github.com/open-horizon/SDO-support/blob/master/README.md#gen-keypair){:target="_blank"}{: .externalLink}.
 
 2. [Log in to the {{site.data.keyword.ieam}} management console](../console/accessing_ui.md) and click **Add node**.
 

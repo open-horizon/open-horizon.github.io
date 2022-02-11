@@ -23,7 +23,7 @@ You must install and configure a management hub before you start the {{site.data
 {: #sum}
 
 * This content describes the steps to deploy the following components.
-  * [IBM Cloud Platform Common Services![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://www.ibm.com/support/knowledgecenter/SSHKN6/kc_welcome_cs.html).
+  * [IBM Cloud Platform Common Services](https://www.ibm.com/support/knowledgecenter/SSHKN6/kc_welcome_cs.html){:target="_blank"}{: .externalLink}.
   * {{site.data.keyword.edge_notm}} Management Hub operator.
   * {{site.data.keyword.edge_notm}} exchange API.
   * {{site.data.keyword.edge_notm}} agbot.

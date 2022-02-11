@@ -40,7 +40,7 @@ Two supported database configurations impact sizing considerations for the {{sit
 
 **Local** databases require persistent storage, which uses dynamic storage classes that are configured for your {{site.data.keyword.open_shift}} cluster.
 
-For more information, see [supported dynamic {{site.data.keyword.open_shift}} storage options and configuration instructions ![Opens in a new tab](../images/icons/launch-glyph.svg "Opens in a new tab")](https://docs.openshift.com/container-platform/4.4/storage/understanding-persistent-storage.html).
+For more information, see [supported dynamic {{site.data.keyword.open_shift}} storage options and configuration instructions ](https://docs.openshift.com/container-platform/4.4/storage/understanding-persistent-storage.html){:target="_blank"}{: .externalLink}.
 
 A main consideration for the type of storage class that is chosen, is whether that storage class supports **allowVolumeExpansion**. The following returns **true** if it does:
 
