@@ -8,3 +8,39 @@ newIssueWelcomeComment: |
   Thank you and congratulations 🎉 for opening your very first issue in this project.
   Please checkout if any of the already existing issue template fits for your isssue or you may open a blank issue as well ✨
   We will try to get back to you as soon as we can.👀
+
+  # Configuration for new-pr-welcome - https://github.com/behaviorbot/new-pr-welcome
+
+# Comment to be posted to on PRs from first time contributors in your repository
+newPRWelcomeComment: |
+  Hello there!👋 Welcome to open horizon!💖
+  Thank you and congrats 🎉 for opening your first PR on this project.✨
+  We will review it soon! Till then you can checkout the `README.md` for more details on it.
+
+# Configuration for first-pr-merge - https://github.com/behaviorbot/new-pr-welcome
+
+# Comment to be posted to on PRs from first time contributors in your repository
+newPRWelcomeComment: |
+  Congratulations on merging your first contribution to open horizon!✨
+
+# *Required* Comment to reply with
+requestInfoReplyComment: >
+  Hi,
+  Thanks for raising an issue/pull request! We at open horizon appreciate your concerns and views to
+  help us improve.However we see that there is a lack of description in your issue/pull request. We would appreciate
+  it if you could provide us with more info about this issue/pull request. It would help our maintainers,
+  ambassadors and coaches to better review your issue/pull request and provide actionable feedback!
+  We are looking forward to your contributions!
+# *OPTIONAL* default titles to check against for lack of descriptiveness
+# MUST BE ALL LOWERCASE
+requestInfoDefaultTitles:
+  - update readme.md
+  - updates
+  - add files via upload
+  - readme.md
+  - changes made
+
+# *OPTIONAL* Label to be added to Issues and Pull Requests with insufficient information given
+requestInfoLabelToAdd: needs-more-info
+
+# It is recommended to include as many gifs and emojis as possible!
