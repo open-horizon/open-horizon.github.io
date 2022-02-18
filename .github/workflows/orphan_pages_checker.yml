@@ -1,0 +1,41 @@
+name: Orphan pages checker
+
+on:
+  schedule:
+    - cron:  '0 1 1 * *'
+  workflow_dispatch:
+
+env:
+    URL: https://open-horizon.github.io/
+    ISSUE_TEMPLATE: ".github/ISSUE_TEMPLATE/report-orphan-pages.md"
+
+jobs:
+    checker:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: ruby/setup-ruby@v1
+              with:
+                  ruby-version: 2.6 # Not needed with a .ruby-version file
+                  bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+            - run: |
+                  bundle exec jekyll serve >/dev/null 2>&1 &
+                  pid=$!
+                  printf "Starting the server"
+                  until $(curl --output /dev/null --silent --head --fail 127.0.0.1:4000); do
+                      printf '.'
+                      sleep 5
+                  done
+                  printf "\nCrawling the locally hosted website\n"
+                  wget -mpE 127.0.0.1:4000 >/dev/null 2>&1 || true
+                  kill -15 $pid
+                  printf "Killed the Server\n"
+                  printf "Finding Orphan Pages\n"
+                  diff -qr 127.0.0.1\:4000/ ./_site | grep Only | grep .html
+            - name: Creating issue
+              uses: JasonEtco/create-an-issue@v2.4.0
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  LOG_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}?check_suite_focus=true
+              with:
+                  filename: ${{ env.ISSUE_TEMPLATE }}
