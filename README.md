@@ -1,3 +1,6 @@
+![example workflow](https://github.com/open-horizon/open-horizon.github.io/actions/workflows/anaxdocscopy.yml/badge.svg) ![example workflow](https://github.com/open-horizon/open-horizon.github.io/actions/workflows/Check_broken_link.yml/badge.svg) [![Chat on Matrix](https://matrix.to/img/matrix-badge.svg)](https://matrix.to/#/#open-horizon-docs:chat.lfx.linuxfoundation.org)
+
+
 # Contributing to Open Horizon Pages
 
 If you would like to contribute, please read the following contents. This document contains a lot of tips and guidelines to help keep things organized. 
@@ -6,11 +9,23 @@ We appreciate and recognize all contributors.
 
 # Table of Contents
 
+- [Contributing to Open Horizon Pages](#contributing-to-open-horizon-pages)
+- [Table of Contents](#table-of-contents)
 - [Fork the Repository](#fork-the-repository)
 - [Make Necessary Changes](#make-necessary-changes)
-- [Test in Local and Push Changes to GitHub](#test-in-local-and-push-changes-to-gitHub)
+  - [Clone the repository](#clone-the-repository)
+  - [Create a branch](#create-a-branch)
+  - [Make necessary changes](#make-necessary-changes-1)
+- [Test in Local and Push Changes to GitHub](#test-in-local-and-push-changes-to-github)
+  - [Prerequisites](#prerequisites)
+  - [Test your changes locally](#test-your-changes-locally)
+  - [Commit changes](#commit-changes)
+  - [Push changes to GitHub](#push-changes-to-github)
+  - [Possible Errros you may get.](#possible-errros-you-may-get)
 - [Submit a Pull Request for Review](#submit-a-pull-request-for-review)
 - [Clean Up](#clean-up)
+  - [Delete the branch](#delete-the-branch)
+  - [Syncing a fork](#syncing-a-fork)
 
 # Fork the Repository
 
