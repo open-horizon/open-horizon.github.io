@@ -1,4 +1,4 @@
-![example workflow](https://github.com/open-horizon/open-horizon.github.io/actions/workflows/anaxdocscopy.yml/badge.svg) ![example workflow](https://github.com/open-horizon/open-horizon.github.io/actions/workflows/Check_broken_link.yml/badge.svg) [![Chat on Matrix](https://matrix.to/img/matrix-badge.svg)](https://matrix.to/#/#open-horizon-docs:chat.lfx.linuxfoundation.org)
+![example workflow](https://github.com/open-horizon/open-horizon.github.io/actions/workflows/anaxdocscopy.yml/badge.svg) ![example workflow](https://github.com/open-horizon/open-horizon.github.io/actions/workflows/Check_broken_link.yml/badge.svg) ![example workflow](https://github.com/open-horizon/open-horizon.github.io/actions/workflows/orphan_pages_checker.yml/badge.svg) [![Chat on Matrix](https://matrix.to/img/matrix-badge.svg)](https://matrix.to/#/#open-horizon-docs:chat.lfx.linuxfoundation.org) 
 
 
 # Contributing to Open Horizon Pages
