@@ -22,6 +22,8 @@ on:
 env:
   URL: https://open-horizon.github.io/
   ISSUE_TEMPLATE: ".github/ISSUE_TEMPLATE/check-broken-links.md"
+  CONFIG: ".github/broken-link-gha-config.json"
+
 
 jobs:
   build:
