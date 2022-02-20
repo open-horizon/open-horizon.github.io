@@ -9,7 +9,7 @@ newIssueWelcomeComment: |
   Please checkout if any of the already existing issue template fits for your isssue or you may open a blank issue as well ✨
   We will try to get back to you as soon as we can.👀
 
-  # Configuration for new-pr-welcome - https://github.com/behaviorbot/new-pr-welcome
+# Configuration for new-pr-welcome - https://github.com/behaviorbot/new-pr-welcome
 
 # Comment to be posted to on PRs from first time contributors in your repository
 newPRWelcomeComment: |

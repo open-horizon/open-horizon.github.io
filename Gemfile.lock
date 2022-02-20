@@ -273,4 +273,7 @@ DEPENDENCIES
   webrick (~> 1.7)
 
 BUNDLED WITH
+<<<<<<< HEAD
    2.3.7
+=======
+>>>>>>> upstream/master

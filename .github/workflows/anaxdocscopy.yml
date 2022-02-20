@@ -1,4 +1,4 @@
-name : open-horizon
+name : anaxdocscopy
 on: 
   push:
     branches:

@@ -1,3 +1,11 @@
+<p style="text-align:center;" align="center">
+  <img align="center" src="https://github.com/open-horizon/open-horizon.github.io/blob/master/img/logos/open-horizon-color.png" width="40%" />
+</p>
+
+
+![example workflow](https://github.com/open-horizon/open-horizon.github.io/actions/workflows/anaxdocscopy.yml/badge.svg) ![example workflow](https://github.com/open-horizon/open-horizon.github.io/actions/workflows/Check_broken_link.yml/badge.svg) ![example workflow](https://github.com/open-horizon/open-horizon.github.io/actions/workflows/orphan_pages_checker.yml/badge.svg) [![Chat on Matrix](https://matrix.to/img/matrix-badge.svg)](https://matrix.to/#/#open-horizon-docs:chat.lfx.linuxfoundation.org) 
+
+
 # Contributing to Open Horizon Pages
 
 If you would like to contribute, please read the following contents. This document contains a lot of tips and guidelines to help keep things organized. 
@@ -6,11 +14,23 @@ We appreciate and recognize all contributors.
 
 # Table of Contents
 
+- [Contributing to Open Horizon Pages](#contributing-to-open-horizon-pages)
+- [Table of Contents](#table-of-contents)
 - [Fork the Repository](#fork-the-repository)
 - [Make Necessary Changes](#make-necessary-changes)
-- [Test in Local and Push Changes to GitHub](#test-in-local-and-push-changes-to-gitHub)
+  - [Clone the repository](#clone-the-repository)
+  - [Create a branch](#create-a-branch)
+  - [Make necessary changes](#make-necessary-changes-1)
+- [Test in Local and Push Changes to GitHub](#test-in-local-and-push-changes-to-github)
+  - [Prerequisites](#prerequisites)
+  - [Test your changes locally](#test-your-changes-locally)
+  - [Commit changes](#commit-changes)
+  - [Push changes to GitHub](#push-changes-to-github)
+  - [Possible Errros you may get.](#possible-errros-you-may-get)
 - [Submit a Pull Request for Review](#submit-a-pull-request-for-review)
 - [Clean Up](#clean-up)
+  - [Delete the branch](#delete-the-branch)
+  - [Syncing a fork](#syncing-a-fork)
 
 # Fork the Repository
 
@@ -110,6 +130,52 @@ git push origin <add-your-branch-name>
 ```
 
 replacing `<add-your-branch-name>` with the name of the branch you created earlier.
+
+## Possible Errros you may get.  
+
+Sometimes while setting up project locally may get some errors, some of them are listed below. 
+
+1. Missing `webrick` and `wdm` in `Gemfile`
+
+
+Sometimes users are using the latest version of `ruby` which is `>2.7` which do not have `webrick` support pre-added so they may get this error(list below), if they are using ruby versions `>= 3.0.0`  (listed below) 
+
+```
+  Please add the following to your Gemfile to avoid polling for changes:
+    gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+ Auto-regeneration: enabled for 'C:/Users/yourUserName/Desktop/open-horizon/open-horizon.github.io'
+C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve/servlet.rb:3:in `require': cannot load such file -- webrick (LoadError)
+        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve/servlet.rb:3:in `<top (required)>'
+        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve.rb:184:in `require_relative'
+        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve.rb:184:in `setup'
+        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve.rb:102:in `process'
+        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve.rb:93:in `block in start'
+        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve.rb:93:in `each'
+        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve.rb:93:in `start'
+        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve.rb:75:in `block (2 levels) in init_with_program'
+        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/mercenary-0.3.6/lib/mercenary/command.rb:220:in `block in execute'
+        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/mercenary-0.3.6/lib/mercenary/command.rb:220:in `each'
+        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/mercenary-0.3.6/lib/mercenary/command.rb:220:in `execute'
+        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/mercenary-0.3.6/lib/mercenary/program.rb:42:in `go'
+        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/mercenary-0.3.6/lib/mercenary.rb:19:in `program'
+        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/exe/jekyll:15:in `<top (required)>'
+        from C:/Ruby30-x64/bin/jekyll:25:in `load'
+        from C:/Ruby30-x64/bin/jekyll:25:in `<main>'
+```
+
+To solve this error add `webrick` and `wdm` to your local `Gemfile` by using the commands listed below and re-run the serve.
+
+To add webrick 
+
+```
+bundle add webrick
+```
+
+To add wdm
+
+```
+gem install wdm
+```
 
 # Submit a Pull Request for Review
 
