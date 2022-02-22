@@ -11,10 +11,9 @@ author: edeediong
 
 ## Technical Support
 
-Open Horizon uses [Slack](https://slack.com/help/articles/115004071768-What-is-Slack-) for internal communication.
+Open Horizon uses [Element](https://element.io/about){:target="_blank"}{: .externalLink} for internal communication.
 
-For Open Horizon technical support, join the LF Edge [Slack workspace](https://join.slack.com/t/lfedge/shared_invite/zt-7kavdtmq-SeyFzM2CEABBcKYGEVCgkw).
-When you join the LF Edge *#open-horizon-help* slack channel, you can post technical and non-technical inquiries and receive help team responses.
+For Open Horizon technical support, join the LF Edge [Element Room](https://chat.lfx.linuxfoundation.org/){:target="_blank"}{: .externalLink}.When you join the LF Edge *#open-horizon-help* chat room, you can post technical and non-technical inquiries and receive help team responses.
 
 Here is an example query:
 
