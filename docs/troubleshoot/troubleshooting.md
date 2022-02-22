@@ -50,7 +50,7 @@ To help troubleshoot specific issues, review the questions about your system sta
 
 These questions are based on the nature of debugging issues and are related to different environments. For example, when troubleshooting issues on an edge node, you might need complete access to and control of the node, which can increase your capability to collect and view information.
 
-* [Troubleshooting tips](troubleshooting_devices.md)
+* [Troubleshooting tips](index.md)
 
   Review the common issues that you might encounter when you use {{site.data.keyword.ieam}}.
   

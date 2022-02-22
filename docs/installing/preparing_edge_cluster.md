@@ -31,7 +31,7 @@ Install one of these edge clusters and prepare it for the {{site.data.keyword.ed
 
 1. Install OCP by following the installation instructions in the [{{site.data.keyword.open_shift_cp}} Documentation ](https://docs.openshift.com/container-platform/4.5/welcome/index.html){:target="_blank"}{: .externalLink}. ({{site.data.keyword.ieam}} only supports OCP on x86_64 platforms.)
 
-2. Install the Kubernetes CLI (**kubectl**), Openshift client CLI (**oc**) and Docker on the admin host where you administer your OCP edge cluster. This is the same host where you run the agent installation script. For more information, see [Installing cloudctl, kubectl, and oc](../cli/cloudctl_oc_cli.md).
+2. Install the Kubernetes CLI (**kubectl**), Openshift client CLI (**oc**) and Docker on the admin host where you administer your OCP edge cluster. This is the same host where you run the agent installation script.
 
 ## Install and configure a k3s edge cluster
 {: #install_k3s_edge_cluster}

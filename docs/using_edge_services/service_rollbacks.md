@@ -130,5 +130,3 @@ For additional details, you can inspect the event logs for the current node with
 hzn eventlog list
 ```
 {: codeblock}
-
-Lastly, you can also use the [management console](../console/accessing_ui.md) to modify rollback deployment versions settings. You can do this when creating a new deployment policy or by viewing and editing existing policy details including rollbacks settings. Note the term “time frame” in the rollback section of the UI is equivalent to “retry_durations” in the CLI.

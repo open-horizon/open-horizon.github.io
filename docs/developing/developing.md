@@ -63,6 +63,7 @@ You can {{site.data.keyword.ieam}} use to put your service containers into the I
 
 With {{site.data.keyword.ieam}}, you can develop any service containers that you want for your edge machines.
 
-* [APIs](../api/edge_rest_apis.md)
+* [APIs](../api/index.md)
 
 {{site.data.keyword.ieam}} provides RESTful APIs for enabling components to collaborate, and to enable your organization's developers and users to control the components.
+
