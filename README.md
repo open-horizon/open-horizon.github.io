@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 <p style="text-align:center;" align="center">
   <img align="center" src="https://github.com/open-horizon/open-horizon.github.io/blob/master/img/logos/open-horizon-color.png" width="55%" />
 </p>
-=======
-![example workflow](https://github.com/open-horizon/open-horizon.github.io/actions/workflows/anaxdocscopy.yml/badge.svg) ![example workflow](https://github.com/open-horizon/open-horizon.github.io/actions/workflows/Check_broken_link.yml/badge.svg) ![example workflow](https://github.com/open-horizon/open-horizon.github.io/actions/workflows/orphan_pages_checker.yml/badge.svg) [![Chat on Matrix](https://matrix.to/img/matrix-badge.svg)](https://matrix.to/#/#open-horizon-docs:chat.lfx.linuxfoundation.org) 
->>>>>>> 47ac8c1... Added status badge for orphan-pages-checker
 
 <p align="center">
 <a href="https://github.com/open-horizon/open-horizon.github.io" alt="GitHub contributors">
