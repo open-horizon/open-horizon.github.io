@@ -11,7 +11,7 @@
 <img src="https://github.com/open-horizon/open-horizon.github.io/actions/workflows/Check_broken_link.yml/badge.svg" /></a>
 <a href="https://github.com/open-horizon/open-horizon.github.io" alt="Twitter Follow">
 <img src="https://github.com/open-horizon/open-horizon.github.io/actions/workflows/orphan_pages_checker.yml/badge.svg" /></a>
-<a href="https://github.com/open-horizon/open-horizon.github.io" alt="chat on matrix">
+<a href="https://matrix.to/#/#open-horizon-docs:chat.lfx.linuxfoundation.org" alt="chat on matrix">
 <img src="https://matrix.to/img/matrix-badge.svg" /></a>
 </p>
 
