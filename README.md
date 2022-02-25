@@ -87,7 +87,13 @@ git checkout -b add-readme
 
 ## Make necessary changes
 
-Now do whatever you want to contribute to this project and make necessary changes on existing files or add new files. 
+Now do whatever you want to contribute to this project and make necessary changes on existing files or add new files.
+
+### Gitpod Environment
+[Gitpod](https://www.gitpod.io/) is a free platform that allows you to develop Open-Horizon in a VS Code environment. 
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/)
+
 
 # Test in Local and Push Changes to GitHub
 
