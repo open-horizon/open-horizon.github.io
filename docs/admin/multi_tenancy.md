@@ -3,6 +3,8 @@
 copyright:
 years: 2021
 lastupdated: "2021-02-20"
+title: Multitenacy
+description: Software architecture in which a single instance of software runs on server and server multiplies tenants.
 
 ---
 

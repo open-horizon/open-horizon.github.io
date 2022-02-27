@@ -3,7 +3,8 @@
 copyright:
 years: 2021
 lastupdated: "2021-08-16"
-
+title: Hello world with a secret
+description: This example teaches you how to develop an Open Horizon service that uses secrets. Secrets ensure that login credentials and other sensitive information are kept secure.
 ---
 
 {:new_window: target="blank"}
@@ -13,12 +14,6 @@ lastupdated: "2021-08-16"
 {:pre: .pre}
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
-
-# Hello world with a secret
-{: #secrets}
-
-This example teaches you how to develop an {{site.data.keyword.edge_service}} that uses secrets. Secrets ensure that login credentials and other sensitive information are kept secure.
-{:shortdesc}
 
 ## Before you begin
 {: #secrets_begin}

@@ -3,6 +3,8 @@
 copyright:
 years: 2021
 lastupdated: "2021-02-20"
+title: CPU to Apache Kafka service
+description: This example collects CPU load percentage information to send to Apache Kafka. Use this example to help you develop your own edge applications that send data to cloud services.
 
 ---
 
@@ -13,12 +15,6 @@ lastupdated: "2021-02-20"
 {:pre: .pre}
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
-
-# CPU to {{site.data.keyword.message_hub_notm}} service
-{: #cpu_msg_ex}
-
-This example collects CPU load percentage information to send to {{site.data.keyword.message_hub_notm}}. Use this example to help you develop your own edge applications that send data to cloud services.
-{:shortdesc}
 
 ## Before you begin
 {: #cpu_msg_begin}
