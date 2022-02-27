@@ -104,6 +104,9 @@ Change to the repository directory on your computer and execute the following co
 NOTE: The first time you run locally, and any time the `Gemfile.lock` file is updated, run `bundle install` before the step below to install or update any required Jekyll modules.
 
 ```
+gem install bundler
+bundle update --bundler
+bundle config set --local deployment 'true'
 bundle install
 bundle exec jekyll serve
 ```
