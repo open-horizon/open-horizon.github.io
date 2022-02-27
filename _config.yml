@@ -1,6 +1,7 @@
 title: Open Horizon
 description: An Open Source Project for secure and robust containerized application management for constrained devices.
 theme: jekyll-theme-tactile
+exclude: [docs/nl, vendor]
 
 
 # Secondary Parameters
