@@ -3,7 +3,8 @@
 copyright:
 years: 2020
 lastupdated: "2020-04-7"
-
+title: Accessing logs
+description: Accessing management hub logs.
 ---
 
 {:new_window: target="blank"}

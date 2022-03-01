@@ -13,6 +13,12 @@ p {
   line-height: 1.5;
   margin: 30px 0;
 }
+
+.row_header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 p a {
   text-decoration: underline;
 }

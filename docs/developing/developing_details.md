@@ -3,7 +3,8 @@
 copyright:
 years: 2021
 lastupdated: "2021-02-20"
-
+title: Development details
+description: The following content provides more details on the software development practices and concepts for Open Horizon (OH) development.
 ---
 
 {:new_window: target="blank"}
@@ -13,12 +14,6 @@ lastupdated: "2021-02-20"
 {:pre: .pre}
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
-
-# Development details
-{: #developing}
-
-The following content provides more details on the software development practices and concepts for {{site.data.keyword.edge_notm}} ({{site.data.keyword.edge_abbr}}) development.
-{:shortdesc}
 
 ## Introduction
 {: #developing_intro}
