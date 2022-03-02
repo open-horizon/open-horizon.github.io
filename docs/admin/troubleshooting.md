@@ -3,7 +3,8 @@
 copyright:
 years: 2021
 lastupdated: "2021-02-20"
-
+title: Troubleshooting
+description: You can use a variety of procedures for diagnosing and fixing problems that you might encounter when using Open Horizon. 
 ---
 
 {:new_window: target="blank"}
@@ -20,9 +21,9 @@ lastupdated: "2021-02-20"
 
 For more information about {{site.data.keyword.open_shift_cp}}, see these resources.
 
-* [{{site.data.keyword.open_shift_cp}} 4.4 Documentation ](https://www.ibm.com/links?url=https%3A%2F%2Fdocs.openshift.com%2Fcontainer-platform%2F4.4%2Fwelcome%2Findex.html){:target="_blank"}{: .externalLink}
-* [{{site.data.keyword.open_shift_cp}} 4.5 Documentation ](https://www.ibm.com/links?url=https%3A%2F%2Fdocs.openshift.com%2Fcontainer-platform%2F4.5%2Fwelcome%2Findex.html)
-{:target="_blank"}{: .externalLink}
+- [{{site.data.keyword.open_shift_cp}} 4.4 Documentation ](https://www.ibm.com/links?url=https%3A%2F%2Fdocs.openshift.com%2Fcontainer-platform%2F4.4%2Fwelcome%2Findex.html){:target="_blank"}{: .externalLink}
+- [{{site.data.keyword.open_shift_cp}} 4.4 Documentation ](https://www.ibm.com/links?url=https%3A%2F%2Fdocs.openshift.com%2Fcontainer-platform%2F4.4%2Fwelcome%2Findex.html){:target="_blank"}{: .externalLink}
+
 ## Kubernetes troubleshooting
 
 {{site.data.keyword.ocp_tm}} is a certified Kubernetes distribution, and as such, most of the Kubernetes documentation can be used for your {{site.data.keyword.open_shift}} cluster. See [Kubernetes debugging ](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application/){:target="_blank"}{: .externalLink} for an application debugging guide.
