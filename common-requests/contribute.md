@@ -30,6 +30,26 @@ In order to use the -s option, you need to make sure you configure your git n
 {% include code_snippet.md code=code language='shell' now='now' %}
 {% capture code %}git config --global user.email "johndoe@example.com"{% endcapture %}
 {% include code_snippet.md code=code language='shell' now='now' %}
+
+In most cases, git automatically adds the signoff to your commit with the use of `-s` or `--signoff` flag to `git commit`. You must use your real name and a reachable email address (sorry, no pseudonyms or anonymous contributions).
+
+To ensure all your commits are signed, you may choose to add this alias to your global `.gitconfig` :
+
+*~/.gitconfig*
+
+{% capture code %}
+[alias]
+  amend = commit -s --amend
+  cm = commit -s -m
+  commit = commit -s
+{% endcapture %}
+
+{% include code_snippet.md code=code language='shell' now='now' %}
+
+Or you may configure your IDE, for example, Visual Studio Code to automatically sign-off commits for you:
+
+<img src="../../img/git-signoff-vscode.png" style="width:60%" alt="git-signoff-vscode">
+
 **To check** 
 {% capture code %}git config --list{% endcapture %}
 {% include code_snippet.md code=code language='shell' now='now' %}
