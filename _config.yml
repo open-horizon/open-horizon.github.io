@@ -6,6 +6,7 @@ exclude: [docs/nl, vendor]
 
 # Secondary Parameters
 header-img: img/hero-dark.jpg
+og-image: img/hero-dark-site.png
 headercolor: "#FFFFFF"
 logo: img/logos/open-horizon.png
 
