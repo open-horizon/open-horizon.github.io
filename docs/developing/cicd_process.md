@@ -93,5 +93,4 @@ The list of services that passed the functional test is used to identify which s
 
 Because the services have been built and tested, this target publishes the service, service policy, pattern, and deployment policy in all architectures to the exchange. 
 
-Note: Also, you can perform many of these tasks from the management console. See [Using the management console](../console/accessing_ui.md).
-
+Note: Also, you can perform many of these tasks from the management console.
