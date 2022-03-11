@@ -30,7 +30,7 @@ The {{site.data.keyword.ieam}} management hub and distributed agents communicate
 
 The control plane is implemented by three different software entities:
 * Open {{site.data.keyword.horizon}} agents
-* Open {{site.data.keyword.horizon}} {{site.data.keyword.agbot}}s
+* Open {{site.data.keyword.horizon_agbots}}
 * Open {{site.data.keyword.horizon_exchange}}
 
 Open {{site.data.keyword.horizon}} agents and {{site.data.keyword.agbot}}s are the primary actors within the control plane. The {{site.data.keyword.horizon_exchange}} facilitates discovery and secure communication between the agents and {{site.data.keyword.agbot}}s. Together, they provide message-level protection by using an algorithm that is called Perfect Forward Secrecy.
