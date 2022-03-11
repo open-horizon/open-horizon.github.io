@@ -1,3 +1,5 @@
+agbot:
+  Agbot
 cloud:
   IBM&reg; Cloud
 cloud_notm:
@@ -49,11 +51,11 @@ horizon_open:
 horizon:
   Horizon
 horizon_agbot:
-  Horizon agbot
+  Horizon Agbot
 horizon_agbots:
-  Horizon agbots
+  Horizon Agbots
 horizon_agbot_full:
-  Horizon agreement bot (agbot)
+  Horizon agreement bot (Agbot)
 horizon_agent:
   Horizon agent
 horizon_agents:
