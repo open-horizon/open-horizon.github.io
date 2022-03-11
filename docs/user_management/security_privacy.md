@@ -1,9 +1,9 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
- 
+years: 2021 - 2022
+lastupdated: "2022-03-10"
+
 ---
 
 {:new_window: target="blank"}
@@ -30,12 +30,12 @@ The {{site.data.keyword.ieam}} management hub and distributed agents communicate
 
 The control plane is implemented by three different software entities:
 * Open {{site.data.keyword.horizon}} agents
-* Open {{site.data.keyword.horizon}} agbots
+* Open {{site.data.keyword.horizon_agbots}}
 * Open {{site.data.keyword.horizon_exchange}}
 
-Open {{site.data.keyword.horizon}} agents and agbots are the primary actors within the control plane. The {{site.data.keyword.horizon_exchange}} facilitates discovery and secure communication between the agents and agbots. Together, they provide message-level protection by using an algorithm that is called Perfect Forward Secrecy.
+Open {{site.data.keyword.horizon}} agents and {{site.data.keyword.agbot}}s are the primary actors within the control plane. The {{site.data.keyword.horizon_exchange}} facilitates discovery and secure communication between the agents and {{site.data.keyword.agbot}}s. Together, they provide message-level protection by using an algorithm that is called Perfect Forward Secrecy.
 
-By default, agents and agbots communicate with the exchange via TLS 1.3. But TLS itself does not provide enough security. {{site.data.keyword.ieam}} encrypts every control message that flows between agents and agbots before it is sent over the network. Each agent and agbot generates a 2048-bit RSA key pair and publishes its public key in the exchange. The private key is stored in each actor's root-protected storage. Other actors in the system use the message receiver's public key to encrypt a symmetric key that is used to encrypt control plane messages. This ensures that only the intended receiver can decrypt the symmetric key; thus, the message itself. Perfect Forward Secrecy use in the control plane provides extra security, such as preventing man-in-the-middle attacks, which TLS does not prevent.
+By default, agents and {{site.data.keyword.agbot}}s communicate with the exchange via TLS 1.3. But TLS itself does not provide enough security. {{site.data.keyword.ieam}} encrypts every control message that flows between agents and {{site.data.keyword.agbot}}s before it is sent over the network. Each agent and {{site.data.keyword.agbot}} generates a 2048-bit RSA key pair and publishes its public key in the exchange. The private key is stored in each actor's root-protected storage. Other actors in the system use the message receiver's public key to encrypt a symmetric key that is used to encrypt control plane messages. This ensures that only the intended receiver can decrypt the symmetric key; thus, the message itself. Perfect Forward Secrecy use in the control plane provides extra security, such as preventing man-in-the-middle attacks, which TLS does not prevent.
 
 ### Agents
 {: #agents}
@@ -48,23 +48,23 @@ The agent is responsible for downloading and starting containerized workloads. T
 
 When a model is deployed to an edge node, the agent downloads the model and verfies the model's signature to ensure that it has not been tampered with in transit. The signature and verification key are created when the model is published to the management hub. The agent stores the model in root protected storage on the host. A credential is provided to each service when it is started by the agent. The service uses that credential to identify itself and enable access to the models that the service is allowed to access. Every model object in {{site.data.keyword.ieam}} indicates the list of services, which can access the model. Each service gets a new credential each time it is restarted by {{site.data.keyword.ieam}}. The model object is not encrypted by {{site.data.keyword.ieam}}. Because the model object is treated as a bag of bits by {{site.data.keyword.ieam}}, a service implementation is free to encrypt the model if necessary. For more about how to use the MMS, see [Model management details](../developing/model_management_details.md).
 
-### Agbots
+### {{site.data.keyword.agbot}}s
 {: #agbots}
 
-The {{site.data.keyword.ieam}} management hub contains several instances of an agbot, which are responsible for initiating the deployment of workloads to all the edge nodes registered with the management hub. Agbots periodically look at all the deployment policies and patterns that have been published to the exchange, ensuring that the services in those patterns and policies are deployed on all the correct edge nodes. When an agbot initiates a deployment request, it sends the request over the secure control plane. The deployment request contains everything the agent needs to verify the workload and its configuration, should the agent decide to accept the request. See [Agents](security_privacy.md#agents) for security details on what the agent does. The Agbot also directs the MMS where and when to deploy models. See [Agents](security_privacy.md#agents) for security details on how models are managed.
+The {{site.data.keyword.ieam}} management hub contains several instances of an {{site.data.keyword.agbot}}, which are responsible for initiating the deployment of workloads to all the edge nodes registered with the management hub. {{site.data.keyword.agbot}}s periodically look at all the deployment policies and patterns that have been published to the exchange, ensuring that the services in those patterns and policies are deployed on all the correct edge nodes. When an {{site.data.keyword.agbot}} initiates a deployment request, it sends the request over the secure control plane. The deployment request contains everything the agent needs to verify the workload and its configuration, should the agent decide to accept the request. See [Agents](security_privacy.md#agents) for security details on what the agent does. The {{site.data.keyword.agbot}} also directs the MMS where and when to deploy models. See [Agents](security_privacy.md#agents) for security details on how models are managed.
 
-A compromised agbot can attempt to propose malicious workload deployments, but the proposed deployment must meet the security requirements that are stated in the agent section. Even though the agbot initiates workload deployment it has no authority to create workloads and container configurations and therefore is unable to propose its own malicious workloads.
+A compromised {{site.data.keyword.agbot}} can attempt to propose malicious workload deployments, but the proposed deployment must meet the security requirements that are stated in the agent section. Even though the {{site.data.keyword.agbot}} initiates workload deployment it has no authority to create workloads and container configurations and therefore is unable to propose its own malicious workloads.
 
 ## {{site.data.keyword.horizon_exchange}}
 {: #exchange}
 
-{{site.data.keyword.horizon_exchange}} is a centralized, replicated, and load balanced REST API server. It functions as a shared database of metadata for users, organizations, edge nodes, published services, policies, and patterns. It also enables the distributed agents and agbots to deploy containerized workloads by providing the storage for the secure control plane, until the messages can be retrieved. The {{site.data.keyword.horizon_exchange}} is unable to read the control messages because it does not possess the private RSA key to decrypt the message. Thus a compromised {{site.data.keyword.horizon_exchange}} is incapable of spying on the control plane traffic. For more information on the role of the exchange, see [Overview of {{site.data.keyword.edge}}](../getting_started/overview_oh.md).
+{{site.data.keyword.horizon_exchange}} is a centralized, replicated, and load balanced REST API server. It functions as a shared database of metadata for users, organizations, edge nodes, published services, policies, and patterns. It also enables the distributed agents and {{site.data.keyword.agbot}}s to deploy containerized workloads by providing the storage for the secure control plane, until the messages can be retrieved. The {{site.data.keyword.horizon_exchange}} is unable to read the control messages because it does not possess the private RSA key to decrypt the message. Thus a compromised {{site.data.keyword.horizon_exchange}} is incapable of spying on the control plane traffic. For more information on the role of the exchange, see [Overview of {{site.data.keyword.edge}}](../getting_started/overview_oh.md).
 
 ## Privileged mode services
 {: #priv_services}
 On a host machine, some tasks can only be performed by an account with root access. The equivalent for containers is privileged mode. While containers generally do not need privileged mode on the host, there are some use cases where it is required. In {{site.data.keyword.ieam}} you have the ability to specify that an application service should be deployed with privileged process execution enabled. By default, it is disabled. You must explicitly enable it in the [deployment configuration](https://github.com/open-horizon/anax/blob/master/docs/deployment_string.md){:target="_blank"}{: .externalLink} of the respective Service Definition file for each service that needs to run in  this mode. And further, any node on which you want to deploy that service must also explicitly allow privileged mode containers. This ensures that node owners have some control over which services are executing on their edge nodes. For an example of how to enable privileged mode policy on an edge node, see [privileged node policy](https://github.com/open-horizon/anax/blob/master/cli/samples/privileged_node_policy.json){:target="_blank"}{: .externalLink}. If the service definition or one of its dependencies requires privileged mode, the node policy must also allow privileged mode, or else none of the services will not be deployed to the node. For an indepth discussion of privileged mode see [What is privileged mode and do I need it?](https://wiki.lfedge.org/pages/viewpage.action?pageId=44171856){:target="_blank"}{: .externalLink}.
 
-## Denial-of-service attack 
+## Denial-of-service attack
 {: #denial}
 
 The {{site.data.keyword.ieam}} management hub is a centralized service. Centralized services in typical cloud based environments are generally vulnerable to denial-of-service attacks. The agent requires a connection only when it is first registered to the hub or when it is negotiating the deployment of a workload. At all other times, the agent continues to operate normally even while disconnected from the {{site.data.keyword.ieam}} management hub.  This ensures that the {{site.data.keyword.ieam}} agent remains active on edge node even if the management hub is under attack.
