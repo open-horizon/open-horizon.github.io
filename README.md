@@ -228,8 +228,8 @@ Refer to [Sync a fork of a repository to keep it up-to-date with the upstream re
 ## 📌 Our valuable Contributors👩‍💻👨‍💻 :
 <table>
   <tr>
-    <a href="https://github.com/keploy/ui/graphs/contributors">
-      <img src="https://contrib.rocks/image?repo=keploy/ui" />
+    <a href="https://github.com/open-horizon/open-horizon.github.io/graphs/contributors">
+      <img src="https://contrib.rocks/image?repo=open-horizon/open-horizon.github.io" />
     </a>
   </tr>
 </table>
