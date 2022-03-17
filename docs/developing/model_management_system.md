@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 
 ---
 
@@ -31,6 +31,7 @@ which git jq make
 ls ~/.hzn/keys/service.private.key ~/.hzn/keys/service.public.pem
 cat /etc/default/horizon
 ```
+{: codeblock}
 
 ## Procedure
 {: #mms_procedure}
@@ -44,4 +45,4 @@ This example is part of the [{{site.data.keyword.horizon_open}} ](https://github
 
 ## Further reading
 
-* [Model management details](../developing/model_management_details.md)
+* [Model management system](../developing/model_management_details.md)
