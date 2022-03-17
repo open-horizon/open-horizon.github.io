@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 
 ---
 
@@ -35,7 +35,7 @@ Note: The `hzn` command sometimes uses the term business policy when referring t
 
 The node policy (set by the technician that sets up the ATMs) states facts about each node; for example, whether the ATM has a camera and the type of location the ATM is in. This information is easy for the technician to determine and specify.
 
-The service policy is a statement about what the service requires to operate correctly (in this case a camera). The third-party service developer knows this information, even though they do not know which customer is using it. If the customer has other ATMs that do not have cameras, these services are not deployed to those ATMs because of this constraint.
+The service policy is a statement about what the service requires to operate correctly (in this case, a camera). The third-party service developer knows this information, even though they do not know which customer is using it. If the customer has other ATMs that do not have cameras, these services are not deployed to those ATMs because of this constraint.
 
 The deployment policy is defined by the customer CIO (or whoever is managing their edge fabric). This defines the overall service deployment for the business. In this case, the CIO expresses the desired service deployment outcome, that atm1 should be used for walk-up ATMs and atm2 should be used for drive-through ATMs.
 
@@ -158,7 +158,7 @@ In {{site.data.keyword.edge_notm}}, node, service, and deployment policies can d
 To illustrate the full power of the bi-directional nature of policy, consider the real-world example in this section and add some constraints to the node. In our example, if some of the rural, walk-up ATMs are in a waterfront location that creates a glare that the existing atm1 service used by the other walk-up ATMs cannot handle. This requires a third service that can handle the glare better for those few ATMs, and policy that isconfigured as follows:
 
 * Node policy on the waterfront walk-up ATMs: properties: `camera-type: still`, `atm-type: walk-up`; constraints: `feature == glare-correction`
-* Optionally, seervice policy set by the third-party developers for atm3: constraints: `(Optional)`
+* Optionally, service policy set by the third-party developers for atm3: constraints: `(Optional)`
 * Deployment policy set by the customer for the atm3 service: constraints: `camera-type == still`; properties: `feature: glare-correction`  
 
 Again, the node policy states the facts about the node; however, in this case, the technician who set up the waterfront ATMs specified a constraint that the service to deploy on this node must have the glare-correction feature.
