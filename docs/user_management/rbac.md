@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2019 - 2022
+lastupdated: "2022-03-17"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2021-02-20"
 # Role-based access control
 {: #rbac}
 
-{{site.data.keyword.edge_notm}} {{site.data.keyword.ieam}} supports several roles. Your role determines the actions that you can perform.
+{{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) supports several roles. Your role determines the actions that you can perform.
 {:shortdesc}
 
 ## Organizations
