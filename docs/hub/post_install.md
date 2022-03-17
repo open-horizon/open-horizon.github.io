@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 
 ---
 
@@ -35,4 +35,4 @@ The following process must run on a host that supports installation of the **hzn
 
 ## What's Next
 
-After completing the steps in [Post installation configuration](#postconfig), follow the process on the [Gather edge node files](gather_files.md) page to prepare installation media for your edge nodes.
+Follow the process on the [Gather edge node files](gather_files.md) page to prepare installation media for your edge nodes.
