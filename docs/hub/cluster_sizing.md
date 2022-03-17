@@ -51,7 +51,7 @@ oc get storageclass <desired storage class> -o json | jq .allowVolumeExpansion
 ```
 {: codeblock}
 
-If the storage class allows volume expansion, sizing can be adjusted post installation (given the underlying storage space is available for allocation). If the storage class does not allow volume expansion, you must pre-allocate storage for your use case. 
+If the storage class allows volume expansion, sizing can be adjusted post installation (given the underlying storage space is available for allocation). If the storage class does not allow volume expansion, you must pre-allocate storage for your use case.
 
 If more storage is necessary after initial installation with a storage class that does not allow for volume expansion, you will need to run through a re-installation by using the steps that are described in the [backup and recovery](../admin/backup_recovery.md) page.
 
@@ -60,6 +60,7 @@ The allocations can be changed before the {{site.data.keyword.ieam}} Management 
 * PostgreSQL Exchange (Stores data for the Exchange, and fluctuates in size depending on usage, but the default storage setting can support up to the advertised limit of edge nodes)
   * 20 GB
 * PostgreSQL {{site.data.keyword.agbot}} (Stores data for the {{site.data.keyword.agbot}}, the default storage setting can support up to the advertised limit of edge nodes)
+
   * 20 GB
 * MongoDB Cloud Sync Service (stores content for the Model Management Service (MMS). Depending on the number and size of your models, you might want to modify this default allocation.
   * 50 GB

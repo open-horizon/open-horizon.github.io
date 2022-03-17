@@ -2,10 +2,11 @@ title: Open Horizon
 description: An Open Source Project for secure and robust containerized application management for constrained devices.
 theme: jekyll-theme-tactile
 exclude: [docs/nl, vendor]
-
+url: https://open-horizon.github.io
 
 # Secondary Parameters
 header-img: img/hero-dark.jpg
+og-image: img/hero-dark-site.png
 headercolor: "#FFFFFF"
 logo: img/logos/open-horizon.png
 

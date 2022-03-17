@@ -39,7 +39,7 @@ The following are answers to some frequently asked questions (FAQs) about {{site
 ## Is there a way to create a self-contained environment for development purposes?
 {: #one_click}
 
-You can install the open source management hub (without the {{site.data.keyword.ieam}} management console) with the “all-in-one” installer for developers. The all-in-one installer creates a complete but minimal management hub, not suitable for production use. It also configures an example edge node. This tool enables open source component developers to get started quickly without the time it takes to configure a complete production {{site.data.keyword.ieam}} management hub. For information about the all-in-one installer, see [Open Horizon - Devops ](https://github.com/open-horizon/devops/tree/master/mgmt-hub){:target="_blank"}{: .externalLink}.
+You can install the open source management hub (without the {{site.data.keyword.ieam}} management console) with the "all-in-one" installer for developers. The all-in-one installer creates a complete but minimal management hub, not suitable for production use. It also configures an example edge node. This tool enables open source component developers to get started quickly without the time it takes to configure a complete production {{site.data.keyword.ieam}} management hub. For information about the all-in-one installer, see [Open Horizon - Devops ](https://github.com/open-horizon/devops/tree/master/mgmt-hub){:target="_blank"}{: .externalLink}.
 
 ## Is {{site.data.keyword.ieam}} software open-sourced?
 {: #open_sourced}
@@ -77,7 +77,7 @@ If your software requires access to specific hardware or operating system servic
 ## Is there detailed documentation for the REST APIs provided by the components in {{site.data.keyword.ieam}}?
 {: #rest_doc}
 
-Yes. For more information, see [{{site.data.keyword.ieam}} APIs](../api/edge_rest_apis.md). 
+Yes. For more information, see [{{site.data.keyword.ieam}} APIs](../api/index.md).
 
 ## Does {{site.data.keyword.ieam}} use Kubernetes?
 {: #use_kube}
@@ -92,9 +92,9 @@ Yes. {{site.data.keyword.ieam}} uses [{{site.data.keyword.open_shift_cp}} ](http
 ## How long does it normally take after registering an edge node before agreements are formed, and the corresponding containers start running?
 {: #agree_run}
 
-Typically, it takes only a few seconds after registration for the agent and a remote agbot to finalize an agreement to deploy software. After that occurs, the {{site.data.keyword.horizon}} agent downloads (`docker pull`) your containers to the edge node, verify their cryptographic signatures with {{site.data.keyword.horizon_exchange}}, and run them. Depending on the sizes of your containers, and the time it takes them to start and be functional, it can take from just a few more seconds, to many minutes before the edge node is fully operational.
+Typically, it takes only a few seconds after registration for the agent and a remote {{site.data.keyword.agbot}} to finalize an agreement to deploy software. After that occurs, the {{site.data.keyword.horizon}} agent downloads (`docker pull`) your containers to the edge node, verify their cryptographic signatures with {{site.data.keyword.horizon_exchange}}, and run them. Depending on the sizes of your containers, and the time it takes them to start and be functional, it can take from just a few more seconds, to many minutes before the edge node is fully operational.
 
-After you have registered an edge node, you can run the `hzn node list` command to view the state of {{site.data.keyword.horizon}} on your edge node. When the `hzn node list` command shows that the state is `configured`, the {{site.data.keyword.horizon}} agbots are able to discover the edge node and begin to form agreements.
+After you have registered an edge node, you can run the `hzn node list` command to view the state of {{site.data.keyword.horizon}} on your edge node. When the `hzn node list` command shows that the state is `configured`, the {{site.data.keyword.horizon}} {{site.data.keyword.agbot}}s are able to discover the edge node and begin to form agreements.
 
 To observe the agreement negotiation process phases, you can use the `hzn agreement list` command.
 
@@ -103,14 +103,14 @@ After an agreement list is finalized, you can use the `docker ps` command to vie
 ## Can the {{site.data.keyword.horizon}} software and all other software or data that is related to {{site.data.keyword.ieam}} be removed from an edge node host?
 {: #sw_rem}
 
-Yes. If your edge node is registered, unregister the edge node by running: 
-{% capture code %}hzn unregister -f -r{% endcapture %} 
+Yes. If your edge node is registered, unregister the edge node by running:
+{% capture code %}hzn unregister -f -r{% endcapture %}
 
 {% include code_snippet.md code=code language='shell' %}
 
 When the edge node is unregistered, you can remove the installed {{site.data.keyword.horizon}} software, for example for Debian-based systems run:
 
-{% capture code %}sudo apt purge -y bluehorizon horizon horizon-cli{% endcapture %} 
+{% capture code %}sudo apt purge -y bluehorizon horizon horizon-cli{% endcapture %}
 
 {% include code_snippet.md code=code language='shell' %}
 
@@ -123,19 +123,19 @@ Also, you can use the `hzn` command to obtain information about the active agree
 
 {% capture code %}hzn node list
 hzn agreement list
-docker ps{% endcapture %} 
+docker ps{% endcapture %}
 
 {% include code_snippet.md code=code language='shell' %}
 
 ## What happens if a container image download is interrupted by a network outage?
 {: #image_download}
 
-The docker API is used to download container images. If the docker API terminates the download, it returns an error to the agent. In turn, the agent cancels the current deployment attempt. When the Agbot detects the cancellation, it initiates a new deployment attempt with the agent. During the subsequent deployment attempt, the docker API resumes the download from where it left off. This process continues until the image is fully downloaded and the deployment can proceed. The docker binding API is responsible for the image pull, and in case of failure, the agreement is canceled.
+The docker API is used to download container images. If the docker API terminates the download, it returns an error to the agent. In turn, the agent cancels the current deployment attempt. When the {{site.data.keyword.agbot}} detects the cancellation, it initiates a new deployment attempt with the agent. During the subsequent deployment attempt, the docker API resumes the download from where it left off. This process continues until the image is fully downloaded and the deployment can proceed. The docker binding API is responsible for the image pull, and in case of failure, the agreement is canceled.
 
 ## How is {{site.data.keyword.ieam}} secure?
 {: #ieam_secure}
 
-* {{site.data.keyword.ieam}} automates and uses cryptographically signed public-private key authentication of edge devices as it communicates with the {{site.data.keyword.ieam}} management hub during provisioning. Communication is always initiated and controlled by the edge node. 
+* {{site.data.keyword.ieam}} automates and uses cryptographically signed public-private key authentication of edge devices as it communicates with the {{site.data.keyword.ieam}} management hub during provisioning. Communication is always initiated and controlled by the edge node.
 * System has node and service credentials.
 * Software verification and authenticity using hash verification.
 
