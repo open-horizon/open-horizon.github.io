@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 
 ---
 
@@ -36,7 +36,7 @@ cat /etc/default/horizon
 ## Procedure
 {: #quickstart_ex_procedure}
 
-Note: See [Conventions used in this document](../getting_started/document_conventions.md) for more information about command syntax.
+**Note**: See [Conventions used in this document](../getting_started/document_conventions.md) for more information about command syntax.
 
 1. Create a project directory.
 
