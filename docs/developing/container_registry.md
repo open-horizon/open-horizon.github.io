@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 title: Container Registry
 description: ""
 ---
@@ -34,18 +34,13 @@ These also serve as examples of how you can use any private image registry with 
 
 ### Before you begin
 
-* If you have not already done so, install the [cloudctl command ](https://www.ibm.com/support/knowledgecenter/SSFC4F_1.3.0/cloudctl/install_cli.html){:target="_blank"}{: .externalLink}
-* If you have not already done so, install the [{{site.data.keyword.open_shift}} oc command ](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html){:target="_blank"}{: .externalLink}
-* On {{site.data.keyword.macOS_notm}}, you can install the {{site.data.keyword.open_shift}} **oc** command using [homebrew ](https://docs.brew.sh/Installation){:target="_blank"}{: .externalLink}
+* If you have not already done so, install the [IBM Cloud Pak CLI (**cloudctl**) and OpenShift client CLI (**oc**)](../cli/cloudctl_oc_cli.md) commands.
 
-    ```bash
-    brew install openshift-cli
-    ```
-    {: codeblock}
+**Note**: Because the local registry usually has a smaller disk, it might fill quickly. In some cases, this can adversely affect the management hub to the point that it could become non-functional. Due to this, consider using {{site.data.keyword.open_shift}} local image registries only if preventative monitoring is implemented in your environment; otherwise, use external image registries.
 
 ### Procedure
 
-Note: See [Conventions used in this document](../getting_started/document_conventions.md) for more information about command syntax.
+**Note**: For more information about command syntax, see [Conventions used in this document](../getting_started/document_conventions.md).
 
 1. Ensure that you are connected to your {{site.data.keyword.open_shift}} cluster with cluster administrator privileges.
 
@@ -57,21 +52,21 @@ Note: See [Conventions used in this document](../getting_started/document_conven
 2. Determine if a default route for the {{site.data.keyword.open_shift}} image registry has been create such that it is accessible from outside of the cluster:
 
    ```bash
-   oc get route default-route -n openshift-image-registry --template=''
+   oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}'
    ```
    {: codeblock}
 
-   If the command response indicates the **default-route** is not found, then create it (see [Exposing the registry ](https://docs.openshift.com/container-platform/4.4/registry/securing-exposing-registry.html){:target="_blank"}{: .externalLink} for details):
+   If the command response indicates the **default-route** is not found, then create it (see [Exposing the registry ](https://docs.openshift.com/container-platform/4.6/registry/securing-exposing-registry.html){:target="_blank"}{: .externalLink} for details):
 
    ```bash
    oc patch configs.imageregistry.operator.openshift.io/cluster --patch '{"spec":{"defaultRoute":true}}' --type=merge
    ```
    {: codeblock}
 
-3. Retrieve the repository route name you need to use:
+3. Retrieve the repository route name that you need to use:
 
    ```bash
-   export OCP_DOCKER_HOST=`oc get route default-route -n openshift-image-registry --template=''`
+   export OCP_DOCKER_HOST=`oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}'`
    ```
    {: codeblock}
 
@@ -131,17 +126,17 @@ Note: See [Conventions used in this document](../getting_started/document_conven
 
    On {{site.data.keyword.macOS_notm}}, restart docker by clicking on the whale icon on the right-hand side of the desktop menu bar and selecting **Restart**.
 
-9. Login to the {{site.data.keyword.ocp}} Docker host:
+9. Log in to the {{site.data.keyword.ocp}} Docker host:
 
    ```bash
    echo "$OCP_TOKEN" | docker login -u $OCP_USER --password-stdin $OCP_DOCKER_HOST
    ```
    {: codeblock}
 
-10. Configure additional trust stores for image registry access:   
+10. Configure additional trust stores for image registry access using ca.crt file from step 8:   
 
     ```bash
-    oc create configmap registry-config --from-file=<external-registry-address>=ca.crt -n openshift-config
+    oc create configmap registry-config --from-file=<file_path_to_ca.crt> -n openshift-config
     ```
     {: codeblock}
 
@@ -176,7 +171,7 @@ Note: See [Conventions used in this document](../getting_started/document_conven
    ```
    {: codeblock}
 
-   The **&lt;base-image-name&gt;** should be your base image name without the arch or version. You can then edit the variables in the created file **horizon/hzn.json** as necessary.
+   The **&lt;BASE_IMAGE_NAME&gt;** should be your base image name without the arch or version. You can then edit the variables in the created file **horizon/hzn.json** as necessary.
 
    Or, if you have created your own service definition file, ensure the **deployment.services.&lt;service-name&gt;.image** field references your image registry path.
 
@@ -233,7 +228,7 @@ Now {{site.data.keyword.horizon}} has everything that it needs to get this edge 
 
 ### Procedure
 
-1. Log in to the {{site.data.keyword.cloud_notm}} and target your organization:
+1. Log in to the {{site.data.keyword.cloud_notm}} from a system that has an operating system supported by the [{{site.data.keyword.cloud_notm}} CLI tool (ibmcloud)] and target your organization:
 
    ```bash
    ibmcloud login -a cloud.ibm.com -u <cloud-username> -p <cloud-password
@@ -257,7 +252,7 @@ Now {{site.data.keyword.horizon}} has everything that it needs to get this edge 
    ```
    {: codeblock}
 
-   Note: This API key is different from the {{site.data.keyword.open_shift}} API key you created to use with the `hzn` command.
+   **Note**: This API key is different from the {{site.data.keyword.open_shift}} API key you created to use with the `hzn` command.
 
 3. Get the container-registry plugin and create your private registry namespace. (This registry namespace will be part of the path used to identify your docker image.)
 
@@ -268,47 +263,45 @@ Now {{site.data.keyword.horizon}} has everything that it needs to get this edge 
    ```
    {: codeblock}
 
-4. Log in to your Docker registry namespace:
+   **Note**: Alternatively, you can use the [{{site.data.keyword.cloud_notm}} console ](https://cloud.ibm.com/){:target="_blank"}{: .externalLink} to create the registry namespace.
+
+4. On the system where you are developing the service, set the following environment variables:
 
    ```bash
-   ibmcloud cr login
+   export ENTITLED_REGISTRY=<location>.icr.io
+   export ENTITLED_REGISTRY_USER=iamapikey
+   export ENTITLED_REGISTRY_KEY=<api-key-created-from-above>
+   export REGISTRY_NAMESPACE=<your-registry-namespace>
    ```
    {: codeblock}
 
-   For more information about using **ibmcloud cr**, see [ibmcloud cr CLI web documentation ](https://cloud.ibm.com/docs/Registry){:target="_blank"}{: .externalLink}. Additionally, you can run this command to view help information:
+5. Use the following docker login command to log in to your registry:
 
    ```bash
-   ibmcloud cr --help
+   docker login "$ENTITLED_REGISTRY" -u "$ENTITLED_REGISTRY_USER" -p "$ENTITLED_REGISTRY_KEY"
    ```
    {: codeblock}
 
-   After you log in to your private namespace in the {{site.data.keyword.cloud_registry}}, you do not need to use `docker login` to log in to the registry. You can use container registry paths similar to the following within your **docker push** and **docker pull** commands:
-
-   ```bash
-   us.icr.io/$REGISTRY_NAMESPACE/<base-image-name>_<arch>:<version>
-   ```
-   {: codeblock}
-
-5. Build your image with this path format, for example:
+6. Build your image with this path format, for example:
 
    ```bash
    export BASE_IMAGE_NAME=myservice
-   docker build -t us.icr.io/$REGISTRY_NAMESPACE/${BASE_IMAGE_NAME}_amd64:1.2.3 -f ./Dockerfile.amd64 .
+   docker build -t us.icr.io/${REGISTRY_NAMESPACE}/${BASE_IMAGE_NAME}_amd64:1.2.3 -f ./Dockerfile.amd64 .
    ```
    {: codeblock}
 
-6. In preparation for publishing your edge service, modify your **service.definition.json** file such that its **deployment** section references your image registry path. You can create service and pattern definition files like this using:
+7. In preparation for publishing your edge service, modify your **service.definition.json** file such that its **deployment** section references your image registry path. You can create service and pattern definition files like this using:
 
    ```bash
-   hzn dev service new -s $BASE_IMAGE_NAME -i us.icr.io/$REGISTRY_NAMESPACE/$BASE_IMAGE_NAME
+   hzn dev service new -s ${BASE_IMAGE_NAME} -i us.icr.io/${REGISTRY_NAMESPACE}/${BASE_IMAGE_NAME}
    ```
    {: codeblock}
 
-   The **&lt;base-image-name&gt;** should be your base image name without the arch or version. You can then edit the variables in the created file **horizon/hzn.json** as necessary.
+   The **&lt;BASE_IMAGE_NAME&gt;** should be your base image name without the arch or version. You can then edit the variables in the created file **horizon/hzn.json** as necessary.
 
    Or, if you have created your own service definition file, ensure the **deployment.services.&lt;service-name&gt;.image** field references your image registry path.
 
-7. When your service image is ready to be published, push the image to your private container registry and publish the image to {{site.data.keyword.horizon}} exchange:
+8. When your service image is ready to be published, push the image to your private container registry and publish the image to {{site.data.keyword.horizon}} exchange:
 
    ```bash
    hzn exchange service publish -r "us.icr.io:iamapikey:$CLOUD_API_KEY" -f horizon/service.definition.json
@@ -325,14 +318,16 @@ Now {{site.data.keyword.horizon}} has everything that it needs to get this edge 
    * Puts your public key into {{site.data.keyword.horizon}} exchange under the service definition so {{site.data.keyword.horizon}} edge nodes can automatically retrieve the definition to verify your signatures when needed.
    * Puts your {{site.data.keyword.cloud_notm}} API key into {{site.data.keyword.horizon}} exchange under the service definition so {{site.data.keyword.horizon}} edge nodes can automatically retrieve the definition when needed.
 
-8. Verify that your service image was pushed to the {{site.data.keyword.cloud_notm}} Container Registry:
+9. From the system where the [{{site.data.keyword.cloud_notm}} CLI tool (ibmcloud)] is installed, verify that your service image was pushed to the {{site.data.keyword.cloud_notm}} Container Registry:
 
    ```bash
    ibmcloud cr images
    ```
    {: codeblock}
 
-9. Publish a deployment pattern or policy that will deploy your service to some edge nodes. For example,:
+   **Note**: Alternatively, you can use the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/) to view the images in the {{site.data.keyword.cloud_notm}} Container Registry.
+
+10. Publish a deployment pattern or policy that will deploy your service to some edge nodes. For example,:
 
    ```bash
    hzn exchange pattern publish -f horizon/pattern.json
