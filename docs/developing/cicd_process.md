@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 title: CI-CD process
 description: ""
 ---
@@ -93,5 +93,5 @@ The list of services that passed the functional test is used to identify which s
 
 Because the services have been built and tested, this target publishes the service, service policy, pattern, and deployment policy in all architectures to the exchange. 
 
-Note: Also, you can perform many of these tasks from the management console. See [Using the management console](../console/accessing_ui.md).
+**Note**: Also, you can perform many of these tasks from the management console. See [Using the management console](../console/accessing_ui.md).
 
