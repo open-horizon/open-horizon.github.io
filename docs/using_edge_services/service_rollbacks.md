@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 
 ---
 
@@ -24,7 +24,7 @@ The following content provides additional details on how to roll out a new versi
 ## Creating a new edge service definition
 {: #creating_edge_service_definition}
 
-As explained in the [Developing edge services with {{site.data.keyword.edge_notm}}](../developing/developing.md) and [Development details](../developing/developing_details.md) sections, the main steps to release a new version of an edge service are:
+As explained in the [Developing an edge service for devices](../developing/developing.md) and [Development details](../developing/developing_details.md) sections, the main steps to release a new version of an edge service are:
 
 - Edit the edge service code as needed for the new version.
 - Edit the semantic version number of the code in the service version variable in the **hzn.json** configuration file.
