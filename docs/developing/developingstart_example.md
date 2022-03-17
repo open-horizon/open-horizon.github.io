@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 title: Creating your own hello world edge service
 description: ""
 ---
@@ -28,6 +28,7 @@ which git jq make
 ls ~/.hzn/keys/service.private.key ~/.hzn/keys/service.public.pem
 cat /etc/default/horizon
 ```
+{: codeblock}
 
 ## Procedure
 {: #dev_start_ex_procedure}
