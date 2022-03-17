@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2020
-lastupdated: "2020-10-28"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 title: Backup
 description: Data Backup and recovery
 ---
@@ -19,6 +19,10 @@ description: Data Backup and recovery
 {: #data_backup}
 
 ## {{site.data.keyword.open_shift_cp}} backup and recovery
+
+For more information about cluster-wide data backup and recovery, see:
+
+* [{{site.data.keyword.open_shift_cp}} 4.6 backup etcd](https://docs.openshift.com/container-platform/4.6/backup_and_restore/backing-up-etcd.html).
 
 If you have not downloaded the {{site.data.keyword.semver}} bundle, use the following commands with your [Entitled Registry Key](https://myibm.ibm.com/products-services/containerlibrary):
 
