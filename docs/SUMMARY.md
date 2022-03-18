@@ -1,6 +1,6 @@
 # Summary
 
- * [{{site.data.keyword.edge}} 4.3](kc_welcome_containers.html)
+ * [{{site.data.keyword.edge}} {{site.data.keywork.version}}](kc_welcome_containers.html)
  * [Release notes](getting_started/release_notes.md)
    * [What's new](getting_started/whats_new.md)
    * [Known issues and limitations](getting_started/known_issues.md)
@@ -84,7 +84,7 @@
       * [GDPR considerations](user_management/gdpr.md)
  * [Using the management console](console/accessing_ui.md)
       * [Supported browsers](console/browsers.md)
-      * [Exploring the console](console/exploring_console.md)  
+      * [Exploring the console](console/exploring_console.md)
  * [Using the CLI](cli/using_cli.md)
       * [Installing the hzn CLI](cli/hzn_cli.md)
       * [Exploring the hzn CLI](cli/exploring_hzn.md)
