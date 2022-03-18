@@ -20,7 +20,7 @@ lastupdated: "2022-03-17"
 Perform the following tasks to install an edge cluster and get it ready for the {{site.data.keyword.edge_notm}} agent:
 
 Install one of these edge clusters and prepare it for the {{site.data.keyword.edge_notm}} agent:
-- [Preparing an edge cluster](#preparing_an_edge-_luster)
+- [Preparing an edge cluster](#preparing_edge_cluster)
   - [Install an OCP edge cluster](#install_ocp_edge_cluster)
   - [Install and configure a k3s edge cluster](#install_k3s_edge_cluster)
   - [Install and configure a microk8s edge cluster](#install_microk8s_edge_cluster) (for development and test, not recommended for production)
@@ -193,7 +193,7 @@ This content provides a summary of how to install k3s (rancher), a lightweight a
       ```bash
       curl -fsSL get.docker.com | sh
       ```
-      {: codeblock}     
+      {: codeblock}
 
    3. Restart docker to pick up the change:
 
@@ -234,16 +234,16 @@ This content provides a summary of how to install microk8s, a lightweight and sm
    {: codeblock}
 
    **Note**: Microk8s uses `8.8.8.8` and `8.8.4.4` as upstream name servers by default. If these name servers cannot resolve the management hub hostname, you must change the name servers that microk8s is using:
-   
+
    1. Retrieve the list of upstream name servers in `/etc/resolv.conf` or `/run/systemd/resolve/resolv.conf`.
 
    2. Edit `coredns` configmap in the `kube-system` namespace. Set the upstream nameservers in the `forward` section.
-   
+
       ```bash
       microk8s.kubectl edit -n kube-system cm/coredns
       ```
       {: codeblock}
-   
+
    3. For more information about Kubernetes DNS, see the [Kubernetes documentation](https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/).
 
 
@@ -295,7 +295,7 @@ This content provides a summary of how to install microk8s, a lightweight and sm
       ```bash
       curl -fsSL get.docker.com | sh
       ```
-      {: codeblock}   
+      {: codeblock}
 
    5. Restart docker to pick up the change:
 
