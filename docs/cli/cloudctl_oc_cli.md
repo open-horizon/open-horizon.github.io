@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 title: "Installing cloudctl, kubectl, and oc"
 description: ""
 ---
@@ -16,52 +16,65 @@ description: ""
 {:childlinks: .ullinks}
 
 # Installing cloudctl, kubectl, and oc
+{: #cloudctl_oc_cli}
 
-Follow these steps to install the command line tools that are needed to manage aspects of the IBM Edge Application Manager (IEAM) management hub and edge clusters:
+Follow these steps to install the command line tools that are needed to manage aspects of the {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) management hub and edge clusters:
 
-### cloudctl
+## cloudctl
 
-1. Browse your IEAM web UI at: https://<CLUSTER_URL>/common-nav/cli
-2. Expand the __IBM Cloud Pak CLI__ section and select your __OS__.
-3. Copy the displayed __curl__ command and run it to download the __cloudctl__ binary.
-4. Make the file executable and move it to __/usr/local/bin__:
+1. Browse your {{site.data.keyword.ieam}} web UI at: `https://&lt;CLUSTER_URL&gt;/common-nav/cli`
 
-    ```sh
-    chmod 755 cloudctl-*
-    sudo mv cloudctl-* /usr/local/bin/cloudctl
-    ```
-5. Ensure __/usr/local/bin__ is in your PATH and then verify that cloudctl is working:
+2. Expand the **IBM Cloud Pak CLI** section and select your **OS**.
 
-    ```sh
-    cloudctl --help
-    ```
+3. Copy the displayed **curl** command and run it to download the **cloudctl** binary.
 
+4. Make the file executable and move it to **/usr/local/bin**:
+  
+   ```bash
+   chmod 755 cloudctl-*
+   sudo mv cloudctl-* /usr/local/bin/cloudctl
+   ```
+   {: codeblock}
 
-### OC
+5. Ensure **/usr/local/bin** is in your PATH and then verify that **cloudctl** is working:
+  
+   ```bash
+   cloudctl --help
+   ```
+   {: codeblock}
 
-1. Download the OpenShift Container Platform CLI tar file from OpenShift client CLI (oc). Select the file __openshift-client-*-*.tar.gz__ for your operating system.
+## oc
+
+1. Download the {{site.data.keyword.open_shift_cp}} CLI tar file from [OpenShift client CLI (oc)](https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/). Select the file **openshift-client-\*-\*.tar.gz** for your operating system.
+
 2. Find the downloaded tar file and unpack it:
-   
-   ```sh
+  
+   ```bash
    tar -zxvf openshift-client-*-*.tar.gz
    ```
-3. Move the oc command to __/usr/local/bin__:
-   
-   ```sh
+   {: codeblock}
+
+3. Move the **oc** command to **/usr/local/bin**:
+  
+   ```bash
    sudo mv oc /usr/local/bin/
    ```
-4. Ensure /usr/local/bin is in your PATH and verify that oc is working:
+   {: codeblock}
 
-    ```sh
-    oc --help
-    ```
+4. Ensure **/usr/local/bin** is in your PATH and verify that **oc** is working:
+  
+   ```bash
+   oc --help
+   ```
+   {: codeblock}
 
-Alternatively, use [homebrew](https://www.ibm.com/links?url=https%3A%2F%2Fbrew.sh%2F) to install __oc__ on macOS:
+Alternatively, use [homebrew](https://brew.sh/) to install **oc** on {{site.data.keyword.macOS_notm}}:
+  
+   ```bash
+   brew install openshift-cli
+   ```
+   {: codeblock}
 
-```sh
-brew install openshift-cli
-```
+## Kubectl
 
-### Kubectl
-
-Follow the instructions in [Install and Set Up kubectl](https://www.ibm.com/links?url=https%3A%2F%2Fkubernetes.io%2Fdocs%2Ftasks%2Ftools%2Finstall-kubectl%2F).
+Follow the instructions in [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).

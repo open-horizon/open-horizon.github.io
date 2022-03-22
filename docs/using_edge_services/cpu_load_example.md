@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 
 ---
 
@@ -78,7 +78,7 @@ environment variables.
 ### Testing {{site.data.keyword.message_hub_notm}} in {{site.data.keyword.cloud_notm}}
 {: #testing}
 
-1. Install `kafkacat` (https://linuxhostsupport.com/blog/how-to-install-apache-kafka-on-ubuntu-16-04/).
+1. Install `kafkacat` (https://github.com/edenhill/kcat#install).
 
 2. On a terminal, enter the following to subscribe to the `cpu2evtstreams` topic:
 

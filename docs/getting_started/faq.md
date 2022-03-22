@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021 - 2022
-lastupdated: "2022-03-10"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 
 ---
 
@@ -37,7 +37,7 @@ The following are answers to some frequently asked questions (FAQs) about {{site
   * [How do I manage AI at the Edge with models vs AI on the Cloud?](#ai_cloud)
 
 ## Is there a way to create a self-contained environment for development purposes?
-{: one_click}
+{: #one_click}
 
 You can install the open source management hub (without the {{site.data.keyword.ieam}} management console) with the "all-in-one" installer for developers. The all-in-one installer creates a complete but minimal management hub, not suitable for production use. It also configures an example edge node. This tool enables open source component developers to get started quickly without the time it takes to configure a complete production {{site.data.keyword.ieam}} management hub. For information about the all-in-one installer, see [Open Horizon - Devops ](https://github.com/open-horizon/devops/tree/master/mgmt-hub){:target="_blank"}{: .externalLink}.
 
@@ -77,12 +77,12 @@ If your software requires access to specific hardware or operating system servic
 ## Is there detailed documentation for the REST APIs provided by the components in {{site.data.keyword.ieam}}?
 {: #rest_doc}
 
-Yes. For more information, see [{{site.data.keyword.ieam}} APIs](../api/).
+Yes. For more information, see [{{site.data.keyword.ieam}} APIs](../api/index.md).
 
 ## Does {{site.data.keyword.ieam}} use Kubernetes?
 {: #use_kube}
 
-Yes. {{site.data.keyword.ieam}} uses [{{site.data.keyword.open_shift_cp}} ](https://docs.openshift.com/container-platform/4.4/welcome/index.html){:target="_blank"}{: .externalLink} Kubernetes services.
+Yes. {{site.data.keyword.ieam}} uses [{{site.data.keyword.open_shift_cp}} ](https://docs.openshift.com/container-platform/4.6/welcome/index.html){:target="_blank"}{: .externalLink} Kubernetes services.
 
 ## Does {{site.data.keyword.ieam}} use MQTT?
 {: #use_mqtt}

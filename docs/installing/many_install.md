@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2021-02-20"
 
 Use the bulk installation process to set up multiple edge devices of similar types (in other words, same architecture, operating system, and pattern or policy).
 
-Note: For this process, target edge devices that are macOs computers are not supported. However, you can drive this process from a macOs computer, if wanted. (In other words, this host can be a macOs computer.)
+**Note**: For this process, target edge devices that are macOs computers are not supported. However, you can drive this process from a macOs computer, if wanted. (In other words, this host can be a macOs computer.)
 
 ### Prerequisites
 
@@ -94,7 +94,7 @@ Note: For this process, target edge devices that are macOs computers are not sup
    ```
    {: codeblock}
 
-   Note: If you use a non-root user for any of the hosts, sudo must be configured to allow sudo from that user without entering a password.
+   **Note**: If you use a non-root user for any of the hosts, sudo must be configured to allow sudo from that user without entering a password.
 
 8. Copy the agent tar file to the edge devices. This step can take a few moments:
 
@@ -103,7 +103,7 @@ Note: For this process, target edge devices that are macOs computers are not sup
    ```
    {: codeblock}
 
-   Note: If you get **[FAILURE]** in the **pscp** output for any of the edge devices, you can see the errors in **/tmp/pscp-errors**.
+   **Note**: If you get **[FAILURE]** in the **pscp** output for any of the edge devices, you can see the errors in **/tmp/pscp-errors**.
 
 9. Run **agent-install.sh** on each edge device to install the Horizon agent and register the edge devices. You can use a pattern or a policy to register the edge devices:
 

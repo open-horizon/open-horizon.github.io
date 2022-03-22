@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 
 ---
 
@@ -20,23 +20,25 @@ lastupdated: "2021-02-20"
 Perform the following tasks to install an edge cluster and get it ready for the {{site.data.keyword.edge_notm}} agent:
 
 Install one of these edge clusters and prepare it for the {{site.data.keyword.edge_notm}} agent:
-- [Preparing an edge cluster](#preparing-an-edge-cluster)
-  - [Install an OCP edge cluster](#install-an-ocp-edge-cluster)
-  - [Install and configure a k3s edge cluster](#install-and-configure-a-k3s-edge-cluster)
-  - [Install and configure a microk8s edge cluster](#install-and-configure-a-microk8s-edge-cluster)
+- [Preparing an edge cluster](#preparing_edge_cluster)
+  - [Install an OCP edge cluster](#install_ocp_edge_cluster)
+  - [Install and configure a k3s edge cluster](#install_k3s_edge_cluster)
+  - [Install and configure a microk8s edge cluster](#install_microk8s_edge_cluster) (for development and test, not recommended for production)
   - [What's next](#whats-next)
 
 ## Install an OCP edge cluster
 {: #install_ocp_edge_cluster}
 
-1. Install OCP by following the installation instructions in the [{{site.data.keyword.open_shift_cp}} Documentation ](https://docs.openshift.com/container-platform/4.5/welcome/index.html){:target="_blank"}{: .externalLink}. ({{site.data.keyword.ieam}} only supports OCP on x86_64 platforms.)
+1. Install OCP by following the installation instructions in the [{{site.data.keyword.open_shift_cp}} Documentation ](https://docs.openshift.com/container-platform/4.6/welcome/index.html){:target="_blank"}{: .externalLink}. ({{site.data.keyword.ieam}} only supports OCP on x86_64 platforms.)
 
-2. Install the Kubernetes CLI (**kubectl**), Openshift client CLI (**oc**) and Docker on the admin host where you administer your OCP edge cluster. This is the same host where you run the agent installation script.
+2. Install the Kubernetes CLI (**kubectl**), Openshift client CLI (**oc**) and Docker on the admin host where you administer your OCP edge cluster. This is the same host where you run the agent installation script. For more information, see [Installing cloudctl, kubectl, and oc](../cli/cloudctl_oc_cli.md).
 
 ## Install and configure a k3s edge cluster
 {: #install_k3s_edge_cluster}
 
 This content provides a summary of how to install k3s (rancher), a lightweight and small Kubernetes cluster, on Ubuntu 18.04. For more information, see the [k3s documentation ](https://rancher.com/docs/k3s/latest/en/){:target="_blank"}{: .externalLink}.
+
+**Note**: If installed, uninstall kubectl before completing the following steps.
 
 1. Either login as **root** or elevate to **root** with `sudo -i`
 
@@ -191,7 +193,7 @@ This content provides a summary of how to install k3s (rancher), a lightweight a
       ```bash
       curl -fsSL get.docker.com | sh
       ```
-      {: codeblock}     
+      {: codeblock}
 
    3. Restart docker to pick up the change:
 
@@ -203,7 +205,7 @@ This content provides a summary of how to install k3s (rancher), a lightweight a
 ## Install and configure a microk8s edge cluster
 {: #install_microk8s_edge_cluster}
 
-This content provides a summary of how to install microk8s, a lightweight and small kubernetes cluster, on Ubuntu 18.04. (For more detailed instructions, see the [microk8s documentation ](https://microk8s.io/docs){:target="_blank"}{: .externalLink}.)
+This content provides a summary of how to install microk8s, a lightweight and small Kubernetes cluster, on Ubuntu 18.04. (For more detailed instructions, see the [microk8s documentation](https://microk8s.io/docs).)
 
 **Note**: This type of edge cluster is meant for development and test because a single worker node Kubernetes cluster does not provide scalability or high availability.
 
@@ -230,6 +232,20 @@ This content provides a summary of how to install microk8s, a lightweight and sm
    microk8s.enable storage
    ```
    {: codeblock}
+
+   **Note**: Microk8s uses `8.8.8.8` and `8.8.4.4` as upstream name servers by default. If these name servers cannot resolve the management hub hostname, you must change the name servers that microk8s is using:
+
+   1. Retrieve the list of upstream name servers in `/etc/resolv.conf` or `/run/systemd/resolve/resolv.conf`.
+
+   2. Edit `coredns` configmap in the `kube-system` namespace. Set the upstream nameservers in the `forward` section.
+
+      ```bash
+      microk8s.kubectl edit -n kube-system cm/coredns
+      ```
+      {: codeblock}
+
+   3. For more information about Kubernetes DNS, see the [Kubernetes documentation](https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/).
+
 
 4. Check the status:
 
@@ -279,7 +295,7 @@ This content provides a summary of how to install microk8s, a lightweight and sm
       ```bash
       curl -fsSL get.docker.com | sh
       ```
-      {: codeblock}   
+      {: codeblock}
 
    5. Restart docker to pick up the change:
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 
 ---
 
@@ -36,7 +36,7 @@ Edge services often use cloud ingest services to store and further process edge 
 ## Procedure
 {: #service_containers_procedure}
 
-Note: See [Conventions used in this document](../getting_started/document_conventions.md) for more information about command syntax.
+**Note**: See [Conventions used in this document](../getting_started/document_conventions.md) for more information about command syntax.
 
 1. When you performed the steps in [Install the {{site.data.keyword.horizon}} agent on your edge device and register it with the hello world example](../installing/registration.md) you set your Exchange credentials. Confirm that your credentials are still set correctly by verifying that this command does not display an error:
 
@@ -77,7 +77,7 @@ Note: See [Conventions used in this document](../getting_started/document_conven
 
 4. Create a cryptographic signing key pair. This enables you to sign services when publishing them to the exchange. 
 
-   Note: You only need to perform this step one time.
+   **Note**: You only need to perform this step one time.
 
   ```
   hzn key create "<companyname>" "<youremailaddress>"
@@ -88,7 +88,7 @@ Note: See [Conventions used in this document](../getting_started/document_conven
 
 5. Install a few development tools:
 
-  On **{{site.data.keyword.linux_notm}}**:
+  On **{{site.data.keyword.linux_notm}}** (for Ubuntu/Debian distributions):
 
   ```
   sudo apt install -y git jq make
@@ -102,9 +102,10 @@ Note: See [Conventions used in this document](../getting_started/document_conven
   ```
   {: codeblock}
   
-  Note: See [homebrew ](https://brew.sh/){:target="_blank"}{: .externalLink} for details about installing brew if needed.
+  **Note**: See [homebrew ](https://brew.sh/){:target="_blank"}{: .externalLink} for details about installing brew if needed.
 
 ## What to do next
 {: #service_containers_what_next}
 
 Use your credentials and signing key to complete the [development examples](developing.md#edge_devices_ex_examples). These examples show you how to build simple edge services and learn the basics for developing for {{site.data.keyword.edge_notm}}.
+* If you already have a docker image that you want {{site.data.keyword.edge_notm}} to deploy to edge nodes, see [Transform image to edge service](transform_image.md).

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+yyears: 2020 - 2022
+lastupdated: "2022-03-17"
 title: CPU to Apache Kafka service
 description: This example collects CPU load percentage information to send to Apache Kafka. Use this example to help you develop your own edge applications that send data to cloud services.
 
@@ -16,6 +16,12 @@ description: This example collects CPU load percentage information to send to Ap
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
 
+# CPU to {{site.data.keyword.message_hub_notm}} service
+{: #cpu_msg_ex}
+
+This example collects CPU load percentage information to send to {{site.data.keyword.message_hub_notm}}. Use this example to help you develop your own edge applications that send data to cloud services.
+{:shortdesc}
+
 ## Before you begin
 {: #cpu_msg_begin}
 
@@ -27,11 +33,12 @@ which git jq make
 ls ~/.hzn/keys/service.private.key ~/.hzn/keys/service.public.pem
 cat /etc/default/horizon
 ```
+{: codeblock}
 
 ## Procedure
 {: #cpu_msg_procedure}
 
-This example is part of the [{{site.data.keyword.horizon_open}} ](https://github.com/open-horizon/){:target="_blank"}{: .externalLink} open-source project. Follow the steps in [Building and Publishing Your Own Version of the CPU To IBM Event Streams Edge Service ](https://github.com/open-horizon/examples/blob/master/edge/evtstreams/cpu2evtstreams/CreateService.md#-building-and-publishing-your-own-version-of-the-cpu-to-ibm-event-streams-edge-service){:target="_blank"}{: .externalLink} and then return here.
+This example is part of the [{{site.data.keyword.horizon_open}} ](https://github.com/open-horizon/){:target="_blank"}{: .externalLink} open source project. Follow the steps in [Building and Publishing Your Own Version of the CPU To IBM Event Streams Edge Service ](https://github.com/open-horizon/examples/blob/master/edge/evtstreams/cpu2evtstreams/CreateService.md#-building-and-publishing-your-own-version-of-the-cpu-to-ibm-event-streams-edge-service){:target="_blank"}{: .externalLink} and then return here.
 
 ## What you learned in this example
 
@@ -55,6 +62,7 @@ The cpu2evtstreams edge service is an example of a service that depends on two o
         }
     ],
 ```
+{: codeblock}
 
 ### Configuration variables
 {: #cpu_msg_config_var}
@@ -119,6 +127,7 @@ The **cpu2evtstreams** service requires some configuration before it can run. Ed
         }
     ],
 ```
+{: codeblock}
 
 User input configuration variables like these are required to have values when the edge service is started on the edge node. The values can come from any of these sources (in this precedence order):
 

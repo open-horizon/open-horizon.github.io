@@ -27,7 +27,7 @@ This content describes each manual step to install the {{site.data.keyword.edge_
 
 1. Obtain the `agentInstallFiles-<edge-device-type>.tar.gz` file before you continue and the API Key that is created along with this file before continuing this process.
 
-    As a post-configuration step for [Installing the management hub](../hub/online_installation.md), a compressed file was crated for you. This file that contains the necessary files to install the {{site.data.keyword.horizon}} agent on your edge device and register it with the helloworld example.
+    As a post-configuration step for [Installing the management hub](../hub/online_installation.md), a compressed file was created for you. This file that contains the necessary files to install the {{site.data.keyword.horizon}} agent on your edge device and register it with the helloworld example.
 
 2. Copy this file to the edge device with a USB stick, the secure copy command, or another method.
 
@@ -40,7 +40,9 @@ This content describes each manual step to install the {{site.data.keyword.edge_
 
 4. Use whichever following section that applies to your type of edge device.
 
-### Installing the agent on Linux (ARM 32-bit, ARM 64-bit, or x86_64) edge devices or virtual machines
+**Note**: If your Linux is not one of the supported distributions and it supports containers, see [Container Agent Installation](https://github.com/open-horizon/anax/blob/master/docs/agent_container_manual_deploy.md) for instructions about how to use the containerized agent.
+
+### Installing the agent on Linux (ARM 32-bit, ARM 64-bit, ppc64le, or x86_64) edge devices or virtual machines
 {: #agent_install_linux}
 
 Follow these steps:
@@ -67,12 +69,19 @@ Follow these steps:
    ```
    {: codeblock}
 
-3. Install the Horizon Debian packages that you copied to this edge device:
+3. Install the Horizon packages that you copied to this edge device:
 
-   ```bash
-   apt update && apt install ./*horizon*.deb
-   ```
-   {: codeblock}
+   * For Debian/Ubuntu distributions:
+      ```bash
+      apt update && apt install ./*horizon*.deb
+      ```
+      {: codeblock}
+
+   * For Red Hat Enterprise Linux&reg; distributions:
+      ```bash
+      yum install ./*horizon*.rpm
+      ```
+      {: codeblock}
    
 4. Set your specific information as environment variables:
 
@@ -168,7 +177,7 @@ Follow these steps:
    ```
    {: codeblock}
 
-      Note: You need to complete this step only one time on each {{site.data.keyword.macOS_notm}} machine. With this trusted certificate imported, you can install any future version of the {{site.data.keyword.horizon}} software.
+      **Note**: You need to complete this step only one time on each {{site.data.keyword.macOS_notm}} machine. With this trusted certificate imported, you can install any future version of the {{site.data.keyword.horizon}} software.
 
 2. Install the {{site.data.keyword.horizon}} CLI package:
 

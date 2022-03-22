@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 
 ---
 
@@ -38,14 +38,16 @@ SDO consists of these components:
 ## Before you begin
 {: #before_begin}
 
-SDO requires that the agent files are stored in the {{site.keyword.ieam}} Cloud Sync Service (CSS). If this has not been done, ask your administrator to run `edgeNodeFiles.sh ALL -c -p edge-packages-4.2.0` (described in [Gather edge node files](../hub/gather_files.md)).
+SDO requires that the agent files are stored in the {{site.data.keyword.ieam}} Cloud Sync Service (CSS). If this has not been done, ask your administrator to run one of the following commands as described in [Gather edge node files](../hub/gather_files.md):
+
+  `edgeNodeFiles.sh ALL -c ...`
 
 ## Trying SDO
 {: #trying-sdo}
 
-Even before you purchase SDO-enabled edge devices, you can try out the SDO support in {{site.data.keyword.ieam}} with a VM that simulates an SDO-enabled device:
+Before you purchase SDO-enabled edge devices, you can test SDO support in {{site.data.keyword.ieam}} with a VM that simulates an SDO-enabled device:
 
-1. You need an API key. See [Prepare for setting up edge nodes](../hub/prepare_for_edge_nodes.md) for instructions to create an API key, if you do not already have one.
+1. You need an API key. See [Creating your API key](../hub/prepare_for_edge_nodes.md) for instructions to create an API key, if you do not already have one.
 
 2. Contact your {{site.data.keyword.ieam}} administrator to get the values of these environment variables. (You need them in the next step.)
 
@@ -57,7 +59,7 @@ Even before you purchase SDO-enabled edge devices, you can try out the SDO suppo
    export CURL_CA_BUNDLE=$HZN_MGMT_HUB_CERT_PATH
    ```
 
-3. Follow the steps in the [open-horizon/SDO-support repository ](https://github.com/open-horizon/SDO-support/blob/master/README.md){:target="_blank"}{: .externalLink} to try out SDO and see it automatically install the {{site.data.keyword.ieam}} agent on a device and register it with your {{site.data.keyword.ieam}} management hub.
+3. Follow the steps in the [open-horizon/SDO-support repository ](https://github.com/open-horizon/SDO-support/blob/master/README-1.10.md){:target="_blank"}{: .externalLink} to observe SDO automatically install the {{site.data.keyword.ieam}} agent on a device and registers it with your {{site.data.keyword.ieam}} management hub.
 
 ## Adding SDO-enabled devices to your {{site.data.keyword.ieam}} domain
 {: #using-sdo}
@@ -80,10 +82,14 @@ If you have purchased SDO-enabled devices and want to incorporate them into your
 
    3. Perform the steps in just this one section: [Generate Owner Key Pairs ](https://github.com/open-horizon/SDO-support/blob/master/README.md#gen-keypair){:target="_blank"}{: .externalLink}.
 
-2. [Log in to the {{site.data.keyword.ieam}} management console](../console/accessing_ui.md) and click **Add node**.
+2. [Log in to the {{site.data.keyword.ieam}} management console](../console/accessing_ui.md).
 
-3. Fill in the necessary information to import the ownership vouchers you received when you purchased the devices.
+3. On the **Nodes** tab, click **Add node**. 
 
-4. Connect the devices to the network and power them on.
+   Enter the information necessary to create a private ownership key in the SDO service and download the corresponding public key.
 
-5. Back in the management console, watch the progress of the devices as they come online by viewing the **Node** overview page and filtering on the installation name you provided in step 1.
+4. Fill in the necessary information to import the ownership vouchers you received when you purchased the devices.
+
+5. Connect the devices to the network and power them on.
+
+6. Back in the management console, watch the progress of the devices as they come online by viewing the **Node** overview page and filtering on the installation name.

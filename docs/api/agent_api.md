@@ -1,10 +1,10 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 title: Agent API
-description: Agent APIs are REST APIs for the Horizon agent running on an edge node.
+description: Agent APIs are REST APIs for the {{site.data.keyword.horizon}} agent running on an edge node.
 ---
 
 {:new_window: target="blank"}

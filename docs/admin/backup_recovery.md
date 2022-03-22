@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2020
-lastupdated: "2020-10-28"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 title: Backup
 description: Data Backup and recovery
 ---
@@ -19,6 +19,10 @@ description: Data Backup and recovery
 {: #data_backup}
 
 ## {{site.data.keyword.open_shift_cp}} backup and recovery
+
+For more information about cluster-wide data backup and recovery, see:
+
+* [{{site.data.keyword.open_shift_cp}} 4.6 backup etcd](https://docs.openshift.com/container-platform/4.6/backup_and_restore/control_plane_backup_and_restore/backing-up-etcd.html).
 
 If you have not downloaded the {{site.data.keyword.semver}} bundle, use the following commands with your [Entitled Registry Key](https://myibm.ibm.com/products-services/containerlibrary):
 
@@ -77,7 +81,7 @@ If you are using your own remote databases, ensure that those databases are back
    ibm-eam-{{site.data.keyword.semver}}-bundle/tools/ieam-backup.sh -h
    ```
    {: codeblock}
-   
+
    **Note**: The backup script automatically detects the type of databases that are used during installation.
 
    * If you run the following example with no options, it generates a folder where the script ran. The folder follows this naming pattern **ibm-edge-backup/$DATE/**:
@@ -86,7 +90,7 @@ If you are using your own remote databases, ensure that those databases are back
      ibm-eam-{{site.data.keyword.semver}}-bundle/tools/ieam-backup.sh
      ```
      {: codeblock}
-     
+
      If a **local database** installation was detected, your backup contains a **customresource** directory, a **databaseresources** directory, and two yaml files:
 
      ```
@@ -97,9 +101,9 @@ If you are using your own remote databases, ensure that those databases are back
 	  -rw-r--r--  1 staff  staff   3689 Oct 26 21:51 ibm-edge-config.yaml
      ```
      {: codeblock}
-     
+
 	  If a **remote database** installation was detected, you see the same directories that are listed previously, but three yaml files instead of 2.
-	  
+
 	  ```
      $ ls -l ibm-edge-backup/20201026_215518/
 	  drwxr-xr-x  3 staff  staff     96 Oct 26 21:55 customresource
@@ -118,14 +122,14 @@ To restore backups, an identical {{site.data.keyword.mgmt_hub}} must be installe
 
 This situation occurs when the edge node recognizes that it no longer exists in the exchange because the database is now empty. Enable **ieam\_maintenance\_mode** to avoid this by starting the database resources only for the {{site.data.keyword.mgmt_hub}}. This allows restoration to complete before the remaining {{site.data.keyword.mgmt_hub}} resources (which use those databases) are started.
 
-**Notes**: 
+**Notes**:
 
 * Restore backups to the same {{site.data.keyword.ieam}} version where the backup was taken; for example, a 4.2 {{site.data.keyword.ieam}} backup can only be restored to a 4.2 {{site.data.keyword.ieam}} installation.
 
 * When your **Custom Resource** file was backed up, it was automatically modified to enter **ieam\_maintenance\_mode** immediately upon reapplication to the cluster.
 
 * The restore scripts examine the **\[path/to/backup\]/customresource/eamhub-cr.yaml** file to determine what type of database was used previously.
-	
+
 
 1. As a cluster administrator, ensure that you are connected to your cluster with **cloudctl login** or **oc login** and that a valid backup was created. On the cluster where the backup was made, run the following command to delete the **eamhub** custom resource (this assumes the default name of **ibm-edge** was used for the custom resource):
 	```
@@ -164,7 +168,7 @@ This situation occurs when the edge node recognizes that it no longer exists in 
 	{: codeblock}
 
    Wait until all the database, SDO, and vault pods are running before proceeding. It is possible that vault may continually restart, the vault bootstrap may reach an `Error` state, and/or SDO will likely be in a `0/1 Running` state and may reach a `CrashLoopBackOff` state. These are expected, and it is ok to proceed with those pods in those states.
-	
+
 6. Scale down the **eamhub** operator deployment to pause the operator and end the current control loop:
 	```
     oc scale deploy ibm-eamhub-controller-manager --replicas=0
@@ -176,7 +180,7 @@ This situation occurs when the edge node recognizes that it no longer exists in 
 	ibm-eam-{{site.data.keyword.semver}}-bundle/tools/ieam-restore-data.sh -f ibm-edge-backup/20201026_215738/
 	```
 	{: codeblock}
-	
+
 8. After the script completes and your data has been restored, scale the operator back up to restart the control loop:
 	```
     oc scale deploy ibm-eamhub-controller-manager --replicas=1

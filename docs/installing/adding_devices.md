@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2019 - 2022
+lastupdated: "2022-03-17"
 
 ---
 
@@ -24,19 +24,27 @@ The following instructions guide you through the process of installing the requi
 
 {{site.data.keyword.ieam}} supports architectures and operating systems with the following hardware architectures:
 
-* {{site.data.keyword.linux_bit_notm}} devices or virtual machines that run Ubuntu 20.x (focal), Ubuntu 18.x (bionic), Debian 10 (buster), Debian 9 (stretch)
-* Red Hat Enterprise Linux&reg; 8.2
-* Fedora Workstation 32
-* CentOS 8.2
-* SuSE 15 SP2
-* {{site.data.keyword.linux_notm}} on ARM (32-bit), for example Raspberry Pi, running Raspbian buster or stretch
-* {{site.data.keyword.linux_notm}} on ARM (64-bit), for example NVIDIA Jetson Nano, TX1, or TX2, running Ubuntu 18.x (bionic)
-* {{site.data.keyword.macOS_notm}}
+* x86_64
+   * {{site.data.keyword.linux_bit_notm}} devices or virtual machines that run Ubuntu 20.x (focal), Ubuntu 18.x (bionic), Debian 10 (buster), Debian 9 (stretch)
+   * {{site.data.keyword.rhel}} 8.1, 8.2, and 8.3
+   * Fedora Workstation 32
+   * CentOS 8.1, 8.2, and 8.3
+   * SuSE 15 SP2
+* ppc64le
+   * {{site.data.keyword.linux_ppc64le_notm}} devices or virtual machines that run Ubuntu 20.x (focal) or Ubuntu 18.x (bionic)
+   * {{site.data.keyword.rhel}} 7.6, 7.9, 8.1, 8.2, and 8.3
+* ARM (32-bit)
+   * {{site.data.keyword.linux_notm}} on ARM (32-bit), for example Raspberry Pi, running Raspbian buster or stretch
+* ARM (64-bit)
+   * {{site.data.keyword.linux_notm}} on ARM (64-bit), for example NVIDIA Jetson Nano, TX1, or TX2, running Ubuntu 18.x (bionic)
+* Mac
+   * {{site.data.keyword.macOS_notm}}
 
 **Notes**: 
 
 * Installation of edge devices with Fedora or SuSE is only supported by the [Advanced manual agent installation and registration](../installing/advanced_man_install.md) method.
-* CentOS and Red Hat Enterprise Linux&reg; currently support Docker only as a container engine in Open Horizon.
+* CentOS and {{site.data.keyword.rhel}} on {{site.data.keyword.ieam}} {{site.data.keyword.version}} only support Docker as a container engine.
+* While {{site.data.keyword.ieam}} {{site.data.keyword.version}} supports running {{site.data.keyword.rhel}} 8.x with Docker, it is officially unsupported by {{site.data.keyword.rhel}}.
 
 ## Sizing
 {: #size}
@@ -57,6 +65,8 @@ The following instructions guide you through the process of installing the requi
 To install and configure your edge device, click the link that represents your edge device type:
 
 * [{{site.data.keyword.linux_bit_notm}} devices or virtual machines](#x86-machines)
+* [{{site.data.keyword.rhel}} 8.x devices or virtual machines](#rhel8)
+* [{{site.data.keyword.linux_ppc64le_notm}} devices or virtual machines](#ppc64le-machines)
 * [{{site.data.keyword.linux_notm}} on ARM (32-bit)](#arm-32-bit); for example, Raspberry Pi running Raspbian
 * [{{site.data.keyword.linux_notm}} on ARM (64-bit)](#arm-64-bit); for example, NVIDIA Jetson Nano, TX1, or TX2
 * [{{site.data.keyword.macOS_notm}}](#mac-os-x)
@@ -74,9 +84,74 @@ To install and configure your edge device, click the link that represents your e
 ### Procedure
 {: #proc-x86}
 
-Prepare your device by installing a Debian or Ubuntu {{site.data.keyword.linux_notm}}. The instructions in this content are based on a device that uses Ubuntu 18.x.
+Prepare your device by installing a Debian, {{site.data.keyword.rhel}} 7.x, or Ubuntu {{site.data.keyword.linux_notm}}. The instructions in this content are based on a device that uses Ubuntu 18.x.
 
-Install the most recent version of Docker on your device. For more information, see [Install Docker ](https://docs.docker.com/engine/install/ubuntu/){:target="_blank"}{: .externalLink}.
+Install the most recent version of Docker on your device. For more information, see [Install Docker](https://docs.docker.com/engine/install/ubuntu/).
+
+Now that your edge device is prepared, continue on to [Installing the agent](registration.md).
+
+## {{site.data.keyword.rhel}} 8.x devices or virtual machines
+{: #rhel8}
+
+### Hardware requirements
+{: #hard-req-rhel8}
+
+* 64-bit Intel&reg; device, AMD device, ppc64le device, or virtual machine
+* An internet connection for your device (wired or wifi)
+* (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware.
+
+### Procedure
+{: #proc-rhel8}
+
+Prepare your device by installing {{site.data.keyword.rhel}} 8.x.
+
+Remove Podman and other pre-included packages, then install Docker as described here.
+
+1. Uninstall packages:
+   ```
+   yum remove buildah skopeo podman containers-common atomic-registries docker container-tools
+   ```
+   {: codeblock}
+
+2. Remove remaining artifacts & files:
+   ```
+   rm -rf /etc/containers/* /var/lib/containers/* /etc/docker /etc/subuid* /etc/subgid*
+   ```
+   {: codeblock}
+
+3. Delete any associated container storage:
+   ```
+   cd ~ && rm -rf /.local/share/containers/
+   ```
+   {: codeblock}
+
+4. Install Docker by following the instructions for [Docker CENTOS Installation](https://docs.docker.com/engine/install/centos/).
+
+5. Configure Docker to start on boot by default and follow any other [Docker post installation steps](https://docs.docker.com/engine/install/linux-postinstall/).
+   ```
+   sudo systemctl enable docker.service
+   sudo systemctl enable containerd.service
+   ```
+   {: codeblock}
+
+Now that your edge device is prepared, continue on to [Installing the agent](registration.md).
+
+## {{site.data.keyword.linux_ppc64le_notm}} devices or virtual machines
+{: #ppc64le-machines}
+
+### Hardware requirements
+{: #hard-req-ppc64le}
+
+* ppc64le device or virtual machine
+* An internet connection for your device (wired or wifi)
+* (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware.
+
+### Procedure
+{: #proc-ppc64le}
+
+Prepare your device by installing {{site.data.keyword.rhel}}.
+
+Install the most recent version of Docker on your device. 
 
 Now that your edge device is prepared, continue on to [Installing the agent](registration.md).
 
@@ -91,14 +166,14 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 * MicroSD flash card (32 GB preferred)
 * An appropriate power supply for your device (2 Amp or greater preferred)
 * An internet connection for your device (wired or wifi).
-  Note: Some devices require extra hardware for supporting wifi.
+  **Note**: Some devices require extra hardware for supporting wifi.
 * (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware.
 
 ### Procedure
 {: #proc-pi}
 
 1. Prepare your Raspberry Pi device.
-   1. Flash the [Raspbian ](https://www.raspberrypi.org/downloads/raspbian/){:target="_blank"}{: .externalLink}{{site.data.keyword.linux_notm}} image onto your MicroSD card.
+   1. Flash the [Raspbian ](https://www.raspberrypi.org/downloads/raspbian/){:target="_blank"}{: .externalLink} {{site.data.keyword.linux_notm}} image onto your MicroSD card.
 
       For more information about how to flash MicroSD images from many operating systems, see [Raspberry Pi Foundation ](https://www.raspberrypi.org/documentation/installation/installing-images/README.md){:target="_blank"}{: .externalLink}.
       These instructions use Raspbian for wifi and SSH configurations.  
@@ -203,7 +278,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 {: #proc-mac}
 
 1. Prepare your device.
-   1. Install the most recent version of Docker on your device. For more information, see [Install Docker ](https://docs.docker.com/docker-for-mac/install/).
+   1. Install the most recent version of Docker on your device. For more information, see [Install Docker ](https://docs.docker.com/docker-for-mac/install/){:target="_blank"}{: .externalLink}{:target="_blank"}{: .externalLink}.
 
    2. **Install socat**. You can use either of the following methods to install socat:
 
