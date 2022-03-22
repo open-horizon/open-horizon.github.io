@@ -23,7 +23,6 @@ View the following table for a description of the {{site.data.keyword.ieam}} com
 
 |Component|Version|Description|
 |---------|-------|----|
-|[IBM Cloud Platform Common Services](https://www.ibm.com/docs/en/cpfs)|3.6.x|This is a set of foundational components that are installed automatically as part of the {{site.data.keyword.ieam}} operator installation.|
 |Agbot|{{site.data.keyword.anax_ver}}|Agreement bot (agbot) instances are created centrally and are responsible for deploying workloads and machine learning models to {{site.data.keyword.ieam}}.|
 |MMS |1.5.3-338|The Model Management System (MMS) facilitates the storage, delivery, and security of models, data, and other metadata packages needed by edge services. This enables edge nodes to easily send and receive models and metadata to and from the cloud.|
 |Exchange API|2.87.0-531|The Exchange provides the REST API that holds all the definitions (patterns, policies, services, and so on) used by all the other components in {{site.data.keyword.ieam}}.|
