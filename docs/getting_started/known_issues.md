@@ -14,7 +14,7 @@ lastupdated: "2022-03-17"
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
 
-# Known issues and limitations  
+# Known issues and limitations
 {: #knownissues}
 
 These are known issues and limitations for {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) {{site.data.keyword.version}}.
@@ -29,7 +29,7 @@ These are known issues and limitations for {{site.data.keyword.ieam}}.
 
 * [Private image repositories](../developing/container_registry.md) are not supported for service creation in the management console.
 
-* {{site.data.keyword.ieam}} does not perform a malware or virus scan on data that is uploaded to the model management system (MMS). For more information about MMS security, see [Security and privacy](../OH/docs/user_management/security_privacy.md#malware).
+* {{site.data.keyword.ieam}} does not perform a malware or virus scan on data that is uploaded to the model management system (MMS). For more information about MMS security, see [Security and privacy](../user_management/security_privacy.md#malware).
 
 * The **-f &lt;directory&gt;** flag of **edgeNodeFiles.sh** does not have the intended effect. Instead, the files are collected in the current directory. For more information, see [issue 2187](https://github.com/open-horizon/anax/issues/2187). The work-around is to run the command like this:
 
