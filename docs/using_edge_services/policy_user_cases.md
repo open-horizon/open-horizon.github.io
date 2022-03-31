@@ -60,6 +60,27 @@ Administrators can create a deployment policy, and {{site.data.keyword.edge_notm
 
 Because deployment policies capture the more dynamic, business-like service properties and constraints, they are expected to change more often than service policy. Their lifecycle is independent from the service they refer to, which gives the policy administrator the ability to state a specific service version or a version range. {{site.data.keyword.edge_notm}} then merges service policy and deployment policy, and then attempts to find nodes whose policy is compatible with that.
 
+## How do you update the constraints of an existing deployment policy with the hzn cli?
+
+{: #hzn_cli}
+
+There are couple of options to update constraint of an existing deployment policy via hzn cli.
+
+-  hzn exchange business updatepolicy `${POLICY} -f ${UPDATE_POLICY_FILE}`
+
+where the UPDATE_POLICY_FILE contains something like
+{% capture code %}{
+"constraints": [
+"quay_horizon_model_100 >= 1000"
+]
+}{% endcapture %}
+
+{% include code_snippet.md code=code language='shell' %}
+
+- hzn exchange deployment addpolicy `--json-file=${POLICY_FILE_WITH_UPDATE} ${POLICY}`
+
+Note, "hzn exchange deployment updatepolicy `--json-file=${POLICY_FILE_WITH_UPDATE} ${POLICY}`" only updates the policy attributes and ignore any constraint update.
+
 ## Model policy
 {: #model_policy}
 
