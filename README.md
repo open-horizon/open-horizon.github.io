@@ -17,7 +17,7 @@
 
 # Contributing to Open Horizon Pages
 
-If you would like to contribute, please read the following contents. This document contains a lot of tips and guidelines to help keep things organized. 
+If you would like to contribute, please read the following contents. This document contains a lot of tips and guidelines to help keep things organized.
 
 We appreciate and recognize all contributors.
 
@@ -53,7 +53,7 @@ To make necessary changes, you need to clone the forked repository to your machi
 
 <img align="right" width="300" src="img/clone.jpg" alt="clone this repository" />
 
-Go to your GitHub account, open the forked repository, click on the Code button and then click the *copy to clipboard* icon.
+Go to your GitHub account, open the forked repository, click on the Code button and then click the _copy to clipboard_ icon.
 
 Open a terminal and run the following git command:
 
@@ -87,11 +87,11 @@ git checkout -b add-readme
 
 ## Make necessary changes
 
-Now do whatever you want to contribute to this project and make necessary changes on existing files or add new files. 
+Now do whatever you want to contribute to this project and make necessary changes on existing files or add new files.
 
 # Test in Local and Push Changes to GitHub
 
-Before pushing changes to GitHub, please make sure you build this GitHub Pages site locally to preview and test changes to this site. 
+Before pushing changes to GitHub, please make sure you build this GitHub Pages site locally to preview and test changes to this site.
 
 ## Prerequisites
 
@@ -101,17 +101,43 @@ This GitHub Pages site is built with Jekyll. Before you can use Jekyll to test a
 
 Change to the repository directory on your computer and execute the following command to run the Jekyll site locally.
 
-NOTE: The first time you run locally, and any time the `Gemfile.lock` file is updated, run `bundle install` before the step below to install or update any required Jekyll modules.
+1. To install and update all dependencies.
 
 ```
-gem install bundler
-bundle update --bundler
-bundle config set --local deployment 'true'
-bundle install
-bundle exec jekyll serve
+make init
 ```
+
+NOTE : run above command once before using tools each day
+
+2. start the local web server, does not build the site first
+
+```
+make run
+```
+
+NOTE :This will run a local web server with "live reload" conveniently enabled. ( NOTE: while using make command on Windows, there sometimes arises an error in identifying the command even after it is installed (unrecognized command), this is because the PATH for the binary might not be set correctly ).
 
 To preview the site, in your web browser, navigate to [http://localhost:4000](http://localhost:4000)
+
+3. To build and test the local documentation site
+
+```
+make dev
+```
+
+4. To Build the local documentation site
+
+```
+make build
+```
+
+5. test the local documentation site locally
+
+```
+make test
+```
+
+Note : it is typically done before "make run"}
 
 ## Commit changes
 
@@ -122,7 +148,7 @@ If you go to the project directory and execute the command `git status`, you'll 
 Add those changes to the branch you just created using the `git add` command:
 
 ```
-git add <file> 
+git add <file>
 ```
 
 All commits should be signed off(`-s` flag on `git commit`). To use `-s` option, follow the [guidance](common-requests/contribute.md#how-to-attest) to make sure you configure your git name (user.name) and email address (user.email).
@@ -143,14 +169,13 @@ git push origin <add-your-branch-name>
 
 replacing `<add-your-branch-name>` with the name of the branch you created earlier.
 
-## Possible Errros you may get.  
+## Possible Errros you may get.
 
-Sometimes while setting up project locally may get some errors, some of them are listed below. 
+Sometimes while setting up project locally may get some errors, some of them are listed below.
 
 1. Missing `webrick` and `wdm` in `Gemfile`
 
-
-Sometimes users are using the latest version of `ruby` which is `>2.7` which do not have `webrick` support pre-added so they may get this error(list below), if they are using ruby versions `>= 3.0.0`  (listed below) 
+Sometimes users are using the latest version of `ruby` which is `>2.7` which do not have `webrick` support pre-added so they may get this error(listed below), if they are using ruby versions `>= 3.0.0`.
 
 ```
   Please add the following to your Gemfile to avoid polling for changes:
@@ -177,7 +202,7 @@ C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve/se
 
 To solve this error add `webrick` and `wdm` to your local `Gemfile` by using the commands listed below and re-run the serve.
 
-To add webrick 
+To add webrick
 
 ```
 bundle add webrick
@@ -221,11 +246,12 @@ git push origin :<branch-name>
 
 ## Syncing a fork
 
-Connect your local repository to the original “upstream” repository by adding it as a remote. Pull in changes from “upstream” often so that you stay up to date so that when you submit your pull request, merge conflicts will be less likely. 
+Connect your local repository to the original “upstream” repository by adding it as a remote. Pull in changes from “upstream” often so that you stay up to date so that when you submit your pull request, merge conflicts will be less likely.
 
 Refer to [Sync a fork of a repository to keep it up-to-date with the upstream repository.](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork)
 
 ## 📌 Our valuable Contributors👩‍💻👨‍💻 :
+
 <table>
   <tr>
     <a href="https://github.com/open-horizon/open-horizon.github.io/graphs/contributors">
