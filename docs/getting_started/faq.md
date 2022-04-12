@@ -34,7 +34,6 @@ The following are answers to some frequently asked questions (FAQs) about {{site
 - [What happens if a container image download is interrupted by a network outage?](#image_download)
 - [How is {{site.data.keyword.ieam}} secure?](#ieam_secure)
 - [How do I manage AI at the Edge with models vs AI on the Cloud?](#ai_cloud)
-- [How do you update the constraints of an existing deployment policy with the hzn cli?](#hzn_cli)
 
 ## Is there a way to create a self-contained environment for development purposes?
 
@@ -162,24 +161,3 @@ See [Security at the Edge ](https://www.ibm.com/cloud/blog/security-at-the-edge)
 Typically, AI at the edge enables you to perform on-the-spot machine inferencing with subsecond latency, which enables real-time response based on use case and hardware (for example, RaspberryPi, Intel x86, and Nvidia Jetson nano). {{site.data.keyword.ieam}} model management system enables you to deploy updated AI models without any service downtime.
 
 See [Models Deployed at the Edge ](https://www.ibm.com/cloud/blog/models-deployed-at-the-edge){:target="\_blank"}{: .externalLink}.
-
-## How do you update the constraints of an existing deployment policy with the hzn cli?
-
-{: #hzn_cli}
-
-There are couple of options to update constraint of an existing deployment policy via hzn cli.
-
--  hzn exchange business updatepolicy `${POLICY} -f ${UPDATE_POLICY_FILE}`
-
-where the UPDATE_POLICY_FILE contains something like
-{% capture code %}{
-"constraints": [
-"quay_horizon_model_100 >= 1000"
-]
-}{% endcapture %}
-
-{% include code_snippet.md code=code language='shell' %}
-
-- hzn exchange deployment addpolicy `--json-file=${POLICY_FILE_WITH_UPDATE} ${POLICY}`
-
-Note, "hzn exchange deployment updatepolicy `--json-file=${POLICY_FILE_WITH_UPDATE} ${POLICY}`" only updates the policy attributes and ignore any constraint update.
