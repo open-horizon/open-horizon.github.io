@@ -15,9 +15,9 @@
 <img src="https://matrix.to/img/matrix-badge.svg" /></a>
 </p>
 
-# Contributing to Open Horizon Pages
+# Contributing to Open Horizon pages
 
-If you would like to contribute, please read the following contents. This document contains a lot of tips and guidelines to help keep things organized.
+If you would like to contribute content, read the following documentation for helpful information and guidelines.
 
 We appreciate and recognize all contributors.
 
@@ -47,13 +47,13 @@ Fork this repository by clicking on the fork button on the top of this page. Thi
 
 # Make Necessary Changes
 
-To make necessary changes, you need to clone the forked repository to your machine and set up the development environment in local.
+To make changes, clone the forked repository to your machine.
 
 ## Clone the repository
 
 <img align="right" width="300" src="img/clone.jpg" alt="clone this repository" />
 
-Go to your GitHub account, open the forked repository, click on the Code button and then click the _copy to clipboard_ icon.
+Go to your GitHub account, open the forked repository, click **Code**, and then **copy to clipboard**.
 
 Open a terminal and run the following git command:
 
@@ -87,11 +87,11 @@ git checkout -b add-readme
 
 ## Make necessary changes
 
-Now do whatever you want to contribute to this project and make necessary changes on existing files or add new files.
+Now, you can suggest contributions, make necessary changes to existing files, or add new files.
 
-# Test in Local and Push Changes to GitHub
+# Test in local and push changes to GitHub
 
-Before pushing changes to GitHub, please make sure you build this GitHub Pages site locally to preview and test changes to this site.
+Before you push changes to GitHub, build this GitHub pages site locally to preview and test the changes.
 
 ## Prerequisites
 
@@ -107,7 +107,7 @@ Change to the repository directory on your computer and execute the following co
 make init
 ```
 
-NOTE : run above command once before using tools each day
+**Note**: Run the above command one time before using the tools each day.
 
 2. start the local web server, does not build the site first
 
@@ -115,33 +115,33 @@ NOTE : run above command once before using tools each day
 make run
 ```
 
-NOTE :This will run a local web server with "live reload" conveniently enabled. ( NOTE: while using make command on Windows, there sometimes arises an error in identifying the command even after it is installed (unrecognized command), this is because the PATH for the binary might not be set correctly ).
+**Note**: This runs a local web server with live reload enabled. When running the make command on Windows, an error might occur that identifies the installed command as unrecognized. This can happen when the binary path is set incorrectly.
 
-To preview the site, in your web browser, navigate to [http://localhost:4000](http://localhost:4000)
+To preview the site in your web browser navigate to [http://localhost:4000](http://localhost:4000).
 
-3. To build and test the local documentation site
+3. To build and test the local documentation site:
 
 ```
 make dev
 ```
 
-4. To Build the local documentation site
+4. To Build the local documentation site:
 
 ```
 make build
 ```
 
-5. test the local documentation site locally
+5. Test the local documentation site locally:
 
 ```
 make test
 ```
 
-Note : it is typically done before "make run"}
+**Note**: This is typically done before `make run`
 
 ## Commit changes
 
-Once you have a successful testing in local with your changes, you are ready to commit those changes.
+After you have a successful testing in local with your changes, you are ready to commit those changes.
 
 If you go to the project directory and execute the command `git status`, you'll see your changes.
 
@@ -151,7 +151,7 @@ Add those changes to the branch you just created using the `git add` command:
 git add <file>
 ```
 
-All commits should be signed off(`-s` flag on `git commit`). To use `-s` option, follow the [guidance](common-requests/contribute.md#how-to-attest) to make sure you configure your git name (user.name) and email address (user.email).
+All commits should be signed off (`-s` flag on `git commit`). To use `-s` option, follow the [guidance](common-requests/contribute.md#how-to-attest) to make sure you configure your git name (user.name) and email address (user.email).
 
 Now commit those changes using the git commit command:
 
@@ -169,16 +169,18 @@ git push origin <add-your-branch-name>
 
 replacing `<add-your-branch-name>` with the name of the branch you created earlier.
 
-## Possible Errros you may get.
+## Possible Errros 
 
-Sometimes while setting up project locally may get some errors, some of them are listed below.
+When setting up a project locally, some errors can occur. Some of those are listed below.
 
-1. Missing `webrick` and `wdm` in `Gemfile`
+- Missing `webrick` and `wdm` in `Gemfile`
 
-Sometimes users are using the latest version of `ruby` which is `>2.7` which do not have `webrick` support pre-added so they may get this error(listed below), if they are using ruby versions `>= 3.0.0`.
+Change to:
+
+Some users use the latest version of `ruby`, which is `>2.7` that does not have pre-added `webrick` support. If they are using `ruby` versions `>= 3.0.0`, they might see the error listed below.
 
 ```
-  Please add the following to your Gemfile to avoid polling for changes:
+  Add the following to your Gemfile to avoid polling for changes:
     gem 'wdm', '>= 0.1.0' if Gem.win_platform?
  Auto-regeneration: enabled for 'C:/Users/yourUserName/Desktop/open-horizon/open-horizon.github.io'
 C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve/servlet.rb:3:in `require': cannot load such file -- webrick (LoadError)
@@ -200,15 +202,15 @@ C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve/se
         from C:/Ruby30-x64/bin/jekyll:25:in `<main>'
 ```
 
-To solve this error add `webrick` and `wdm` to your local `Gemfile` by using the commands listed below and re-run the serve.
+To solve this error, add `webrick` and `wdm` to your local `Gemfile` by using the commands listed below and re-run the serve.
 
-To add webrick
+add webrick:
 
 ```
 bundle add webrick
 ```
 
-To add wdm
+add wdm:
 
 ```
 gem install wdm
@@ -244,13 +246,13 @@ Delete remote branch:
 git push origin :<branch-name>
 ```
 
-## Syncing a fork
+## Synching a fork
 
-Connect your local repository to the original “upstream” repository by adding it as a remote. Pull in changes from “upstream” often so that you stay up to date so that when you submit your pull request, merge conflicts will be less likely.
+Connect your local repository to the original, upstream repository by adding it as a remote. You should pull in changes from upstream often, so that you stay up-to-date. This helps avoid merge conflicts when you submit pull requests.
 
-Refer to [Sync a fork of a repository to keep it up-to-date with the upstream repository.](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork)
+For more information, see [Sync a fork of a repository to keep it up-to-date with the upstream repository.](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork)
 
-## 📌 Our valuable Contributors👩‍💻👨‍💻 :
+## 📌 Our valuable contributors👩‍💻👨‍💻 :
 
 <table>
   <tr>
