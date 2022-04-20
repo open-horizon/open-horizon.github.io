@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2021 - 2022
+lastupdated: "2022-03-10"
 
 ---
 
@@ -41,7 +41,7 @@ Review the following questions when you encounter an issue with {{site.data.keyw
 
 Ensure that the {{site.data.keyword.horizon}} software that is installed on your edge nodes is always on the latest released version.
 
-On a {{site.data.keyword.linux_notm}} system, you can usually check the version of your installed {{site.data.keyword.horizon}} packages by running this command:  
+On a {{site.data.keyword.linux_notm}} system, you can usually check the version of your installed {{site.data.keyword.horizon}} packages by running this command:
 ```
 dpkg -l | grep horizon
 ```
@@ -74,7 +74,7 @@ Active: active (running) since Thu 2020-10-01 17:56:12 UTC; 2 weeks 0 days ago
 ```
 {: codeblock}
 
-## Is the edge node configured to interact with the {{site.data.keyword.horizon_exchange}}? 
+## Is the edge node configured to interact with the {{site.data.keyword.horizon_exchange}}?
 {: #node_configured}
 
 To verify that you can communicate with the {{site.data.keyword.horizon_exchange}}, run this command:
@@ -98,7 +98,7 @@ hzn node list | jq .configuration.exchange_api
 ## Are the required Docker containers for the edge node running?
 {: #node_running}
 
-When your edge node is registered with {{site.data.keyword.horizon}}, a {{site.data.keyword.horizon}} Agbot creates an agreement with your edge node to run the services that are referenced in your gateway type (deployment pattern). If that agreement is not created, complete these checks to troubleshoot the issue.
+When your edge node is registered with {{site.data.keyword.horizon}}, a {{site.data.keyword.horizon}} {{site.data.keyword.agbot}} creates an agreement with your edge node to run the services that are referenced in your gateway type (deployment pattern). If that agreement is not created, complete these checks to troubleshoot the issue.
 
 Confirm that your edge node is in the `configured` state and has the correct `id`, `organization` values. Additionally, confirm that the architecture that {{site.data.keyword.horizon}} is reporting is the same architecture that you used in the metadata for your services. Run this command to list these settings:
 ```
@@ -106,31 +106,31 @@ hzn node list | jq .
 ```
 {: codeblock}
 
-If those values are as expected, you can check the agreement status of the edge node by run: 
+If those values are as expected, you can check the agreement status of the edge node by run:
 ```
 hzn agreement list | jq .
 ```
 {: codeblock}
 
-If this command does not show any agreements; those agreements might have formed, but a problem might have been discovered. If this occurs, the agreement can be cancelled before it can display in the output from the previous command. If an agreement cancellation occurs, the cancelled agreement shows a status of `terminated_description` in the list of archived agreements. You can view the archived list by running this command: 
+If this command does not show any agreements; those agreements might have formed, but a problem might have been discovered. If this occurs, the agreement can be cancelled before it can display in the output from the previous command. If an agreement cancellation occurs, the cancelled agreement shows a status of `terminated_description` in the list of archived agreements. You can view the archived list by running this command:
 ```
 hzn agreement list -r | jq .
 ```
 {: codeblock}
 
-A problem might also occur before an agreement is created. If this problem occurs, review the event log for the {{site.data.keyword.horizon}} agent to identify possible errors. Run this command to view the log: 
+A problem might also occur before an agreement is created. If this problem occurs, review the event log for the {{site.data.keyword.horizon}} agent to identify possible errors. Run this command to view the log:
 ```
 hzn eventlog list
-``` 
+```
 {: codeblock}
 
-The event log can include: 
+The event log can include:
 
 * The signature of the service metadata, specifically the `deployment` field, cannot be verified. This error usually means that your signing public key is not imported into your edge node. You can import the key by using the `hzn key import -k <pubkey>` command. You can view the keys that are imported to your local edge node by using the `hzn key list` command. You can verify that the service metadata in the {{site.data.keyword.horizon_exchange}} is signed with your key by using this command:
   ```
   hzn exchange service verify -k $PUBLIC_KEY_FILE <service-id>
   ```
-  {: codeblock} 
+  {: codeblock}
 
 Replace `<service-id>` with the ID for your service. This ID can resemble the following sample format: `workload-cpu2wiotp_${CPU2WIOTP_VERSION}_${ARCH2}`.
 
@@ -206,7 +206,7 @@ docker network list
 
 To view more information about networks, use the `docker inspect X` command, where `X` is the name of the network. The command output lists all containers that run on the virtual network.
 
-You can also run the `docker inspect Y` command on each container, where `Y` is the name of the container, to get more information. For instance, review the `NetworkSettings` container information and search the `Networks` container. Within this container, you can view the relevant network ID string and information about how the container is represented on the network. This representation information includes the container `IPAddress`, and the list of network aliases that are on this network. 
+You can also run the `docker inspect Y` command on each container, where `Y` is the name of the container, to get more information. For instance, review the `NetworkSettings` container information and search the `Networks` container. Within this container, you can view the relevant network ID string and information about how the container is represented on the network. This representation information includes the container `IPAddress`, and the list of network aliases that are on this network.
 
 Alias names are available to all of the containers on this virtual network, and these names are typically used by the containers in your code deployment pattern for discovering other containers on the virtual network. For example, you can name your service `myservice`. Then, other containers can use that name directly to access it on the network, such as with the command `ping myservice`. The alias name of your container is specified in the `deployment` field of its service definition file that you passed to the `hzn exchange service publish` command.
 
@@ -263,7 +263,7 @@ If the subscription command is successful, the command blocks indefinitely. The 
 
 For example, to review the log for the `cpu2evtstreams` service, run this command:
 
-* For {{site.data.keyword.linux_notm}} and {{site.data.keyword.windows_notm}} 
+* For {{site.data.keyword.linux_notm}} and {{site.data.keyword.windows_notm}}
 
 ```bash
 tail -n 500 -f /var/log/syslog | grep -E 'cpu2evtstreams\[[0-9]+\]:'
@@ -295,7 +295,7 @@ The parameter `$ORG_ID` is your organization ID, and `$SERVICE` is the name of t
 ## Does your published deployment pattern include all required services and versions?
 {: #services_included}
 
-On any edge node where the `hzn` command is installed, you can use this command to get details about any deployment pattern. Run the `hzn` command with the following arguments to pull the listing of deployment patterns from the {{site.data.keyword.horizon_exchange}}: 
+On any edge node where the `hzn` command is installed, you can use this command to get details about any deployment pattern. Run the `hzn` command with the following arguments to pull the listing of deployment patterns from the {{site.data.keyword.horizon_exchange}}:
 
 ```
 hzn exchange pattern list | jq .
@@ -353,12 +353,12 @@ This error occurs when the service image that is referenced in the service defin
     ```
     {: codeblock}
 
-2. Push the service image directly to the image repository. 
+2. Push the service image directly to the image repository.
     ```
     docker push <image name>
     ```
-    {: codeblock} 
-    
+    {: codeblock}
+
 ### Deployment configuration error
 {: #eidc}
 
@@ -372,13 +372,13 @@ This error occurs when the service definitions deployment configurations specify
 
 This error occurs when docker encounters an error when it starts the service container. The error message might contain details that indicate why the container start failed. Error resolution steps depend on the error. The following errors can occur:
 
-1. The device is already using a published port that is specified by the deployment configurations. To resolve the error: 
+1. The device is already using a published port that is specified by the deployment configurations. To resolve the error:
 
     - Map a different port to the service container port. The displayed port number does not have to match the service port number.
     - Stop the program that is using the same port.
 
 2. A published port that is specified by the deployment configurations is not a valid port number. Port numbers must be a number in the range 1 -  65535.
-3. A volume name in the deployment configurations is not a valid file path. Volume paths must be specified by their absolute (not relative) paths. 
+3. A volume name in the deployment configurations is not a valid file path. Volume paths must be specified by their absolute (not relative) paths.
 
 ## How to uninstall Podman on RHEL?
 {: #uninstall_podman}
@@ -411,16 +411,16 @@ cd ~ && rm -rf /.local/share/containers/
   ```
   Error from server: error dialing backend: remote error: tls: internal error
   ```
-  {: codeblock} 
+  {: codeblock}
 
-If you see this error at the end of the cluster agent-install process or while trying to interact with the agent pod, there might be an issue with the Certificate Signing Requests (CSR) of your OCP cluster. 
+If you see this error at the end of the cluster agent-install process or while trying to interact with the agent pod, there might be an issue with the Certificate Signing Requests (CSR) of your OCP cluster.
 
 1. Check if you have any CSRs in the Pending state:
 
     ```
     oc get csr
     ```
-    {: codeblock} 
+    {: codeblock}
 
 2. Approve the pending CSRs:
 
@@ -428,7 +428,7 @@ If you see this error at the end of the cluster agent-install process or while t
   oc adm certificate approve <csr-name>
   ```
   {: codeblock}
-    
+
 **Note**: You can approve all of the CSRs with one command:
 
   ```

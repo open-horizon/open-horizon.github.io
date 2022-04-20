@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 
 ---
 
@@ -72,7 +72,7 @@ Complete these steps to configure this module:
    ```
    {: codeblock}
 
-5. To run the sdr2evtstreams service example on your edge node, you must register your edge node with the IBM/pattern-ibm.sdr2evtstreams deployment pattern. Perform the steps in [Preconditions for Using the SDR To IBM Event Streams Example Edge Service ](https://www.ibm.com/links?url=https%3A%2F%2Fgithub.com%2Fopen-horizon%2Fexamples%2Ftree%2Fmaster%2Fedge%2Fevtstreams%2Fsdr2evtstreams){:target="_blank"}{: .externalLink}. 
+5. To run the sdr2evtstreams service example on your edge node, you must register your edge node with the IBM/pattern-ibm.sdr2evtstreams deployment pattern. Perform the steps in [Preconditions for Using the SDR To IBM Event Streams Example Edge Service ](https://github.com/open-horizon/examples/tree/master/edge/evtstreams/sdr2evtstreams){:target="_blank"}{: .externalLink}. 
 
 6. Check the example web UI to see whether your edge node is sending results. 
 
@@ -109,7 +109,7 @@ The web user interface for the software-defined radio application allows users t
 
 Optionally, the IBM Functions, IBM databases, and web UI code can be deployed in the IBM Cloud if you wanted to create your own software-defined ration example web UI. You can do this with a single command after you [create a paid account ](https://cloud.ibm.com/login){:target="_blank"}{: .externalLink}. For more information, see [deployment repository content ](https://www.ibm.com/links?url=https%3A%2F%2Fgithub.com%2Fopen-horizon%2Fexamples%2Ftree%2Fmaster%2Fcloud%2Fsdr%2Fdeploy%2Fibm){:target="_blank"}{: .externalLink}. 
 
-Note: This deployment process requires paid services that incur charges on your {{site.data.keyword.cloud_notm}} account.
+**Note**: This deployment process requires paid services that incur charges on your {{site.data.keyword.cloud_notm}} account.
 
 ## What to do next
 

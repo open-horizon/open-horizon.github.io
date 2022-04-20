@@ -1,9 +1,10 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
-
+years: 2020 - 2022
+lastupdated: "2022-03-17"
+title: CI-CD process
+description: ""
 ---
 
 {:new_window: target="blank"}
@@ -91,6 +92,3 @@ After the PR is merged, this process is repeated, and the list of passing servic
 The list of services that passed the functional test is used to identify which services should be published with the dedicated publish `Makefile` target. See [helloworld sample ](https://github.com/open-horizon/examples/blob/afd4a5822aede44616eb5da7cd9dafd4d78f12ec/edge/services/helloworld/Makefile#L45){:target="_blank"}{: .externalLink}.
 
 Because the services have been built and tested, this target publishes the service, service policy, pattern, and deployment policy in all architectures to the exchange. 
-
-Note: Also, you can perform many of these tasks from the management console. See [Using the management console](../console/accessing_ui.md).
-

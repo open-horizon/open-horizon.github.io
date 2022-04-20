@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2019 - 2022
+lastupdated: "2022-03-17"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2021-02-20"
 # Role-based access control
 {: #rbac}
 
-{{site.data.keyword.edge_notm}} {{site.data.keyword.ieam}} supports several roles. Your role determines the actions that you can perform.
+{{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) supports several roles. Your role determines the actions that you can perform.
 {:shortdesc}
 
 ## Organizations
@@ -39,14 +39,14 @@ There are four types of identities within {{site.data.keyword.ieam}}:
   * IAM API keys (used with the **hzn** command) behave like IAM users
 * Exchange-only users: The exchange root user is an example of this. You usually do not need to create other local exchange-only users. As a best practice, manage users in IAM, and use those user credentials (or API keys associated with those users) to authenticate to {{site.data.keyword.ieam}}.
 * Exchange nodes (edge devices or edge clusters)
-* Exchange agbots
+* Exchange {{site.data.keyword.agbot}}s
 
 ### Role-Based Access Control (RBAC)
 {: #rbac_roles}
 
 {{site.data.keyword.ieam}} includes the following roles:
 
-| **Role**    | **Access**    |  
+| **Role**    | **Access**    |
 |---------------|--------------------|
 | IAM user | Through IAM, can be given these management hub roles: Cluster Administrator, Administrator, Operator, Editor, and Viewer. An IAM role is assigned to users or user groups when you add them to an IAM team. Team access to resources can be controlled by Kubernetes namespace. IAM users can also be given any of the Exchange roles below by using the **hzn exchange** CLI. |
 | Exchange root user | Has unlimited privilege in the exchange. This user is defined in the exchange config file. It can be disabled, if desired. |
@@ -54,5 +54,5 @@ There are four types of identities within {{site.data.keyword.ieam}}:
 | Exchange org admin user | Has unlimited exchange privilege within the organization. |
 | Exchange user | Can create exchange resources (nodes, services, patterns, policies) in the organization. Can update or delete resources owned by this user. Can read all services, patterns, and policies in the organization, and public services and patterns in other organizations. Can read nodes owned by this user. |
 | Exchange nodes | Can read its own node in the exchange, and read all services, patterns, and policies in the organization, and public service and patterns in other organizations. These are the only credentials that should be saved in the edge node, because they have the minimum privilege necessary to operate the edge node.|
-| Exchange agbots | Agbots in the IBM organization can read all nodes, services, patterns, and policies in all organizations. |
+| Exchange {{site.data.keyword.agbot}}s | {{site.data.keyword.agbot}}s in the IBM organization can read all nodes, services, patterns, and policies in all organizations. |
 {: caption="Table 1. RBAC roles" caption-side="top"}

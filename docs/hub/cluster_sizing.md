@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 
 ---
 
@@ -38,9 +38,11 @@ Two supported database configurations impact sizing considerations for the {{sit
 
 ### {{site.data.keyword.ieam}} local database storage requirements
 
-**Local** databases require persistent storage, which uses dynamic storage classes that are configured for your {{site.data.keyword.open_shift}} cluster.
+In addition to the always installed Secure Device Onboarding (SDO) component, **local** databases and secrets manager require persistent storage. This storage uses dynamic storage classes that are configured for your {{site.data.keyword.open_shift}} cluster.
 
-For more information, see [supported dynamic {{site.data.keyword.open_shift}} storage options and configuration instructions ](https://docs.openshift.com/container-platform/4.4/storage/understanding-persistent-storage.html){:target="_blank"}{: .externalLink}.
+For more information, see [supported dynamic {{site.data.keyword.open_shift}} storage options and configuration instructions ](https://docs.openshift.com/container-platform/4.6/storage/understanding-persistent-storage.html){:target="_blank"}{: .externalLink}.
+
+You are responsibile for enabling encryption at rest at the time of cluster creation. It can often be included as part of cluster creation on cloud platforms. For more information, see the [following documentation ](https://docs.openshift.com/container-platform/4.6/installing/installing-fips.html){:target="_blank"}{: .externalLink}.
 
 A main consideration for the type of storage class that is chosen, is whether that storage class supports **allowVolumeExpansion**. The following returns **true** if it does:
 
@@ -49,18 +51,21 @@ oc get storageclass <desired storage class> -o json | jq .allowVolumeExpansion
 ```
 {: codeblock}
 
-If the storage class allows volume expansion, sizing can be adjusted post installation (given the underlying storage space is available for allocation). If the storage class does not allow volume expansion, you must pre-allocate storage for your use case. 
+If the storage class allows volume expansion, sizing can be adjusted post installation (given the underlying storage space is available for allocation). If the storage class does not allow volume expansion, you must pre-allocate storage for your use case.
 
-If more storage is necessary after initial installation with a storage class that does not allow for volume expansion, you will need to run through a re-installation using the steps that are described in the [backup and recovery](../admin/) page.
+If more storage is necessary after initial installation with a storage class that does not allow for volume expansion, you will need to run through a re-installation by using the steps that are described in the [backup and recovery](../admin/backup_recovery.md) page.
 
 The allocations can be changed before the {{site.data.keyword.ieam}} Management Hub installation by modifying the **Storage** values as described on the [configuration](configuration.md) page. The allocations are set to the following default values:
 
-* PostgreSQL Exchange (Stores data for the exchange, and fluctuates in size depending on usage, but the default storage setting can support up to 10,000 devices)
+* PostgreSQL Exchange (Stores data for the Exchange, and fluctuates in size depending on usage, but the default storage setting can support up to the advertised limit of edge nodes)
   * 20 GB
-* PostgreSQL AgBot (Stores data for the agbot, the default storage setting can support up to 10,000 devices)
+* PostgreSQL {{site.data.keyword.agbot}} (Stores data for the {{site.data.keyword.agbot}}, the default storage setting can support up to the advertised limit of edge nodes)
+
   * 20 GB
 * MongoDB Cloud Sync Service (stores content for the Model Management Service (MMS). Depending on the number and size of your models, you might want to modify this default allocation.
   * 50 GB
+* Hashicorp Vault persistent volume (Stores secrets used by edge device services)
+  * 10 GB (This volume size is not configurable)
 * Secure Device Onboarding persistent volume (Stores device ownership vouchers, device configuration options, and the deployment status of each device)
   * 1 GB (This volume size is not configurable)
 
@@ -80,18 +85,15 @@ At a minimum, provision **Remote** databases with the following resources and se
 
 ## Worker node sizing
 
-The services that use [Kubernetes compute resources](https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container) will be scheduled across available worker nodes.
+The services that use [Kubernetes compute resources ](https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container){:target="_blank"}{: .externalLink} will be scheduled across available worker nodes.
 
-### Minimal requirements for supporting up to 4,000 edge nodes (Supported with the default {{site.data.keyword.ieam}} configuration)
+### Minimal requirements for the default {{site.data.keyword.ieam}} configuration
 | Number of worker nodes | vCPUs per worker node | Memory per worker node (GB) | Local disk storage per worker node (GB) |
 | :---: | :---: | :---: | :---: |
 | 3	| 8	| 32	| 100 	|
 
-
-### Minimal requirements for supporting up to 30,000 edge nodes
-| Number of worker nodes | vCPUs per worker node | Memory per worker node (GB) | Local disk storage per worker node (GB) |
-| :---: | :---: | :---: | :---: |
-| 3	| 16	| 32	| 100 	|
+**Note:** Some customer environments might require additional vCPUs per worker node or additional worker nodes, so more CPU capacity can be
+allocated to the Exchange component.
 
 
 &nbsp;

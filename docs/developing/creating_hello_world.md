@@ -1,9 +1,10 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
-
+years: 2020 - 2022
+lastupdated: "2022-03-17"
+title: Creating your own hello world for clusters
+description: To deploy a containerized edge service to an edge cluster, the first step is to build a Kubernetes Operator that deploys the containerized edge service in a Kubernetes cluster.
 ---
 
 {:shortdesc: .shortdesc}
@@ -21,7 +22,7 @@ To deploy a containerized edge service to an edge cluster, the first step is to 
 
 Use this example to learn how to:
 
-* Create a new ansible operator using `operator-sdk`
+* Create an ansible operator by using `operator-sdk`
 * Use the operator to deploy a service to an edge cluster
 * Expose a port on your edge cluster that you can access externally with the `curl` command
 

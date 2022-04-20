@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 
 ---
 
@@ -22,4 +22,4 @@ lastupdated: "2021-02-20"
 These examples show you how to deploy and use edge services:
 
 * [Edge service examples](additional_examples.md)
-* [Deploying edge services](../using_edge_services/detailed_policy.md)
+* [Deploying edge services](detailed_policy.md)

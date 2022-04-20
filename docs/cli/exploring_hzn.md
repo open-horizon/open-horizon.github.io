@@ -1,9 +1,10 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
-
+yyears: 2020 - 2022
+lastupdated: "2022-03-17"
+title: hzn Command
+description: ""
 ---
 
 {:new_window: target="blank"}
@@ -14,7 +15,7 @@ lastupdated: "2021-02-20"
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
 
-# Exploring the hzn command
+# Exploring the hzn CLI
 {: #exploring-hzn}
 
 On {{site.data.keyword.horizon}} edge nodes, use the `hzn` command to inspect many aspects of the state of the local system and of the larger {{site.data.keyword.edge_notm}} ecosystem outside your edge node. Use the `hzn` command to interact with the system and change the state of resources you own.

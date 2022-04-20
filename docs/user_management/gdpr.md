@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 
 ---
 
@@ -56,7 +56,7 @@ IBM established a global readiness program that is tasked with preparing IBM's i
 ### More information
 
 * [EU GDPR Information Portal ](https://gdpr.eu/){:target="_blank"}{: .externalLink}
-*  [ibm.com/GDPR website ](https://www.ibm.com/data-responsibility/gdpr/){:target="_blank"}{: .externalLink}
+* [ibm.com/GDPR website ](https://www.ibm.com/data-responsibility/gdpr/){:target="_blank"}{: .externalLink}
 
 ## Product Configuration – considerations for GDPR Readiness
 {: #productconfig}

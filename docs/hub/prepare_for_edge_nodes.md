@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 
 ---
 
@@ -61,14 +61,14 @@ This content explains how to create an API key and gather some files and environ
 
 5. Contact your {{site.data.keyword.ieam}} administrator for help in setting these environment variables:
 
-  ```bash
-  export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
-  export HZN_ORG_ID=<your-exchange-organization>
-  mgmtHubIngress=$(oc get cm management-ingress-ibmcloud-cluster-info -o jsonpath='{.data.cluster_ca_domain}')
-  export HZN_FSS_CSSURL=https://$mgmtHubIngress/edge-css/
-  echo "export HZN_FSS_CSSURL=$HZN_FSS_CSSURL"
-  ```
-  {: codeblock}
+   ```bash
+   export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
+   export HZN_ORG_ID=<your-exchange-organization>
+   mgmtHubIngress=$(oc get cm management-ingress-ibmcloud-cluster-info -o jsonpath='{.data.cluster_ca_domain}')
+   export HZN_FSS_CSSURL=https://$mgmtHubIngress/edge-css/
+   echo "export HZN_FSS_CSSURL=$HZN_FSS_CSSURL"
+   ```
+   {: codeblock}
 
 ## What's next
 

@@ -1,9 +1,10 @@
 ---
 
 copyright:
-years: 2020
-lastupdated: "2020-04-7"
-
+years: 2020 - 2022
+lastupdated: "2022-03-17"
+title: Accessing logs
+description: Accessing management hub logs.
 ---
 
 {:new_window: target="blank"}

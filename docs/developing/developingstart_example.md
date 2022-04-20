@@ -1,9 +1,10 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
-
+years: 2020 - 2022
+lastupdated: "2022-03-17"
+title: Creating your own hello world edge service
+description: ""
 ---
 
 {:new_window: target="blank"}
@@ -13,9 +14,6 @@ lastupdated: "2021-02-20"
 {:pre: .pre}
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
-
-# Creating your own hello world edge service
-{: #dev_start_ex}
 
 The following example uses a simple `Hello World` service to help you learn more about developing for {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}). With this example, you develop a single edge service that supports three hardware architectures and uses the {{site.data.keyword.horizon}} development tools.
 {:shortdesc}
@@ -30,6 +28,7 @@ which git jq make
 ls ~/.hzn/keys/service.private.key ~/.hzn/keys/service.public.pem
 cat /etc/default/horizon
 ```
+{: codeblock}
 
 ## Procedure
 {: #dev_start_ex_procedure}

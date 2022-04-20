@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2020 - 2022
+lastupdated: "2022-03-17"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2021-02-20"
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
 
-# Install {{site.data.keyword.ieam}}
+# Installing {{site.data.keyword.ieam}}
 {: #hub_install_overview}
 
 You must install and configure a management hub before you start the {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) node tasks.
@@ -27,12 +27,13 @@ You must install and configure a management hub before you start the {{site.data
   * {{site.data.keyword.edge_notm}} agbot.
   * {{site.data.keyword.edge_notm}} Cloud Sync Service (CSS).
   * {{site.data.keyword.edge_notm}} Secure Device Onboarding (SDO).
+  * {{site.data.keyword.edge_notm}} Secrets manager (Vault).
 
 **Note:** Upgrade from {{site.data.keyword.edge_notm}} 4.1 is not supported.
 
-## Prerequisites
+## Before you begin
 {: #prereq}
 
 ## What's Next
 
-Continue setting up your new management hub by performing the steps in [post installation](post_install.md).
+Follow the steps in [post installation](post_install.md) to continue setting up your new management hub.

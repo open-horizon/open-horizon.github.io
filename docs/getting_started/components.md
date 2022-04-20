@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2019 - 2022
+lastupdated: "2022-03-08"
 
 ---
 
@@ -23,8 +23,11 @@ View the following table for a description of the {{site.data.keyword.ieam}} com
 
 |Component|Version|Description|
 |---------|-------|----|
-|Cloud Sync Service |1.4.1-173|The CSS is the component of the Model Management System (MMS) that stores machine learning models for later deployment to edge devices.|
-|Exchange API|2.54.0-176|The Exchange provides the REST API that holds all the definitions (patterns, policies, services, and so on) used by all the other components in {{site.data.keyword.ieam}}.|
-|Secure Device Onboard|1.8.6-83|The SDO component enables technology created by Intel to make it easy and secure to configure edge devices and associate them with an edge management hub.|
-|Cluster Agent|2.27.0-173|This is a container image which is installed as an agent on edge clusters to enable node workload management by {{site.data.keyword.ieam}}.|
-|Device Agent|2.27.0-173|This component is installed on edge devices to enable node workload management by {{site.data.keyword.ieam}}.|
+|Agbot|{{site.data.keyword.anax_ver}}|Agreement bot (agbot) instances are created centrally and are responsible for deploying workloads and machine learning models to {{site.data.keyword.ieam}}.|
+|MMS |1.5.3-338|The Model Management System (MMS) facilitates the storage, delivery, and security of models, data, and other metadata packages needed by edge services. This enables edge nodes to easily send and receive models and metadata to and from the cloud.|
+|Exchange API|2.87.0-531|The Exchange provides the REST API that holds all the definitions (patterns, policies, services, and so on) used by all the other components in {{site.data.keyword.ieam}}.|
+|Management console|1.5.0-578|The web UI used by {{site.data.keyword.ieam}} administrators to view and manage the other components of {{site.data.keyword.ieam}}.|
+|Secure Device Onboard|1.11.11-441|The SDO component enables technology that is created by Intel to make it simple and secure to configure edge devices and associate them with an edge management hub.|
+|Cluster Agent|{{site.data.keyword.anax_ver}}|This is a container image, which is installed as an agent on edge clusters to enable node workload management by {{site.data.keyword.ieam}}.|
+|Device Agent|{{site.data.keyword.anax_ver}}|This component is installed on edge devices to enable node workload management by {{site.data.keyword.ieam}}.|
+|Secrets Manager|1.0.0-168|The Secrets Manager is the repository for secrets deployed to edge devices, enabling services to securely receive credentials used to authenticate to their upstream dependencies.|
