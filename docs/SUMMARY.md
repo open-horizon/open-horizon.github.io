@@ -1,6 +1,6 @@
 # Summary
 
- * [{{site.data.keyword.edge}} {{site.data.keywork.version}}](kc_welcome_containers.html)
+ * [{{site.data.keyword.edge}} {{site.data.keyword.version}}](kc_welcome_containers.html)
  * [Release notes](getting_started/release_notes.md)
    * [What's new](getting_started/whats_new.md)
    * [Known issues and limitations](getting_started/known_issues.md)
