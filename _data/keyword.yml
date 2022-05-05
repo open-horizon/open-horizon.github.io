@@ -104,6 +104,8 @@ open_shift:
   OpenShift
 open_shift_cp:
   OpenShift Container Platform
+rhel:
+  Red Hat Enterprise Linux&reg;
 semver:
   4.2.0
 tech_prev:
