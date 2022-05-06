@@ -34,7 +34,7 @@ The following instructions guide you through the process of installing the requi
    * {{site.data.keyword.linux_ppc64le_notm}} devices or virtual machines that run Ubuntu 20.x (focal) or Ubuntu 18.x (bionic)
    * {{site.data.keyword.rhel}} 7.6, 7.9, 8.1, 8.2, and 8.3
 * ARM (32-bit)
-   * {{site.data.keyword.linux_notm}} on ARM (32-bit), for example Raspberry Pi, running Raspbian buster or stretch
+   * {{site.data.keyword.linux_notm}} on ARM (32-bit), for example Raspberry Pi, running Raspberry Pi OS buster or stretch
 * ARM (64-bit)
    * {{site.data.keyword.linux_notm}} on ARM (64-bit), for example NVIDIA Jetson Nano, TX1, or TX2, running Ubuntu 18.x (bionic)
 * Mac
@@ -67,7 +67,7 @@ To install and configure your edge device, click the link that represents your e
 * [{{site.data.keyword.linux_bit_notm}} devices or virtual machines](#x86-machines)
 * [{{site.data.keyword.rhel}} 8.x devices or virtual machines](#rhel8)
 * [{{site.data.keyword.linux_ppc64le_notm}} devices or virtual machines](#ppc64le-machines)
-* [{{site.data.keyword.linux_notm}} on ARM (32-bit)](#arm-32-bit); for example, Raspberry Pi running Raspbian
+* [{{site.data.keyword.linux_notm}} on ARM (32-bit)](#arm-32-bit); for example, Raspberry Pi running Raspberry Pi OS
 * [{{site.data.keyword.linux_notm}} on ARM (64-bit)](#arm-64-bit); for example, NVIDIA Jetson Nano, TX1, or TX2
 * [{{site.data.keyword.macOS_notm}}](#mac-os-x)
 
@@ -173,10 +173,10 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 {: #proc-pi}
 
 1. Prepare your Raspberry Pi device.
-   1. Flash the [Raspbian ](https://www.raspberrypi.org/downloads/raspbian/){:target="_blank"}{: .externalLink} {{site.data.keyword.linux_notm}} image onto your MicroSD card.
+   1. Flash the [Raspberry Pi OS ](https://www.raspberrypi.com/software/){:target="_blank"}{: .externalLink} {{site.data.keyword.linux_notm}} image onto your MicroSD card.
 
       For more information about how to flash MicroSD images from many operating systems, see [Raspberry Pi Foundation ](https://www.raspberrypi.org/documentation/installation/installing-images/README.md){:target="_blank"}{: .externalLink}.
-      These instructions use Raspbian for wifi and SSH configurations.  
+      These instructions use Raspberry Pi OS for wifi and SSH configurations.  
 
       **Warning:** Flashing an image onto your MicroSD card permanently erases any data that is already on your card.
 
@@ -207,7 +207,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 
    6. Start your device.
 
-   7. Change the default password for your device. In Raspbian flash images, the default account uses the login name `pi` and the default password `raspberry`.
+   7. Change the default password for your device. In Raspberry Pi OS flash images, the default account uses the login name `pi` and the default password `raspberry`.
 
       Log in to this account. Use the standard {{site.data.keyword.linux_notm}} `passwd` command to change the default password:
 
