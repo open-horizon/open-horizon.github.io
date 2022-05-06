@@ -9,6 +9,10 @@ body:
     attributes:
       value: Thank you for taking the time to file a Documentation update report
   - type: textarea
+  attributes:
+      label: Name of the document for which the changes are suggested?
+      description: "Please provide the name of the specific documents for which the changes are suggested."
+  - type: textarea
     attributes:
       label: What is the current documentation state?
       description: "Copy and paste the text currently in the documentation. If you want to improve graphs or photos, please provide a screenshot of the original."
@@ -18,12 +22,12 @@ body:
       description: "Provide additional information about the location where you have copied the above statement from."
   - type: textarea
     attributes:
-      label: Why do you want to improve the statement?
-      description: "Please explain why the statement needs to be updated. This can be because it is confusing, incorrect, spelling/grammatical errors, etc."
+      label: Why do you want to suggest the changes?
+      description: "Please explain why the changes are required. This can be because it is confusing, incorrect, spelling/grammatical errors, etc."
   - type: textarea
     attributes:
-      label: Proposed Statement
-      description: "Please propose how you would rewrite the statement. If you have a precise proposal, please make the changes and open a pull request."
+      label: Proposed Changes
+      description: "Please propose how you would rewrite the existing part of the document. If you have a precise proposal, please make the changes and open a pull request."
   - type: textarea
     attributes:
       label: Additional context.
