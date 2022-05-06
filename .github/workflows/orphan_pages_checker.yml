@@ -31,7 +31,7 @@ jobs:
                   kill -15 $pid
                   printf "Killed the Server\n"
                   printf "Finding Orphan Pages\n"
-                  diff -qr 127.0.0.1\:4000/ ./_site | grep Only | grep .html
+                  diff -qr 127.0.0.1\:4000/ ./_site | grep Only | grep .html | grep -v 404.html | grep -v dir.html
             - name: Creating issue
               uses: JasonEtco/create-an-issue@v2.4.0
               env:
