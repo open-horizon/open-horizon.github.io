@@ -67,7 +67,7 @@ Yes, and no.
 
 You can develop edge software that uses any {{site.data.keyword.linux_notm}} distribution as the base image of the Docker containers (if it uses the Dockerfile `FROM` statement) if that base functions on the host {{site.data.keyword.linux_notm}} kernel on your edge nodes. This means that you can use any distribution for your containers that Docker is able to run on your edge hosts.
 
-However, your edge node host operating system must be able to run a recent version of Docker and be able to run the {{site.data.keyword.horizon}} software. Currently, the {{site.data.keyword.horizon}} software is provided only as a Debian and RPM packages for edge nodes that run {{site.data.keyword.linux_notm}}. For Apple Macintosh machines, a Docker container version is provided. The {{site.data.keyword.horizon}} development team primarily uses Apple Macintosh, or the Ubuntu or Raspbian {{site.data.keyword.linux_notm}} distributions.
+However, your edge node host operating system must be able to run a recent version of Docker and be able to run the {{site.data.keyword.horizon}} software. Currently, the {{site.data.keyword.horizon}} software is provided only as a Debian and RPM packages for edge nodes that run {{site.data.keyword.linux_notm}}. For Apple Macintosh machines, a Docker container version is provided. The {{site.data.keyword.horizon}} development team primarily uses Apple Macintosh, or the Ubuntu or Raspberry Pi OS {{site.data.keyword.linux_notm}} distributions.
 
 Additionally, RPM package installation was tested on edge nodes configured with Red Hat Enterprise Linux (RHEL) Version 8.2.
 

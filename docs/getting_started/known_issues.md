@@ -38,7 +38,7 @@ These are known issues and limitations for {{site.data.keyword.ieam}}.
    ```
    {: codeblock}
 
-* When you are upgrading from Raspberry Pi Raspbian 9 (stretch) to Raspberry Pi Raspbian 10 (buster), a previously installed, configured, and running agent might require reinstallation. In some instances, the agent enters a restart loop that reinstallation solves. Run `ps -aux | grep "anax"` several times to observe if the agent PID is incrementing after the upgrade. This indicates whether a loop is encountered after the upgrade.
+* When you are upgrading from Raspberry Pi OS 10 (buster) or Raspberry Pi OS 11 (bullseye), a previously installed, configured, and running agent might require reinstallation. In some instances, the agent enters a restart loop that reinstallation solves. Run `ps -aux | grep "anax"` several times to observe if the agent PID is incrementing after the upgrade. This indicates whether a loop is encountered after the upgrade.
 
 * When you test a service that uses `hzn dev service start`, a 403 http log error occurs if the dependent service container uses the [Model Management System](../developing/model_management_system.md) (MMS) and if it is in a different organization from the top-level service.
 
