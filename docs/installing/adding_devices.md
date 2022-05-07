@@ -34,7 +34,7 @@ The following instructions guide you through the process of installing the requi
    * {{site.data.keyword.linux_ppc64le_notm}} devices or virtual machines that run Ubuntu 20.x (focal) or Ubuntu 18.x (bionic)
    * {{site.data.keyword.rhel}} 7.6, 7.9, 8.1, 8.2, and 8.3
 * ARM (32-bit)
-   * {{site.data.keyword.linux_notm}} on ARM (32-bit), for example Raspberry Pi, running Raspberry Pi OS buster or stretch
+   * {{site.data.keyword.linux_notm}} on ARM (32-bit), for example Raspberry Pi, running Raspberry Pi OS buster or bullseye
 * ARM (64-bit)
    * {{site.data.keyword.linux_notm}} on ARM (64-bit), for example NVIDIA Jetson Nano, TX1, or TX2, running Ubuntu 18.x (bionic)
 * Mac
