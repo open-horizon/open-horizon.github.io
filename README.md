@@ -35,7 +35,7 @@ We appreciate and recognize all contributors.
   - [Test your changes locally](#test-your-changes-locally)
   - [Commit changes](#commit-changes)
   - [Push changes to GitHub](#push-changes-to-github)
-  - [Possible Errros you may get.](#possible-errros-you-may-get)
+  - [Possible Errors you may get.](#possible-errors-you-may-get)
 - [Submit a Pull Request for Review](#submit-a-pull-request-for-review)
 - [Clean Up](#clean-up)
   - [Delete the branch](#delete-the-branch)
@@ -43,7 +43,7 @@ We appreciate and recognize all contributors.
 
 # Fork the Repository
 
-Fork this repository by clicking on the fork button on the top of this page. This will create a copy of this repository in your account.
+Fork this repository by clicking at the fork button on the top of this page. This will create a copy of this repository in your account.
 
 # Make Necessary Changes
 
@@ -53,7 +53,7 @@ To make changes, clone the forked repository to your machine.
 
 <img align="right" width="300" src="img/clone.jpg" alt="clone this repository" />
 
-Go to your GitHub account, open the forked repository, click **Code**, and then **copy to clipboard**.
+Go to your GitHub account, open the forked repository, click **Code**, and then **copy to the clipboard**.
 
 Open a terminal and run the following git command:
 
@@ -109,7 +109,7 @@ make init
 
 **Note**: Run the above command one time before using the tools each day.
 
-2. start the local web server, does not build the site first
+2. start the local web server, do not build the site first
 
 ```
 make run
@@ -151,7 +151,7 @@ Add those changes to the branch you just created using the `git add` command:
 git add <file>
 ```
 
-All commits should be signed off (`-s` flag on `git commit`). To use `-s` option, follow the [guidance](common-requests/contribute.md#how-to-attest) to make sure you configure your git name (user.name) and email address (user.email).
+All commits should be signed off (`-s` flag on `git commit`). To use the `-s` option, follow the [guidance](common-requests/contribute.md#how-to-attest) to make sure you configure your git name (user.name) and email address (user.email).
 
 Now commit those changes using the git commit command:
 
@@ -169,7 +169,7 @@ git push origin <add-your-branch-name>
 
 replacing `<add-your-branch-name>` with the name of the branch you created earlier.
 
-## Possible Errros 
+## Possible Errors 
 
 When setting up a project locally, some errors can occur. Some of those are listed below.
 
@@ -232,7 +232,7 @@ You will get a notification email once the changes have been merged.
 
 ## Delete the branch
 
-Once your Pull Request has been approved/merged, you are safe to delete the branch created ealier. Change to the repository directory on your computer and execute the following commands to delete the branch:
+Once your Pull Request has been approved/merged, you are safe to delete the branch created earlier. Change to the repository directory on your computer and execute the following commands to delete the branch:
 
 Delete the local branch:
 
@@ -246,7 +246,7 @@ Delete remote branch:
 git push origin :<branch-name>
 ```
 
-## Synching a fork
+## Syncing a fork
 
 Connect your local repository to the original, upstream repository by adding it as a remote. You should pull in changes from upstream often, so that you stay up-to-date. This helps avoid merge conflicts when you submit pull requests.
 
