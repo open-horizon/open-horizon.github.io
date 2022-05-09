@@ -43,7 +43,7 @@ We appreciate and recognize all contributors.
 
 # Fork the Repository
 
-Fork this repository by clicking at the fork button on the top of this page. This will create a copy of this repository in your account.
+Fork this repository by clicking on the fork button on the top of this page. This will create a copy of this repository in your account.
 
 # Make Necessary Changes
 
@@ -53,7 +53,7 @@ To make changes, clone the forked repository to your machine.
 
 <img align="right" width="300" src="img/clone.jpg" alt="clone this repository" />
 
-Go to your GitHub account, open the forked repository, click **Code**, and then **copy to the clipboard**.
+Go to your GitHub account, open the forked repository, click **Code**, and then **copy to clipboard**.
 
 Open a terminal and run the following git command:
 
