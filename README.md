@@ -15,7 +15,7 @@
 <img src="https://matrix.to/img/matrix-badge.svg" /></a>
 </p>
 
-# Contributing to Open Horizon pages
+# Contributing to [Open Horizon](open-horizon.github.io/) pages
 
 If you would like to contribute content, read the following documentation for helpful information and guidelines.
 
