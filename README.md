@@ -16,7 +16,7 @@
 </p>
 
 # Contributing to Open Horizon pages
-To visit this Open Horizon documentation site visit [open-horizon.github.io](open-horizon.github.io/)
+To visit this Open Horizon documentation site visit [open-horizon.github.io](https://open-horizon.github.io/)
 
 If you would like to contribute content, read the following documentation for helpful information and guidelines.
 
