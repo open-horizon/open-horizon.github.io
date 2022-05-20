@@ -87,7 +87,7 @@ To install and configure your edge device, click the link that represents your e
 
 Prepare your device by installing a Debian, {{site.data.keyword.rhel}}, or Ubuntu {{site.data.keyword.linux_notm}}. The instructions in this content are based on a device that uses Ubuntu 18.x.
 
-Install the most recent version of Docker on your device. For more information, see [Install Docker ](https://docs.docker.com/engine/install/ubuntu/){:target="_blank"}{: .externalLink}.
+Install the most recent version of Docker or Podman on your device. For more information, see [Install Docker ](https://docs.docker.com/engine/install/ubuntu/){:target="_blank"}{: .externalLink} or [Podman.io ](https://podman.io/){:target="_blank"}{: .externalLink}.
 
 Now that your edge device is prepared, continue on to [Installing the agent](registration.md).
 
