@@ -61,7 +61,7 @@ Follow these steps:
    ```
    {: codeblock}
 
-      If docker or is not installed, or the version is older than `18.06.01`, install the most recent version of Docker. Alternatively, Podman v4 or greater is also supported.
+      If docker is not installed, or the version is older than `18.06.01`, install the most recent version of Docker. Alternatively, Podman v4 or greater is also supported.
 
    ```bash
    curl -fsSL get.docker.com | sh
