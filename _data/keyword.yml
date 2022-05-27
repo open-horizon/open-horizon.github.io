@@ -84,6 +84,8 @@ linux_bit:
   Linux&reg; x86_64
 linux_bit_notm:
   Linux x86_64
+linux_ppc64le_notm:
+  Linux ppc64le
 mac_notm:
   Mac
 mac:
