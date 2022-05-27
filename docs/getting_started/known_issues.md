@@ -2,7 +2,7 @@
 
 copyright:
 years: 2020 - 2022
-lastupdated: "2022-03-17"
+lastupdated: "2022-05-27"
 
 ---
 
@@ -50,6 +50,6 @@ These are known issues and limitations for {{site.data.keyword.ieam}}.
 
 * If you change the **owner** or **public** attributes of services, patterns, or deployment policies in the exchange, it can take as long as five minutes to access those resources to view the change. Similarly, when you give an exchange user admin privilege, it can take as long as five minutes for that change to propagate to all of the exchange instances. The length of time can be reduced by setting `api.cache.resourcesTtlSeconds` to a lower value (the default is 300 seconds) in the exchange `config.json` file, at the cost of slightly lower performance.
 
-* Installation of edge devices with Fedora or SuSE is only supported by the [Advanced manual agent installation and registration](../installing/advanced_man_install.md) method.
+* Installation of edge devices with {{site.data.keyword.fedora}} or SuSE is only supported by the [Advanced manual agent installation and registration](../installing/advanced_man_install.md) method.
 
 For the full list of open issues for the {{site.data.keyword.ieam}} OpenSource layer, review the GitHub issues in each of the [Open Horizon repositories ](https://github.com/open-horizon/){:target="_blank"}{: .externalLink}.

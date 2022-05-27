@@ -44,6 +44,10 @@ edge_service:
   Open Horizon service
 edge_services:
   Open Horizon services
+event_streams:
+  Apache Kafka
+fedora:
+  Fedora
 homebrew:
   Homebrew&reg;
 horizon_open:
@@ -70,8 +74,6 @@ intel:
   Intel&reg;
 IBM_notm:
   IBM
-event_streams:
-  Apache Kafka
 ibm_cloud:
   IBM Cloud
 klust:

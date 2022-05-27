@@ -27,7 +27,7 @@ The following instructions guide you through the process of installing the requi
 - x86_64
   - {{site.data.keyword.linux_bit_notm}} devices or virtual machines that run Ubuntu 22.x (jammy), Ubuntu 20.x (focal), Ubuntu 18.x (bionic), Debian 10 (buster), Debian 9 (stretch)
   - {{site.data.keyword.rhel}} 8.1, 8.2, 8.3, 8.4, 8.5 and 8.6
-  - Fedora Workstation 32
+  - {{site.data.keyword.Fedora} Workstation 32, 36
   - CentOS 8.1, 8.2, 8.3, 8.4 and 8.5
   - SuSE 15 SP2
 - ppc64le
