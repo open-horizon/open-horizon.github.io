@@ -8,10 +8,9 @@ on:
 jobs:
   markdown_lint:
   name: Check Markdown files
-    runs-on: ubuntu-latest
+    runs-on: [ubuntu-latest]
     steps:
       - uses: actions/checkout@v2
-
       - name: Markdown Lint
         uses: ruzickap/action-my-markdown-linter@v1
         with:
