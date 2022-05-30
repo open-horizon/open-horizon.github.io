@@ -17,7 +17,5 @@ jobs:
         with:
           config_file: my_markdownlint.yml
           debug: true
-          exclude: |
-            CHANGELOG.md
           search_paths: |
             docs/
