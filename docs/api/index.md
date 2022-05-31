@@ -28,6 +28,6 @@ For most users, the `hzn` command line interface (CLI) tool, which calls these A
 * [Agent API](agent_api.md)
 * [Agbot API](agbot_api.md)
 * [Agbot User API](agbot_secure_api.json)
-* [Exchange API](exchange_swagger.html)
+* [Exchange API](exchange_swagger.json)
 * [MMS API](mms_swagger.html)
 * [SDO API](sdo_swagger.html)
