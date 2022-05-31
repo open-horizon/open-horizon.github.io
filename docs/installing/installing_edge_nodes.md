@@ -2,7 +2,7 @@
 
 copyright:
 years: 2020 - 2022
-lastupdated: "2022-03-17"
+lastupdated: "2022-05-31"
 
 ---
 
@@ -24,4 +24,5 @@ Typically, edge devices have a prescriptive purpose, provide (often limited) com
 For more information about installing the required software for {{site.data.keyword.edge_notm}} for nodes, see:
 
 * [Edge devices](../installing/edge_devices.md)
+* [Commandline Interface (CLI)](../cli/hzn_cli.md)
 * [Edge clusters](../installing/edge_clusters.md)

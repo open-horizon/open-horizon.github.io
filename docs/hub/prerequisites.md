@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2021 - 2022
+lastupdated: "2022-05-31"
 
 ---
 
@@ -17,21 +17,20 @@ lastupdated: "2021-02-20"
 # Install {{site.data.keyword.ieam}}
 {: #hub_install_overview}
 
-You must install and configure a management hub before you start the {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) node tasks.
+You must install and configure a [management hub](../hub/overview.md) before you start the {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) node tasks.
 
 ## Installation summary
 {: #sum}
 
 * This content describes the steps to deploy the following components.
-  * [IBM Cloud Platform Common Services](https://www.ibm.com/support/knowledgecenter/SSHKN6/kc_welcome_cs.html){:target="_blank"}{: .externalLink}.
-  * {{site.data.keyword.edge_notm}} Management Hub operator.
-  * {{site.data.keyword.edge_notm}} exchange API.
-  * {{site.data.keyword.edge_notm}} agbot.
-  * {{site.data.keyword.edge_notm}} Cloud Sync Service (CSS).
-  * {{site.data.keyword.edge_notm}} user interface.
-  * {{site.data.keyword.edge_notm}} Secure Device Onboarding (SDO).
+  * {{site.data.keyword.edge_notm}} Management Hub
+  * {{site.data.keyword.edge_notm}} exchange API
+  * {{site.data.keyword.edge_notm}} agbot
+  * {{site.data.keyword.edge_notm}} Cloud Sync Service (CSS)
+  * {{site.data.keyword.edge_notm}} [commandline interface](../cli/index.md)
+  * {{site.data.keyword.edge_notm}} Secure Device Onboarding (SDO)
 
-**Note:** Upgrade from {{site.data.keyword.edge_notm}} 4.1 is not supported.
+**Note:** Upgrade from previous versions of {{site.data.keyword.edge_notm}} is not supported.
 
 ## Prerequisites
 {: #prereq}

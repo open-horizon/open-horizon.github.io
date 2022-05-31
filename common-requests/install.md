@@ -8,7 +8,7 @@ description: "Instructions for installing the Open Horizon project's Management 
 
 ## Pre-requisites
 
-To run the [all-in-one instructions](https://github.com/open-horizon/devops/tree/master/mgmt-hub) for the Management Hub, Agent, and CLI all in one VM, you need a VM with: 
+To run the [all-in-one instructions](https://github.com/open-horizon/devops/tree/master/mgmt-hub) for the Management Hub, Agent, and [CLI](../docs/cli/index.md) all in one VM, you need a VM with: 
 
 * &gt;= 4GB RAM
 * 20GB storage 
