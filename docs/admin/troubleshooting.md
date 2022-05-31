@@ -26,7 +26,7 @@ For more information about {{site.data.keyword.open_shift_cp}}, see these resour
 
 ## Kubernetes troubleshooting
 
-{{site.data.keyword.ocp_tm}} is a certified Kubernetes distribution, and as such, most of the Kubernetes documentation can be used for your {{site.data.keyword.open_shift}} cluster. See [Kubernetes debugging ](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application/){:target="_blank"}{: .externalLink} for an application debugging guide.
+{{site.data.keyword.ocp_tm}} is a certified Kubernetes distribution, and as such, most of the Kubernetes documentation can be used for your {{site.data.keyword.open_shift}} cluster. See [Kubernetes debugging ](https://kubernetes.io/docs/tasks/debug/debug-application/debug-pods/){:target="_blank"}{: .externalLink} for an application debugging guide.
 
 **Note:** The **oc** binary uses many **kubectl** commands in an identical way, but some differences and expanded capabilities do exist. For more information, see [{{site.data.keyword.open_shift}} CLI documentation ](https://docs.openshift.com/container-platform/4.5/cli_reference/openshift_cli/usage-oc-kubectl.html){:target="_blank"}{: .externalLink}. 
 
