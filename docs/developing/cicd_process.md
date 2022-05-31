@@ -49,7 +49,7 @@ When you are developing a new service version, access to a full, real-world test
 
 To do this, create a deployment policy or pattern that refers only to your new service version. Then, register your testing nodes with this new policy or pattern. If using a policy, one option is to set a property on an edge node. For example, "name": "mode", "value": "testing"), and add that constraint to your deployment policy ("mode == testing"). This lets you be sure only the nodes you set aside for testing receive the new version of your service. 
 
-Note: You can create deployment policy or pattern using Open Horion CLI.
+Note: You can create a deployment policy or pattern using the {{site.data.keyword.edge_notm}} CLI.
 
 ## Production deployment
 {: #production_deployment}
