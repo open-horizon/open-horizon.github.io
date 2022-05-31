@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2021 - 2022
+lastupdated: "2022-05-27"
 
 ---
 
@@ -54,14 +54,14 @@ Follow these steps:
    ```
    {: codeblock}
 
-2. Query the Docker version to check whether it is recent enough:
+2. Query the Docker or Podman version to check whether it is recent enough:
 
    ```bash
    docker --version
    ```
    {: codeblock}
 
-      If docker is not installed, or the version is older than `18.06.01`, install the most recent version of Docker:
+      If docker is not installed, or the version is older than `18.06.01`, install the most recent version of Docker. Alternatively, Podman v4 or greater is also supported.
 
    ```bash
    curl -fsSL get.docker.com | sh
@@ -72,17 +72,19 @@ Follow these steps:
 3. Install the Horizon packages that you copied to this edge device:
 
    * For Debian/Ubuntu distributions:
+
       ```bash
       apt update && apt install ./*horizon*.deb
       ```
       {: codeblock}
 
-   * For Red Hat Enterprise Linux&reg; distributions:
+   * For {{site.data.keyword.rhel}} or {{site.data.keyword.fedora}} distributions:
+
       ```bash
       yum install ./*horizon*.rpm
       ```
       {: codeblock}
-   
+
 4. Set your specific information as environment variables:
 
    ```bash
@@ -103,7 +105,7 @@ Follow these steps:
    if grep -qE '^HZN_MGMT_HUB_CERT_PATH=' /etc/default/horizon; then sed -i.bak -e "s|^HZN_MGMT_HUB_CERT_PATH=[^ ]*|HZN_MGMT_HUB_CERT_PATH=${PWD}/agent-install.crt|" /etc/default/horizon; else echo "HZN_MGMT_HUB_CERT_PATH=${PWD}/agent-install.crt" >> /etc/default/horizon; fi
    ```
    {: codeblock}
-   
+
 7. Restart the agent to pick up the changes to `/etc/default/horizon`:
 
    ```bash
@@ -118,7 +120,7 @@ Follow these steps:
    hzn exchange version
    hzn node list
    ```
-   {: codeblock}  
+   {: codeblock}
 
       The output should look similar to this example (version numbers and URLs might be different):
 
@@ -199,6 +201,7 @@ Follow these steps:
   horizon-container stop
   ```
   {: codeblock}
+
 5. Set your specific information as environment variables:
 
   ```bash
@@ -236,7 +239,7 @@ Follow these steps:
   ```
   {: codeblock}
 
-      The output should look similar to this (version numbers and URLs might be different):
+   The output should look similar to this (version numbers and URLs might be different):
 
   ```bash
   $ hzn version
