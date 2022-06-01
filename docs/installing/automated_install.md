@@ -26,7 +26,8 @@ Note: These steps are the same for all edge device types (architectures).
    ```bash
    export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
    export HZN_ORG_ID=<your-exchange-organization>
-   export HZN_FSS_CSSURL=https://<ieam-management-hub-ingress>/edge-css/
+   export HZN_FSS_CSSURL=https://<management-hub-ingress>/edge-css/
+   export HZN_EXCHANGE_URL=https://<management-hub-ingress>/edge-exchange/v1
    ```
    {: codeblock}
 
