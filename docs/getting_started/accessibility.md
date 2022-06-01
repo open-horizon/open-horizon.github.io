@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2021 - 2022
+lastupdated: "2022-05-31"
 
 ---
 
@@ -23,4 +23,4 @@ Accessibility features assist users who have a disability, such as restricted mo
 
 {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) includes the following major accessibility features:
 
-* Command line interface (CLI) to manage the {{site.data.keyword.ieam}} cluster
+* [Commandline interface (CLI)](../cli/index.md) to manage the {{site.data.keyword.ieam}} cluster

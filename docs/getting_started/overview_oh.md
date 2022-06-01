@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2021 - 2022
+lastupdated: "2022-05-31"
 
 ---
 
@@ -41,7 +41,7 @@ The {{site.data.keyword.ieam}} management hub is designed specifically for edge 
 # Components
 {: #components}
 
-{{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) includes several components that are bundled with the product. The following table provides a description of the {{site.data.keyword.ieam}} components:
+{{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) includes [several components](../getting_started/components.md) that are bundled with the product. The following table provides a description of the {{site.data.keyword.ieam}} components:
 
 |Component|Version|Description|
 |---------|-------|----|
@@ -59,4 +59,12 @@ The {{site.data.keyword.ieam}} management hub is designed specifically for edge 
 
 ## What's next
 
-For more information about using {{site.data.keyword.ieam}} and developing edge services, review the topics that are listed in {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) [Welcome page](../)
+For more information about using {{site.data.keyword.ieam}} and developing edge services, review the topics that are listed in {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) [Welcome page](../) and in the following sections:
+
+* [Accessibility](../getting_started/accessibility.md)
+* [Components](../getting_started/components.md)
+* [Developer learning path](../getting_started/developer_learning_path.md)
+* [Documentation conventions](../getting_started/document_conventions.md)
+* [Frequently Asked Questions (FAQ)](../getting_started/faq.md)
+* [Known issues and limitations](../getting_started/known_issues.md)
+* [Release notes](../getting_started/release_notes.md)

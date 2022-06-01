@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2021 - 2022
+lastupdated: "2022-05-31"
 
 ---
 
@@ -34,4 +34,5 @@ Complete the management hub installation and configuration before starting the {
 
 ## Related information
 
+* [Exchange API information](../installing/exchange_api.md)
 * [Installing edge nodes](../installing/installing_edge_nodes.md)
