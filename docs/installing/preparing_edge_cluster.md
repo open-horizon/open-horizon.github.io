@@ -269,6 +269,7 @@ This content provides a summary of how to install microk8s, a lightweight and sm
       ```bash
       microk8s.enable registry
       export REGISTRY_ENDPOINT=localhost:32000
+      export REGISTRY_IP_ENDPOINT=$(kubectl get service registry -n container-registry | grep registry | awk '{print $3;}'):5000
       ```
       {: codeblock}
 
@@ -281,11 +282,11 @@ This content provides a summary of how to install microk8s, a lightweight and sm
       ```
       {: codeblock}
 
-   3. Define this registry as insecure to docker. Create or add to **/etc/docker/daemon.json** (replacing `<registry-endpoint>` with the value of the `$REGISTRY_ENDPOINT` environment variable you obtained in a previous step).
+   3. Define this registry as insecure to docker. Create or add to **/etc/docker/daemon.json** by replacing `<registry-endpoint>` with the `$REGISTRY_ENDPOINT` environment variable value that you obtained in a previous step. Also, replace `<registry-ip-endpoint>` with the value of the `$REGISTRY_IP_ENDPOINT` environment variable value that you obtained in a previous step.
 
       ```json
       {
-        "insecure-registries": [ "<registry-endpoint>" ]
+        "insecure-registries": [ "<registry-endpoint>", "<registry-ip-endpoint>" ]
       }
       ```
       {: codeblock}
