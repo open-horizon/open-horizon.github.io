@@ -54,20 +54,39 @@ Follow these steps:
    ```
    {: codeblock}
 
-2. Query the Docker or Podman version to check whether it is recent enough:
+2. Query the OCI container runtime version to check whether it is recent enough:
 
-   ```bash
-   docker --version
-   ```
-   {: codeblock}
+   a. Docker
 
-      If docker is not installed, or the version is older than `18.06.01`, install the most recent version of Docker. Alternatively, Podman v4 or greater is also supported.
+      ```bash
+      docker --version
+      ```
+      {: codeblock}
 
-   ```bash
-   curl -fsSL get.docker.com | sh
-   docker --version
-   ```
-   {: codeblock}
+      If docker is not installed, or the version is older than `18.06.01`, install the most recent version of Docker.
+
+      ```bash
+      curl -fsSL get.docker.com | sh
+      docker --version
+      ```
+      {: codeblock}
+
+   b. Podman
+
+      ```bash
+      podman --version
+      ```
+      {: codeblock}
+
+   If podman is not installed, or the version is older than `4.0`, install the most recent version of Podman.
+
+      ```bash
+      dnf install podman podman-docker netavark
+      podman --version
+      ```
+      {: codeblock}
+
+   Switch the network stack from CNI to Netavark. The {{site.data.keyword.horizon}} agent requires the network backend to be configured to use netavark instead of cni so that the agent can set up networking scenarios such as dependent services between containers.  Follow the steps in the Red Hat documentation [switching the network stack ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/building_running_and_managing_containers/index#proc_switching-the-network-stack-from-cni-to-netavark_assembly_setting-container-network-modes){:target="_blank"}{: .externalLink} chapter.
 
 3. Install the Horizon packages that you copied to this edge device:
 
@@ -92,7 +111,7 @@ Follow these steps:
    ```
    {: codeblock}
 
-5. Point your edge device horizon agent to your {{site.data.keyword.edge_notm}} cluster by populating `/etc/default/horizon` with the correct information:
+5. Point your edge device {{site.data.keyword.horizon}} agent to your {{site.data.keyword.edge_notm}} cluster by populating `/etc/default/horizon` with the correct information:
 
    ```bash
    sed -i.bak -e "s|^HZN_EXCHANGE_URL=[^ ]*|HZN_EXCHANGE_URL=${HZN_EXCHANGE_URL}|g" -e "s|^HZN_FSS_CSSURL=[^ ]*|HZN_FSS_CSSURL=${HZN_FSS_CSSURL}|g" /etc/default/horizon
@@ -195,7 +214,7 @@ Follow these steps:
   ```
   {: codeblock}
 
-4. When you are installing a **new device**, this step is not necessary. But if you installed and started the horizon container on this machine previously, stop it now by running:
+4. When you are installing a **new device**, this step is not necessary. But if you installed and started the {{site.data.keyword.horizon}} container on this machine previously, stop it now by running:
 
   ```bash
   horizon-container stop
@@ -209,7 +228,7 @@ Follow these steps:
   ```
   {: codeblock}
 
-6. Point your edge device horizon agent to your {{site.data.keyword.edge_notm}} cluster by populating `/etc/default/horizon` with the correct information:
+6. Point your edge device {{site.data.keyword.horizon}} agent to your {{site.data.keyword.edge_notm}} cluster by populating `/etc/default/horizon` with the correct information:
 
   ```bash
   sudo mkdir -p /etc/default
