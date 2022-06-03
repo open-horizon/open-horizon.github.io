@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2021 - 2022
+lastupdated: "2022-06-03"
 title: APIs
 description: ""
 ---
@@ -27,7 +27,12 @@ For most users, the `hzn` command line interface (CLI) tool, which calls these A
 
 * [Agent API](agent_api.md)
 * [Agbot API](agbot_api.md)
+{% if site.data.keyword.edge_notm == "Open Horizon" %}
+* [Agbot User API](../api/agbot_secure_api.html)
+* [Exchange API](../api/exchange_swagger.html)
+{% else %}
 * [Agbot User API](agbot_secure_api.json)
 * [Exchange API](exchange_swagger.json)
+{% endif %}
 * [MMS API](mms_swagger.html)
 * [SDO API](sdo_swagger.html)
