@@ -26,13 +26,10 @@ The {{site.data.keyword.ieam}} REST APIs are documented within the {{site.data.k
 For most users, the `hzn` command line interface (CLI) tool, which calls these APIs, is sufficient for completing most tasks. If you do use this tool, direct use of the API is unnecessary.
 
 * [Agent API](agent_api.md)
-* [Agbot API](agbot_api.md)
-{% if site.data.keyword.edge_notm == "Open Horizon" %}
+* [Agbot API](agbot_api.md){% if site.data.keyword.edge_notm == "Open Horizon" %}
 * [Agbot User API](../api/agbot_secure_api.html)
-* [Exchange API](../api/exchange_swagger.html)
-{% else %}
+* [Exchange API](../api/exchange_swagger.html){% else %}
 * [Agbot User API](agbot_secure_api.json)
-* [Exchange API](exchange_swagger.json)
-{% endif %}
+* [Exchange API](exchange_swagger.json){% endif %}
 * [MMS API](mms_swagger.html)
 * [SDO API](sdo_swagger.html)
