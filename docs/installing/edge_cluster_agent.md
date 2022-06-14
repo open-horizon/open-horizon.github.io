@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2022
+lastupdated: "2022-06-14"
 
 ---
 
@@ -47,9 +47,9 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
 2. If you have not completed the steps in [Prepare for setting up edge nodes](../hub/prepare_for_edge_nodes.md), do that now. This process creates an API key, locates some files, and gathers environment variable values that are needed when you set up edge nodes. Set the same environment variables on this edge cluster:
 
   ```bash
-  export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
+  export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
   export HZN_ORG_ID=<your-exchange-organization>
-  export HZN_FSS_CSSURL=https://<ieam-management-hub-ingress>/edge-css/
+  export HZN_FSS_CSSURL=https://<management-hub-ingress>/edge-css/
   ```
   {: codeblock}
 
@@ -60,7 +60,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
    ```
    {: codeblock}
 
-4. Set the storage class that you want the agent use to either a built-in storage class or one you created. For example:
+4. Set the storage class that you want the agent to use - either a built-in storage class or one that you created. For example:
 
    ```bash
    export EDGE_CLUSTER_STORAGE_CLASS=rook-ceph-cephfs-internal
@@ -78,7 +78,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
    ```
    {: codeblock}
 
-   **Note:** The {{site.data.keyword.ieam}} agent image is stored in the local edge cluster registry because the edge cluster Kubernetes needs ongoing access to it, in case it needs to restart it or move it to another pod.
+   **Note**: The {{site.data.keyword.ieam}} agent image is stored in the local edge cluster registry because the edge cluster Kubernetes needs ongoing access to it, in case it needs to restart it or move it to another pod.
 
 7. Copy the **agent-install.sh** script to your new edge cluster.
 
@@ -89,7 +89,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
    ```
    {: codeblock}
 
-   **Notes:**
+   **Notes**:
    * To see all of the available flags, run: **./agent-install.sh -h**
    * If an error causes **agent-install.sh** to fail, correct the error and run **agent-install.sh** again. If that does not work, run **agent-uninstall.sh** (see [Removing agent from edge cluster](../using_edge_services/removing_agent_from_cluster.md)) before running **agent-install.sh** again.
 
@@ -126,7 +126,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on [k
 2. If you have not completed the steps in [Prepare for setting up edge nodes](../hub/prepare_for_edge_nodes.md), do that now. This process creates an API key, locates some files, and gathers environment variable values that are needed when setting up edge nodes. Set the same environment variables on this edge cluster:
 
   ```bash
-  export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
+  export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
   export HZN_ORG_ID=<your-exchange-organization>
   export HZN_FSS_CSSURL=https://<ieam-management-hub-ingress>/edge-css/
   ```
@@ -176,7 +176,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on [k
    ```
    {: codeblock}
 
-   **Notes:**
+   **Notes**:
    * To see all of the available flags, run: **./agent-install.sh -h**
    * If an error occurs causing **agent-install.sh** to not complete successfully, correct the error that is displayed, and run **agent-install.sh** again. If that does not work, run **agent-uninstall.sh** (see [Removing agent from edge cluster](../using_edge_services/removing_agent_from_cluster.md)) before running **agent-install.sh** again.
 
@@ -229,7 +229,7 @@ Setting node policy on this edge cluster can cause deployment policies to deploy
    ```
    {: codeblock}
 
-   **Note:**
+   **Note**:
    * Because the real **hzn** command is running inside the agent container, for any `hzn` commands that require an input file, you need to pipe the file into the command so its content will be transferred into the container.
 
 4. After a minute, check for an agreement and the running edge operator and service containers:
