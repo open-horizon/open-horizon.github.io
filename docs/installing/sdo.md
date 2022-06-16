@@ -2,7 +2,7 @@
 
 copyright:
 years: 2020 - 2022
-lastupdated: "2022-03-17"
+lastupdated: "2022-06-14"
 
 ---
 
@@ -54,7 +54,7 @@ Before you purchase SDO-enabled edge devices, you can test SDO support in {{site
    ```bash
    export HZN_ORG_ID=<exchange-org>
    export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
-   export HZN_SDO_SVC_URL=https://<ieam-mgmt-hub-ingress>/edge-sdo-ocs/api
+   export HZN_SDO_SVC_URL=https://<mgmt-hub-ingress>/edge-sdo-ocs/api
    export HZN_MGMT_HUB_CERT_PATH=<path-to-mgmt-hub-self-signed-cert>
    export CURL_CA_BUNDLE=$HZN_MGMT_HUB_CERT_PATH
    ```
@@ -75,7 +75,7 @@ If you have purchased SDO-enabled devices and want to incorporate them into your
       ```bash
       export HZN_ORG_ID=<exchange-org>
       export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
-      export HZN_SDO_SVC_URL=https://<ieam-mgmt-hub-ingress>/edge-sdo-ocs/api
+      export HZN_SDO_SVC_URL=https://<mgmt-hub-ingress>/edge-sdo-ocs/api
       export HZN_MGMT_HUB_CERT_PATH=<path-to-mgmt-hub-self-signed-cert>
       export CURL_CA_BUNDLE=$HZN_MGMT_HUB_CERT_PATH
       ```
@@ -84,7 +84,7 @@ If you have purchased SDO-enabled devices and want to incorporate them into your
 
 2. [Log in to the {{site.data.keyword.ieam}} management console](../console/accessing_ui.md).
 
-3. On the **Nodes** tab, click **Add node**. 
+3. On the **Nodes** tab, click **Add node**.
 
    Enter the information necessary to create a private ownership key in the SDO service and download the corresponding public key.
 

@@ -2,7 +2,7 @@
 
 copyright:
 years: 2020 - 2022
-lastupdated: "2022-05-05"
+lastupdated: "2022-06-14"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2022-05-05"
 
 {: #document_conventions}
 
-This document uses content conventions to convey specific meaning.  
+This document uses content conventions to convey specific meaning.
 
 ## Command conventions
 
@@ -26,7 +26,7 @@ Replace the variable content that is shown in < > with values specific to your n
 
 ### Example
 
-  ```sh
+  ```bash
   hzn key create "<companyname>" "<youremailaddress>"
   ```
   {: codeblock}

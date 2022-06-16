@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2022
+lastupdated: "2022-06-14"
 title: hzn CLI
 description: ""
 ---
@@ -18,9 +18,9 @@ description: ""
 # Installing the hzn CLI
 {: #using_hzn_cli}
 
-When you install the {{site.data.keyword.ieam}} agent software on an edge node, the **hzn** CLI is automatically installed. But you can also install the **hzn** CLI without the agent. For example, an edge administrator might want to query the {{site.data.keyword.ieam}} exchange or an edge developer might want to test with **hzn dev** commands.
+The `hzn` command is the {{site.data.keyword.ieam}} command line interface. When you install the {{site.data.keyword.ieam}} agent software on an edge node, the `hzn` CLI is automatically installed. But you can also install the `hzn` CLI without the agent. For example, an edge administrator might want to query the {{site.data.keyword.ieam}} exchange or an edge developer might want to test with `hzn` commands, without the full agent.
 
-1. Get the **agentInstallFiles-&lt;edge-device-type&gt;.tar.gz** file from your management hub administrator, where **&lt;edge-device-type&gt;** matches the host where you installing **hzn**. They were already created in [Gather the necessary information and files for edge devices](../hub/gather_files.md#prereq_horizon). Copy this file to the host where you are installing **hzn**.
+1. Get the **agentInstallFiles-&lt;edge-device-type&gt;.tar.gz** file from your management hub administrator, where **&lt;edge-device-type&gt;** matches the host where you installing `hzn`. They were already created in [Gather the necessary information and files for edge devices](../hub/gather_files.md#prereq_horizon). Copy this file to the host where you are installing **hzn**.
 
 2. Set the file name in an environment variable for subsequent steps:
 
@@ -29,28 +29,37 @@ When you install the {{site.data.keyword.ieam}} agent software on an edge node, 
    ```
    {: codeblock}
 
-3. Extract the horizon CLI package from the tar file:
+3. Extract the `horizon_cli` package from the `agentInstallFiles-<edge-device-type>.tar.gz` tar file:
 
    ```bash
    tar -zxvf $AGENT_TAR_FILE 'horizon-cli*'
    ```
    {: codeblock}
 
-   * Confirm that the package version is the same as the device agent listed in [Components](../getting_started/components.md).
+4. Install the `horizon-cli` package:
 
-4. Install the **horizon-cli** package:
+   - Confirm that the package version is the same as the device agent listed in [Components](../getting_started/components.md).
 
-   * On a debian-based distro:
+   - On a debian-based distro:
 
      ```bash
-     sudo apt update && sudo apt install horizon-cli*.deb
+     sudo apt update && sudo apt install ./horizon-cli*.deb
      ```
      {: codeblock}
 
-   * On {{site.data.keyword.macOS_notm}}:
+   - On a RPM-based distro:
 
      ```bash
+     sudo yum install ./horizon-cli*.rpm
+     ```
+     {: codeblock}
+
+   - On {{site.data.keyword.macOS_notm}}:
+
+     ```bash
+     sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain horizon-cli.crt
      sudo installer -pkg horizon-cli-*.pkg -target /
+     pkgutil --pkg-info com.github.open-horizon.pkg.horizon-cli   # confirm version installed
      ```
      {: codeblock}
 
@@ -58,16 +67,23 @@ When you install the {{site.data.keyword.ieam}} agent software on an edge node, 
 
 ## Uninstalling the hzn CLI
 
-If you want to remove the **horizon-cli** package from a host:
+If you want to remove the `horizon-cli` package from a host:
 
-* Uninstall **horizon-cli** from a debian-based distro:
+- Uninstall `horizon-cli` from a debian-based distro:
 
   ```bash
   sudo apt-get remove horizon-cli
   ```
   {: codeblock}
 
-* Or uninstall **horizon-cli** from {{site.data.keyword.macOS_notm}}:
+- Uninstall `horizon-cli` from an RPM-based distro:
+
+  ```bash
+  sudo yum remove horizon-cli
+  ```
+  {: codeblock}
+
+- Or uninstall `horizon-cli` from {{site.data.keyword.macOS_notm}}:
 
   ```bash
   sudo horizon-cli-uninstall.sh
