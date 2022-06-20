@@ -2,7 +2,7 @@
 
 copyright:
 years: 2022
-lastupdated: "2022-06-14"
+lastupdated: "2022-06-19"
 
 ---
 
@@ -46,12 +46,12 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
 
 2. If you have not completed the steps in [Prepare for setting up edge nodes](../hub/prepare_for_edge_nodes.md), do that now. This process creates an API key, locates some files, and gathers environment variable values that are needed when you set up edge nodes. Set the same environment variables on this edge cluster:
 
-  ```bash
-  export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
-  export HZN_ORG_ID=<your-exchange-organization>
-  export HZN_FSS_CSSURL=https://<management-hub-ingress>/edge-css/
-  ```
-  {: codeblock}
+   ```bash
+   export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
+   export HZN_ORG_ID=<your-exchange-organization>
+   export HZN_FSS_CSSURL=https://<management-hub-ingress>/edge-css/
+   ```
+   {: codeblock}
 
 3. Set the agent namespace variable to its default value (or whatever namespace you want to explicitly install the agent into):
 
@@ -103,16 +103,16 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
 
 10. Now that the agent is installed on your edge cluster, you can run these commands if you want to familiarize yourself with the Kubernetes resources associated with the agent:
 
-   ```bash
-   oc get namespace $AGENT_NAMESPACE
-   oc project $AGENT_NAMESPACE   # ensure this is the current namespace/project
-   oc get deployment -o wide
-   oc get deployment agent -o yaml   # get details of the deployment
-   oc get configmap openhorizon-agent-config -o yaml
-   oc get secret openhorizon-agent-secrets -o yaml
-   oc get pvc openhorizon-agent-pvc -o yaml   # persistent volume
-   ```
-   {: codeblock}
+    ```bash
+    oc get namespace $AGENT_NAMESPACE
+    oc project $AGENT_NAMESPACE   # ensure this is the current namespace/project
+    oc get deployment -o wide
+    oc get deployment agent -o yaml   # get details of the deployment
+    oc get configmap openhorizon-agent-config -o yaml
+    oc get secret openhorizon-agent-secrets -o yaml
+    oc get pvc openhorizon-agent-pvc -o yaml   # persistent volume
+    ```
+    {: codeblock}
 
 11. Often, when an edge cluster is registered for policy, but does not have user-specified node policy, none of the deployment policies will deploy edge services to it. That is the case with the Horizon examples. Proceed to [Deploying services to your edge cluster](#deploying_services) to set node policy so that an edge service will be deployed to this edge cluster.
 
@@ -125,12 +125,12 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on [k
 
 2. If you have not completed the steps in [Prepare for setting up edge nodes](../hub/prepare_for_edge_nodes.md), do that now. This process creates an API key, locates some files, and gathers environment variable values that are needed when setting up edge nodes. Set the same environment variables on this edge cluster:
 
-  ```bash
-  export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
-  export HZN_ORG_ID=<your-exchange-organization>
-  export HZN_FSS_CSSURL=https://<ieam-management-hub-ingress>/edge-css/
-  ```
-  {: codeblock}
+   ```bash
+   export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
+   export HZN_ORG_ID=<your-exchange-organization>
+   export HZN_FSS_CSSURL=https://<ieam-management-hub-ingress>/edge-css/
+   ```
+   {: codeblock}
 
 3. Copy the **agent-install.sh** script to your new edge cluster.
 
