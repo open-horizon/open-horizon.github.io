@@ -19,7 +19,7 @@ lastupdated: "2022-06-24"
 
 Use the bulk installation process to set up multiple edge devices of similar types (in other words, same architecture, operating system, and pattern or policy).
 
-**Note**: For this process, target edge devices that are {{site.data.keyword.macOS}} computers are not supported. However, you can drive this process from a {{site.data.keyword.macOS}} computer, if wanted. (In other words, this host can be a {{site.data.keyword.macOS}} computer.)
+**Note**: For this process, target edge devices that are {{site.data.keyword.macOS_notm}} computers are not supported. However, you can drive this process from a {{site.data.keyword.macOS_notm}} computer, if wanted. (In other words, this host can be a {{site.data.keyword.macOS_notm}} computer.)
 
 ### Prerequisites
 
@@ -57,7 +57,7 @@ Use the bulk installation process to set up multiple edge devices of similar typ
      ```
      {: codeblock}
 
-   (If **brew** is not installed yet, see [Install pssh on {{site.data.keyword.macOS}} computer with Brew ](https://brewinstall.org/Install-pssh-on-Mac-with-Brew/){:target="_blank"}{: .externalLink}.)
+   (If **brew** is not installed yet, see [Install pssh on {{site.data.keyword.macOS_notm}} computer with Brew ](https://brewinstall.org/Install-pssh-on-Mac-with-Brew/){:target="_blank"}{: .externalLink}.)
 
 3. You can give **pscp** and **pssh** access to your edge devices in several ways. This content describes how to use an ssh public key. First, this host must have an ssh key pair (usually in **~/.ssh/id_rsa** and **~/.ssh/id_rsa.pub**). If it does not have an ssh key pair, generate it:
 

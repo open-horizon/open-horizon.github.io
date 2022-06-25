@@ -48,14 +48,14 @@ Edge services often use cloud ingest services to store and further process edge 
 2. If you are using {{site.data.keyword.macOS_notm}} as your development host, configure Docker to store credentials in `~/.docker`:
 
    1. Open the Docker **Preferences** dialog.
-   2. Uncheck **Securely store Docker logins in {{site.data.keyword.macOS}} keychain**.
+   2. Uncheck **Securely store Docker logins in {{site.data.keyword.macOS_notm}} keychain**.
 
      * If you cannot uncheck this box follow these steps:
 
        1. Check **Include VM in Time Machine backups**.
-       2. Uncheck **Securely store Docker logins in {{site.data.keyword.macOS}} keychain**.
+       2. Uncheck **Securely store Docker logins in {{site.data.keyword.macOS_notm}} keychain**.
        3. (Optional) Uncheck **Include VM in Time Machine backups**.
-       4. Click **Appl{{site.data.keyword.macOS}}y & Restart**.
+       4. Click **Apply & Restart**.
 
    3. If you have a file that is called `~/.docker/plaintext-passwords.json`, remove it.
 

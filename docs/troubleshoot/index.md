@@ -291,7 +291,7 @@ For example, to review the log for the `cpu2evtstreams` service, run this comman
   ```
   {: codeblock}
 
-- For {{site.data.keyword.macOS}}
+- For {{site.data.keyword.macOS_notm}}
 
   ```bash
   docker logs -f $(docker ps --filter 'name=-cpu2evtstreams' | tail -n +2 | awk '{print $1}')

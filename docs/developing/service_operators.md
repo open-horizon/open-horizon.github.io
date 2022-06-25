@@ -55,7 +55,7 @@ After an operator is written and tested, it needs to be packaged for deployment 
    ```
    {: codeblock}
 
-   **Note**: For {{site.data.keyword.macOS_notm}} users, consider creating a clean archive tar.gz file to ensure that no hidden files exist in the tar.gz file. For example, a .DS_store file can cause problems when you deploy a helm operator. If you suspect that a hidden file exists, extract the tar.gz on your {{site.data.keyword.linux_notm}} system. For more information, see [Tar command in macOS ](https://stackoverflow.com/questions/8766730/tar-command-in-mac-os-x-adding-hidden-files-why){:target="_blank"}{: .externalLink}.
+   **Note**: For {{site.data.keyword.macOS_notm}} users, consider creating a clean archive tar.gz file to ensure that no hidden files exist in the tar.gz file. For example, a .DS_store file can cause problems when you deploy a helm operator. If you suspect that a hidden file exists, extract the tar.gz on your {{site.data.keyword.linux_notm}} system. For more information, see [Tar command in {{site.data.keyword.macOS_notm}} ](https://stackoverflow.com/questions/8766730/tar-command-in-mac-os-x-adding-hidden-files-why){:target="_blank"}{: .externalLink}.
 
    ```bash
    tar -xzpvf x.tar --exclude=".*"

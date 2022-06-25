@@ -30,7 +30,7 @@ lastupdated: "2022-06-24"
 ## Post installation configuration
 {: #postconfig}
 
-The following process must run on a host that supports installation of the **hzn** CLI, which currently can be installed on a Debian / apt based Linux, amd64 Red Hat / rpm Linux, or {{site.data.keyword.macOS}} host. These steps use the same media downloaded from PPA in the Installation verification section.
+The following process must run on a host that supports installation of the **hzn** CLI, which currently can be installed on a Debian / apt based Linux, amd64 Red Hat / rpm Linux, or {{site.data.keyword.macOS_notm}} host. These steps use the same media downloaded from PPA in the Installation verification section.
 
 ## What's Next
 

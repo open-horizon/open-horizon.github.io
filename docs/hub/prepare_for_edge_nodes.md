@@ -53,7 +53,7 @@ This content explains how to create an API key and gather some files and environ
      ```
      {: codeblock}
 
-   - {{site.data.keyword.macOS}} example:
+   - {{site.data.keyword.macOS_notm}} example:
 
      ```bash
      ls /usr/local/bin/agent-{install,uninstall}.sh
