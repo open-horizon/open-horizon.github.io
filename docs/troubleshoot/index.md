@@ -2,7 +2,7 @@
 
 copyright:
 years: 2021 - 2022
-lastupdated: "2022-03-10"
+lastupdated: "2022-06-24"
 
 ---
 
@@ -20,21 +20,21 @@ lastupdated: "2022-03-10"
 Review the following questions when you encounter an issue with {{site.data.keyword.edge_notm}}. The tips and guides for each question can help you resolve common issues and obtain information to identify root causes.
 {:shortdesc}
 
-  * [Are the currently released versions of the {{site.data.keyword.horizon}} packages installed?](#install_horizon)
-  * [Is the {{site.data.keyword.horizon}} agent currently up and actively running?](#setup_horizon)
-  * [Is the edge node configured to interact with the {{site.data.keyword.horizon_exchange}}?](#node_configured)
-  * [Are the required Docker containers started for the edge node running?](#node_running)
-  * [Are the expected service containers versions running?](#run_user_containers)
-  * [Are the expected containers stable?](#containers_stable)
-  * [Are your Docker containers networked correctly?](#container_networked)
-  * [Are the dependency containers reachable within the context of your container?](#setup_correct)
-  * [Are your user-defined containers emitting error messages to the log?](#log_user_container_errors)
-  * [Can you use your organization's instance of {{site.data.keyword.message_hub_notm}} Kafka broker?](#kafka_subscription)
-  * [Are your containers published to {{site.data.keyword.horizon_exchange}}?](#publish_containers)
-  * [Does your published deployment pattern include all required services and versions?](#services_included)
-  * [Troubleshooting tips specific to the {{site.data.keyword.open_shift_cp}} environment](#troubleshooting_icp)
-  * [Troubleshooting node errors](#troubleshooting_node_errors)
-  * [How to uninstall Podman on RHEL?](#uninstall_podman)
+- [Are the currently released versions of the {{site.data.keyword.horizon}} packages installed?](#install_horizon)
+- [Is the {{site.data.keyword.horizon}} agent currently up and actively running?](#setup_horizon)
+- [Is the edge node configured to interact with the {{site.data.keyword.horizon_exchange}}?](#node_configured)
+- [Are the required Docker containers started for the edge node running?](#node_running)
+- [Are the expected service containers versions running?](#run_user_containers)
+- [Are the expected containers stable?](#containers_stable)
+- [Are your Docker containers networked correctly?](#container_networked)
+- [Are the dependency containers reachable within the context of your container?](#setup_correct)
+- [Are your user-defined containers emitting error messages to the log?](#log_user_container_errors)
+- [Can you use your organization's instance of {{site.data.keyword.message_hub_notm}} Kafka broker?](#kafka_subscription)
+- [Are your containers published to {{site.data.keyword.horizon_exchange}}?](#publish_containers)
+- [Does your published deployment pattern include all required services and versions?](#services_included)
+- [Troubleshooting tips specific to the {{site.data.keyword.open_shift_cp}} environment](#troubleshooting_icp)
+- [Troubleshooting node errors](#troubleshooting_node_errors)
+- [How to uninstall Podman on RHEL?](#uninstall_podman)
 
 ## Are the currently released versions of the {{site.data.keyword.horizon}} packages installed?
 {: #install_horizon}
@@ -42,13 +42,15 @@ Review the following questions when you encounter an issue with {{site.data.keyw
 Ensure that the {{site.data.keyword.horizon}} software that is installed on your edge nodes is always on the latest released version.
 
 On a {{site.data.keyword.linux_notm}} system, you can usually check the version of your installed {{site.data.keyword.horizon}} packages by running this command:
-```
+
+```bash
 dpkg -l | grep horizon
 ```
 {: codeblock}
 
 You can update your {{site.data.keyword.horizon}} packages that use the package manager on your system. For example, on an Ubuntu-based {{site.data.keyword.linux_notm}} system, use the following commands to update {{site.data.keyword.horizon}} to the current version:
-```
+
+```bash
 sudo apt update
 sudo apt install -y blue horizon
 ```
@@ -57,19 +59,22 @@ sudo apt install -y blue horizon
 {: #setup_horizon}
 
 You can verify that the agent is running by using this {{site.data.keyword.horizon}} CLI command:
-```
+
+```bash
 hzn node list | jq .
 ```
 {: codeblock}
 
 You can also use the host's system management software to check on the status of the {{site.data.keyword.horizon}} agent. For example, on an Ubuntu-based {{site.data.keyword.linux_notm}} system, you can use the `systemctl` utility:
-```
+
+```bash
 sudo systemctl status horizon
 ```
 {: codeblock}
 
 A line similar to the following is shown if the agent is active:
-```
+
+```bash
 Active: active (running) since Thu 2020-10-01 17:56:12 UTC; 2 weeks 0 days ago
 ```
 {: codeblock}
@@ -78,19 +83,22 @@ Active: active (running) since Thu 2020-10-01 17:56:12 UTC; 2 weeks 0 days ago
 {: #node_configured}
 
 To verify that you can communicate with the {{site.data.keyword.horizon_exchange}}, run this command:
-```
+
+```bash
 hzn exchange version
 ```
 {: codeblock}
 
 To verify that your {{site.data.keyword.horizon_exchange}} is accessible, run this command:
-```
+
+```bash
 hzn exchange user list
 ```
 {: codeblock}
 
 After your edge node is registered with {{site.data.keyword.horizon}}, you can verify whether the node is interacting with {{site.data.keyword.horizon_exchange}} by viewing the local {{site.data.keyword.horizon}} agent configuration. Run this command to view the agent configuration:
-```
+
+```bash
 hzn node list | jq .configuration.exchange_api
 ```
 {: codeblock}
@@ -101,43 +109,49 @@ hzn node list | jq .configuration.exchange_api
 When your edge node is registered with {{site.data.keyword.horizon}}, a {{site.data.keyword.horizon}} {{site.data.keyword.agbot}} creates an agreement with your edge node to run the services that are referenced in your gateway type (deployment pattern). If that agreement is not created, complete these checks to troubleshoot the issue.
 
 Confirm that your edge node is in the `configured` state and has the correct `id`, `organization` values. Additionally, confirm that the architecture that {{site.data.keyword.horizon}} is reporting is the same architecture that you used in the metadata for your services. Run this command to list these settings:
-```
+
+```bash
 hzn node list | jq .
 ```
 {: codeblock}
 
 If those values are as expected, you can check the agreement status of the edge node by run:
-```
+
+```bash
 hzn agreement list | jq .
 ```
 {: codeblock}
 
 If this command does not show any agreements; those agreements might have formed, but a problem might have been discovered. If this occurs, the agreement can be cancelled before it can display in the output from the previous command. If an agreement cancellation occurs, the cancelled agreement shows a status of `terminated_description` in the list of archived agreements. You can view the archived list by running this command:
-```
+
+```bash
 hzn agreement list -r | jq .
 ```
 {: codeblock}
 
 A problem might also occur before an agreement is created. If this problem occurs, review the event log for the {{site.data.keyword.horizon}} agent to identify possible errors. Run this command to view the log:
-```
+
+```bash
 hzn eventlog list
 ```
 {: codeblock}
 
 The event log can include:
 
-* The signature of the service metadata, specifically the `deployment` field, cannot be verified. This error usually means that your signing public key is not imported into your edge node. You can import the key by using the `hzn key import -k <pubkey>` command. You can view the keys that are imported to your local edge node by using the `hzn key list` command. You can verify that the service metadata in the {{site.data.keyword.horizon_exchange}} is signed with your key by using this command:
-  ```
+- The signature of the service metadata, specifically the `deployment` field, cannot be verified. This error usually means that your signing public key is not imported into your edge node. You can import the key by using the `hzn key import -k <pubkey>` command. You can view the keys that are imported to your local edge node by using the `hzn key list` command. You can verify that the service metadata in the {{site.data.keyword.horizon_exchange}} is signed with your key by using this command:
+
+  ```bash
   hzn exchange service verify -k $PUBLIC_KEY_FILE <service-id>
   ```
   {: codeblock}
 
 Replace `<service-id>` with the ID for your service. This ID can resemble the following sample format: `workload-cpu2wiotp_${CPU2WIOTP_VERSION}_${ARCH2}`.
 
-* The path of Docker image in the service `deployment` field is incorrect. Confirm that your edge node can `docker pull` that image path.
-* The {{site.data.keyword.horizon}} agent on your edge node does not have access to the Docker registry that holds your Docker images. If the Docker images in the remote Docker registry are not world-readable, you must add the credentials to your edge node by using the `docker login` command. You need to complete this step once as the credentials are remembered on the edge node.
-* If a container is continually restarting, review the container log for details. A container can be continually restarting when it is listed for only a few seconds or remains listed as restarting when you run the `docker ps` command. You can view the container log for details by running this command:
-  ```
+- The path of Docker image in the service `deployment` field is incorrect. Confirm that your edge node can `docker pull` that image path.
+- The {{site.data.keyword.horizon}} agent on your edge node does not have access to the Docker registry that holds your Docker images. If the Docker images in the remote Docker registry are not world-readable, you must add the credentials to your edge node by using the `docker login` command. You need to complete this step once as the credentials are remembered on the edge node.
+- If a container is continually restarting, review the container log for details. A container can be continually restarting when it is listed for only a few seconds or remains listed as restarting when you run the `docker ps` command. You can view the container log for details by running this command:
+
+  ```bash
   grep --text -E ' <service-id>\[[0-9]+\]' /var/log/syslog
   ```
   {: codeblock}
@@ -147,13 +161,14 @@ Replace `<service-id>` with the ID for your service. This ID can resemble the fo
 
 Your container versions are governed by an agreement that is created after you add your service to the deployment pattern, and after you register your edge node for that pattern. Verify that your edge node has a current agreement for your pattern, by running this command:
 
-```
+```bash
 hzn agreement list | jq .
 ```
 {: codeblock}
 
 If you confirmed the correct agreement for your pattern, use this command to view the running containers. Ensure that your user-defined containers are listed and are running:
-```
+
+```bash
 docker ps
 ```
 {: codeblock}
@@ -164,7 +179,8 @@ The {{site.data.keyword.horizon}} agent can take several minutes after the agree
 {: #containers_stable}
 
 Check whether your containers are stable by running this command:
-```
+
+```bash
 docker ps
 ```
 {: codeblock}
@@ -172,6 +188,7 @@ docker ps
 From the command output, you can see the duration that each container is running. If over time, you observe that your containers are restarting unexpectedly, check the container logs for errors.
 
 As a development best practice, consider configuring individual service logging by running the following commands ({{site.data.keyword.linux_notm}} systems only):
+
 ```bash
 cat <<'EOF' > /etc/rsyslog.d/10-horizon-docker.conf
 $template DynamicWorkloadFile,"/var/log/workload/%syslogtag:R,ERE,1,DFLT:.*workload-([^\[]+)--end%.log"
@@ -190,7 +207,8 @@ service rsyslog restart
 If you complete the previous step, then the logs for your containers are recorded within separate files inside the `/var/log/workload/` directory. Use the `docker ps` command to find the full names of your containers. You can find the log file of that name, with a `.log` suffix, in this directory.
 
 If individual service logging is not configured, your service logs are added to the system log with all other log messages. To review the data for your containers, you need to search for the container name in the system log output within the `/var/log/syslog` file. For instance, you can search the log by running a command similar:
-```
+
+```bash
 grep --text -E 'YOURSERVICENAME\[[0-9]+\]' /var/log/syslog
 ```
 {: codeblock}
@@ -199,7 +217,8 @@ grep --text -E 'YOURSERVICENAME\[[0-9]+\]' /var/log/syslog
 {: #container_networked}
 
 Ensure that your containers are properly Docker networked, so they can access required services. Run this command to ensure that you can view the Docker virtual networks active on your edge node:
-```
+
+```bash
 docker network list
 ```
 {: codeblock}
@@ -216,7 +235,8 @@ For more information about the commands supported by the Docker command line int
 {: #setup_correct}
 
 Enter the context of a running container to troubleshoot issues at run time by using the `docker exec` command. Use the `docker ps` command to find the identifier of your running container, then use a command that resembles the following to enter the context. Replace `CONTAINERID` with your container's identifier:
-```
+
+```bash
 docker exec -it CONTAINERID /bin/sh
 ```
 {: codeblock}
@@ -233,7 +253,8 @@ For more information about the commands supported by the Docker command line int
 If you configured individual service logging, each of your containers log in to a separate file within the `/var/log/workload/` directory. Use the `docker ps` command to find the full names of your containers. Then, look for a file of that name, and that includes the `.log` suffix, within this directory.
 
 If individual service logging is not configured, your service logs to the system log with all other details. To review the data, search for the container log in the system log output within the `/var/log/syslog` directory. For instance, search the log by running a command similar to:
-```
+
+```bash
 grep --text -E 'YOURSERVICENAME\[[0-9]+\]' /var/log/syslog
 ```
 {: codeblock}
@@ -263,19 +284,19 @@ If the subscription command is successful, the command blocks indefinitely. The 
 
 For example, to review the log for the `cpu2evtstreams` service, run this command:
 
-* For {{site.data.keyword.linux_notm}} and {{site.data.keyword.windows_notm}}
+- For {{site.data.keyword.linux_notm}} and {{site.data.keyword.windows_notm}}
 
-```bash
-tail -n 500 -f /var/log/syslog | grep -E 'cpu2evtstreams\[[0-9]+\]:'
-```
-{: codeblock}
+  ```bash
+ tail -n 500 -f /var/log/syslog | grep -E 'cpu2evtstreams\[[0-9]+\]:'
+  ```
+  {: codeblock}
 
-* For macOS
+- For {{site.data.keyword.macOS}}
 
-```bash
-docker logs -f $(docker ps --filter 'name=-cpu2evtstreams' | tail -n +2 | awk '{print $1}')
-```
-{: codeblock}
+  ```bash
+  docker logs -f $(docker ps --filter 'name=-cpu2evtstreams' | tail -n +2 | awk '{print $1}')
+  ```
+  {: codeblock}
 
 ## Are your containers published to {{site.data.keyword.horizon_exchange}}?
 {: #publish_containers}
@@ -284,7 +305,7 @@ docker logs -f $(docker ps --filter 'name=-cpu2evtstreams' | tail -n +2 | awk '{
 
 Run the `hzn` command with the following arguments to view the list of published code to verify that all of your service containers were successfully published:
 
-```
+```bash
 hzn exchange service list | jq .
 hzn exchange service list $ORG_ID/$SERVICE | jq .
 ```
@@ -297,7 +318,7 @@ The parameter `$ORG_ID` is your organization ID, and `$SERVICE` is the name of t
 
 On any edge node where the `hzn` command is installed, you can use this command to get details about any deployment pattern. Run the `hzn` command with the following arguments to pull the listing of deployment patterns from the {{site.data.keyword.horizon_exchange}}:
 
-```
+```bash
 hzn exchange pattern list | jq .
 hzn exchange pattern list $ORG_ID/$PATTERN | jq .
 ```
@@ -318,10 +339,10 @@ You need an {{site.data.keyword.open_shift_cp}} user account to complete any act
 
 To verify your {{site.data.keyword.edge_notm}} credentials in this environment, run this command:
 
-   ```
-   hzn exchange user list
-   ```
-   {: codeblock}
+```bash
+hzn exchange user list
+```
+{: codeblock}
 
 If a JSON-formatted entry is returned from the Exchange showing one or more users, the {{site.data.keyword.edge_notm}} credentials are configured properly.
 
@@ -337,10 +358,10 @@ See [Gather the necessary information and files](../hub/prepare_for_edge_nodes.m
 {{site.data.keyword.edge_notm}} publishes a subset of event logs to the exchange that is viewable in the {{site.data.keyword.gui}}. These errors link to troubleshooting guidance.
 {:shortdesc}
 
-  - [Image load error](#eil)
-  - [Deployment configuration error](#eidc)
-  - [Container start error](#esc)
-  - [OCP edge cluster TLS internal error](#tls_internal)
+- [Image load error](#eil)
+- [Deployment configuration error](#eidc)
+- [Container start error](#esc)
+- [OCP edge cluster TLS internal error](#tls_internal)
 
 ### Image load error
 {: #eil}
@@ -348,16 +369,18 @@ See [Gather the necessary information and files](../hub/prepare_for_edge_nodes.m
 This error occurs when the service image that is referenced in the service definition does not exist in the image repository. To resolve this error:
 
 1. Republish the service without the **-I** flag.
-    ```
-    hzn exchange service publish -f <service-definition-file>
-    ```
-    {: codeblock}
+
+   ```bash
+   hzn exchange service publish -f <service-definition-file>
+   ```
+   {: codeblock}
 
 2. Push the service image directly to the image repository.
-    ```
-    docker push <image name>
-    ```
-    {: codeblock}
+
+   ```bash
+   docker push <image name>
+   ```
+   {: codeblock}
 
 ### Deployment configuration error
 {: #eidc}
@@ -374,8 +397,8 @@ This error occurs when docker encounters an error when it starts the service con
 
 1. The device is already using a published port that is specified by the deployment configurations. To resolve the error:
 
-    - Map a different port to the service container port. The displayed port number does not have to match the service port number.
-    - Stop the program that is using the same port.
+   - Map a different port to the service container port. The displayed port number does not have to match the service port number.
+   - Stop the program that is using the same port.
 
 2. A published port that is specified by the deployment configurations is not a valid port number. Port numbers must be a number in the range 1 -  65535.
 3. A volume name in the deployment configurations is not a valid file path. Volume paths must be specified by their absolute (not relative) paths.
@@ -383,60 +406,65 @@ This error occurs when docker encounters an error when it starts the service con
 ## How to uninstall Podman on RHEL?
 {: #uninstall_podman}
 
-If you currently have Podman installed since it is not yet supported you will need to remove Podman to install Docker on RHEL. Please follow these instructions for doing so to a clean state and ensure you have no other workloads on this device that requires the use of Podman. Podman is planned for future support in future OH versions TBA.
+If you currently have Podman installed since it is not yet supported you will need to remove Podman to install Docker on RHEL. Please follow these instructions for doing so to a clean state and ensure you have no other workloads on this device that requires the use of Podman. Podman is planned for future support in future {{site.data.keyword.edge_notm}} versions TBA.
 
 1. Uninstall Packages:
-```
-yum remove buildah skopeo podman containers-common atomic-registries docker container-tools
-```
-{: codeblock}
+
+   ```bash
+   yum remove buildah skopeo podman containers-common atomic-registries docker container-tools
+   ```
+   {: codeblock}
 
 2. Remove any left-over artifacts & files:
-```
-rm -rf /etc/containers/* /var/lib/containers/* /etc/docker /etc/subuid* /etc/subgid*
-```
-{: codeblock}
+
+   ```bash
+   rm -rf /etc/containers/* /var/lib/containers/* /etc/docker /etc/subuid* /etc/subgid*
+   ```
+   {: codeblock}
 
 3. Delete any associated container storage:
-```
-cd ~ && rm -rf /.local/share/containers/
-```
-{: codeblock}
+
+   ```bash
+   cd ~ && rm -rf /.local/share/containers/
+   ```
+   {: codeblock}
 
 4. Install Docker by following the instructions for [Docker CENTOS Installation ](https://docs.docker.com/engine/install/centos/){:target="_blank"}{: .externalLink}.
-	NOTE: The latest version of Docker is not supported with RHEL 8 by Red Hat, however it is tested to be installable and runs with OH on RHEL 8.
 
-### OCP edge cluster TLS internal error
+   NOTE: The latest version of Docker is not supported with RHEL 8 by Red Hat, however it is tested to be installable and runs with {{site.data.keyword.edge_notm}} on RHEL 8.
 
-  ```
-  Error from server: error dialing backend: remote error: tls: internal error
-  ```
-  {: codeblock}
+### {{site.data.keyword.ocp}} edge cluster TLS internal error
+
+```bash
+Error from server: error dialing backend: remote error: tls: internal error
+```
+{: codeblock}
 
 If you see this error at the end of the cluster agent-install process or while trying to interact with the agent pod, there might be an issue with the Certificate Signing Requests (CSR) of your OCP cluster.
 
 1. Check if you have any CSRs in the Pending state:
 
-    ```
-    oc get csr
-    ```
-    {: codeblock}
+   ```bash
+   oc get csr
+   ```
+   {: codeblock}
 
 2. Approve the pending CSRs:
 
-  ```
-  oc adm certificate approve <csr-name>
-  ```
-  {: codeblock}
+   ```bash
+   oc adm certificate approve <csr-name>
+   ```
+   {: codeblock}
 
-**Note**: You can approve all of the CSRs with one command:
+   **Note**: You can approve all of the CSRs with one command:
 
-  ```
-  for i in `oc get csr |grep Pending |awk '{print $1}'`; do oc adm certificate approve $i; done
-  ```
-  {: codeblock}
+   ```bash
+   for i in `oc get csr |grep Pending |awk '{print $1}'`; do oc adm certificate approve $i; done
+   ```
+   {: codeblock}
 
 ### Additional information
 
 For more information, see:
-  * [Troubleshooting](../troubleshoot/troubleshooting.md)
+
+- [Troubleshooting](../troubleshoot/troubleshooting.md)
