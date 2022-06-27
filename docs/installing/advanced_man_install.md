@@ -2,7 +2,7 @@
 
 copyright:
 years: 2021 - 2022
-lastupdated: "2022-06-24"
+lastupdated: "2022-06-26"
 
 ---
 
@@ -81,7 +81,7 @@ Follow these steps:
    If podman is not installed, or the version is older than `4.0`, install the most recent version of Podman.
 
       ```bash
-      dnf install podman podman-docker netavark
+      dnf install podman netavark
       podman --version
       ```
       {: codeblock}

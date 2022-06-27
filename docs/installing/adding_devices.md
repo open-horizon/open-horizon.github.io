@@ -2,7 +2,7 @@
 
 copyright:
 years: 2019 - 2022
-lastupdated: "2022-06-24"
+lastupdated: "2022-06-26"
 
 ---
 
@@ -26,7 +26,7 @@ The following instructions guide you through the process of installing the requi
 
 - x86_64
   - {{site.data.keyword.linux_bit_notm}} devices or virtual machines that run Ubuntu 22.x (jammy), Ubuntu 20.x (focal), Ubuntu 18.x (bionic), Debian 10 (buster), Debian 9 (stretch)
-  - {{site.data.keyword.rhel}} 8.1, 8.2, 8.3, 8.4, 8.5 and 8.6
+  - {{site.data.keyword.rhel}} 8.1, 8.2, 8.3, 8.4, 8.5, 8.6 and 9.0
   - {{site.data.keyword.fedora}} Workstation 32, 36
   - CentOS 8.1, 8.2, 8.3, 8.4 and 8.5
   - SuSE 15 SP2
@@ -45,7 +45,7 @@ The following instructions guide you through the process of installing the requi
 - Installation of edge devices with {{site.data.keyword.fedora}} or SuSE is only supported by the [Advanced manual agent installation and registration](../installing/advanced_man_install.md) method.
 - CentOS and {{site.data.keyword.rhel}} 8.5 or earlier on {{site.data.keyword.ieam}} {{site.data.keyword.version}} only support Docker as a container engine.
 - While {{site.data.keyword.ieam}} {{site.data.keyword.version}} supports running {{site.data.keyword.rhel}} 8.x with Docker, it is officially unsupported by {{site.data.keyword.rhel}}.
-- {{site.data.keyword.ieam}} {{site.data.keyword.version}} supports Podman 4.x on {{site.data.keyword.rhel}} 8.6 and {{site.data.keyword.fedora}} 36 Workstation.
+- {{site.data.keyword.ieam}} {{site.data.keyword.version}} supports Podman 4.x on {{site.data.keyword.rhel}} 8.6, {{site.data.keyword.rhel}} 9.0 and {{site.data.keyword.fedora}} 36 Workstation.
 
 ## Sizing
 {: #size}
@@ -66,7 +66,7 @@ The following instructions guide you through the process of installing the requi
 To install and configure your edge device, click the link that represents your edge device type:
 
 - [{{site.data.keyword.linux_bit_notm}} devices or virtual machines](#x86-machines)
-- [{{site.data.keyword.rhel}} 8.x devices or virtual machines](#rhel8)
+- [{{site.data.keyword.rhel}} 8.x / 9.x devices or virtual machines](#rhel8)
 - [{{site.data.keyword.linux_ppc64le_notm}} devices or virtual machines](#ppc64le-machines)
 - [{{site.data.keyword.linux_notm}} on ARM (32-bit)](#arm-32-bit); for example, Raspberry Pi running Raspberry Pi OS
 - [{{site.data.keyword.linux_notm}} on ARM (64-bit)](#arm-64-bit); for example, NVIDIA Jetson Nano, TX1, or TX2
@@ -91,22 +91,28 @@ Install the most recent version of Docker or Podman on your device. For more inf
 
 Now that your edge device is prepared, continue on to [Installing the agent](registration.md).
 
-## {{site.data.keyword.rhel}} 8.x devices or virtual machines
+## {{site.data.keyword.rhel}} 8.x / 9.x devices or virtual machines
 {: #rhel8}
 
 ### Hardware requirements
 {: #hard-req-rhel8}
 
 - 64-bit Intel&reg; device, AMD device, ppc64le device, or virtual machine
-- An internet connection for your device (wired or wifi)
+- An internet connection for your device (wired or WiFi)
 - (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware.
 
 ### Procedure
 {: #proc-rhel8}
 
-Prepare your device by installing {{site.data.keyword.rhel}} 8.x.
+Prepare your device by installing {{site.data.keyword.rhel}} 8.x or 9.x
 
-If you are running {{site.data.keyword.rhel}} 8.6, install the podman 4.x packages by installing the container-tools:rhel8 module.
+If you are running {{site.data.keyword.rhel}} 9.0, install the podman 4.x packages.
+
+```bash
+dnf module install podman netavark
+```
+
+If you are running {{site.data.keyword.rhel}} 8.6, install the podman 4.x packages by installing the `container-tools:rhel8` module.
 
 ```bash
 dnf module install container-tools:rhel8
