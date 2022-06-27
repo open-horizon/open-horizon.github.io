@@ -79,7 +79,7 @@ To install and configure your edge device, click the link that represents your e
 {: #hard-req-x86}
 
 - 64-bit Intel&reg; or AMD device or virtual machine
-- An internet connection for your device (wired or wifi)
+- An internet connection for your device (wired or WiFi)
 - (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware.
 
 ### Procedure
@@ -160,7 +160,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 {: #hard-req-ppc64le}
 
 - ppc64le device or virtual machine
-- An internet connection for your device (wired or wifi)
+- An internet connection for your device (wired or WiFi)
 - (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware.
 
 ### Procedure
@@ -182,8 +182,8 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 - Raspberry Pi A+, B+, 2B, Zero-W, or Zero-WH
 - MicroSD flash card (32 GB preferred)
 - An appropriate power supply for your device (2 Amp or greater preferred)
-- An internet connection for your device (wired or wifi).
-  **Note**: Some devices require extra hardware for supporting wifi.
+- An internet connection for your device (wired or WiFi).
+  **Note**: Some devices require extra hardware for supporting WiFi.
 - (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware.
 
 ### Procedure
@@ -193,15 +193,15 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
    1. Flash the [Raspberry Pi OS ](https://www.raspberrypi.com/software/){:target="_blank"}{: .externalLink} {{site.data.keyword.linux_notm}} image onto your MicroSD card.
 
       For more information about how to flash MicroSD images from many operating systems, see [Raspberry Pi Foundation ](https://www.raspberrypi.org/documentation/installation/installing-images/README.md){:target="_blank"}{: .externalLink}.
-      These instructions use Raspberry Pi OS for wifi and SSH configurations.
+      These instructions use Raspberry Pi OS for WiFi and SSH configurations.
 
       **Warning:** Flashing an image onto your MicroSD card permanently erases any data that is already on your card.
 
-   2. (optional) If you plan to use wifi to connect to your device, edit your newly flashed image to provide the appropriate WPA2 wifi credentials.
+   2. (optional) If you plan to use WiFi to connect to your device, edit your newly flashed image to provide the appropriate WPA2 WiFi credentials.
 
       If you plan to use a wired network connection, you do not need to complete this step.
 
-      On your MicroSD card, create a file that is named `wpa_supplicant.conf` within the root level folder that contains your wifi credentials. These credentials include your network SSID name and passphrase. Use the following format for your file:
+      On your MicroSD card, create a file that is named `wpa_supplicant.conf` within the root level folder that contains your WiFi credentials. These credentials include your network SSID name and passphrase. Use the following format for your file:
 
       ```txt
       country=US
@@ -250,7 +250,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 - NVIDIA Jetson TX1
 - HDMI Business Monitor, USB hub, USB keyboard, USB mouse
 - Storage: at least 10 GB (SSD recommended)
-- An internet connection for your device (wired or wifi)
+- An internet connection for your device (wired or WiFi)
 - (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware.
 
 ### Procedure
@@ -289,7 +289,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 - 2010 or later 64-bit {{site.data.keyword.intel}} Mac ({{site.data.keyword.intel}} only) device
 - MMU virtualization is required.
 - {{site.data.keyword.macOS_notm}} X version 10.11 ("El Capitan") or later
-- An internet connection for your machine (wired or wifi)
+- An internet connection for your machine (wired or WiFi)
 - (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware.
 - {{site.data.keyword.edge_notm}} is not yet supported on arm-based Mac devices.
 
