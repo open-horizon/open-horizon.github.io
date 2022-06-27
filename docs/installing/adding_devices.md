@@ -2,7 +2,7 @@
 
 copyright:
 years: 2019 - 2022
-lastupdated: "2022-05-19"
+lastupdated: "2022-06-24"
 
 ---
 
@@ -108,7 +108,7 @@ Prepare your device by installing {{site.data.keyword.rhel}} 8.x.
 
 If you are running {{site.data.keyword.rhel}} 8.6, install the podman 4.x packages by installing the container-tools:rhel8 module.
 
-```sh
+```bash
 dnf module install container-tools:rhel8
 ```
 
@@ -116,21 +116,21 @@ If you are running {{site.data.keyword.rhel}} 8.5 or below, remove Podman and ot
 
 1. Uninstall packages:
 
-   ```sh
+   ```bash
    yum remove buildah skopeo podman containers-common atomic-registries docker container-tools
    ```
    {: codeblock}
 
 2. Remove remaining artifacts & files:
 
-   ```sh
+   ```bash
    rm -rf /etc/containers/* /var/lib/containers/* /etc/docker /etc/subuid* /etc/subgid*
    ```
    {: codeblock}
 
 3. Delete any associated container storage:
 
-   ```sh
+   ```bash
    cd ~ && rm -rf /.local/share/containers/
    ```
    {: codeblock}
@@ -139,7 +139,7 @@ If you are running {{site.data.keyword.rhel}} 8.5 or below, remove Podman and ot
 
 5. Configure Docker to start on boot by default and follow any other [Docker post installation steps ](https://docs.docker.com/engine/install/linux-postinstall/){:target="_blank"}{: .externalLink}.
 
-   ```sh
+   ```bash
    sudo systemctl enable docker.service
    sudo systemctl enable containerd.service
    ```
@@ -222,7 +222,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 
       Log in to this account. Use the standard {{site.data.keyword.linux_notm}} `passwd` command to change the default password:
 
-      ```sh
+      ```bash
       passwd
       Enter new UNIX password:
       Retype new UNIX password:
@@ -262,7 +262,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 
       Log in to this account. Use the standard {{site.data.keyword.linux_notm}} `passwd` command to change the default password:
 
-      ```sh
+      ```bash
       passwd
       Enter new UNIX password:
       Retype new UNIX password:
@@ -282,7 +282,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 
 - 2010 or later 64-bit {{site.data.keyword.intel}} Mac device
 - MMU virtualization is required.
-- MacOS X version 10.11 ("El Capitan") or later
+- {{site.data.keyword.macOS_notm}} X version 10.11 ("El Capitan") or later
 - An internet connection for your machine (wired or wifi)
 - (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware.
 
@@ -298,7 +298,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 
       - If MacPorts are already installed, use it to install socat:
 
-        ```sh
+        ```bash
         sudo port install socat
         ```
         {: codeblock}

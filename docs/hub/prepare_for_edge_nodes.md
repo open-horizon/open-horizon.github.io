@@ -2,7 +2,7 @@
 
 copyright:
 years: 2020 - 2022
-lastupdated: "2022-03-17"
+lastupdated: "2022-06-24"
 
 ---
 
@@ -21,8 +21,8 @@ This content explains how to create an API key and gather some files and environ
 
 ## Before you begin
 
-* If you have not already installed **cloudctl**, see [Installing cloudctl, oc, and kubectl](../cli/cloudctl_oc_cli.md) to do that.
-* Contact your {{site.data.keyword.ieam}} administrator for the information that you need to log in to the management hub via **cloudctl**.
+- If you have not already installed **cloudctl**, see [Installing cloudctl, oc, and kubectl](../cli/cloudctl_oc_cli.md) to do that.
+- Contact your {{site.data.keyword.ieam}} administrator for the information that you need to log in to the management hub via **cloudctl**.
 
 ## Procedure
 
@@ -45,24 +45,25 @@ This content explains how to create an API key and gather some files and environ
 3. If you have not already installed the **horizon-cli** package on this host, do that now. See [Post installation configuration](post_install.md#postconfig) for an example of this process.
 
 4. Locate the **agent-install.sh** and **agent-uninstall.sh** scripts that were installed as part of the **horizon-cli** package. These scripts are required on each edge node during setup (currently **agent-uninstall.sh** only supports edge clusters):
-  * Linux {{site.data.keyword.linux_notm}} example:
 
-    ```
-    ls /usr/horizon/bin/agent-{install,uninstall}.sh
-    ```
-    {: codeblock}
+   - {{site.data.keyword.linux_notm}} example:
 
-  * macOS example:
+     ```bash
+     ls /usr/horizon/bin/agent-{install,uninstall}.sh
+     ```
+     {: codeblock}
 
-    ```
-    ls /usr/local/bin/agent-{install,uninstall}.sh
-    ```
-    {: codeblock}
+   - {{site.data.keyword.macOS_notm}} example:
+
+     ```bash
+     ls /usr/local/bin/agent-{install,uninstall}.sh
+     ```
+     {: codeblock}
 
 5. Contact your {{site.data.keyword.ieam}} administrator for help in setting these environment variables:
 
    ```bash
-   export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
+   export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
    export HZN_ORG_ID=<your-exchange-organization>
    mgmtHubIngress=$(oc get cm management-ingress-ibmcloud-cluster-info -o jsonpath='{.data.cluster_ca_domain}')
    export HZN_FSS_CSSURL=https://$mgmtHubIngress/edge-css/
@@ -73,4 +74,3 @@ This content explains how to create an API key and gather some files and environ
 ## What's next
 
 When you are ready to set up edge nodes, follow the steps in [Installing edge nodes](../installing/installing_edge_nodes.md).
-

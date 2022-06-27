@@ -2,7 +2,7 @@
 
 copyright:
 years: 2020 - 2022
-lastupdated: "2022-03-17"
+lastupdated: "2022-06-24"
 
 ---
 
@@ -18,20 +18,19 @@ lastupdated: "2022-03-17"
 
 ## Prerequisites
 
-* [**jq** ](https://stedolan.github.io/jq/download/){:target="_blank"}{: .externalLink}
-* [**git** ](https://git-scm.com/downloads){:target="_blank"}{: .externalLink}
-* [**docker** ](https://docs.docker.com/get-docker/){:target="_blank"}{: .externalLink} version 1.13 or greater
-* **make**
+- [**jq** ](https://stedolan.github.io/jq/download/){:target="_blank"}{: .externalLink}
+- [**git** ](https://git-scm.com/downloads){:target="_blank"}{: .externalLink}
+- [**docker** ](https://docs.docker.com/get-docker/){:target="_blank"}{: .externalLink} version 1.13 or greater
+- **make**
 
 ## Installation verification
 
 1. Complete the steps in [Install {{site.data.keyword.ieam}}](online_installation.md)
 
-
 ## Post installation configuration
 {: #postconfig}
 
-The following process must run on a host that supports installation of the **hzn** CLI, which currently can be installed on a Debian/apt based Linux, amd64 Red Hat/rpm Linux, or macOS host. These steps use the same media downloaded from PPA in the Installation verification section.
+The following process must run on a host that supports installation of the **hzn** CLI, which currently can be installed on a Debian / apt based Linux, amd64 Red Hat / rpm Linux, or {{site.data.keyword.macOS_notm}} host. These steps use the same media downloaded from PPA in the Installation verification section.
 
 ## What's Next
 
