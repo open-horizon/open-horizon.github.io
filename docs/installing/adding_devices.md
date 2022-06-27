@@ -37,7 +37,7 @@ The following instructions guide you through the process of installing the requi
   - {{site.data.keyword.linux_notm}} on ARM (32-bit), for example Raspberry Pi, running Raspberry Pi OS buster or bullseye
 - ARM (64-bit)
   - {{site.data.keyword.linux_notm}} on ARM (64-bit), for example NVIDIA Jetson Nano, TX1, or TX2, running Ubuntu 18.x (bionic)
-- Mac
+- Mac ({{site.data.keyword.intel}} only)
   - {{site.data.keyword.macOS_notm}}
 
 **Notes**:
@@ -286,11 +286,12 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 ### Hardware requirements
 {: #hard-req-mac}
 
-- 2010 or later 64-bit {{site.data.keyword.intel}} Mac device
+- 2010 or later 64-bit {{site.data.keyword.intel}} Mac ({{site.data.keyword.intel}} only) device
 - MMU virtualization is required.
 - {{site.data.keyword.macOS_notm}} X version 10.11 ("El Capitan") or later
 - An internet connection for your machine (wired or wifi)
 - (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware.
+- {{site.data.keyword.edge_notm}} is not yet supported on arm-based Mac devices.
 
 ### Procedure
 {: #proc-mac}

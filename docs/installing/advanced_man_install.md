@@ -188,7 +188,7 @@ Follow these steps:
 
 10. Continue on to [Registering the agent](#agent_reg).
 
-### Installing the agent on a {{site.data.keyword.macOS_notm}} edge device
+### Installing the agent on a {{site.data.keyword.macOS_notm}} ({{site.data.keyword.intel}} only) edge device
 {: #mac-os-x}
 
 1. Import the `horizon-cli` package certificate into your {{site.data.keyword.macOS_notm}} keychain:
