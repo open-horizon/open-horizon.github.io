@@ -113,4 +113,4 @@ the code for all three of the services that run on the edge node for this exampl
 ## What to do next
 {: #cpu_next}
 
-If you want to deploy your own software to an edge node, you must create your own edge services, and associated deployment pattern or deployment policy. For more information, see [Developing edge services with {{site.data.keyword.edge_notm}}](../developing/developing.md).
+If you want to deploy your own software to an edge node, you must create your own edge services, and associated deployment pattern or deployment policy. For more information, see [Developing an edge service for devices](../developing/developing.md).
