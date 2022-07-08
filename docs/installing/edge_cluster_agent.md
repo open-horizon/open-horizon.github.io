@@ -44,10 +44,10 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
    ```
    {: codeblock}
 
-2. If you have not completed the steps in [Prepare for setting up edge nodes](../hub/prepare_for_edge_nodes.md), do that now. This process creates an API key, locates some files, and gathers environment variable values that are needed when you set up edge nodes. Set the same environment variables on this edge cluster:
-
+2. If you have not completed the steps in [Creating your API key](../hub/prepare_for_edge_nodes.md), do that now. This process creates an API key, locates some files, and gathers environment variable values that are needed when you set up edge nodes. Set the same environment variables on this edge cluster:
+   
    ```bash
-   export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
+   export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
    export HZN_ORG_ID=<your-exchange-organization>
    export HZN_FSS_CSSURL=https://<management-hub-ingress>/edge-css/
    ```
@@ -60,48 +60,160 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
    ```
    {: codeblock}
 
-4. Set the storage class that you want the agent to use - either a built-in storage class or one that you created. For example:
+4. Set the storage class that you want the agent to use - either a built-in storage class or one that you created. You can view the available storage classes with the first of the following two commands, then substitute the name of the one you want to use into the second command. One storage class should be labeled `(default)`:
 
    ```bash
-   export EDGE_CLUSTER_STORAGE_CLASS=rook-ceph-cephfs-internal
+   oc get storageclass
+   export EDGE_CLUSTER_STORAGE_CLASS=<rook-ceph-cephfs-internal>
    ```
    {: codeblock}
 
-5. To set up the image registry on your edge cluster, complete steps 2 - 8 of [Using the OpenShift image registry](../developing/container_registry.md##ocp_image_registry) with this one change: In step 4, set **OCP_PROJECT** to: **$AGENT_NAMESPACE**.
-
-6. The **agent-install.sh** script stores the {{site.data.keyword.ieam}} agent in the edge cluster container registry. Set the registry user, password, and full image path (minus the tag):
+5. Determine whether a default route for the {{site.data.keyword.open_shift}} image registry has been created so that it is accessible from outside of the cluster:
 
    ```bash
-   export EDGE_CLUSTER_REGISTRY_USERNAME=$OCP_USER
-   export EDGE_CLUSTER_REGISTRY_TOKEN="$OCP_TOKEN"
-   export IMAGE_ON_EDGE_CLUSTER_REGISTRY=$OCP_DOCKER_HOST/$OCP_PROJECT/amd64_anax_k8s
+   oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}'
    ```
    {: codeblock}
+
+   If the command response indicates the **default-route** is not found, you need to expose it (see [Exposing the registry](https://docs.openshift.com/container-platform/4.6/registry/securing-exposing-registry.html) for details):
+
+   ```bash
+   oc patch configs.imageregistry.operator.openshift.io/cluster --patch '{"spec":{"defaultRoute":true}}' --type=merge
+   ```
+   {: codeblock}
+
+6. Retrieve the repository route name that you need to use:
+
+   ```bash
+   export OCP_IMAGE_REGISTRY=`oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}'`
+   ```
+   {: codeblock}
+
+7. Create a new project to store your images:
+
+   ```bash
+   export OCP_PROJECT=$AGENT_NAMESPACE
+   oc new-project $OCP_PROJECT
+   ```
+   {: codeblock}
+
+8. Create a service account with a name of your choosing:
+
+   ```bash
+   export OCP_USER=<service-account-name>
+   oc create serviceaccount $OCP_USER
+   ```
+   {: codeblock}
+
+9. Add a role to your service account for the current project:
+
+   ```bash
+   oc policy add-role-to-user edit system:serviceaccount:$OCP_PROJECT:$OCP_USER
+   ```
+   {: codeblock}
+
+10. Set your service account token to the following environment variable:
+
+   ```bash
+   export OCP_TOKEN=`oc serviceaccounts get-token $OCP_USER`
+   ```
+   {: codeblock}
+
+11. Get the {{site.data.keyword.open_shift}} certificate and allow docker to trust it:
+
+   ```bash
+   echo | openssl s_client -connect $OCP_IMAGE_REGISTRY:443 -showcerts | sed -n "/-----BEGIN CERTIFICATE-----/,/-----END CERTIFICATE-----/p" > ca.crt
+   ```
+   {: codeblock}
+
+   On {{site.data.keyword.linux_notm}}:
+
+   ```bash
+   mkdir -p /etc/docker/certs.d/$OCP_IMAGE_REGISTRY
+   cp ca.crt /etc/docker/certs.d/$OCP_IMAGE_REGISTRY
+   systemctl restart docker.service
+   ```
+   {: codeblock}
+
+   On {{site.data.keyword.macOS_notm}}:
+
+   ```bash
+   mkdir -p ~/.docker/certs.d/$OCP_IMAGE_REGISTRY
+   cp ca.crt ~/.docker/certs.d/$OCP_IMAGE_REGISTRY
+   ```
+   {: codeblock}
+
+   On {{site.data.keyword.macOS_notm}}, use the Docker Desktop icon on the right side of the desktop menu bar to restart Docker by clicking **Restart** in the dropdown menu.
+
+12. Log in to the {{site.data.keyword.ocp}} Docker host:
+
+   ```bash
+   echo "$OCP_TOKEN" | docker login -u $OCP_USER --password-stdin $OCP_IMAGE_REGISTRY
+   ```
+   {: codeblock}
+
+13. Configure additional trust stores for image registry access:   
+
+    ```bash
+    oc create configmap registry-config --from-file=$OCP_IMAGE_REGISTRY=ca.crt -n openshift-config
+    ```
+    {: codeblock}
+
+14. Edit the new `registry-config`:
+
+    ```bash
+    oc edit image.config.openshift.io cluster
+    ```
+    {: codeblock}
+
+15. Update the `spec:` section:
+
+    ```bash
+    spec:
+      additionalTrustedCA:
+        name: registry-config
+    ```
+    {: codeblock}
+
+16. The **agent-install.sh** script stores the {{site.data.keyword.ieam}} agent in the edge cluster container registry. Set the registry user, password, and full image path (minus the tag):
+
+    ```bash
+    export EDGE_CLUSTER_REGISTRY_USERNAME=$OCP_USER
+    export EDGE_CLUSTER_REGISTRY_TOKEN="$OCP_TOKEN"
+    export IMAGE_ON_EDGE_CLUSTER_REGISTRY=$OCP_IMAGE_REGISTRY/$OCP_PROJECT/amd64_anax_k8s
+    ```
+    {: codeblock}
 
    **Note**: The {{site.data.keyword.ieam}} agent image is stored in the local edge cluster registry because the edge cluster Kubernetes needs ongoing access to it, in case it needs to restart it or move it to another pod.
 
-7. Copy the **agent-install.sh** script to your new edge cluster.
+17. Download the **agent-install.sh** script from the Cloud Sync Service (CSS) and make it executable:
 
-8. Run **agent-install.sh** to get the necessary files from CSS (Cloud Sync Service), install and configure the {{site.data.keyword.horizon}} agent, and register your edge cluster with policy:
+    ```bash
+    curl -u "$HZN_ORG_ID/$HZN_EXCHANGE_USER_AUTH" -k -o agent-install.sh $HZN_FSS_CSSURL/api/v1/objects/IBM/agent_files/agent-install.sh/data
+    chmod +x agent-install.sh
+    ```
+    {: codeblock}
 
-   ```bash
-   ./agent-install.sh -D cluster -i 'css:'
-   ```
-   {: codeblock}
+18. Run **agent-install.sh** to get the necessary files from CSS, install and configure the {{site.data.keyword.horizon}} agent, and register your edge cluster with policy:
+
+    ```bash
+    ./agent-install.sh -D cluster -i 'css:'
+    ```
+    {: codeblock}
 
    **Notes**:
    * To see all of the available flags, run: **./agent-install.sh -h**
    * If an error causes **agent-install.sh** to fail, correct the error and run **agent-install.sh** again. If that does not work, run **agent-uninstall.sh** (see [Removing agent from edge cluster](../using_edge_services/removing_agent_from_cluster.md)) before running **agent-install.sh** again.
 
-9. Change to the agent namespace (also known as project) and verify that the agent pod is running:
+19. Change to the agent namespace (also known as project) and verify that the agent pod is running:
 
-   ```bash
-   oc project $AGENT_NAMESPACE
-   oc get pods
-   ```
-   {: codeblock}
-
-10. Now that the agent is installed on your edge cluster, you can run these commands if you want to familiarize yourself with the Kubernetes resources associated with the agent:
+    ```bash
+    oc project $AGENT_NAMESPACE
+    oc get pods
+    ```
+    {: codeblock}
+ 
+20. Now that the agent is installed on your edge cluster, you can run these commands if you want to familiarize yourself with the Kubernetes resources associated with the agent:
 
     ```bash
     oc get namespace $AGENT_NAMESPACE
@@ -114,7 +226,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
     ```
     {: codeblock}
 
-11. Often, when an edge cluster is registered for policy, but does not have user-specified node policy, none of the deployment policies will deploy edge services to it. That is the case with the Horizon examples. Proceed to [Deploying services to your edge cluster](#deploying_services) to set node policy so that an edge service will be deployed to this edge cluster.
+21. Often, when an edge cluster is registered for policy, but does not have user-specified node policy, none of the deployment policies will deploy edge services to it. That is the case with the Horizon examples. Proceed to [Deploying services to your edge cluster](#deploying_services) to set node policy so that an edge service will be deployed to this edge cluster.
 
 ## Installing agent on k3s and microk8s edge clusters
 {: #install_lite}
@@ -123,7 +235,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on [k
 
 1. Log in to your edge cluster as **root**.
 
-2. If you have not completed the steps in [Prepare for setting up edge nodes](../hub/prepare_for_edge_nodes.md), do that now. This process creates an API key, locates some files, and gathers environment variable values that are needed when setting up edge nodes. Set the same environment variables on this edge cluster:
+2. If you have not completed the steps in [Creating your API key](../hub/prepare_for_edge_nodes.md), do that now. This process creates an API key, locates some files, and gathers environment variable values that are needed when setting up edge nodes. Set the same environment variables on this edge cluster:
 
    ```bash
    export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
@@ -151,7 +263,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on [k
       ```
       {: codeblock}
 
-   **Note:** The {{site.data.keyword.ieam}} agent image is stored in the local edge cluster registry because the edge cluster Kubernetes needs ongoing access to it, in case it needs to restart it or move it to another pod.
+   **Note**: The {{site.data.keyword.ieam}} agent image is stored in the local edge cluster registry because the edge cluster Kubernetes needs ongoing access to it, in case it needs to restart it or move it to another pod.
 
 5. Instruct **agent-install.sh** to use the default storage class:
 
