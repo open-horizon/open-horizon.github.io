@@ -2,7 +2,7 @@
 
 copyright:
 years: 2020 - 2022
-lastupdated: "2022-03-17"
+lastupdated: "2022-07-01"
 
 ---
 
@@ -30,6 +30,8 @@ Note: These steps are the same for all edge device types (architectures).
    export HZN_EXCHANGE_URL=https://<management-hub-ingress>/edge-exchange/v1
    ```
    {: codeblock}
+
+   Note: To prevent errors, the exchange URL should not have a trailing slash.
 
 3. If you are not using an admin prepared installation bundle, download the **agent-install.sh** script from the Cloud Sync Service (CSS) to your device and make it executable:
 
