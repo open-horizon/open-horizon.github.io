@@ -2,7 +2,7 @@
 
 copyright:
 years: 2020 - 2022
-lastupdated: "2022-06-24"
+lastupdated: "2022-07-07"
 
 ---
 
@@ -109,6 +109,5 @@ Edge services often use cloud ingest services to store and further process edge 
 ## What to do next
 {: #service_containers_what_next}
 
-Use your credentials and signing key to complete the [development examples](developing.md#edge_devices_ex_examples). These examples show you how to build simple edge services and learn the basics for developing for {{site.data.keyword.edge_notm}}.
-
+* Use your credentials and signing key to complete the [development examples](developing.md#edge_devices_ex_examples). These examples show you how to build simple edge services and learn the basics for developing for {{site.data.keyword.edge_notm}}.
 * If you already have a docker image that you want {{site.data.keyword.edge_notm}} to deploy to edge nodes, see [Transform image to edge service](transform_image.md).
