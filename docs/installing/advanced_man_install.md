@@ -78,19 +78,19 @@ Follow these steps:
      ```
      {: codeblock}
 
-   If podman is not installed, or the version is older than `4.0`, install the most recent version of Podman.
+     If podman is not installed, or the version is older than `4.0`, install the most recent version of Podman.
 
-      ```bash
-      dnf install podman netavark
-      podman --version
-      ```
-      {: codeblock}
+     ```bash
+     dnf install podman netavark
+     podman --version
+     ```
+     {: codeblock}
 
-   Switch the network stack from CNI to Netavark. The {{site.data.keyword.horizon}} agent requires the network backend to be configured to use netavark instead of cni so that the agent can set up networking scenarios such as dependent services between containers.  Follow the steps in the Red Hat documentation [switching the network stack ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/building_running_and_managing_containers/index#proc_switching-the-network-stack-from-cni-to-netavark_assembly_setting-container-network-modes){:target="_blank"}{: .externalLink} chapter.
+     Switch the network stack from CNI to Netavark. The {{site.data.keyword.horizon}} agent requires the network backend to be configured to use netavark instead of cni so that the agent can set up networking scenarios such as dependent services between containers.  Follow the steps in the Red Hat documentation [switching the network stack ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/building_running_and_managing_containers/index#proc_switching-the-network-stack-from-cni-to-netavark_assembly_setting-container-network-modes){:target="_blank"}{: .externalLink} chapter.
 
 3. Install the Horizon packages that you copied to this edge device:
 
-   - For Debian/Ubuntu distributions:
+   - For Debian / Ubuntu distributions:
 
      ```bash
      apt update && apt install ./*horizon*.deb
@@ -147,8 +147,10 @@ Follow these steps:
    $ hzn version
    Horizon CLI version: 2.23.29
    Horizon Agent version: 2.23.29
+
    $ hzn exchange version
    1.116.0
+
    $ hzn node list
    {
          "id": "",
