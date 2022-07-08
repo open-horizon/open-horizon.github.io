@@ -69,7 +69,7 @@ Edge services often use cloud ingest services to store and further process edge 
 
    Output example:
 
-   ```bash
+   ```text
    WARNING! Your password will be stored unencrypted in ~userName/.docker/config.json.
    Configure a credential helper to remove this warning. See
    https://docs.docker.com/engine/reference/commandline/login/#credentials-store
@@ -90,10 +90,17 @@ Edge services often use cloud ingest services to store and further process edge 
 
 5. Install a few development tools:
 
-   On **{{site.data.keyword.linux_notm}}** (for Ubuntu/Debian distributions):
+   On **{{site.data.keyword.linux_notm}}** (for Ubuntu / Debian distributions):
 
    ```bash
    sudo apt install -y git jq make
+   ```
+   {: codeblock}
+
+   On **{{site.data.keyword.linux_notm}}** ({{site.data.keyword.rhel}} or {{site.data.keyword.fedora}} distributions):
+
+   ```bash
+   sudo dnf install git jq make
    ```
    {: codeblock}
 
