@@ -41,12 +41,19 @@ Use the bulk installation process to set up multiple edge devices of similar typ
 
 2. The **pssh** package includes the **pssh** and **pscp** commands, which enable you to run commands to many edge devices in parallel and copy files to many edge devices in parallel. If you do not have these commands on this host, install the package now:
 
-   - On {{site.data.keyword.linux_notm}}:
+   - On {{site.data.keyword.linux_notm}} (for Ubuntu / Debian distributions):
 
      ```bash
      sudo apt install pssh
      alias pssh=parallel-ssh
      alias pscp=parallel-scp
+     ```
+     {: codeblock}
+
+   - On **{{site.data.keyword.linux_notm}}** ({{site.data.keyword.rhel}} or {{site.data.keyword.fedora}} distributions):
+
+     ```bash
+     sudo dnf install pssh
      ```
      {: codeblock}
 
