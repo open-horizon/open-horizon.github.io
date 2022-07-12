@@ -19,6 +19,6 @@ lastupdated: "2021-02-20"
 
 Review the important principles and best practices for developing edge services for {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) devices. For more information, see:
 
-* [Model management details](model_management_details.md)
+* [Model management system](model_management_details.md)
 * [Container deployment options](container_deployment_options.md)
 * [CI-CD process for edge services](cicd_process.md)

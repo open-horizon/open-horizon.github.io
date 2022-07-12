@@ -2,7 +2,7 @@
 
 copyright:
 years: 2020 - 2022
-lastupdated: "2022-06-24"
+lastupdated: "2022-07-07"
 
 ---
 
@@ -69,7 +69,7 @@ Edge services often use cloud ingest services to store and further process edge 
 
    Output example:
 
-   ```bash
+   ```text
    WARNING! Your password will be stored unencrypted in ~userName/.docker/config.json.
    Configure a credential helper to remove this warning. See
    https://docs.docker.com/engine/reference/commandline/login/#credentials-store
@@ -90,10 +90,17 @@ Edge services often use cloud ingest services to store and further process edge 
 
 5. Install a few development tools:
 
-   On **{{site.data.keyword.linux_notm}}** (for Ubuntu/Debian distributions):
+   On **{{site.data.keyword.linux_notm}}** (for Ubuntu / Debian distributions):
 
    ```bash
    sudo apt install -y git jq make
+   ```
+   {: codeblock}
+
+   On **{{site.data.keyword.linux_notm}}** ({{site.data.keyword.rhel}} or {{site.data.keyword.fedora}} distributions):
+
+   ```bash
+   sudo dnf install git jq make
    ```
    {: codeblock}
 
@@ -109,6 +116,5 @@ Edge services often use cloud ingest services to store and further process edge 
 ## What to do next
 {: #service_containers_what_next}
 
-Use your credentials and signing key to complete the [development examples](developing.md#edge_devices_ex_examples). These examples show you how to build simple edge services and learn the basics for developing for {{site.data.keyword.edge_notm}}.
-
+* Use your credentials and signing key to complete the [development examples](developing.md#edge_devices_ex_examples). These examples show you how to build simple edge services and learn the basics for developing for {{site.data.keyword.edge_notm}}.
 * If you already have a docker image that you want {{site.data.keyword.edge_notm}} to deploy to edge nodes, see [Transform image to edge service](transform_image.md).

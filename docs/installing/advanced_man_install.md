@@ -2,7 +2,7 @@
 
 copyright:
 years: 2021 - 2022
-lastupdated: "2022-06-26"
+lastupdated: "2022-07-06"
 
 ---
 
@@ -56,53 +56,53 @@ Follow these steps:
 
 2. Query the OCI container runtime version to check whether it is recent enough:
 
-   a. Docker
+   - Docker
 
-      ```bash
-      docker --version
-      ```
-      {: codeblock}
+     ```bash
+     docker --version
+     ```
+     {: codeblock}
 
-      If docker is not installed, or the version is older than `18.06.01`, install the most recent version of Docker.
+     If docker is not installed, or the version is older than `18.06.01`, install the most recent version of Docker.
 
-      ```bash
-      curl -fsSL get.docker.com | sh
-      docker --version
-      ```
-      {: codeblock}
+     ```bash
+     curl -fsSL get.docker.com | sh
+     docker --version
+     ```
+     {: codeblock}
 
-   b. Podman
+   - Podman ({{site.data.keyword.rhel}} or {{site.data.keyword.fedora}})
 
-      ```bash
-      podman --version
-      ```
-      {: codeblock}
+     ```bash
+     podman --version
+     ```
+     {: codeblock}
 
-   If podman is not installed, or the version is older than `4.0`, install the most recent version of Podman.
+     If podman is not installed, or the version is older than `4.0`, install the most recent version of Podman.
 
-      ```bash
-      dnf install podman netavark
-      podman --version
-      ```
-      {: codeblock}
+     ```bash
+     dnf install podman netavark
+     podman --version
+     ```
+     {: codeblock}
 
-   Switch the network stack from CNI to Netavark. The {{site.data.keyword.horizon}} agent requires the network backend to be configured to use netavark instead of cni so that the agent can set up networking scenarios such as dependent services between containers.  Follow the steps in the Red Hat documentation [switching the network stack ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/building_running_and_managing_containers/index#proc_switching-the-network-stack-from-cni-to-netavark_assembly_setting-container-network-modes){:target="_blank"}{: .externalLink} chapter.
+     Switch the network stack from CNI to Netavark. The {{site.data.keyword.horizon}} agent requires the network backend to be configured to use netavark instead of cni so that the agent can set up networking scenarios such as dependent services between containers.  Follow the steps in the Red Hat documentation [switching the network stack ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/building_running_and_managing_containers/index#proc_switching-the-network-stack-from-cni-to-netavark_assembly_setting-container-network-modes){:target="_blank"}{: .externalLink} chapter.
 
 3. Install the Horizon packages that you copied to this edge device:
 
-   * For Debian/Ubuntu distributions:
+   - For Debian / Ubuntu distributions:
 
-      ```bash
-      apt update && apt install ./*horizon*.deb
-      ```
-      {: codeblock}
+     ```bash
+     apt update && apt install ./*horizon*.deb
+     ```
+     {: codeblock}
 
-   * For {{site.data.keyword.rhel}} or {{site.data.keyword.fedora}} distributions:
+   - For {{site.data.keyword.rhel}} or {{site.data.keyword.fedora}} distributions:
 
-      ```bash
-      yum install ./*horizon*.rpm
-      ```
-      {: codeblock}
+     ```bash
+     yum install ./*horizon*.rpm
+     ```
+     {: codeblock}
 
 4. Set your specific information as environment variables:
 
@@ -147,8 +147,10 @@ Follow these steps:
    $ hzn version
    Horizon CLI version: 2.23.29
    Horizon Agent version: 2.23.29
+
    $ hzn exchange version
    1.116.0
+
    $ hzn node list
    {
          "id": "",

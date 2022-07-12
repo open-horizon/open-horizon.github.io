@@ -2,7 +2,7 @@
 
 copyright:
 years: 2020 - 2022
-lastupdated: "2022-03-17"
+lastupdated: "2022-07-07"
 
 ---
 
@@ -43,7 +43,7 @@ When an edge service is deployed to an edge node as a result of a pattern or pol
 For example:
 
 ```json
- "serviceVersions":
+"serviceVersions":
 [
  {
    "version": "2.3.1",

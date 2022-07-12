@@ -2,7 +2,7 @@
 
 copyright:
 years: 2020 - 2022
-lastupdated: "2022-06-14"
+lastupdated: "2022-07-07"
 
 ---
 
@@ -59,7 +59,7 @@ Before you purchase SDO-enabled edge devices, you can test SDO support in {{site
    export CURL_CA_BUNDLE=$HZN_MGMT_HUB_CERT_PATH
    ```
 
-3. Follow the steps in the [open-horizon/SDO-support repository ](https://github.com/open-horizon/SDO-support/blob/master/README-1.10.md){:target="_blank"}{: .externalLink} to observe SDO automatically install the {{site.data.keyword.ieam}} agent on a device and registers it with your {{site.data.keyword.ieam}} management hub.
+3. Follow the steps in the [Open Horizon SDO 1.11](https://github.com/open-horizon/SDO-support/blob/master/README-1.11.md){:target="_blank"}{: .externalLink} to observe SDO automatically install the {{site.data.keyword.ieam}} agent on a device and registers it with your {{site.data.keyword.ieam}} management hub.
 
 ## Adding SDO-enabled devices to your {{site.data.keyword.ieam}} domain
 {: #using-sdo}
