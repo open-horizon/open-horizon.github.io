@@ -42,7 +42,7 @@ You can install the open source management hub (without the {{site.data.keyword.
 ## Is {{site.data.keyword.ieam}} software open-sourced?
 {: #open_sourced}
 
-{{site.data.keyword.ieam}} is an IBM product. But its core components heavily use the [Open Horizon - EdgeX Project Group ](https://wiki.edgexfoundry.org/display/FA/Open+Horizon+-+EdgeX+Project+Group){:target="_blank"}{: .externalLink} open source project. Many sample and example programs that are available in the {{site.data.keyword.horizon}} project work with {{site.data.keyword.ieam}}. For more information about the project, see [Open Horizon - EdgeX Project Group ](https://wiki.edgexfoundry.org/display/FA/Open+Horizon+-+EdgeX+Project+Group){:target="_blank"}{: .externalLink}.
+{{site.data.keyword.ieam}} is an IBM product. But its core components heavily use the [Open Horizon ](https://www.lfedge.org/projects/openhorizon/){:target="_blank"}{: .externalLink} open source project. Many sample and example programs that are available in the {{site.data.keyword.horizon}} project work with {{site.data.keyword.ieam}}. For more information about the project, see [Open Horizon ](https://www.lfedge.org/projects/openhorizon/){:target="_blank"}{: .externalLink}.
 
 ## How can I develop and deploy edge services with {{site.data.keyword.ieam}}?
 {: #dev_dep}
