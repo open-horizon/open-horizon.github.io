@@ -2,7 +2,7 @@
 
 copyright:
 years: 2020 - 2022
-lastupdated: "2022-07-07"
+lastupdated: "2022-07-15"
 
 ---
 
@@ -50,12 +50,12 @@ Edge services often use cloud ingest services to store and further process edge 
    1. Open the Docker **Preferences** dialog.
    2. Uncheck **Securely store Docker logins in {{site.data.keyword.macOS_notm}} keychain**.
 
-     * If you cannot uncheck this box follow these steps:
+      * If you cannot uncheck this box follow these steps:
 
-       1. Check **Include VM in Time Machine backups**.
-       2. Uncheck **Securely store Docker logins in {{site.data.keyword.macOS_notm}} keychain**.
-       3. (Optional) Uncheck **Include VM in Time Machine backups**.
-       4. Click **Apply & Restart**.
+        1. Check **Include VM in Time Machine backups**.
+        2. Uncheck **Securely store Docker logins in {{site.data.keyword.macOS_notm}} keychain**.
+        3. (Optional) Uncheck **Include VM in Time Machine backups**.
+        4. Click **Apply & Restart**.
 
    3. If you have a file that is called `~/.docker/plaintext-passwords.json`, remove it.
 
