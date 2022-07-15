@@ -115,7 +115,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
 10. Set your service account token to the following environment variable:
 
     ```bash
-    export OCP_TOKEN=`oc serviceaccounts
+    export OCP_TOKEN=`oc serviceaccounts get-token $OCP_USER`
     ```
     {: codeblock}
 
