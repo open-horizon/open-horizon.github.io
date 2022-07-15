@@ -2,7 +2,7 @@
 
 copyright:
 years: 2022
-lastupdated: "2022-06-19"
+lastupdated: "2022-07-15"
 
 ---
 
@@ -45,7 +45,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
    {: codeblock}
 
 2. If you have not completed the steps in [Creating your API key](../hub/prepare_for_edge_nodes.md), do that now. This process creates an API key, locates some files, and gathers environment variable values that are needed when you set up edge nodes. Set the same environment variables on this edge cluster:
-   
+
    ```bash
    export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
    export HZN_ORG_ID=<your-exchange-organization>
@@ -114,45 +114,45 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
 
 10. Set your service account token to the following environment variable:
 
-   ```bash
-   export OCP_TOKEN=`oc serviceaccounts get-token $OCP_USER`
-   ```
-   {: codeblock}
+    ```bash
+    export OCP_TOKEN=`oc serviceaccounts get-token $OCP_USER`
+    ```
+    {: codeblock}
 
 11. Get the {{site.data.keyword.open_shift}} certificate and allow docker to trust it:
 
-   ```bash
-   echo | openssl s_client -connect $OCP_IMAGE_REGISTRY:443 -showcerts | sed -n "/-----BEGIN CERTIFICATE-----/,/-----END CERTIFICATE-----/p" > ca.crt
-   ```
-   {: codeblock}
+    ```bash
+    echo | openssl s_client -connect $OCP_IMAGE_REGISTRY:443 -showcerts | sed -n "/-----BEGIN CERTIFICATE-----/,/-----END CERTIFICATE-----/p" > ca.crt
+    ```
+    {: codeblock}
 
-   On {{site.data.keyword.linux_notm}}:
+    On {{site.data.keyword.linux_notm}}:
 
-   ```bash
-   mkdir -p /etc/docker/certs.d/$OCP_IMAGE_REGISTRY
-   cp ca.crt /etc/docker/certs.d/$OCP_IMAGE_REGISTRY
-   systemctl restart docker.service
-   ```
-   {: codeblock}
+    ```bash
+    mkdir -p /etc/docker/certs.d/$OCP_IMAGE_REGISTRY
+    cp ca.crt /etc/docker/certs.d/$OCP_IMAGE_REGISTRY
+    systemctl restart docker.service
+    ```
+    {: codeblock}
 
-   On {{site.data.keyword.macOS_notm}}:
+    On {{site.data.keyword.macOS_notm}}:
 
-   ```bash
-   mkdir -p ~/.docker/certs.d/$OCP_IMAGE_REGISTRY
-   cp ca.crt ~/.docker/certs.d/$OCP_IMAGE_REGISTRY
-   ```
-   {: codeblock}
+    ```bash
+    mkdir -p ~/.docker/certs.d/$OCP_IMAGE_REGISTRY
+    cp ca.crt ~/.docker/certs.d/$OCP_IMAGE_REGISTRY
+    ```
+    {: codeblock}
 
-   On {{site.data.keyword.macOS_notm}}, use the Docker Desktop icon on the right side of the desktop menu bar to restart Docker by clicking **Restart** in the dropdown menu.
+    On {{site.data.keyword.macOS_notm}}, use the Docker Desktop icon on the right side of the desktop menu bar to restart Docker by clicking **Restart** in the dropdown menu.
 
 12. Log in to the {{site.data.keyword.ocp}} Docker host:
 
-   ```bash
-   echo "$OCP_TOKEN" | docker login -u $OCP_USER --password-stdin $OCP_IMAGE_REGISTRY
-   ```
-   {: codeblock}
+    ```bash
+    echo "$OCP_TOKEN" | docker login -u $OCP_USER --password-stdin $OCP_IMAGE_REGISTRY
+    ```
+    {: codeblock}
 
-13. Configure additional trust stores for image registry access:   
+13. Configure additional trust stores for image registry access:
 
     ```bash
     oc create configmap registry-config --from-file=$OCP_IMAGE_REGISTRY=ca.crt -n openshift-config
@@ -212,7 +212,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
     oc get pods
     ```
     {: codeblock}
- 
+
 20. Now that the agent is installed on your edge cluster, you can run these commands if you want to familiarize yourself with the Kubernetes resources associated with the agent:
 
     ```bash
