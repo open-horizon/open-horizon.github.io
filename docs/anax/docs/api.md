@@ -192,7 +192,7 @@ body:
 | nodeType | string | the node type. Valid values are 'device' and 'cluster'.  |
 | token_valid | bool| whether the agent's exchange token is valid or not. |
 | token_last_valid_time | uint64 | the time stamp when the agent's token was last valid. |
-| ha | bool | whether the node is part of an HA group or not. |
+| ha_group | string | The name of the HA group that node is in. |
 | configstate | json | the current configuration state of the agent. It contains the state and the last_update_time. The valid values for the state are "configuring", "configured", "unconfiguring", and "unconfigured". |
 
 **Example:**
@@ -206,7 +206,7 @@ curl -s http://localhost:8510/node | jq '.'
   "nodeType": "device",
   "token_last_valid_time": 1508174346,
   "token_valid": true,
-  "ha": false,
+  "ha_group": "mygroup",
   "configstate": {
     "state": "configured",
     "last_update_time": 1508174348
@@ -232,7 +232,6 @@ body:
 | organization | string | the agent's organization. |
 | pattern | string | the pattern that will be deployed on the node. |
 | name | string | the user readable name for the agent.  |
-| ha | bool | whether the node is part of an HA group or not. |
 
 **Response:**
 
@@ -403,7 +402,7 @@ attribute
 | ---- | ---- | ---------------- |
 | id | string| the id of the attribute. |
 | label | string | the user readable name of the attribute |
-| type| string | the attribute type. Supported attribute types are: HAAttributes, MeteringAttributes, AgreementProtocolAttributes, UserInputAttributes, HTTPSBasicAuthAttributes, and DockerRegistryAuthAttributes. |
+| type| string | the attribute type. Supported attribute types are: MeteringAttributes, AgreementProtocolAttributes, UserInputAttributes, HTTPSBasicAuthAttributes, and DockerRegistryAuthAttributes. |
 | publishable| bool | whether the attribute can be made public or not. |
 | host_only | bool | whether or not the attribute will be passed to the service containers. |
 | service_specs | array of json | an array of service organization and url. It applies to all services if it is empty. It is only required for the following attributes:  MeteringAttributes, AgreementProtocolAttributes, UserInputAttributes. |
@@ -505,7 +504,7 @@ body:
 | ---- | ---- | ---------------- |
 | id | string| the id of the attribute. |
 | label | string | the user readable name of the attribute |
-| type| string | the attribute type. Supported attribute types are: HAAttributes, MeteringAttributes, AgreementProtocolAttributes, UserInputAttributes, HTTPSBasicAuthAttributes, and DockerRegistryAuthAttributes. |
+| type| string | the attribute type. Supported attribute types are: MeteringAttributes, AgreementProtocolAttributes, UserInputAttributes, HTTPSBasicAuthAttributes, and DockerRegistryAuthAttributes. |
 | publishable| bool | whether the attribute can be made public or not. |
 | host_only | bool | whether or not the attribute will be passed to the service containers. |
 | service_specs | array of json | an array of service organization and url. It applies to all services if it is empty. It is only required for the following attributes:  MeteringAttributes, AgreementProtocolAttributes, UserInputAttributes. |
@@ -1157,7 +1156,6 @@ body:
 | | header | json|  the header of the policy. It includes the name and the version of the policy. |
 | | apiSpec | array | an array of api specifications. Each one includes a URL pointing to the definition of the API spec, the version of the API spec in OSGI version format, the organization that implements the API spec, whether or not exclusive access to this API spec is required and the hardware architecture of the API spec implementation. |
 | | properties | array | an array of name value pairs that the current party have. |
-| | ha_group | json | a list of ha partners. |
 | | agreementProtocols | array | an array of agreement protocols. Each one includes the name of the agreement protocol.|
 
 Note: The policy also contains other fields that are unused and therefore not documented.
@@ -1195,7 +1193,6 @@ curl http://localhost:8510/service/policy | jq '.'
         "value": "1024"
       }
     ],
-    "ha_group": {},
     "nodeHealth": {}
   },
   ...
@@ -2246,7 +2243,7 @@ curl -s http://localhost:8510/nodemanagement/status | jq '.'
 }
 ```
 
-#### **API:** GET  /nodemanagement/status/{nmpname}
+#### **API:** GET  /nodemanagement/status/{nmpName}
 ---
 
 Get the status objects that corresponds to the given node management policy name. The org that the NMP and node belong to can be optionally prepended (i.e. `/nodemanagement/status/nmp-name` and `/nodemanagement/status/org/nmp-name` refer to the same object, so long as the node is part of the given org) A guide to what each status value means can be found here: [node_management_status.md](node_management_status.md)
@@ -2324,12 +2321,12 @@ curl -s http://localhost:8510/nodemanagement/status/sample-nmp | jq '.'
 }
 ```
 
-#### **API:** PUT  /nodemanagement/status/{nmpname}
+#### **API:** PUT  /nodemanagement/status/{nmpName}
 ---
 
 Update the status object that corresponds to the given node management policy name. The org that the NMP and node belong to can be optionally prepended (i.e. `/nodemanagement/status/nmp-name` and `/nodemanagement/status/org/nmp-name` refer to the same object, so long as the node is part of the given org) A guide to what each status value means can be found here: [node_management_status.md](node_management_status.md)
 
-Currently, the only supported update to the status object is the agentUpgradePolicyStatus structure. When the node management worker first picks up the status, it will create a local status object and fill in
+Currently, the only supported update to the status object is the agentUpgradePolicyStatus structure. 
 
 **Parameters:**
 
@@ -2375,4 +2372,38 @@ curl -s -w "%{http_code}" -X PUT -H 'Content-Type: application/json' -d '{
     "errorMessage": "Sample error message",
   }
 }'  http://localhost:8510/nodemanagement/status/sample-nmp
+```
+
+#### **API:** PUT  /nodemanagement/reset
+---
+
+Reset all of the NMP status objects that are stored on the node to the "waiting" state.
+
+**Response:**
+
+code:
+* 201 -- success
+
+**Examples:**
+
+```
+curl -s -w "%{http_code}" -X PUT -H 'Content-Type: application/json' http://localhost:8510/nodemanagement/reset
+```
+
+#### **API:** PUT  /nodemanagement/reset/{nmpName}
+---
+
+Reset all of the NMP status objects that are stored on the node to the "waiting" state.
+
+Reset the status object that corresponds to the given node management policy name to the "waiting" state. The org that the NMP and node belong to can be optionally prepended (i.e. `/nodemanagement/status/nmp-name` and `/nodemanagement/status/org/nmp-name` refer to the same object, so long as the node is part of the given org)(node_management_status.md)
+
+**Response:**
+
+code:
+* 201 -- success
+
+**Examples:**
+
+```
+curl -s -w "%{http_code}" -X PUT -H 'Content-Type: application/json' http://localhost:8510/nodemanagement/reset/sample-nmp
 ```
