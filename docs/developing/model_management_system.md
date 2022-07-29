@@ -36,7 +36,7 @@ cat /etc/default/horizon
 ## Procedure
 {: #mms_procedure}
 
-This example is part of the [{{site.data.keyword.horizon_open}} ](https://github.com/open-horizon/){:target="_blank"}{: .externalLink} open-source project. Follow the steps in [Creating Your Own Hello MMS Edge Service ](https://github.com/open-horizon/examples/blob/master/edge/services/helloMMS/CreateService.md){:target="_blank"}{: .externalLink}) and then return here.
+This example is part of the [{{site.data.keyword.horizon_open}} ](https://github.com/open-horizon/){:target="_blank"}{: .externalLink} open-source project. Follow the steps in [Creating Your Own Hello MMS Edge Service ](https://github.com/open-horizon/examples/blob/master/edge/services/helloMMS/CreateService.md){:target="_blank"}{: .externalLink} and then return here.
 
 ## What to do next
 {: #mms_what_next}
