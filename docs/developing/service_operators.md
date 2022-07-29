@@ -2,7 +2,7 @@
 
 copyright:
 years: 2020 - 2022
-lastupdated: "2022-03-17"
+lastupdated: "2022-06-24"
 
 ---
 
@@ -37,7 +37,7 @@ or
 
 * Include a namespace definition yaml file with the operator's yaml definition files; for example, in the operator project's **./deploy** directory.
 
-**Note**: When an operator is deployed into a non-default namespace, {{site.data.keyword.ieam}} creates the namespace if it does not exist and removes it when the operator is undeployed by {{site.data.keyword.ieam}}.
+**Note**: When an operator is deployed into a non-default namespace, {{site.data.keyword.ieam}} creates the namespace if it does not exist and removes it when the operator is undeployed by {{site.data.keyword.ieam}}.
 
 ## Packaging an operator for {{site.data.keyword.ieam}}
 
@@ -55,7 +55,7 @@ After an operator is written and tested, it needs to be packaged for deployment 
    ```
    {: codeblock}
 
-   **Note**: For {{site.data.keyword.macos_notm}} users, consider creating a clean archive tar.gz file to ensure that no hidden files exist in the tar.gz file. For example, a .DS_store file can cause problems when you deploy a helm operator. If you suspect that a hidden file exists, extract the tar.gz on your {{site.data.keyword.linux_notm}} system. For more information, see [Tar command in macos ](https://stackoverflow.com/questions/8766730/tar-command-in-mac-os-x-adding-hidden-files-why){:target="_blank"}{: .externalLink}.
+   **Note**: For {{site.data.keyword.macOS_notm}} users, consider creating a clean archive tar.gz file to ensure that no hidden files exist in the tar.gz file. For example, a .DS_store file can cause problems when you deploy a helm operator. If you suspect that a hidden file exists, extract the tar.gz on your {{site.data.keyword.linux_notm}} system. For more information, see [Tar command in {{site.data.keyword.macOS_notm}} ](https://stackoverflow.com/questions/8766730/tar-command-in-mac-os-x-adding-hidden-files-why){:target="_blank"}{: .externalLink}.
 
    ```bash
    tar -xzpvf x.tar --exclude=".*"
@@ -77,7 +77,7 @@ After an operator is written and tested, it needs to be packaged for deployment 
 
    4. Publish the service
 
-      ```
+      ```bash
       hzn exchange service publish -k <signing key> -f ./horizon/service.definition.json
       ```
       {: codeblock}

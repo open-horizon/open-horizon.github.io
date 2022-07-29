@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2021 - 2022
+lastupdated: "2022-07-01"
 title: Best Practices
 description: ""
 ---
@@ -49,7 +49,7 @@ These differences require different techniques to deploy and manage software on 
   * Exercise continuous-integration and continuous-deployment (CI/CD), coupled with Agile Development practices within a DevOps framework.
   * Consider the following resources for more information about cloud-native programming practices:
     * [10 KEY ATTRIBUTES OF CLOUD-NATIVE APPLICATIONS](https://thenewstack.io/10-key-attributes-of-cloud-native-applications/)
-    * [Cloud Native Programming](https://researcher.watson.ibm.com/researcher/view_group.php?id=9957)
+    * [Cloud-native development principles](https://www.ibm.com/cloud/learn/cloud-native)
     *	[Understanding cloud-native applications](https://www.redhat.com/en/topics/cloud-native-apps)
 
 * **Service availability:** If your service container requires and uses other service containers, your service must be tolerant when those services are absent in some situations. For example, when containers initially start, even though they are started from the end of the dependency graph, moving upward, some services can start more quickly than others. In this situation, your service containers need to retry while they wait for the dependencies to be fully functional. Similarly, if a dependent service container is automatically updated, then it is restarted. It is a best practice for your services to always be tolerant of interruptions in the services they depend on.

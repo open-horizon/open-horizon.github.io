@@ -1,10 +1,10 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2021 - 2022
+lastupdated: "2022-07-01"
 layout: page
-title: "Developer Learning Path"
+title: "Developer learning path"
 description: A set of sequential resources for the developer learning about Open Horizon
 
 ---

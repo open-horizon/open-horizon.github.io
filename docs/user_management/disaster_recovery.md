@@ -2,7 +2,7 @@
 
 copyright:
 years: 2020 - 2022
-lastupdated: "2022-03-17"
+lastupdated: "2022-07-01"
 
 ---
 
@@ -17,4 +17,4 @@ lastupdated: "2022-03-17"
 # Disaster recovery
 {: #disaster_recovery}
 
-For more information about recovering and restoring data assets, see [{{site.data.keyword.open_shift_cp}} ](https://docs.openshift.com/container-platform/4.6/backup_and_restore/disaster_recovery/about-disaster-recovery.html){:target="_blank"}{: .externalLink}.
+For more information about recovering and restoring data assets using Kubernetes clusters, see [{{site.data.keyword.open_shift_cp}} ](https://docs.openshift.com/container-platform/4.8/backup_and_restore/){:target="_blank"}{: .externalLink}.

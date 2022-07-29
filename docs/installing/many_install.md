@@ -2,7 +2,7 @@
 
 copyright:
 years: 2020 - 2022
-lastupdated: "2022-03-17"
+lastupdated: "2022-06-24"
 
 ---
 
@@ -19,14 +19,14 @@ lastupdated: "2022-03-17"
 
 Use the bulk installation process to set up multiple edge devices of similar types (in other words, same architecture, operating system, and pattern or policy).
 
-**Note**: For this process, target edge devices that are macOs computers are not supported. However, you can drive this process from a macOs computer, if wanted. (In other words, this host can be a macOs computer.)
+**Note**: For this process, target edge devices that are {{site.data.keyword.macOS_notm}} computers are not supported. However, you can drive this process from a {{site.data.keyword.macOS_notm}} computer, if wanted. (In other words, this host can be a {{site.data.keyword.macOS_notm}} computer.)
 
 ### Prerequisites
 
-* The devices to be installed and registered must have network access to the management hub.
-* The devices must have an installed operating system.
-* If you are using DHCP for edge devices, each device must maintain the same IP address until the task is complete (or the same `hostname` if you are using DDNS).
-* All edge service user inputs must be specified as defaults in the service definition or in the pattern or deployment policy. No node-specific user inputs can be used.
+- The devices to be installed and registered must have network access to the management hub.
+- The devices must have an installed operating system.
+- If you are using DHCP for edge devices, each device must maintain the same IP address until the task is complete (or the same `hostname` if you are using DDNS).
+- All edge service user inputs must be specified as defaults in the service definition or in the pattern or deployment policy. No node-specific user inputs can be used.
 
 ### Procedure
 {: #proc-multiple}
@@ -35,29 +35,36 @@ Use the bulk installation process to set up multiple edge devices of similar typ
 
    ```bash
    export AGENT_TAR_FILE=agentInstallFiles-<edge-device-type>.tar.gz
-   export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
+   export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
    ```
   {: codeblock}
 
 2. The **pssh** package includes the **pssh** and **pscp** commands, which enable you to run commands to many edge devices in parallel and copy files to many edge devices in parallel. If you do not have these commands on this host, install the package now:
 
-  * On {{site.data.keyword.linux_notm}}:
+   - On {{site.data.keyword.linux_notm}} (for Ubuntu / Debian distributions):
 
-   ```bash
-   sudo apt install pssh
-   alias pssh=parallel-ssh
-   alias pscp=parallel-scp
-   ```
-   {: codeblock}
+     ```bash
+     sudo apt install pssh
+     alias pssh=parallel-ssh
+     alias pscp=parallel-scp
+     ```
+     {: codeblock}
 
-  * On {{site.data.keyword.macOS_notm}}:
+   - On **{{site.data.keyword.linux_notm}}** ({{site.data.keyword.rhel}} or {{site.data.keyword.fedora}} distributions):
 
-   ```bash
-   brew install pssh
-   ```
-   {: codeblock}
+     ```bash
+     sudo dnf install pssh
+     ```
+     {: codeblock}
 
-   (If **brew** is not installed yet, see [Install pssh on macOs computer with Brew ](https://brewinstall.org/Install-pssh-on-Mac-with-Brew/){:target="_blank"}{: .externalLink}.)
+   - On {{site.data.keyword.macOS_notm}}:
+
+     ```bash
+     brew install pssh
+     ```
+     {: codeblock}
+
+   (If **brew** is not installed yet, see [Install pssh on {{site.data.keyword.macOS_notm}} computer with Brew ](https://brewinstall.org/Install-pssh-on-Mac-with-Brew/){:target="_blank"}{: .externalLink}.)
 
 3. You can give **pscp** and **pssh** access to your edge devices in several ways. This content describes how to use an ssh public key. First, this host must have an ssh key pair (usually in **~/.ssh/id_rsa** and **~/.ssh/id_rsa.pub**). If it does not have an ssh key pair, generate it:
 

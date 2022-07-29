@@ -7,3 +7,4 @@ _site/
 .tree.txt.swp
 vendor
 .bundle
+.vscode/

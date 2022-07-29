@@ -2,7 +2,7 @@
 
 copyright:
 years: 2019 - 2022
-lastupdated: "2022-05-19"
+lastupdated: "2022-06-26"
 
 ---
 
@@ -26,9 +26,9 @@ The following instructions guide you through the process of installing the requi
 
 - x86_64
   - {{site.data.keyword.linux_bit_notm}} devices or virtual machines that run Ubuntu 22.x (jammy), Ubuntu 20.x (focal), Ubuntu 18.x (bionic), Debian 10 (buster), Debian 9 (stretch)
-  - {{site.data.keyword.rhel}} 8.1, 8.2, 8.3, 8.4, 8.5 and 8.6
+  - {{site.data.keyword.rhel}} 8.1 - 8.5 (via Docker), 8.6 and 9.0 (via Podman 4.x).  See Notes.
   - {{site.data.keyword.fedora}} Workstation 32, 36
-  - CentOS 8.1, 8.2, 8.3, 8.4 and 8.5
+  - CentOS 8.1 - 8.5 (via Docker)
   - SuSE 15 SP2
 - ppc64le
   - {{site.data.keyword.linux_ppc64le_notm}} devices or virtual machines that run Ubuntu 20.x (focal) or Ubuntu 18.x (bionic)
@@ -37,7 +37,7 @@ The following instructions guide you through the process of installing the requi
   - {{site.data.keyword.linux_notm}} on ARM (32-bit), for example Raspberry Pi, running Raspberry Pi OS buster or bullseye
 - ARM (64-bit)
   - {{site.data.keyword.linux_notm}} on ARM (64-bit), for example NVIDIA Jetson Nano, TX1, or TX2, running Ubuntu 18.x (bionic)
-- Mac
+- Mac ({{site.data.keyword.intel}} only)
   - {{site.data.keyword.macOS_notm}}
 
 **Notes**:
@@ -45,7 +45,7 @@ The following instructions guide you through the process of installing the requi
 - Installation of edge devices with {{site.data.keyword.fedora}} or SuSE is only supported by the [Advanced manual agent installation and registration](../installing/advanced_man_install.md) method.
 - CentOS and {{site.data.keyword.rhel}} 8.5 or earlier on {{site.data.keyword.ieam}} {{site.data.keyword.version}} only support Docker as a container engine.
 - While {{site.data.keyword.ieam}} {{site.data.keyword.version}} supports running {{site.data.keyword.rhel}} 8.x with Docker, it is officially unsupported by {{site.data.keyword.rhel}}.
-- {{site.data.keyword.ieam}} {{site.data.keyword.version}} supports Podman 4.x on {{site.data.keyword.rhel}} 8.6 and {{site.data.keyword.fedora}} 36 Workstation.
+- {{site.data.keyword.ieam}} {{site.data.keyword.version}} supports Podman 4.x on {{site.data.keyword.rhel}} 8.6, {{site.data.keyword.rhel}} 9.0 and {{site.data.keyword.fedora}} 36 Workstation.
 
 ## Sizing
 {: #size}
@@ -66,7 +66,7 @@ The following instructions guide you through the process of installing the requi
 To install and configure your edge device, click the link that represents your edge device type:
 
 - [{{site.data.keyword.linux_bit_notm}} devices or virtual machines](#x86-machines)
-- [{{site.data.keyword.rhel}} 8.x devices or virtual machines](#rhel8)
+- [{{site.data.keyword.rhel}} 8.x / 9.x devices or virtual machines](#rhel8)
 - [{{site.data.keyword.linux_ppc64le_notm}} devices or virtual machines](#ppc64le-machines)
 - [{{site.data.keyword.linux_notm}} on ARM (32-bit)](#arm-32-bit); for example, Raspberry Pi running Raspberry Pi OS
 - [{{site.data.keyword.linux_notm}} on ARM (64-bit)](#arm-64-bit); for example, NVIDIA Jetson Nano, TX1, or TX2
@@ -79,7 +79,7 @@ To install and configure your edge device, click the link that represents your e
 {: #hard-req-x86}
 
 - 64-bit Intel&reg; or AMD device or virtual machine
-- An internet connection for your device (wired or wifi)
+- An internet connection for your device (wired or WiFi)
 - (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware.
 
 ### Procedure
@@ -91,24 +91,30 @@ Install the most recent version of Docker or Podman on your device. For more inf
 
 Now that your edge device is prepared, continue on to [Installing the agent](registration.md).
 
-## {{site.data.keyword.rhel}} 8.x devices or virtual machines
+## {{site.data.keyword.rhel}} 8.x / 9.x devices or virtual machines
 {: #rhel8}
 
 ### Hardware requirements
 {: #hard-req-rhel8}
 
 - 64-bit Intel&reg; device, AMD device, ppc64le device, or virtual machine
-- An internet connection for your device (wired or wifi)
+- An internet connection for your device (wired or WiFi)
 - (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware.
 
 ### Procedure
 {: #proc-rhel8}
 
-Prepare your device by installing {{site.data.keyword.rhel}} 8.x.
+Prepare your device by installing {{site.data.keyword.rhel}} 8.x or 9.x
 
-If you are running {{site.data.keyword.rhel}} 8.6, install the podman 4.x packages by installing the container-tools:rhel8 module.
+If you are running {{site.data.keyword.rhel}} 9.0, install the podman 4.x packages.
 
-```sh
+```bash
+dnf module install podman netavark
+```
+
+If you are running {{site.data.keyword.rhel}} 8.6, install the podman 4.x packages by installing the `container-tools:rhel8` module.
+
+```bash
 dnf module install container-tools:rhel8
 ```
 
@@ -116,21 +122,21 @@ If you are running {{site.data.keyword.rhel}} 8.5 or below, remove Podman and ot
 
 1. Uninstall packages:
 
-   ```sh
+   ```bash
    yum remove buildah skopeo podman containers-common atomic-registries docker container-tools
    ```
    {: codeblock}
 
 2. Remove remaining artifacts & files:
 
-   ```sh
+   ```bash
    rm -rf /etc/containers/* /var/lib/containers/* /etc/docker /etc/subuid* /etc/subgid*
    ```
    {: codeblock}
 
 3. Delete any associated container storage:
 
-   ```sh
+   ```bash
    cd ~ && rm -rf /.local/share/containers/
    ```
    {: codeblock}
@@ -139,7 +145,7 @@ If you are running {{site.data.keyword.rhel}} 8.5 or below, remove Podman and ot
 
 5. Configure Docker to start on boot by default and follow any other [Docker post installation steps ](https://docs.docker.com/engine/install/linux-postinstall/){:target="_blank"}{: .externalLink}.
 
-   ```sh
+   ```bash
    sudo systemctl enable docker.service
    sudo systemctl enable containerd.service
    ```
@@ -154,7 +160,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 {: #hard-req-ppc64le}
 
 - ppc64le device or virtual machine
-- An internet connection for your device (wired or wifi)
+- An internet connection for your device (wired or WiFi)
 - (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware.
 
 ### Procedure
@@ -176,8 +182,8 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 - Raspberry Pi A+, B+, 2B, Zero-W, or Zero-WH
 - MicroSD flash card (32 GB preferred)
 - An appropriate power supply for your device (2 Amp or greater preferred)
-- An internet connection for your device (wired or wifi).
-  **Note**: Some devices require extra hardware for supporting wifi.
+- An internet connection for your device (wired or WiFi).
+  **Note**: Some devices require extra hardware for supporting WiFi.
 - (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware.
 
 ### Procedure
@@ -187,15 +193,15 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
    1. Flash the [Raspberry Pi OS ](https://www.raspberrypi.com/software/){:target="_blank"}{: .externalLink} {{site.data.keyword.linux_notm}} image onto your MicroSD card.
 
       For more information about how to flash MicroSD images from many operating systems, see [Raspberry Pi Foundation ](https://www.raspberrypi.org/documentation/installation/installing-images/README.md){:target="_blank"}{: .externalLink}.
-      These instructions use Raspberry Pi OS for wifi and SSH configurations.
+      These instructions use Raspberry Pi OS for WiFi and SSH configurations.
 
       **Warning:** Flashing an image onto your MicroSD card permanently erases any data that is already on your card.
 
-   2. (optional) If you plan to use wifi to connect to your device, edit your newly flashed image to provide the appropriate WPA2 wifi credentials.
+   2. (optional) If you plan to use WiFi to connect to your device, edit your newly flashed image to provide the appropriate WPA2 WiFi credentials.
 
       If you plan to use a wired network connection, you do not need to complete this step.
 
-      On your MicroSD card, create a file that is named `wpa_supplicant.conf` within the root level folder that contains your wifi credentials. These credentials include your network SSID name and passphrase. Use the following format for your file:
+      On your MicroSD card, create a file that is named `wpa_supplicant.conf` within the root level folder that contains your WiFi credentials. These credentials include your network SSID name and passphrase. Use the following format for your file:
 
       ```txt
       country=US
@@ -222,7 +228,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 
       Log in to this account. Use the standard {{site.data.keyword.linux_notm}} `passwd` command to change the default password:
 
-      ```sh
+      ```bash
       passwd
       Enter new UNIX password:
       Retype new UNIX password:
@@ -244,7 +250,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 - NVIDIA Jetson TX1
 - HDMI Business Monitor, USB hub, USB keyboard, USB mouse
 - Storage: at least 10 GB (SSD recommended)
-- An internet connection for your device (wired or wifi)
+- An internet connection for your device (wired or WiFi)
 - (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware.
 
 ### Procedure
@@ -262,7 +268,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 
       Log in to this account. Use the standard {{site.data.keyword.linux_notm}} `passwd` command to change the default password:
 
-      ```sh
+      ```bash
       passwd
       Enter new UNIX password:
       Retype new UNIX password:
@@ -280,11 +286,12 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 ### Hardware requirements
 {: #hard-req-mac}
 
-- 2010 or later 64-bit {{site.data.keyword.intel}} Mac device
+- 2010 or later 64-bit {{site.data.keyword.intel}} Mac ({{site.data.keyword.intel}} only) device
 - MMU virtualization is required.
-- MacOS X version 10.11 ("El Capitan") or later
-- An internet connection for your machine (wired or wifi)
+- {{site.data.keyword.macOS_notm}} X version 10.11 ("El Capitan") or later
+- An internet connection for your machine (wired or WiFi)
 - (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware.
+- {{site.data.keyword.edge_notm}} is not yet supported on arm-based Mac devices.
 
 ### Procedure
 {: #proc-mac}
@@ -298,7 +305,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 
       - If MacPorts are already installed, use it to install socat:
 
-        ```sh
+        ```bash
         sudo port install socat
         ```
         {: codeblock}
