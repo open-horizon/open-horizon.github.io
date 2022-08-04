@@ -14,7 +14,7 @@ lastupdated: "2021-02-20"
 {:tip: .tip}
 {:download: .download}
 
-# Model Management System
+# Model Management Details
 {: #model_management_details}
 
 The model management system (MMS) eases the burden of Artificial Intelligence (AI) model management for cognitive services that run on edge nodes. The MMS can also be used to deliver other data file types to edge nodes. The MMS facilitates the storage, delivery, and security of models, data, and other metadata packages needed by edge services. This enables edge nodes to easily send and receive models and metadata to and from the cloud.
