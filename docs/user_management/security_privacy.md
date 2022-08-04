@@ -2,7 +2,7 @@
 
 copyright:
 years: 2021 - 2022
-lastupdated: "2022-03-10"
+lastupdated: "2022-08-4"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2022-03-10"
 {:shortdesc}
 
 ## Management Hub
-The {{site.data.keyword.ieam}} management hub is deployed into an OpenShift Container platform; thus, it inherits the all of the inherent security mechanism benefits. All of the {{site.data.keyword.ieam}} management hub network traffic traverses a TLS-secured entry point. Management hub network communication between the {{site.data.keyword.ieam}} management hub components is performed without TLS.
+The {{site.data.keyword.ieam}} management hub is deployed into an OpenShift Container platform; thus, it inherits all of the inherent security mechanism benefits. All of the {{site.data.keyword.ieam}} management hub network traffic traverses a TLS-secured entry point. Management hub network communication between the {{site.data.keyword.ieam}} management hub components is performed without TLS.
 
 ## Secure Control Plane
 {: #dc_pane}
