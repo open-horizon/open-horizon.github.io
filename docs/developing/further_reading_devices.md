@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2021 - 2022
+lastupdated: "2022-08-13"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2021-02-20"
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
 
-# Further reading
+# Further reading for edge devices
 {: #further_reading_for_devices}
 
 Review the important principles and best practices for developing edge services for {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) devices. For more information, see:
@@ -22,3 +22,4 @@ Review the important principles and best practices for developing edge services 
 * [Model management system](model_management_details.md)
 * [Container deployment options](container_deployment_options.md)
 * [CI-CD process for edge services](cicd_process.md)
+* [Secrets Manager details](secrets_details.md)
