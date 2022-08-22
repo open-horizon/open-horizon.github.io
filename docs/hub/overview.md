@@ -14,7 +14,7 @@ lastupdated: "2022-03-17"
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
 
-# Overview
+# Overview of edge computing
 {: #Overview}
 
 Edge computing is about placing enterprise applications closer to where data is created.
