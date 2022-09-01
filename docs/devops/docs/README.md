@@ -8,9 +8,9 @@ Read the notes, and then run the following command to deploy the Horizon compone
 
 **Notes:**
 
-- Currently **only supported on Ubuntu 18.x, Ubuntu 20.x, and macOS**
+- Currently **only supported on Ubuntu 18.x, Ubuntu 20.x, and {{site.data.keyword.macOS_notm}}**
 - This script is not yet compatible with docker installed via Snap. If docker has already been installed via Snap, remove the existing docker snap and allow the script to reinstall the latest version of docker.
-- The macOS support is considered **experimental** because I ran into this [docker bug](https://github.com/docker/for-mac/issues/3499) while testing. Making some of the recommended changes to my docker version and settings enabled me to get past the problem, but I'm not sure if others will hit it or not.
+- The {{site.data.keyword.macOS_notm}} support is considered **experimental** because I ran into this [docker bug](https://github.com/docker/for-mac/issues/3499) while testing. Making some of the recommended changes to my docker version and settings enabled me to get past the problem, but I'm not sure if others will hit it or not.
 - The deployment can be customized by overriding environment variables in [deploy-mgmt-hub.sh](https://github.com/open-horizon/devops/blob/master/mgmt-hub/deploy-mgmt-hub.sh). The variables can be found near the top of the script, right after the usage message and command line parsing code.
 All `*_PW` and `*_TOKEN` environment variables and variables in the form `VAR_NAME=${VAR_NAME:-defaultvalue}` can be overridden.
 
@@ -196,7 +196,7 @@ Using a Virtual Machine (VM) allows you to learn and experiment with Open Horizo
 
 #### <a name=setup-vm-vbox></a> VirtualBox
 
-Oracle VM [VirtualBox](https://www.virtualbox.org/wiki/Downloads) is a virtualization application that runs on macOS, Solaris and Windows as well as Linux.
+Oracle VM [VirtualBox](https://www.virtualbox.org/wiki/Downloads) is a virtualization application that runs on {{site.data.keyword.macOS_notm}}, Solaris and Windows as well as Linux.
 Its Virtual Machine Manager user interface has a reasonable learning curve for beginners while keeping advanced settings within easy reach.
 
 The Open Horizon website has [a video](https://open-horizon.github.io/common-requests/install.html) detailing the process of setting up a VM in VirtualBox for use with the All-in-One environment.
