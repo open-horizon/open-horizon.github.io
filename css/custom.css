@@ -20,3 +20,10 @@
 .externalLink::after{
     content: url('../img/launch-glyph.svg');
 }
+
+.row-center{
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+@media screen and (max-width: 36em) { .row-center { margin-left: -3px; margin-right: -3px; } }
