@@ -267,12 +267,12 @@ GEM
 
 PLATFORMS
   ruby
-  x64-mingw-ucrt
   x64-mingw32
+  x64-unknown
 
 DEPENDENCIES
   github-pages
   webrick (~> 1.7)
 
 BUNDLED WITH
-   2.3.19
+   2.3.21
