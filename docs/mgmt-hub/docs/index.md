@@ -1,6 +1,6 @@
 # Horizon Management Hub
 
-## <a name=deploy-all-in-one>Deploy All-in-One Horizon Management Hub, Agent and CLI</a>
+## <a name="deploy-all-in-one">Deploy All-in-One Horizon Management Hub, Agent and CLI</a>
 
 This enables you to quickly set up a host with all of the Horizon components to facilitate learning Horizon and doing development for it.
 
@@ -20,7 +20,7 @@ As **root** run:
 curl -sSL https://raw.githubusercontent.com/open-horizon/devops/master/mgmt-hub/deploy-mgmt-hub.sh | bash
 ```
 
-### <a name=setup-vm-requirements>System Requirements</a>
+### <a name="setup-vm-requirements">System Requirements</a>
 
 The All-in-One environment is intended for use on devices or virtual machines with **at least 4GB RAM and 20GB of storage space**.
 
@@ -28,7 +28,7 @@ Ubuntu Server 18.04 and 20.04 are the preferred operating systems for evaluating
 
 If you wish to use the All-in-One environment in a virtual machine, please read the <a href=#setup-vm>VM setup notes</a> further down for details.
 
-### <a name=all-in-one-what-next>What To Do Next</a>
+### <a name="all-in-one-what-next">What To Do Next</a>
 
 #### Run the Automated Tests
 
@@ -174,7 +174,7 @@ You will see the script do these steps:
 - Import the voucher of this device into the SDO management hub component
 - Simulate the booting of this device, which will verify the agent has already been installed, and then register it for the helloworld edge service example
 
-### <a name=all-in-one-pause></a> "Pausing" the Horizon management hub services
+### <a name="all-in-one-pause">"Pausing" the Horizon management hub services</a>
 
 The Horizon management hub services and edge agent use some CPU even in steady state. If you don't need them for a period of time, you can stop the containers by running:
 
@@ -188,13 +188,13 @@ When you want to use the Horizon management hub services and edge agent again, y
 ./deploy-mgmt-hub.sh -s
 ```
 
-## <a name=setup-vm>Setting up a VM for the All-in-One Environment</a>
+## <a name="setup-vm">Setting up a VM for the All-in-One Environment</a>
 
 Using a Virtual Machine (VM) allows you to learn and experiment with Open Horizon in a safe, controlled environment without affecting your host system. This requires the use of virtualization software that is easily obtainable or even integrated into your host's operating system.
 
 [VirtualBox](#setup-vm-vbox) and [QEMU](#setup-vm-qemu-kvm-boxes) are two popular open-source choices.
 
-#### <a name=setup-vm-vbox>VirtualBox</a>
+#### <a name="setup-vm-vbox">VirtualBox</a>
 
 Oracle VM [VirtualBox](https://www.virtualbox.org/wiki/Downloads) is a virtualization application that runs on {{site.data.keyword.macOS_notm}}, Solaris and Windows as well as Linux.
 Its Virtual Machine Manager user interface has a reasonable learning curve for beginners while keeping advanced settings within easy reach.
@@ -230,7 +230,7 @@ Network > Adapter 1 | Set `Attached to` to `Bridged Adapter` to share network wi
 
 [^vbox-nofloppy]: It is also good idea to disable unused devices.
 
-#### <a name=setup-vm-qemu-kvm-boxes>QEMU with GNOME Boxes</a>
+#### <a name="setup-vm-qemu-kvm-boxes">QEMU with GNOME Boxes</a>
 
 The QEMU virtualization software is preinstalled on most major GNU/Linux distributions.
 There are several ways to use QEMU, from third-party VM managers to the command line, but GNOME Boxes is one of the simplest.
@@ -252,7 +252,7 @@ To create a VM in Boxes:
 
 All new VMs are configured with bridged networking and thus share the same network as the host.
 
-### <a name=install-os>Installing Ubuntu for the All-in-One Environment</a>
+### <a name="install-os">Installing Ubuntu for the All-in-One Environment</a>
 
 Ubuntu image files (or ISOs) may be configured to use one of these installers:
 
@@ -260,7 +260,7 @@ Ubuntu image files (or ISOs) may be configured to use one of these installers:
 
 - [Debian-style](#install-os-debstyle) (with a purple background and grey dialog boxes)
 
-#### <a name=install-os-subiquity></a> Subiquity Installer
+#### <a name="install-os-subiquity">Subiquity Installer</a>
 
 Choose the following options when prompted, when installing with Subiquity:
 
@@ -283,7 +283,7 @@ Only skip updates if the update stalls for an unreasonably long time. Remember t
 
 If prompted, press Enter to reboot.
 
-#### <a name=install-os-debstyle>Debian-style Installer</a>
+#### <a name="install-os-debstyle">Debian-style Installer</a>
 
 Choose the following options when prompted, when using the Debian-style installer:
 
@@ -309,7 +309,7 @@ On the last `Installation complete` dialog box, select `Continue`.
 
 [^ubuntu-location]: The location list changes according to the language you have selected
 
-#### <a name=install-os-first-run>Ubuntu Server Notes</a>
+#### <a name="install-os-first-run">Ubuntu Server Notes</a>
 
 The first boot after installation may be slow.  A VM may appear to be unresponsive and present a blank screen for up to a few minutes. A login prompt should soon appear.
 
@@ -323,7 +323,7 @@ sudo apt-get -y update
 
 Once you have set up your VM, you are ready to deploy the all-in-one environment. Instructions are at [the top of this file](#deploy-all-in-one).
 
-#### <a name=vm-ssh>Using SSH with your VM</a>
+#### <a name="vm-ssh">Using SSH with your VM</a>
 
 If your VM is correctly set up with the OpenSSH server, and an SSH client is correctly set up on your host, you can log in to your VM from a terminal on your host by running:
 
