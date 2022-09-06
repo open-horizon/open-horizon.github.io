@@ -6,7 +6,7 @@ Horizon deploys the edge workloads in either containerized mode or k8s
 orchestrated mode. The Open Horizon Edge Agent operates directly on the host as
 a systemd process.
 
-<p align="center"><img src="resources/imgs/OH-edge-kubearmor.png" width="768"></p>
+<p align="center"><img src="./OH-edge-kubearmor.png" width="768"></p>
 
 KubeArmor running on the edge node provides visibility and protection for all the processes, files, or network operations in the containers as well as those running directly on the host.  
 
@@ -27,7 +27,7 @@ With v0.5.5 release, KubeArmor now supports standalone un-orchestrated container
 We will first need to install Open Horizon Management Hub and Agent node components. For that please follow the [Open Horizon setup](https://github.com/kubearmor/KubeArmor/wiki/Open-Horizon-setup) guide.  
 We also assume that [Open Horizon Home Assistant service](https://github.com/open-horizon-services/service-homeassistant) is running on the agent edge node.
 
-<p align="center"><img src="resources/imgs/OH-detailed.png" width="768"></p>
+<p align="center"><img src="./OH-detailed.png" width="768"></p>
 
 Now we will run KubeArmor as a systemd process on the Open Horizon Agent VM
 
