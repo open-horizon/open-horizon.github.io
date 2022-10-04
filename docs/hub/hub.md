@@ -26,6 +26,7 @@ Complete the management hub installation and configuration before starting the {
   * [Install {{site.data.keyword.ieam}}](online_installation.md)
   * [Post-installation](post_install.md)
   * [Gather edge node files](gather_files.md)
+* [Management Hub Developer Instance](lfedge_mgmt_hub.md)  
 * [Uninstall](uninstalling_hub.md)
 
 ## Management hub installation flow
