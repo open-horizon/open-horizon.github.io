@@ -301,7 +301,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 
    2. **Install socat**. You can use either of the following methods to install socat:
 
-      - [Use Homebrew to install socat ](https://brewinstall.org/install-socat-on-mac-with-brew/){:target="_blank"}{: .externalLink}{:target="_blank"}{: .externalLink}.
+      - [Use Homebrew to install socat ](https://macappstore.org/socat/){:target="_blank"}{: .externalLink}{:target="_blank"}{: .externalLink}.
 
       - If MacPorts are already installed, use it to install socat:
 

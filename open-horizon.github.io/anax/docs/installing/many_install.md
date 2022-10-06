@@ -64,7 +64,7 @@ Use the bulk installation process to set up multiple edge devices of similar typ
      ```
      {: codeblock}
 
-   (If **brew** is not installed yet, see [Install pssh on {{site.data.keyword.macOS_notm}} computer with Brew ](https://brewinstall.org/Install-pssh-on-Mac-with-Brew/){:target="_blank"}{: .externalLink}.)
+   (If **brew** is not installed yet, see [Install pssh on {{site.data.keyword.macOS_notm}} computer with Brew ](https://macappstore.org/pssh/){:target="_blank"}{: .externalLink}.)
 
 3. You can give **pscp** and **pssh** access to your edge devices in several ways. This content describes how to use an ssh public key. First, this host must have an ssh key pair (usually in **~/.ssh/id_rsa** and **~/.ssh/id_rsa.pub**). If it does not have an ssh key pair, generate it:
 
