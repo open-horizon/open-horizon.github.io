@@ -5,4 +5,4 @@ Node management policy (NMP) enables node administrators to remotely configure s
 ## Agent Auto Upgrade
 
 The agent auto upgrade section of node management policy enables nodes to update any combination of their configuration, certificate, and agent software.
-- `configuration`: This contains information about the management hub the node is registered to. See [here](../agent-install/README.md#configuration-file) for the expected contents of this file.
+- `configuration`: This contains information about the management hub the node is registered to. See [here](https://github.com/open-horizon/anax/blob/master/agent-install/README.md) for the expected contents of this file.
