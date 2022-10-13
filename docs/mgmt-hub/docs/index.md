@@ -26,7 +26,7 @@ The All-in-One environment is intended for use on devices or virtual machines wi
 
 Ubuntu Server 18.04 and 20.04 are the preferred operating systems for evaluating and learning Open Horizon for now. You can download Ubuntu Server from [Ubuntu Releases](https://releases.ubuntu.com/).
 
-If you wish to use the All-in-One environment in a virtual machine, please read the <a href=#setup-vm>VM setup notes</a> further down for details.
+If you wish to use the All-in-One environment in a virtual machine, please read the [VM setup notes](#setup-vm) further down for details.
 
 ### <a name="all-in-one-what-next">What To Do Next</a>
 
