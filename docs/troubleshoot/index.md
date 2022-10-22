@@ -35,6 +35,7 @@ Review the following questions when you encounter an issue with {{site.data.keyw
 - [Troubleshooting tips specific to the {{site.data.keyword.open_shift_cp}} environment](#troubleshooting_icp)
 - [Troubleshooting node errors](#troubleshooting_node_errors)
 - [How to uninstall Podman on RHEL?](#uninstall_podman)
+- [Are you encountered HTTP error, while executing deploy-mgmt-hub.sh?](#deploy_mgmt_http_error)
 
 ## Are the currently released versions of the {{site.data.keyword.horizon}} packages installed?
 {: #install_horizon}
@@ -432,6 +433,46 @@ If you currently have Podman installed since it is not yet supported you will ne
 4. Install Docker by following the instructions for [Docker CENTOS Installation ](https://docs.docker.com/engine/install/centos/){:target="_blank"}{: .externalLink}.
 
    NOTE: The latest version of Docker is not supported with RHEL 8 by Red Hat, however it is tested to be installable and runs with {{site.data.keyword.edge_notm}} on RHEL 8.
+
+## Are you encountered HTTP error, while executing deploy-mgmt-hub.sh?
+{: #deploy_mgmt_http_error}
+
+If you are encountered following error while exeucting `deploy-mgmt-hub.sh`
+
+```bash
+ ------- Downloading/installing/configuring Horizon agent and CLI...
+Downloading the Horizon agent and CLI packages...
+Installing the Horizon agent and CLI packages...
+Configuring the Horizon agent and CLI...
+Publishing /tmp/horizon-all-in-1/agent-install.cfg in CSS as public object agent-install.cfg in the IBM org...
+Digital sign with SHA1 will be performed for data integrity. It will delay the MMS object publish.
+Start hashing the file...
+Data hash is generated. Start digital signing with the data hash...
+Digital sign finished.
+Error: Encountered HTTP error: Put "http://127.0.0.1:9443/api/v1/objects/IBM/agent_files/agent-install.cfg": read tcp 127.0.0.1:59088->127.0.0.1:9443: read: connection reset by peer calling Model Management Service REST API PUT http://127.0.0.1:9443/api/v1/objects/IBM/agent_files/agent-install.cfg. HTTP status: .
+Error: exit code 5 from: publishing /tmp/horizon-all-in-1/agent-install.cfg in CSS as a public object
+```
+
+1. Export MONGO_IMAGE_TAG 
+  
+   ```bash
+   export MONGO_IMAGE_TAG=4.0.6
+   ```
+   {: codeblock}
+
+2. Stop and purge management hub services and agent
+
+   ```bash
+   ./deploy-mgmt-hub.sh -S -P
+   ```
+   {: codeblock}
+
+3. Re-Run deploy-mgmt-hub.sh as root
+
+   ```bash
+   ./deploy-mgmt-hub.sh
+   ```
+   {: codeblock}
 
 ### {{site.data.keyword.ocp}} edge cluster TLS internal error
 
