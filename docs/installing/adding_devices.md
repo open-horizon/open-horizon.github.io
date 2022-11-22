@@ -26,13 +26,13 @@ The following instructions guide you through the process of installing the requi
 
 - x86_64
   - {{site.data.keyword.linux_bit_notm}} devices or virtual machines that run Ubuntu 22.x (jammy), Ubuntu 20.x (focal), Ubuntu 18.x (bionic), Debian 10 (buster), Debian 9 (stretch)
-  - {{site.data.keyword.rhel}} 8.1 - 8.5 (via Docker), 8.6 and 9.0 (via Podman 4.x).  See Notes.
+  - {{site.data.keyword.rhel}} 8.1 - 8.5 (via Docker), 8.6 - 8.7 and 9.0 - 9.1 (via Podman 4.x).  See Notes.
   - {{site.data.keyword.fedora}} Workstation 32, 36, 37
   - CentOS 8.1 - 8.5 (via Docker)
   - SuSE 15 SP2
 - ppc64le
   - {{site.data.keyword.linux_ppc64le_notm}} devices or virtual machines that run Ubuntu 20.x (focal) or Ubuntu 18.x (bionic)
-  - {{site.data.keyword.rhel}} 7.6, 7.9, 8.1, 8.2, 8.3, 8.4, 8.5, 8.6, 9.0
+  - {{site.data.keyword.rhel}} 7.6, 7.9, 8.1, 8.2, 8.3, 8.4, 8.5, 8.6, 9.0, 9.1
 - ARM (32-bit)
   - {{site.data.keyword.linux_notm}} on ARM (32-bit), for example Raspberry Pi, running Raspberry Pi OS buster or bullseye
 - ARM (64-bit)
@@ -106,13 +106,13 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 
 Prepare your device by installing {{site.data.keyword.rhel}} 8.x or 9.x
 
-If you are running {{site.data.keyword.rhel}} 9.0, install the podman 4.x packages.
+If you are running {{site.data.keyword.rhel}} 9.0 or above, install the podman 4.x packages.
 
 ```bash
 dnf module install podman netavark
 ```
 
-If you are running {{site.data.keyword.rhel}} 8.6, install the podman 4.x packages by installing the `container-tools:rhel8` module.
+If you are running {{site.data.keyword.rhel}} 8.6 or above, install the podman 4.x packages by installing the `container-tools:rhel8` module.
 
 ```bash
 dnf module install container-tools:rhel8
