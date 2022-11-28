@@ -32,7 +32,7 @@ The following instructions guide you through the process of installing the requi
   - SuSE 15 SP2
 - ppc64le
   - {{site.data.keyword.linux_ppc64le_notm}} devices or virtual machines that run Ubuntu 20.x (focal) or Ubuntu 18.x (bionic)
-  - {{site.data.keyword.rhel}} 7.6, 7.9, 8.1, 8.2, 8.3, 8.4, 8.5, 8.6, 9.0, 9.1
+  - {{site.data.keyword.rhel}} 7.6, 7.9, 8.1, 8.2, 8.3, 8.4, 8.5, 8.6, 8.7, 9.0, 9.1
 - ARM (32-bit)
   - {{site.data.keyword.linux_notm}} on ARM (32-bit), for example Raspberry Pi, running Raspberry Pi OS buster or bullseye
 - ARM (64-bit)
