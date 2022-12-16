@@ -1,8 +1,8 @@
 .doc-card {
-    min-height: 210px;
+    min-height: 250px;
     border: 1px solid lightgray;
-    margin: 20px;
-    padding: 10px 30px;
+    margin: 10x;
+    padding: 10px 25px;
 }
 
 .doc-card li {
