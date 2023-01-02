@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2019 - 2022
-lastupdated: "2022-11-20"
+years: 2019 - 2023
+lastupdated: "2023-01-02"
 
 ---
 
@@ -259,7 +259,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 1. Prepare your NVIDIA Jetson device.
    1. Install the most recent NVIDIA JetPack on your device. For more information, see:
       - (TX1) [Jetson TX1 ](https://elinux.org/Jetson_TX1){:target="_blank"}{: .externalLink}
-      - (TX2) [Harness AI at the Edge with the Jetson TX2 Developer Kit ](https://developer.nvidia.com/embedded/jetson-tx2-developer-kit){:target="_blank"}{: .externalLink}
+      - (TX2) [Harness AI at the Edge with the Jetson TX2 Developer Kit ](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-tx2/){:target="_blank"}{: .externalLink}
       - (Nano) [Getting Started With Jetson Nano Developer Kit ](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit){:target="_blank"}{: .externalLink}
 
       You need to install this software and any prerequisite software before you install the {{site.data.keyword.horizon}} software.
