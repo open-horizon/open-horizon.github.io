@@ -2,7 +2,7 @@
 
 copyright:
 years: 2019 - 2023
-lastupdated: "2023-01-02"
+lastupdated: "2023-01-03"
 
 ---
 
@@ -27,7 +27,7 @@ The following instructions guide you through the process of installing the requi
 - x86_64
   - {{site.data.keyword.linux_bit_notm}} devices or virtual machines that run Ubuntu 22.x (jammy), Ubuntu 20.x (focal), Ubuntu 18.x (bionic), Debian 10 (buster), Debian 9 (stretch)
   - {{site.data.keyword.rhel}} 8.1 - 8.5 (via Docker), 8.6 - 8.7 and 9.0 - 9.1 (via Podman 4.x).  See Notes.
-  - {{site.data.keyword.fedora}} Workstation 32, 36, 37
+  - {{site.data.keyword.fedora}} Workstation 36, 37
   - CentOS 8.1 - 8.5 (via Docker)
   - SuSE 15 SP2
 - ppc64le
@@ -106,19 +106,23 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 
 Prepare your device by installing {{site.data.keyword.rhel}} 8.x or 9.x
 
-If you are running {{site.data.keyword.rhel}} 9.0 or above, install the podman 4.x packages.
+If you are running {{site.data.keyword.rhel}} 9.0 or above, install the required Podman 4.x and Netavark packages.
 
-```bash
-dnf module install podman netavark
-```
+1. Install packages:
+   ```
+   dnf install podman netavark
+   ```
+   {: codeblock}
 
-If you are running {{site.data.keyword.rhel}} 8.6 or above, install the podman 4.x packages by installing the `container-tools:rhel8` module.
+If you are running {{site.data.keyword.rhel}} 8.6 or above, install the Podman 4.x packages by installing the `container-tools:rhel8` module.
 
 ```bash
 dnf module install container-tools:rhel8
 ```
 
-If you are running {{site.data.keyword.rhel}} 8.5 or below, remove Podman and other pre-included packages, then install Docker as described here.
+2. Switch the network stack from CNI to Netavark. The {{site.data.keyword.horizon}} agent requires the network backend to be configured to use Netavark instead of CNI so that the agent can set up networking scenarios such as dependent services between containers. Follow the steps in the Red Hat documentation [switching the network stack ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/building_running_and_managing_containers/index#proc_switching-the-network-stack-from-cni-to-netavark_assembly_setting-container-network-modes){:target="_blank"}{: .externalLink} chapter.
+
+If you are running {{site.data.keyword.rhel}} 8.5 (or earlier), remove Podman and other pre-included packages, then install Docker as described here.
 
 1. Uninstall packages:
 
