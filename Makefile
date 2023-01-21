@@ -1,7 +1,7 @@
 # Command variables 
 JEKYLL=bundle exec jekyll
 BUNDLE=bundle 
-GEM=gem install bundler
+GEM=gem
 
 # default command/output 
 default: show-args
@@ -18,7 +18,8 @@ show-args:
 
 # make init: install and update all dependencies. run once before using tools each day
 init:
-	$(GEM)
+	$(GEM) update --system 3.4.3
+	$(GEM) install bundler
 	$(BUNDLE) update --bundler
 	$(BUNDLE) config set --local deployment 'true'
 	$(BUNDLE) install
