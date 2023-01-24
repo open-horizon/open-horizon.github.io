@@ -75,16 +75,14 @@ cd open-horizon.github.io
 Now create a branch using the `git checkout` command:
 
 ```
-git checkout -b <add-your-new-branch-name>
+git checkout -b <name-your-new-branch-name-after-your-issue>
 ```
 
 For example:
 
 ```
-git checkout -b add-readme
+git checkout -b issue-329
 ```
-
-(The name of the branch does not need to have the word add in it, but it's a reasonable thing to include because the purpose of this branch is to add README to this repository.)
 
 ## Make necessary changes
 
@@ -99,6 +97,8 @@ Before you push changes to GitHub, build this GitHub pages site locally to previ
 This GitHub Pages site is built with Jekyll. Before you can use Jekyll to test a site, you must [install Jekyll](https://jekyllrb.com/docs/installation/).
 
 ## Test your changes locally
+
+> NOTE: Ruby 3.2.0 is [incompatible at the moment](https://www.miskatonic.org/2023/01/02/ruby-jekyll/).  Recommend using `rbenv` and installing and using `rbenv local 3.1.1` as a workaround.
 
 Change to the repository directory on your computer and execute the following command to run the Jekyll site locally.
 
