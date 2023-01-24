@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2020 - 2022
-lastupdated: "2022-07-01"
+years: 2020 - 2023
+lastupdated: "2023-01-23"
 
 ---
 
@@ -87,5 +87,5 @@ Note: These steps are the same for all edge device types (architectures).
 
 ## What's next
 
-* Use the {{site.data.keyword.ieam}} console to view your edge nodes (devices), services, patterns, and policies. For more information, see [Using the management console](../console/accessing_ui.md).
+* Use the {{site.data.keyword.ieam}} console to view your edge nodes (devices), services, patterns, and policies.
 * Explore and run another edge service example. For more information, see [CPU usage to IBM Event Streams](../using_edge_services/cpu_load_example.md).
