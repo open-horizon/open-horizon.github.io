@@ -1,5 +1,6 @@
 {% capture search_placeholder %}{% include search_placeholder_custom.html %}{% endcapture %}
 
+{% include open-horizon-navbar-logo.html %}
 <div class="search">
   <div class="search-input-wrap">
     <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="{{ search_placeholder | strip_html | strip }}" aria-label="{{ search_placeholder | strip_html| strip }}" autocomplete="off">
