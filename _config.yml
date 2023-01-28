@@ -54,6 +54,7 @@ header-img: img/hero-dark.jpg
 og-image: img/hero-dark-site.png
 headercolor: "#FFFFFF"
 # logo: img/logos/open-horizon.png
+favicon_ico: "/img/favicon.png"
 
 # Tertiary Parameters
 github_username: open-horizon
@@ -150,7 +151,7 @@ gh_edit_branch: "master" # the branch that your docs is served from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
 
 # Color scheme currently only supports "dark", "light"/nil (default), or a custom scheme that you define
-color_scheme: nil
+color_scheme: open-horizon-theme
 
 callouts_level: quiet # or loud
 callouts:
