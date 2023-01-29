@@ -3,8 +3,11 @@
 copyright:
 years: 2020 - 2022
 lastupdated: "2022-10-04"
-title: Agent API
+title: Agbot API
 description: An Agreement Bot API is a REST API which uses agreements with edge nodes to run edge services to fulfill the patterns and deployment policies specified.
+
+parent: APIs
+nav_order: 2
 ---
 
 {:new_window: target="blank"}
