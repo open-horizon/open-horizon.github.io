@@ -1,3 +1,13 @@
+---
+copyright:
+years: 2023
+lastupdated: "2023-01-29"
+title: "All-in-One Mgmt Hub"
+
+parent: Installing
+grand_parent: Docs
+nav_order: 2
+---
 # Horizon Management Hub
 
 ## <a name="deploy-all-in-one">Deploy All-in-One Horizon Management Hub, Agent and CLI</a>

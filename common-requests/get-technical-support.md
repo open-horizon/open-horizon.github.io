@@ -7,6 +7,9 @@ tags:
  - Help
  - Support
 author: edeediong
+
+parent: Quick Start
+nav_order: 6
 ---
 
 ## Technical Support

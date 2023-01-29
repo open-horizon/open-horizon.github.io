@@ -3,7 +3,11 @@
 copyright:
 years: 2020 - 2022
 lastupdated: "2022-03-17"
+title: "Using edge services"
 
+parent: Developing
+grand_parent: Docs
+nav_order: 1
 ---
 
 {:new_window: target="blank"}

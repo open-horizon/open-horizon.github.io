@@ -5,6 +5,10 @@ years: 2021
 lastupdated: "2021-02-20"
 title: Developing an edge service for devices
 description: ""
+
+parent: Developing
+grand_parent: Docs
+nav_order: 2
 ---
 
 {:new_window: target="blank"}

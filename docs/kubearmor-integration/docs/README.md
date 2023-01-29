@@ -1,3 +1,12 @@
+---
+copyright:
+years: 2020 - 2023
+title: "KubeArmor security for Open Horizon"
+
+parent: Integrating
+grand_parent: Docs
+nav_order: 1
+---
 # KubeArmor security for Open Horizon workloads/agent
 
 KubeArmor is a runtime security engine that can protect k8s-orchestrated, or
@@ -6,7 +15,7 @@ Horizon deploys the edge workloads in either containerized mode or k8s
 orchestrated mode. The Open Horizon Edge Agent operates directly on the host as
 a systemd process.
 
-<p align="center"><img src="./OH-edge-kubearmor.png" width="768"></p>
+<p align="center"><img src="../OH-edge-kubearmor.png" width="768"></p>
 
 KubeArmor running on the edge node provides visibility and protection for all the processes, files, or network operations in the containers as well as those running directly on the host.  
 

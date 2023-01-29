@@ -2,6 +2,9 @@
 layout: page
 title: "Installation"
 description: "Instructions for installing the Open Horizon project's Management Hub, Agent, and CLI all in one VM"
+
+parent: Quick Start
+nav_order: 1
 ---
 
 # Install

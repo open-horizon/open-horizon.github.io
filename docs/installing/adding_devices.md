@@ -3,7 +3,11 @@
 copyright:
 years: 2019 - 2023
 lastupdated: "2023-01-23"
+title: "Supported environments"
 
+parent: Installing
+grand_parent: Docs
+nav_order: 4
 ---
 
 {:new_window: target="blank"}

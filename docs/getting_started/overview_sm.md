@@ -3,7 +3,12 @@
 copyright:
 years: 2021
 lastupdated: "2021-07-20"
+title: "Secrets Manager"
+description: "Overview of Secrets Manager"
 
+parent: Learning
+grand_parent: Docs
+nav_order: 2
 ---
 
 {:new_window: target="blank"}
