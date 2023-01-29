@@ -3,7 +3,10 @@
 copyright:
   years: 2020 - 2022
 lastupdated: "2022-07-06"
+title: "Configuration"
 
+parent: Installing Management hub
+nav_order: 2
 ---
 
 {:new_window: target="blank"}

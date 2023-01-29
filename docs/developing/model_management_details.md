@@ -33,11 +33,11 @@ The following diagrams show the work flow associated with developing and updatin
 
 ### Developing and using an AI model with MMS
 
-<img src="../images/edge/02a_Developing_AI_model_using_MMS.svg" style="margin: 3%" alt="Developing an AI service using MMS"> 
+<img src="../../images/edge/02a_Developing_AI_model_using_MMS.svg" style="margin: 3%" alt="Developing an AI service using MMS"> 
 
 ### Updating an AI model with MMS
 
-<img src="../images/edge/02b_Updating_AI_model_using_MMS.svg" style="margin: 3%" alt="Updating an AI service using MMS"> 
+<img src="../../images/edge/02b_Updating_AI_model_using_MMS.svg" style="margin: 3%" alt="Updating an AI service using MMS"> 
 
 ## MMS concepts
 

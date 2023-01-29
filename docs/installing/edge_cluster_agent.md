@@ -3,7 +3,10 @@
 copyright:
 years: 2022
 lastupdated: "2022-07-15"
+title: "Installing the agent"
 
+parent: Edge clusters
+nav_order: 1
 ---
 
 {:new_window: target="blank"}

@@ -3,11 +3,11 @@
 copyright:
 years: 2019 - 2023
 lastupdated: "2023-01-23"
-title: "Supported environments"
+title: "Preparing an edge device"
 
-parent: Installing
-grand_parent: Docs
-nav_order: 4
+parent: Edge devices info
+grand_parent: Edge devices
+nav_order: 1
 ---
 
 {:new_window: target="blank"}

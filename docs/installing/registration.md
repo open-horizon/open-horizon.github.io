@@ -3,7 +3,11 @@
 copyright:
 years: 2020 - 2022
 lastupdated: "2022-03-17"
+title: "Installing the agent"
 
+parent: Edge devices info
+grand_parent: Edge devices
+nav_order: 2
 ---
 
 {:new_window: target="blank"}

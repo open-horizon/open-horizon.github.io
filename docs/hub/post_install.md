@@ -3,7 +3,10 @@
 copyright:
 years: 2020 - 2022
 lastupdated: "2022-06-24"
+title: "Post-installation"
 
+parent: Install Open Horizon
+nav_order: 3
 ---
 
 {:new_window: target="blank"}

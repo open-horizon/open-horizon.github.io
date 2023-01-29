@@ -3,11 +3,11 @@
 copyright:
 years: 2021 - 2022
 lastupdated: "2022-05-31"
-title: "Management hub"
+title: "Installing Management hub"
 
-parent: Installing
-grand_parent: Docs
-nav_order: 1
+nav_order: 4
+has_children: true
+has_toc: false
 ---
 
 {:new_window: target="blank"}

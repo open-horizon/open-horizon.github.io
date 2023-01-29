@@ -4,9 +4,7 @@ years: 2023
 lastupdated: "2023-01-29"
 title: "All-in-One Mgmt Hub"
 
-parent: Installing
-grand_parent: Docs
-nav_order: 2
+nav_order: 6
 ---
 # Horizon Management Hub
 

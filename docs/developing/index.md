@@ -5,7 +5,7 @@ years: 2021
 lastupdated: "2021-02-20"
 title: "Developing edge services"
 
-nav_order: 10
+nav_order: 11
 has_children: true
 has_toc: false
 ---

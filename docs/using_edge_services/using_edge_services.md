@@ -5,7 +5,7 @@ years: 2020 - 2022
 lastupdated: "2022-03-17"
 title: "Using edge services"
 
-nav_order: 9
+nav_order: 10
 has_children: true
 has_toc: false
 ---

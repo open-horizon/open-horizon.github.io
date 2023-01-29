@@ -3,7 +3,10 @@
 copyright:
 years: 2020 - 2022
 lastupdated: "2022-07-06"
+title: "Sizing and system requirements"
 
+parent: Installing Management hub
+nav_order: 1
 ---
 
 {:new_window: target="blank"}

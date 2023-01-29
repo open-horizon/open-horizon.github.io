@@ -3,7 +3,10 @@
 copyright:
 years: 2020 - 2022
 lastupdated: "2022-03-17"
+title: "Installing Open Horizon"
 
+parent: Install Open Horizon
+nav_order: 2
 ---
 
 {:new_window: target="blank"}

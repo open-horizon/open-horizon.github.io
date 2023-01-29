@@ -5,9 +5,7 @@ lastupdated: "2022-01-29"
 
 title: "All-in-One cluster agent"
 
-parent: Installing
-grand_parent: Docs
-nav_order: 3
+nav_order: 7
 ---
 # How to install an edge cluster agent and register with the All-in-1 Management Hub
 

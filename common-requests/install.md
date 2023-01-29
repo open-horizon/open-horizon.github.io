@@ -43,4 +43,4 @@ This video shows an installation process example.
 
 ## What to do next
 
-After installing the Management Hub/Agent/CLI with the all-in-one process, go to [How to Use Open Horizon](./use.html)
+After installing the Management Hub/Agent/CLI with the all-in-one process, go to [How to Use Open Horizon](./use.md)
