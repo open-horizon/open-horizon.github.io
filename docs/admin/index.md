@@ -7,8 +7,9 @@ title: Administering functions
 description: Administrative functions that support an edge computing environment.
 
 parent: Administering
-grand_parent: Docs
 nav_order: 1
+has_children: true
+has_toc: false
 ---
 
 {:new_window: target="blank"}

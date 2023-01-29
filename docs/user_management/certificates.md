@@ -3,7 +3,11 @@
 copyright:
 years: 2021
 lastupdated: "2021-02-20"
+title: "Certificates"
 
+parent: Security
+grand_parent: Administering
+nav_order: 4
 ---
 
 {:new_window: target="blank"}

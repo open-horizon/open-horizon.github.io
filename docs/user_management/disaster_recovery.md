@@ -3,7 +3,11 @@
 copyright:
 years: 2020 - 2022
 lastupdated: "2022-07-01"
+title: "Disaster recovery"
 
+parent: Security
+grand_parent: Administering
+nav_order: 5
 ---
 
 {:new_window: target="blank"}

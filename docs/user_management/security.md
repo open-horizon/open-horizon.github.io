@@ -6,8 +6,9 @@ lastupdated: "2022-06-03"
 title: Security 
 
 parent: Administering
-grand_parent: Docs
 nav_order: 2
+has_children: true
+has_toc: false
 ---
 
 {:new_window: target="blank"}
