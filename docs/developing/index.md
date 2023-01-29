@@ -3,7 +3,11 @@
 copyright:
 years: 2021
 lastupdated: "2021-02-20"
+title: "Developing edge services"
 
+nav_order: 10
+has_children: true
+has_toc: false
 ---
 
 {:new_window: target="blank"}

@@ -2,6 +2,11 @@
 copyright:
 years: 2020 - 2022
 lastupdated: "2022-03-17"
+title: "Deployment policy use cases"
+
+parent: Deploying edge services
+grand_parent: Using edge services
+nav_order: 1
 ---
 
 {:new_window: target="blank"}
@@ -17,7 +22,7 @@ lastupdated: "2022-03-17"
 
 This section highlights a real-world scenario where policy types are described.
 
-<img src="../images/edge/04_Defining_an_edge_policy.svg" style="margin: 3%" alt="Defining an edge policy">
+<img src="../../images/edge/04_Defining_an_edge_policy.svg" style="margin: 3%" alt="Defining an edge policy">
 
 Consider a customer who has installed ATM cameras to detect theft (the customer has other types of edge nodes as well). The customer uses a combination of walk-up (still) and drive-through (motion) ATMs. In this case, two third-party services are available. Each service can detect suspicious activity at the ATMs, but customer testing has determined that service atm1 more reliably detects suspicious activity at walk-up (still) ATMs and service atm2 more reliably detects suspicious activity at drive-through (motion) ATMs.
 
