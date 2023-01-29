@@ -7,7 +7,6 @@ title: "Secrets Manager"
 description: "Overview of Secrets Manager"
 
 parent: Learning
-grand_parent: Docs
 nav_order: 2
 ---
 

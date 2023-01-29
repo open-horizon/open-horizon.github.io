@@ -1,3 +1,17 @@
+---
+
+copyright:
+years: 2021 - 2022
+lastupdated: "2022-12-15"
+layout: page
+title: "Agent (anax)"
+description: "Open Horizon Anax Documentation"
+
+nav_order: 5
+has_children: true
+has_toc: false
+---
+
 # Open Horizon Anax Documentation
 
 ## [Instructions for starting an agent in a container on Linux](agent_container_manual_deploy.md)

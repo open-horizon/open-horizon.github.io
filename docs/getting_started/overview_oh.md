@@ -6,7 +6,6 @@ lastupdated: "2022-05-31"
 title: Overview of OH
 
 parent: Learning
-grand_parent: Docs
 nav_order: 1
 ---
 

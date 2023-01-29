@@ -7,7 +7,6 @@ lastupdated: "2021-02-20"
 title: Model Management Service
 
 parent: Learning
-grand_parent: Docs
 nav_order: 4
 ---
 
