@@ -6,7 +6,6 @@ lastupdated: "2022-03-17"
 title: Support
 
 parent: Help and Support
-grand_parent: Docs
 nav_order: 3
 ---
 

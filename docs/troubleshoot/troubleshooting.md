@@ -6,7 +6,6 @@ lastupdated: "2021-02-20"
 title: Troubleshooting tips
 
 parent: Help and Support
-grand_parent: Docs
 nav_order: 2
 ---
 

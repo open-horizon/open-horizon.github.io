@@ -4,7 +4,6 @@ years: 2020 - 2023
 title: "KubeArmor security for Open Horizon"
 
 parent: Integrating
-grand_parent: Docs
 nav_order: 1
 ---
 # KubeArmor security for Open Horizon workloads/agent
