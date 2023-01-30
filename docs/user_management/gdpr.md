@@ -4,6 +4,11 @@ copyright:
 years: 2020 - 2022
 lastupdated: "2022-03-17"
 
+title: "GDPR readiness"
+
+parent: Security
+grand_parent: Administering
+nav_order: 3
 ---
 
 {:new_window: target="blank"}

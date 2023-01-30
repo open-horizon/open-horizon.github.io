@@ -3,7 +3,11 @@
 copyright:
 years: 2019 - 2022
 lastupdated: "2022-03-17"
+title: "Role-based access control"
 
+parent: Security
+grand_parent: Administering
+nav_order: 2
 ---
 
 {:new_window: target="blank"}

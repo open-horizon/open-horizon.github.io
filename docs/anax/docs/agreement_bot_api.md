@@ -1,3 +1,13 @@
+---
+copyright:
+years: 2023
+lastupdated: "2023-01-29"
+title: "Horizon Agreement Bot APIs"
+
+parent: Agent (anax)
+nav_order: 2
+---
+
 # Horizon Agreement Bot APIs
 
 This document contains the Horizon JSON APIs for the horizon system running an Agreement Bot. The output of the APIs is in JSON compact format. To get a better view, you can use JSONView extension in your web browser or use `jq` command from the command line interface. For example:

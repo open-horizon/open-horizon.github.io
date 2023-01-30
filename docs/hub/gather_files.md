@@ -3,7 +3,10 @@
 copyright:
 years: 2021
 lastupdated: "2021-02-20"
+title: "Gather edge node files"
 
+parent: Install Open Horizon
+nav_order: 4
 ---
 
 {:new_window: target="blank"}

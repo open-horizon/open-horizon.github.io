@@ -3,7 +3,11 @@
 copyright:
 years: 2020 - 2022
 lastupdated: "2022-03-17"
+title: "CPU usage to IBM Event Streams"
 
+parent: Edge service examples
+grand_parent: Using edge services
+nav_order: 2
 ---
 
 {:new_window: target="blank"}

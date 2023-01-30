@@ -3,7 +3,12 @@
 copyright:
 years: 2021 - 2022
 lastupdated: "2022-05-31"
+title: "Further reading"
 
+parent: Developing edge services
+nav_order: 4
+has_children: true
+has_toc: false
 ---
 
 {:new_window: target="blank"}

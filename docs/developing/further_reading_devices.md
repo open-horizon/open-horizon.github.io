@@ -3,7 +3,11 @@
 copyright:
 years: 2021 - 2022
 lastupdated: "2022-08-13"
+title: "Further reading for devices"
 
+nav_order: 17
+has_children: true
+has_toc: false
 ---
 
 {:new_window: target="blank"}

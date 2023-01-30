@@ -3,7 +3,12 @@
 copyright:
 years: 2021 - 2022
 lastupdated: "2022-05-31"
+title: "Installing Management hub"
 
+nav_order: 1
+parent: Management Hub
+has_children: true
+has_toc: false
 ---
 
 {:new_window: target="blank"}
@@ -31,7 +36,7 @@ Complete the management hub installation and configuration before starting the {
 
 ## Management hub installation flow
 
-<img src="../images/edge/06_OH_management_hub_install.svg" style="margin: 3%" alt="Management hub installation overview">
+<img src="../../images/edge/06_OH_management_hub_install.svg" style="margin: 3%" alt="Management hub installation overview">
 
 ## Related information
 

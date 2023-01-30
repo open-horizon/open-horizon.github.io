@@ -5,6 +5,9 @@ years: 2020
 lastupdated: "2020-2-2"
 title: Monitoring
 
+parent: Administering functions
+grand_parent: Administering
+nav_order: 4
 ---
 
 {:new_window: target="blank"}

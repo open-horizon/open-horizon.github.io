@@ -3,7 +3,10 @@
 copyright:
 years: 2021 - 2022
 lastupdated: "2022-05-31"
+title: "Prerequisites"
 
+parent: Install Open Horizon
+nav_order: 1
 ---
 
 {:new_window: target="blank"}

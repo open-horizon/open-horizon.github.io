@@ -6,6 +6,9 @@ lastupdated: "2022-03-17"
 title: Multitenacy
 description: Software architecture in which a single instance of software runs on server and server multiplies tenants.
 
+parent: Administering functions
+grand_parent: Administering
+nav_order: 1
 ---
 
 {:new_window: target="blank"}

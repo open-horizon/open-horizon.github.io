@@ -3,7 +3,11 @@
 copyright:
 years: 2021 - 2022
 lastupdated: "2022-08-4"
+title: "Security and privacy"
 
+parent: Security
+grand_parent: Administering
+nav_order: 1
 ---
 
 {:new_window: target="blank"}

@@ -3,7 +3,11 @@
 copyright:
 years: 2019 - 2023
 lastupdated: "2023-01-23"
+title: "Preparing an edge device"
 
+parent: Edge devices info
+grand_parent: Edge devices
+nav_order: 1
 ---
 
 {:new_window: target="blank"}

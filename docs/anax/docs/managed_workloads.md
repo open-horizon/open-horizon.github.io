@@ -1,3 +1,12 @@
+---
+copyright:
+years: 2023
+lastupdated: "2023-01-29"
+title: "Horizon Edge Service Detail"
+
+parent: Agent (anax)
+nav_order: 8
+---
 ## Horizon Edge Service Detail
 
 Horizon manages the lifecycle, connectivity, and other features of services it launches on a device. This document is intended for service developers' consumption.

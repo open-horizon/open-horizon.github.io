@@ -7,6 +7,9 @@ tags:
  - Issue
  - Report
 author: clementkng
+
+parent: Quick Start
+nav_order: 4
 ---
 
 # Report an issue

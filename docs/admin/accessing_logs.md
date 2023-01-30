@@ -5,6 +5,10 @@ years: 2020 - 2022
 lastupdated: "2022-03-17"
 title: Accessing logs
 description: Accessing management hub logs.
+
+parent: Administering functions
+grand_parent: Administering
+nav_order: 5
 ---
 
 {:new_window: target="blank"}

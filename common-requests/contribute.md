@@ -2,6 +2,9 @@
 layout: page
 title: "Contribute"
 description: "Contribution process to help newcomers get started with Open Horizon"
+
+parent: Quick Start
+nav_order: 3
 ---
 
 Contributions will only be considered when linked to an open issue, aligned with the project goals, and attested to by the Contributor (ex. signing off on a commit, accepting the [Developer Certificate of Origin](https://developercertificate.org/)).

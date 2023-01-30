@@ -3,7 +3,12 @@
 copyright:
 years: 2020 - 2022
 lastupdated: "2022-06-03"
+title: Security 
 
+parent: Administering
+nav_order: 2
+has_children: true
+has_toc: false
 ---
 
 {:new_window: target="blank"}

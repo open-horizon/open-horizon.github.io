@@ -1,3 +1,13 @@
+---
+copyright:
+years: 2023
+lastupdated: "2023-01-29"
+title: "Horizon Attributes"
+
+parent: Agent (anax)
+nav_order: 4
+---
+
 ## Horizon Attributes
 
 This document contains the definition for each attribute that can be set on the [POST /attribute](./api.md#api-post--attribute) API or the [POST /service/config](./api.md#api-post--serviceconfig) API.

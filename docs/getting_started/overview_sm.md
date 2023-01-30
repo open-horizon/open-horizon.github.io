@@ -3,7 +3,10 @@
 copyright:
 years: 2021
 lastupdated: "2021-07-20"
+title: "Secrets Manager"
+description: "Overview of Secrets Manager"
 
+nav_order: 5
 ---
 
 {:new_window: target="blank"}

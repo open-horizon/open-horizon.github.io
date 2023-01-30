@@ -3,6 +3,11 @@
 copyright:
 years: 2020 - 2022
 lastupdated: "2022-03-17"
+title: "Edge cluster service"
+
+parent: Edge service examples
+grand_parent: Using edge services
+nav_order: 6
 
 ---
 

@@ -7,6 +7,8 @@ layout: page
 title: "Developer learning path"
 description: A set of sequential resources for the developer learning about Open Horizon
 
+parent: Quick Start
+nav_order: 5
 ---
 
 ## Introduction

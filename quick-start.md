@@ -2,6 +2,10 @@
 layout: page
 title: "Quick Start"
 description: "A guide to get you using Open Horizon in minutes."
+
+nav_order: 2
+has_children: true
+has_toc: false
 ---
 
 ### Overview

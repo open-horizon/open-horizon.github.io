@@ -3,7 +3,11 @@
 copyright:
 years: 2020 - 2022
 lastupdated: "2022-03-17"
+title: Management Hub
 
+nav_order: 8
+has_children: true
+has_toc: false
 ---
 
 {:new_window: target="blank"}

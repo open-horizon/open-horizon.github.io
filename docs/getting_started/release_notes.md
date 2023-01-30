@@ -3,7 +3,11 @@
 copyright:
 years: 2020 - 2022
 lastupdated: "2022-07-01"
+title: "Release notes"
 
+nav_order: 18
+has_children: true
+has_toc: false
 ---
 
 {:new_window: target="blank"}

@@ -3,7 +3,11 @@
 copyright:
 years: 2019 - 2022
 lastupdated: "2022-03-17"
+title: "Offline voice assistant"
 
+parent: Edge service examples
+grand_parent: Using edge services
+nav_order: 4
 ---
 
 {:new_window: target="blank"}

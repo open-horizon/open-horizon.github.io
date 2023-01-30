@@ -3,8 +3,13 @@
 copyright:
 years: 2021
 lastupdated: "2021-02-20"
-title: Administering
+title: Administering functions
 description: Administrative functions that support an edge computing environment.
+
+parent: Administering
+nav_order: 1
+has_children: true
+has_toc: false
 ---
 
 {:new_window: target="blank"}

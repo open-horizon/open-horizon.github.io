@@ -5,6 +5,9 @@ years: 2022
 lastupdated: "2022-06-14"
 title: hzn CLI
 description: ""
+
+parent: CLI
+nav_order: 1
 ---
 
 {:new_window: target="blank"}

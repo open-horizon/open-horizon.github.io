@@ -2,6 +2,9 @@
 layout: page
 title: "Installation"
 description: "Instructions for installing the Open Horizon project's Management Hub, Agent, and CLI all in one VM"
+
+parent: Quick Start
+nav_order: 1
 ---
 
 # Install
@@ -40,4 +43,4 @@ This video shows an installation process example.
 
 ## What to do next
 
-After installing the Management Hub/Agent/CLI with the all-in-one process, go to [How to Use Open Horizon](./use.html)
+After installing the Management Hub/Agent/CLI with the all-in-one process, go to [How to Use Open Horizon](./use.md)

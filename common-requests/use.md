@@ -2,6 +2,9 @@
 layout: page
 title: "How to use Open Horizon"
 description: "Basic instructions and examples for using the Open Horizon projects CLI"
+
+parent: Quick Start
+nav_order: 2
 ---
 
 # How to use Open Horizon

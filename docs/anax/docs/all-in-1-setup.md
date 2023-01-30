@@ -1,3 +1,13 @@
+---
+copyright:
+years: 2022 - 2023
+lastupdated: "2023-01-24"
+title: "How to set-up the Open Horizon All-in-1 Horizon Management Hub for edge clusters"
+
+parent: Agent (anax)
+nav_order: 13
+---
+
 # How to set-up the Open Horizon All-in-1 Horizon Management Hub for edge clusters
 
 ## Deploy the Open Horizon All-in-1 Horizon Management Hub

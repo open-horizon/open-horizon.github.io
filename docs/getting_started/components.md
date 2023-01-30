@@ -3,7 +3,10 @@
 copyright:
 years: 2019 - 2022
 lastupdated: "2022-07-07"
+title: Components
 
+parent: Overview of Open Horizon
+nav_bar: 1
 ---
 
 {:new_window: target="blank"}

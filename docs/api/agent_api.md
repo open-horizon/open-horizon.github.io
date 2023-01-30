@@ -5,6 +5,9 @@ years: 2020 - 2022
 lastupdated: "2022-10-04"
 title: Agent API
 description: Agent APIs are REST APIs for the Horizon agent running on an edge node.
+
+parent: APIs
+nav_order: 1
 ---
 
 {:new_window: target="blank"}
