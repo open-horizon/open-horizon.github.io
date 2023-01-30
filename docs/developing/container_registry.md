@@ -5,6 +5,10 @@ years: 2020 - 2022
 lastupdated: "2022-03-17"
 title: Container Registry
 description: ""
+
+parent: Further reading
+grand_parent: Developing edge services
+nav_order: 3
 ---
 
 {:new_window: target="blank"}

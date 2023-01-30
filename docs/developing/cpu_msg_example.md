@@ -6,6 +6,9 @@ lastupdated: "2022-03-17"
 title: CPU to Apache Kafka service
 description: This example collects CPU load percentage information to send to Apache Kafka. Use this example to help you develop your own edge applications that send data to cloud services.
 
+parent: Edge service examples
+grand_parent: Using edge services
+nav_order: 7
 ---
 
 {:new_window: target="blank"}

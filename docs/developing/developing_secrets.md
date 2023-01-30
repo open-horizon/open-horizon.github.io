@@ -5,6 +5,9 @@ years: 2021
 lastupdated: "2021-08-16"
 title: Hello world with a secret
 description: This example teaches you how to develop an Open Horizon service that uses secrets. Secrets ensure that login credentials and other sensitive information are kept secure.
+
+parent: Further reading for devices
+nav_order: 5
 ---
 
 {:new_window: target="blank"}

@@ -3,7 +3,10 @@
 copyright:
 years: 2021 - 2022
 lastupdated: "2022-05-31"
+title: "Accessibility features"
 
+parent: Release notes
+nav_order: 2
 ---
 
 {:new_window: target="blank"}

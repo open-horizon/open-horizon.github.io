@@ -5,7 +5,7 @@ years: 2020 - 2022
 lastupdated: "2022-05-31"
 title: "Edge devices"
 
-nav_order: 8
+nav_order: 11
 has_children: true
 has_toc: false
 ---

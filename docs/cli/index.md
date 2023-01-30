@@ -6,7 +6,7 @@ lastupdated: "2021-02-20"
 title: CLI
 description: ""
 
-nav_order: 15
+nav_order: 6
 has_children: true
 has_toc: false
 ---

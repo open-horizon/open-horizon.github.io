@@ -5,6 +5,9 @@ years: 2020 - 2022
 lastupdated: "2022-03-17"
 title: Creating your own hello world for clusters
 description: To deploy a containerized edge service to an edge cluster, the first step is to build a Kubernetes Operator that deploys the containerized edge service in a Kubernetes cluster.
+
+parent: Using edge services
+nav_order: 3
 ---
 
 {:shortdesc: .shortdesc}

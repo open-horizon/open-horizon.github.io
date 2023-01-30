@@ -6,8 +6,8 @@ lastupdated: "2021-02-20"
 
 title: Model Management Service
 
-parent: Learning
-nav_order: 4
+parent: Further reading for devices
+nav_order: 1
 ---
 
 {:shortdesc: .shortdesc}

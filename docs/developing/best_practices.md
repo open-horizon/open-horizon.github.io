@@ -5,6 +5,10 @@ years: 2021 - 2022
 lastupdated: "2022-07-01"
 title: Best Practices
 description: ""
+
+parent: Further reading
+grand_parent: Developing edge services
+nav_order: 1
 ---
 
 {:new_window: target="blank"}

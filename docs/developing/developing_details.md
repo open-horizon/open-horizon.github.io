@@ -5,6 +5,10 @@ years: 2021
 lastupdated: "2021-02-20"
 title: Development details
 description: The following content provides more details on the software development practices and concepts for Open Horizon (OH) development.
+
+parent: Further reading
+grand_parent: Developing edge services
+nav_order: 4
 ---
 
 {:new_window: target="blank"}

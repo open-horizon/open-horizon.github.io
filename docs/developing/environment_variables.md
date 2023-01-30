@@ -5,6 +5,10 @@ years: 2021
 lastupdated: "2021-02-20"
 title: Environment variables
 description: ""
+
+parent: Further reading
+grand_parent: Developing edge services
+nav_order: 2
 ---
 
 {:shortdesc: .shortdesc}

@@ -5,6 +5,9 @@ years: 2020 - 2022
 lastupdated: "2022-03-17"
 title: CI-CD process
 description: ""
+
+parent: Further reading for devices
+nav_order: 3
 ---
 
 {:new_window: target="blank"}

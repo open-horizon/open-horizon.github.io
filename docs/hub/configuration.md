@@ -5,6 +5,7 @@ copyright:
 lastupdated: "2022-07-06"
 title: "Configuration"
 
+grand_parent: Management Hub
 parent: Installing Management hub
 nav_order: 2
 ---

@@ -3,7 +3,10 @@
 copyright:
 years: 2020 - 2022
 lastupdated: "2022-08-13"
+title: "Known issues and limitations"
 
+parent: Release notes
+nav_order: 1
 ---
 
 {:new_window: target="blank"}

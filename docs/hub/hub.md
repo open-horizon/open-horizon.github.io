@@ -6,6 +6,7 @@ lastupdated: "2022-05-31"
 title: "Installing Management hub"
 
 nav_order: 4
+parent: Management Hub
 has_children: true
 has_toc: false
 ---

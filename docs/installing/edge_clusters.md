@@ -5,7 +5,7 @@ years: 2021 - 2022
 lastupdated: "2022-03-10"
 title: "Edge clusters"
 
-nav_order: 9
+nav_order: 12
 has_children: true
 has_toc: false
 ---

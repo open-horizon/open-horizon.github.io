@@ -5,6 +5,9 @@ years: 2020 - 2022
 lastupdated: "2022-06-14"
 title: Creating your own hello world edge service
 description: ""
+
+parent: Developing edge services
+nav_order: 3
 ---
 
 {:new_window: target="blank"}

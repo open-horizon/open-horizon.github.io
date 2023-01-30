@@ -3,7 +3,10 @@
 copyright:
 years: 2021 - 2022
 lastupdated: "2022-03-10"
+title: "Secrets Manager details"
 
+parent: Further reading for devices
+nav_order: 4
 ---
 
 {:shortdesc: .shortdesc}
@@ -17,7 +20,7 @@ lastupdated: "2022-03-10"
 # Developing a service using secrets
 {: #using secrets}
 
-<img src="../images/edge/10_Secrets.svg" style="margin: 3%" alt="Developing a service using secrets">
+<img src="../../images/edge/10_Secrets.svg" style="margin: 3%" alt="Developing a service using secrets">
 
 # Secrets Manager details
 {: #secrets_details}
@@ -42,4 +45,4 @@ A user without admin privileges can:
 The {{site.data.keyword.ieam}} {{site.data.keyword.agbot}} also has access to secrets in order to be able to deploy them to edge nodes. The {{site.data.keyword.agbot}} maintains a renewable login to the Vault and is given ACL policies specific to its purposes. An {{site.data.keyword.agbot}} can:
 - Read org wide secrets and any user private secret in any org, but it cannot add, remove or list any secrets.
 
-The Exchange root user and Exchange hub admins have no permissions in the Vault. See [Role-Based Access Control](../user_management/rbac.html) for more info on these roles.
+The Exchange root user and Exchange hub admins have no permissions in the Vault. See [Role-Based Access Control](../../user_management/rbac) for more info on these roles.

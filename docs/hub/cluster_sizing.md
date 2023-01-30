@@ -5,6 +5,7 @@ years: 2020 - 2022
 lastupdated: "2022-07-06"
 title: "Sizing and system requirements"
 
+grand_parent: Management Hub
 parent: Installing Management hub
 nav_order: 1
 ---
