@@ -5,7 +5,7 @@ years: 2021 - 2022
 lastupdated: "2022-05-31"
 title: "Installing Management hub"
 
-nav_order: 4
+nav_order: 1
 parent: Management Hub
 has_children: true
 has_toc: false
