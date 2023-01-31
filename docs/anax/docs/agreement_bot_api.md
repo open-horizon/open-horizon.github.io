@@ -437,7 +437,7 @@ Get detailed information for an agreement.
 | name | type | description |
 | ---- | ---- | ---------------- |
 | id   | string | the id of the agreement to be retrieved. |
-{: caption="Table 11. GET /agreement/{id} JSON parameter fields" caption-side="top"}
+{: caption="Table 11. GET /agreement/\{id\} JSON parameter fields" caption-side="top"}
 
 #### Response
 
