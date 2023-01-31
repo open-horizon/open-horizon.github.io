@@ -6,7 +6,7 @@ title: "Policy Properties and Constraints"
 description: Policy Properties and constraints
 
 parent: Agent (anax)
-nav_order: 11
+nav_order: 17
 ---
 
 {:new_window: target="blank"}

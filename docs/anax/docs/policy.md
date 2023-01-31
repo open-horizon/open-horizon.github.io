@@ -6,7 +6,7 @@ title: "Policy based deployment"
 description: Policy based deployment enables containerized workloads (aka services) to be deployed to edge nodes
 
 parent: Agent (anax)
-nav_order: 10
+nav_order: 16
 ---
 
 {:new_window: target="blank"}

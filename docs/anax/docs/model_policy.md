@@ -6,7 +6,7 @@ title: "Model Object"
 description: Model Policies deploy application metadata objects to edge nodes
 
 parent: Agent (anax)
-nav_order: 9
+nav_order: 11
 ---
 
 {:new_window: target="blank"}

@@ -6,7 +6,7 @@ title: "Policy Properties"
 description: Built in Policy Properties
 
 parent: Agent (anax)
-nav_order: 5
+nav_order: 7
 ---
 
 {:new_window: target="blank"}

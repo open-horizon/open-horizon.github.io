@@ -6,7 +6,7 @@ title: "Deployment Policy"
 description: Description of Deployment policy json fields
 
 parent: Agent (anax)
-nav_order: 6
+nav_order: 8
 ---
 
 {:new_window: target="blank"}
