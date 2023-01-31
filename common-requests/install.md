@@ -11,31 +11,32 @@ nav_order: 1
 
 ## Pre-requisites
 
-To run the [all-in-one instructions](https://github.com/open-horizon/devops/tree/master/mgmt-hub) for the Management Hub, Agent, and [CLI](../docs/cli/index.md) all in one VM, you need a VM with: 
+To run the [all-in-one instructions](https://github.com/open-horizon/devops/tree/master/mgmt-hub) for the Management Hub, Agent, and [CLI](../docs/cli/index.md) all in one VM, you need a VM with:
 
 * &gt;= 4GB RAM
-* 20GB storage 
+* 20GB storage
 * Ubuntu Server 18.04 LTS
 
 This video shows an example of installing Ubuntu Server on VirtualBox 6.1 on OSX Catalina.
 
 {% include youtubePlayer.html id="YQqFnRNL98s" %}
 
-The links for above installation.  
-* [Ubuntu Server 18.04 LTS for AMD64](https://releases.ubuntu.com/18.04/)  
-* [VirtualBox 6.1](https://www.virtualbox.org/wiki/Downloads)  
-* [Open Horizon Management Hub installation instructions](https://github.com/open-horizon/devops/blob/master/mgmt-hub/README.md)  
+The links for above installation.
+
+* [Ubuntu Server 18.04 LTS for AMD64](https://releases.ubuntu.com/18.04/)
+* [VirtualBox 6.1](https://www.virtualbox.org/wiki/Downloads)
+* [Open Horizon Management Hub installation instructions](https://github.com/open-horizon/devops/blob/master/mgmt-hub/README.md)
 * [Open Horizon project](https://www.lfedge.org/projects/openhorizon/)
 
 ## Installation
 
-* After Ubuntu Server 18.04 is running, run the installation as root: 
+* After Ubuntu Server 18.04 is running, run the installation as root:
 
-``` shell
+```bash
 sudo -i
 ```
 
-* Follow the steps in the [all-in-one instructions](https://github.com/open-horizon/devops/tree/master/mgmt-hub) to install the Management Hub/Agent/CLI in a single VM.  
+* Follow the steps in the [all-in-one instructions](https://github.com/open-horizon/devops/tree/master/mgmt-hub) to install the Management Hub/Agent/CLI in a single VM.
 
 This video shows an installation process example.
 
