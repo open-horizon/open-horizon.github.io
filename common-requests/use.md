@@ -19,12 +19,13 @@ You should become familiar with the Command Line Interface (CLI). This is the pr
 
 Use "version" to view the CLI and agent version numbers:
 
-{% capture code %}hzn version{% endcapture %}
-{% include code_snippet.md code=code language='shell' %}
+```bash
+hzn version
+```
 
 In this example, the command returns:
 
-``` text
+```text
 Horizon CLI version: 2.26.12
 Horizon Agent version: 2.26.12
 ```
@@ -33,14 +34,15 @@ Horizon Agent version: 2.26.12
 
 Use `node` to find the node configuration from the agent:
 
-{% capture code %}hzn node list{% endcapture %}
-{% include code_snippet.md code=code language='shell' %}
+```bash
+hzn node list
+```
 
 > Note the typical [CLI] [Object Noun] [Action Verb] pattern.
 
 The response should be similar to this JSON example:
 
-``` javascript
+```javascript
 {
   "id": "node1",
   "organization": "myorg",
@@ -78,12 +80,13 @@ Lastly, if you do not see a version number value in the `configuration.exchange_
 
 Check the agreement formed when your edge node registered for a service:
 
-{% capture code %}hzn agreement list{% endcapture %}
-{% include code_snippet.md code=code language='shell' %}
+```bash
+hzn agreement list
+```
 
 This command displays a JSON array of objects showing one or more active agreements between the edge node and AgBots:
 
-``` javascript
+```javascript
 [
   {
     "name": "Policy for myorg/node1 merged with myorg/policy-ibm.helloworld_1.0.0",
@@ -132,7 +135,7 @@ To use the exchange communication commands, set up two environment variables.
 
 You need this information from the all-in-one installation summary message displayed when you installed the management hub, agent, and CLI.  The summary message is similar to this example:
 
-``` text
+```text
 ----------- Summary of what was done:
   1. Started Horizon management hub services: agbot, exchange, postgres DB, CSS, mongo DB
   2. Created exchange resources: system org (IBM) admin user, user org (myorg) and admin user, and agbot
@@ -151,7 +154,7 @@ For what to do next, see: https://github.com/open-horizon/devops/blob/master/mgm
 
 Use the "User org admin user generated password" in the previous message to export the following environment variables, using the substitution shown below:
 
-``` shell
+```bash
 export HZN_ORG_ID=myorg
 export HZN_EXCHANGE_USER_AUTH=admin:[User org admin user generated password]
 ```
