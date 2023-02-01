@@ -1,4 +1,7 @@
 ---
+copyright:
+years: 2021 - 2023
+lastupdated: "2023-02-01"
 layout: page
 title: "Quick Start"
 description: "A guide to get you using Open Horizon in minutes."
@@ -32,8 +35,8 @@ curl -sSL https://raw.githubusercontent.com/open-horizon/devops/master/mgmt-hub/
 
 ### Learn More
 
-[Developer Learning Path](/docs/getting_started/developer_learning_path.html) page.
+[Developer Learning Path](/docs/getting_started/developer_learning_path/) page.
 
-From the [Getting Started Overview](/docs/getting_started/overview_oh.html) page.
+From the [Getting Started Overview](/docs/getting_started/overview_oh/) page.
 
 From the [Open-Horizon Project Playlist](https://www.youtube.com/playlist?list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix) on YouTube.

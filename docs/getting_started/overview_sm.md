@@ -6,7 +6,7 @@ lastupdated: "2021-07-20"
 title: "Secrets Manager"
 description: "Overview of Secrets Manager"
 
-nav_order: 5
+nav_order: 10
 ---
 
 {:new_window: target="blank"}
