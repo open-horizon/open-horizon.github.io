@@ -36,12 +36,12 @@ The following instructions guide you through the process of installing the requi
   - SuSE 15 SP2
 - ppc64le
   - {{site.data.keyword.linux_ppc64le_notm}} devices or virtual machines that run Ubuntu 20.x (focal) or Ubuntu 18.x (bionic)
-  - {{site.data.keyword.rhel}} 7.6, 7.9, 8.1, 8.2, 8.3, 8.4, 8.5, 8.6, 8.7, 9.0, 9.1
+  - {{site.data.keyword.rhel}} 7.6 - 9.1
 - ARM (32-bit)
   - {{site.data.keyword.linux_notm}} on ARM (32-bit), for example Raspberry Pi, running Raspberry Pi OS buster or bullseye
 - ARM (64-bit)
   - {{site.data.keyword.linux_notm}} on ARM (64-bit), for example NVIDIA Jetson Nano, TX1, or TX2, running Ubuntu 18.x (bionic)
-- Mac ({{site.data.keyword.intel}} only)
+- Mac (both {{site.data.keyword.intel}} and M1 / M2 )
   - {{site.data.keyword.macOS_notm}}
 
 **Notes**:
@@ -110,19 +110,20 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 
 Prepare your device by installing {{site.data.keyword.rhel}} 8.x or 9.x
 
-If you are running {{site.data.keyword.rhel}} 9.0 or above, install the required Podman 4.x and Netavark packages.
-
 1. Install packages:
-   ```
+
+   If you are running {{site.data.keyword.rhel}} 9.0 or above, install the required Podman 4.x and Netavark packages.
+
+   ```bash
    dnf install podman netavark
    ```
    {: codeblock}
 
-If you are running {{site.data.keyword.rhel}} 8.6 or above, install the Podman 4.x packages by installing the `container-tools:rhel8` module.
+   If you are running {{site.data.keyword.rhel}} 8.6 or above, install the Podman 4.x packages by installing the `container-tools:rhel8` module.
 
-```bash
-dnf module install container-tools:rhel8
-```
+   ```bash
+   dnf module install container-tools:rhel8
+   ```
 
 2. Switch the network stack from CNI to Netavark. The {{site.data.keyword.horizon}} agent requires the network backend to be configured to use Netavark instead of CNI so that the agent can set up networking scenarios such as dependent services between containers. Follow the steps in the Red Hat documentation [switching the network stack ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/building_running_and_managing_containers/index#proc_switching-the-network-stack-from-cni-to-netavark_assembly_setting-container-network-modes){:target="_blank"}{: .externalLink} chapter.
 
