@@ -1,9 +1,13 @@
 ---
 
 copyright:
-years: 2021 - 2022
-lastupdated: "2022-07-06"
+years: 2021 - 2023
+lastupdated: "2023-02-01"
+title: "Preparing an edge device"
 
+parent: Edge devices info
+grand_parent: Edge devices
+nav_order: 4
 ---
 
 {:new_window: target="blank"}
@@ -190,7 +194,7 @@ Follow these steps:
 
 10. Continue on to [Registering the agent](#agent_reg).
 
-### Installing the agent on a {{site.data.keyword.macOS_notm}} ({{site.data.keyword.intel}} only) edge device
+### Installing the agent on a {{site.data.keyword.macOS_notm}} ({{site.data.keyword.intel}} or Apple Silicon M1 / M2) edge device
 {: #mac-os-x}
 
 1. Import the `horizon-cli` package certificate into your {{site.data.keyword.macOS_notm}} keychain:

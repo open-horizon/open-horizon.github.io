@@ -2,7 +2,7 @@
 
 copyright:
 years: 2019 - 2023
-lastupdated: "2023-01-23"
+lastupdated: "2023-02-01"
 title: "Preparing an edge device"
 
 parent: Edge devices info
@@ -41,6 +41,7 @@ The following instructions guide you through the process of installing the requi
   - {{site.data.keyword.linux_notm}} on ARM (32-bit), for example Raspberry Pi, running Raspberry Pi OS buster or bullseye
 - ARM (64-bit)
   - {{site.data.keyword.linux_notm}} on ARM (64-bit), for example NVIDIA Jetson Nano, TX1, or TX2, running Ubuntu 18.x (bionic)
+  - {{site.data.keyword.macOS_notm}} on ARM (64-bit) Apple Silicon M1 / M2
 - Mac (both {{site.data.keyword.intel}} and M1 / M2 )
   - {{site.data.keyword.macOS_notm}}
 
@@ -49,7 +50,7 @@ The following instructions guide you through the process of installing the requi
 - Installation of edge devices with {{site.data.keyword.fedora}} or SuSE is only supported by the [Advanced manual agent installation and registration](../installing/advanced_man_install.md) method.
 - CentOS and {{site.data.keyword.rhel}} 8.5 or earlier on {{site.data.keyword.ieam}} {{site.data.keyword.version}} only support Docker as a container engine.
 - While {{site.data.keyword.ieam}} {{site.data.keyword.version}} supports running {{site.data.keyword.rhel}} 8.x with Docker, it is officially unsupported by {{site.data.keyword.rhel}}.
-- {{site.data.keyword.ieam}} {{site.data.keyword.version}} supports Podman 4.x on {{site.data.keyword.rhel}} 8.6, {{site.data.keyword.rhel}} 9.0 and {{site.data.keyword.fedora}} 36, 37 Workstation.
+- {{site.data.keyword.ieam}} {{site.data.keyword.version}} supports Podman 4.x on {{site.data.keyword.rhel}} 8.6, {{site.data.keyword.rhel}} 9.0 - 9.1, and {{site.data.keyword.fedora}} 36, 37 Workstation.
 
 ## Sizing
 {: #size}
@@ -295,12 +296,12 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 ### Hardware requirements
 {: #hard-req-mac}
 
-- 2010 or later 64-bit {{site.data.keyword.intel}} Mac ({{site.data.keyword.intel}} only) device
-- MMU virtualization is required.
+- 2010 or later 64-bit {{site.data.keyword.intel}} Mac device
+- 2020 or later 64-bit arm64 Apple M1 / M2 Mac device
+- MMU virtualization is required
 - {{site.data.keyword.macOS_notm}} X version 10.11 ("El Capitan") or later
 - An internet connection for your machine (wired or WiFi)
-- (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware.
-- {{site.data.keyword.edge_notm}} is not yet supported on arm-based Mac devices.
+- (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware
 
 ### Procedure
 {: #proc-mac}
