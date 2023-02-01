@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021 - 2022
-lastupdated: "2022-05-31"
+years: 2021 - 2023
+lastupdated: "2023-02-01"
 title: Overview of Open Horizon
 
 nav_order: 4
@@ -63,7 +63,7 @@ The {{site.data.keyword.ieam}} management hub is designed specifically for edge 
 
 ## What's next
 
-For more information about using {{site.data.keyword.ieam}} and developing edge services, review the topics that are listed in {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) [Welcome page](../) and in the following sections:
+For more information about using {{site.data.keyword.ieam}} and developing edge services, review the topics that are listed in {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) [Welcome page](../index.html) and in the following sections:
 
 * [Accessibility](../getting_started/accessibility.md)
 * [Components](../getting_started/components.md)
