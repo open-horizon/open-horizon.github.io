@@ -8,19 +8,69 @@
       "name" : "Apache License Version 2.0",
       "url" : "https://www.apache.org/licenses/LICENSE-2.0"
     },
-    "version" : "2.87.0"
+    "version" : "2.108.1"
   },
   "externalDocs" : {
     "description" : "Open-horizon ExchangeAPI",
     "url" : "https://github.com/open-horizon/exchange-api"
   },
   "servers" : [ {
-    "url" : "http://localhost:8080"
-  }, {
-    "url" : "https://localhost:8080"
+    "url" : "http://localhost:Some(8080)"
   } ],
   "security" : [ ],
   "paths" : {
+    "/v1/admin/dropdb" : {
+      "post" : {
+        "tags" : [ "administration" ],
+        "summary" : "Deletes the tables from the DB",
+        "description" : "Deletes the tables from the Exchange DB. **Warning: this will delete the data too!** Because this is a dangerous method, you must first get a 1-time token using GET /admin/dropdb/token, and use that to authenticate to this REST API method. Can only be run by the root user.",
+        "operationId" : "adminDropDbRoute",
+        "responses" : {
+          "201" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          }
+        }
+      }
+    },
+    "/v1/admin/dropdb/token" : {
+      "get" : {
+        "tags" : [ "administration" ],
+        "summary" : "Gets a 1-time token for deleting the DB",
+        "description" : "Returns a timed token that can be given to POST /admin/dropdb. The token is good for 10 minutes. Since dropping the DB tables deletes all of their data, this is a way of confirming you really want to do it. This can only be run as root.",
+        "operationId" : "adminGetDbTokenRoute",
+        "responses" : {
+          "200" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/AdminDropdbTokenResponse"
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          }
+        }
+      }
+    },
     "/v1/admin/orgstatus" : {
       "get" : {
         "tags" : [ "administration" ],
@@ -132,9 +182,349 @@
         }
       }
     },
+    "/v1/admin/initdb" : {
+      "post" : {
+        "tags" : [ "administration" ],
+        "summary" : "Creates the table schema in the DB",
+        "description" : "Creates the tables with the necessary schema in the Exchange DB. This is now called at exchange startup, if necessary. Can only be run by the root user.",
+        "operationId" : "adminInitDbRoute",
+        "responses" : {
+          "201" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          }
+        }
+      }
+    },
+    "/v1/admin/reload" : {
+      "post" : {
+        "tags" : [ "administration" ],
+        "summary" : "Tells the exchange reread its config file",
+        "description" : "Directs the exchange server to reread /etc/horizon/exchange/config.json and continue running with those new settings. Can only be run by the root user.",
+        "operationId" : "adminReloadRoute",
+        "responses" : {
+          "201" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          }
+        }
+      }
+    },
+    "/v1/orgs/{orgid}/agbots/{id}/agreements/{agid}" : {
+      "get" : {
+        "tags" : [ "agreement bot/agreement" ],
+        "summary" : "Returns an agreement for an agbot",
+        "description" : "Returns the agreement with the specified agid for the specified agbot id. Can be run by the owning user or the agbot.",
+        "operationId" : "agbotGetAgreementRoute",
+        "parameters" : [ {
+          "name" : "orgid",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "description" : "ID of the agbot.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "agid",
+          "in" : "path",
+          "description" : "ID of the agreement.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetAgbotAgreementsResponse"
+                },
+                "example" : {
+                  "agreements" : {
+                    "agreementname" : {
+                      "service" : {
+                        "orgid" : "string",
+                        "pattern" : "string",
+                        "url" : "string"
+                      },
+                      "state" : "string",
+                      "lastUpdated" : "2019-05-14T16:34:37.173Z[UTC]",
+                      "dataLastReceived" : ""
+                    }
+                  },
+                  "lastIndex" : 0
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "agreement bot/agreement" ],
+        "summary" : "Adds/updates an agreement of an agbot",
+        "description" : "Adds a new agreement of an agbot to the exchange DB, or updates an existing agreement. This is called by the owning user or the agbot to give their information about the agreement.",
+        "operationId" : "agbotPutAgreementRoute",
+        "parameters" : [ {
+          "name" : "orgid",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "description" : "ID of the agbot to be updated.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "agid",
+          "in" : "path",
+          "description" : "ID of the agreement to be added/updated.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/PutAgbotAgreementRequest"
+              },
+              "example" : {
+                "service" : {
+                  "orgid" : "string",
+                  "pattern" : "string",
+                  "url" : "string"
+                },
+                "state" : "string"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "201" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "agreement bot/agreement" ],
+        "summary" : "Deletes an agreement of an agbot",
+        "description" : "Deletes an agreement of an agbot. Can be run by the owning user or the agbot.",
+        "operationId" : "agbotDeleteAgreementRoute",
+        "parameters" : [ {
+          "name" : "orgid",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "description" : "ID of the agbot.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "agid",
+          "in" : "path",
+          "description" : "ID of the agreement to be deleted.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "deleted"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
+    "/v1/orgs/{orgid}/agbots/{id}/agreements" : {
+      "get" : {
+        "tags" : [ "agreement bot/agreement" ],
+        "summary" : "Returns all agreements this agbot is in",
+        "description" : "Returns all agreements that this agbot is part of. Can be run by the owning user or the agbot.",
+        "operationId" : "agbotGetAgreementsRoute",
+        "parameters" : [ {
+          "name" : "orgid",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "description" : "ID of the agbot.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetAgbotAgreementsResponse"
+                },
+                "example" : {
+                  "agreements" : {
+                    "agreementname" : {
+                      "service" : {
+                        "orgid" : "string",
+                        "pattern" : "string",
+                        "url" : "string"
+                      },
+                      "state" : "string",
+                      "lastUpdated" : "2019-05-14T16:34:37.173Z[UTC]",
+                      "dataLastReceived" : ""
+                    }
+                  },
+                  "lastIndex" : 0
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "agreement bot/agreement" ],
+        "summary" : "Deletes all agreements of an agbot",
+        "description" : "Deletes all of the current agreements of an agbot. Can be run by the owning user or the agbot.",
+        "operationId" : "agbotDeleteAgreementsRoute",
+        "parameters" : [ {
+          "name" : "orgid",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "description" : "ID of the agbot.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "deleted"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
     "/v1/orgs/{orgid}/agbots/{id}/businesspols/{buspolid}" : {
       "get" : {
-        "tags" : [ "agreement-bot/policy" ],
+        "tags" : [ "agreement bot/policy" ],
         "summary" : "Returns a business policy this agbot is serving",
         "description" : "Returns the business policy with the specified patid for the specified agbot id. The patid should be in the form businessPolOrgid_businessPol. Can be run by the owning user or the agbot.",
         "operationId" : "agbotGetBusPolRoute",
@@ -199,7 +589,7 @@
         }
       },
       "delete" : {
-        "tags" : [ "agreement-bot/policy" ],
+        "tags" : [ "agreement bot/policy" ],
         "summary" : "Deletes a business policy of an agbot",
         "description" : "Deletes a business policy that this agbot was serving. Can be run by the owning user or the agbot.",
         "operationId" : "agbotDeleteBusPolRoute",
@@ -246,7 +636,7 @@
     },
     "/v1/orgs/{orgid}/agbots/{id}/businesspols" : {
       "get" : {
-        "tags" : [ "agreement-bot/policy" ],
+        "tags" : [ "agreement bot/policy" ],
         "summary" : "Returns all business policies served by this agbot",
         "description" : "Returns all business policies that this agbot is finding nodes for to make agreements with them. Can be run by the owning user or the agbot.",
         "operationId" : "agbotGetBusPolsRoute",
@@ -303,7 +693,7 @@
         }
       },
       "post" : {
-        "tags" : [ "agreement-bot/policy" ],
+        "tags" : [ "agreement bot/policy" ],
         "summary" : "Adds a business policy that the agbot should serve",
         "description" : "Adds a new business policy and node org that this agbot should find nodes for to make agreements with them. This is called by the owning user or the agbot to give their information about the business policy.",
         "operationId" : "agbotPostBusPolRoute",
@@ -362,7 +752,7 @@
         }
       },
       "delete" : {
-        "tags" : [ "agreement-bot/policy" ],
+        "tags" : [ "agreement bot/policy" ],
         "summary" : "Deletes all business policies of an agbot",
         "description" : "Deletes all of the current business policies that this agbot was serving. Can be run by the owning user or the agbot.",
         "operationId" : "agbotDeleteBusPolsRoute",
@@ -401,7 +791,7 @@
     },
     "/v1/orgs/{orgid}/agbots/{id}/msgs/{msgid}" : {
       "get" : {
-        "tags" : [ "agreement-bot/message" ],
+        "tags" : [ "agreement bot/message" ],
         "summary" : "Returns A specific message that has been sent to this agreement-bot.",
         "description" : "Returns A specific message that has been sent to this agreement-bot. Deleted/post-TTL (Time To Live) messages will not be returned. Can be run by a user or the agbot.",
         "operationId" : "agbotGetMsgRoute",
@@ -456,7 +846,7 @@
         }
       },
       "delete" : {
-        "tags" : [ "agreement-bot/message" ],
+        "tags" : [ "agreement bot/message" ],
         "summary" : "Deletes a msg of an agbot",
         "description" : "Deletes a message that was sent to an agbot. This should be done by the agbot after each msg is read. Can be run by the owning user or the agbot.",
         "operationId" : "agbotDeleteMsgRoute",
@@ -503,7 +893,7 @@
     },
     "/v1/orgs/{orgid}/agbots/{id}/patterns/{patid}" : {
       "get" : {
-        "tags" : [ "agreement-bot/pattern" ],
+        "tags" : [ "agreement bot/pattern" ],
         "summary" : "Returns a pattern this agbot is serving",
         "description" : "Returns the pattern with the specified patid for the specified agbot id. The patid should be in the form patternOrgid_pattern. Can be run by the owning user or the agbot.",
         "operationId" : "agbotGetPatternRoute",
@@ -568,7 +958,7 @@
         }
       },
       "delete" : {
-        "tags" : [ "agreement-bot/pattern" ],
+        "tags" : [ "agreement bot/pattern" ],
         "summary" : "Deletes a pattern of an agbot",
         "description" : "Deletes a pattern that this agbot was serving. Can be run by the owning user or the agbot.",
         "operationId" : "agbotDeletePatRoute",
@@ -615,7 +1005,7 @@
     },
     "/v1/orgs/{orgid}/agbots/{id}/patterns" : {
       "get" : {
-        "tags" : [ "agreement-bot/pattern" ],
+        "tags" : [ "agreement bot/pattern" ],
         "summary" : "Returns all patterns served by this agbot",
         "description" : "Returns all patterns that this agbot is finding nodes for to make agreements with them. Can be run by the owning user or the agbot.",
         "operationId" : "agbotGetPatternsRoute",
@@ -678,7 +1068,7 @@
         }
       },
       "post" : {
-        "tags" : [ "agreement-bot/pattern" ],
+        "tags" : [ "agreement bot/pattern" ],
         "summary" : "Adds a pattern that the agbot should serve",
         "description" : "Adds a new pattern and node org that this agbot should find nodes for to make agreements with them. This is called by the owning user or the agbot to give their information about the pattern.",
         "operationId" : "agbotPostPatRoute",
@@ -737,7 +1127,7 @@
         }
       },
       "delete" : {
-        "tags" : [ "agreement-bot/pattern" ],
+        "tags" : [ "agreement bot/pattern" ],
         "summary" : "Deletes all patterns of an agbot",
         "description" : "Deletes all of the current patterns that this agbot was serving. Can be run by the owning user or the agbot.",
         "operationId" : "agbotDeletePatsRoute",
@@ -776,7 +1166,7 @@
     },
     "/v1/orgs/{orgid}/agbots/{id}" : {
       "get" : {
-        "tags" : [ "agreement-bot" ],
+        "tags" : [ "agreement bot" ],
         "summary" : "Returns an agbot",
         "description" : "Returns the agbot (Agreement Bot) with the specified id. Can be run by a user or the agbot.",
         "operationId" : "agbotGetRoute",
@@ -843,7 +1233,7 @@
         }
       },
       "put" : {
-        "tags" : [ "agreement-bot" ],
+        "tags" : [ "agreement bot" ],
         "summary" : "Add/updates an agbot",
         "description" : "Adds a new agbot (Agreement Bot) to the exchange DB, or updates an existing agbot. This must be called by the user to add an agbot, and then can be called by that user or agbot to update itself.",
         "operationId" : "agbotPutRoute",
@@ -905,7 +1295,7 @@
         }
       },
       "delete" : {
-        "tags" : [ "agreement-bot" ],
+        "tags" : [ "agreement bot" ],
         "summary" : "Deletes an agbot",
         "description" : "Deletes an agbot (Agreement Bot), and deletes the agreements stored for this agbot (but does not actually cancel the agreements between the nodes and agbot). Can be run by the owning user or the agbot.",
         "operationId" : "agbotDeleteRoute",
@@ -942,7 +1332,7 @@
         }
       },
       "patch" : {
-        "tags" : [ "agreement-bot" ],
+        "tags" : [ "agreement bot" ],
         "summary" : "Updates 1 attribute of an agbot",
         "description" : "Updates some attributes of an agbot. This can be called by the user or the agbot.",
         "operationId" : "agbotPatchRoute",
@@ -1006,9 +1396,123 @@
         }
       }
     },
+    "/v1/orgs/{orgid}/agbots/{id}/msgs" : {
+      "get" : {
+        "tags" : [ "agreement bot/message" ],
+        "summary" : "Returns all msgs sent to this agbot",
+        "description" : "Returns all msgs that have been sent to this agbot. They will be returned in the order they were sent. All msgs that have been sent to this agbot will be returned, unless the agbot has deleted some, or some are past their TTL. Can be run by a user or the agbot.",
+        "operationId" : "agbotGetMsgsRoute",
+        "parameters" : [ {
+          "name" : "orgid",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "description" : "ID of the agbot.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "maxmsgs",
+          "in" : "query",
+          "description" : "Maximum number of messages returned. If this is less than the number of messages available, the oldest messages are returned. Defaults to unlimited.",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetAgbotMsgsResponse"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "agreement bot/message" ],
+        "summary" : "Sends a msg from a node to an agbot",
+        "description" : "Sends a msg from a node to an agbot. The node must 1st sign the msg (with its private key) and then encrypt the msg (with the agbots's public key). Can be run by any node.",
+        "operationId" : "agbotPostMsgRoute",
+        "parameters" : [ {
+          "name" : "orgid",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "description" : "ID of the agbot to send a message to.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/PostAgbotsMsgsRequest"
+              },
+              "example" : {
+                "message" : "VW1RxzeEwTF0U7S96dIzSBQ/hRjyidqNvBzmMoZUW3hpd3hZDvs",
+                "ttl" : 86400
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "201" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
     "/v1/orgs/{orgid}/agbots/{id}/heartbeat" : {
       "post" : {
-        "tags" : [ "agreement-bot" ],
+        "tags" : [ "agreement bot" ],
         "summary" : "Tells the exchange this agbot is still operating",
         "description" : "Lets the exchange know this agbot is still active. Can be run by the owning user or the agbot.",
         "operationId" : "agbotHeartbeatRoute",
@@ -1054,7 +1558,7 @@
     },
     "/v1/orgs/{orgid}/agbots" : {
       "get" : {
-        "tags" : [ "agreement-bot" ],
+        "tags" : [ "agreement bot" ],
         "summary" : "Returns all agbots",
         "description" : "Returns all agbots (Agreement Bots). Can be run by any user.",
         "operationId" : "agbotsGetRoute",
@@ -1124,9 +1628,142 @@
         }
       }
     },
+    "/v1/orgs/{orgid}/AgentFileVersion" : {
+      "get" : {
+        "tags" : [ "agent file version" ],
+        "summary" : "Get all agent file versions",
+        "description" : "Get all agent certificate, configuration, and software file versions. Run by agreement bot",
+        "operationId" : "getAgentConfigMgmt",
+        "parameters" : [ {
+          "name" : "orgid",
+          "in" : "path",
+          "description" : "Organization identifier",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/AgentVersionsResponse"
+                },
+                "example" : {
+                  "agentSoftwareVersions" : [ "2.30.0", "2.25.4", "1.4.5-123" ],
+                  "agentConfigVersions" : [ "0.0.4", "0.0.3" ],
+                  "agentCertVersions" : [ "0.0.15" ],
+                  "lastUpdated" : ""
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "agent file version" ],
+        "summary" : "Put all agent file versions",
+        "description" : "Put all agent certificate, configuration, and software file versions. Run by agreement bot",
+        "operationId" : "putAgentConfigMgmt",
+        "parameters" : [ {
+          "name" : "orgid",
+          "in" : "path",
+          "description" : "Organization identifier",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/PutAgbotsRequest"
+              },
+              "example" : {
+                "agentSoftwareVersions" : [ "2.30.0", "2.25.4", "1.4.5-123" ],
+                "agentConfigVersions" : [ "0.0.4", "0.0.3" ],
+                "agentCertVersions" : [ "0.0.15" ]
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "201" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "agent file version" ],
+        "summary" : "Delete all agent file versions",
+        "description" : "Delete all agent certificate, configuration, and software file versions. Run by agreement bot",
+        "operationId" : "deleteAgentConfigMgmt",
+        "parameters" : [ {
+          "name" : "orgid",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "deleted"
+          },
+          "400" : {
+            "description" : "bad input"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
     "/v1/orgs/{orgid}/business/policies/{policy}" : {
       "get" : {
-        "tags" : [ "policy" ],
+        "tags" : [ "deployment policy" ],
         "summary" : "Returns a business policy",
         "description" : "Returns the business policy with the specified id. Can be run by a user, node, or agbot.",
         "operationId" : "busPolGetRoute",
@@ -1211,7 +1848,7 @@
         }
       },
       "put" : {
-        "tags" : [ "policy" ],
+        "tags" : [ "deployment policy" ],
         "summary" : "Updates a business policy",
         "description" : "Updates a business policy resource. This can only be called by the user that created it.",
         "operationId" : "busPolPutRoute",
@@ -1322,7 +1959,7 @@
         }
       },
       "post" : {
-        "tags" : [ "policy" ],
+        "tags" : [ "deployment policy" ],
         "summary" : "Adds a business policy",
         "description" : "Creates a business policy resource. A business policy resource specifies the service that should be deployed based on the specified properties and constraints. This can only be called by a user.",
         "operationId" : "busPolPostRoute",
@@ -1432,7 +2069,7 @@
         }
       },
       "delete" : {
-        "tags" : [ "policy" ],
+        "tags" : [ "deployment policy" ],
         "summary" : "Deletes a business policy",
         "description" : "Deletes a business policy. Can only be run by the owning user.",
         "operationId" : "busPolDeleteRoute",
@@ -1469,7 +2106,7 @@
         }
       },
       "patch" : {
-        "tags" : [ "policy" ],
+        "tags" : [ "deployment policy" ],
         "summary" : "Updates 1 attribute of a business policy",
         "description" : "Updates one attribute of a business policy. This can only be called by the user that originally created this business policy resource.",
         "operationId" : "busPolPatchRoute",
@@ -1582,7 +2219,7 @@
     },
     "/v1/orgs/{orgid}/business/policies/{policy}/search" : {
       "post" : {
-        "tags" : [ "policy" ],
+        "tags" : [ "deployment policy" ],
         "summary" : "Returns matching nodes for this business policy",
         "description" : "Returns the matching nodes for this business policy that do not already have an agreement for the specified service. Can be run by a user or agbot (but not a node).",
         "operationId" : "busPolPostSearchRoute",
@@ -1657,7 +2294,7 @@
     },
     "/v1/orgs/{orgid}/business/policies" : {
       "get" : {
-        "tags" : [ "policy" ],
+        "tags" : [ "deployment policy" ],
         "summary" : "Returns all business policies",
         "description" : "Returns all business policy definitions in this organization. Can be run by any user, node, or agbot.",
         "operationId" : "busPolsGetRoute",
@@ -2265,6 +2902,708 @@
         }
       }
     },
+    "/v1/orgs/{orgid}/managementpolicies/{mgmtpolicy}" : {
+      "get" : {
+        "tags" : [ "management policy" ],
+        "summary" : "Returns a node management policy",
+        "description" : "Returns the management policy with the specified id. Can be run by any user, node, or agbot.",
+        "operationId" : "mgmtPolGetRoute",
+        "parameters" : [ {
+          "name" : "orgid",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "mgmtpolicy",
+          "in" : "path",
+          "description" : "Node management policy name.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "description",
+          "in" : "query",
+          "description" : "Which attribute value should be returned. Only 1 attribute can be specified. If not specified, the entire management policy resource will be returned.",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetManagementPoliciesResponse"
+                },
+                "example" : "{\n      \"owner\": \"string\",\n      \"label\": \"string\",\n      \"description\": \"string\",\n      \"constraints\": [\n        \"a == b\"\n      ],\n      \"properties\": [\n        {\n          \"name\": \"string\",\n          \"type\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"patterns\": [\n        \"pat1\"\n      ],\n      \"enabled\": true,\n      \"start\": \"now\",\n      \"duration\": 0\n      \"agentUpgradePolicy\": {\n        \"manifest\": \"<org/manifestId>\",\n        \"allowDowngrade\", false\n      },\n      \"lastUpdated\": \"string\",\n    }\n"
+              }
+            }
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "management policy" ],
+        "summary" : "Updates a node management policy",
+        "description" : "Updates a node management policy resource. A node management policy controls the updating of the edge node agents. This can only be called by a user.",
+        "operationId" : "mgmtPolPutRoute",
+        "parameters" : [ {
+          "name" : "orgid",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "mgmtpolicy",
+          "in" : "path",
+          "description" : "Management Policy name.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/PostPutManagementPolicyRequest"
+              },
+              "example" : {
+                "label" : "name of the management policy",
+                "description" : "descriptive text",
+                "properties" : [ {
+                  "name" : "mypurpose",
+                  "value" : "myservice-testing",
+                  "type" : "string"
+                } ],
+                "constraints" : [ "a == b" ],
+                "patterns" : [ "pat1" ],
+                "enabled" : true,
+                "agentUpgradePolicy" : {
+                  "atLeastVersion" : "current",
+                  "start" : "now",
+                  "duration" : 0
+                }
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "201" : {
+            "description" : "resource created - response body:",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "management policy" ],
+        "summary" : "Adds a node management policy",
+        "description" : "Creates a node management policy resource. A node management policy controls the updating of the edge node agents. This can only be called by a user.",
+        "operationId" : "mgmtPolPostRoute",
+        "parameters" : [ {
+          "name" : "orgid",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "mgmtpolicy",
+          "in" : "path",
+          "description" : "Management Policy name.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/PostPutManagementPolicyRequest"
+              },
+              "example" : {
+                "label" : "name of the management policy",
+                "description" : "descriptive text",
+                "properties" : [ {
+                  "name" : "mypurpose",
+                  "value" : "myservice-testing",
+                  "type" : "string"
+                } ],
+                "constraints" : [ "a == b" ],
+                "patterns" : [ "pat1" ],
+                "enabled" : true,
+                "agentUpgradePolicy" : {
+                  "atLeastVersion" : "current",
+                  "start" : "now",
+                  "duration" : 0
+                }
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "201" : {
+            "description" : "resource created - response body:",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "management policy" ],
+        "summary" : "Deletes a management policy",
+        "description" : "Deletes a management policy. Can only be run by the owning user.",
+        "operationId" : "mgmtPolDeleteRoute",
+        "parameters" : [ {
+          "name" : "orgid",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "mgmtpolicy",
+          "in" : "path",
+          "description" : "Management Policy name.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "deleted"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
+    "/v1/orgs/{orgid}/managementpolicies" : {
+      "get" : {
+        "tags" : [ "management policy" ],
+        "summary" : "Returns all node management policies",
+        "description" : "Returns all management policy definitions in this organization. Can be run by any user, node, or agbot.",
+        "operationId" : "mgmtPolsGetRoute",
+        "parameters" : [ {
+          "name" : "orgid",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "idfilter",
+          "in" : "query",
+          "description" : "Filter results to only include management policies with this id (can include % for wildcard - the URL encoding for % is %25)",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "owner",
+          "in" : "query",
+          "description" : "Filter results to only include management policies with this owner (can include % for wildcard - the URL encoding for % is %25)",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "label",
+          "in" : "query",
+          "description" : "Filter results to only include management policies with this label (can include % for wildcard - the URL encoding for % is %25)",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "description",
+          "in" : "query",
+          "description" : "Filter results to only include management policies with this description (can include % for wildcard - the URL encoding for % is %25)",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetManagementPoliciesResponse"
+                },
+                "example" : {
+                  "managementPolicy" : {
+                    "orgid/mymgmtpol" : {
+                      "owner" : "string",
+                      "label" : "string",
+                      "description" : "string",
+                      "properties" : [ {
+                        "name" : "string",
+                        "type" : "string",
+                        "value" : "string"
+                      } ],
+                      "constraints" : [ "a == b" ],
+                      "patterns" : [ "pat1" ],
+                      "enabled" : true,
+                      "agentUpgradePolicy" : {
+                        "atLeastVersion" : "current",
+                        "start" : "now",
+                        "duration" : 0
+                      },
+                      "lastUpdated" : "string",
+                      "created" : "string"
+                    }
+                  },
+                  "lastIndex" : 0
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
+    "/v1/orgs/{org}/hagroups/{hagroup}/nodes/{node}" : {
+      "post" : {
+        "tags" : [ "high availability node group" ],
+        "summary" : "Insert a Node into a High Availablity Node Group",
+        "description" : "Appends to the list of nodes that belong to the specified node group.",
+        "operationId" : "postNodeToNodeGroup",
+        "parameters" : [ {
+          "name" : "org",
+          "in" : "path",
+          "description" : "Organization identifier.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "hagroup",
+          "in" : "path",
+          "description" : "Node Group identifier.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "node",
+          "in" : "path",
+          "description" : "Node Group identifier.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "resource created - response body:",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied: node isn't owned by caller"
+          },
+          "404" : {
+            "description" : "not found"
+          },
+          "409" : {
+            "description" : "node already belongs to other group"
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "high availability node group" ],
+        "summary" : "Deletes a Node from a Node Group",
+        "description" : "Deletes a Node from a Highly Available Node Group",
+        "operationId" : "deleteNodeFromNodeGroup",
+        "parameters" : [ {
+          "name" : "org",
+          "in" : "path",
+          "description" : "Organization identifier.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "hagroup",
+          "in" : "path",
+          "description" : "Node Group identifier",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "node",
+          "in" : "path",
+          "description" : "Node identifier",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "deleted"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
+    "/v1/orgs/{org}/hagroups/{hagroup}" : {
+      "get" : {
+        "tags" : [ "high availability node group" ],
+        "summary" : "Lists all members of the specified Node Group (HA Group)",
+        "description" : "Returns the Node Group along with the member nodes that the caller has permission to view.",
+        "operationId" : "getNodeGroup",
+        "parameters" : [ {
+          "name" : "org",
+          "in" : "path",
+          "description" : "Organization identifier.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "hagroup",
+          "in" : "path",
+          "description" : "Node Group identifier.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetNodeGroupsResponse"
+                },
+                "example" : {
+                  "nodeGroups" : [ {
+                    "name" : "nodegroup",
+                    "members" : [ "node1", "node2", "node3" ],
+                    "lastUpdated" : "2020-02-05T20:28:14.469Z[UTC]"
+                  } ]
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "high availability node group" ],
+        "summary" : "Update the nodes that belong to an existing Node Group (HA Group)",
+        "description" : "Replaces the list of nodes that belong to the specified node group with the list of nodes provided in the request body.",
+        "operationId" : "putNodeGroup",
+        "parameters" : [ {
+          "name" : "org",
+          "in" : "path",
+          "description" : "Organization identifier.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "hagroup",
+          "in" : "path",
+          "description" : "Node Group identifier.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/PutNodeGroupsRequest"
+              },
+              "example" : {
+                "members" : [ "node2", "node4", "node5" ],
+                "description" : "New Description"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "201" : {
+            "description" : "resource updated - response body:",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          },
+          "409" : {
+            "description" : "node already belongs to other group"
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "high availability node group" ],
+        "summary" : "Insert the nodes that belong to an existing Node Group (HA Group)",
+        "description" : "Creates the list of nodes that belong to the specified node group with the list of nodes provided in the request body.",
+        "operationId" : "postNodeGroup",
+        "parameters" : [ {
+          "name" : "org",
+          "in" : "path",
+          "description" : "Organization identifier.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "hagroup",
+          "in" : "path",
+          "description" : "Node Group identifier.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/PutNodeGroupsRequest"
+              },
+              "example" : {
+                "members" : [ "node2", "node4", "node5" ],
+                "description" : "New Description"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "201" : {
+            "description" : "resource created - response body:",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied: node isn't owned by caller"
+          },
+          "404" : {
+            "description" : "not found"
+          },
+          "409" : {
+            "description" : "node already belongs to other group"
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "high availability node group" ],
+        "summary" : "Deletes a Node Group",
+        "description" : "Deletes a Highly Available Node Group by name",
+        "operationId" : "deleteNodeGroup",
+        "parameters" : [ {
+          "name" : "org",
+          "in" : "path",
+          "description" : "Organization identifier.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "hagroup",
+          "in" : "path",
+          "description" : "Node identifier",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "deleted"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
+    "/v1/orgs/{org}/hagroups" : {
+      "get" : {
+        "tags" : [ "high availability node group" ],
+        "summary" : "Lists all members of all Node Groups (HA Groups)",
+        "description" : "Returns all Node Groups in this org along with the member nodes that the caller has permission to view.",
+        "operationId" : "getAllNodeGroup",
+        "parameters" : [ {
+          "name" : "org",
+          "in" : "path",
+          "description" : "Organization identifier.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetNodeGroupsResponse"
+                },
+                "example" : {
+                  "nodeGroups" : [ {
+                    "name" : "nodegroup1",
+                    "members" : [ "node1", "node2", "node3" ],
+                    "lastUpdated" : "2020-02-05T20:28:14.469Z[UTC]"
+                  }, {
+                    "name" : "nodegroup2",
+                    "members" : [ "nodeA", "nodeB", "nodeC" ],
+                    "lastUpdated" : "2020-02-05T20:28:14.469Z[UTC]"
+                  } ]
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
     "/v1/orgs/{orgid}/nodes/{id}/agreements/{agid}" : {
       "get" : {
         "tags" : [ "node/agreement" ],
@@ -2718,6 +4057,258 @@
         }
       }
     },
+    "/v1/orgs/{orgid}/nodes/{id}/managementStatus/{mgmtpolicy}" : {
+      "get" : {
+        "tags" : [ "node/management policy" ],
+        "summary" : "Returns status for nodeid",
+        "description" : "Returns the management status of the node (edge device) with the specified id. Can be run by that node, a user, or an agbot.",
+        "operationId" : "nodeGetMgmtPolStatus",
+        "parameters" : [ {
+          "name" : "orgid",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "description" : "ID of the node.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "attribute",
+          "in" : "query",
+          "description" : "Which attribute value should be returned. Only 1 attribute can be specified, and it must be 1 of the direct attributes of the node resource (not of the services). If not specified, the entire node resource (including services) will be returned",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "mgmtpolicy",
+          "in" : "path",
+          "description" : "ID of the node management policy.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetNMPStatusResponse"
+                },
+                "example" : {
+                  "managementStatus" : {
+                    "mgmtpolicy" : {
+                      "agentUpgradePolicyStatus" : {
+                        "scheduledTime" : "<RFC3339 timestamp>",
+                        "startTime" : "<RFC3339 timestamp>",
+                        "endTime" : "<RFC3339 timestamp>",
+                        "upgradedVersions" : {
+                          "softwareVersion" : "1.1.1",
+                          "certVersion" : "2.2.2",
+                          "configVersion" : "3.3.3"
+                        },
+                        "status" : "success|failed|in progress",
+                        "errorMessage" : "Upgrade process failed",
+                        "lastUpdated" : ""
+                      }
+                    }
+                  },
+                  "lastIndex" : "0"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "node/management policy" ],
+        "summary" : "Adds/updates the status of the Management Policy running on the Node.",
+        "description" : "Adds or updates the run time status of a Management Policy running on a Node. This is called by the Agreement Bot.",
+        "operationId" : "nodePutMgmtPolStatus",
+        "parameters" : [ {
+          "name" : "orgid",
+          "in" : "path",
+          "description" : "Organization identifier",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Node identifier",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "mgmtpolicy",
+          "in" : "path",
+          "description" : "Management Policy identifier",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/PutNodeMgmtPolStatusRequest"
+              },
+              "example" : {
+                "agentUpgradePolicyStatus" : {
+                  "scheduledTime" : "<RFC3339 timestamp>",
+                  "startTime" : "<RFC3339 timestamp>",
+                  "endTime" : "<RFC3339 timestamp>",
+                  "upgradedVersions" : {
+                    "softwareVersion" : "1.1.1",
+                    "certVersion" : "2.2.2",
+                    "configVersion" : "3.3.3"
+                  },
+                  "status" : "success|failed|in progress",
+                  "errorMessage" : "Upgrade process failed"
+                }
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "201" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "node/management policy" ],
+        "summary" : "Deletes the status of the Management Policy running on the Node",
+        "description" : "Deletes the run time status of a Management Policy running on a Node. This is called by the Agreement Bot.",
+        "operationId" : "nodeDeleteMgmtPolStatus",
+        "parameters" : [ {
+          "name" : "orgid",
+          "in" : "path",
+          "description" : "Organization identifier.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Node identifier",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "mgmtpolicy",
+          "in" : "path",
+          "description" : "Management Policy identifier",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "deleted"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
+    "/v1/orgs/{orgid}/nodes/{id}/msgs/{msgid}" : {
+      "delete" : {
+        "tags" : [ "node/message" ],
+        "summary" : "Deletes a msg of an node",
+        "description" : "Deletes a message that was sent to an node. This should be done by the node after each msg is read. Can be run by the owning user or the node.",
+        "operationId" : "nodeDeleteMsgRoute",
+        "parameters" : [ {
+          "name" : "orgid",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "description" : "ID of the node.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "msgid",
+          "in" : "path",
+          "description" : "ID of the msg to be deleted.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "deleted"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
     "/v1/orgs/{orgid}/nodes/{id}/policy" : {
       "get" : {
         "tags" : [ "node/policy" ],
@@ -2805,11 +4396,27 @@
                 "label" : "human readable name of the node policy",
                 "description" : "descriptive text",
                 "properties" : [ {
-                  "name" : "mypurpose",
+                  "name" : "mycommonprop",
                   "value" : "myservice-testing",
                   "type" : "string"
                 } ],
-                "constraints" : [ "a == b" ]
+                "constraints" : [ "a == b" ],
+                "deployment" : {
+                  "properties" : [ {
+                    "name" : "mydeploymentprop",
+                    "value" : "value2",
+                    "type" : "string"
+                  } ],
+                  "constraints" : [ "c == d" ]
+                },
+                "management" : {
+                  "properties" : [ {
+                    "name" : "mymanagementprop",
+                    "value" : "value3",
+                    "type" : "string"
+                  } ],
+                  "constraints" : [ "e == f" ]
+                }
               }
             }
           },
@@ -2969,6 +4576,7 @@
                         "maxInterval" : 0,
                         "intervalAdjustment" : 0
                       },
+                      "ha_group" : "groupName",
                       "lastUpdated" : "string"
                     }
                   },
@@ -3404,6 +5012,268 @@
         }
       }
     },
+    "/v1/orgs/{orgid}/nodes/{id}/managementStatus" : {
+      "get" : {
+        "tags" : [ "node/management policy" ],
+        "summary" : "Returns status for nodeid",
+        "description" : "Returns the management status of the node (edge device) with the specified id. Can be run by that node, a user, or an agbot.",
+        "operationId" : "nodeGetAllMgmtPolStatus",
+        "parameters" : [ {
+          "name" : "orgid",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "description" : "ID of the node.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "attribute",
+          "in" : "query",
+          "description" : "Which attribute value should be returned. Only 1 attribute can be specified, and it must be 1 of the direct attributes of the node resource (not of the services). If not specified, the entire node resource (including services) will be returned",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetNMPStatusResponse"
+                },
+                "example" : {
+                  "managementStatus" : {
+                    "mgmtpolicy1" : {
+                      "agentUpgradePolicyStatus" : {
+                        "scheduledTime" : "<RFC3339 timestamp>",
+                        "startTime" : "<RFC3339 timestamp>",
+                        "endTime" : "<RFC3339 timestamp>",
+                        "upgradedVersions" : {
+                          "softwareVersion" : "1.1.1",
+                          "certVersion" : "2.2.2",
+                          "configVersion" : "3.3.3"
+                        },
+                        "status" : "success|failed|in progress",
+                        "errorMessage" : "Upgrade process failed",
+                        "lastUpdated" : ""
+                      }
+                    },
+                    "mgmtpolicy2" : {
+                      "agentUpgradePolicyStatus" : {
+                        "scheduledTime" : "<RFC3339 timestamp>",
+                        "startTime" : "<RFC3339 timestamp>",
+                        "endTime" : "<RFC3339 timestamp>",
+                        "upgradedVersions" : {
+                          "softwareVersion" : "1.1.1",
+                          "certVersion" : "2.2.2",
+                          "configVersion" : "3.3.3"
+                        },
+                        "status" : "success|failed|in progress",
+                        "errorMessage" : "Upgrade process failed",
+                        "lastUpdated" : ""
+                      }
+                    }
+                  },
+                  "lastIndex" : "0"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
+    "/v1/orgs/{orgid}/nodes/{id}/msgs/{msgId}" : {
+      "get" : {
+        "tags" : [ "node/message" ],
+        "summary" : "Returns A specific message that has been sent to this node.",
+        "description" : "Returns A specific message that has been sent to this node. Deleted/post-TTL (Time To Live) messages will not be returned. Can be run by a user or the node.",
+        "operationId" : "nodeGetMsgRoute",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "ID of the node.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "msgid",
+          "in" : "path",
+          "description" : "Specific node message.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "orgid",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetNodeMsgsResponse"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
+    "/v1/orgs/{orgid}/nodes/{id}/msgs" : {
+      "get" : {
+        "tags" : [ "node/message" ],
+        "summary" : "Returns all msgs sent to this node",
+        "description" : "Returns all msgs that have been sent to this node. They will be returned in the order they were sent. All msgs that have been sent to this node will be returned, unless the node has deleted some, or some are past their TTL. Can be run by a user or the node.",
+        "operationId" : "nodeGetMsgsRoute",
+        "parameters" : [ {
+          "name" : "orgid",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "description" : "ID of the node.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "maxmsgs",
+          "in" : "query",
+          "description" : "Maximum number of messages returned. If this is less than the number of messages available, the oldest messages are returned. Defaults to unlimited.",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetNodeMsgsResponse"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "node/message" ],
+        "summary" : "Sends a msg from an agbot to a node",
+        "description" : "Sends a msg from an agbot to a node. The agbot must 1st sign the msg (with its private key) and then encrypt the msg (with the node's public key). Can be run by any agbot.",
+        "operationId" : "nodePostMsgRoute",
+        "parameters" : [ {
+          "name" : "orgid",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "description" : "ID of the node to send a message to.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/PostNodesMsgsRequest"
+              },
+              "example" : {
+                "message" : "VW1RxzeEwTF0U7S96dIzSBQ/hRjyidqNvBzmMoZUW3hpd3hZDvs",
+                "ttl" : 86400
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "201" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
     "/v1/orgs/{orgid}/nodes/{id}/heartbeat" : {
       "post" : {
         "tags" : [ "node" ],
@@ -3656,7 +5526,8 @@
                     "serviceArch" : "string",
                     "serviceOrgid" : "string",
                     "serviceUrl" : "string",
-                    "serviceVersionRange" : "string"
+                    "serviceVersionRange" : "string",
+                    "ha_group" : "string"
                   } ]
                 } ]
               }
@@ -3788,6 +5659,7 @@
                         "maxInterval" : 0,
                         "intervalAdjustment" : 0
                       },
+                      "ha_group" : "groupName",
                       "lastUpdated" : "string"
                     }
                   },
@@ -3818,14 +5690,6 @@
           "name" : "orgid",
           "in" : "path",
           "description" : "Organization id.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "id",
-          "in" : "path",
-          "description" : "ID of the agbot to be updated.",
           "required" : true,
           "schema" : {
             "type" : "string"
@@ -3933,6 +5797,9 @@
           },
           "403" : {
             "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
           }
         }
       }
@@ -3953,7 +5820,7 @@
           }
         } ],
         "responses" : {
-          "201" : {
+          "200" : {
             "description" : "response body:",
             "content" : {
               "application/json" : {
@@ -3962,9 +5829,6 @@
                 }
               }
             }
-          },
-          "400" : {
-            "description" : "bad input"
           },
           "401" : {
             "description" : "invalid credentials"
@@ -4089,6 +5953,9 @@
                 }
               }
             }
+          },
+          "400" : {
+            "description" : "bad input"
           },
           "401" : {
             "description" : "invalid credentials"
@@ -4228,8 +6095,8 @@
           "403" : {
             "description" : "access denied"
           },
-          "404" : {
-            "description" : "not found"
+          "409" : {
+            "description" : "conflict (org already exists)"
           }
         }
       },
@@ -4355,9 +6222,6 @@
               }
             }
           },
-          "400" : {
-            "description" : "bad input"
-          },
           "401" : {
             "description" : "invalid credentials"
           },
@@ -4374,7 +6238,7 @@
       "post" : {
         "tags" : [ "organization" ],
         "summary" : "Returns agreement health of nodes with no pattern",
-        "description" : "Returns the lastHeartbeat and agreement times for all nodes in this org that do not have a pattern and have changed since the specified lastTime. Can be run by a user or agbot (but not a node).",
+        "description" : "Returns the lastHeartbeat and agreement times for all nodes in this org that do not have a pattern and have had a heartbeat since the specified lastTime. Can be run by an organization admin or agbot (but not a node).",
         "operationId" : "orgPostNodesHealthRoute",
         "parameters" : [ {
           "name" : "orgid",
@@ -4540,7 +6404,7 @@
       "get" : {
         "tags" : [ "organization" ],
         "summary" : "Returns the max changeid of the resource changes",
-        "description" : "Returns the max changeid of the resource changes. Can be run by any user, node, or agbot.",
+        "description" : "Returns the max changeid of the resource changes. Can be run by the root user, organization admins, or any node or agbot.",
         "operationId" : "orgsGetMaxChangeIdRoute",
         "responses" : {
           "200" : {
@@ -4552,9 +6416,6 @@
                 }
               }
             }
-          },
-          "400" : {
-            "description" : "bad input"
           },
           "401" : {
             "description" : "invalid credentials"
@@ -4574,7 +6435,7 @@
         "parameters" : [ {
           "name" : "orgtype",
           "in" : "query",
-          "description" : "Filter results to only include orgs with this org type. A common org type is 'IBM'.",
+          "description" : "Filter results to only include orgs with this org type. Currently the only supported org type for this route is 'IBM'.",
           "content" : {
             "application/json" : {
               "schema" : {
@@ -4639,7 +6500,7 @@
     },
     "/v1/orgs/{orgid}/patterns/{pattern}/keys/{keyid}" : {
       "get" : {
-        "tags" : [ "pattern/key" ],
+        "tags" : [ "deployment pattern/key" ],
         "summary" : "Returns a key/cert for this pattern",
         "description" : "Returns the signing public key/cert with the specified keyid for this pattern. The raw content of the key/cert is returned, not json. Can be run by any credentials able to view the pattern.",
         "operationId" : "patternGetKeyRoute",
@@ -4694,7 +6555,7 @@
         }
       },
       "put" : {
-        "tags" : [ "pattern/key" ],
+        "tags" : [ "deployment pattern/key" ],
         "summary" : "Adds/updates a key/cert for the pattern",
         "description" : "Adds a new signing public key/cert, or updates an existing key/cert, for this pattern. This can only be run by the pattern owning user.",
         "operationId" : "patternPutKeyRoute",
@@ -4760,7 +6621,7 @@
         }
       },
       "delete" : {
-        "tags" : [ "pattern/key" ],
+        "tags" : [ "deployment pattern/key" ],
         "summary" : "Deletes a key of a pattern",
         "description" : "Deletes a key/cert for this pattern. This can only be run by the pattern owning user.",
         "operationId" : "patternDeleteKeyRoute",
@@ -4807,7 +6668,7 @@
     },
     "/v1/orgs/{orgid}/patterns/{pattern}/keys" : {
       "get" : {
-        "tags" : [ "pattern/key" ],
+        "tags" : [ "deployment pattern/key" ],
         "summary" : "Returns all keys/certs for this pattern",
         "description" : "Returns all the signing public keys/certs for this pattern. Can be run by any credentials able to view the pattern.",
         "operationId" : "patternGetKeysRoute",
@@ -4854,7 +6715,7 @@
         }
       },
       "delete" : {
-        "tags" : [ "pattern/key" ],
+        "tags" : [ "deployment pattern/key" ],
         "summary" : "Deletes all keys of a pattern",
         "description" : "Deletes all of the current keys/certs for this pattern. This can only be run by the pattern owning user.",
         "operationId" : "patternDeleteKeysRoute",
@@ -4893,7 +6754,7 @@
     },
     "/v1/orgs/{orgid}/patterns/{pattern}" : {
       "get" : {
-        "tags" : [ "pattern" ],
+        "tags" : [ "deployment pattern" ],
         "summary" : "Returns a pattern",
         "description" : "Returns the pattern with the specified id. Can be run by a user, node, or agbot.",
         "operationId" : "patternGetRoute",
@@ -4999,7 +6860,7 @@
         }
       },
       "put" : {
-        "tags" : [ "pattern" ],
+        "tags" : [ "deployment pattern" ],
         "summary" : "Adds a pattern",
         "description" : "Creates a pattern resource. A pattern resource specifies all of the services that should be deployed for a type of node. When a node registers with Horizon, it can specify a pattern name to quickly tell Horizon what should be deployed on it. This can only be called by a user.",
         "operationId" : "patternPuttRoute",
@@ -5124,7 +6985,7 @@
         }
       },
       "post" : {
-        "tags" : [ "pattern" ],
+        "tags" : [ "deployment pattern" ],
         "summary" : "Adds a pattern",
         "description" : "Creates a pattern resource. A pattern resource specifies all of the services that should be deployed for a type of node. When a node registers with Horizon, it can specify a pattern name to quickly tell Horizon what should be deployed on it. This can only be called by a user.",
         "operationId" : "patternPostRoute",
@@ -5248,7 +7109,7 @@
         }
       },
       "delete" : {
-        "tags" : [ "pattern" ],
+        "tags" : [ "deployment pattern" ],
         "summary" : "Deletes a pattern",
         "description" : "Deletes a pattern. Can only be run by the owning user.",
         "operationId" : "patternDeleteRoute",
@@ -5285,7 +7146,7 @@
         }
       },
       "patch" : {
-        "tags" : [ "pattern" ],
+        "tags" : [ "deployment pattern" ],
         "summary" : "Updates 1 attribute of a pattern",
         "description" : "Updates one attribute of a pattern. This can only be called by the user that originally created this pattern resource.",
         "operationId" : "patternPatchRoute",
@@ -5412,7 +7273,7 @@
     },
     "/v1/orgs/{orgid}/patterns/{pattern}/nodehealth" : {
       "post" : {
-        "tags" : [ "pattern" ],
+        "tags" : [ "deployment pattern" ],
         "summary" : "Returns agreement health of nodes of a particular pattern",
         "description" : "Returns the lastHeartbeat and agreement times for all nodes that are this pattern and have changed since the specified lastTime. Can be run by a user or agbot (but not a node).",
         "operationId" : "patternNodeHealthRoute",
@@ -5484,7 +7345,7 @@
     },
     "/v1/orgs/{orgid}/patterns/{pattern}/search" : {
       "post" : {
-        "tags" : [ "pattern" ],
+        "tags" : [ "deployment pattern" ],
         "summary" : "Returns matching nodes of a particular pattern",
         "description" : "Returns the matching nodes that are using this pattern and do not already have an agreement for the specified service. Can be run by a user or agbot (but not a node).",
         "operationId" : "patternPostSearchRoute",
@@ -5546,7 +7407,7 @@
     },
     "/v1/orgs/{orgid}/patterns" : {
       "get" : {
-        "tags" : [ "pattern" ],
+        "tags" : [ "deployment pattern" ],
         "summary" : "Returns all patterns",
         "description" : "Returns all pattern definitions in this organization. Can be run by any user, node, or agbot.",
         "operationId" : "patternsGetRoute",
@@ -5674,7 +7535,7 @@
     },
     "/v1/orgs/{orgid}/services/{service}/dockauths/{dockauthid}" : {
       "get" : {
-        "tags" : [ "service/docker-authorization" ],
+        "tags" : [ "service/docker authorization" ],
         "summary" : "Returns a docker image token for this service",
         "description" : "Returns the docker image authentication token with the specified dockauthid for this service. Can be run by any credentials able to view the service.",
         "operationId" : "serviceGetDockauthRoute",
@@ -5729,7 +7590,7 @@
         }
       },
       "put" : {
-        "tags" : [ "service/docker-authorization" ],
+        "tags" : [ "service/docker authorization" ],
         "summary" : "Updates a docker image token for the service",
         "description" : "Updates an existing docker image authentication token for this service. This can only be run by the service owning user.",
         "operationId" : "servicePutDockauthRoute",
@@ -5792,7 +7653,7 @@
         }
       },
       "delete" : {
-        "tags" : [ "service/docker-authorization" ],
+        "tags" : [ "service/docker authorization" ],
         "summary" : "Deletes a docker image auth token of a service",
         "description" : "Deletes a docker image auth token for this service. This can only be run by the service owning user.",
         "operationId" : "serviceDeleteDockauthRoute",
@@ -5839,7 +7700,7 @@
     },
     "/v1/orgs/{orgid}/services/{service}/dockauths" : {
       "get" : {
-        "tags" : [ "service/docker-authorization" ],
+        "tags" : [ "service/docker authorization" ],
         "summary" : "Returns all docker image tokens for this service",
         "description" : "Returns all the docker image authentication tokens for this service. Can be run by any credentials able to view the service.",
         "operationId" : "serviceGetDockauthsRoute",
@@ -5893,7 +7754,7 @@
         }
       },
       "post" : {
-        "tags" : [ "service/docker-authorization" ],
+        "tags" : [ "service/docker authorization" ],
         "summary" : "Adds a docker image token for the service",
         "description" : "Adds a new docker image authentication token for this service. As an optimization, if a dockauth resource already exists with the same service, registry, username, and token, this method will just update that lastupdated field. This can only be run by the service owning user.",
         "operationId" : "servicePostDockauthRoute",
@@ -5952,7 +7813,7 @@
         }
       },
       "delete" : {
-        "tags" : [ "service/docker-authorization" ],
+        "tags" : [ "service/docker authorization" ],
         "summary" : "Deletes all docker image auth tokens of a service",
         "description" : "Deletes all of the current docker image auth tokens for this service. This can only be run by the service owning user.",
         "operationId" : "serviceDeleteDockauthsRoute",
@@ -7443,7 +9304,6 @@
         "properties" : {
           "nodes" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/PatternNodeResponse"
             }
@@ -7455,7 +9315,7 @@
         }
       },
       "Agbot" : {
-        "required" : [ "token" ],
+        "required" : [ "lastHeartbeat", "msgEndPoint", "name", "owner", "publicKey", "token" ],
         "type" : "object",
         "properties" : {
           "token" : {
@@ -7479,7 +9339,7 @@
         }
       },
       "Node" : {
-        "required" : [ "registeredServices", "softwareVersions", "token", "userInput" ],
+        "required" : [ "arch", "heartbeatIntervals", "lastHeartbeat", "lastUpdated", "msgEndPoint", "name", "nodeType", "owner", "pattern", "publicKey", "registeredServices", "softwareVersions", "token", "userInput" ],
         "type" : "object",
         "properties" : {
           "token" : {
@@ -7499,14 +9359,12 @@
           },
           "registeredServices" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/RegService"
             }
           },
           "userInput" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/OneUserInputService"
             }
@@ -7516,7 +9374,6 @@
           },
           "softwareVersions" : {
             "type" : "object",
-            "properties" : { },
             "additionalProperties" : {
               "type" : "string"
             }
@@ -7533,16 +9390,36 @@
           "heartbeatIntervals" : {
             "$ref" : "#/components/schemas/NodeHeartbeatIntervals"
           },
+          "ha_group" : {
+            "type" : "string"
+          },
           "lastUpdated" : {
             "type" : "string"
           }
         }
       },
-      "MapStringUser" : {
+      "NodeMangementPolicyStatus" : {
+        "required" : [ "scheduledTime" ],
         "type" : "object",
-        "properties" : { },
-        "additionalProperties" : {
-          "$ref" : "#/components/schemas/User"
+        "properties" : {
+          "scheduledTime" : {
+            "type" : "string"
+          },
+          "startTime" : {
+            "type" : "string"
+          },
+          "endTime" : {
+            "type" : "string"
+          },
+          "upgradedVersions" : {
+            "$ref" : "#/components/schemas/UpgradedVersions"
+          },
+          "status" : {
+            "type" : "string"
+          },
+          "errorMessage" : {
+            "type" : "string"
+          }
         }
       },
       "MaxChangeIdResponse" : {
@@ -7563,10 +9440,10 @@
             "type" : "string"
           },
           "admin" : {
-            "type" : "object"
+            "type" : "boolean"
           },
           "hubAdmin" : {
-            "type" : "object"
+            "type" : "boolean"
           },
           "email" : {
             "type" : "string"
@@ -7580,39 +9457,29 @@
         "required" : [ "jsonFormats", "label", "service" ],
         "type" : "object",
         "properties" : {
-          "label" : {
-            "type" : "string"
-          },
           "description" : {
             "type" : "string"
           },
-          "service" : {
-            "$ref" : "#/components/schemas/BService"
-          },
-          "userInput" : {
-            "type" : "array",
-            "properties" : { },
-            "items" : {
-              "$ref" : "#/components/schemas/OneUserInputService"
-            }
+          "label" : {
+            "type" : "string"
           },
           "secretBinding" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/OneSecretBindingService"
             }
           },
+          "service" : {
+            "$ref" : "#/components/schemas/BService"
+          },
           "properties" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/OneProperty"
             }
           },
           "constraints" : {
-            "type" : "array",
-            "properties" : { },
+            "type" : "string",
             "items" : {
               "type" : "string"
             }
@@ -7620,8 +9487,11 @@
           "jsonFormats" : {
             "$ref" : "#/components/schemas/Formats"
           },
-          "anyProblem" : {
-            "type" : "string"
+          "userInput" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/OneUserInputService"
+            }
           }
         }
       },
@@ -7644,19 +9514,10 @@
         "properties" : {
           "nodes" : {
             "type" : "object",
-            "properties" : { },
             "additionalProperties" : {
               "$ref" : "#/components/schemas/NodeHealthHashElement"
             }
           }
-        }
-      },
-      "ListPatternNodeResponse" : {
-        "required" : [ ],
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "$ref" : "#/components/schemas/PatternNodeResponse"
         }
       },
       "AgbotBusinessPol" : {
@@ -7677,38 +9538,74 @@
           }
         }
       },
+      "PostPutManagementPolicyRequest" : {
+        "required" : [ "enabled", "jsonFormats", "label" ],
+        "type" : "object",
+        "properties" : {
+          "description" : {
+            "type" : "string"
+          },
+          "patterns" : {
+            "type" : "string",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "agentUpgradePolicy" : {
+            "$ref" : "#/components/schemas/AgentUpgradePolicy"
+          },
+          "startWindow" : {
+            "type" : "integer",
+            "format" : "int64",
+            "default" : 0
+          },
+          "properties" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/OneProperty"
+            }
+          },
+          "constraints" : {
+            "type" : "string",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "jsonFormats" : {
+            "$ref" : "#/components/schemas/Formats"
+          },
+          "start" : {
+            "type" : "string",
+            "default" : "now"
+          },
+          "enabled" : {
+            "type" : "boolean"
+          },
+          "label" : {
+            "type" : "string"
+          }
+        }
+      },
       "PostServiceSearchRequest" : {
         "required" : [ "orgid", "serviceArch", "serviceURL", "serviceVersion" ],
         "type" : "object",
         "properties" : {
-          "orgid" : {
+          "serviceVersion" : {
             "type" : "string"
           },
           "serviceURL" : {
             "type" : "string"
           },
-          "serviceVersion" : {
-            "type" : "string"
-          },
           "serviceArch" : {
             "type" : "string"
           },
-          "anyProblem" : {
+          "orgid" : {
             "type" : "string"
           }
         }
       },
-      "ListPServiceVersions" : {
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "$ref" : "#/components/schemas/PServiceVersions"
-        }
-      },
       "ListObject" : {
-        "required" : [ ],
         "type" : "array",
-        "properties" : { },
         "items" : {
           "type" : "object"
         }
@@ -7721,9 +9618,6 @@
             "$ref" : "#/components/schemas/AAService"
           },
           "state" : {
-            "type" : "string"
-          },
-          "anyProblem" : {
             "type" : "string"
           }
         }
@@ -7741,13 +9635,6 @@
           }
         }
       },
-      "MapStringString" : {
-        "type" : "object",
-        "properties" : { },
-        "additionalProperties" : {
-          "type" : "string"
-        }
-      },
       "AdminDropdbTokenResponse" : {
         "required" : [ "token" ],
         "type" : "object",
@@ -7757,57 +9644,39 @@
           }
         }
       },
-      "ListBServiceVersions" : {
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "$ref" : "#/components/schemas/BServiceVersions"
-        }
-      },
-      "MapStringAgbotAgreement" : {
-        "required" : [ ],
-        "type" : "object",
-        "properties" : { },
-        "additionalProperties" : {
-          "$ref" : "#/components/schemas/AgbotAgreement"
-        }
-      },
       "PutNodeErrorRequest" : {
         "required" : [ "errors", "jsonFormats" ],
         "type" : "object",
         "properties" : {
           "errors" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "type" : "object"
             }
           },
           "jsonFormats" : {
             "$ref" : "#/components/schemas/Formats"
-          },
-          "anyProblem" : {
-            "type" : "string"
           }
         }
       },
-      "ListBusinessPolicyNodeResponse" : {
-        "required" : [ ],
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "$ref" : "#/components/schemas/BusinessPolicyNodeResponse"
-        }
-      },
-      "MapStringObject" : {
+      "GetNMPStatusResponse" : {
+        "required" : [ "lastIndex", "managementStatus" ],
         "type" : "object",
-        "properties" : { },
-        "additionalProperties" : {
-          "type" : "object"
+        "properties" : {
+          "managementStatus" : {
+            "type" : "object",
+            "additionalProperties" : {
+              "$ref" : "#/components/schemas/NMPStatus"
+            }
+          },
+          "lastIndex" : {
+            "type" : "integer",
+            "format" : "int32"
+          }
         }
       },
       "PutNodePolicyRequest" : {
-        "required" : [ "constraints", "jsonFormats" ],
+        "required" : [ "jsonFormats" ],
         "type" : "object",
         "properties" : {
           "label" : {
@@ -7818,17 +9687,24 @@
           },
           "properties" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/OneProperty"
             }
           },
           "constraints" : {
-            "type" : "array",
-            "properties" : { },
+            "type" : "string",
             "items" : {
               "type" : "string"
             }
+          },
+          "deployment" : {
+            "$ref" : "#/components/schemas/PropertiesAndConstraints"
+          },
+          "management" : {
+            "$ref" : "#/components/schemas/PropertiesAndConstraints"
+          },
+          "nodePolicyVersion" : {
+            "type" : "string"
           },
           "jsonFormats" : {
             "$ref" : "#/components/schemas/Formats"
@@ -7851,7 +9727,7 @@
         }
       },
       "PServiceVersions" : {
-        "required" : [ "priority", "upgradePolicy", "version" ],
+        "required" : [ "version" ],
         "type" : "object",
         "properties" : {
           "version" : {
@@ -7864,10 +9740,16 @@
             "type" : "string"
           },
           "priority" : {
-            "$ref" : "#/components/schemas/MapStringObject"
+            "type" : "object",
+            "additionalProperties" : {
+              "type" : "object"
+            }
           },
           "upgradePolicy" : {
-            "$ref" : "#/components/schemas/MapStringString"
+            "type" : "object",
+            "additionalProperties" : {
+              "type" : "string"
+            }
           }
         }
       },
@@ -7908,22 +9790,19 @@
         "required" : [ "configState", "jsonFormats", "org", "url" ],
         "type" : "object",
         "properties" : {
-          "org" : {
-            "type" : "string"
-          },
           "url" : {
-            "type" : "string"
-          },
-          "configState" : {
             "type" : "string"
           },
           "version" : {
             "type" : "string"
           },
+          "configState" : {
+            "type" : "string"
+          },
           "jsonFormats" : {
             "$ref" : "#/components/schemas/Formats"
           },
-          "anyProblem" : {
+          "org" : {
             "type" : "string"
           }
         }
@@ -7934,7 +9813,6 @@
         "properties" : {
           "agreements" : {
             "type" : "object",
-            "properties" : { },
             "additionalProperties" : {
               "$ref" : "#/components/schemas/AgbotAgreement"
             }
@@ -7945,12 +9823,31 @@
           }
         }
       },
-      "MapStringAgbotBusinessPol" : {
-        "required" : [ ],
+      "PolicyStatus" : {
+        "required" : [ "endTime", "errorMessage", "lastUpdated", "scheduledTime", "startTime", "status", "upgradedVersions" ],
         "type" : "object",
-        "properties" : { },
-        "additionalProperties" : {
-          "$ref" : "#/components/schemas/AgbotBusinessPol"
+        "properties" : {
+          "scheduledTime" : {
+            "type" : "string"
+          },
+          "startTime" : {
+            "type" : "string"
+          },
+          "endTime" : {
+            "type" : "string"
+          },
+          "upgradedVersions" : {
+            "$ref" : "#/components/schemas/UpgradedVersions"
+          },
+          "status" : {
+            "type" : "string"
+          },
+          "errorMessage" : {
+            "type" : "string"
+          },
+          "lastUpdated" : {
+            "type" : "string"
+          }
         }
       },
       "ServicePolicy" : {
@@ -7965,14 +9862,12 @@
           },
           "properties" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/OneProperty"
             }
           },
           "constraints" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "type" : "string"
             }
@@ -7988,7 +9883,6 @@
         "properties" : {
           "agbots" : {
             "type" : "object",
-            "properties" : { },
             "additionalProperties" : {
               "$ref" : "#/components/schemas/Agbot"
             }
@@ -8010,7 +9904,7 @@
             "type" : "boolean"
           },
           "hubAdmin" : {
-            "type" : "object"
+            "type" : "boolean"
           },
           "email" : {
             "type" : "string"
@@ -8018,7 +9912,7 @@
         }
       },
       "ResourceChangesRequest" : {
-        "required" : [ "changeId", "maxRecords", "orgList" ],
+        "required" : [ "changeId", "maxRecords" ],
         "type" : "object",
         "properties" : {
           "changeId" : {
@@ -8033,14 +9927,10 @@
             "format" : "int32"
           },
           "orgList" : {
-            "type" : "array",
-            "properties" : { },
+            "type" : "string",
             "items" : {
               "type" : "string"
             }
-          },
-          "anyProblem" : {
-            "type" : "string"
           }
         }
       },
@@ -8063,7 +9953,6 @@
           },
           "properties" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/Prop"
             }
@@ -8073,26 +9962,18 @@
           }
         }
       },
-      "ListRegService" : {
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "$ref" : "#/components/schemas/RegService"
-        }
-      },
-      "ListOneUserInputService" : {
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "$ref" : "#/components/schemas/OneUserInputService"
-        }
-      },
-      "ListProp" : {
-        "required" : [ ],
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "$ref" : "#/components/schemas/Prop"
+      "UpgradedVersions" : {
+        "type" : "object",
+        "properties" : {
+          "softwareVersion" : {
+            "type" : "string"
+          },
+          "certVersion" : {
+            "type" : "string"
+          },
+          "configVersion" : {
+            "type" : "string"
+          }
         }
       },
       "OrgLimits" : {
@@ -8105,54 +9986,16 @@
           }
         }
       },
-      "ListBufferResourceChangesInnerObject" : {
-        "required" : [ "first" ],
-        "type" : "array",
+      "GetNodeGroupsResponse" : {
+        "required" : [ "nodeGroups" ],
+        "type" : "object",
         "properties" : {
-          "first" : {
+          "nodeGroups" : {
             "type" : "array",
-            "properties" : { },
-            "writeOnly" : true,
             "items" : {
-              "$ref" : "#/components/schemas/ResourceChangesInnerObject"
-            }
-          },
-          "last0" : {
-            "required" : [ "head", "next" ],
-            "type" : "array",
-            "properties" : {
-              "head" : {
-                "$ref" : "#/components/schemas/ResourceChangesInnerObject"
-              },
-              "next" : {
-                "type" : "array",
-                "properties" : { },
-                "items" : {
-                  "$ref" : "#/components/schemas/ResourceChangesInnerObject"
-                }
-              },
-              "empty" : {
-                "type" : "boolean"
-              },
-              "traversableAgain" : {
-                "type" : "boolean"
-              }
-            },
-            "writeOnly" : true,
-            "items" : {
-              "$ref" : "#/components/schemas/ResourceChangesInnerObject"
+              "$ref" : "#/components/schemas/NodeGroupResp"
             }
           }
-        },
-        "items" : {
-          "$ref" : "#/components/schemas/ResourceChangesInnerObject"
-        }
-      },
-      "MapStringOrg" : {
-        "type" : "object",
-        "properties" : { },
-        "additionalProperties" : {
-          "$ref" : "#/components/schemas/Org"
         }
       },
       "Tuple2StringOptionString" : {
@@ -8165,39 +10008,6 @@
           "_2" : {
             "type" : "string"
           }
-        }
-      },
-      "ListAgbotMsg" : {
-        "required" : [ ],
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "$ref" : "#/components/schemas/AgbotMsg"
-        }
-      },
-      "$colon$colonNodeErrorsResp" : {
-        "required" : [ "head", "next" ],
-        "type" : "array",
-        "properties" : {
-          "head" : {
-            "$ref" : "#/components/schemas/NodeErrorsResp"
-          },
-          "next" : {
-            "type" : "array",
-            "properties" : { },
-            "items" : {
-              "$ref" : "#/components/schemas/NodeErrorsResp"
-            }
-          },
-          "empty" : {
-            "type" : "boolean"
-          },
-          "traversableAgain" : {
-            "type" : "boolean"
-          }
-        },
-        "items" : {
-          "$ref" : "#/components/schemas/NodeErrorsResp"
         }
       },
       "AgbotMsg" : {
@@ -8231,7 +10041,6 @@
         "properties" : {
           "messages" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/NodeMsg"
             }
@@ -8266,7 +10075,6 @@
         "properties" : {
           "nodes" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "type" : "string"
             }
@@ -8274,7 +10082,7 @@
         }
       },
       "NodePolicy" : {
-        "required" : [ "constraints", "description", "label", "lastUpdated", "properties" ],
+        "required" : [ "constraints", "deployment", "description", "label", "lastUpdated", "management", "nodePolicyVersion", "properties" ],
         "type" : "object",
         "properties" : {
           "label" : {
@@ -8285,17 +10093,24 @@
           },
           "properties" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/OneProperty"
             }
           },
           "constraints" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "type" : "string"
             }
+          },
+          "deployment" : {
+            "$ref" : "#/components/schemas/PropertiesAndConstraints"
+          },
+          "management" : {
+            "$ref" : "#/components/schemas/PropertiesAndConstraints"
+          },
+          "nodePolicyVersion" : {
+            "type" : "string"
           },
           "lastUpdated" : {
             "type" : "string"
@@ -8308,30 +10123,14 @@
         "properties" : {
           "nodes" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/Tuple2StringOptionString"
             }
           }
         }
       },
-      "MapStringNodeHealthHashElement" : {
-        "type" : "object",
-        "properties" : { },
-        "additionalProperties" : {
-          "$ref" : "#/components/schemas/NodeHealthHashElement"
-        }
-      },
-      "MapStringAgbotPattern" : {
-        "required" : [ ],
-        "type" : "object",
-        "properties" : { },
-        "additionalProperties" : {
-          "$ref" : "#/components/schemas/AgbotPattern"
-        }
-      },
       "Pattern" : {
-        "required" : [ "owner", "public", "secretBinding", "services", "userInput" ],
+        "required" : [ "agreementProtocols", "description", "label", "lastUpdated", "owner", "public", "secretBinding", "services", "userInput" ],
         "type" : "object",
         "properties" : {
           "owner" : {
@@ -8348,30 +10147,29 @@
           },
           "services" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/PServices"
             }
           },
           "userInput" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/OneUserInputService"
             }
           },
           "secretBinding" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/OneSecretBindingService"
             }
           },
           "agreementProtocols" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
-              "$ref" : "#/components/schemas/MapStringString"
+              "type" : "object",
+              "additionalProperties" : {
+                "type" : "string"
+              }
             }
           },
           "lastUpdated" : {
@@ -8400,7 +10198,6 @@
         "properties" : {
           "nodes" : {
             "type" : "object",
-            "properties" : { },
             "additionalProperties" : {
               "$ref" : "#/components/schemas/Node"
             }
@@ -8411,20 +10208,12 @@
           }
         }
       },
-      "MapStringPattern" : {
-        "type" : "object",
-        "properties" : { },
-        "additionalProperties" : {
-          "$ref" : "#/components/schemas/Pattern"
-        }
-      },
       "GetServicesResponse" : {
         "required" : [ "lastIndex", "services" ],
         "type" : "object",
         "properties" : {
           "services" : {
             "type" : "object",
-            "properties" : { },
             "additionalProperties" : {
               "$ref" : "#/components/schemas/Service"
             }
@@ -8439,116 +10228,125 @@
         "required" : [ "jsonFormats", "label", "services" ],
         "type" : "object",
         "properties" : {
-          "label" : {
-            "type" : "string"
-          },
-          "description" : {
-            "type" : "string"
-          },
-          "public" : {
-            "type" : "object"
-          },
           "services" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/PServices"
             }
           },
-          "userInput" : {
-            "type" : "array",
-            "properties" : { },
-            "items" : {
-              "$ref" : "#/components/schemas/OneUserInputService"
-            }
+          "description" : {
+            "type" : "string"
+          },
+          "label" : {
+            "type" : "string"
           },
           "secretBinding" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/OneSecretBindingService"
             }
           },
+          "public" : {
+            "type" : "boolean"
+          },
           "agreementProtocols" : {
-            "type" : "array",
-            "properties" : { },
+            "type" : "string",
             "items" : {
-              "$ref" : "#/components/schemas/MapStringString"
+              "type" : "object",
+              "additionalProperties" : {
+                "type" : "string"
+              }
             }
           },
           "jsonFormats" : {
             "$ref" : "#/components/schemas/Formats"
           },
-          "anyProblem" : {
-            "type" : "string"
+          "userInput" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/OneUserInputService"
+            }
+          }
+        }
+      },
+      "NMPStatus" : {
+        "required" : [ "agentUpgradePolicyStatus" ],
+        "type" : "object",
+        "properties" : {
+          "agentUpgradePolicyStatus" : {
+            "$ref" : "#/components/schemas/PolicyStatus"
           }
         }
       },
       "PatchServiceRequest" : {
-        "required" : [ "jsonFormats", "matchHardware", "userInput" ],
+        "required" : [ "jsonFormats" ],
         "type" : "object",
         "properties" : {
-          "label" : {
+          "sharable" : {
+            "type" : "string"
+          },
+          "deployment" : {
             "type" : "string"
           },
           "description" : {
             "type" : "string"
           },
-          "public" : {
-            "type" : "object"
-          },
           "documentation" : {
             "type" : "string"
           },
-          "url" : {
+          "label" : {
             "type" : "string"
-          },
-          "version" : {
-            "type" : "string"
-          },
-          "arch" : {
-            "type" : "string"
-          },
-          "sharable" : {
-            "type" : "string"
-          },
-          "matchHardware" : {
-            "$ref" : "#/components/schemas/MapStringObject"
           },
           "requiredServices" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/ServiceRef"
             }
           },
-          "userInput" : {
-            "type" : "array",
-            "properties" : { },
-            "items" : {
-              "$ref" : "#/components/schemas/MapStringString"
+          "public" : {
+            "type" : "boolean"
+          },
+          "matchHardware" : {
+            "type" : "object",
+            "additionalProperties" : {
+              "type" : "object"
             }
           },
-          "deployment" : {
+          "arch" : {
             "type" : "string"
           },
           "deploymentSignature" : {
             "type" : "string"
           },
-          "clusterDeployment" : {
-            "type" : "string"
-          },
           "clusterDeploymentSignature" : {
             "type" : "string"
           },
+          "clusterDeployment" : {
+            "type" : "string"
+          },
+          "url" : {
+            "type" : "string"
+          },
           "imageStore" : {
-            "$ref" : "#/components/schemas/MapStringObject"
+            "type" : "object",
+            "additionalProperties" : {
+              "type" : "object"
+            }
+          },
+          "version" : {
+            "type" : "string"
           },
           "jsonFormats" : {
             "$ref" : "#/components/schemas/Formats"
           },
-          "anyProblem" : {
-            "type" : "string"
+          "userInput" : {
+            "type" : "string",
+            "items" : {
+              "type" : "object",
+              "additionalProperties" : {
+                "type" : "string"
+              }
+            }
           }
         }
       },
@@ -8568,15 +10366,13 @@
         }
       },
       "PostPatternSearchRequest" : {
-        "required" : [ "nodeOrgids", "serviceUrl" ],
         "type" : "object",
         "properties" : {
           "arch" : {
             "type" : "string"
           },
           "nodeOrgids" : {
-            "type" : "array",
-            "properties" : { },
+            "type" : "string",
             "items" : {
               "type" : "string"
             }
@@ -8585,22 +10381,16 @@
             "type" : "string"
           },
           "secondsStale" : {
-            "type" : "object"
+            "type" : "integer",
+            "format" : "int32"
           },
           "serviceUrl" : {
-            "type" : "string"
+            "type" : "string",
+            "default" : ""
           },
           "startIndex" : {
             "type" : "string"
           }
-        }
-      },
-      "ListOneProperty" : {
-        "required" : [ ],
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "$ref" : "#/components/schemas/OneProperty"
         }
       },
       "BusinessPolicyNodeResponse" : {
@@ -8618,55 +10408,18 @@
           }
         }
       },
-      "ListResourceChangesInnerObject" : {
-        "required" : [ ],
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "$ref" : "#/components/schemas/ResourceChangesInnerObject"
-        }
-      },
-      "ListBufferNodeErrorsResp" : {
-        "required" : [ "first" ],
-        "type" : "array",
+      "PutNodeGroupsRequest" : {
+        "type" : "object",
         "properties" : {
-          "first" : {
-            "type" : "array",
-            "properties" : { },
-            "writeOnly" : true,
+          "members" : {
+            "type" : "string",
             "items" : {
-              "$ref" : "#/components/schemas/NodeErrorsResp"
+              "type" : "string"
             }
           },
-          "last0" : {
-            "required" : [ "head", "next" ],
-            "type" : "array",
-            "properties" : {
-              "head" : {
-                "$ref" : "#/components/schemas/NodeErrorsResp"
-              },
-              "next" : {
-                "type" : "array",
-                "properties" : { },
-                "items" : {
-                  "$ref" : "#/components/schemas/NodeErrorsResp"
-                }
-              },
-              "empty" : {
-                "type" : "boolean"
-              },
-              "traversableAgain" : {
-                "type" : "boolean"
-              }
-            },
-            "writeOnly" : true,
-            "items" : {
-              "$ref" : "#/components/schemas/NodeErrorsResp"
-            }
+          "description" : {
+            "type" : "string"
           }
-        },
-        "items" : {
-          "$ref" : "#/components/schemas/NodeErrorsResp"
         }
       },
       "ResourceChangesRespObject" : {
@@ -8675,7 +10428,6 @@
         "properties" : {
           "changes" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/ChangeEntry"
             }
@@ -8693,72 +10445,54 @@
         }
       },
       "PatchNodesRequest" : {
-        "required" : [ "jsonFormats", "softwareVersions" ],
+        "required" : [ "jsonFormats" ],
         "type" : "object",
         "properties" : {
-          "token" : {
-            "type" : "string"
-          },
           "name" : {
-            "type" : "string"
-          },
-          "nodeType" : {
-            "type" : "string"
-          },
-          "pattern" : {
             "type" : "string"
           },
           "registeredServices" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/RegService"
             }
           },
-          "userInput" : {
-            "type" : "array",
-            "properties" : { },
-            "items" : {
-              "$ref" : "#/components/schemas/OneUserInputService"
+          "softwareVersions" : {
+            "type" : "object",
+            "additionalProperties" : {
+              "type" : "string"
             }
           },
+          "token" : {
+            "type" : "string"
+          },
           "msgEndPoint" : {
-            "type" : "string"
-          },
-          "softwareVersions" : {
-            "$ref" : "#/components/schemas/MapStringString"
-          },
-          "publicKey" : {
-            "type" : "string"
-          },
-          "arch" : {
             "type" : "string"
           },
           "heartbeatIntervals" : {
             "$ref" : "#/components/schemas/NodeHeartbeatIntervals"
           },
+          "pattern" : {
+            "type" : "string"
+          },
+          "nodeType" : {
+            "type" : "string"
+          },
+          "arch" : {
+            "type" : "string"
+          },
+          "publicKey" : {
+            "type" : "string"
+          },
           "jsonFormats" : {
             "$ref" : "#/components/schemas/Formats"
           },
-          "anyProblem" : {
-            "type" : "string"
+          "userInput" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/OneUserInputService"
+            }
           }
-        }
-      },
-      "ListNodeErrorsResp" : {
-        "required" : [ ],
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "$ref" : "#/components/schemas/NodeErrorsResp"
-        }
-      },
-      "ListNodeMsg" : {
-        "required" : [ ],
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "$ref" : "#/components/schemas/NodeMsg"
         }
       },
       "ChangePwRequest" : {
@@ -8767,17 +10501,7 @@
         "properties" : {
           "newPassword" : {
             "type" : "string"
-          },
-          "anyProblem" : {
-            "type" : "string"
           }
-        }
-      },
-      "ListOneSecretBindingService" : {
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "$ref" : "#/components/schemas/OneSecretBindingService"
         }
       },
       "AgbotPattern" : {
@@ -8799,15 +10523,11 @@
         }
       },
       "PutNodeStatusRequest" : {
-        "required" : [ "connectivity", "jsonFormats", "runningServices", "services" ],
+        "required" : [ "jsonFormats", "runningServices", "services" ],
         "type" : "object",
         "properties" : {
-          "connectivity" : {
-            "$ref" : "#/components/schemas/MapStringObject"
-          },
           "services" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/OneService"
             }
@@ -8818,8 +10538,11 @@
           "runningServices" : {
             "type" : "string"
           },
-          "anyProblem" : {
-            "type" : "string"
+          "connectivity" : {
+            "type" : "object",
+            "additionalProperties" : {
+              "type" : "object"
+            }
           }
         }
       },
@@ -8850,7 +10573,6 @@
         "properties" : {
           "businessPolicy" : {
             "type" : "object",
-            "properties" : { },
             "additionalProperties" : {
               "$ref" : "#/components/schemas/BusinessPolicy"
             }
@@ -8880,11 +10602,13 @@
           }
         }
       },
-      "MapStringNodeAgreement" : {
+      "PutNodeMgmtPolStatusRequest" : {
+        "required" : [ "agentUpgradePolicyStatus" ],
         "type" : "object",
-        "properties" : { },
-        "additionalProperties" : {
-          "$ref" : "#/components/schemas/NodeAgreement"
+        "properties" : {
+          "agentUpgradePolicyStatus" : {
+            "$ref" : "#/components/schemas/NodeMangementPolicyStatus"
+          }
         }
       },
       "ServiceDockAuth" : {
@@ -8924,13 +10648,15 @@
           },
           "serviceVersions" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/BServiceVersions"
             }
           },
           "nodeHealth" : {
-            "$ref" : "#/components/schemas/MapStringObject"
+            "type" : "object",
+            "additionalProperties" : {
+              "type" : "object"
+            }
           }
         }
       },
@@ -8940,7 +10666,6 @@
         "properties" : {
           "services" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/NAService"
             }
@@ -8957,22 +10682,22 @@
         }
       },
       "PostBusinessPolicySearchRequest" : {
-        "required" : [ "changedSince", "nodeOrgids" ],
         "type" : "object",
         "properties" : {
           "changedSince" : {
             "type" : "integer",
-            "format" : "int64"
+            "format" : "int64",
+            "default" : 0
           },
           "nodeOrgids" : {
-            "type" : "array",
-            "properties" : { },
+            "type" : "string",
             "items" : {
               "type" : "string"
             }
           },
           "numEntries" : {
-            "type" : "object"
+            "type" : "integer",
+            "format" : "int32"
           },
           "session" : {
             "type" : "string"
@@ -8988,7 +10713,6 @@
         "properties" : {
           "agreements" : {
             "type" : "object",
-            "properties" : { },
             "additionalProperties" : {
               "$ref" : "#/components/schemas/NodeAgreement"
             }
@@ -8999,11 +10723,80 @@
           }
         }
       },
-      "ListOneService" : {
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "$ref" : "#/components/schemas/OneService"
+      "ManagementPolicy" : {
+        "required" : [ "agentUpgradePolicy", "constraints", "created", "description", "enabled", "label", "lastUpdated", "owner", "patterns", "properties" ],
+        "type" : "object",
+        "properties" : {
+          "agentUpgradePolicy" : {
+            "$ref" : "#/components/schemas/AgentUpgradePolicy"
+          },
+          "constraints" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "created" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "enabled" : {
+            "type" : "boolean"
+          },
+          "label" : {
+            "type" : "string"
+          },
+          "lastUpdated" : {
+            "type" : "string"
+          },
+          "owner" : {
+            "type" : "string"
+          },
+          "patterns" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "properties" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/OneProperty"
+            }
+          },
+          "start" : {
+            "type" : "string",
+            "default" : "now"
+          },
+          "startWindow" : {
+            "type" : "integer",
+            "format" : "int64",
+            "default" : 0
+          }
+        }
+      },
+      "NodeGroupResp" : {
+        "required" : [ "lastUpdated", "members", "name" ],
+        "type" : "object",
+        "properties" : {
+          "name" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string",
+            "default" : ""
+          },
+          "members" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "lastUpdated" : {
+            "type" : "string"
+          }
         }
       },
       "Prop" : {
@@ -9042,29 +10835,31 @@
           },
           "inputs" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/OneUserInputValue"
             }
           }
         }
       },
-      "ListMapStringString" : {
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "$ref" : "#/components/schemas/MapStringString"
-        }
-      },
-      "ListOneUserInputValue" : {
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "$ref" : "#/components/schemas/OneUserInputValue"
+      "PropertiesAndConstraints" : {
+        "type" : "object",
+        "properties" : {
+          "properties" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/OneProperty"
+            }
+          },
+          "constraints" : {
+            "type" : "string",
+            "items" : {
+              "type" : "string"
+            }
+          }
         }
       },
       "BusinessPolicy" : {
-        "required" : [ "constraints", "owner", "properties", "secretBinding", "userInput" ],
+        "required" : [ "constraints", "created", "description", "label", "lastUpdated", "owner", "properties", "secretBinding", "service", "userInput" ],
         "type" : "object",
         "properties" : {
           "owner" : {
@@ -9081,28 +10876,24 @@
           },
           "userInput" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/OneUserInputService"
             }
           },
           "secretBinding" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/OneSecretBindingService"
             }
           },
           "properties" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/OneProperty"
             }
           },
           "constraints" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "type" : "string"
             }
@@ -9133,9 +10924,11 @@
           },
           "secrets" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
-              "$ref" : "#/components/schemas/MapStringString"
+              "type" : "object",
+              "additionalProperties" : {
+                "type" : "string"
+              }
             }
           }
         }
@@ -9146,7 +10939,6 @@
         "properties" : {
           "patterns" : {
             "type" : "object",
-            "properties" : { },
             "additionalProperties" : {
               "$ref" : "#/components/schemas/Pattern"
             }
@@ -9157,29 +10949,30 @@
           }
         }
       },
-      "MapStringBusinessPolicy" : {
+      "AgentUpgradePolicy" : {
+        "required" : [ "allowDowngrade", "manifest" ],
         "type" : "object",
-        "properties" : { },
-        "additionalProperties" : {
-          "$ref" : "#/components/schemas/BusinessPolicy"
+        "properties" : {
+          "allowDowngrade" : {
+            "type" : "boolean"
+          },
+          "manifest" : {
+            "type" : "string"
+          }
         }
       },
       "PostNodeHealthRequest" : {
-        "required" : [ "lastTime", "nodeOrgids" ],
+        "required" : [ "lastTime" ],
         "type" : "object",
         "properties" : {
           "lastTime" : {
             "type" : "string"
           },
           "nodeOrgids" : {
-            "type" : "array",
-            "properties" : { },
+            "type" : "string",
             "items" : {
               "type" : "string"
             }
-          },
-          "anyProblem" : {
-            "type" : "string"
           }
         }
       },
@@ -9197,20 +10990,25 @@
             "type" : "string"
           },
           "agreementLess" : {
-            "type" : "object"
+            "type" : "boolean"
           },
           "serviceVersions" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/PServiceVersions"
             }
           },
           "dataVerification" : {
-            "$ref" : "#/components/schemas/MapStringObject"
+            "type" : "object",
+            "additionalProperties" : {
+              "type" : "object"
+            }
           },
           "nodeHealth" : {
-            "$ref" : "#/components/schemas/MapStringObject"
+            "type" : "object",
+            "additionalProperties" : {
+              "type" : "object"
+            }
           }
         }
       },
@@ -9219,44 +11017,7 @@
         "type" : "object",
         "properties" : {
           "nodeErrors" : {
-            "required" : [ "first" ],
             "type" : "array",
-            "properties" : {
-              "first" : {
-                "type" : "array",
-                "properties" : { },
-                "writeOnly" : true,
-                "items" : {
-                  "$ref" : "#/components/schemas/NodeErrorsResp"
-                }
-              },
-              "last0" : {
-                "required" : [ "head", "next" ],
-                "type" : "array",
-                "properties" : {
-                  "head" : {
-                    "$ref" : "#/components/schemas/NodeErrorsResp"
-                  },
-                  "next" : {
-                    "type" : "array",
-                    "properties" : { },
-                    "items" : {
-                      "$ref" : "#/components/schemas/NodeErrorsResp"
-                    }
-                  },
-                  "empty" : {
-                    "type" : "boolean"
-                  },
-                  "traversableAgain" : {
-                    "type" : "boolean"
-                  }
-                },
-                "writeOnly" : true,
-                "items" : {
-                  "$ref" : "#/components/schemas/NodeErrorsResp"
-                }
-              }
-            },
             "items" : {
               "$ref" : "#/components/schemas/NodeErrorsResp"
             }
@@ -9293,28 +11054,18 @@
           }
         }
       },
-      "MapStringAgbot" : {
-        "required" : [ ],
-        "type" : "object",
-        "properties" : { },
-        "additionalProperties" : {
-          "$ref" : "#/components/schemas/Agbot"
-        }
-      },
       "NodeStatus" : {
         "required" : [ "connectivity", "lastUpdated", "runningServices", "services" ],
         "type" : "object",
         "properties" : {
           "connectivity" : {
             "type" : "object",
-            "properties" : { },
             "additionalProperties" : {
               "type" : "object"
             }
           },
           "services" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/OneService"
             }
@@ -9338,9 +11089,6 @@
             "type" : "string"
           },
           "nodeOrgid" : {
-            "type" : "string"
-          },
-          "anyProblem" : {
             "type" : "string"
           }
         }
@@ -9376,7 +11124,6 @@
         "properties" : {
           "errors" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "type" : "object"
             }
@@ -9392,7 +11139,6 @@
         "properties" : {
           "users" : {
             "type" : "object",
-            "properties" : { },
             "additionalProperties" : {
               "$ref" : "#/components/schemas/User"
             }
@@ -9428,7 +11174,7 @@
         }
       },
       "Org" : {
-        "required" : [ "description", "heartbeatIntervals", "label", "lastUpdated", "limits", "orgType", "tags" ],
+        "required" : [ "description", "heartbeatIntervals", "label", "lastUpdated", "limits", "orgType" ],
         "type" : "object",
         "properties" : {
           "orgType" : {
@@ -9444,7 +11190,10 @@
             "type" : "string"
           },
           "tags" : {
-            "$ref" : "#/components/schemas/MapStringString"
+            "type" : "object",
+            "additionalProperties" : {
+              "type" : "string"
+            }
           },
           "limits" : {
             "$ref" : "#/components/schemas/OrgLimits"
@@ -9454,42 +11203,30 @@
           }
         }
       },
-      "ListContainerStatus" : {
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "$ref" : "#/components/schemas/ContainerStatus"
-        }
-      },
       "PutServicePolicyRequest" : {
-        "required" : [ "constraints", "jsonFormats" ],
+        "required" : [ "jsonFormats" ],
         "type" : "object",
         "properties" : {
-          "label" : {
+          "description" : {
             "type" : "string"
           },
-          "description" : {
+          "label" : {
             "type" : "string"
           },
           "properties" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/OneProperty"
             }
           },
           "constraints" : {
-            "type" : "array",
-            "properties" : { },
+            "type" : "string",
             "items" : {
               "type" : "string"
             }
           },
           "jsonFormats" : {
             "$ref" : "#/components/schemas/Formats"
-          },
-          "anyProblem" : {
-            "type" : "string"
           }
         }
       },
@@ -9499,7 +11236,6 @@
         "properties" : {
           "messages" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/AgbotMsg"
             }
@@ -9510,33 +11246,16 @@
           }
         }
       },
-      "ListNAService" : {
-        "required" : [ ],
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "$ref" : "#/components/schemas/NAService"
-        }
-      },
       "GetAgbotPatternsResponse" : {
         "required" : [ "patterns" ],
         "type" : "object",
         "properties" : {
           "patterns" : {
             "type" : "object",
-            "properties" : { },
             "additionalProperties" : {
               "$ref" : "#/components/schemas/AgbotPattern"
             }
           }
-        }
-      },
-      "MapStringNodeHealthAgreementElement" : {
-        "required" : [ ],
-        "type" : "object",
-        "properties" : { },
-        "additionalProperties" : {
-          "$ref" : "#/components/schemas/NodeHealthAgreementElement"
         }
       },
       "OneUserInputValue" : {
@@ -9569,28 +11288,12 @@
           }
         }
       },
-      "SeqString" : {
-        "required" : [ ],
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "type" : "string"
-        }
-      },
-      "ListChangeEntry" : {
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "$ref" : "#/components/schemas/ChangeEntry"
-        }
-      },
       "NodeAgreement" : {
         "required" : [ "agrService", "lastUpdated", "services", "state" ],
         "type" : "object",
         "properties" : {
           "services" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/NAService"
             }
@@ -9612,14 +11315,27 @@
         "properties" : {
           "key" : {
             "type" : "string"
+          }
+        }
+      },
+      "GetManagementPoliciesResponse" : {
+        "required" : [ "lastIndex", "managementPolicy" ],
+        "type" : "object",
+        "properties" : {
+          "managementPolicy" : {
+            "type" : "object",
+            "additionalProperties" : {
+              "$ref" : "#/components/schemas/ManagementPolicy"
+            }
           },
-          "anyProblem" : {
-            "type" : "string"
+          "lastIndex" : {
+            "type" : "integer",
+            "format" : "int32"
           }
         }
       },
       "PutNodesRequest" : {
-        "required" : [ "jsonFormats", "name", "pattern", "publicKey", "softwareVersions", "token" ],
+        "required" : [ "jsonFormats", "name", "pattern", "publicKey", "token" ],
         "type" : "object",
         "properties" : {
           "token" : {
@@ -9636,14 +11352,12 @@
           },
           "registeredServices" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/RegService"
             }
           },
           "userInput" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/OneUserInputService"
             }
@@ -9652,7 +11366,10 @@
             "type" : "string"
           },
           "softwareVersions" : {
-            "$ref" : "#/components/schemas/MapStringString"
+            "type" : "object",
+            "additionalProperties" : {
+              "type" : "string"
+            }
           },
           "publicKey" : {
             "type" : "string"
@@ -9685,44 +11402,7 @@
             "type" : "string"
           },
           "resourceChanges" : {
-            "required" : [ "first" ],
             "type" : "array",
-            "properties" : {
-              "first" : {
-                "type" : "array",
-                "properties" : { },
-                "writeOnly" : true,
-                "items" : {
-                  "$ref" : "#/components/schemas/ResourceChangesInnerObject"
-                }
-              },
-              "last0" : {
-                "required" : [ "head", "next" ],
-                "type" : "array",
-                "properties" : {
-                  "head" : {
-                    "$ref" : "#/components/schemas/ResourceChangesInnerObject"
-                  },
-                  "next" : {
-                    "type" : "array",
-                    "properties" : { },
-                    "items" : {
-                      "$ref" : "#/components/schemas/ResourceChangesInnerObject"
-                    }
-                  },
-                  "empty" : {
-                    "type" : "boolean"
-                  },
-                  "traversableAgain" : {
-                    "type" : "boolean"
-                  }
-                },
-                "writeOnly" : true,
-                "items" : {
-                  "$ref" : "#/components/schemas/ResourceChangesInnerObject"
-                }
-              }
-            },
             "items" : {
               "$ref" : "#/components/schemas/ResourceChangesInnerObject"
             }
@@ -9744,13 +11424,6 @@
           }
         }
       },
-      "MapStringNode" : {
-        "type" : "object",
-        "properties" : { },
-        "additionalProperties" : {
-          "$ref" : "#/components/schemas/Node"
-        }
-      },
       "AdminHashpwRequest" : {
         "required" : [ "password" ],
         "type" : "object",
@@ -9764,10 +11437,10 @@
         "required" : [ "jsonFormats", "name", "publicKey", "token" ],
         "type" : "object",
         "properties" : {
-          "token" : {
+          "name" : {
             "type" : "string"
           },
-          "name" : {
+          "token" : {
             "type" : "string"
           },
           "msgEndPoint" : {
@@ -9778,9 +11451,6 @@
           },
           "jsonFormats" : {
             "$ref" : "#/components/schemas/Formats"
-          },
-          "anyProblem" : {
-            "type" : "string"
           }
         }
       },
@@ -9788,10 +11458,10 @@
         "required" : [ "jsonFormats" ],
         "type" : "object",
         "properties" : {
-          "token" : {
+          "name" : {
             "type" : "string"
           },
-          "name" : {
+          "token" : {
             "type" : "string"
           },
           "msgEndPoint" : {
@@ -9802,25 +11472,22 @@
           },
           "jsonFormats" : {
             "$ref" : "#/components/schemas/Formats"
-          },
-          "anyProblem" : {
-            "type" : "string"
           }
         }
       },
       "PostBusinessPolicySearchResponse" : {
-        "required" : [ "nodes", "offsetUpdated" ],
+        "required" : [ "nodes" ],
         "type" : "object",
         "properties" : {
           "nodes" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/BusinessPolicyNodeResponse"
             }
           },
           "offsetUpdated" : {
-            "type" : "boolean"
+            "type" : "boolean",
+            "default" : false
           }
         }
       },
@@ -9865,11 +11532,31 @@
           }
         }
       },
-      "ListPServices" : {
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "$ref" : "#/components/schemas/PServices"
+      "AgentVersionsResponse" : {
+        "required" : [ "agentCertVersions", "agentConfigVersions", "agentSoftwareVersions", "lastUpdated" ],
+        "type" : "object",
+        "properties" : {
+          "agentCertVersions" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "agentConfigVersions" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "agentSoftwareVersions" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "lastUpdated" : {
+            "type" : "string"
+          }
         }
       },
       "GetAgbotBusinessPolsResponse" : {
@@ -9878,7 +11565,6 @@
         "properties" : {
           "businessPols" : {
             "type" : "object",
-            "properties" : { },
             "additionalProperties" : {
               "$ref" : "#/components/schemas/AgbotBusinessPol"
             }
@@ -9886,7 +11572,7 @@
         }
       },
       "Service" : {
-        "required" : [ "matchHardware", "owner", "public", "requiredServices", "userInput" ],
+        "required" : [ "arch", "clusterDeployment", "clusterDeploymentSignature", "deployment", "deploymentSignature", "description", "documentation", "imageStore", "label", "lastUpdated", "matchHardware", "owner", "public", "requiredServices", "sharable", "url", "userInput", "version" ],
         "type" : "object",
         "properties" : {
           "owner" : {
@@ -9918,23 +11604,23 @@
           },
           "matchHardware" : {
             "type" : "object",
-            "properties" : { },
             "additionalProperties" : {
               "type" : "object"
             }
           },
           "requiredServices" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/ServiceRef"
             }
           },
           "userInput" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
-              "$ref" : "#/components/schemas/MapStringString"
+              "type" : "object",
+              "additionalProperties" : {
+                "type" : "string"
+              }
             }
           },
           "deployment" : {
@@ -9951,7 +11637,6 @@
           },
           "imageStore" : {
             "type" : "object",
-            "properties" : { },
             "additionalProperties" : {
               "type" : "object"
             }
@@ -9975,25 +11660,25 @@
         }
       },
       "NodeDetails" : {
-        "required" : [ "connectivity", "constraints", "id", "lastUpdatedNode", "nodeType", "orgid", "owner", "token" ],
         "type" : "object",
         "properties" : {
           "arch" : {
             "type" : "string"
           },
           "connectivity" : {
-            "$ref" : "#/components/schemas/MapStringObject"
+            "type" : "object",
+            "additionalProperties" : {
+              "type" : "object"
+            }
           },
           "constraints" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "type" : "string"
             }
           },
           "errors" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "type" : "object"
             }
@@ -10002,13 +11687,15 @@
             "$ref" : "#/components/schemas/NodeHeartbeatIntervals"
           },
           "id" : {
-            "type" : "string"
+            "type" : "string",
+            "default" : ""
           },
           "lastHeartbeat" : {
             "type" : "string"
           },
           "lastUpdatedNode" : {
-            "type" : "string"
+            "type" : "string",
+            "default" : ""
           },
           "lastUpdatedNodeError" : {
             "type" : "string"
@@ -10026,20 +11713,22 @@
             "type" : "string"
           },
           "nodeType" : {
-            "type" : "string"
+            "type" : "string",
+            "default" : ""
           },
           "owner" : {
-            "type" : "string"
+            "type" : "string",
+            "default" : ""
           },
           "orgid" : {
-            "type" : "string"
+            "type" : "string",
+            "default" : ""
           },
           "pattern" : {
             "type" : "string"
           },
           "properties" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/OneProperty"
             }
@@ -10049,7 +11738,6 @@
           },
           "registeredServices" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/RegService"
             }
@@ -10059,23 +11747,28 @@
           },
           "services" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/OneService"
             }
           },
           "softwareVersions" : {
-            "$ref" : "#/components/schemas/MapStringString"
+            "type" : "object",
+            "additionalProperties" : {
+              "type" : "string"
+            }
           },
           "token" : {
-            "type" : "string"
+            "type" : "string",
+            "default" : "********"
           },
           "userInput" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/OneUserInputService"
             }
+          },
+          "ha_group" : {
+            "type" : "string"
           }
         }
       },
@@ -10100,7 +11793,6 @@
           },
           "containerStatus" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/ContainerStatus"
             }
@@ -10122,25 +11814,7 @@
         "properties" : {
           "key" : {
             "type" : "string"
-          },
-          "anyProblem" : {
-            "type" : "string"
           }
-        }
-      },
-      "SeqTuple2StringOptionString" : {
-        "required" : [ ],
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "$ref" : "#/components/schemas/Tuple2StringOptionString"
-        }
-      },
-      "MapStringService" : {
-        "type" : "object",
-        "properties" : { },
-        "additionalProperties" : {
-          "$ref" : "#/components/schemas/Service"
         }
       },
       "OneProperty" : {
@@ -10158,31 +11832,6 @@
           }
         }
       },
-      "$colon$colonResourceChangesInnerObject" : {
-        "required" : [ "head", "next" ],
-        "type" : "array",
-        "properties" : {
-          "head" : {
-            "$ref" : "#/components/schemas/ResourceChangesInnerObject"
-          },
-          "next" : {
-            "type" : "array",
-            "properties" : { },
-            "items" : {
-              "$ref" : "#/components/schemas/ResourceChangesInnerObject"
-            }
-          },
-          "empty" : {
-            "type" : "boolean"
-          },
-          "traversableAgain" : {
-            "type" : "boolean"
-          }
-        },
-        "items" : {
-          "$ref" : "#/components/schemas/ResourceChangesInnerObject"
-        }
-      },
       "GetAdminOrgStatusResponse" : {
         "required" : [ "msg", "nodes" ],
         "type" : "object",
@@ -10192,7 +11841,6 @@
           },
           "nodes" : {
             "type" : "object",
-            "properties" : { },
             "additionalProperties" : {
               "type" : "object"
             }
@@ -10200,7 +11848,7 @@
         }
       },
       "PostPutServiceRequest" : {
-        "required" : [ "arch", "jsonFormats", "label", "matchHardware", "public", "sharable", "url", "userInput", "version" ],
+        "required" : [ "arch", "jsonFormats", "label", "public", "sharable", "url", "version" ],
         "type" : "object",
         "properties" : {
           "label" : {
@@ -10228,20 +11876,24 @@
             "type" : "string"
           },
           "matchHardware" : {
-            "$ref" : "#/components/schemas/MapStringObject"
+            "type" : "object",
+            "additionalProperties" : {
+              "type" : "object"
+            }
           },
           "requiredServices" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/ServiceRef"
             }
           },
           "userInput" : {
-            "type" : "array",
-            "properties" : { },
+            "type" : "string",
             "items" : {
-              "$ref" : "#/components/schemas/MapStringString"
+              "type" : "object",
+              "additionalProperties" : {
+                "type" : "string"
+              }
             }
           },
           "deployment" : {
@@ -10257,7 +11909,10 @@
             "type" : "string"
           },
           "imageStore" : {
-            "$ref" : "#/components/schemas/MapStringObject"
+            "type" : "object",
+            "additionalProperties" : {
+              "type" : "object"
+            }
           },
           "jsonFormats" : {
             "$ref" : "#/components/schemas/Formats"
@@ -10265,7 +11920,7 @@
         }
       },
       "PostPutOrgRequest" : {
-        "required" : [ "description", "jsonFormats", "label", "tags" ],
+        "required" : [ "description", "jsonFormats", "label" ],
         "type" : "object",
         "properties" : {
           "orgType" : {
@@ -10278,7 +11933,10 @@
             "type" : "string"
           },
           "tags" : {
-            "$ref" : "#/components/schemas/MapStringString"
+            "type" : "object",
+            "additionalProperties" : {
+              "type" : "string"
+            }
           },
           "limits" : {
             "$ref" : "#/components/schemas/OrgLimits"
@@ -10297,7 +11955,6 @@
         "properties" : {
           "orgs" : {
             "type" : "object",
-            "properties" : { },
             "additionalProperties" : {
               "$ref" : "#/components/schemas/Org"
             }
@@ -10309,17 +11966,23 @@
         }
       },
       "BServiceVersions" : {
-        "required" : [ "priority", "upgradePolicy", "version" ],
+        "required" : [ "version" ],
         "type" : "object",
         "properties" : {
           "version" : {
             "type" : "string"
           },
           "priority" : {
-            "$ref" : "#/components/schemas/MapStringObject"
+            "type" : "object",
+            "additionalProperties" : {
+              "type" : "object"
+            }
           },
           "upgradePolicy" : {
-            "$ref" : "#/components/schemas/MapStringString"
+            "type" : "object",
+            "additionalProperties" : {
+              "type" : "string"
+            }
           }
         }
       },
@@ -10338,66 +12001,48 @@
           }
         }
       },
-      "ListServiceRef" : {
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "$ref" : "#/components/schemas/ServiceRef"
-        }
-      },
-      "ListString" : {
-        "type" : "array",
-        "properties" : { },
-        "items" : {
-          "type" : "string"
-        }
-      },
       "PatchPatternRequest" : {
         "required" : [ "jsonFormats" ],
         "type" : "object",
         "properties" : {
-          "label" : {
-            "type" : "string"
-          },
-          "description" : {
-            "type" : "string"
-          },
-          "public" : {
-            "type" : "object"
-          },
           "services" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/PServices"
             }
           },
-          "userInput" : {
-            "type" : "array",
-            "properties" : { },
-            "items" : {
-              "$ref" : "#/components/schemas/OneUserInputService"
-            }
+          "description" : {
+            "type" : "string"
+          },
+          "label" : {
+            "type" : "string"
           },
           "secretBinding" : {
             "type" : "array",
-            "properties" : { },
             "items" : {
               "$ref" : "#/components/schemas/OneSecretBindingService"
             }
           },
+          "public" : {
+            "type" : "boolean"
+          },
           "agreementProtocols" : {
-            "type" : "array",
-            "properties" : { },
+            "type" : "string",
             "items" : {
-              "$ref" : "#/components/schemas/MapStringString"
+              "type" : "object",
+              "additionalProperties" : {
+                "type" : "string"
+              }
             }
           },
           "jsonFormats" : {
             "$ref" : "#/components/schemas/Formats"
           },
-          "anyProblem" : {
-            "type" : "string"
+          "userInput" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/OneUserInputService"
+            }
           }
         }
       },
@@ -10410,7 +12055,6 @@
           },
           "agreements" : {
             "type" : "object",
-            "properties" : { },
             "additionalProperties" : {
               "$ref" : "#/components/schemas/NodeHealthAgreementElement"
             }
@@ -10428,9 +12072,6 @@
             "type" : "string"
           },
           "nodeOrgid" : {
-            "type" : "string"
-          },
-          "anyProblem" : {
             "type" : "string"
           }
         }
