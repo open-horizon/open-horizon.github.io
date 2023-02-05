@@ -13,4 +13,51 @@
     color: white;
     text-decoration: none;
 }
+
+#oh-theme-toggle {
+    border: none;
+    cursor:pointer;
+    font-size:18px;
+    text-shadow: 1px 1px 1px #000000;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    overflow: hidden;
+    outline:none;
+}
 </style>
+<script> 
+// Check if user previously selected theme
+const prev_theme = localStorage.getItem('theme');
+var change_nav_logo=false;
+if (prev_theme === "Dark") {
+    jtd.setTheme('dark');
+    change_nav_logo=true;
+	}
+// Wait for the page elements to load  
+document.addEventListener('DOMContentLoaded', function(){
+  const toggleThemeBtn = document.querySelector('#oh-theme-toggle'); 
+  const ohNavBarLogo = document.querySelector("#navbar-logo-img");
+	if (change_nav_logo) {
+    toggleThemeBtn.textContent = '🔆';
+    ohNavBarLogo.src="/img/logos/open-horizon.png";
+	}
+
+  jtd.addEvent(toggleThemeBtn, 'click', function(){ 
+      if (jtd.getTheme() === 'dark') { 
+          jtd.setTheme('default'); 
+          toggleThemeBtn.textContent = '🌙';
+          window.localStorage.setItem('theme', 'Light');
+          if(ohNavBarLogo !=null) 
+            ohNavBarLogo.src="/img/favicon.png";
+        } 
+      else { 
+          jtd.setTheme('dark'); 
+          toggleThemeBtn.textContent = '🔆'; 
+          window.localStorage.setItem('theme', 'Dark');
+          if(ohNavBarLogo !=null) 
+            ohNavBarLogo.src="/img/logos/open-horizon.png";
+        } 
+    }); 
+
+}, false);
+</script>
