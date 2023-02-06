@@ -1,21 +1,22 @@
 <p style="text-align:center;" align="center">
-  <img align="center" src="https://github.com/open-horizon/open-horizon.github.io/blob/master/img/logos/open-horizon-color.png" width="45%" />
+  <img align="center" src="https://github.com/open-horizon/open-horizon.github.io/blob/master/img/logos/open-horizon-color.png" width="45%"/>
 </p>
 
 <p align="center">
 <a href="https://github.com/open-horizon/open-horizon.github.io" alt="GitHub contributors">
-<img src="https://img.shields.io/github/contributors/open-horizon/open-horizon.github.io.svg" /></a>
+<img src="https://img.shields.io/github/contributors/open-horizon/open-horizon.github.io.svg"/></a>
 <a href="https://github.com/open-horizon/open-horizon.github.io" alt="anazdocscopy.yml">
-<img src="https://github.com/open-horizon/open-horizon.github.io/actions/workflows/anaxdocscopy.yml/badge.svg" /></a>
+<img src="https://github.com/open-horizon/open-horizon.github.io/actions/workflows/anaxdocscopy.yml/badge.svg"/></a>
 <a href="https://github.com/open-horizon/open-horizon.github.io" alt="Check_broken_link.yml">
-<img src="https://github.com/open-horizon/open-horizon.github.io/actions/workflows/Check_broken_link.yml/badge.svg" /></a>
+<img src="https://github.com/open-horizon/open-horizon.github.io/actions/workflows/Check_broken_link.yml/badge.svg"/></a>
 <a href="https://github.com/open-horizon/open-horizon.github.io" alt="Twitter Follow">
-<img src="https://github.com/open-horizon/open-horizon.github.io/actions/workflows/orphan_pages_checker.yml/badge.svg" /></a>
+<img src="https://github.com/open-horizon/open-horizon.github.io/actions/workflows/orphan_pages_checker.yml/badge.svg"/></a>
 <a href="https://matrix.to/#/#open-horizon-docs:chat.lfx.linuxfoundation.org" alt="chat on matrix">
-<img src="https://matrix.to/img/matrix-badge.svg" /></a>
+<img src="https://matrix.to/img/matrix-badge.svg"/></a>
 </p>
 
 # Contributing to Open Horizon pages
+
 To visit this Open Horizon documentation site visit [open-horizon.github.io](https://open-horizon.github.io/)
 
 If you would like to contribute content, read the following documentation for helpful information and guidelines.
@@ -36,7 +37,7 @@ We appreciate and recognize all contributors.
   - [Test your changes locally](#test-your-changes-locally)
   - [Commit changes](#commit-changes)
   - [Push changes to GitHub](#push-changes-to-github)
-  - [Possible Errors you may get.](#possible-errors-you-may-get)
+  - [Possible errors](#possible-errors)
 - [Submit a Pull Request for Review](#submit-a-pull-request-for-review)
 - [Clean Up](#clean-up)
   - [Delete the branch](#delete-the-branch)
@@ -52,13 +53,13 @@ To make changes, clone the forked repository to your machine.
 
 ## Clone the repository
 
-<img align="right" width="300" src="img/clone.jpg" alt="clone this repository" />
+<img align="right" width="300" src="img/clone.jpg" alt="clone this repository"/>
 
 Go to your GitHub account, open the forked repository, click **Code**, and then **copy to clipboard**.
 
 Open a terminal and run the following git command:
 
-```
+```bash
 git clone "url you just copied"
 ```
 
@@ -68,19 +69,19 @@ where "url you just copied" (without the quotation marks) is the url to this rep
 
 Change to the repository directory on your computer:
 
-```
+```bash
 cd open-horizon.github.io
 ```
 
 Now create a branch using the `git checkout` command:
 
-```
+```bash
 git checkout -b <name-your-new-branch-name-after-your-issue>
 ```
 
 For example:
 
-```
+```bash
 git checkout -b issue-329
 ```
 
@@ -104,41 +105,41 @@ Change to the repository directory on your computer and execute the following co
 
 1. To install and update all dependencies.
 
-```
-make init
-```
+   ```bash
+   make init
+   ```
 
-**Note**: Run the above command one time before using the tools each day.
+   **Note**: Run the above command one time before using the tools each day.
 
-2. start the local web server, do not build the site first
+2. Start the local web server, do not build the site first
 
-```
-make run
-```
+   ```bash
+   make run
+   ```
 
-**Note**: This runs a local web server with live reload enabled. When running the make command on Windows, an error might occur that identifies the installed command as unrecognized. This can happen when the binary path is set incorrectly.
+   **Note**: This runs a local web server with live reload enabled. When running the make command on Windows, an error might occur that identifies the installed command as unrecognized. This can happen when the binary path is set incorrectly.
 
-To preview the site in your web browser navigate to [http://localhost:4000](http://localhost:4000).
+   To preview the site in your web browser navigate to [http://localhost:4000](http://localhost:4000).
 
 3. To build and test the local documentation site:
 
-```
-make dev
-```
+   ```bash
+   make dev
+   ```
 
 4. To Build the local documentation site:
 
-```
-make build
-```
+   ```bash
+   make build
+   ```
 
 5. Test the local documentation site locally:
 
-```
-make test
-```
+   ```bash
+   make test
+   ```
 
-**Note**: This is typically done before `make run`
+   **Note**: This is typically done before `make run`
 
 ## Commit changes
 
@@ -148,7 +149,7 @@ If you go to the project directory and execute the command `git status`, you'll 
 
 Add those changes to the branch you just created using the `git add` command:
 
-```
+```bash
 git add <file>
 ```
 
@@ -156,7 +157,7 @@ All commits should be signed off (`-s` flag on `git commit`). To use the `-s` op
 
 Now commit those changes using the git commit command:
 
-```
+```bash
 git commit -s -m "Add README.md"
 ```
 
@@ -164,13 +165,13 @@ git commit -s -m "Add README.md"
 
 Push your changes using the command `git push`:
 
-```
+```bash
 git push origin <add-your-branch-name>
 ```
 
 replacing `<add-your-branch-name>` with the name of the branch you created earlier.
 
-## Possible Errors 
+## Possible Errors
 
 When setting up a project locally, some errors can occur. Some of those are listed below.
 
@@ -180,7 +181,7 @@ Change to:
 
 Some users use the latest version of `ruby`, which is `>2.7` that does not have pre-added `webrick` support. If they are using `ruby` versions `>= 3.0.0`, they might see the error listed below.
 
-```
+```text
   Add the following to your Gemfile to avoid polling for changes:
     gem 'wdm', '>= 0.1.0' if Gem.win_platform?
  Auto-regeneration: enabled for 'C:/Users/yourUserName/Desktop/open-horizon/open-horizon.github.io'
@@ -207,13 +208,13 @@ To solve this error, add `webrick` and `wdm` to your local `Gemfile` by using th
 
 add webrick:
 
-```
+```bash
 bundle add webrick
 ```
 
 add wdm:
 
-```
+```bash
 gem install wdm
 ```
 
@@ -221,29 +222,29 @@ gem install wdm
 
 If you go to your repository on GitHub, you'll see a `Compare & pull request button`. Click on that button.
 
-<img style="float: right;" src="img/compare-and-pull.jpg" alt="create a pull request" />
+<img style="float: right;" src="img/compare-and-pull.jpg" alt="create a pull request"/>
 
 Now submit the pull request by clicking `Create pull request`.
 
-<img style="float: right;" src="img/submit-pull-request.jpg" alt="submit pull request" />
+<img style="float: right;" src="img/submit-pull-request.jpg" alt="submit pull request"/>
 
-You will get a notification email once the changes have been merged.
+You will get a notification email after the changes have been merged.
 
 # Clean Up
 
 ## Delete the branch
 
-Once your Pull Request has been approved/merged, you are safe to delete the branch created earlier. Change to the repository directory on your computer and execute the following commands to delete the branch:
+After your Pull Request has been approved/merged, you are safe to delete the branch created earlier. Change to the repository directory on your computer and execute the following commands to delete the branch:
 
 Delete the local branch:
 
-```
+```bash
 git branch -d <branch-name>
 ```
 
 Delete remote branch:
 
-```
+```bash
 git push origin :<branch-name>
 ```
 
@@ -253,7 +254,7 @@ Connect your local repository to the original, upstream repository by adding it 
 
 For more information, see [Sync a fork of a repository to keep it up-to-date with the upstream repository.](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork)
 
-## 📌 Our valuable contributors👩‍💻👨‍💻 :
+## 📌 Our valuable contributors👩‍💻👨‍💻
 
 <table>
   <tr>
