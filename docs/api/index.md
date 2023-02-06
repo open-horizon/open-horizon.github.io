@@ -35,3 +35,4 @@ For most users, the `hzn` command line interface (CLI) tool, which calls these A
 * [Exchange API](./exchange_swagger.html)
 * [MMS API](./mms_swagger.html)
 * [SDO API](./sdo_swagger.html)
+* [FDO API](./fdo_swagger.html)
