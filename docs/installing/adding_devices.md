@@ -126,7 +126,7 @@ Prepare your device by installing {{site.data.keyword.rhel}} 8.x or 9.x
    dnf module install container-tools:rhel8
    ```
 
-2. Switch the network stack from CNI to Netavark. The {{site.data.keyword.horizon}} agent requires the network backend to be configured to use Netavark instead of CNI so that the agent can set up networking scenarios such as dependent services between containers. Follow the steps in the Red Hat documentation [switching the network stack ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/building_running_and_managing_containers/index#proc_switching-the-network-stack-from-cni-to-netavark_assembly_setting-container-network-modes){:target="_blank"}{: .externalLink} chapter.
+2. Switch the network stack from Container Network Interface (CNI) to Netavark. The {{site.data.keyword.horizon}} agent requires the network backend to be configured to use Netavark instead of CNI so that the agent can set up networking scenarios such as dependent services between containers. Follow the steps in the Red Hat documentation [switching the network stack ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/building_running_and_managing_containers/index#proc_switching-the-network-stack-from-cni-to-netavark_assembly_setting-container-network-modes){:target="_blank"}{: .externalLink} chapter.
 
 If you are running {{site.data.keyword.rhel}} 8.5 (or earlier), remove Podman and other pre-included packages, then install Docker as described here.
 

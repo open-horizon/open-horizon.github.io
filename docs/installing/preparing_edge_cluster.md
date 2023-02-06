@@ -20,7 +20,7 @@ nav_order: 1
 # Preparing an edge cluster
 {: #preparing_edge_cluster}
 
-Perform the following tasks to install an edge cluster and get it ready for the {{site.data.keyword.edge_notm}} agent:
+Perform the following tasks to install an edge cluster and prepare it for the {{site.data.keyword.edge_notm}} agent.
 
 Install one of these edge clusters and prepare it for the {{site.data.keyword.edge_notm}} agent:
 - [Preparing an edge cluster](#preparing_edge_cluster)
@@ -39,7 +39,7 @@ Install one of these edge clusters and prepare it for the {{site.data.keyword.ed
 ## Install and configure a k3s edge cluster
 {: #install_k3s_edge_cluster}
 
-This content provides a summary of how to install k3s (rancher), a lightweight and small Kubernetes cluster, on Ubuntu 18.04. For more information, see the [k3s documentation ](https://rancher.com/docs/k3s/latest/en/){:target="_blank"}{: .externalLink}.
+This content provides a summary of how to install k3s (rancher), a lightweight and small Kubernetes cluster, on Ubuntu Linux AMD64. For more information, see the [k3s documentation ](https://rancher.com/docs/k3s/latest/en/){:target="_blank"}{: .externalLink}.
 
 **Note**: If installed, uninstall kubectl before completing the following steps.
 
@@ -50,7 +50,7 @@ This content provides a summary of how to install k3s (rancher), a lightweight a
    ```bash
    hostname
    ```
-    {: codeblock}
+   {: codeblock}
 
    If the full hostname of your machine contains fewer than two dots, change the hostname:
 
