@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2022
-lastupdated: "2022-07-15"
+years: 2022 - 2023
+lastupdated: "2023-02-06"
 title: "Installing the agent"
 
 parent: Edge clusters
@@ -21,6 +21,7 @@ nav_order: 1
 {: #importing_clusters}
 
 **Note**: {{site.data.keyword.ieam}} agent installation requires cluster admin access on the edge cluster.
+Additionally, the jq command-line JSON processor must be installed prior to running the agent install script.
 
 Begin by installing the {{site.data.keyword.edge_notm}} agent on one of these types of Kubernetes edge clusters:
 
@@ -47,12 +48,13 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
    ```
    {: codeblock}
 
-2. If you have not completed the steps in [Creating your API key](../hub/prepare_for_edge_nodes.md), do that now. This process creates an API key, locates some files, and gathers environment variable values that are needed when you set up edge nodes. Set the same environment variables on this edge cluster:
+2. If you have not completed the steps in [Creating your API key](../hub/prepare_for_edge_nodes.md), do that now. This process creates an API key, locates some files, and gathers environment variable values that are needed when you set up edge nodes. Set the same environment variables for this edge cluster.  Set the `HZN_NODE_ID` of the edge cluster.
 
    ```bash
    export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
    export HZN_ORG_ID=<your-exchange-organization>
    export HZN_FSS_CSSURL=https://<management-hub-ingress>/edge-css/
+   export HZN_NODE_ID=<edge-cluster-node-name>
    ```
    {: codeblock}
 
@@ -314,7 +316,7 @@ Setting node policy on this edge cluster can cause deployment policies to deploy
 
    ```bash
    cat << 'END_ALIASES' >> ~/.bash_aliases
-   alias getagentpod='kubectl -n openhorizon-agent get pods --selector=app=agent -o jsonpath={.items[*].metadata.name}'
+   alias getagentpod='kubectl -n openhorizon-agent get pods --selector=app=agent -o jsonpath={.items[].metadata.name}'
    alias hzn='kubectl -n openhorizon-agent exec -i $(getagentpod) -- hzn'
    END_ALIASES
    source ~/.bash_aliases
@@ -334,7 +336,7 @@ Setting node policy on this edge cluster can cause deployment policies to deploy
    cat << 'EOF' > operator-example-node.policy.json
    {
      "properties": [
-       { "name": "openhorizon.example", "value": "operator" }
+       { "name": "openhorizon.example", "value": "nginx-operator" }
      ]
    }
    EOF

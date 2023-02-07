@@ -5,8 +5,6 @@
 <p align="center">
 <a href="https://github.com/open-horizon/open-horizon.github.io" alt="GitHub contributors">
 <img src="https://img.shields.io/github/contributors/open-horizon/open-horizon.github.io.svg"/></a>
-<a href="https://github.com/open-horizon/open-horizon.github.io" alt="anazdocscopy.yml">
-<img src="https://github.com/open-horizon/open-horizon.github.io/actions/workflows/anaxdocscopy.yml/badge.svg"/></a>
 <a href="https://github.com/open-horizon/open-horizon.github.io" alt="Check_broken_link.yml">
 <img src="https://github.com/open-horizon/open-horizon.github.io/actions/workflows/Check_broken_link.yml/badge.svg"/></a>
 <a href="https://github.com/open-horizon/open-horizon.github.io" alt="Twitter Follow">
