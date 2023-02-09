@@ -117,7 +117,7 @@ cat /etc/default/horizon
 
 3. Publish your service to {{site.data.keyword.edge_notm}}. Now that you verified that your service code runs as expected in the simulated agent environment, publish the service to {{site.data.keyword.horizon_exchange}} so that it becomes available for deployment to your edge nodes.
 
-   The following **publish** command uses the **horizon/service.definition.json** file and your key pair to sign and publish your service to {{site.data.keyword.  horizon_exchange}}. It also pushes your image to Docker Hub.
+   The following **publish** command uses the **horizon/service.definition.json** file and your key pair to sign and publish your service to {{site.data.keyword.horizon_exchange}}. It also pushes your image to Docker Hub.
 
    ```bash
    hzn exchange service publish -f horizon/service.definition.json

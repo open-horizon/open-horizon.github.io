@@ -156,7 +156,7 @@ Fill out the fields in **my_metadata.json** using one of these two options:
 
 1. Send the MMS object to the edge nodes running with policy.
 
-   In this example, camera edge nodes node1, node2, and node3 are registered with policy. **weaponDetector** is one of the services running on the nodes, and youwant your model file to be used by the **weaponDetector** service running on the camera edge nodes. Because the target nodes are registered with policy, onlyuse **destinationOrgID** and **destinationPolicy**. Set the **ObjectType** field to **model**, but it could be set to any string that is meaningful to theservice that retrieves the object.
+   In this example, camera edge nodes node1, node2, and node3 are registered with policy. **weaponDetector** is one of the services running on the nodes, and you want your model file to be used by the **weaponDetector** service running on the camera edge nodes. Because the target nodes are registered with policy, only use **destinationOrgID** and **destinationPolicy**. Set the **ObjectType** field to **model**, but it could be set to any string that is meaningful to the service that retrieves the object.
 
    In this scenario, the metadata file can be:
 
