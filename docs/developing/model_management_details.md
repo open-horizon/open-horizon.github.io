@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2021 - 2023
+lastupdated: "2023-02-09"
 
 title: Model Management Service
 
@@ -91,20 +91,20 @@ For example, a user operates three cameras where a machine learning service (**w
 
 Before publishing the model, issue the **hzn mms status** command to check the MMS status. Check **heathStatus** under **general** and **dbStatus** under **dbHealth**. The values of these fields should be green, which indicate that CSS and the database are running.
 
-```
+```bash
 $ hzn mms status
 {
-  "general": {
-    "nodeType": "CSS",
-    "healthStatus": "green",
-    "upTime": 21896
-  },
-  "dbHealth": {
-    "dbStatus": "green",
-    "disconnectedFromDB": false,
-    "dbReadFailures": 0,
-    "dbWriteFailures": 0
-  }
+  "general": {
+    "nodeType": "CSS",
+    "healthStatus": "green",
+    "upTime": 21896
+  },
+  "dbHealth": {
+    "dbStatus": "green",
+    "disconnectedFromDB": false,
+    "dbReadFailures": 0,
+    "dbWriteFailures": 0
+  }
 }
 ```
 {: codeblock}
@@ -117,13 +117,13 @@ The metadata file is a json file.
 
 1. View a template of metadata file:
 
-   ```
+   ```bash
    hzn mms object new
    ```
    {: codeblock}
 2. Copy the template to a file named **my_metadata.json**:
 
-   ```
+   ```bash
    hzn mms object new >> my_metadata.json
    ```
    {: codeblock}
@@ -156,29 +156,29 @@ Fill out the fields in **my_metadata.json** using one of these two options:
 
 1. Send the MMS object to the edge nodes running with policy.
 
-   In this example, camera edge nodes node1, node2, and node3 are registered with policy. **weaponDetector** is one of the services running on the nodes, and you want your model file to be used by the **weaponDetector** service running on the camera edge nodes. Because the target nodes are registered with policy, only use **destinationOrgID** and **destinationPolicy**. Set the **ObjectType** field to **model**, but it could be set to any string that is meaningful to the service that retrieves the object.
+   In this example, camera edge nodes node1, node2, and node3 are registered with policy. **weaponDetector** is one of the services running on the nodes, and youwant your model file to be used by the **weaponDetector** service running on the camera edge nodes. Because the target nodes are registered with policy, onlyuse **destinationOrgID** and **destinationPolicy**. Set the **ObjectType** field to **model**, but it could be set to any string that is meaningful to theservice that retrieves the object.
 
    In this scenario, the metadata file can be:
 
    ```json
    {
-     "objectID": "my_model",
-     "objectType": "model",
-     "destinationOrgID": "$HZN_ORG_ID",
-     "destinationPolicy": {
-       "properties": [],
-       "constraints": [],
-       "services": [
-         {
-           "orgID": "$SERVICE_ORG_ID",
-           "arch": "$ARCH",
-           "serviceName": "weaponDetector",
-           "version": "$VERSION"
-         }
-       ]
-     },
-     "version": "1.0.0",
-     "description": "weaponDetector model"
+     "objectID": "my_model",
+     "objectType": "model",
+     "destinationOrgID": "$HZN_ORG_ID",
+     "destinationPolicy": {
+       "properties": [],
+       "constraints": [],
+       "services": [
+         {
+           "orgID": "$SERVICE_ORG_ID",
+           "arch": "$ARCH",
+           "serviceName": "weaponDetector",
+           "version": "$VERSION"
+         }
+       ]
+     },
+     "version": "1.0.0",
+     "description": "weaponDetector model"
    }
    ```
    {: codeblock}
@@ -194,14 +194,14 @@ Fill out the fields in **my_metadata.json** using one of these two options:
 
    The metadata file is similar to:
 
-   ```
+   ```json
    {
-     "objectID": "my_model",
-     "objectType": "model",
-     "destinationOrgID": "$HZN_ORG_ID",
-     "destinationType": "pattern.weapon-detector",
-     "version": "1.0.0",
-     "description": "weaponDetector model"
+     "objectID": "my_model",
+     "objectType": "model",
+     "destinationOrgID": "$HZN_ORG_ID",
+     "destinationType": "pattern.weapon-detector",
+     "version": "1.0.0",
+     "description": "weaponDetector model"
    }
    ```
    {: codeblock}
@@ -212,7 +212,7 @@ Now, the model file and metadata file are ready to publish.
 
 Publish the object with both the metadata and data file:
 
-```
+```bash
 hzn mms object publish -m my_metadata.json -f my_model
 ```
 {: codeblock}
@@ -221,72 +221,71 @@ hzn mms object publish -m my_metadata.json -f my_model
 
 List the MMS object with this **objectID** and **objectType** within the given organization:
 
-```
+```bash
 hzn mms object list --objectType=model --objectId=my_model
 ```
 {: codeblock}
 
-This is the result of the command will be similar to:
+The result of the command will be similar to:
 
-```
-Listing objects in org userdev:
+```json
 [
-  {
-    "objectID": "my_model",
-    "objectType": "model"
-  }
+  {
+    "objectID": "my_model",
+    "objectType": "model"
+  }
 ]
 ```
 
 To show all of the MMS object metadata, add **-l** to the command:
 
-```
+```bash
 hzn mms object list --objectType=model --objectId=my_model -l
 ```
 {: codeblock}
 
 To show object status and destinations along with the object, add **-d** to the command. The following destination result indicates that the object is delivered to the cameras: node1, node2, and node3. 
 
-```
+```bash
 hzn mms object list --objectType=model --objectId=my_model -d
 ```
 {: codeblock}
 
 The output of the previous command looks like:
 
-```
+```json
 [
-  {
-    "objectID": "my_model",
-    "objectType": "model",
-    "destinations": [
-      {
-        "destinationType": "pattern.mask-detector",
-        "destinationID": "node1",
-        "status": "delivered",
-        "message": ""
-      },
-      {
-        "destinationType": "pattern.mask-detector",
-        "destinationID": "node2",
-        "status": "delivered",
-        "message": ""
-      },
-      {
-        "destinationType": "pattern.mask-detector",
-        "destinationID": "node3",
-        "status": "delivered",
-        "message": ""
-      },
-    ],
-    "objectStatus": "ready"
-  }
+  {
+    "objectID": "my_model",
+    "objectType": "model",
+    "destinations": [
+      {
+        "destinationType": "pattern.mask-detector",
+        "destinationID": "node1",
+        "status": "delivered",
+        "message": ""
+      }
+      {
+        "destinationType": "pattern.mask-detector",
+        "destinationID": "node2",
+        "status": "delivered",
+        "message": ""
+      }
+      {
+        "destinationType": "pattern.mask-detector",
+        "destinationID": "node3",
+        "status": "delivered",
+        "message": ""
+      },
+    ],
+    "objectStatus": "ready"
+  }
 ]
 ```
 
 More advanced filtering options are available to narrow the MMS object list. To see a full list of flags:
 
-```
+```bash
 hzn mms object list --help
 ```
 {: codeblock}
@@ -295,7 +294,7 @@ hzn mms object list --help
 
 Delete the MMS object:
 
-```
+```bash
 hzn mms object delete --type=model --id=my_model
 ```
 {: codeblock}
@@ -306,7 +305,7 @@ The object is removed from the MMS.
 
 Models can change over time. To publish an updated model, use **hzn mms object publish** with the same metadata file (version value **upgrade** is suggested). With the MMS, there is no need to update models one by one for all three cameras. Use this to update the **my_model** object on all three nodes.
 
-```
+```bash
 hzn mms object publish -m my_metadata.json -f my_updated_model
 ```
 {: codeblock}
@@ -317,46 +316,46 @@ Note: See [Conventions used in this document](../getting_started/document_conven
 
 The following is an example of the output of the **hzn mms object new** command used to generate a template of the MMS object metadata:
 
-```
+```json
 {
-  "objectID": "",            /* Required: A unique identifier of the object. */
-  "objectType": "",          /* Required: The type of the object. */
-  "destinationOrgID": "$HZN_ORG_ID", /* Required: The organization ID of the object (an object belongs to exactly one organization). */
-  "destinationID": "",       /* The node id (without org prefix) where the object should be placed. */
-                             /* If omitted the object is sent to all nodes with the same destinationType. */
-                             /* Delete this field when you are using destinationPolicy. */
-  "destinationType": "",     /* The pattern in use by nodes that should receive this object. */
-                             /* If omitted (and if destinationsList is omitted too) the object is broadcast to all known nodes. */
-                             /* Delete this field when you are using policy. */
-  "destinationsList": null,  /* The list of destinations as an array of pattern:nodeId pairs that should receive this object. */
-                             /* If provided, destinationType and destinationID must be omitted. */
-                             /* Delete this field when you are using policy. */
-  "destinationPolicy": {     /* The policy specification that should be used to distribute this object. */
-                             /* Delete these fields if the target node is using a pattern. */
-    "properties": [          /* A list of policy properties that describe the object. */
-      {
-        "name": "",
-        "value": null,
-        "type": ""           /* Valid types are string, bool, int, float, list of string (comma separated), version. */
-                             /* Type can be omitted if the type is discernable from the value, e.g. unquoted true is boolean. */
-      }
-    ],
-    "constraints": [         /* A list of constraint expressions of the form <property name> <operator> <property value>, separated by boolean operators AND (&&) or OR (||). */
-      ""
-    ],
-    "services": [            /* The service(s) that will use this object. */
-      {
-        "orgID": "",         /* The org of the service. */
-        "serviceName": "",   /* The name of the service. */
-        "arch": "",          /* Set to '*' to indcate services of any hardware architecture. */
-        "version": ""        /* A version range. */
-      }
-    ]
-  },
-  "expiration": "",          /* A timestamp/date indicating when the object expires (it is automatically deleted). The time stamp should be provided in RFC3339 format.  */
-  "version": "",             /* Arbitrary string value. The value is not semantically interpreted. The Model Management System does not keep multiple version of an object. */
-  "description": "",         /* An arbitrary description. */
-  "activationTime": ""       /* A timestamp/date as to when this object should automatically be activated. The timestamp should be provided in RFC3339 format. */
+  "objectID": "",            /* Required: A unique identifier of the object. */
+  "objectType": "",          /* Required: The type of the object. */
+  "destinationOrgID": "$HZN_ORG_ID", /* Required: The organization ID of the object (an object belongs to exactly one organization). */
+  "destinationID": "",       /* The node id (without org prefix) where the object should be placed. */
+                             /* If omitted the object is sent to all nodes with the same destinationType. */
+                             /* Delete this field when you are using destinationPolicy. */
+  "destinationType": "",     /* The pattern in use by nodes that should receive this object. */
+                             /* If omitted (and if destinationsList is omitted too) the object is broadcast to all known nodes. */
+                             /* Delete this field when you are using policy. */
+  "destinationsList": null,  /* The list of destinations as an array of pattern:nodeId pairs that should receive this object. */
+                             /* If provided, destinationType and destinationID must be omitted. */
+                             /* Delete this field when you are using policy. */
+  "destinationPolicy": {     /* The policy specification that should be used to distribute this object. */
+                             /* Delete these fields if the target node is using a pattern. */
+    "properties": [          /* A list of policy properties that describe the object. */
+      {
+        "name": "",
+        "value": null,
+        "type": ""           /* Valid types are string, bool, int, float, list of string (comma separated), version. */
+                             /* Type can be omitted if the type is discernable from the value, e.g. unquoted true is boolean. */
+      }
+    ],
+    "constraints": [         /* A list of constraint expressions of the form <property name> <operator> <property value>, separated by boolean operators AND (&&) or OR (||). */
+      ""
+    ],
+    "services": [            /* The service(s) that will use this object. */
+      {
+        "orgID": "",         /* The org of the service. */
+        "serviceName": "",   /* The name of the service. */
+        "arch": "",          /* Set to '*' to indcate services of any hardware architecture. */
+        "version": ""        /* A version range. */
+      }
+    ]
+  },
+  "expiration": "",          /* A timestamp/date indicating when the object expires (it is automatically deleted). The time stamp should be provided in RFC3339 format.  */
+  "version": "",             /* Arbitrary string value. The value is not semantically interpreted. The Model Management System does not keep multiple version of an object. */
+  "description": "",         /* An arbitrary description. */
+  "activationTime": ""       /* A timestamp/date as to when this object should automatically be activated. The timestamp should be provided in RFC3339 format. */
 }
 ```
 {: codeblock}
