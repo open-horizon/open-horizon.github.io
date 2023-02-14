@@ -17,7 +17,7 @@ nav_order: 2
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
 
-## Before you begin
+# Before you begin
 {: #secrets_begin}
 
 Complete the prerequisite steps in [Preparing to create an edge service](service_containers.md). As a result, these environment variables should be set, these commands should be installed, and these files should exist:

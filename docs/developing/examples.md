@@ -1,3 +1,17 @@
+---
+
+copyright:
+years: 2023
+lastupdated: "2023-02-08"
+title: Open Horizon Examples index
+description: ""
+
+parent: Developing edge services
+nav_order: 1
+---
+
+# Open Horizon examples index
+
 Hello World examples | Description
 ------------------------|-------------
 [web-helloworld-c](https://github.com/open-horizon-services/web-helloworld-c) | Hello World Open Horizon service container implemented in C |
