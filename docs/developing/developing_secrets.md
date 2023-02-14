@@ -6,6 +6,7 @@ title: Hello world with a secret
 description: This example teaches you how to develop an Open Horizon service that uses secrets. Secrets ensure that login credentials and other sensitive information are kept secure.
 
 parent: Secrets Manager
+grand_parent: Developing edge services
 nav_order: 2
 ---
 
