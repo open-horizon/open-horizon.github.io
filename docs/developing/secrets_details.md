@@ -1,12 +1,11 @@
 ---
-
 copyright:
-years: 2021 - 2022
-lastupdated: "2022-03-10"
+years: 2021 - 2023
+lastupdated: "2023-02-14"
 title: "Secrets Manager details"
 
-parent: Further reading for devices
-nav_order: 4
+parent: Secrets Manager
+nav_order: 1
 ---
 
 {:shortdesc: .shortdesc}
@@ -34,15 +33,18 @@ The names of secrets in the Secrets Manager are never known by a service impleme
 Secrets are stored in the KV V2 Secrets Engine by prefixing the secret name with openhorizon and the user's organization. This ensures that secrets created by {{site.data.keyword.ieam}} users are isolated from other uses of the Vault by other integrations, and it ensures that multi-tenant isolation is maintained.
 
 Secret names are managed by {{site.data.keyword.ieam}} org admins (or users when using user private secrets). Vault Access Control Lists (ACLs) control which secrets an {{site.data.keyword.ieam}} user is able to manage. This is accomplished through a Vault authentication plugin that delegates user authentication to the {{site.data.keyword.ieam}} exchange. Upon successfully authenticating a user, the authentication plugin in the Vault will create a set of ACL policies specific to this user. A user with admin privileges in the exchange can:
+
 - Add, remove, read and list all organization wide secrets.
 - Add, remove, read and list all secrets private to that user.
 - Remove and list the user private secrets of other users in the org, but cannot add or read those secrets.
 
 A user without admin privileges can:
+
 - List all organization wide secrets, but cannot add, remove or read them.
 - Add, remove, read and list all secrets private to that user.
 
 The {{site.data.keyword.ieam}} {{site.data.keyword.agbot}} also has access to secrets in order to be able to deploy them to edge nodes. The {{site.data.keyword.agbot}} maintains a renewable login to the Vault and is given ACL policies specific to its purposes. An {{site.data.keyword.agbot}} can:
+
 - Read org wide secrets and any user private secret in any org, but it cannot add, remove or list any secrets.
 
 The Exchange root user and Exchange hub admins have no permissions in the Vault. See [Role-Based Access Control](../../user_management/rbac) for more info on these roles.

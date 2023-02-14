@@ -1,12 +1,11 @@
 ---
-
 copyright:
-years: 2021 - 2022
+years: 2021 - 2023
 lastupdated: "2022-05-31"
 title: "Further reading"
 
 parent: Developing edge services
-nav_order: 4
+nav_order: 5
 has_children: true
 has_toc: false
 ---
