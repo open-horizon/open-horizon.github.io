@@ -1,12 +1,15 @@
 ---
 
 copyright:
-years: 2021
+years: 2021 - 2023
 lastupdated: "2021-07-20"
 title: "Secrets Manager"
 description: "Overview of Secrets Manager"
 
-nav_order: 10
+parent: Developing edge services
+nav_order: 4
+has_children: true
+has_toc: false
 ---
 
 {:new_window: target="blank"}
