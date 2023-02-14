@@ -5,6 +5,7 @@ lastupdated: "2023-02-14"
 title: "Secrets Manager details"
 
 parent: Secrets Manager
+grand_parent: Developing edge services
 nav_order: 1
 ---
 
