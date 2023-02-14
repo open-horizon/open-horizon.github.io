@@ -2,7 +2,7 @@
 
 copyright:
 years: 2021 - 2023
-lastupdated: "2023-02-01"
+lastupdated: "2023-02-07"
 layout: page
 title: "Developer learning path"
 description: A set of sequential resources for the developer learning about Open Horizon
@@ -11,13 +11,11 @@ parent: Quick Start
 nav_order: 5
 ---
 
-## Introduction
+# Edge developer learning path
 
 This is a set of resources compiled from new developers who have found them to be useful.  If you have any proposed improvements, please [open an issue](https://github.com/open-horizon/open-horizon.github.io/issues/new) and suggest it.
 
 ## Resources to learn more about the Open Horizon components
-
-> NOTE: this section is contributed by Debabrata Mandal.
 
 The following set of resources consisting of links to past Open Horizon meetings, videos and readme sections are useful to get started with the various segments of the Open Horizon project (excluding the SDO-services and Edge Sync Service).
 

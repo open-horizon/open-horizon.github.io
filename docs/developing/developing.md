@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2021 - 2023
+lastupdated: "2023-02-08"
 title: Developing an edge service for devices
 description: ""
 
@@ -22,9 +22,9 @@ To begin developing edge services for {{site.data.keyword.edge_notm}} ({{site.da
 
 This diagram shows the typical interactions between the components within {{site.data.keyword.horizon}}.
 
-<img src="../../images/edge/03a_Developing_edge_service_for_device.svg" style="margin: 3%" alt="Edge devices"> 
+<img src="../../images/edge/03a_Developing_edge_service_for_device.svg" style="margin: 3%" alt="Edge devices">
 
-## Examples
+# Examples
 {: #edge_devices_ex_examples}
 
 Use your credentials and signing keys to complete the development examples. These examples show you how to build simple services and help you learn about {{site.data.keyword.ieam}} development basics.
@@ -65,4 +65,3 @@ With {{site.data.keyword.ieam}}, you can develop any service containers that you
 * [APIs](../api/index.md)
 
 {{site.data.keyword.ieam}} provides RESTful APIs for enabling components to collaborate, and to enable your organization's developers and users to control the components.
-

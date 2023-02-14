@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2021 - 2023
+lastupdated: "2023-02-08"
 title: Development details
 description: The following content provides more details on the software development practices and concepts for Open Horizon (OH) development.
 
@@ -19,7 +19,7 @@ nav_order: 4
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
 
-## Introduction
+# Edge development concepts
 {: #developing_intro}
 
 {{site.data.keyword.edge_notm}} ({{site.data.keyword.edge_abbr}}) is built on the [Open Horizon](https://www.lfedge.org/projects/openhorizon/) open source software.
