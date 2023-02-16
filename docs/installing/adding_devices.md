@@ -307,9 +307,9 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 {: #proc-mac}
 
 1. Prepare your device.
-   1. Purchase a Docker Desktop license, if necessary, and install the most recent version of Docker on your device. For more information, see [Install Docker ](https://docs.docker.com/docker-for-mac/install/){:target="_blank"}{: .externalLink}{:target="_blank"}{: .externalLink}
+   1. Purchase a Docker Desktop license, if necessary, and install the most recent version of Docker on your device. For more information, see the [Docker installation for Mac ](https://docs.docker.com/docker-for-mac/install/){:target="_blank"}{: .externalLink} documentation.
 
-   2. [Use Homebrew to install socat ](https://macappstore.org/socat/){:target="_blank"}{: .externalLink}{:target="_blank"}{: .externalLink}.
+   2. [Use Homebrew to install socat ](https://macappstore.org/socat/){:target="_blank"}{: .externalLink}
 
 ## What's next
 
