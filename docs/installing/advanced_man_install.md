@@ -3,7 +3,7 @@
 copyright:
 years: 2021 - 2023
 lastupdated: "2023-02-01"
-title: "Preparing an edge device"
+title: "Manual agent install"
 
 parent: Edge devices info
 grand_parent: Edge devices
