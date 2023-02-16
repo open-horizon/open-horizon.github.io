@@ -47,7 +47,7 @@ The following instructions guide you through the process of installing the requi
 
 **Notes**:
 
-- Installation of edge devices with {{site.data.keyword.fedora}} or SuSE is only supported by the [Advanced manual agent installation and registration](../installing/advanced_man_install.md) method.
+- Installation of edge devices with SuSE is only supported by the [Advanced manual agent installation and registration](../installing/advanced_man_install.md) method.
 - CentOS and {{site.data.keyword.rhel}} 8.5 or earlier on {{site.data.keyword.ieam}} {{site.data.keyword.version}} only support Docker as a container engine.
 - While {{site.data.keyword.ieam}} {{site.data.keyword.version}} supports running {{site.data.keyword.rhel}} 8.x with Docker, it is officially unsupported by {{site.data.keyword.rhel}}.
 - {{site.data.keyword.ieam}} {{site.data.keyword.version}} supports Podman 4.x on {{site.data.keyword.rhel}} 8.6, {{site.data.keyword.rhel}} 9.0 - 9.1, and {{site.data.keyword.fedora}} 36, 37 Workstation.
@@ -85,7 +85,7 @@ To install and configure your edge device, click the link that represents your e
 
 - 64-bit Intel&reg; or AMD device or virtual machine
 - An internet connection for your device (wired or WiFi)
-- (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware.
+- (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware
 
 ### Procedure
 {: #proc-x86}
@@ -104,7 +104,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 
 - 64-bit Intel&reg; device, AMD device, ppc64le device, or virtual machine
 - An internet connection for your device (wired or WiFi)
-- (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware.
+- (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware
 
 ### Procedure
 {: #proc-rhel8}
@@ -137,7 +137,7 @@ If you are running {{site.data.keyword.rhel}} 8.5 (or earlier), remove Podman an
    ```
    {: codeblock}
 
-2. Remove remaining artifacts & files:
+2. Remove remaining artifacts and files:
 
    ```bash
    rm -rf /etc/containers/* /var/lib/containers/* /etc/docker /etc/subuid* /etc/subgid*
@@ -171,7 +171,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 
 - ppc64le device or virtual machine
 - An internet connection for your device (wired or WiFi)
-- (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware.
+- (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware
 
 ### Procedure
 {: #proc-ppc64le}
@@ -192,9 +192,9 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 - Raspberry Pi A+, B+, 2B, Zero-W, or Zero-WH
 - MicroSD flash card (32 GB preferred)
 - An appropriate power supply for your device (2 Amp or greater preferred)
-- An internet connection for your device (wired or WiFi).
-  **Note**: Some devices require extra hardware for supporting WiFi.
-- (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware.
+- An internet connection for your device (wired or WiFi)
+  **Note**: Some devices require extra hardware for supporting WiFi
+- (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware
 
 ### Procedure
 {: #proc-pi}
@@ -218,7 +218,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
       ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev update_config=1
       network={
       ssid="<your-network-ssid>"
-      psk="<your-network-passphrase"
+      psk="<your-network-passphrase>"
       key_mgmt=WPA-PSK>
       }
       ```
@@ -307,18 +307,9 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 {: #proc-mac}
 
 1. Prepare your device.
-   1. Install the most recent version of Docker on your device. For more information, see [Install Docker ](https://docs.docker.com/docker-for-mac/install/){:target="_blank"}{: .externalLink}{:target="_blank"}{: .externalLink}.
+   1. Purchase a Docker Desktop license, if necessary, and install the most recent version of Docker on your device. For more information, see [Install Docker ](https://docs.docker.com/docker-for-mac/install/){:target="_blank"}{: .externalLink}{:target="_blank"}{: .externalLink}
 
-   2. **Install socat**. You can use either of the following methods to install socat:
-
-      - [Use Homebrew to install socat ](https://macappstore.org/socat/){:target="_blank"}{: .externalLink}{:target="_blank"}{: .externalLink}.
-
-      - If MacPorts are already installed, use it to install socat:
-
-        ```bash
-        sudo port install socat
-        ```
-        {: codeblock}
+   2. [Use Homebrew to install socat ](https://macappstore.org/socat/){:target="_blank"}{: .externalLink}{:target="_blank"}{: .externalLink}.
 
 ## What's next
 
