@@ -18,7 +18,7 @@ show-args:
 
 # make init: install and update all dependencies. run once before using tools each day
 init:
-	$(GEM) update --system 3.4.3
+	$(GEM) update --system 3.4.7
 	$(GEM) install bundler
 	$(BUNDLE) update --bundler
 	$(BUNDLE) config set --local deployment 'true'

@@ -73,7 +73,7 @@ GEM
       jemoji (= 0.12.0)
       kramdown (= 2.3.2)
       kramdown-parser-gfm (= 1.1.0)
-      liquid (= 4.0.3)
+      liquid (= 4.0.4)
       mercenary (~> 0.3)
       minima (= 2.5.1)
       nokogiri (>= 1.13.6, < 2.0)
@@ -99,7 +99,7 @@ GEM
       jekyll-sass-converter (~> 1.0)
       jekyll-watch (~> 2.0)
       kramdown (>= 1.17, < 3)
-      liquid (~> 4.0)
+      liquid (~> 4.0.4)
       mercenary (~> 0.3.3)
       pathutil (~> 0.9)
       rouge (>= 1.7, < 4)
@@ -207,7 +207,7 @@ GEM
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
-    liquid (4.0.3)
+    liquid (4.0.4)
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -275,4 +275,4 @@ DEPENDENCIES
   webrick (~> 1.7)
 
 BUNDLED WITH
-   2.4.3
+   2.4.7
