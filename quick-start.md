@@ -13,13 +13,13 @@ has_toc: false
 
 ### Overview
 
-Open Horizon is a middleware solution designed to manage the deployment and service software lifecycle of containerized applications. It also supports an optional separation of concerns between a service and related machine learning assets by providing a separate [model sync service](https://open-horizon.github.io/docs/developing/model_management_details/#model_management_details).  These solutions enable autonomous management of large fleets of edge compute nodes in various connected states.
+Open Horizon is a middleware solution designed to manage the deployment and service software lifecycle of containerized applications. It also supports an optional separation of concerns between a service and related machine learning assets by providing a separate [model sync service](developing/model_management_details.md#model_management_details).  These solutions enable autonomous management of large fleets of edge compute nodes in various connected states.
 
 Open Horizon allows you to install individual tools like the Management Hub control plane, the CLI for remote management using the command-line, or the anax Agent.  If you would like all three installed on a single machine, use the all-in-one installation provided below.
 
 ### All-in-one installation instructions
 
-To install a simple, developer-friendly version of [all the services on one device](https://open-horizon.github.io/docs/mgmt-hub/docs/), run the following one-liner as `root` on an x86_64 machine running Ubuntu 18.04 (see [all supported environments](https://open-horizon.github.io/docs/installing/adding_devices/#suparch-horizon)):
+To install a simple, developer-friendly version of [all the services on one device](docs/mgmt-hub/docs/index.md), run the following one-liner as `root` on an x86_64 machine running Ubuntu 18.04 (see [all supported environments](docs/installing/adding_devices.md#suparch-horizon)):
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/open-horizon/devops/master/mgmt-hub/deploy-mgmt-hub.sh | bash
@@ -65,7 +65,7 @@ If you've been provided with credentials by an administrator and just need to in
    curl -sSL https://github.com/open-horizon/anax/releases/latest/download/agent-install.sh | bash -s -- -i anax: -k ./agent-install.cfg -c css: -p IBM/pattern-ibm.helloworld -w '*' -T 120
    ```
 
-Alternatively, see the [detailed installation instructions](https://open-horizon.github.io/docs/installing/registration/#registration) for other methods of installing the Agent.
+Alternatively, see the [detailed installation instructions](docs/installing/registration.md#registration) for other methods of installing the Agent.
 
 ### Common requests
 
@@ -81,8 +81,8 @@ Alternatively, see the [detailed installation instructions](https://open-horizon
 
 ### Learn more
 
-[Developer Learning Path](/docs/getting_started/developer_learning_path/) page.
+[Developer Learning Path](docs/getting_started/developer_learning_path.md) page.
 
-From the [Getting Started Overview](/docs/getting_started/overview_oh/) page.
+From the [Getting Started Overview](docs/getting_started/overview_oh.md) page.
 
 From the [Open-Horizon Project Playlist](https://www.youtube.com/playlist?list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix) on YouTube.
