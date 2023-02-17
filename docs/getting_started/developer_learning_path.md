@@ -55,7 +55,7 @@ The following set of resources consisting of links to past Open Horizon meetings
 
       1. [Recording](https://zoom.us/rec/play/IlrDE_zkKkCcjYrqNp5RSo1-Up2EcIrkTlMndE3BtjtPK8GvZ8FGD3914gZGjZMRp4rltFFrslaEo5Xq.0QGVy6YtQRaZTZ55?startTime=1598534658000&_x_zm_rtaid=oC4Wb8hjTtCHn49H1M6i9g.1613742221653.b2e466b17a6979e0fba21e9209e5acfc&_x_zm_rhtaid=626){:target="_blank"}{: .externalLink} from the Management Hub WG.
 
-      2. [Readme](/docs/mgmt-hub/docs/index.md) guide.
+      2. [Readme](/docs/mgmt-hub/docs/) guide.
 
    d. Hands on practical
 
