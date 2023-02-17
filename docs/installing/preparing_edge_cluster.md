@@ -182,19 +182,19 @@ This content provides a summary of how to install k3s (rancher), a lightweight a
 
 5. Define this registry to docker as an insecure registry:
 
-   1. Create or add to **/etc/docker/daemon.json** (replacing `<registry-endpoint>` with the value of the `$REGISTRY_ENDPOINT` environment variable you obtained in a previous step).
+   1. Install docker (if not already installed):
+
+      ```bash
+      curl -fsSL get.docker.com | sh
+      ```
+      {: codeblock}
+
+   2. Create or add to **/etc/docker/daemon.json** (replacing `<registry-endpoint>` with the value of the `$REGISTRY_ENDPOINT` environment variable you obtained in a previous step).
 
       ```json
       {
         "insecure-registries": [ "<registry-endpoint>" ]
       }
-      ```
-      {: codeblock}
-
-   2. (optional) If needed, verify that docker is on your machine:
-
-      ```bash
-      curl -fsSL get.docker.com | sh
       ```
       {: codeblock}
 
@@ -208,7 +208,7 @@ This content provides a summary of how to install k3s (rancher), a lightweight a
 ## Install and configure a microk8s edge cluster
 {: #install_microk8s_edge_cluster}
 
-This content provides a summary of how to install microk8s, a lightweight and small Kubernetes cluster, on Ubuntu 18.04. (For more detailed instructions, see the [microk8s documentation](https://microk8s.io/docs).)
+This content provides a summary of how to install microk8s, a lightweight and small Kubernetes cluster, on Ubuntu Linux AMD64. (For more detailed instructions, see the [microk8s documentation](https://microk8s.io/docs).)
 
 **Note**: This type of edge cluster is meant for development and test because a single worker node Kubernetes cluster does not provide scalability or high availability.
 
@@ -294,14 +294,7 @@ This content provides a summary of how to install microk8s, a lightweight and sm
       ```
       {: codeblock}
 
-   4. (optional) Verify that docker is on your machine:
-
-      ```bash
-      curl -fsSL get.docker.com | sh
-      ```
-      {: codeblock}
-
-   5. Restart docker to pick up the change:
+   4. Restart docker to pick up the change:
 
       ```bash
       sudo systemctl restart docker

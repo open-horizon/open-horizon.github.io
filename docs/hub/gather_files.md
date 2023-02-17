@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2021 - 2023
+lastupdated: "2023-02-17"
 title: "Gather edge node files"
 
 parent: Install Open Horizon
@@ -43,7 +43,9 @@ The following steps assume that you have installed the **cloudctl** and **oc** C
    ```
    {: codeblock}
 
-3. Run the **edgeNodeFiles.sh** script to gather the necessary files and put them in the CSS (Cloud Sync Service) component of the Model Management System. (The **edgeNodeFiles.sh** script was installed as part of the **horizon-cli** package and should be in your path.)
+3. Run the **edgeNodeFiles.sh** script to gather the necessary files and put them in the CSS (Cloud Sync Service) component of the Model Management System. 
+
+   **Note**: The **edgeNodeFiles.sh** script was installed as part of the **horizon-cli** package and should be in your path.
 
    ```bash
    HZN_EXCHANGE_USER_AUTH='' edgeNodeFiles.sh ALL -c -p edge-packages-4.2.0
@@ -52,7 +54,7 @@ The following steps assume that you have installed the **cloudctl** and **oc** C
 
    On each edge node use the **-i 'css:'** flag of **agent-install.sh** to have it get the needed files from CSS.
 
-   **Note:** If you plan to use [SDO-enabled edge devices](../installing/sdo.md), you must run this form of the `edgeNodeFiles.sh` command.
+   **Note:** If you plan to use [FDO-enabled edge devices](../installing/fdo.md), you must run this form of the `edgeNodeFiles.sh` command.
 
 4. Alternatively, use **edgeNodeFiles.sh** to bundle the files in a tar file:
 
