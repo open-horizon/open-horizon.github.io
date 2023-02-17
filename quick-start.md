@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2021 - 2023
-lastupdated: "2023-02-16"
+lastupdated: "2023-02-17"
 layout: page
 title: "Quick Start"
 description: "A guide to get you using Open Horizon in minutes."
@@ -13,7 +13,7 @@ has_toc: false
 
 ### Overview
 
-Open Horizon is a middleware solution designed to manage the deployment and service software lifecycle of containerized applications. It also supports an optional separation of concerns between a service and related machine learning assets by providing a separate [model sync service](developing/model_management_details.md#model_management_details).  These solutions enable autonomous management of large fleets of edge compute nodes in various connected states.
+Open Horizon is a middleware solution designed to manage the deployment and service software lifecycle of containerized applications. It also supports an optional separation of concerns between a service and related machine learning assets by providing a separate [model sync service](/docs/developing/model_management_details.md#model_management_details).  These solutions enable autonomous management of large fleets of edge compute nodes in various connected states.
 
 Open Horizon allows you to install individual tools like the Management Hub control plane, the CLI for remote management using the command-line, or the anax Agent.  If you would like all three installed on a single machine, use the all-in-one installation provided below.
 
