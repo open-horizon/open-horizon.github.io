@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2021 - 2023
-lastupdated: "2023-02-14"
+lastupdated: "2023-02-17"
 title: Hello world with a secret
 description: This example teaches you how to develop an Open Horizon service that uses secrets. Secrets ensure that login credentials and other sensitive information are kept secure.
 
@@ -18,7 +18,12 @@ nav_order: 2
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
 
-# Before you begin
+# Hello world with a secret
+{: #secrets_hello_world}
+
+This example teaches you how to develop an {{site.data.keyword.edge_notm}} service that uses secrets. Secrets ensure that login credentials and other sensitive information are kept secure.
+
+## Before you begin
 {: #secrets_begin}
 
 Complete the prerequisite steps in [Preparing to create an edge service](service_containers.md). As a result, these environment variables should be set, these commands should be installed, and these files should exist:
