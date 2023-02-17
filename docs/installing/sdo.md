@@ -4,6 +4,9 @@ copyright:
 years: 2020 - 2022
 lastupdated: "2022-07-07"
 
+parent: Edge devices info
+grand_parent: Edge devices
+nav_order: 7
 ---
 
 {:new_window: target="blank"}

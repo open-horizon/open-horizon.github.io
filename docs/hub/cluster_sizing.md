@@ -94,6 +94,7 @@ The services that use [Kubernetes compute resources ](https://kubernetes.io/docs
 | Number of worker nodes | vCPUs per worker node | Memory per worker node (GB) | Local disk storage per worker node (GB) |
 | :---: | :---: | :---: | :---: |
 | 3 | 8 | 32 | 100 |
+{: caption="Table 1. Minimal default requirements for {{site.data.keyword.ieam}} configuration" caption-side="top"}
 
 **Note:** Some customer environments might require additional vCPUs per worker node or additional worker nodes, so more CPU capacity can be allocated to the Exchange component.
 

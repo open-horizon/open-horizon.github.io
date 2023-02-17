@@ -1,8 +1,7 @@
 ---
-
 copyright:
-years: 2020 - 2022
-lastupdated: "2022-03-17"
+years: 2020 - 2023
+lastupdated: "2023-02-17"
 title: "Installing the agent"
 
 parent: Edge devices info
@@ -37,7 +36,8 @@ Four different methods are provided to install the agent on and register edge de
 * [Automated agent installation and registration](automated_install.md) - install and register one edge device with a minimum of steps. **First-time users should use this method.**
 * [Advanced manual agent installation and registration](advanced_man_install.md) - do each step yourself to install and register one edge device. Use this method if you need to do something out of the ordinary and the script that is used in Method 1 does not have the required flexibility. You can also use this method if you want to understand exactly what is required to set up an edge device.
 * [Bulk agent installation and registration](many_install.md#batch-install) - install and register many edge devices at one time.
-* [SDO agent installation and registration](sdo.md) - automatic install with SDO devices.
+* [SDO agent installation and registration](sdo.md) - automatic install with SDO devices (depreciated).
+* [FDO agent installation and registration](fdo.md) - automatic install with FDO devices.
 
 ## Questions and troubleshooting
 {: #questions_ts}
