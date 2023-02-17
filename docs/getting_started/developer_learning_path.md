@@ -21,50 +21,59 @@ The following set of resources consisting of links to past Open Horizon meetings
 
 1. Introduction:
 
-    a. Get an idea of what Open Horizon is all about from [https://www.lfedge.org/projects/openhorizon/](https://www.lfedge.org/projects/openhorizon/){:target="_blank"}{: .externalLink}
+   a. Get an idea of what Open Horizon is all about from [https://www.lfedge.org/projects/openhorizon/](https://www.lfedge.org/projects/openhorizon/){:target="_blank"}{: .externalLink}
 
-    b. Introductory videos by OH member Glen Darling
-    1. An overview of Open Horizon - [video](https://www.youtube.com/watch?v=g59RTLV22fw&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=2){:target="_blank"}{: .externalLink}.
-    2. More technical details - [video](https://www.youtube.com/watch?v=WyZaKiI4wLE&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=7){:target="_blank"}{: .externalLink}.
+   b. Introductory videos by OH member Glen Darling
 
-    c. An overview of the Agent's role in OH - First [meeting recording](https://zoom.us/rec/share/tPFREb__zGpObc-V10GPVPA6IKT7eaa81iUbrPcOz0nRkgZlvoon4BvQjZ_73kqH?startTime=1595863993000){:target="_blank"}{: .externalLink} of the Agent WG.
+      1. An overview of Open Horizon - [video](https://www.youtube.com/watch?v=g59RTLV22fw&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=2){:target="_blank"}{: .externalLink}.
 
-    d. Another descriptory video from the [meeting recording](https://zoom.us/rec/play/87yiQniSZ0VtHPh6Roz_HLyfOGcDV6Cpx2nosQhR4Z9Ed52JlGB3bxYBbAVYwDzZpWJxu-UfaToBTab8.85GZKncg_KFrO0uP?continueMode=true&_x_zm_rtaid=oC4Wb8hjTtCHn49H1M6i9g.1613742221653.b2e466b17a6979e0fba21e9209e5acfc&_x_zm_rhtaid=626){:target="_blank"}{: .externalLink} of the QA Working Group.
+      2. More technical details - [video](https://www.youtube.com/watch?v=WyZaKiI4wLE&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=7){:target="_blank"}{: .externalLink}.
+
+   c. An overview of the Agent's role in OH - First [meeting recording](https://zoom.us/rec/share/tPFREb__zGpObc-V10GPVPA6IKT7eaa81iUbrPcOz0nRkgZlvoon4BvQjZ_73kqH?startTime=1595863993000){:target="_blank"}{: .externalLink} of the Agent WG.
+
+   d. Another descriptory video from the [meeting recording](https://zoom.us/rec/play/87yiQniSZ0VtHPh6Roz_HLyfOGcDV6Cpx2nosQhR4Z9Ed52JlGB3bxYBbAVYwDzZpWJxu-UfaToBTab8.85GZKncg_KFrO0uP?continueMode=true&_x_zm_rtaid=oC4Wb8hjTtCHn49H1M6i9g.1613742221653.b2e466b17a6979e0fba21e9209e5acfc&_x_zm_rhtaid=626){:target="_blank"}{: .externalLink} of the QA Working Group.
 
 2. Services, policies and patterns (Important)
 
-    a. Glen’s introductory [video](https://www.youtube.com/watch?v=alcHKc3Upbk&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=4){:target="_blank"}{: .externalLink} on patterns and policies.
+   a. Glen’s introductory [video](https://www.youtube.com/watch?v=alcHKc3Upbk&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=4){:target="_blank"}{: .externalLink} on patterns and policies.
 
-    b. An [introduction](https://zoom.us/rec/share/6eheFpXwq3JLYo3duXDBf7wDLp-5T6a82nRN-vRfzUuBm-ELkKqZmz1kthR-uAAf?startTime=1598282577000){:target="_blank"}{: .externalLink} to services.
+   b. An [introduction](https://zoom.us/rec/share/6eheFpXwq3JLYo3duXDBf7wDLp-5T6a82nRN-vRfzUuBm-ELkKqZmz1kthR-uAAf?startTime=1598282577000){:target="_blank"}{: .externalLink} to services.
 
-    c. [Service networking](https://www.youtube.com/watch?v=jUeMvr87jz8&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=8){:target="_blank"}{: .externalLink} demo.
+   c. [Service networking](https://www.youtube.com/watch?v=jUeMvr87jz8&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=8){:target="_blank"}{: .externalLink} demo.
 
 3. Getting started:
 
-    a. Get [started](https://zoom.us/rec/play/uJV_dOqhp2g3TNLGswSDAqMvW47uffmsgylM8_AMzE_hWngLYACmbrEQYbR6DRGSdV9GsMJms2rXWT5P){:target="_blank"}{: .externalLink} with contributing to Anax.
+   a. Get [started](https://zoom.us/rec/play/uJV_dOqhp2g3TNLGswSDAqMvW47uffmsgylM8_AMzE_hWngLYACmbrEQYbR6DRGSdV9GsMJms2rXWT5P){:target="_blank"}{: .externalLink} with contributing to Anax.
 
-    b. Helpful installation guides from the docs
-    1. [Install and setup environment](../../common-requests/install.md)
-    2. [How to use](../../common-requests/use.md).
+   b. Helpful installation guides from the docs
 
-    c. Using the all-in-one deployment (for the hands on practicals next)
-    1. [Recording](https://zoom.us/rec/play/IlrDE_zkKkCcjYrqNp5RSo1-Up2EcIrkTlMndE3BtjtPK8GvZ8FGD3914gZGjZMRp4rltFFrslaEo5Xq.0QGVy6YtQRaZTZ55?startTime=1598534658000&_x_zm_rtaid=oC4Wb8hjTtCHn49H1M6i9g.1613742221653.b2e466b17a6979e0fba21e9209e5acfc&_x_zm_rhtaid=626){:target="_blank"}{: .externalLink} from the Management Hub WG.
-    2. [Readme](/docs/mgmt-hub/docs/index.md) guide.
+      1. [Install and setup environment](../../common-requests/install.md)
 
-    d. Hands on practical
-    1. [Demo](https://www.youtube.com/watch?v=Fk9zJyExELU&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=3){:target="_blank"}{: .externalLink} - without policies.
-    2. [Advanced](https://www.youtube.com/watch?v=vgUuOIefamA&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=5){:target="_blank"}{: .externalLink} - deploying with patterns vs policies.
-    3. Glen's Easy Open Horizon [repository](https://github.com/TheMosquito/easy-open-horizon){:target="_blank"}{: .externalLink}.
+      2. [How to use](../../common-requests/use.md).
+
+   c. Using the all-in-one deployment (for the hands on practicals next)
+
+      1. [Recording](https://zoom.us/rec/play/IlrDE_zkKkCcjYrqNp5RSo1-Up2EcIrkTlMndE3BtjtPK8GvZ8FGD3914gZGjZMRp4rltFFrslaEo5Xq.0QGVy6YtQRaZTZ55?startTime=1598534658000&_x_zm_rtaid=oC4Wb8hjTtCHn49H1M6i9g.1613742221653.b2e466b17a6979e0fba21e9209e5acfc&_x_zm_rhtaid=626){:target="_blank"}{: .externalLink} from the Management Hub WG.
+
+      2. [Readme](/docs/mgmt-hub/docs/) guide.
+
+   d. Hands on practical
+
+      1. [Demo](https://www.youtube.com/watch?v=Fk9zJyExELU&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=3){:target="_blank"}{: .externalLink} - without policies.
+
+      2. [Advanced](https://www.youtube.com/watch?v=vgUuOIefamA&list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix&index=5){:target="_blank"}{: .externalLink} - deploying with patterns vs policies.
+
+      3. Glen's Easy Open Horizon [repository](https://github.com/TheMosquito/easy-open-horizon){:target="_blank"}{: .externalLink}.
 
 4. Useful references
 
-    a. [Setup](https://github.com/open-horizon/anax/tree/master/test){:target="_blank"}{: .externalLink} e2edev test environment
+   a. [Setup](https://github.com/open-horizon/anax/tree/master/test){:target="_blank"}{: .externalLink} e2edev test environment
 
-    b. [Create](https://github.com/open-horizon/examples/blob/master/edge/services/helloworld/CreateService.md){:target="_blank"}{: .externalLink} your own service.
+   b. [Create](https://github.com/open-horizon/examples/blob/master/edge/services/helloworld/CreateService.md){:target="_blank"}{: .externalLink} your own service.
 
-    c. [Deploy](https://github.com/open-horizon/examples/tree/master/edge/services/helloworld){:target="_blank"}{: .externalLink} your own service.
+   c. [Deploy](https://github.com/open-horizon/examples/tree/master/edge/services/helloworld){:target="_blank"}{: .externalLink} your own service.
 
-    d. Get [started](https://github.com/open-horizon/exchange-api/blob/master/README.md){:target="_blank"}{: .externalLink} with contributions to exchange-api.
+   d. Get [started](https://github.com/open-horizon/exchange-api/blob/master/README.md){:target="_blank"}{: .externalLink} with contributions to exchange-api.
 
 ## Sequential tasks to gradually introduce you to common features
 
