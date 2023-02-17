@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2023
-lastupdated: "2023-01-29"
+lastupdated: "2023-02-17"
 title: "All-in-One Mgmt Hub"
 
 parent: Management Hub
@@ -208,7 +208,7 @@ Using a Virtual Machine (VM) allows you to learn and experiment with Open Horizo
 Oracle VM [VirtualBox](https://www.virtualbox.org/wiki/Downloads) is a virtualization application that runs on {{site.data.keyword.macOS_notm}}, Solaris and Windows as well as Linux.
 Its Virtual Machine Manager user interface has a reasonable learning curve for beginners while keeping advanced settings within easy reach.
 
-The Open Horizon website has [a video](https://open-horizon.github.io/common-requests/install.html) detailing the process of setting up a VM in VirtualBox for use with the All-in-One environment.
+The Open Horizon website has [a video](/common-requests/install/) detailing the process of setting up a VM in VirtualBox for use with the All-in-One environment.
 
 This is a summary of the setup process:
 
