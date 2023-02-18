@@ -1,8 +1,8 @@
 ---
-
 copyright:
 years: 2020 - 2023
 lastupdated: "2023-02-14"
+title: "FDO agent install"
 
 parent: Edge devices info
 grand_parent: Edge devices

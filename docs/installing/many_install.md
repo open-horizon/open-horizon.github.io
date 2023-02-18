@@ -1,8 +1,8 @@
 ---
-
 copyright:
 years: 2020 - 2022
 lastupdated: "2022-06-24"
+title: "Bulk agent install"
 
 parent: Edge devices info
 grand_parent: Edge devices

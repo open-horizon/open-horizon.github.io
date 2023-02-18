@@ -1,8 +1,8 @@
 ---
-
 copyright:
 years: 2020 - 2022
 lastupdated: "2022-07-07"
+title: "SDO agent install"
 
 parent: Edge devices info
 grand_parent: Edge devices
