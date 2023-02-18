@@ -1,8 +1,7 @@
 ---
-
 copyright:
-years: 2020 - 2022
-lastupdated: "2022-03-17"
+years: 2020 - 2023
+lastupdated: "2023-02-18"
 
 title: "GDPR readiness"
 
@@ -125,13 +124,9 @@ Pod security policies are used to set up management hub or edge cluster control 
 Users of {{site.data.keyword.ieam}} can control the way that technical data that is related to configuration and management is processed and secured through system configuration.
 
 * Role-based access control (RBAC) controls what data and functions can be accessed by users.
-
 * Pod security policies are used to set up cluster-level control over what a pod can do or what it can access.
-
 * Data-in-transit is protected by using `TLS`. `HTTPS` (`TLS` underlying) is used for secure data transfer between user client and back-end services. Users can specify the root certificate to use during installation.
-
 * Data-at-rest protection is supported by using `dm-crypt` to encrypt data.
-
 * Data retention periods for logging (ELK) and monitoring (Prometheus) are configurable and deletion of data is supported through provided APIs.
 
 These same mechanisms that are used to manage and secure {{site.data.keyword.ieam}} technical data can be used to manage and secure personal data for user-developed or user-provided applications. Clients can develop their own capabilities to implement further controls.
@@ -144,6 +139,7 @@ For more information about certificates, see [Install {{site.data.keyword.ieam}}
 Using the facilities summarized in this document, {{site.data.keyword.ieam}} enables a user to restrict usage of any technical data within the application that is considered personal data.
 
 Under GDPR, users have rights to access, modify, and restrict processing. Refer to other sections of this document to control:
+
 * Right to access
   * {{site.data.keyword.ieam}} administrators can use {{site.data.keyword.ieam}} features to provide individuals access to their data.
   * {{site.data.keyword.ieam}} administrators can use {{site.data.keyword.ieam}} features to provide individuals information about what data {{site.data.keyword.ieam}} collects and retains about the individual.
@@ -160,7 +156,7 @@ As an application, {{site.data.keyword.ieam}} deals with several categories of t
 
 * Administrator or operator user ID and password
 * IP addresses
-* Kubernetes node names. 
+* Kubernetes node names.
 
 {{site.data.keyword.ieam}} also deals with information about users who manage the applications that run on {{site.data.keyword.ieam}} and might introduce other categories of personal data that is unknown to the application.
 
@@ -193,11 +189,10 @@ As an application, {{site.data.keyword.ieam}} deals with several categories of t
   * Clear the selected `etcd` key-value pairs by using the `etcdctl rm` command.
   * Remove credentials by calling the `credentials-unset` command.
 
-
 For more information, see:
 
-  * [Kubernetes Logging ](https://kubernetes.io/docs/concepts/cluster-administration/logging/){:target="_blank"}{: .externalLink}{:new_window}
-  * [etcdctl ](https://github.com/coreos/etcd/blob/master/etcdctl/READMEv2.md){:target="_blank"}{: .externalLink}{:new_window}
+* [Kubernetes Logging ](https://kubernetes.io/docs/concepts/cluster-administration/logging/){:target="_blank"}{: .externalLink}{:new_window}
+* [etcdctl ](https://github.com/coreos/etcd/blob/master/etcdctl/READMEv2.md){:target="_blank"}{: .externalLink}{:new_window}
 
 ### {{site.data.keyword.ieam}} monitoring
 
@@ -212,7 +207,6 @@ For more information, see:
   * Search for and delete data by using the Prometheus API
 
 For more information, see [Prometheus Documentation ](https://prometheus.io/docs/introduction/overview/){:target="_blank"}{: .externalLink}{:new_window}.
-
 
 ### {{site.data.keyword.ieam}} Kubernetes
 
@@ -233,7 +227,7 @@ For more information, see [Prometheus Documentation ](https://prometheus.io/docs
 
 Use care when you are modifying Kubernetes cluster configuration or deleting cluster data.
 
-  For more information, see [Kubernetes kubectl ](https://kubernetes.io/docs/reference/kubectl/overview/){:target="_blank"}{: .externalLink}{:new_window}.
+For more information, see [Kubernetes kubectl ](https://kubernetes.io/docs/reference/kubectl/overview/){:target="_blank"}{: .externalLink}{:new_window}.
 
 ### {{site.data.keyword.ieam}} Helm API
 
@@ -258,10 +252,10 @@ Use care when you are modifying Kubernetes cluster configuration or deleting clu
 * How to delete data
   * Search for and delete the apiserver log that uses Elasticsearch API
   * Search for and delete the log from the apiserver container
-      ```
-      kubectl logs $(kubectl get pods -n kube-system | grep  service-catalogapiserver | awk '{print $1}') -n kube-system | grep admin
-      ```
-      {: codeblock}
 
+    ```bash
+    kubectl logs $(kubectl get pods -n kube-system | grep  service-catalogapiserver | awk '{print $1}') -n kube-system | grep admin
+    ```
+    {: codeblock}
 
-  For more information, see [Kubernetes kubectl ](https://kubernetes.io/docs/reference/kubectl/overview/){:target="_blank"}{: .externalLink}{:new_window}.
+For more information, see [Kubernetes kubectl ](https://kubernetes.io/docs/reference/kubectl/overview/){:target="_blank"}{: .externalLink}{:new_window}.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2021 - 2023
+lastupdated: "2023-02-19"
 title: Troubleshooting tips
 
 parent: Help and Support
@@ -42,7 +42,8 @@ On any edge node where {{site.data.keyword.horizon}} is installed, use the `hzn`
 On edge nodes where {{site.data.keyword.horizon}} packages are not supported or installed, you can directly interact with the underlying HTTP REST APIs instead. For example, you can use the `curl` utility or other REST API CLI utilities. You can also write a program in a language that supports REST queries.
 
 For example, run the `curl` utility to check the status of your edge node:
-```
+
+```bash
 curl localhost:8510/status
 ```
 
@@ -56,7 +57,7 @@ These questions are based on the nature of debugging issues and are related to d
 * [Troubleshooting tips](index.md)
 
   Review the common issues that you might encounter when you use {{site.data.keyword.ieam}}.
-  
+
 ## {{site.data.keyword.ieam}} risks and resolution
 {: #risks}
 

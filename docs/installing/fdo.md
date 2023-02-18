@@ -1,8 +1,8 @@
 ---
-
 copyright:
 years: 2020 - 2023
 lastupdated: "2023-02-14"
+title: "FDO agent install"
 
 parent: Edge devices info
 grand_parent: Edge devices
@@ -57,6 +57,7 @@ Before you purchase FDO-enabled edge devices, you can test FDO support in {{site
    export HZN_MGMT_HUB_CERT_PATH=<path-to-mgmt-hub-self-signed-cert>
    export CURL_CA_BUNDLE=$HZN_MGMT_HUB_CERT_PATH
    ```
+   {: codeblock}
 
 3. Follow the steps in the [FIDO Device Onboard (FDO)](https://github.com/open-horizon/FDO-support/blob/main/README.md){:target="_blank"}{: .externalLink} to observe FDO automatically install the {{site.data.keyword.ieam}} agent on a device and registers it with your {{site.data.keyword.ieam}} management hub.
 
@@ -78,6 +79,7 @@ If you have purchased FDO-enabled devices and want to incorporate them into your
       export HZN_MGMT_HUB_CERT_PATH=<path-to-mgmt-hub-self-signed-cert>
       export CURL_CA_BUNDLE=$HZN_MGMT_HUB_CERT_PATH
       ```
+      {: codeblock}
 
    3. To download the public key for FDO, use the device alias you received from the manufacturer device initialization. Then, use that device alias to download the corresponding public key. For more information, see [Generate Owner Key Pairs ](https://github.com/open-horizon/FDO-support/blob/main/README.md){:target="_blank"}{: .externalLink}.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2020 - 2022
-lastupdated: "2022-03-17"
+years: 2020 - 2023
+lastupdated: "2023-02-18"
 title: "Watson speech to text"
 
 parent: Edge service examples
@@ -28,20 +28,20 @@ This service listens for the word Watson. When it is detected, the service captu
 Ensure that your system meets these requirements:
 
 * You must register and unregister by performing the steps in [Preparing an edge device](adding_devices.md).
-* A USB sound card and microphone is installed on your Raspberry Pi. 
+* A USB sound card and microphone is installed on your Raspberry Pi.
 
-This service requires both an instance of {{site.data.keyword.event_streams}} and IBM Speech to Text to run correctly. For instructions about how to deploy an instance of event streams, see [Host CPU load percentage example (cpu2evtstreams)](../using_edge_services/cpu_load_example.md).  
+This service requires both an instance of {{site.data.keyword.event_streams}} and IBM Speech to Text to run correctly. For instructions about how to deploy an instance of event streams, see [Host CPU load percentage example (cpu2evtstreams)](../using_edge_services/cpu_load_example.md).
 
 Ensure the necessary {{site.data.keyword.event_streams}} environment variables are set:
 
-```
+```bash
 echo "$EVTSTREAMS_API_KEY, $EVTSTREAMS_BROKER_URL"
 ```
 {: codeblock}
 
 The event streams topic this sample uses is `myeventstreams` by default, but you can use any topic by setting the following environment variable:
 
-```
+```bash
 export EVTSTREAMS_TOPIC=<your-topic-name>
 ```
 {: codeblock}
@@ -58,7 +58,7 @@ If an instance is deployed currently, obtain the access information and set the 
 5. Select a region, select a pricing plan, enter a service name, and click **Create** to provision the instance.
 6. After provisioning is complete, click the instance and note the credentials API Key and URL and export them as the following environment variable:
 
-    ```
+    ```bash
     export STT_IAM_APIKEY=<speech-to-text-api-key>
     export STT_URL=<speech-to-text-url>
     ```
@@ -73,7 +73,7 @@ To run the watsons2text service example on your edge node, you must register you
 
 ## Additional information
 
-The `processtect` example source code is also available in the Horizon GitHub repository as an example for {{site.data.keyword.edge_notm}}development. This source includes the code for all of the four services that run on the edge nodes for this example. 
+The `processtect` example source code is also available in the Horizon GitHub repository as an example for {{site.data.keyword.edge_notm}}development. This source includes the code for all of the four services that run on the edge nodes for this example.
 
 These services include:
 

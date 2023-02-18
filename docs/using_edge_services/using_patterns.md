@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2020 - 2022
-lastupdated: "2022-03-17"
+years: 2020 - 2023
+lastupdated: "2023-02-19"
 title: "Using patterns"
 
 parent: Deploying edge services
@@ -27,7 +27,7 @@ The hzn CLI provides capabilities to list and manage patterns in the {{site.data
 
 For a full list of CLI commands and further details:
 
-```
+```bash
 hzn exchange pattern -h
 ```
 {: codeblock}
@@ -36,7 +36,7 @@ hzn exchange pattern -h
 
 Sign and create (or update) a pattern resource in the {{site.data.keyword.horizon_exchange}}:
 
-```
+```bash
 hzn exchange pattern publish --json-file=JSON-FILE [<flags>]
 ```
 {: codeblock}
@@ -47,7 +47,7 @@ Using a deployment pattern is a straightforward and simple way to deploy a servi
 
 After you create and add a service to the {{site.data.keyword.ieam}} exchange, you need to create a `pattern.json` file, similar to:
 
-```
+```json
 {
   "IBM/pattern-ibm.cpu2evtstreams": {
     "owner": "root/root",
@@ -92,14 +92,14 @@ The `pattern.json` file gives you the ability to customize rollback settings in 
 
 You can also set any configuration variables your service might need to correctly function centrally when you publish your deployment pattern by including them in the `userInput` section near the bottom. When the `ibm.cpu2evtstreams` service is published, it passes with it the credentials necessary to publish data to IBM Event Streams, which can be done with:
 
-```
+```bash
 hzn exchange pattern publish -f pattern.json
 ```
 {: codeblock}
 
 With the pattern published, you can then register an arm device to it:
 
-```
+```bash
 hzn register -p pattern-ibm.cpu2evtstreams-arm
 ```
 {: codeblock}
@@ -110,7 +110,7 @@ This command deploys `ibm.cpu2evtstreams` and any dependent services to your nod
 
 All `ibm.cpu2evtstreams` workloads can be stopped by unregistering:
 
-```
+```bash
 hzn unregister -fD
 ```
 {: codeblock}
