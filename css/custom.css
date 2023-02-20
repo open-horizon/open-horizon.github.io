@@ -18,7 +18,7 @@
 }
 
 .externalLink::after{
-    content: url('../img/launch-glyph.svg');
+    content: url('/img/launch-glyph.svg');
 }
 
 .row-center{
