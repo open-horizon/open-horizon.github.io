@@ -2,7 +2,7 @@
 
 copyright:
 years: 2020 - 2023
-lastupdated: "2023-02-18"
+lastupdated: "2023-02-20"
 title: "Watson speech to text"
 
 parent: Edge service examples
@@ -58,11 +58,11 @@ If an instance is deployed currently, obtain the access information and set the 
 5. Select a region, select a pricing plan, enter a service name, and click **Create** to provision the instance.
 6. After provisioning is complete, click the instance and note the credentials API Key and URL and export them as the following environment variable:
 
-    ```bash
-    export STT_IAM_APIKEY=<speech-to-text-api-key>
-    export STT_URL=<speech-to-text-url>
-    ```
-    {: codeblock}
+   ```bash
+   export STT_IAM_APIKEY=<speech-to-text-api-key>
+   export STT_URL=<speech-to-text-url>
+   ```
+   {: codeblock}
 
 7. Go to the Getting Started section for instructions of how to test the Speech to Text service.
 
