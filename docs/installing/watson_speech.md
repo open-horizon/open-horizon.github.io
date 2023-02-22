@@ -79,7 +79,7 @@ These services include:
 
 * The [hotworddetect ](https://github.com/open-horizon/examples/tree/master/edge/services/hotword_detection){:target="_blank"}{: .externalLink} service listens and detects the hot word Watson, and then records an audio clip and published it to the mqtt broker.
 * The [watsons2text ](https://github.com/open-horizon/examples/tree/master/edge/evtstreams/watson_speech2text){:target="_blank"}{: .externalLink} service receives an audio clip and sends it to the IBM Speech to Text service and publishes the deciphered text to the mqtt broker.
-* The [stopwordremoval ](https://github.com/open-horizon/examples/tree/master/edge/services/stopword_removal) {:target="_blank"}{: .externalLink}service runs as a WSGI server takes a JSON object, such as {"text": "how are you today"} and removes common stop words and returns {"result": "how you today"}.
+* The [stopwordremoval ](https://github.com/open-horizon/examples/tree/master/edge/services/stopword_removal){:target="_blank"}{: .externalLink}service runs as a WSGI server takes a JSON object, such as {"text": "how are you today"} and removes common stop words and returns {"result": "how you today"}.
 * The [mqtt2kafka ](https://github.com/open-horizon/examples/tree/master/edge/services/mqtt2kafka){:target="_blank"}{: .externalLink} service publishes data to {{site.data.keyword.event_streams}} when it receives something on the mqtt topic where it is subscribed.
 * The [mqtt_broker ](https://github.com/open-horizon/examples/tree/master/edge/services/mqtt_broker){:target="_blank"}{: .externalLink} is responsible for all inter-container communication.
 
