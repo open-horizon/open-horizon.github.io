@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021 - 2022
-lastupdated: "2022-05-31"
+years: 2021 - 2023
+lastupdated: "2023-02-22"
 title: "Installing Management hub"
 
 nav_order: 1
@@ -31,12 +31,12 @@ Complete the management hub installation and configuration before starting the {
   * [Install {{site.data.keyword.ieam}}](online_installation.md)
   * [Post-installation](post_install.md)
   * [Gather edge node files](gather_files.md)
-* [Management Hub Developer Instance](lfedge_mgmt_hub.md)  
+* [Management Hub Developer Instance](lfedge_mgmt_hub.md)
 * [Uninstall](uninstalling_hub.md)
 
 ## Management hub installation flow
 
-<img src="../../images/edge/06_OH_management_hub_install.svg" style="margin: 3%" alt="Management hub installation overview">
+![Management hub installation overview](../../images/edge/06_IEAM_management_hub_install.svg "Management hub installation overview")
 
 ## Related information
 
