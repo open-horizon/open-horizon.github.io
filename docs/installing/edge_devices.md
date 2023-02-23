@@ -1,5 +1,4 @@
 ---
-
 copyright:
 years: 2020 - 2023
 lastupdated: "2023-02-22"
@@ -34,4 +33,4 @@ All edge devices (edge nodes) require the {{site.data.keyword.horizon_agent}} so
 
 Focusing in on the edge device, the following diagram shows the flow of the steps you perform to set up the edge device, and what the agent does after it is started.
 
-![{{site.data.keyword.horizon_exchange}}, {{site.data.keyword.agbot}} and agents](../../images/edge/05a_Installing_edge_agent_on_device.svg.svg "{{site.data.keyword.horizon_exchange}}, {{site.data.keyword.agbot}} and agents)
+![{{site.data.keyword.horizon_exchange}}, {{site.data.keyword.agbot}} and agents](../../images/edge/05a_Installing_edge_agent_on_device.svg.svg "{{site.data.keyword.horizon_exchange}}, {{site.data.keyword.agbot}} and agents")
