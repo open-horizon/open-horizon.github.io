@@ -1,5 +1,4 @@
 ---
-
 copyright:
 years: 2021 - 2023
 lastupdated: "2023-02-22"
@@ -36,7 +35,7 @@ Complete the management hub installation and configuration before starting the {
 
 ## Management hub installation flow
 
-![Management hub installation overview](../../images/edge/06_IEAM_management_hub_install.svg "Management hub installation overview")
+![Management hub installation overview](../../images/edge/06_OH_management_hub_install.svg "Management hub installation overview")
 
 ## Related information
 
