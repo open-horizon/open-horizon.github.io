@@ -24,6 +24,8 @@ nav_bar: 1
 
 View the following table for a description of the {{site.data.keyword.ieam}} components:
 
+[//]: # (Pull from release tags hopefully?)
+
 | Component                                     | Version    | Description                                                                                                                                                                                                                        |
 |-----------------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **{{site.data.keyword.ieam}} management hub** | 4.2.0      | The {{site.data.keyword.ieam}} management hub manages the edge nodes and the edge service software lifecycle on each edge node.                                                                                                    |
