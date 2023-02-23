@@ -26,6 +26,8 @@ View the following table for a description of the {{site.data.keyword.ieam}} com
 
 [//]: # (Pull from release tags hopefully?)
 
+{: caption="Table 1. {{site.data.keyword.ieam}} components" caption-side="top"}
+
 | Component                                     | Version    | Description                                                                                                                                                                                                                        |
 |-----------------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **{{site.data.keyword.ieam}} management hub** | 4.2.0      | The {{site.data.keyword.ieam}} management hub manages the edge nodes and the edge service software lifecycle on each edge node.                                                                                                    |
