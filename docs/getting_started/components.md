@@ -26,7 +26,6 @@ View the following table for a description of the {{site.data.keyword.ieam}} com
 
 [//]: # (Pull from release tags hopefully?)
 
-{: caption="Table 1. {{site.data.keyword.ieam}} components" caption-side="top"}
 
 | Component                                     | Version    | Description                                                                                                                                                                                                                        |
 |-----------------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -41,3 +40,4 @@ View the following table for a description of the {{site.data.keyword.ieam}} com
 | Edge device agent                             | 2.27.0     | The agent that is installed on edge devices to enable node workload management by {{site.data.keyword.ieam}}.                                                                                                                      |
 | ESS                                           | 1.4.1      | The edge node part of MMS that makes AI models and files available to the edge services.                                                                                                                                           |
 | Example edge services                         | 2.27.0     | Edge service examples that are useful when exploring {{site.data.keyword.ieam}} and learning how to write your own services.                                                                                                       |
+{: caption="Table 1. {{site.data.keyword.ieam}} components" caption-side="top"}

@@ -45,7 +45,7 @@ The {{site.data.keyword.ieam}} management hub is designed specifically for edge 
 # Components
 {: #components}
 
-{{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) includes [several components](../getting_started/components.md) that are bundled with the product. Please see (Getting Started/Components.md).
+{{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) includes several components that are required for functionality. For more information about such components, please see [Components](./components.md).
 
 ## What's next
 
