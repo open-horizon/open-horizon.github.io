@@ -2,7 +2,7 @@
 
 copyright:
 years: 2021 - 2023
-lastupdated: "2023-02-09"
+lastupdated: "2023-02-25"
 
 title: Model Management Service
 
@@ -366,7 +366,7 @@ The following is an example of the output of the **hzn mms object new** command 
 This example helps you learn how to develop an {{site.data.keyword.edge_service}} that uses the model management system (MMS). You can use this system to deploy and update the learning machine models that are used by edge services that run on your edge nodes.
 {:shortdesc}
 
-For an example that uses MMS, see [Horizon Hello Model Management Service (MMS) Example Edge Service](https://github.com/open-horizon/examples/tree/master/edge/services/helloMMS).
+For an example that uses MMS, see [Horizon Hello Model Management Service (MMS) Example Edge Service ](https://github.com/open-horizon/examples/tree/master/edge/services/helloMMS){:target="_blank"}{: .externalLink}.
 
 ## Before you begin
 {: #mms_begin}
@@ -383,7 +383,7 @@ cat /etc/default/horizon
 ## Procedure
 {: #mms_procedure}
 
-This example is part of the [{{site.data.keyword.horizon_open}}](https://github.com/open-horizon/) open source project. Follow the steps in [Creating Your Own Hello MMS Edge Service](https://github.com/open-horizon/examples/blob/master/edge/services/helloMMS/CreateService.md)) and then return here.
+This example is part of the [{{site.data.keyword.horizon_open}} ](https://github.com/open-horizon/){:target="_blank"}{: .externalLink} open source project. Follow the steps in [Creating Your Own Hello MMS Edge Service ](https://github.com/open-horizon/examples/blob/master/edge/services/helloMMS/CreateService.md){:target="_blank"}{: .externalLink} and then return here.
 
 ## What to do next
 {: #mms_what_next}

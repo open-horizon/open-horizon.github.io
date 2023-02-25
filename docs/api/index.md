@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021 - 2022
-lastupdated: "2022-07-08"
+years: 2021 - 2023
+lastupdated: "2023-02-25"
 title: APIs
 description: ""
 
@@ -25,7 +25,7 @@ has_toc: false
 {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) provides RESTful APIs for enabling components to collaborate, and to enable your organization's developers and users to control the components.
 {:shortdesc}
 
-The {{site.data.keyword.ieam}} REST APIs are documented within the {{site.data.keyword.horizon}} project documentation. For more information, see [{{site.data.keyword.horizon}}](https://github.com/open-horizon).
+The {{site.data.keyword.ieam}} REST APIs are documented within the {{site.data.keyword.horizon}} project documentation. For more information, see the [{{site.data.keyword.horizon_open}} ](https://github.com/open-horizon){:target="_blank"}{: .externalLink} GitHub source code.
 
 For most users, the `hzn` command line interface (CLI) tool, which calls these APIs, is sufficient for completing most tasks. If you do use this tool, direct use of the API is unnecessary.
 

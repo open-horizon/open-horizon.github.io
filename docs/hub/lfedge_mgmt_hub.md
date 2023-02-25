@@ -1,7 +1,7 @@
 ---
 
 copyright:
-years: 2022
+years: 2022-2023
 lastupdated: "2023-02-25"
 
 ---
@@ -21,7 +21,7 @@ The LF Edge's Open Horizon project delivers containerized services and ML assets
 {: .text-justify}
 
 ## Requesting user account
-To obtain a free user account on the Hub, send your request to the *#open-horizon-devops* chat channel on the [Open Horizon chat server](https://chat.lfx.linuxfoundation.org/).
+To obtain a free user account on the Hub, send your request to the *#open-horizon-devops* chat channel on the [Open Horizon chat server ](https://chat.lfx.linuxfoundation.org/){:target="_blank"}{: .externalLink}.
 
 ## Adding user account in organization
 Before adding the new user, collect the following information:

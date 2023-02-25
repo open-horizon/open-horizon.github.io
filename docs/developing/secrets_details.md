@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2021 - 2023
-lastupdated: "2023-02-14"
+lastupdated: "2023-02-25"
 title: "Secrets Manager details"
 
 parent: Secrets Manager
@@ -25,9 +25,9 @@ nav_order: 1
 # Secrets Manager details
 {: #secrets_details}
 
-The Secrets Manager provides secure storage for sensitive information like authentication credentials or encryption keys. These secrets are securely deployed by {{site.data.keyword.ieam}} so that only the services configured to receive a secret will have access to it. The [Hello Secret World Example](https://github.com/open-horizon/examples/blob/master/edge/services/helloSecretWorld/CreateService.md) provides an overview of how to exploit secrets in an edge service.
+The Secrets Manager provides secure storage for sensitive information like authentication credentials or encryption keys. These secrets are securely deployed by {{site.data.keyword.ieam}} so that only the services configured to receive a secret will have access to it. The [Hello Secret World Example ](https://github.com/open-horizon/examples/blob/master/edge/services/helloSecretWorld/CreateService.md){:target="_blank"}{: .externalLink} provides an overview of how to exploit secrets in an edge service.
 
-{{site.data.keyword.ieam}} supports the use of [Hashicorp Vault](https://www.vaultproject.io/) as the Secrets Manager. Secrets created using the hzn CLI are mapped to Vault secrets using the [KV V2 Secrets Engine](https://www.vaultproject.io/docs/secrets/kv/kv-v2). This means that the details of every {{site.data.keyword.ieam}} secret are composed of a key and a value. Both are stored as part of the details of the secret, and both can be set to any string value. A common usage of this feature is to provide the type of secret on the key and sensitive information as the value. For example, set the key to "basicauth" and set the value to "user:password". In so doing, the service developer can interrogate the type of secret, enabling the service code to handle the value correctly.
+{{site.data.keyword.ieam}} supports the use of [Hashicorp Vault ](https://www.vaultproject.io/){:target="_blank"}{: .externalLink} as the Secrets Manager. Secrets created using the hzn CLI are mapped to Vault secrets using the [KV V2 Secrets Engine ](https://www.vaultproject.io/docs/secrets/kv/kv-v2){:target="_blank"}{: .externalLink}. This means that the details of every {{site.data.keyword.ieam}} secret are composed of a key and a value. Both are stored as part of the details of the secret, and both can be set to any string value. A common usage of this feature is to provide the type of secret on the key and sensitive information as the value. For example, set the key to "basicauth" and set the value to "user:password". In so doing, the service developer can interrogate the type of secret, enabling the service code to handle the value correctly.
 
 The names of secrets in the Secrets Manager are never known by a service implementation. It is not possible to convey information from the vault to a service implementation using the name of a secret.
 

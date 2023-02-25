@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021 - 2022
-lastupdated: "2022-08-4"
+years: 2021 - 2023
+lastupdated: "2023-02-25"
 title: "Security and privacy"
 
 parent: Security
@@ -21,7 +21,7 @@ nav_order: 1
 # Security and privacy
 {: #security_privacy}
 
-{{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}), based on [Open Horizon](https://github.com/open-horizon), uses several different security technologies to ensure that it is secure against attacks and safeguards privacy. {{site.data.keyword.ieam}} relies on geographically distributed autonomous agent processes for edge software management. As a result, both the {{site.data.keyword.ieam}} management hub and the agents represent potential targets for security breaches. This document explains how {{site.data.keyword.ieam}} mitigates or eliminates threats.
+{{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}), based on [Open Horizon ](https://github.com/open-horizon){:target="_blank"}{: .externalLink}, uses several different security technologies to ensure that it is secure against attacks and safeguards privacy. {{site.data.keyword.ieam}} relies on geographically distributed autonomous agent processes for edge software management. As a result, both the {{site.data.keyword.ieam}} management hub and the agents represent potential targets for security breaches. This document explains how {{site.data.keyword.ieam}} mitigates or eliminates threats.
 {:shortdesc}
 
 ## Management Hub

@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2022 - 2023
-lastupdated: "2023-02-19"
+lastupdated: "2023-02-25"
 title: "FDO Protocol Reference"
 description: "FDO Protocol Reference Implementation Quick Start"
 
@@ -12,7 +12,7 @@ has_children: true
 
 # FIDO Device Onboard (FDO) Protocol Reference Implementation (PRI) Quick Start
 
-***NOTE***: This is a preliminary implementation of the [FIDO Device Onboard Spec](https://fidoalliance.org/specs/FDO/fido-device-onboard-v1.0-ps-20210323/) published by the FIDO Alliance. The implementation is experimental and incomplete, and is not ready for use in any production capacity. Some cryptographic algorithms and encoding formats have not been implemented, and any aspect of this implementation is subject to change.
+***NOTE***: This is a preliminary implementation of the [FIDO Device Onboard Spec ](https://fidoalliance.org/specs/FDO/fido-device-onboard-v1.0-ps-20210323/){:target="_blank"}{: .externalLink} published by the FIDO Alliance. The implementation is experimental and incomplete, and is not ready for use in any production capacity. Some cryptographic algorithms and encoding formats have not been implemented, and any aspect of this implementation is subject to change.
 
 ## System Requirements
 
@@ -35,8 +35,8 @@ FDO PRI source code is organized into the following sub-folders.
 
 ## Building FDO PRI Source
 
-FDO PRI source is written in [Java 11](https://openjdk.java.net/projects/jdk/11/) and uses the
-[Apache Maven* software](http://maven.apache.org).
+FDO PRI source is written in [Java 11 ](https://openjdk.java.net/projects/jdk/11/){:target="_blank"}{: .externalLink} and uses the
+[Apache Maven* software ](http://maven.apache.org){:target="_blank"}{: .externalLink}.
 
 Following ports are used for unit-tests and sample code - 8039, 8040, 8042, 8043, 8049, 8050, and 8051.
 Ensure that these ports are not used by other applications while building and executing the

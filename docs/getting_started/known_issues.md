@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2020 - 2022
-lastupdated: "2022-08-13"
+years: 2020 - 2023
+lastupdated: "2022-02-25"
 title: "Known issues and limitations"
 
 parent: Release notes
@@ -22,7 +22,7 @@ nav_order: 1
 
 These are known issues and limitations for {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) {{site.data.keyword.version}}.
 
-For a full list of open issues for the {{site.data.keyword.ieam}} open source layer, review the GitHub issues in each of the [Open Horizon repositories](https://github.com/open-horizon/).
+For a full list of open issues for the {{site.data.keyword.ieam}} open source layer, review the GitHub issues in each of the [Open Horizon repositories ](https://github.com/open-horizon/){:target="_blank"}{: .externalLink}.
 
 {:shortdesc}
 
@@ -34,7 +34,7 @@ These are known issues and limitations for {{site.data.keyword.ieam}}.
 
 * {{site.data.keyword.ieam}} does not perform a malware or virus scan on data that is uploaded to the model management system (MMS). For more information about MMS security, see [Security and privacy](../user_management/security_privacy.md#malware).
 
-* The **-f &lt;directory&gt;** flag of **edgeNodeFiles.sh** does not have the intended effect. Instead, the files are collected in the current directory. For more information, see [issue 2187](https://github.com/open-horizon/anax/issues/2187). The work-around is to run the command like this:
+* The **-f &lt;directory&gt;** flag of **edgeNodeFiles.sh** does not have the intended effect. Instead, the files are collected in the current directory. For more information, see [issue 2187 ](https://github.com/open-horizon/anax/issues/2187){:target="_blank"}{: .externalLink}. The work-around is to run the command like this:
 
    ```bash
    (cd <dir> && edgeNodeFiles.sh ... )
@@ -57,7 +57,7 @@ These are known issues and limitations for {{site.data.keyword.ieam}}.
 
 * The secret binding does not work for an agreement-less service defined in a pattern.
  
-* The edge cluster agent does not support K3S v1.21.3+k3s1 because the mounted volume directory only has 0700 permission. See [Cannot write data to local PVC](https://github.com/k3s-io/k3s/issues/3704) for a temporary solution.
+* The edge cluster agent does not support K3S v1.21.3+k3s1 because the mounted volume directory only has 0700 permission. See [Cannot write data to local PVC ](https://github.com/k3s-io/k3s/issues/3704){:target="_blank"}{: .externalLink} for a temporary solution.
  
 * Each {{site.data.keyword.ieam}} edge node agent initiates all network connections with the {{site.data.keyword.ieam}} management hub. The management hub never initiates connections to its edge nodes. Therefore, an edge node can be behind a NAT firewall if the firewall has TCP connectivity to the management hub. However, edge nodes cannot currently communicate with the management hub through a SOCKS proxy.
   
