@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-02-25"
 title: "All-in-One Mgmt Hub"
 
 parent: Management Hub
@@ -19,8 +19,8 @@ Read the notes, and then run the following command to deploy the Horizon compone
 
 - Currently **only supported on Ubuntu 18.x, Ubuntu 20.x, and {{site.data.keyword.macOS_notm}}**
 - This script is not yet compatible with docker installed via Snap. If docker has already been installed via Snap, remove the existing docker snap and allow the script to reinstall the latest version of docker.
-- The {{site.data.keyword.macOS_notm}} support is considered **experimental** because I ran into this [docker bug](https://github.com/docker/for-mac/issues/3499) while testing. Making some of the recommended changes to my docker version and settings enabled me to get past the problem, but I'm not sure if others will hit it or not.
-- The deployment can be customized by overriding environment variables in [deploy-mgmt-hub.sh](https://github.com/open-horizon/devops/blob/master/mgmt-hub/deploy-mgmt-hub.sh). The variables can be found near the top of the script, right after the usage message and command line parsing code.
+- The {{site.data.keyword.macOS_notm}} support is considered **experimental** because I ran into this [docker bug ](https://github.com/docker/for-mac/issues/3499){:target="_blank"}{: .externalLink} while testing. Making some of the recommended changes to my docker version and settings enabled me to get past the problem, but I'm not sure if others will hit it or not.
+- The deployment can be customized by overriding environment variables in [deploy-mgmt-hub.sh ](https://github.com/open-horizon/devops/blob/master/mgmt-hub/deploy-mgmt-hub.sh){:target="_blank"}{: .externalLink}. The variables can be found near the top of the script, right after the usage message and command line parsing code.
 All `*_PW` and `*_TOKEN` environment variables and variables in the form `VAR_NAME=${VAR_NAME:-defaultvalue}` can be overridden.
 
 As **root** run:
@@ -33,7 +33,7 @@ curl -sSL https://raw.githubusercontent.com/open-horizon/devops/master/mgmt-hub/
 
 The All-in-One environment is intended for use on devices or virtual machines with **at least 4GB RAM and 20GB of storage space**.
 
-Ubuntu Server 18.04 and 20.04 are the preferred operating systems for evaluating and learning Open Horizon for now. You can download Ubuntu Server from [Ubuntu Releases](https://releases.ubuntu.com/).
+Ubuntu Server 18.04 and 20.04 are the preferred operating systems for evaluating and learning Open Horizon for now. You can download Ubuntu Server from [Ubuntu Releases ](https://releases.ubuntu.com/){:target="_blank"}{: .externalLink}.
 
 If you wish to use the All-in-One environment in a virtual machine, please read the [VM setup notes](#setup-vm) further down for details.
 
@@ -158,7 +158,7 @@ When complete, you can run `hzn exchange node list` to see your new nodes.
 
 ### <a name="try-sdo">Try Out SDO</a>
 
-[The LF Edge SDO project](https://www.lfedge.org/projects/securedeviceonboard/) (Secure Device Onboard) codebase is embedded in Open Horizon and their technology can configure an edge device and register it with a Horizon instance automatically. Although this is not necessary in this all-in-one environment (because the agent has already been registered), you can easily try out SDO to see it working.
+[The LF Edge SDO project ](https://www.lfedge.org/projects/securedeviceonboard/){:target="_blank"}{: .externalLink} (Secure Device Onboard) codebase is embedded in Open Horizon and their technology can configure an edge device and register it with a Horizon instance automatically. Although this is not necessary in this all-in-one environment (because the agent has already been registered), you can easily try out SDO to see it working.
 
 **Note:** SDO is currently only supported in this all-in-one environment on Ubuntu.
 
@@ -205,7 +205,7 @@ Using a Virtual Machine (VM) allows you to learn and experiment with Open Horizo
 
 #### <a name="setup-vm-vbox">VirtualBox</a>
 
-Oracle VM [VirtualBox](https://www.virtualbox.org/wiki/Downloads) is a virtualization application that runs on {{site.data.keyword.macOS_notm}}, Solaris and Windows as well as Linux.
+Oracle VM [VirtualBox ](https://www.virtualbox.org/wiki/Downloads){:target="_blank"}{: .externalLink} is a virtualization application that runs on {{site.data.keyword.macOS_notm}}, Solaris and Windows as well as Linux.
 Its Virtual Machine Manager user interface has a reasonable learning curve for beginners while keeping advanced settings within easy reach.
 
 The Open Horizon website has [a video](/common-requests/install/) detailing the process of setting up a VM in VirtualBox for use with the All-in-One environment.

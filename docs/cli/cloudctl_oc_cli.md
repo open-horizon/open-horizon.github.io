@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2020 - 2022
-lastupdated: "2022-03-17"
+years: 2020 - 2023
+lastupdated: "2023-02-25"
 title: "Installing cloudctl, kubectl, and oc"
 description: ""
 
@@ -48,7 +48,7 @@ Follow these steps to install the command line tools that are needed to manage a
 
 ## oc
 
-1. Download the {{site.data.keyword.open_shift_cp}} CLI tar file from [OpenShift client CLI (oc)](https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/). Select the file **openshift-client-\*-\*.tar.gz** for your operating system.
+1. Download the {{site.data.keyword.open_shift_cp}} CLI tar file from [OpenShift client CLI (oc) ](https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/){:target="_blank"}{: .externalLink}. Select the file **openshift-client-\*-\*.tar.gz** for your operating system.
 
 2. Find the downloaded tar file and unpack it:
   
@@ -71,7 +71,7 @@ Follow these steps to install the command line tools that are needed to manage a
    ```
    {: codeblock}
 
-Alternatively, use [homebrew](https://brew.sh/) to install **oc** on {{site.data.keyword.macOS_notm}}:
+Alternatively, use [homebrew ](https://brew.sh/){:target="_blank"}{: .externalLink} to install **oc** on {{site.data.keyword.macOS_notm}}:
   
    ```bash
    brew install openshift-cli
@@ -80,4 +80,4 @@ Alternatively, use [homebrew](https://brew.sh/) to install **oc** on {{site.data
 
 ## Kubectl
 
-Follow the instructions in [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
+Follow the instructions in [Install and Set Up kubectl ](https://kubernetes.io/docs/tasks/tools/install-kubectl/){:target="_blank"}{: .externalLink}.

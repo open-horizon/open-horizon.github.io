@@ -2,7 +2,7 @@
 
 copyright:
 years: 2022 - 2023
-lastupdated: "2023-02-06"
+lastupdated: "2023-02-25"
 title: "Installing the agent"
 
 parent: Edge clusters
@@ -80,7 +80,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
    ```
    {: codeblock}
 
-   If the command response indicates the **default-route** is not found, you need to expose it (see [Exposing the registry](https://docs.openshift.com/container-platform/4.6/registry/securing-exposing-registry.html) for details):
+   If the command response indicates the **default-route** is not found, you need to expose it (see [Exposing the registry ](https://docs.openshift.com/container-platform/4.6/registry/securing-exposing-registry.html){:target="_blank"}{: .externalLink} for details):
 
    ```bash
    oc patch configs.imageregistry.operator.openshift.io/cluster --patch '{"spec":{"defaultRoute":true}}' --type=merge

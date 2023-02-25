@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2020 - 2022
-lastupdated: "2022-03-17"
+years: 2020 - 2023
+lastupdated: "2023-02-25"
 title: Multitenacy
 description: Software architecture in which a single instance of software runs on server and server multiplies tenants.
 
@@ -34,7 +34,7 @@ Two broad use cases are used to leverage multi-tenancy in {{site.data.keyword.ie
 * An enterprise has multiple business units, where each business unit is a separate organization in the same {{site.data.keyword.ieam}} management hub. Consider the legal, business, or technical reasons why each business unit ought to be a separate organization with its own set of {{site.data.keyword.ieam}} resources, which are by default not accessible by the other business units. Even with separate organizations, the enterprise has the option to use a common group of organization administrators to manage all of the organizations.
 * An enterprise hosts {{site.data.keyword.ieam}} as a service for its clients, where each of their clients has one or more organizations in the management hub. In this case, the organization administrators are unique to each client.
 
-The use case that you choose determines how you configure {{site.data.keyword.ieam}} and Identity and Access Manager ([IAM](https://www.ibm.com/support/knowledgecenter/SSHKN6/iam/landing_iam.html)).
+The use case that you choose determines how you configure {{site.data.keyword.ieam}} and Identity and Access Manager ([IAM ](https://www.ibm.com/support/knowledgecenter/SSHKN6/iam/landing_iam.html){:target="_blank"}{: .externalLink}).
 
 ### Types of {{site.data.keyword.ieam}} users
 {: #user-types}
@@ -53,7 +53,7 @@ See [Role-based access control](../user_management/rbac.md) for a description of
 ## The relationship between IAM and {{site.data.keyword.ieam}}
 {: #iam-to-ieam}
 
-The IAM (Identity and Access Manager) service manages users for all Cloud Pak based products, including {{site.data.keyword.ieam}}. IAM in turn uses LDAP to store the users. Each IAM user can be a member of one or more IAM teams. Because each IAM team is associated with an IAM account, an IAM user can indirectly be a member of one or more IAM accounts. See [IAM multi-tenancy](https://www.ibm.com/support/knowledgecenter/SSHKN6/iam/3.x.x/multitenancy/multitenancy.html) for details.
+The IAM (Identity and Access Manager) service manages users for all Cloud Pak based products, including {{site.data.keyword.ieam}}. IAM in turn uses LDAP to store the users. Each IAM user can be a member of one or more IAM teams. Because each IAM team is associated with an IAM account, an IAM user can indirectly be a member of one or more IAM accounts. See [IAM multi-tenancy ](https://www.ibm.com/support/knowledgecenter/SSHKN6/iam/3.x.x/multitenancy/multitenancy.html){:target="_blank"}{: .externalLink} for details.
 
 The {{site.data.keyword.ieam}} exchange provides authentication and authorization services for the other {{site.data.keyword.ieam}} components. The exchange delegates the authentication of users to IAM, which means IAM user credentials are passed to the exchange and it relies on IAM to determine whether they are valid. Each user role (hub admin, organization admin, or regular user) is defined in the exchange, and that determines the actions that users are allowed to perform in {{site.data.keyword.ieam}}.
 

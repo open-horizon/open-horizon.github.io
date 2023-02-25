@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2020 - 2022
-lastupdated: "2022-03-17"
+years: 2020 - 2023
+lastupdated: "2023-02-25"
 title: Backup
 description: Data Backup and recovery
 
@@ -26,9 +26,9 @@ nav_order: 3
 
 For more information about cluster-wide data backup and recovery, see:
 
-* [{{site.data.keyword.open_shift_cp}} 4.6 backup etcd](https://docs.openshift.com/container-platform/4.6/backup_and_restore/control_plane_backup_and_restore/backing-up-etcd.html).
+* [{{site.data.keyword.open_shift_cp}} 4.6 backup etcd ](https://docs.openshift.com/container-platform/4.6/backup_and_restore/control_plane_backup_and_restore/backing-up-etcd.html){:target="_blank"}{: .externalLink}.
 
-If you have not downloaded the {{site.data.keyword.semver}} bundle, use the following commands with your [Entitled Registry Key](https://myibm.ibm.com/products-services/containerlibrary):
+If you have not downloaded the {{site.data.keyword.semver}} bundle, use the following commands with your [Entitled Registry Key ](https://myibm.ibm.com/products-services/containerlibrary){:target="_blank"}{: .externalLink} :
 
 ```bash
 docker login cp.icr.io --username cp && \

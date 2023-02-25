@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2020 - 2022
-lastupdated: "2022-03-17"
+years: 2020 - 2023
+lastupdated: "2023-02-25"
 title: Container Registry
 description: ""
 
@@ -329,7 +329,7 @@ Now {{site.data.keyword.horizon}} has everything that it needs to get this edge 
    ```
    {: codeblock}
 
-   **Note**: Alternatively, you can use the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/) to view the images in the {{site.data.keyword.cloud_notm}} Container Registry.
+   **Note**: Alternatively, you can use the [{{site.data.keyword.cloud_notm}} console ](https://cloud.ibm.com/){:target="_blank"}{: .externalLink} to view the images in the {{site.data.keyword.cloud_notm}} Container Registry.
 
 10. Publish a deployment pattern or policy that will deploy your service to some edge nodes. For example,:
 

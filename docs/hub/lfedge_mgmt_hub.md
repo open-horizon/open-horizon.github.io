@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2022
-lastupdated: "2022-10-03"
+years: 2022-2023
+lastupdated: "2025-02-25"
 
 ---
 
@@ -21,7 +21,7 @@ The LF Edge's Open Horizon project delivers containerized services and ML assets
 {: .text-justify}
 
 ## Requesting user account
-To obtain a free user account on the Hub, send your request to the *#open-horizon-devops* chat channel on the [Open Horizon chat server](https://chat.lfx.linuxfoundation.org/).
+To obtain a free user account on the Hub, send your request to the *#open-horizon-devops* chat channel on the [Open Horizon chat server ](https://chat.lfx.linuxfoundation.org/){:target="_blank"}{: .externalLink}.
 
 ## Adding user account in organization
 Before adding the new user, collect the following information:
@@ -32,7 +32,7 @@ Before adding the new user, collect the following information:
 
 To add a new user, first add a new tenant organization if the user is not being added exclusively to an existing organization by following the below steps:
 
-1. Authenticate with the Hub as a [Hub admin](https://open-horizon.github.io/docs/admin/multi_tenancy.html#user-types).
+1. Authenticate with the Hub as a [Hub admin ](https://open-horizon.github.io/docs/admin/multi_tenancy.html#user-types){:target="_blank"}{: .externalLink}.
 2. Create the organization for the user.  Usually the personal organization has the same name as the username.
 ```bash
 hzn exchange org create --description="Personal organization for example code" <org name>
@@ -41,7 +41,7 @@ hzn exchange org create --description="Personal organization for example code" <
 ```bash
 hzn exchange org list
 ```
-4. Create the new user account (add -A if the account is for an [Organization admin](https://open-horizon.github.io/docs/admin/multi_tenancy.html#user-types)):
+4. Create the new user account (add -A if the account is for an [Organization admin ](https://open-horizon.github.io/docs/admin/multi_tenancy.html#user-types){:target="_blank"}{: .externalLink}):
 ```bash
 hzn exchange user create -o <org name> -A <user login> <user password> <user email>
 ```

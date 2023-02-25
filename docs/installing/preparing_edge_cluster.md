@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2020 - 2022
-lastupdated: "2022-03-17"
+years: 2020 - 2023
+lastupdated: "2023-02-25"
 title: "Preparing an edge cluster"
 
 parent: Edge clusters
@@ -208,7 +208,7 @@ This content provides a summary of how to install k3s (rancher), a lightweight a
 ## Install and configure a microk8s edge cluster
 {: #install_microk8s_edge_cluster}
 
-This content provides a summary of how to install microk8s, a lightweight and small Kubernetes cluster, on Ubuntu Linux AMD64. (For more detailed instructions, see the [microk8s documentation](https://microk8s.io/docs).)
+This content provides a summary of how to install microk8s, a lightweight and small Kubernetes cluster, on Ubuntu Linux AMD64. (For more detailed instructions, see the [microk8s documentation ](https://microk8s.io/docs){:target="_blank"}{: .externalLink}.)
 
 **Note**: This type of edge cluster is meant for development and test because a single worker node Kubernetes cluster does not provide scalability or high availability.
 
@@ -247,7 +247,7 @@ This content provides a summary of how to install microk8s, a lightweight and sm
       ```
       {: codeblock}
 
-   3. For more information about Kubernetes DNS, see the [Kubernetes documentation](https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/).
+   3. For more information about Kubernetes DNS, see the [Kubernetes documentation ](https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/){:target="_blank"}{: .externalLink}.
 
 
 4. Check the status:

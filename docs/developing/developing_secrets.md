@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2021 - 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-02-25"
 title: Hello world with a secret
 description: This example teaches you how to develop an Open Horizon service that uses secrets. Secrets ensure that login credentials and other sensitive information are kept secure.
 
@@ -38,7 +38,7 @@ cat /etc/default/horizon
 ## Procedure
 {: #secrets_procedure}
 
-This example is part of the [{{site.data.keyword.horizon_open}}](https://github.com/open-horizon/) open-source project. Follow the steps in [Creating Your Own Hello Secret Service](https://github.com/open-horizon/examples/blob/master/edge/services/helloSecretWorld/CreateService.md)) and then return here.
+This example is part of the [{{site.data.keyword.horizon_open}} ](https://github.com/open-horizon/){:target="_blank"}{: .externalLink} open-source project. Follow the steps in [Creating Your Own Hello Secret Service ](https://github.com/open-horizon/examples/blob/master/edge/services/helloSecretWorld/CreateService.md){:target="_blank"}{: .externalLink} and then return here.
 
 ## What to do next
 {: #secrets_what_next}

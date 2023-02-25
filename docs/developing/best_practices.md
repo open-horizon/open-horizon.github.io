@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021 - 2022
-lastupdated: "2022-07-01"
+years: 2021 - 2023
+lastupdated: "2023-02-25"
 title: Best Practices
 description: ""
 
@@ -52,9 +52,9 @@ These differences require different techniques to deploy and manage software on 
   * Design loose-coupling between microservices to enable them to operate independently of each other, and to avoid stateful assumptions that impose affinities between services that would otherwise undermine elastic scaling, failover, and recovery.
   * Exercise continuous-integration and continuous-deployment (CI/CD), coupled with Agile Development practices within a DevOps framework.
   * Consider the following resources for more information about cloud-native programming practices:
-    * [10 KEY ATTRIBUTES OF CLOUD-NATIVE APPLICATIONS](https://thenewstack.io/10-key-attributes-of-cloud-native-applications/)
-    * [Cloud-native development principles](https://www.ibm.com/cloud/learn/cloud-native)
-    *	[Understanding cloud-native applications](https://www.redhat.com/en/topics/cloud-native-apps)
+    * [10 KEY ATTRIBUTES OF CLOUD-NATIVE APPLICATIONS ](https://thenewstack.io/10-key-attributes-of-cloud-native-applications/)(https://docker.io){:target="_blank"}{: .externalLink}
+    * [Cloud-native development principles ](https://www.ibm.com/cloud/learn/cloud-native)(https://docker.io){:target="_blank"}{: .externalLink}
+    *	[Understanding cloud-native applications ](https://www.redhat.com/en/topics/cloud-native-apps)(https://docker.io){:target="_blank"}{: .externalLink}
 
 * **Service availability:** If your service container requires and uses other service containers, your service must be tolerant when those services are absent in some situations. For example, when containers initially start, even though they are started from the end of the dependency graph, moving upward, some services can start more quickly than others. In this situation, your service containers need to retry while they wait for the dependencies to be fully functional. Similarly, if a dependent service container is automatically updated, then it is restarted. It is a best practice for your services to always be tolerant of interruptions in the services they depend on.
 * **Portability:** The world of edge computing spans multiple tiers of the system – including edge devices, edge clusters, and network or metro edge locations. Where your containerized edge workload will eventually be placed depend on a combination of factors, including its dependence on certain resources, such as sensor data and actuators, end latency requirements, and available compute capacity. You should design your workload to tolerate being placed in different tiers of the system depending on the needs of the context in which your application will be used.
@@ -71,7 +71,7 @@ These differences require different techniques to deploy and manage software on 
     * Use alpine as the base image for {{site.data.keyword.linux_notm}}.
     * To install packages in an alpine-based image, use the command `apk --no-cache --update add` to avoid storing the package cache, which is not needed for runtime.
     * Delete files in the same Dockerfile layer (command) where the files are added. If you use a separate Dockerfile command line to delete the files from the image, you increase the size of the container image. For example, you can use `&&` to group the commands to download, use, and then delete files, all within a single Dockerfile `RUN` command.
-    * Do not include build tools in your runtime Docker image. As a best practice, use a [Docker Multi-stage build](https://docs.docker.com/develop/develop-images/multistage-build/) to build the runtime artifacts. Then, selectively copy the required runtime artifacts, such as the executable components, into your runtime Docker image.
+    * Do not include build tools in your runtime Docker image. As a best practice, use a [Docker Multi-stage build ](https://docs.docker.com/develop/develop-images/multistage-build/)(https://docker.io){:target="_blank"}{: .externalLink} to build the runtime artifacts. Then, selectively copy the required runtime artifacts, such as the executable components, into your runtime Docker image.
 * **Keep services self-contained:** Because a service needs to be sent over a network to edge nodes and autonomously started, the service container needs to include everything that the service depends upon. You need to bundle these assets, such as all required certificates, into the container. Do not rely on the availability of administrators for completing tasks to add any required assets to the edge node for a service to run successfully.
 * **Data privacy:** Each time that you move private and sensitive data around the network, you increase the vulnerability of that data to attack and exposure. Edge computing offers, as one of its major benefits, the opportunity to keep that data where it is created. Respect that opportunity in your container by protecting it. Ideally, do not pass that data to other services. If you absolutely must pass data to other services or tiers in the system, attempt to remove personally identifying information (PII), personal health information (PHI), or personal financial information (PFI) through obfuscation or de-identification techniques or by encrypting it with a key that is owned entirely within the confines of your service. 
 * **Design and configure for automation:** Edge nodes, and the services that run on the nodes, need to be as close to zero-ops as possible. {{site.data.keyword.ieam}} automates the deployment and management of services, but the services must be structured to enable {{site.data.keyword.ieam}} to be able to automate these processes without human intervention. To help design for automation, adhere to the following guidelines:

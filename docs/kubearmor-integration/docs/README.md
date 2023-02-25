@@ -18,15 +18,15 @@ KubeArmor running on the edge node provides visibility and protection for all th
 
 **Enforcement:** KubeArmor can be used to apply security postures at the kernel level (using LSMs like AppArmor, BPF-LSM). It can protect both the host and workloads running on it by enforcing either some predefined security policies or automatically generated least permissive security policies (using Discovery Engine).
 
-KubeArmor already supports k8s-orchestrated workloads and provides [KVMService](https://github.com/kubearmor/kvm-service) that allows orchestrating security policies to VMs for non-k8s environments.
+KubeArmor already supports k8s-orchestrated workloads and provides [KVMService ](https://github.com/kubearmor/kvm-service){:target="_blank"}{: .externalLink} that allows orchestrating security policies to VMs for non-k8s environments.
 With v0.5.5 release, KubeArmor now supports standalone un-orchestrated containers. KubeArmor in this mode supports both enforcement and observability of the host and the containers running on it.
 
 ## KubeArmor on Open Horizon
 
 > **Note**
 > This guide assumes both the Open Horizon Management Hub and Agent VM are running Ubuntu 20.04.
-We will first need to install Open Horizon Management Hub and Agent node components. For that please follow the [Open Horizon setup](https://github.com/kubearmor/KubeArmor/wiki/Open-Horizon-setup) guide.
-We also assume that [Open Horizon Home Assistant service](https://github.com/open-horizon-services/service-homeassistant) is running on the agent edge node.
+We will first need to install Open Horizon Management Hub and Agent node components. For that please follow the [Open Horizon setup ](https://github.com/kubearmor/KubeArmor/wiki/Open-Horizon-setup){:target="_blank"}{: .externalLink} guide.
+We also assume that [Open Horizon Home Assistant service ](https://github.com/open-horizon-services/service-homeassistant){:target="_blank"}{: .externalLink} is running on the agent edge node.
 
 <p align="center"><img src="./OH-detailed.png" width="768"></p>
 
@@ -36,7 +36,7 @@ Now we will run KubeArmor as a systemd process on the Open Horizon Agent VM
 
 * **KubeArmor Installation:**
 
-1. Download the [latest release](https://github.com/kubearmor/KubeArmor/releases) of KubeArmor
+1. Download the [latest release ](https://github.com/kubearmor/KubeArmor/releases){:target="_blank"}{: .externalLink} of KubeArmor
 
    ```bash
    wget https://github.com/kubearmor/KubeArmor/releases/download/v0.5.5/kubearmor_0.5.5_linux-amd64.deb
@@ -48,15 +48,15 @@ Now we will run KubeArmor as a systemd process on the Open Horizon Agent VM
    sudo apt install ./kubearmor_0.5.5_linux-amd64.deb
    ```
 
-> Note that the above automatically installs `bpfcc-tools` with our package, but your distribution might have an older version of BCC. In case of errors, consider installing `bcc` from [source](https://github.com/iovisor/bcc/blob/master/INSTALL.md#source).
+> Note that the above automatically installs `bpfcc-tools` with our package, but your distribution might have an older version of BCC. In case of errors, consider installing `bcc` from [source ](https://github.com/iovisor/bcc/blob/master/INSTALL.md#source){:target="_blank"}{: .externalLink}.
 
 ---
 <details><summary> Note: For distributions other than Ubuntu/Debian</summary>
 <p>
 
-i. Refer [Installing BCC](https://github.com/iovisor/bcc/blob/master/INSTALL.md#installing-bcc) to install pre-requisites.
+i. Refer [Installing BCC ](https://github.com/iovisor/bcc/blob/master/INSTALL.md#installing-bcc){:target="_blank"}{: .externalLink} to install pre-requisites.
 
-ii. Download release tarball from KubeArmor [releases](https://github.com/kubearmor/KubeArmor/releases)
+ii. Download release tarball from KubeArmor [releases ](https://github.com/kubearmor/KubeArmor/releases){:target="_blank"}{: .externalLink}
 
     ```bash
     wget https://github.com/kubearmor/KubeArmor/releases/download/v0.5.5/kubearmor_0.5.5_linux-amd64.tar.gz
@@ -97,7 +97,7 @@ curl -sfL http://get.kubearmor.io/ | sudo sh -s -- -b /usr/local/bin
 
 * **Discovery Engine Installation:**
 
-1. Download the [latest release](https://github.com/accuknox/discovery-engine/releases) of Discovery Engine
+1. Download the [latest release ](https://github.com/accuknox/discovery-engine/releases){:target="_blank"}{: .externalLink} of Discovery Engine
 
    ```bash
    wget https://github.com/accuknox/discovery-engine/releases/download/v0.6.3/knoxAutoPolicy_0.6.3_linux-amd64.deb
@@ -113,7 +113,7 @@ curl -sfL http://get.kubearmor.io/ | sudo sh -s -- -b /usr/local/bin
 <details><summary> Note: For distributions other than Ubuntu/Debian</summary>
 <p>
 
-i. Download release tarball from KubeArmor [releases](https://github.com/kubearmor/KubeArmor/releases)
+i. Download release tarball from KubeArmor [releases ](https://github.com/kubearmor/KubeArmor/releases){:target="_blank"}{: .externalLink}
 
    ```bash
    wget https://github.com/accuknox/discovery-engine/releases/download/v0.6.3/knoxAutoPolicy_0.6.3_linux-amd64.tar.gz
@@ -188,7 +188,7 @@ spec:
 
 </details>
 
-Note: More predefined policies and auto-discovered policy can be found here: [https://github.com/kubearmor/openhorizon-demo/tree/main/Open-Horizon/policies](https://github.com/kubearmor/openhorizon-demo/tree/main/Open-Horizon/policies)
+Note: More predefined policies and auto-discovered policy can be found here: [https://github.com/kubearmor/openhorizon-demo/tree/main/Open-Horizon/policies ](https://github.com/kubearmor/openhorizon-demo/tree/main/Open-Horizon/policies){:target="_blank"}{: .externalLink}
 
 Here notice the field `kubearmor.io/container.name: homeassistant` homeassistant is the container name to which we want to apply the policy.
 

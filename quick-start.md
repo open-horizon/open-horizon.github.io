@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2021 - 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-02-25"
 layout: page
 title: "Quick Start"
 description: "A guide to get you using Open Horizon in minutes."
@@ -85,4 +85,4 @@ Alternatively, see the [detailed installation instructions](docs/installing/regi
 
 From the [Getting Started Overview](docs/getting_started/overview_oh.md) page.
 
-From the [Open-Horizon Project Playlist](https://www.youtube.com/playlist?list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix) on YouTube.
+From the [Open-Horizon Project Playlist ](https://www.youtube.com/playlist?list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix){:target="_blank"}{: .externalLink} on YouTube.
