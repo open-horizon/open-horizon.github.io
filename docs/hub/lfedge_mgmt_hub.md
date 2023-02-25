@@ -2,7 +2,7 @@
 
 copyright:
 years: 2022-2023
-lastupdated: "2025-02-25"
+lastupdated: "2023-02-25"
 
 ---
 
@@ -32,7 +32,7 @@ Before adding the new user, collect the following information:
 
 To add a new user, first add a new tenant organization if the user is not being added exclusively to an existing organization by following the below steps:
 
-1. Authenticate with the Hub as a [Hub admin ](https://open-horizon.github.io/docs/admin/multi_tenancy.html#user-types){:target="_blank"}{: .externalLink}.
+1. Authenticate with the Hub as a [Hub admin](../admin/multi_tenancy.md#user-types).
 2. Create the organization for the user.  Usually the personal organization has the same name as the username.
 ```bash
 hzn exchange org create --description="Personal organization for example code" <org name>
@@ -41,7 +41,7 @@ hzn exchange org create --description="Personal organization for example code" <
 ```bash
 hzn exchange org list
 ```
-4. Create the new user account (add -A if the account is for an [Organization admin ](https://open-horizon.github.io/docs/admin/multi_tenancy.html#user-types){:target="_blank"}{: .externalLink}):
+4. Create the new user account (add -A if the account is for an [Organization admin](../admin/multi_tenancy.md#user-types)):
 ```bash
 hzn exchange user create -o <org name> -A <user login> <user password> <user email>
 ```

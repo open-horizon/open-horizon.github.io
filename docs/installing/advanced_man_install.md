@@ -44,7 +44,7 @@ This content describes each manual step to install the {{site.data.keyword.edge_
 
 4. Use whichever following section that applies to your type of edge device.
 
-**Note**: If your Linux is not one of the supported distributions and it supports containers, see [Container Agent Installation ](https://github.com/open-horizon/anax/blob/master/docs/agent_container_manual_deploy.md){:target="_blank"}{: .externalLink} for instructions about how to use the containerized agent.
+**Note**: If your Linux is not one of the supported distributions and it supports containers, see [Container Agent Installation](../anax/docs/agent_container_manual_deploy.md) for instructions about how to use the containerized agent.
 
 ### Installing the agent on Linux (ARM 32-bit, ARM 64-bit, ppc64le, or x86_64) edge devices or virtual machines
 {: #agent_install_linux}
