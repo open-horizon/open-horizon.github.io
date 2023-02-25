@@ -7,7 +7,7 @@ parent: Quick Start
 nav_order: 3
 ---
 
-Contributions will only be considered when linked to an open issue, aligned with the project goals, and attested to by the Contributor (ex. signing off on a commit, accepting the [Developer Certificate of Origin](https://developercertificate.org/)).
+Contributions will only be considered when linked to an open issue, aligned with the project goals, and attested to by the Contributor (ex. signing off on a commit, accepting the [Developer Certificate of Origin ](https://developercertificate.org/){:target="_blank"}{: .externalLink}).
 
 #### Get assigned
 
@@ -17,17 +17,20 @@ To get assigned to an issue, start with an open issue labelled `Good First Issue
 
 - To get a quick response, try "at" mentioning a Maintainer or Working Group lead in your comment as mentioned in the following repositories:
 
-  - [anax](https://github.com/open-horizon/anax) repo - [Agent](https://wiki.lfedge.org/display/OH/Agent+Working+Group) Working Group
-  - [exchange-api](https://github.com/open-horizon/exchange-api) repo - [Management Hub](https://wiki.lfedge.org/display/OH/Management+Hub+Working+Group) Working Group
-  - [open-horizon.github.io](https://github.com/open-horizon/open-horizon.github.io) repo - [Documentation](https://wiki.lfedge.org/display/OH/Documentation+Working+Group) Working Group
-- For a more live interaction, participating in [regular meetings conducted by respective working groups](https://wiki.lfedge.org/display/OH/Community+Membership) is encouraged.
-- Join the channel #open-horizon-help in [LF Edge chat work space](https://chat.lfx.linuxfoundation.org/#/room/#open-horizon-help).
+  - [anax repo ](https://github.com/open-horizon/anax){:target="_blank"}{: .externalLink}  
+  - [Agent Working Group ](https://wiki.lfedge.org/display/OH/Agent+Working+Group){:target="_blank"}{: .externalLink} 
+  - [exchange-api repo ](https://github.com/open-horizon/exchange-api){:target="_blank"}{: .externalLink}  
+  - [Management Hub Working Group ](https://wiki.lfedge.org/display/OH/Management+Hub+Working+Group){:target="_blank"}{: .externalLink} 
+  - [open-horizon.github.io repo ](https://github.com/open-horizon/open-horizon.github.io){:target="_blank"}{: .externalLink} 
+  - [Documentation Working Group ](https://wiki.lfedge.org/display/OH/Documentation+Working+Group){:target="_blank"}{: .externalLink} 
+- For a more live interaction, participating in [regular meetings conducted by respective working groups ](https://wiki.lfedge.org/display/OH/Community+Membership){:target="_blank"}{: .externalLink} is encouraged.
+- Join the channel #open-horizon-help in [LF Edge chat work space ](https://chat.lfx.linuxfoundation.org/#/room/#open-horizon-help){:target="_blank"}{: .externalLink}.
 
 #### Attest
 
 All commits should be signed off (`-s` flag on git commit).
 
-The `-s` option used for both alternatives causes a committer signed-off-by line to be appended to the end of the commit message body.  It certifies that committer has the rights to submit this work under the same license and agrees to our [Developer Certificate of Origin](https://developercertificate.org/). E.g.
+The `-s` option used for both alternatives causes a committer signed-off-by line to be appended to the end of the commit message body.  It certifies that committer has the rights to submit this work under the same license and agrees to our [Developer Certificate of Origin ](https://developercertificate.org/){:target="_blank"}{: .externalLink}. E.g.
 `signed-off-by: John Doe johndoe@example.com`
 
 In order to use the -s option, you need to make sure you configure your git name (user.name) and email address (user.email):
