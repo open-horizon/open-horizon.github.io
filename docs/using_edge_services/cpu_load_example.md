@@ -75,7 +75,7 @@ environment variables.
 ### Testing {{site.data.keyword.message_hub_notm}} in {{site.data.keyword.cloud_notm}}
 {: #testing}
 
-1. Install `kafkacat` (https://github.com/edenhill/kcat#install).
+1. Install [kafkacat ](https://github.com/edenhill/kcat#install){:target="_blank"}{: .externalLink}.
 
 2. On a terminal, enter the following to subscribe to the `cpu2evtstreams` topic:
 

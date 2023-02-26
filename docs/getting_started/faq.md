@@ -41,12 +41,12 @@ The following are answers to some frequently asked questions (FAQs) about {{site
 ## Is there a way to create a self-contained environment for development purposes?
 {: #one_click}
 
-You can install the open source management hub (without the {{site.data.keyword.ieam}} management console) with the "all-in-one" installer for developers. The all-in-one installer creates a complete but minimal management hub, not suitable for production use. It also configures an example edge node. This tool enables open source component developers to get started quickly without the time it takes to configure a complete production {{site.data.keyword.ieam}} management hub. For information about the all-in-one installer, see [Open Horizon - Devops ](https://github.com/open-horizon/devops/tree/master/mgmt-hub){:target="_blank"}{: .externalLink}.
+You can install the open source management hub (without the {{site.data.keyword.ieam}} management console) with the "all-in-one" installer for developers. The all-in-one installer creates a complete but minimal management hub, not suitable for production use. It also configures an example edge node. This tool enables open source component developers to get started quickly without the time it takes to configure a complete production {{site.data.keyword.ieam}} management hub. For information about the all-in-one installer, see [Open Horizon - Devops ](https://github.com/open-horizon/devops/tree/master/mgmt-hub){:target="_blank"}{: .externalLink} GitHub repository.
 
 ## Is {{site.data.keyword.ieam}} software open-sourced?
 {: #open_sourced}
 
-{{site.data.keyword.ieam}} is an IBM product. But its core components heavily use the [Open Horizon ](https://www.lfedge.org/projects/openhorizon/){:target="_blank"}{: .externalLink} open source project. Many sample and example programs that are available in the {{site.data.keyword.horizon}} project work with {{site.data.keyword.ieam}}. For more information about the project, see [Open Horizon ](https://www.lfedge.org/projects/openhorizon/){:target="_blank"}{: .externalLink}.
+{{site.data.keyword.edge}} is an IBM product. But its core components heavily use the [Open Horizon ](https://www.lfedge.org/projects/openhorizon/){:target="_blank"}{: .externalLink} open source project. Many sample and example programs that are available in the {{site.data.keyword.horizon}} project work with {{site.data.keyword.ieam}}. For more information about the project, see [Open Horizon ](https://www.lfedge.org/projects/openhorizon/){:target="_blank"}{: .externalLink} GitHub repository.
 
 ## How can I develop and deploy edge services with {{site.data.keyword.ieam}}?
 {: #dev_dep}
