@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2021 - 2023
-lastupdated: "2023-02-25"
+lastupdated: "2023-02-27"
 title: "Secrets Manager details"
 
 parent: Secrets Manager
@@ -20,7 +20,7 @@ nav_order: 1
 # Developing a service using secrets
 {: #using secrets}
 
-<img src="../../images/edge/10_Secrets.svg" style="margin: 3%" alt="Developing a service using secrets">
+![Developing a service using secrets](../../images/edge/10_Secrets.svg "Developing a service using secrets"){:style="margin: 3%"}
 
 # Secrets Manager details
 {: #secrets_details}

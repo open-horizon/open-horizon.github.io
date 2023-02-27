@@ -25,14 +25,14 @@ Follow these steps to install the command line tools that are needed to manage a
 
 ## cloudctl
 
-1. Browse your {{site.data.keyword.ieam}} web UI at: `https://&lt;CLUSTER_URL&gt;/common-nav/cli`
+1. Browse your {{site.data.keyword.ieam}} web UI at: `https://<CLUSTER_URL>/common-nav/cli`
 
 2. Expand the **IBM Cloud Pak CLI** section and select your **OS**.
 
 3. Copy the displayed **curl** command and run it to download the **cloudctl** binary.
 
 4. Make the file executable and move it to **/usr/local/bin**:
-  
+
    ```bash
    chmod 755 cloudctl-*
    sudo mv cloudctl-* /usr/local/bin/cloudctl
@@ -40,7 +40,7 @@ Follow these steps to install the command line tools that are needed to manage a
    {: codeblock}
 
 5. Ensure **/usr/local/bin** is in your PATH and then verify that **cloudctl** is working:
-  
+
    ```bash
    cloudctl --help
    ```
@@ -51,28 +51,28 @@ Follow these steps to install the command line tools that are needed to manage a
 1. Download the {{site.data.keyword.open_shift_cp}} CLI tar file from [OpenShift client CLI (oc) ](https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/){:target="_blank"}{: .externalLink}. Select the file **openshift-client-\*-\*.tar.gz** for your operating system.
 
 2. Find the downloaded tar file and unpack it:
-  
+
    ```bash
    tar -zxvf openshift-client-*-*.tar.gz
    ```
    {: codeblock}
 
 3. Move the **oc** command to **/usr/local/bin**:
-  
+
    ```bash
    sudo mv oc /usr/local/bin/
    ```
    {: codeblock}
 
 4. Ensure **/usr/local/bin** is in your PATH and verify that **oc** is working:
-  
+
    ```bash
    oc --help
    ```
    {: codeblock}
 
 Alternatively, use [homebrew ](https://brew.sh/){:target="_blank"}{: .externalLink} to install **oc** on {{site.data.keyword.macOS_notm}}:
-  
+
    ```bash
    brew install openshift-cli
    ```

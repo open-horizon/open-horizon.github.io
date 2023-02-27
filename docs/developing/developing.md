@@ -1,8 +1,7 @@
 ---
-
 copyright:
 years: 2021 - 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-02-27"
 title: Developing an edge service for devices
 description: ""
 
@@ -25,7 +24,7 @@ To begin developing edge services for {{site.data.keyword.edge_notm}} ({{site.da
 
 This diagram shows the typical interactions between the components within {{site.data.keyword.horizon}}.
 
-<img src="../../images/edge/03a_Developing_edge_service_for_device.svg" style="margin: 3%" alt="Edge devices">
+![Edge devices](../../images/edge/03a_Developing_edge_service_for_device.svg "Edge devices"){:style="margin: 3%"}
 
 ## Examples
 
