@@ -1,8 +1,7 @@
 ---
-
 copyright:
 years: 2021 - 2023
-lastupdated: "2023-02-25"
+lastupdated: "2023-02-27"
 
 title: Model Management Service
 
@@ -33,11 +32,11 @@ The following diagrams show the work flow associated with developing and updatin
 
 ### Developing and using an AI model with MMS
 
-<img src="../../images/edge/02a_Developing_AI_model_using_MMS.svg" style="margin: 3%" alt="Developing an AI service using MMS"> 
+![Developing an AI service using MMS](../../images/edge/02a_Developing_AI_model_using_MMS.svg "Developing an AI service using MMS"){:style="margin: 3%"}
 
 ### Updating an AI model with MMS
 
-<img src="../../images/edge/02b_Updating_AI_model_using_MMS.svg" style="margin: 3%" alt="Updating an AI service using MMS"> 
+![Updating an AI service using MMS](../../images/edge/02b_Updating_AI_model_using_MMS.svg "Updating an AI service using MMS"){:style="margin: 3%"}
 
 ## MMS concepts
 
@@ -121,6 +120,7 @@ The metadata file is a json file.
    hzn mms object new
    ```
    {: codeblock}
+
 2. Copy the template to a file named **my_metadata.json**:
 
    ```bash
