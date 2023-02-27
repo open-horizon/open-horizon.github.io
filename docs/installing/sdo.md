@@ -1,7 +1,7 @@
 ---
 copyright:
-years: 2020 - 2022
-lastupdated: "2022-07-07"
+years: 2020 - 2023
+lastupdated: "2023-02-27"
 title: "SDO agent install"
 
 parent: Edge devices info
@@ -36,7 +36,7 @@ SDO consists of these components:
 
 ### SDO flow
 
-<img src="../images/edge/09_SDO_device_provisioning.svg" style="margin: 3%" alt="SDO installation overview">
+![SDO installation overview](../images/edge/09_SDO_device_provisioning.svg "SDO installation overview"){:style="margin: 3%"}
 
 ## Before you begin
 {: #before_begin}

@@ -1,8 +1,7 @@
 ---
-
 copyright:
-years: 2020 - 2022
-lastupdated: "2022-03-17"
+years: 2020 - 2023
+lastupdated: "2023-02-27"
 title: Container Deployment
 description: ""
 
@@ -21,7 +20,7 @@ nav_order: 2
 # Container deployment options
 {: #container_deployment_options}
 
-When your developers publish services to {{site.data.keyword.horizon_exchange}}, they need to specify how the agent communicates with Docker to deploy the services at run time on the edge node. Your developers must specify the data within the {{site.data.keyword.horizon}} service definition `deployment` field. For more information, see [{{site.data.keyword.horizon}} deployment strings ](/docs/anax/blob/master/docs/deployment_string/).
+When your developers publish services to {{site.data.keyword.horizon_exchange}}, they need to specify how the agent communicates with Docker to deploy the services at run time on the edge node. Your developers must specify the data within the {{site.data.keyword.horizon}} service definition `deployment` field. For more information, see [{{site.data.keyword.horizon}} deployment strings ](/docs/anax/docs/deployment_string/).
 
 ## Related information
 

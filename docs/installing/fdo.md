@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2020 - 2023
-lastupdated: "2023-02-14"
+lastupdated: "2023-02-27"
 title: "FDO agent install"
 
 parent: Edge devices info
@@ -59,7 +59,7 @@ Before you purchase FDO-enabled edge devices, you can test FDO support in {{site
    ```
    {: codeblock}
 
-3. Follow the steps in the [FIDO Device Onboard (FDO)](https://github.com/open-horizon/FDO-support/blob/main/README.md){:target="_blank"}{: .externalLink} to observe FDO automatically install the {{site.data.keyword.ieam}} agent on a device and registers it with your {{site.data.keyword.ieam}} management hub.
+3. Follow the steps in the [FIDO Device Onboard (FDO) ](https://github.com/open-horizon/FDO-support/blob/main/README.md){:target="_blank"}{: .externalLink} to observe FDO automatically install the {{site.data.keyword.ieam}} agent on a device and registers it with your {{site.data.keyword.ieam}} management hub.
 
 ## Adding FDO-enabled devices to your {{site.data.keyword.ieam}} domain
 {: #using-fdo}
