@@ -5,4 +5,10 @@ $pink-300: #dd2cd4;
 
 .externalLink::after{
     content: url('/img/launch-glyph.svg');
+    color: #4e94ef;
+}
+.externalLink::after > svg {
+    width: $sp-4;
+    height: $sp-4;
+    vertical-align: text-bottom;
 }
