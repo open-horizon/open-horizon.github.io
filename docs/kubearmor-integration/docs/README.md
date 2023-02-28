@@ -1,4 +1,15 @@
-# KubeArmor security for Open Horizon workloads/agent
+---
+copyright:
+years: 2022 - 2023
+lastupdated: "2023-02-27"
+title: "KubeArmor Integration"
+description: "KubeArmor Security for Open Horizon workloads / agent"
+
+parent: Integrating
+nav_order: 1
+---
+
+# KubeArmor security for Open Horizon workloads / agent
 
 KubeArmor is a runtime security engine that can protect k8s-orchestrated, or
 pure containerized workloads as well as VM/Bare-Metal based workloads. Open
@@ -6,7 +17,7 @@ Horizon deploys the edge workloads in either containerized mode or k8s
 orchestrated mode. The Open Horizon Edge Agent operates directly on the host as
 a systemd process.
 
-<p align="center"><img src="./OH-edge-kubearmor.png" width="768"></p>
+![KubeArmor Open Horizon integration](./OH-edge-kubearmor.png)
 
 KubeArmor running on the edge node provides visibility and protection for all the processes, files, or network operations in the containers as well as those running directly on the host.
 
@@ -18,17 +29,15 @@ KubeArmor running on the edge node provides visibility and protection for all th
 
 **Enforcement:** KubeArmor can be used to apply security postures at the kernel level (using LSMs like AppArmor, BPF-LSM). It can protect both the host and workloads running on it by enforcing either some predefined security policies or automatically generated least permissive security policies (using Discovery Engine).
 
-KubeArmor already supports k8s-orchestrated workloads and provides [KVMService ](https://github.com/kubearmor/kvm-service){:target="_blank"}{: .externalLink} that allows orchestrating security policies to VMs for non-k8s environments.
-With v0.5.5 release, KubeArmor now supports standalone un-orchestrated containers. KubeArmor in this mode supports both enforcement and observability of the host and the containers running on it.
+KubeArmor already supports k8s-orchestrated workloads and provides [KVMService ](https://github.com/kubearmor/kvm-service){:target="_blank"}{: .externalLink} that allows orchestrating security policies to VMs for non-k8s environments. With v0.5.5 release, KubeArmor now supports standalone un-orchestrated containers. KubeArmor in this mode supports both enforcement and observability of the host and the containers running on it.
 
 ## KubeArmor on Open Horizon
 
 > **Note**
 > This guide assumes both the Open Horizon Management Hub and Agent VM are running Ubuntu 20.04.
-We will first need to install Open Horizon Management Hub and Agent node components. For that please follow the [Open Horizon setup ](https://github.com/kubearmor/KubeArmor/wiki/Open-Horizon-setup){:target="_blank"}{: .externalLink} guide.
-We also assume that [Open Horizon Home Assistant service ](https://github.com/open-horizon-services/service-homeassistant){:target="_blank"}{: .externalLink} is running on the agent edge node.
+We will first need to install Open Horizon Management Hub and Agent node components. For that please follow the [Open Horizon setup ](https://github.com/kubearmor/KubeArmor/wiki/Open-Horizon-setup){:target="_blank"}{: .externalLink} guide. We also assume that [Open Horizon Home Assistant service ](https://github.com/open-horizon-services/service-homeassistant){:target="_blank"}{: .externalLink} is running on the agent edge node.
 
-<p align="center"><img src="./OH-detailed.png" width="768"></p>
+![KubeArmor Open Horizon details](./OH-detailed.png)
 
 Now we will run KubeArmor as a systemd process on the Open Horizon Agent VM
 
