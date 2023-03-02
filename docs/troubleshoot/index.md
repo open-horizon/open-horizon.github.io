@@ -36,7 +36,7 @@ Review the following questions when you encounter an issue with {{site.data.keyw
 - [Troubleshooting node errors](#troubleshooting_node_errors)
 - [How to uninstall Podman on RHEL?](#uninstall_podman)
 - [Are you encountering HTTP error, while executing deploy-mgmt-hub.sh?](#deploy_mgmt_http_error)
-
+- [How documentation are sourced across repositories and how to correctly modify them?](#docs_source_explanation)
 ## Are the currently released versions of the {{site.data.keyword.horizon}} packages installed?
 {: #install_horizon}
 
@@ -503,6 +503,20 @@ If you see this error at the end of the cluster agent-install process or while t
    for i in `oc get csr |grep Pending |awk '{print $1}'`; do oc adm certificate approve $i; done
    ```
    {: codeblock}
+
+## How documentation are sourced across repositories and how to correctly modify them?
+{: #docs_source_explanation}
+
+Some docs under [open-horizon.github.io/docs](https://github.com/open-horizon/open-horizon.github.io/tree/master/docs) can have its source in different repository.
+
+Use the URL path to identify if the source is [open-horizon.github.io/docs](https://github.com/open-horizon/open-horizon.github.io/tree/master/docs) or another repository. If the source is in different repository then sourced repo name is used `open-horizon.github.io/docs/<SOURCE_REPO_NAME>/docs`.
+
+For example, docs under `open-horizon.github.io/docs/anax/docs` will have URL containing `/docs/anax/docs` (https://open-horizon.github.io/docs/anax/docs/). So it is sourced from `anax` repository (i.e https://github.com/open-horizon/anax/tree/master/docs).
+Likewise `devops/docs` URL will have `/docs/mgmt-hub/docs` and will be sourced from `mgmt-hub` repository (https://github.com/open-horizon/mgmt-hub/tree/master/docs).
+
+It is important that any changes to docs sourced from another repository should made in corresponding repository and not in `open-horizon.github.io` repository. 
+
+`CopyDocs GitHub Action` which will trigger on a PR merge and the file will be copied over to the `open-horizon.github.io` repo.
 
 ### Additional information
 
