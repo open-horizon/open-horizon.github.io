@@ -30,6 +30,7 @@ We appreciate and recognize all contributors.
   - [Clone the repository](#clone-the-repository)
   - [Create a branch](#create-a-branch)
   - [Make necessary changes](#make-necessary-changes-1)
+  - [Identifying Documentation Source](#identifying-documentation-source)
 - [Test in Local and Push Changes to GitHub](#test-in-local-and-push-changes-to-github)
   - [Prerequisites](#prerequisites)
   - [Test your changes locally](#test-your-changes-locally)
@@ -86,6 +87,21 @@ git checkout -b issue-329
 ## Make necessary changes
 
 Now, you can suggest contributions, make necessary changes to existing files, or add new files.
+
+## Identifying Documentation Source
+
+Some markdown pages under [open-horizon.github.io/docs](https://github.com/open-horizon/open-horizon.github.io/tree/master/docs) can have their source markdown in other repositories in the Open Horizon GitHub organization.
+
+Use the URL path to identify if the source is [open-horizon.github.io/docs](https://github.com/open-horizon/open-horizon.github.io/tree/master/docs) or another repository. If the source is in different repository then sourced repo name is used `open-horizon.github.io/docs/<SOURCE_REPO_NAME>/docs`.
+
+- [`/docs/anax/docs/`](https://github.com/open-horizon/open-horizon.github.io/tree/master/docs/anax/docs) markdown pages are sourced https://github.com/open-horizon/anax/tree/master/docs
+- [`/docs/mgmt-hub/docs/`](https://github.com/open-horizon/open-horizon.github.io/tree/master/docs/mgmt-hub/docs/) markdown pages are sourced from https://github.com/open-horizon/devops/blob/master/docs/index.md
+- [`/docs/kubearmor-integration/docs/`](https://github.com/open-horizon/open-horizon.github.io/tree/master/docs/kubearmor-integration/docs/) markdown pages are sourced from https://github.com/open-horizon/kubearmor-integration/tree/main/docs
+
+
+It is important that any changes to docs sourced from another repository should made in corresponding repository and not in `open-horizon.github.io` repository.
+
+CopyDocs GitHub Actions, in each of the respective repos, will trigger on a PR merge and the source markdown files will be copied.
 
 # Test in local and push changes to GitHub
 
