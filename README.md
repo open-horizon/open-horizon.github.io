@@ -90,16 +90,18 @@ Now, you can suggest contributions, make necessary changes to existing files, or
 
 ## Identifying Documentation Source
 
-Some docs under [open-horizon.github.io/docs](https://github.com/open-horizon/open-horizon.github.io/tree/master/docs) can have its source in different repository.
+Some markdown pages under [open-horizon.github.io/docs](https://github.com/open-horizon/open-horizon.github.io/tree/master/docs) can have their source markdown in other repositories in the Open Horizon GitHub organization.
 
 Use the URL path to identify if the source is [open-horizon.github.io/docs](https://github.com/open-horizon/open-horizon.github.io/tree/master/docs) or another repository. If the source is in different repository then sourced repo name is used `open-horizon.github.io/docs/<SOURCE_REPO_NAME>/docs`.
 
-For example, docs under `open-horizon.github.io/docs/anax/docs` will have URL containing `/docs/anax/docs` (https://open-horizon.github.io/docs/anax/docs/). So it is sourced from `anax` repository (i.e https://github.com/open-horizon/anax/tree/master/docs).
-Likewise `devops/docs` URL will have `/docs/mgmt-hub/docs` and will be sourced from `mgmt-hub` repository (https://github.com/open-horizon/mgmt-hub/tree/master/docs).
+- [`/docs/anax/docs/`](https://github.com/open-horizon/open-horizon.github.io/tree/master/docs/anax/docs) markdown pages are sourced https://github.com/open-horizon/anax/tree/master/docs
+- [`/docs/mgmt-hub/docs/`](https://github.com/open-horizon/open-horizon.github.io/tree/master/docs/mgmt-hub/docs/) markdown pages are sourced from https://github.com/open-horizon/devops/blob/master/docs/index.md
+- [`/docs/kubearmor-integration/docs/`](https://github.com/open-horizon/open-horizon.github.io/tree/master/docs/kubearmor-integration/docs/) markdown pages are sourced from https://github.com/open-horizon/kubearmor-integration/tree/main/docs
 
-It is important that any changes to docs sourced from another repository should made in corresponding repository and not in `open-horizon.github.io` repository. 
 
-`CopyDocs GitHub Action` which will trigger on a PR merge and the file will be copied over to the `open-horizon.github.io` repo.
+It is important that any changes to docs sourced from another repository should made in corresponding repository and not in `open-horizon.github.io` repository.
+
+CopyDocs GitHub Actions, in each of the respective repos, will trigger on a PR merge and the source markdown files will be copied.
 
 # Test in local and push changes to GitHub
 
