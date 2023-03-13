@@ -1,11 +1,12 @@
 ---
-
 copyright:
-years: 2021 - 2022
-lastupdated: "2022-08-13"
-title: "Further reading for devices"
+years: 2021 - 2023
+lastupdated: "2023-03-13"
+title: Further reading for devices
+description: ""
 
-nav_order: 17
+parent: Developing edge services
+nav_order: 2
 has_children: true
 has_toc: false
 ---

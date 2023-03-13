@@ -1,9 +1,12 @@
 ---
-
 copyright:
-years: 2020 - 2022
-lastupdated: "2022-03-17"
+years: 2020 - 2023
+lastupdated: "2023-03-13"
+title: Hello world using model management
+description: ""
 
+parent: Model Management Service
+grand_parent: Developing edge services
 ---
 
 {:new_window: target="blank"}

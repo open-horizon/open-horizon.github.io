@@ -2,11 +2,11 @@
 
 copyright:
 years: 2021 - 2023
-lastupdated: "2023-02-24"
+lastupdated: "2023-03-13"
 title: Development details
 description: The following content provides more details on the software development practices and concepts for Open Horizon (OH) development.
 
-parent: Further reading
+parent: Further reading for clusters
 grand_parent: Developing edge services
 nav_order: 4
 ---

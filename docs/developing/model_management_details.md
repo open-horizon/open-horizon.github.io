@@ -1,12 +1,14 @@
 ---
 copyright:
 years: 2021 - 2023
-lastupdated: "2023-02-27"
-
+lastupdated: "2023-03-13"
 title: Model Management Service
+description: ""
 
-parent: Further reading for devices
-nav_order: 1
+parent: Developing edge services
+nav_order: 5
+has_children: true
+has_toc: false
 ---
 
 {:shortdesc: .shortdesc}

@@ -1,13 +1,14 @@
 ---
-
 copyright:
 years: 2021 - 2023
-lastupdated: "2023-02-22"
-title: Edge service for clusters
+lastupdated: "2023-03-13"
+title: Edge services for clusters
 description: ""
 
 parent: Developing edge services
-nav_order: 2
+nav_order: 3
+has_children: true
+has_toc: false
 ---
 
 {:shortdesc: .shortdesc}

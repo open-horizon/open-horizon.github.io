@@ -6,7 +6,8 @@ title: Container Deployment
 description: ""
 
 parent: Further reading for devices
-nav_order: 2
+grand_parent: Developing edge services
+nav_order: 1
 ---
 
 {:shortdesc: .shortdesc}

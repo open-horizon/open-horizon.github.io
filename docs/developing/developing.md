@@ -1,12 +1,14 @@
 ---
 copyright:
 years: 2021 - 2023
-lastupdated: "2023-02-27"
-title: Developing an edge service for devices
+lastupdated: "2023-03-13"
+title: Edge services for devices
 description: ""
 
 parent: Developing edge services
 nav_order: 1
+has_children: true
+has_toc: false
 ---
 
 {:new_window: target="blank"}

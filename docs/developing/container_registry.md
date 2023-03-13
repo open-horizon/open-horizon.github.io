@@ -1,12 +1,11 @@
 ---
-
 copyright:
 years: 2020 - 2023
-lastupdated: "2023-02-25"
+lastupdated: "2023-03-13"
 title: Container Registry
 description: ""
 
-parent: Further reading
+parent: Further reading for clusters
 grand_parent: Developing edge services
 nav_order: 3
 ---
