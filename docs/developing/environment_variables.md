@@ -1,12 +1,11 @@
 ---
-
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2021 - 2023
+lastupdated: "2023-03-13"
 title: Environment variables
 description: ""
 
-parent: Further reading
+parent: Further reading for clusters
 grand_parent: Developing edge services
 nav_order: 2
 ---

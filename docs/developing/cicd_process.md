@@ -1,5 +1,4 @@
 ---
-
 copyright:
 years: 2020 - 2023
 lastupdated: "2023-02-26"
@@ -7,7 +6,8 @@ title: CI-CD process
 description: ""
 
 parent: Further reading for devices
-nav_order: 3
+grand_parent: Developing edge services
+nav_order: 2
 ---
 
 {:new_window: target="blank"}

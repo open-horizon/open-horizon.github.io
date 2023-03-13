@@ -1,5 +1,4 @@
 ---
-
 copyright:
 years: 2023
 lastupdated: "2023-02-25"
@@ -7,7 +6,7 @@ title: Open Horizon Examples index
 description: ""
 
 parent: Developing edge services
-nav_order: 1
+nav_order: 7
 ---
 
 # Open Horizon examples index
