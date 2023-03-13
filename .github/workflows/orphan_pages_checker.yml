@@ -13,18 +13,23 @@ jobs:
     checker:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
             - uses: ruby/setup-ruby@v1
               with:
-                  ruby-version: 2.6 # Not needed with a .ruby-version file
+                  ruby-version: '3.0.4p208' # Not needed with a .ruby-version file
                   bundler-cache: true # runs 'bundle install' and caches installed gems automatically
             - run: |
+                  gem update --system 3.4.7
+                  gem install bundler
+                  bundle update --bundler
+                  bundle config set --local deployment 'true'
+                  bundle install
                   bundle exec jekyll serve >/dev/null 2>&1 &
                   pid=$!
                   printf "Starting the server"
                   until $(curl --output /dev/null --silent --head --fail 127.0.0.1:4000); do
                       printf '.'
-                      sleep 5
+                      sleep 15
                   done
                   printf "\nCrawling the locally hosted website\n"
                   wget -mpE 127.0.0.1:4000 >/dev/null 2>&1 || true
