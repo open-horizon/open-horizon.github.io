@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2022 - 2023
-lastupdated: "2023-03-10"
+lastupdated: "2023-03-14"
 title: "KubeArmor Integration"
 description: "KubeArmor Security for Open Horizon workloads / agent"
 
@@ -43,9 +43,10 @@ Now we will run KubeArmor as a systemd process on the Open Horizon Agent VM
 
 ## Installation KubeArmor, kArmor, and Discovery Engine
 
-* **KubeArmor Installation:**
+### **KubeArmor Installation:**
 
 > **Note:** For distributions other than Ubuntu/Debian
+>
 > i. Refer [Installing BCC ](https://github.com/iovisor/bcc/blob/master/INSTALL.md#installing-bcc){:target="_blank"}{: .externalLink} to install pre-requisites.
 > ii. Download release tarball from KubeArmor [releases ](https://github.com/kubearmor/KubeArmor/releases){:target="_blank"}{: .externalLink}
 >
@@ -87,7 +88,7 @@ Now we will run KubeArmor as a systemd process on the Open Horizon Agent VM
    sudo journalctl -u kubearmor -f
    ```
 
-* **kArmor Installation:**
+### **kArmor Installation:**
 
 > **Note** kArmor should already be installed by the above KubeArmor installation. Check installation using `karmor version`.
 
@@ -97,9 +98,10 @@ If kArmor is not installed run:
 curl -sfL http://get.kubearmor.io/ | sudo sh -s -- -b /usr/local/bin
 ```
 
-* **Discovery Engine Installation:**
+### **Discovery Engine Installation:**
 
 > **Note:** For distributions other than Ubuntu/Debian
+>
 > i. Download release tarball from KubeArmor [releases ](https://github.com/kubearmor/KubeArmor/releases){:target="_blank"}{: .externalLink}
 >
 > ```bash
@@ -112,6 +114,7 @@ curl -sfL http://get.kubearmor.io/ | sudo sh -s -- -b /usr/local/bin
 > sudo tar --no-overwrite-dir -C / -xzf knoxAutoPolicy_0.6.3_linux-amd64.tar.gz
 > ```
 >
+
 **Note:** If you have previously installed discovery-engine, it's advised to restart the service: `sudo systemctl restart knoxAutoPolicy`
 
 1. Download the [latest release ](https://github.com/accuknox/discovery-engine/releases){:target="_blank"}{: .externalLink} of Discovery Engine
@@ -179,7 +182,7 @@ spec:
     Block
 ```
 
-Note: More predefined policies and auto-discovered policy can be found here: [https://github.com/kubearmor/openhorizon-demo/tree/main/Open-Horizon/policies ](https://github.com/kubearmor/openhorizon-demo/tree/main/Open-Horizon/policies){:target="_blank"}{: .externalLink}
+Note: Additional predefined policies and auto-discovered policy can be found here: [https://github.com/kubearmor/openhorizon-demo/tree/main/Open-Horizon/policies ](https://github.com/kubearmor/openhorizon-demo/tree/main/Open-Horizon/policies){:target="_blank"}{: .externalLink}
 
 Here, notice the field `kubearmor.io/container.name: homeassistant` homeassistant is the container name to which we want to apply the policy.
 
