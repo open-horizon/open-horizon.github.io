@@ -113,7 +113,7 @@ aux_links:
   "Docs":
    - "/docs/"
   "FAQ":
-   - "/faq/"
+   - "/docs/getting_started/faq/"
   "Open Horizon on GitHub":
    - "//github.com/open-horizon"
 
