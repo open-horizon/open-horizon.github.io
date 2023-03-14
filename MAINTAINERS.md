@@ -6,4 +6,4 @@ See the information about [community membership roles](https://wiki.lfedge.org/d
 | Name         | GitHub      | email                    |
 | ------------ | ----------- | ------------------------ |
 | Joe Pearson  | joewxboy    | <joe.pearson@us.ibm.com> |
-| John Walicki | johnwalicki | <walicki@us.ibm.com>     |
+| John Walicki | johnwalicki | <johnwalicki@gmail.com>  |
