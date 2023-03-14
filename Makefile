@@ -18,11 +18,12 @@ show-args:
 
 # make init: install and update all dependencies. run once before using tools each day
 init:
-	$(GEM) update --system 3.4.7
+	$(GEM) update --system
 	$(GEM) install bundler
+	$(BUNDLE) config unset deployment
 	$(BUNDLE) update --bundler
-	$(BUNDLE) config set --local deployment 'true'
 	$(BUNDLE) install
+	$(BUNDLE) config set --local deployment 'true'
 
 #  make run: start the local web server. does not build the site first. 
 run:
@@ -43,4 +44,4 @@ test:
 	$(JEKYLL) doctor
 
 # These special targets are referred to as PHONY, which explicitly tells the make file that they are not associated with files.
-.PHONY : default init run dev build test
+.PHONY : default show-args init run dev build test
