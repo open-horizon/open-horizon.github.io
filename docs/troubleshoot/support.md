@@ -20,4 +20,9 @@ nav_order: 3
 # Support
 {: #support}
 
-For more support, see [{{site.data.keyword.ieam}} ](https://www.ibm.com/mysupport/s/topic/0TO0z000000ZhYRGA0/Edge-Application-Manager?productId=01t0z000007mfjeAAA&language=en_US){:target="_blank"}{: .externalLink}
+For reporting bugs, requesting features, and discussing changes, developers should use Github issues and discussions on these repositories. Using issues, you can [maintainers, contributors and other  members](https://wiki.lfedge.org/display/OH/Community+Membership) of the community. To connect with the community and learn more about the software solution, new users should bookmark or visit the [Open Horizon web site](https://www.lfedge.org/projects/openhorizon/).
+
+You can reach out to us through the following channels as well:
+
+- [Mailing List](https://lists.lfedge.org/g/open-horizon) 
+- [Chat Server](https://chat.lfx.linuxfoundation.org/ )
