@@ -20,7 +20,7 @@ nav_order: 3
 # Support
 {: #support}
 
-For reporting bugs, requesting features, and discussing changes, developers should use Github issues and discussions on these repositories. Using issues, you can [maintainers, contributors and other  members](https://wiki.lfedge.org/display/OH/Community+Membership) of the community. To connect with the community and learn more about the software solution, new users should bookmark or visit the [Open Horizon web site](https://www.lfedge.org/projects/openhorizon/).
+For reporting bugs, requesting features, and discussing changes, developers should use Github issues and discussions on these repositories. Using issues, you can contact [maintainers, contributors and other  members](https://wiki.lfedge.org/display/OH/Community+Membership) of the community. To connect with the community and learn more about the software solution, new users should bookmark or visit the [Open Horizon web site](https://www.lfedge.org/projects/openhorizon/).
 
 You can reach out to us through the following channels as well:
 
