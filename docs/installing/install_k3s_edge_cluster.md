@@ -65,90 +65,28 @@ This content provides a summary of how to install k3s (rancher), a lightweight a
    {: codeblock}
 
 4. Create the image registry service:
-   1. Create a file called **k3s-persistent-claim.yml** with this content:
-      ```yaml
-      apiVersion: v1
-      kind: PersistentVolumeClaim
-      metadata:
-        name: docker-registry-pvc
-      spec:
-        storageClassName: "local-path"
-        accessModes:
-          - ReadWriteOnce
-        resources:
-          requests:
-            storage: 10Gi
-      ```
-      {: codeblock}
-
-   2. Create the persistent volume claim:
+   1. Create the persistent volume claim:
 
       ```bash
-      kubectl apply -f k3s-persistent-claim.yml
+      kubectl apply -f https://raw.githubusercontent.com/open-horizon/open-horizon.github.io/master/docs/installing/k3s-persistent-claim.yaml
       ```
       {: codeblock}
 
-   3. Verify that the persistent volume claim was created and it is in "Pending" status
+   2. Verify that the persistent volume claim was created and it is in "Pending" status
 
       ```bash
       kubectl get pvc
       ```
       {: codeblock}
 
-   4. Create a file called **k3s-registry-deployment.yml** with this content:
-
-      ```yaml
-      apiVersion: apps/v1
-      kind: Deployment
-      metadata:
-        name: docker-registry
-        labels:
-          app: docker-registry
-      spec:
-        replicas: 1
-        selector:
-          matchLabels:
-            app: docker-registry
-        template:
-          metadata:
-            labels:
-              app: docker-registry
-          spec:
-            volumes:
-            - name: registry-pvc-storage
-              persistentVolumeClaim:
-                claimName: docker-registry-pvc
-            containers:
-            - name: docker-registry
-              image: registry
-              ports:
-              - containerPort: 5000
-              volumeMounts:
-              - name: registry-pvc-storage
-                mountPath: /var/lib/registry
-      ---
-      apiVersion: v1
-      kind: Service
-      metadata:
-        name: docker-registry-service
-      spec:
-        selector:
-          app: docker-registry
-        type: NodePort
-        ports:
-          - protocol: TCP
-            port: 5000
-      ```
-      {: codeblock}
-
-   5. Create the registry deployment and service:
+   4. Create the registry deployment and service:
 
       ```bash
-      kubectl apply -f k3s-registry-deployment.yml
+      kubectl apply -f https://raw.githubusercontent.com/open-horizon/open-horizon.github.io/master/docs/installing/k3s-registry-deployment.yaml
       ```
       {: codeblock}
 
-   6. Verify that the service was created:
+   5. Verify that the service was created:
 
       ```bash
       kubectl get deployment
@@ -156,10 +94,16 @@ This content provides a summary of how to install k3s (rancher), a lightweight a
       ```
       {: codeblock}
 
-   7. Define the registry endpoint:
+   6. Define the registry endpoint:
 
       ```bash
       export REGISTRY_ENDPOINT=$(kubectl get service docker-registry-service | grep docker-registry-service | awk '{print $3;}'):5000
+      ```
+      {: codeblock}
+
+   7. Add it to K3s configuration:
+
+      ```bash
       cat << EOF >> /etc/rancher/k3s/registries.yaml
       mirrors:
         "$REGISTRY_ENDPOINT":
@@ -169,14 +113,14 @@ This content provides a summary of how to install k3s (rancher), a lightweight a
       ```
       {: codeblock}
 
-   8. Restart k3s to pick up the change to **/etc/rancher/k3s/registries.yaml**:
+   8. Restart k3s to pick up the change to the K3s configuration:
 
       ```bash
       systemctl restart k3s
       ```
       {: codeblock}
 
-5. Define this registry to docker as an insecure registry:
+5. Define this registry in Docker as an insecure registry:
 
    1. Install docker (if not already installed):
 
