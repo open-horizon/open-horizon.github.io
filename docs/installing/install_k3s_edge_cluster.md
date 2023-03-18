@@ -94,12 +94,34 @@ This content provides a summary of how to install k3s (rancher), a lightweight a
       ```
       {: codeblock}
 
+      Which will issue a response similar to:
+
+      ```text
+      NAME              READY   UP-TO-DATE   AVAILABLE   AGE
+      docker-registry   1/1     1            1           21s
+      NAME                      TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
+      kubernetes                ClusterIP   10.43.0.1      <none>        443/TCP          3h46m
+      docker-registry-service   NodePort    10.43.46.175   <none>        5000:31466/TCP   67s
+      ```
+
    6. Define the registry endpoint:
 
       ```bash
       export REGISTRY_ENDPOINT=$(kubectl get service docker-registry-service | grep docker-registry-service | awk '{print $3;}'):5000
       ```
       {: codeblock}
+
+      To verify that it was set properly:
+
+      ```bash
+      echo $REGISTRY_ENDPOINT
+      ```
+
+      Which will respond with something similar to:
+
+      ```text
+      10.43.46.175:5000
+      ```
 
    7. Add it to K3s configuration:
 
@@ -110,8 +132,24 @@ This content provides a summary of how to install k3s (rancher), a lightweight a
           endpoint:
             - "http://$REGISTRY_ENDPOINT"
       EOF
+
       ```
       {: codeblock}
+
+      To verify that it wrote the file properly:
+
+      ```bash
+      cat /etc/rancher/k3s/registries.yaml
+      ```
+
+      Which will respond with something similar to:
+
+      ```text
+      mirrors:
+        "10.43.46.175:5000":
+          endpoint:
+            - "http://10.43.46.175:5000"
+      ```
 
    8. Restart k3s to pick up the change to the K3s configuration:
 
@@ -123,6 +161,8 @@ This content provides a summary of how to install k3s (rancher), a lightweight a
 5. Define this registry in Docker as an insecure registry:
 
    1. Install Docker (if not already installed):
+
+      NOTE: If `docker --version` responds with a version number, then it is installed.
 
       ```bash
       curl -fsSL get.docker.com | sh
