@@ -2,7 +2,7 @@
 
 copyright:
 years: 2021 - 2023
-lastupdated: "2023-02-22"
+lastupdated: "2023-03-17"
 title: "Edge clusters"
 
 nav_order: 12
@@ -28,5 +28,8 @@ has_toc: false
 The following sections describe how to install an edge cluster and install the {{site.data.keyword.ieam}} agent on it.
 
 - [Preparing an edge cluster](preparing_edge_cluster.md)
+   - [Installing an OCP cluster](./install_ocp_edge_cluster.md)
+   - [Installing a K3s cluster](./install_k3s_edge_cluster.md)
+   - [Installing a microk8s cluster](./install_microk8s_edge_cluster.md)
 - [Installing the agent](edge_cluster_agent.md)
 {: childlinks}
