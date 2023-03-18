@@ -23,9 +23,21 @@ has_toc: false
 # Installing and configuring a microk8s edge cluster
 {: #install_microk8s_edge_cluster}
 
-This content provides a summary of how to install microk8s, a lightweight and small Kubernetes cluster, on Ubuntu Linux AMD64. (For more detailed instructions, see the [microk8s documentation ](https://microk8s.io/docs){:target="_blank"}{: .externalLink}.)
+## Introduction
+{: #intro}
 
-**Note**: This type of edge cluster is meant for development and test because a single worker node Kubernetes cluster does not provide scalability or high availability.
+This content provides a summary of how to install microk8s, a lightweight and small Kubernetes cluster, on an Ubuntu Linux AMD64-based system. (For more detailed instructions, see the [microk8s documentation ](https://microk8s.io/docs){:target="_blank"}{: .externalLink}.)
+
+## Pre-requisites
+{: #reqs}
+
+* Architecture must be x86_64
+* Operating system must be an Ubuntu LTS distribution
+
+**Note**: This type of single node edge cluster is meant for development and test only. A single worker node Kubernetes cluster does not provide the scalability or high availability performance characteristics that a production system should have.
+
+## Installing
+{: #steps}
 
 1. Install microk8s:
 
@@ -43,7 +55,7 @@ This content provides a summary of how to install microk8s, a lightweight and sm
    ```
    {: codeblock}
 
-3. Enable dns and storage modules in microk8s:
+3. Enable "dns" and "storage" modules in microk8s:
 
    ```bash
    microk8s.enable dns
@@ -80,7 +92,7 @@ This content provides a summary of how to install microk8s, a lightweight and sm
    ```
    {: codeblock}
 
-6. Enable the container registry and configure docker to tolerate the insecure registry:
+6. Enable the container registry and configure Docker to tolerate the insecure registry:
 
    1. Enable the container registry:
 
