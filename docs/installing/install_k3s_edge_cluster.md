@@ -41,7 +41,7 @@ This content provides a summary of how to install k3s (rancher), a lightweight a
 
 1. Either login as **root** or elevate to **root** with `sudo -i`
 
-2. The full hostname of your machine must contain at least two dots. Check the full hostname:
+2. Confirm that the full hostname of your machine contains at least two dots:
 
    ```bash
    hostname
@@ -72,7 +72,7 @@ This content provides a summary of how to install k3s (rancher), a lightweight a
       ```
       {: codeblock}
 
-   2. Verify that the persistent volume claim was created and it is in "Pending" status
+   2. Verify that the persistent volume claim was created and is in "Pending" status
 
       ```bash
       kubectl get pvc
@@ -122,7 +122,7 @@ This content provides a summary of how to install k3s (rancher), a lightweight a
 
 5. Define this registry in Docker as an insecure registry:
 
-   1. Install docker (if not already installed):
+   1. Install Docker (if not already installed):
 
       ```bash
       curl -fsSL get.docker.com | sh
@@ -138,7 +138,7 @@ This content provides a summary of how to install k3s (rancher), a lightweight a
       ```
       {: codeblock}
 
-   3. Restart docker to pick up the change:
+   3. Restart Docker to pick up the change:
 
       ```bash
       systemctl restart docker
