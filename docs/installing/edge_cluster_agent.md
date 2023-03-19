@@ -2,11 +2,11 @@
 
 copyright:
 years: 2022 - 2023
-lastupdated: "2023-02-25"
-title: "Installing the agent"
+lastupdated: "2023-03-18"
+title: "Installing the edge cluster agent"
 
 parent: Edge clusters
-nav_order: 1
+nav_order: 2
 ---
 
 {:new_window: target="blank"}
@@ -17,11 +17,24 @@ nav_order: 1
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
 
-# Installing the agent
-{: #importing_clusters}
+# Installing the edge cluster agent
+{: #cluster_agent_install}
 
-**Note**: {{site.data.keyword.ieam}} agent installation requires cluster admin access on the edge cluster.
-Additionally, the jq command-line JSON processor must be installed prior to running the agent install script.
+## Introduction
+{: #intro}
+
+This content provides instructions on installing the cluster agent on common Kuberentes distributions.  It applies to both single worker node clusters as well as multi-node clusters.
+
+## Pre-requisites
+{: #reqs}
+
+* Architecture must be either x86_64 or arm64
+* Operating system must be modern Linux variant with 64-bit and systemd support
+
+**Note**: {{site.data.keyword.ieam}} cluster agent installation requires cluster admin access on the edge cluster.  Additionally, the "jq" command-line JSON processor must be installed prior to running the agent install script.
+
+## Installing
+{: #steps}
 
 Begin by installing the {{site.data.keyword.edge_notm}} agent on one of these types of Kubernetes edge clusters:
 
@@ -124,7 +137,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
     ```
     {: codeblock}
 
-11. Get the {{site.data.keyword.open_shift}} certificate and allow docker to trust it:
+11. Get the {{site.data.keyword.open_shift}} certificate and configure Docker to trust it:
 
     ```bash
     echo | openssl s_client -connect $OCP_IMAGE_REGISTRY:443 -showcerts | sed -n "/-----BEGIN CERTIFICATE-----/,/-----END CERTIFICATE-----/p" > ca.crt
@@ -233,10 +246,10 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
 
 21. Often, when an edge cluster is registered for policy, but does not have user-specified node policy, none of the deployment policies will deploy edge services to it. That is the case with the Horizon examples. Proceed to [Deploying services to your edge cluster](#deploying_services) to set node policy so that an edge service will be deployed to this edge cluster.
 
-## Installing agent on k3s and microk8s edge clusters
+## Installing agent on K3s and microk8s edge clusters
 {: #install_lite}
 
-This content describes how to install the {{site.data.keyword.ieam}} agent on [k3s ](https://k3s.io/){:target="_blank"}{: .externalLink} or [microk8s ](https://microk8s.io/){:target="_blank"}{: .externalLink}, lightweight and small Kubernetes clusters:
+This content describes how to install the {{site.data.keyword.ieam}} agent on [K3s ](https://k3s.io/){:target="_blank"}{: .externalLink} or [microk8s ](https://microk8s.io/){:target="_blank"}{: .externalLink}, lightweight and small Kubernetes clusters:
 
 1. Log in to your edge cluster as **root**.
 
@@ -385,7 +398,7 @@ Setting node policy on this edge cluster can cause deployment policies to deploy
   ```
   {: codeblock}
 
-   After a minute or two, the new services will be deployed to this edge cluster.
+   After a minute or two the new services will be deployed to this edge cluster.
 
 * **Note**: On some VMs with microk8s, the service pods that are being stopped (replaced) might stall in the **Terminating** state. If that happens, run:
 
@@ -395,7 +408,7 @@ Setting node policy on this edge cluster can cause deployment policies to deploy
   ```
   {: codeblock}
 
-* If you want to use a pattern, instead of policy, to run services on your edge cluster:
+* If you want to use a pattern instead of a policy to run services on your edge cluster:
 
   ```bash
   hzn unregister -f

@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker-registry
+  labels:
+    app: docker-registry
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: docker-registry
+  template:
+    metadata:
+      labels:
+        app: docker-registry
+    spec:
+      volumes:
+      - name: registry-pvc-storage
+        persistentVolumeClaim:
+          claimName: docker-registry-pvc
+      containers:
+      - name: docker-registry
+        image: registry
+        ports:
+        - containerPort: 5000
+        volumeMounts:
+        - name: registry-pvc-storage
+          mountPath: /var/lib/registry
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: docker-registry-service
+spec:
+  selector:
+    app: docker-registry
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 5000
