@@ -6,7 +6,7 @@ lastupdated: "2023-03-17"
 title: "Installing a K3s edge cluster"
 
 parent: Preparing an edge cluster
-nav_order: 2
+nav_order: 1
 has_children: false
 has_toc: false
 

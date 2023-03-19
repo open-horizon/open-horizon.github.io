@@ -6,7 +6,7 @@ lastupdated: "2023-03-17"
 title: "Installing an OCP edge cluster"
 
 parent: Preparing an edge cluster
-nav_order: 1
+nav_order: 3
 has_children: false
 has_toc: false
 
