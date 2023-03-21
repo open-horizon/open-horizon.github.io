@@ -1,4 +1,4 @@
- ---
+---
 
 copyright:
 years: 2019 - 2023
