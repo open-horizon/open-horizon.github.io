@@ -2,7 +2,7 @@
 
 copyright:
 years: 2021 - 2023
-lastupdated: "2023-02-24"
+lastupdated: "2023-03-30"
 layout: page
 title: "Docs"
 description: "Welcome to the Open Horizon (OH) documentation section, where you can find information about installing, maintaining, and using the project software."
@@ -12,26 +12,78 @@ nav_order: 3
 <!DOCTYPE html>
 <html lang="en-us">
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="copyright" content="Copyright IBM Corporation 2017" />
-<meta name="DC.Rights.Owner" content="Copyright IBM Corporation 2017" />
-<meta name="security" content="public" />
-<meta name="Robots" content="index,follow" />
-<meta name="DC.Type" content="reference" />
-<!-- Modify title and dates. -->
-<meta name="DC.Title" content="{{site.data.keyword.edge_notm}} welcome page" />
-<meta name="DC.Date.Created" content="2017-5-5" />
-<meta name="DC.Date.Modified" content="2010-09-27" />
-<meta name="DC.Format" content="XHTML" />
-<meta name="DC.Identifier" content="kc_product_welcome" />
-<meta name="DC.Language" content="en-us" />
-<meta name="IBM.Country" content="ZZ"/>
-<meta name="DC.Description" content="Introduction to {{site.data.keyword.edge_notm}}"/>
-<!-- Licensed Materials Property of IBM -->
-<!-- US Government Users Restricted Rights -->
-<!-- Use, duplication or disclosure restricted by -->
-<!-- GSA ADP Schedule Contract with IBM Corp. -->
-<title>{{site.data.keyword.edge_notm}} documentation site</title>
-<style> h1 {line-height: 1.1; font-weight: 800} </style>
+	<meta name="copyright" content="Copyright IBM Corporation 2017" />
+	<meta name="DC.Rights.Owner" content="Copyright IBM Corporation 2017" />
+	<meta name="security" content="public" />
+	<meta name="Robots" content="index,follow" />
+	<meta name="DC.Type" content="reference" />
+	<!-- Modify title and dates. -->
+	<meta name="DC.Title" content="{{site.data.keyword.edge_notm}} welcome page" />
+	<meta name="DC.Date.Created" content="2017-5-5" />
+	<meta name="DC.Date.Modified" content="2010-09-27" />
+	<meta name="DC.Format" content="XHTML" />
+	<meta name="DC.Identifier" content="kc_product_welcome" />
+	<meta name="DC.Language" content="en-us" />
+	<meta name="IBM.Country" content="ZZ"/>
+	<meta name="DC.Description" content="Introduction to {{site.data.keyword.edge_notm}}"/>
+	<!-- Licensed Materials Property of IBM -->
+	<!-- US Government Users Restricted Rights -->
+	<!-- Use, duplication or disclosure restricted by -->
+	<!-- GSA ADP Schedule Contract with IBM Corp. -->
+	<title>{{site.data.keyword.edge_notm}} documentation site</title>
+	<style> h1 {line-height: 1.1; font-weight: 800} 
+
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.box {
+		width: 48%;
+		height:  auto;
+		margin: 5px;
+		padding: 10px;
+		box-sizing: border-box;
+		border: 1px solid lightgray;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.item {
+		flex-grow: 1;
+		padding: 2px;
+	}
+
+	@media only screen and (max-width: 600px) {
+		.box {
+			width: 100%;
+		}
+	}
+</style>
+<script>
+	window.onload = function() {
+		setBoxHeights();
+	}
+
+	window.onresize = function() {
+		setBoxHeights();
+	}
+
+	function setBoxHeights() {
+		var boxes = document.querySelectorAll(".box");
+		var maxHeight = 0;
+
+		for (var i = 0; i < boxes.length; i++) {
+			boxes[i].style.height = "auto";
+			maxHeight = Math.max(maxHeight, boxes[i].offsetHeight);
+		}
+
+		for (var i = 0; i < boxes.length; i++) {
+			boxes[i].style.height = maxHeight + "px";
+		}
+	}
+</script>
+
 <link type="text/css" href="https://1.www.s81c.com/common/v18/r140/css/tables.css" rel="stylesheet" />
 <script type="text/javascript" charset="utf-8" src="https://1.www.s81c.com/common/v18/r140/js/www.js"></script>
 <script type="text/javascript" charset="utf-8" src="https://1.www.s81c.com/common/v18/r140/js/tables.js"></script>
@@ -41,17 +93,17 @@ nav_order: 3
 <body class="ibm-type" clickeventadded="true">
 	<h1 class="title topictitle1" style="display: none;">{{site.data.keyword.edge_notm}} Version {{site.data.keyword.version}}</h1>
 
-	  <div role="main" class="ibm-background-neutral-white-20 ibm-padding-top-1">
-		  <div class="ibm-columns ibm-widget-processed ibm-sameheight-processed row" data-items=".ibm-card" data-widget="setsameheight">
-			  <div class="ibm-col-4-1 col-sm-6 col-md-4">
-				  <div class="doc-card">
-					  <div class="ibm-card__content">
-						  <h3 class="linklistlabel ibm-h3 ibm-textcolor-blue-50">Learning</h3>
-						  <ul class="ibm-colored-list ibm-textcolor-gray-80 ibm-plain-list">
-							  <li class="ibm-link-description">
-								  <a href="getting_started/overview_oh/">Overview of {{site.data.keyword.edge_abbr}}</a>
-							  </li>
-							  <li class="ibm-link-description">
+	<div class="container">
+		<div class="box" id="box1">
+			<div class="ibm-col-4-1 col-sm-6 col-md-4">
+				<div class="ibm-card__content">
+					<div class="item">
+						<h3 class="linklistlabel ibm-h3 ibm-textcolor-blue-50">Learning</h3>
+						<ul class="ibm-colored-list ibm-textcolor-gray-80 ibm-plain-list">
+							<li class="ibm-link-description">
+								<a href="getting_started/overview_oh/">Overview of {{site.data.keyword.edge_abbr}}</a>
+							</li>
+							<li class="ibm-link-description">
 								<a href="getting_started/overview_sm/">Secrets Manager</a>
 							</li>
 							<li class="ibm-link-description">
@@ -63,48 +115,53 @@ nav_order: 3
 							<li class="ibm-link-description">
 								<a href="anax/docs/">Agent (anax)</a>
 							</li>
-							  <li class="ibm-link-description">
-								  <a href="https://www.youtube.com/playlist?list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix" target="_blank">Open Horizon Video playlist</a>
-							  </li>
-					  </ul>
-					  </div>
-				  </div>
-			  </div>
-			  <div class="ibm-col-4-1 col-sm-6 col-md-4">
-				<div class="doc-card">
-					<div class="ibm-card__content ">
-						<h3 class="linklistlabel ibm-h3 ibm-textcolor-blue-50">Installing</h3>
-						<ul class="ibm-colored-list ibm-textcolor-gray-80 ibm-plain-list">
 							<li class="ibm-link-description">
-								<a href="hub/hub/">Management hub</a>
-							</li>
-							<li class="ibm-link-description">All-in-One
-								<ul class="ibm-colored-list ibm-textcolor-gray-80 ibm-plain-list">
-									<li class="ibm-link-description">
-									 <a href="mgmt-hub/docs/">All-in-One Mgmt Hub</a>
-									</li>
-									<li class="ibm-link-description">
-									 <a href="anax/docs/cluster_install/">All-in-One cluster agent</a>
-									</li>
-								</ul>
-							</li>
-							<li class="ibm-link-description">Edge Nodes
-								<ul class="ibm-colored-list ibm-textcolor-gray-80 ibm-plain-list">
-									<li class="ibm-link-description">
-									 <a href="installing/adding_devices/">Supported environments</a>
-									</li>
-									<li class="ibm-link-description">
-									 <a href="installing/installing_edge_nodes/">Edge devices</a>
-									</li>
-								</ul>
+								<a href="https://www.youtube.com/playlist?list=PLgohd895XSUddtseFy4HxCqTqqlYfW8Ix" target="_blank">Open Horizon Video playlist</a>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
-			  <div class="ibm-col-4-1 col-sm-6 col-md-4">
-				<div class="doc-card">
-					<div class="ibm-card__content">
+		</div>
+
+
+		<div class="box" id="box2">
+			<div class="item">
+				<h3 class="linklistlabel ibm-h3 ibm-textcolor-blue-50">Installing</h3>
+				<ul class="ibm-colored-list ibm-textcolor-gray-80 ibm-plain-list">
+					<li class="ibm-link-description">
+						<a href="hub/hub/">Management hub</a>
+					</li>
+					<li class="ibm-link-description">All-in-One
+						<ul class="ibm-colored-list ibm-textcolor-gray-80 ibm-plain-list">
+							<li class="ibm-link-description">
+								<a href="mgmt-hub/docs/">All-in-One Mgmt Hub</a>
+							</li>
+							<li class="ibm-link-description">
+								<a href="anax/docs/cluster_install/">All-in-One cluster agent</a>
+							</li>
+						</ul>
+					</li>
+					<li class="ibm-link-description">Edge Nodes
+						<ul class="ibm-colored-list ibm-textcolor-gray-80 ibm-plain-list">
+							<li class="ibm-link-description">
+								<a href="installing/adding_devices/">Supported environments</a>
+							</li>
+							<li class="ibm-link-description">
+								<a href="installing/installing_edge_nodes/">Edge devices</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="box" id="box3">
+			<div class="ibm-col-4-1 col-sm-6 col-md-4">
+				<div class="ibm-card__content">
+					<div class="item">
 						<h3 class="linklistlabel ibm-h3 ibm-textcolor-blue-50">Developing</h3>
 						<ul class="ibm-colored-list ibm-textcolor-gray-80 ibm-plain-list">
 							<li class="ibm-link-description">
@@ -113,43 +170,55 @@ nav_order: 3
 							<li class="ibm-link-description">
 								<a href="developing/">Developing edge services</a>
 							</li>
-						 </ul>
+						</ul>
 					</div>
 				</div>
 			</div>
+		</div>
+
+		<div class="box" id="box4">
 			<div class="ibm-col-4-1 col-sm-6 col-md-4">
-				<div class="doc-card">
-					<div class="ibm-card__content">
+				<div class="ibm-card__content">
+					<div class="item">
 						<h3 class="linklistlabel ibm-h3 ibm-textcolor-blue-50">Administering</h3>
 						<ul class="ibm-colored-list ibm-textcolor-gray-80 ibm-plain-list">
-							  <li class="ibm-link-description">
-								  <a href="admin/">Administering</a>
-							  </li>
-							  <li class="ibm-link-description">
-									<a href="user_management/security/">Security</a>
+							<li class="ibm-link-description">
+								<a href="admin/">Administering</a>
 							</li>
-						 </ul>
+							<li class="ibm-link-description">
+								<a href="user_management/security/">Security</a>
+							</li>
+						</ul>
+
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<div class="box" id="box5">
 			<div class="ibm-col-4-1 col-sm-6 col-md-4">
-				<div class="doc-card">
-					<div class="ibm-card__content">
+				<div class="ibm-card__content">
+					<div class="item">
 						<h3 class="linklistlabel ibm-h3 ibm-textcolor-blue-50">Integrating</h3>
 						<ul class="ibm-colored-list ibm-textcolor-gray-80 ibm-plain-list">
-							  <li class="ibm-link-description">
-								  mimik edgeEngine integration
-							  </li>
-							  <li class="ibm-link-description">
-									<a href="kubearmor-integration/docs/README/">AccuKnox Kubearmor integration</a>
+							<li class="ibm-link-description">
+								mimik edgeEngine integration
 							</li>
-						 </ul>
+							<li class="ibm-link-description">
+								<a href="kubearmor-integration/docs/README/">AccuKnox Kubearmor integration</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
+		</div>
+
+		<div class="box" id="box6">
 			<div class="ibm-col-4-1 col-sm-6 col-md-4">
-				<div class="doc-card">
-					<div class="ibm-card__content">
+				<div class="ibm-card__content">
+					<div class="item">
 						<h3 class="linklistlabel ibm-h3 ibm-textcolor-blue-50">Help and Support</h3>
 						<ul class="ibm-colored-list ibm-textcolor-gray-80 ibm-plain-list">
 							<li class="ibm-link-description">
@@ -161,12 +230,13 @@ nav_order: 3
 							<li class="ibm-link-description">
 								<a href="troubleshoot/support/">Support</a>
 							</li>
-						 </ul>
+						</ul>
 					</div>
 				</div>
 			</div>
-	  </div>
-	  <div role="region" aria-label="Security" class="ibm-background-neutral-white-20">
+		</div>
+	</div>
+	<div role="region" aria-label="Security" class="ibm-background-neutral-white-20">
 		<div class="ibm-columns ibm-padding-bottom-2 ibm-widget-processed ibm-sameheight-processed row row-center" data-widget="setsameheight" data-items=".ibm-card">
 			<div class="ibm-col-6-2 ibm-card ibm-card--noborder ibm-background-neutral-white-20 ibm-padding-top-1" style="height: 304.716px;">
 				<div class="ibm-card__content">
@@ -175,7 +245,6 @@ nav_order: 3
 				</div>
 			</div>
 		</div>
-	  </div>
 	</div>
 </body>
 </html>
