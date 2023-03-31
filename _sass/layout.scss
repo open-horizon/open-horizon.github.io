@@ -16,7 +16,7 @@
   }
 
   @include mq(lg) {
-    width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});
+    width: 10%;
     min-width: $nav-width;
   }
 }
