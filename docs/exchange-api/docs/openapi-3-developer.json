@@ -8,7 +8,7 @@
       "name" : "Apache License Version 2.0",
       "url" : "https://www.apache.org/licenses/LICENSE-2.0"
     },
-    "version" : "2.113.0"
+    "version" : "2.114.0"
   },
   "externalDocs" : {
     "description" : "Open-horizon ExchangeAPI",
@@ -2935,7 +2935,8 @@
                         "nodeHealth" : {
                           "missing_heartbeat_interval" : 600,
                           "check_agreement_status" : 120
-                        }
+                        },
+                        "clusterNamespace" : "MyNamespace"
                       },
                       "userInput" : [ ],
                       "secretBinding" : [ ],
@@ -2946,8 +2947,7 @@
                       } ],
                       "constraints" : [ "a == b" ],
                       "lastUpdated" : "string",
-                      "created" : "string",
-                      "clusterNamespace" : "MyNamespace"
+                      "created" : "string"
                     }
                   },
                   "lastIndex" : 0
@@ -3018,7 +3018,8 @@
                   "nodeHealth" : {
                     "missing_heartbeat_interval" : 600,
                     "check_agreement_status" : 120
-                  }
+                  },
+                  "clusterNamespace" : "MyNamespace"
                 },
                 "userInput" : [ {
                   "serviceOrgid" : "IBM",
@@ -3046,8 +3047,7 @@
                   "value" : "myservice-testing",
                   "type" : "string"
                 } ],
-                "constraints" : [ "a == b" ],
-                "clusterNamespace" : "MyNamespace"
+                "constraints" : [ "a == b" ]
               }
             }
           },
@@ -3129,7 +3129,8 @@
                   "nodeHealth" : {
                     "missing_heartbeat_interval" : 600,
                     "check_agreement_status" : 120
-                  }
+                  },
+                  "clusterNamespace" : "MyNamespace"
                 },
                 "userInput" : [ {
                   "serviceOrgid" : "IBM",
@@ -3157,8 +3158,7 @@
                   "value" : "myservice-testing",
                   "type" : "string"
                 } ],
-                "constraints" : [ "a == b" ],
-                "clusterNamespace" : "MyNamespace"
+                "constraints" : [ "a == b" ]
               }
             }
           },
@@ -3279,35 +3279,35 @@
                     "missing_heartbeat_interval" : 600,
                     "check_agreement_status" : 120
                   },
-                  "userInput" : [ {
-                    "serviceOrgid" : "IBM",
-                    "serviceUrl" : "ibm.cpu2msghub",
-                    "serviceArch" : "",
-                    "serviceVersionRange" : "[0.0.0,INFINITY)",
-                    "inputs" : [ {
-                      "name" : "foo",
-                      "value" : "bar"
-                    } ]
-                  } ],
-                  "secretBinding" : [ {
-                    "serviceOrgid" : "string",
-                    "serviceUrl" : "string",
-                    "serviceArch" : "amd64",
-                    "serviceVersionRange" : "x.y.z",
-                    "secrets" : [ {
-                      "<service-secret-name1>" : "<vault-secret-name1>"
-                    }, {
-                      "<service-secret-name2>" : "<vault-secret-name2>"
-                    } ]
-                  } ],
-                  "properties" : [ {
-                    "name" : "mypurpose",
-                    "value" : "myservice-testing",
-                    "type" : "string"
-                  } ],
-                  "constraints" : [ "a == b" ],
                   "clusterNamespace" : "MyNamespace"
-                }
+                },
+                "userInput" : [ {
+                  "serviceOrgid" : "IBM",
+                  "serviceUrl" : "ibm.cpu2msghub",
+                  "serviceArch" : "",
+                  "serviceVersionRange" : "[0.0.0,INFINITY)",
+                  "inputs" : [ {
+                    "name" : "foo",
+                    "value" : "bar"
+                  } ]
+                } ],
+                "secretBinding" : [ {
+                  "serviceOrgid" : "string",
+                  "serviceUrl" : "string",
+                  "serviceArch" : "amd64",
+                  "serviceVersionRange" : "x.y.z",
+                  "secrets" : [ {
+                    "<service-secret-name1>" : "<vault-secret-name1>"
+                  }, {
+                    "<service-secret-name2>" : "<vault-secret-name2>"
+                  } ]
+                } ],
+                "properties" : [ {
+                  "name" : "mypurpose",
+                  "value" : "myservice-testing",
+                  "type" : "string"
+                } ],
+                "constraints" : [ "a == b" ]
               }
             }
           },
@@ -3456,13 +3456,6 @@
           "schema" : {
             "type" : "string"
           }
-        }, {
-          "name" : "clusternamespace",
-          "in" : "query",
-          "description" : "Filter results to only include Deployment Policies with this Cluster Namespace (can include % for wilcard - the URL encoding for '%' is '%25')",
-          "schema" : {
-            "type" : "string"
-          }
         } ],
         "responses" : {
           "200" : {
@@ -3490,7 +3483,8 @@
                         "nodeHealth" : {
                           "missing_heartbeat_interval" : 600,
                           "check_agreement_status" : 120
-                        }
+                        },
+                        "clusterNamespace" : "MyNamespace"
                       },
                       "userInput" : [ ],
                       "secretBinding" : [ ],
@@ -3501,8 +3495,7 @@
                       } ],
                       "constraints" : [ "a == b" ],
                       "lastUpdated" : "string",
-                      "created" : "string",
-                      "clusterNamespace" : "MyNamespace"
+                      "created" : "string"
                     }
                   },
                   "lastIndex" : 0
@@ -9050,9 +9043,6 @@
         "required" : [ "jsonFormats", "label", "service" ],
         "type" : "object",
         "properties" : {
-          "clusterNamespace" : {
-            "type" : "string"
-          },
           "description" : {
             "type" : "string"
           },
@@ -10247,6 +10237,9 @@
             "additionalProperties" : {
               "type" : "object"
             }
+          },
+          "clusterNamespace" : {
+            "type" : "string"
           }
         }
       },
@@ -10502,10 +10495,6 @@
           },
           "created" : {
             "type" : "string"
-          },
-          "clusterNamespace" : {
-            "type" : "string",
-            "default" : ""
           }
         }
       },
