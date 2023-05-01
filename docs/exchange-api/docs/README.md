@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2022 - 2023
-lastupdated: "2023-03-14"
+lastupdated: "2023-04-26"
 layout: page
 title: "Exchange API Server"
 description: "Open Horizon Exchange API Documentation"
@@ -61,14 +61,14 @@ services in the exchange.
 
   ```json
   {
+    "akka": {
+      "loglevel": "DEBUG"
+    },
     "api": {
       "db": {
         "jdbcUrl": "jdbc:postgresql://localhost/postgres",    // my local postgres db
         "user": "myuser",
         "password": ""
-      },
-      "logging": {
-        "level": "DEBUG"
       },
       "root": {
         "password": "myrootpw"
@@ -97,7 +97,7 @@ services in the exchange.
 ## Building and Running in Local Sandbox
 
 - `sbt`
-- `~reStart`
+- `reStart`
 - Once the server starts, to see the swagger output, browse: [http://localhost:8080/v1/swagger](http://localhost:8080/v1/swagger){:target="_blank"}{: .externalLink}
 - To try a simple rest method curl: `curl -X GET "http://localhost:8080/v1/admin/version"`. You should get the exchange version number as the response.
 - When testing the exchange in an OpenShift Cluster the variables `EXCHANGE_IAM_ORG`, `EXCHANGE_IAM_KEY` and `EXCHANGE_MULT_ACCOUNT_ID` must be set accordingly.
@@ -121,8 +121,9 @@ export ICP_EXTERNAL_MGMT_INGRESS=<icp-external-host>:8443
 When at the `sbt` sub-command prompt:
 
 - Get a list of tasks: `task -V`
-- Start your app such that it will restart on code changes: `~reStart`
+- Start your app such that it will restart on code changes: `reStart`
 - Clean all built files (if the incremental build needs to be reset): `clean`
+- Check and attempt to resolve any binary incompatibilities in dependency stack: `evicted`
 
 ## Running the Automated Tests in Local Sandbox
 
@@ -187,7 +188,6 @@ Project uses Scapegoat. To use:
 
 - Log output of the exchange svr can be seen via `docker logs -f exchange-api`, or might also go to `/var/log/syslog` depending on the docker and syslog configuration.
 - Manually test container locally: `curl -sS -w %{http_code} http://localhost:8080/v1/admin/version`
-- **Note:** The exchange-api does not support HTTPS until issue https://github.com/open-horizon/exchange-api/issues/259 is completed.
 - Run the automated tests: `sbt test`
 - **Note:** Swagger does not yet work in the local docker container.
 - At this point you probably want to run `docker rm -f amd64_exchange-api` to stop your local docker container so it stops listening on your 8080 port. Otherwise you may be very confused when you go back to running the exchange via `sbt`, but it doesn't seem to be executing your tests.
@@ -348,6 +348,58 @@ Now you can disable root by setting `api.root.enabled` to `false` in `/etc/horiz
 
 `src/main/resources/config.json` is the default configuration file for the Exchange. This file is bundled in the Exchange jar. To run the exchange server with different values, copy this to `/etc/horizon/exchange/config.json`. In your version of the config file, you only have to set what you want to override.
 
+### akka
+
+Akka Actor: https://doc.akka.io/docs/akka/current/general/configuration-reference.html
+</br>
+Akka-Http: https://doc.akka.io/docs/akka-http/current/configuration.html
+</br>
+Log Level: http://logback.qos.ch/apidocs/ch/qos/logback/classic/Level.html
+
+| Parameter Name | Default Value  | Description |
+|----------------|----------------|-------------|
+| loglevel       | `"INFO"`       |             |
+
+ - #### akka.coordinated-shutdown
+
+   | Parameter Name                | Default Value | Description                                                                    |
+   |-------------------------------|---------------|--------------------------------------------------------------------------------|
+   | phases.service-unbind.timeout | `"60s"`       | Number of seconds to let in-flight requests complete before exiting the server |
+
+ - #### akka.http.parsing
+
+   | Parameter Name         | Default Value | Description |
+   |------------------------|---------------|-------------|
+   | max-header-name-length | `128`         |             |
+
+ - #### akka.http.server
+
+   | Paramater Name   | Default Value | Description |
+   |------------------|---------------|-------------|
+   | backlog          | `100`         |             |
+   | bind-timeout     | `"1s"`        |             |
+   | idle-timeout     | `"60s"`       |             |
+   | linger-timeout   | `"1m"`        |             |
+   | max-connections  | `1024`        |             |
+   | pipelining-limit | `1`           |             |
+   | request-timeout  | `"45s"`       |             |
+   | server-header    | `""`          |             |
+
+### akka-http-cors
+
+https://github.com/lomigmegard/akka-http-cors#configuration
+
+| Parameter Name              | Default Value                                     | Description                                                              |
+|-----------------------------|---------------------------------------------------|--------------------------------------------------------------------------|
+| allow-credentials           | `true`                                            |                                                                          |
+| allow-generic-http-requests | `true`                                            | Do not apply `Origin` header check to non-preflight (`OPTIONS`) requests |
+| allowed-headers             | `["*"]`                                           |                                                                          |
+| allowed-methods             | `["DELETE","GET","OPTIONS","PATCH","POST","PUT"]` |                                                                          |
+| allowed-origins             | `["*"]`                                           |                                                                          |
+| exposed-headers             | `["*"]`                                           |                                                                          |
+| max-age                     | `0s`                                              |                                                                          |
+
+
 ### api.acls
 
 | Parameter Name | Description       |
@@ -360,22 +412,7 @@ Now you can disable root by setting `api.root.enabled` to `false` in `/etc/horiz
 | SuperUser      |                   |
 | User           |                   |
 
-### api.akka
-
-Akka Actor: https://doc.akka.io/docs/akka/current/general/configuration-reference.html
-</br>
-Akka-Http: https://doc.akka.io/docs/akka-http/current/configuration.html
-
-| Parameter Name                     | Description                             |
-|------------------------------------|-----------------------------------------|
-| akka.http.server.backlog           |                                         |
-| akka.http.server.bind-timeout      |                                         |
-| akka.http.server.idle-timeout      |                                         |
-| akka.http.server.linger-timeout    |                                         |
-| akka.http.server.max-connections   |                                         |
-| akka.http.server.pipelining-limit  |                                         |
-| akka.http.server.request-timeout   |                                         |
-| akka.http.server.server-header     | Removes the Server header from response |
+### api.akka [DEPRECATED]
 
 ### api.cache
 
@@ -447,11 +484,7 @@ Akka-Http: https://doc.akka.io/docs/akka-http/current/configuration.html
 | maxPatterns            | Maximum number of patterns 1 user is allowed to create, 0 for unlimited                                                     |
 | maxServices            | Maximum number of services 1 user is allowed to create, 0 for unlimited                                                     |
 
-#### api.logging
-
-| Parameter Name    | Description                                                                                 |
-|-------------------|---------------------------------------------------------------------------------------------|
-| level             | For possible values, see http://logback.qos.ch/apidocs/ch/qos/logback/classic/Level.html    |
+#### api.logging [DEPRECATED]
 
 #### api.resourceChanges
 
@@ -470,12 +503,12 @@ Akka-Http: https://doc.akka.io/docs/akka-http/current/configuration.html
 
 #### api.service
 
-| Parameter Name                      | Description                                                                    |
-|-------------------------------------|--------------------------------------------------------------------------------|
-| host                                |                                                                                |
-| port                                | Services HTTP traffic                                                          |
-| portEncrypted                       | Services HTTPS traffic                                                         |
-| shutdownWaitForRequestsToComplete   | Number of seconds to let in-flight requests complete before exiting the server |
+| Parameter Name                                 | Description            |
+|------------------------------------------------|------------------------|
+| host                                           |                        |
+| port                                           | Services HTTP traffic  |
+| portEncrypted                                  | Services HTTPS traffic |
+| shutdownWaitForRequestsToComplete [DEPRECATED] | [DEPRECATED]           |
 
 #### api.tls
 
