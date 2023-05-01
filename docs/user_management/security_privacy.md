@@ -2,7 +2,7 @@
 
 copyright:
 years: 2021 - 2023
-lastupdated: "2023-02-25"
+lastupdated: "2023-05-01"
 title: "Security and privacy"
 
 parent: Security
@@ -97,3 +97,7 @@ The following security standards are used within {{site.data.keyword.ieam}}:
 {: #summary}
 
 {{site.data.keyword.edge_notm}} uses hashes, cryptographic signatures, and encryption to ensure security against unwanted access. By being mostly decentralized, {{site.data.keyword.ieam}} avoids exposure to most attacks that are typically found in edge computing environments. By constraining the scope of authority of participant roles, {{site.data.keyword.ieam}} contains the potential damage from a compromised host, or compromised software component to that part of the system. Even large-scale external attacks on the centralized services of the {{site.data.keyword.horizon}} services that are used in {{site.data.keyword.ieam}} have minimal impact on the execution of workloads at the edge.
+
+## Next
+
+See [Security](security.md) topics page for related information.

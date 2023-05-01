@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2020 - 2022
-lastupdated: "2022-06-03"
+years: 2020 - 2023
+lastupdated: "2023-05-01"
 title: Security 
 
 parent: Administering
@@ -24,9 +24,9 @@ has_toc: false
 
 {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}), based on [Open Horizon ](https://github.com/open-horizon){:target="_blank"}{: .externalLink}, uses several security technologies to ensure that it is secure against attacks and safeguards privacy. For more information about {{site.data.keyword.ieam}} security and roles, see:
 
-* [Security and privacy](security_privacy.md)
-* [Role-based access control](rbac.md)
-* [{{site.data.keyword.edge_notm}} considerations for GDPR readiness](gdpr.md)
+* [Security and privacy](./security_privacy.md)
+* [Role-based access control](./rbac.md)
+* [{{site.data.keyword.edge_notm}} considerations for GDPR readiness](./gdpr.md)
 * [Certificates](../user_management/certificates.md)
 * [Disaster recovery](../user_management/disaster_recovery.md)
 * [Monitoring management hub components](../user_management/monitoring_infrastructure.md)

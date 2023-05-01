@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2019 - 2022
-lastupdated: "2022-03-17"
+years: 2019 - 2023
+lastupdated: "2023-05-01"
 title: "Role-based access control"
 
 parent: Security
@@ -60,3 +60,7 @@ There are four types of identities within {{site.data.keyword.ieam}}:
 | Exchange nodes | Can read its own node in the exchange, and read all services, patterns, and policies in the organization, and public service and patterns in other organizations. These are the only credentials that should be saved in the edge node, because they have the minimum privilege necessary to operate the edge node.|
 | Exchange {{site.data.keyword.agbot}}s | {{site.data.keyword.agbot}}s in the IBM organization can read all nodes, services, patterns, and policies in all organizations. |
 {: caption="Table 1. RBAC roles" caption-side="top"}
+
+## Next
+
+See [Security](security.md) topics page for related information.
