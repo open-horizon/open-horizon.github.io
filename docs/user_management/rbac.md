@@ -63,4 +63,4 @@ There are four types of identities within {{site.data.keyword.ieam}}:
 
 ## Next
 
-See [Security](security.md) topics page for related information.
+See [Security](./security.md) topics page for related information.

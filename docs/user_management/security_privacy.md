@@ -55,7 +55,7 @@ When a model is deployed to an edge node, the agent downloads the model and verf
 ### {{site.data.keyword.agbot}}s
 {: #agbots}
 
-The {{site.data.keyword.ieam}} management hub contains several instances of an {{site.data.keyword.agbot}}, which are responsible for initiating the deployment of workloads to all the edge nodes registered with the management hub. {{site.data.keyword.agbot}}s periodically look at all the deployment policies and patterns that have been published to the exchange, ensuring that the services in those patterns and policies are deployed on all the correct edge nodes. When an {{site.data.keyword.agbot}} initiates a deployment request, it sends the request over the secure control plane. The deployment request contains everything the agent needs to verify the workload and its configuration, should the agent decide to accept the request. See [Agents](security_privacy.md#agents) for security details on what the agent does. The {{site.data.keyword.agbot}} also directs the MMS where and when to deploy models. See [Agents](security_privacy.md#agents) for security details on how models are managed.
+The {{site.data.keyword.ieam}} management hub contains several instances of an {{site.data.keyword.agbot}}, which are responsible for initiating the deployment of workloads to all the edge nodes registered with the management hub. {{site.data.keyword.agbot}}s periodically look at all the deployment policies and patterns that have been published to the exchange, ensuring that the services in those patterns and policies are deployed on all the correct edge nodes. When an {{site.data.keyword.agbot}} initiates a deployment request, it sends the request over the secure control plane. The deployment request contains everything the agent needs to verify the workload and its configuration, should the agent decide to accept the request. See [Agents](./security_privacy.md#agents) for security details on what the agent does. The {{site.data.keyword.agbot}} also directs the MMS where and when to deploy models. See [Agents](./security_privacy.md#agents) for security details on how models are managed.
 
 A compromised {{site.data.keyword.agbot}} can attempt to propose malicious workload deployments, but the proposed deployment must meet the security requirements that are stated in the agent section. Even though the {{site.data.keyword.agbot}} initiates workload deployment it has no authority to create workloads and container configurations and therefore is unable to propose its own malicious workloads.
 
@@ -100,4 +100,4 @@ The following security standards are used within {{site.data.keyword.ieam}}:
 
 ## Next
 
-See [Security](security.md) topics page for related information.
+See [Security](./security.md) topics page for related information.
