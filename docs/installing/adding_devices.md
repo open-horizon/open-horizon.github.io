@@ -2,7 +2,7 @@
 
 copyright:
 years: 2019 - 2023
-lastupdated: "2023-02-01"
+lastupdated: "2023-05-23"
 title: "Preparing an edge device"
 
 parent: Edge devices info
@@ -30,7 +30,7 @@ The following instructions guide you through the process of installing the requi
 
 - x86_64
   - {{site.data.keyword.linux_bit_notm}} devices or virtual machines that run Ubuntu 22.x (jammy), Ubuntu 20.x (focal), Ubuntu 18.x (bionic), Debian 10 (buster), Debian 9 (stretch)
-  - {{site.data.keyword.rhel}} 8.1 - 8.5 (via Docker), 8.6 - 8.7 and 9.0 - 9.1 (via Podman 4.x).  See Notes.
+  - {{site.data.keyword.rhel}} 8.1 - 8.5 (via Docker), 8.6 - 8.8 and 9.0 - 9.1 (via Podman 4.x).  See Notes.
   - {{site.data.keyword.fedora}} Workstation 36, 37
   - CentOS 8.1 - 8.5 (via Docker)
   - SuSE 15 SP2
@@ -50,7 +50,7 @@ The following instructions guide you through the process of installing the requi
 - Installation of edge devices with SuSE is only supported by the [Advanced manual agent installation and registration](../installing/advanced_man_install.md) method.
 - CentOS and {{site.data.keyword.rhel}} 8.5 or earlier on {{site.data.keyword.ieam}} {{site.data.keyword.version}} only support Docker as a container engine.
 - While {{site.data.keyword.ieam}} {{site.data.keyword.version}} supports running {{site.data.keyword.rhel}} 8.x with Docker, it is officially unsupported by {{site.data.keyword.rhel}}.
-- {{site.data.keyword.ieam}} {{site.data.keyword.version}} supports Podman 4.x on {{site.data.keyword.rhel}} 8.6, {{site.data.keyword.rhel}} 9.0 - 9.1, and {{site.data.keyword.fedora}} 36, 37 Workstation.
+- {{site.data.keyword.ieam}} {{site.data.keyword.version}} supports Podman 4.x on {{site.data.keyword.rhel}} 8.6 - 8.8, {{site.data.keyword.rhel}} 9.0 - 9.1, and {{site.data.keyword.fedora}} 36, 37 Workstation.
 
 ## Sizing
 {: #size}
