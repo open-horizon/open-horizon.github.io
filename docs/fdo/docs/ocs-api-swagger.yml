@@ -1,0 +1,279 @@
+openapi: 3.0.1
+info:
+  title: Open Horizon Support for FDO
+  description: '[Intel FDO](https://software.intel.com/en-us/secure-device-onboard)
+    (FIDO Device Onboard) is a technology that is created by Intel to make it easy
+    and secure to configure edge devices and associate them with an Open Horizon Management
+    Hub instance. Open Horizon has added support for FDO-enabled devices so that the
+    agent will be installed on the device and registered to the Open Horizon Management
+    Hub with zero touch (by simply powering on the device).<br><br>Examples of using
+    this API:<br><br>`curl -sS $HZN_FDO_SVC_URL/api/version && echo`<br>`curl -sS -w %{http_code}
+    -u $HZN_EXCHANGE_USER_AUTH $HZN_FDO_SVC_URL/api/orgs/$HZN_ORG_ID/fdo/vouchers
+    | jq`<br><br>Note: Some of these APIs can also be run via the `hzn` command.'
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.2.0
+externalDocs:
+  description: Find out more about Open Horizon Support for FDO
+  url: https://github.com/open-horizon/FDO-support
+servers:
+- url: https://localhost:9008
+- url: http://localhost:9008
+tags:
+- name: version
+  description: Get version number
+- name: vouchers
+  description: Manage device ownership vouchers
+- name: keys
+  description: Manage device owner keys
+- name: To0
+  description: Manage Transfer of Ownership protocol 0
+- name: To2
+  description: Manage Transfer of Ownership protocol 2
+paths:
+  /api/version:
+    get:
+      tags:
+      - version
+      summary: Get OCS API version
+      description: 'Note: This API does not require credentials.'
+      operationId: getVersion
+      responses:
+        200:
+          description: successful operation
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Version'
+  /api/fdo/version:
+    get:
+      tags:
+      - version
+      summary: Get FDO Owner service version
+      description: 'Note: This API does not require credentials.'
+      operationId: getFdoVersion
+      responses:
+        200:
+          description: successful operation
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Version'
+  /api/orgs/{org-id}/fdo/vouchers:
+    get:
+      tags:
+      - vouchers
+      summary: Get list of imported voucher IDs
+      description: Get list of imported voucher IDs
+      operationId: getVouchers
+      parameters:
+      - name: org-id
+        in: path
+        description: org ID of the vouchers you want
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VoucherIdList'
+        401:
+          description: Invalid credentials
+          content: {}
+        403:
+          description: Permission denied
+          content: {}
+    post:
+      tags:
+      - vouchers
+      summary: Import a voucher into the management hub
+      description: Import a voucher into the management hub
+      operationId: importVoucher
+      parameters:
+      - name: org-id
+        in: path
+        description: org ID of the voucher you are importing
+        required: true
+        schema:
+          type: string
+      requestBody:
+        description: Voucher to be imported
+        content:
+          text/plain:
+            schema:
+              $ref: '#/components/schemas/Voucher'
+        required: true
+      responses:
+        200:
+          description: Voucher imported
+          content: {}
+        400:
+          description: Invalid input
+          content: {}
+        401:
+          description: Invalid credentials
+          content: {}
+        403:
+          description: Permission denied
+          content: {}
+        500:
+          description: Unknown error importing voucher
+          content: {}
+      x-codegen-request-body-name: body
+  /api/orgs/{org-id}/fdo/vouchers/{device-id}:
+    get:
+      tags:
+      - vouchers
+      summary: Get one imported voucher
+      description: Get one imported voucher
+      operationId: getVoucher
+      parameters:
+      - name: org-id
+        in: path
+        description: org ID of the device you want the voucher for
+        required: true
+        schema:
+          type: string
+      - name: device-id
+        in: path
+        description: ID of the device you want the voucher for
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: successful operation
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Voucher'
+        401:
+          description: Invalid credentials
+          content: {}
+        403:
+          description: Permission denied
+          content: {}
+        404:
+          description: Voucher not found
+          content: {}
+  /api/orgs/{org-id}/fdo/certificate/{alias}:
+    get:
+      tags:
+      - keys
+      summary: Get a public key
+      description: Get a specific public key based off the device alias returned during
+        device initialization
+      operationId: getKeys
+      parameters:
+      - name: org-id
+        in: path
+        description: org ID of the keys you want
+        required: true
+        schema:
+          type: string
+      - name: alias
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: successful operation
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PublicKeyFile'
+        400:
+          description: Bad Request
+          content: {}
+        401:
+          description: Invalid credentials
+          content: {}
+        403:
+          description: Permission denied
+          content: {}
+  /api/orgs/{org-id}/fdo/to0/{device-id}:
+    get:
+      tags:
+      - To0
+      summary: Initiate To0
+      description: Initiate To0 for a specific device id
+      operationId: getTo0
+      parameters:
+      - name: org-id
+        in: path
+        description: org ID of the key you want
+        required: true
+        schema:
+          type: string
+      - name: device-id
+        in: path
+        description: ID of the device you want the voucher for
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful. To0 has been initiated.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/To0'
+        401:
+          description: Invalid credentials
+          content: {}
+        403:
+          description: Permission denied
+          content: {}
+        404:
+          description: Device ID not found
+          content: {}
+  /api/orgs/{org-id}/fdo/redirect:
+    get:
+      tags:
+      - To2
+      summary: Get To2 Address
+      description: Get the To2 address that has been set by the OCS
+      operationId: getTo2
+      parameters:
+      - name: org-id
+        in: path
+        description: org ID of the key you want
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful. Returns To2 address.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/To0'
+        401:
+          description: Invalid credentials
+          content: {}
+        403:
+          description: Permission denied
+          content: {}
+components:
+  schemas:
+    Version:
+      type: string
+    Voucher:
+      type: object
+      xml:
+        name: Voucher
+    VoucherIdList:
+      type: array
+      items:
+        type: string
+        description: voucher device id
+    PublicKeyFile:
+      type: string
+    To0:
+      type: string
+      description: To0
