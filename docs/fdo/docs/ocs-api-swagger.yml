@@ -36,7 +36,7 @@ paths:
     get:
       tags:
       - version
-      summary: Get OCS API version
+      summary: Get Owner Companion Service (OCS) API version
       description: 'Note: This API does not require credentials.'
       operationId: getVersion
       responses:
