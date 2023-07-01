@@ -1,7 +1,7 @@
 --- 
 copyright: 
 years: 2021 - 2023 
-lastupdated: "2023-05-01" 
+lastupdated: "2023-07-01" 
 layout: page 
 title: "Home" 
 description: "Welcome to the Open Horizon Documentation web site" 
@@ -12,5 +12,5 @@ Open Horizon is a platform for managing the service software lifecycle of contai
 
 Edge computing brings computation and data storage closer to where data is created by people, places, and things.  Open Horizon simplifies the job of getting the right applications and machine learning onto the right compute devices and keeps those applications running and updated.  It also enables the autonomous management of more than 10,000 edge devices simultaneously – that’s 20 times as many endpoints as in traditional solutions.
 
-*   To install everything with a one-liner script, visit the [Quick Start](./quick-start.md) page.
+*   To install everything with a one-liner script, visit the [Quick Start](./quick-start/) page.
 *   For all other documentation, see the [documentation index page](/docs/).

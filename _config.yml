@@ -109,7 +109,7 @@ aux_links:
   "Home":
    - "/"
   "Quick Start":
-   - "/quick-start.html"
+   - "/quick-start/"
   "Docs":
    - "/docs/"
   "FAQ":

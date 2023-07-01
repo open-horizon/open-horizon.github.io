@@ -36,7 +36,7 @@ SDO consists of these components:
 
 ### SDO flow
 
-![SDO installation overview](../images/edge/09_SDO_device_provisioning.svg "SDO installation overview"){:style="margin: 3%"}
+![SDO installation overview](../../images/edge/09_SDO_device_provisioning.svg "SDO installation overview"){:style="margin: 3%"}
 
 ## Before you begin
 {: #before_begin}
@@ -85,7 +85,7 @@ If you have purchased SDO-enabled devices and want to incorporate them into your
 
    3. Perform the steps in just this one section: [Generate Owner Key Pairs ](https://github.com/open-horizon/SDO-support/blob/master/README.md#gen-keypair){:target="_blank"}{: .externalLink}.
 
-2. [Log in to the {{site.data.keyword.ieam}} management console](../console/accessing_ui.md).
+2. [Log in to the {{site.data.keyword.ieam}} management console](../../console/accessing_ui.md).
 
 3. On the **Nodes** tab, click **Add node**.
 
