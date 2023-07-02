@@ -2,7 +2,7 @@
 
 copyright:
 years: 2021
-lastupdated: "2021-02-20"
+lastupdated: "2021-07-01"
 title: "Deploying edge services"
 
 parent: Using edge services
@@ -22,7 +22,7 @@ has_toc: false
 # Deploying edge services
 {: #detailed_deployment_policy}
 
-You can deploy {{site.data.keyword.edge_notm}} {{site.data.keyword.ieam}} policies using policies or patterns. For a more comprehensive overview of various system components, see [Overview of {{site.data.keyword.edge_notm}}](../getting_started/overview_oh.html) and [Deployment policy use cases](policy_user_cases.md). For a hands-on policy example, see [CI-CD process for Edge services](../developing/cicd_process.md).
+You can deploy {{site.data.keyword.edge_notm}} {{site.data.keyword.ieam}} policies using policies or patterns. For a more comprehensive overview of various system components, see [Overview of {{site.data.keyword.edge_notm}}](../getting_started/overview_oh.md) and [Deployment policy use cases](policy_user_cases.md). For a hands-on policy example, see [CI-CD process for Edge services](../developing/cicd_process.md).
 
 This section discusses policy and patterns concepts and includes a use case scenario.
 
