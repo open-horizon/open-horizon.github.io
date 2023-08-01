@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2020 - 2023
-lastupdated: "2023-02-18"
+lastupdated: "2023-08-01"
 
 title: "GDPR readiness"
 
@@ -112,7 +112,7 @@ The **cloudctl**, **kubectl**, and **oc** CLIs also require credentials to acces
 
 ### Role Mapping
 
-{{site.data.keyword.ieam}} supports role-based access control (RBAC). In the role-mapping stage, the username that is provided in the authentication stage is mapped to a user or group role. The roles are used to authorize which activities can be carried out by the authenticated user. See [Role-based access control](rbac.md) for details about {{site.data.keyword.ieam}} roles.
+{{site.data.keyword.ieam}} supports role-based access control (RBAC). In the role-mapping stage, the username that is provided in the authentication stage is mapped to a user or group role. The roles are used to authorize which activities can be carried out by the authenticated user. See [Role-based access control](/docs/user_management/rbac.md) for details about {{site.data.keyword.ieam}} roles.
 
 ### Pod Security
 

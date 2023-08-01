@@ -2,7 +2,7 @@
 
 copyright:
 years: 2020 - 2023
-lastupdated: "2023-02-25"
+lastupdated: "2023-08-01"
 title: Multitenacy
 description: Software architecture in which a single instance of software runs on server and server multiplies tenants.
 
@@ -48,7 +48,7 @@ The use case that you choose determines how you configure {{site.data.keyword.ie
 | **Regular user** | Creates nodes, services, policies, and patterns within the organization and modifies or deletes the resources that they have created. Views all of the services, policies, and patterns in the organization that other users have created. |
 {: caption="Table 1. {{site.data.keyword.ieam}} user roles" caption-side="top"}
 
-See [Role-based access control](../user_management/rbac.md) for a description of all {{site.data.keyword.ieam}} roles.
+See [Role-based access control](/docs/user_management/rbac.md) for a description of all {{site.data.keyword.ieam}} roles.
 
 ## The relationship between IAM and {{site.data.keyword.ieam}}
 {: #iam-to-ieam}

@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2021 - 2023
-lastupdated: "2023-02-27"
+lastupdated: "2023-08-01"
 title: "Secrets Manager details"
 
 parent: Secrets Manager
@@ -48,4 +48,4 @@ The {{site.data.keyword.ieam}} {{site.data.keyword.agbot}} also has access to se
 
 - Read org wide secrets and any user private secret in any org, but it cannot add, remove or list any secrets.
 
-The Exchange root user and Exchange hub admins have no permissions in the Vault. See [Role-Based Access Control](../../user_management/rbac) for more info on these roles.
+The Exchange root user and Exchange hub admins have no permissions in the Vault. See [Role-Based Access Control](/docs/user_management/rbac.md) for more info on these roles.

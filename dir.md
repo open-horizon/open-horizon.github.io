@@ -94,7 +94,7 @@ User Management
  * [/docs/user_management/disaster_recovery.html](/docs/user_management/disaster_recovery.html)
  * [/docs/user_management/gdpr.html](/docs/user_management/gdpr.html)
  * [/docs/user_management/monitoring_infrastructure.html](/docs/user_management/monitoring_infrastructure.html)
- * [/docs/user_management/rbac.html](./docs/user_management/rbac.md)
+ * [/docs/user_management/rbac.html](/docs/user_management/rbac.md)
  * [/docs/user_management/security.html](/docs/user_management/security.html)
  * [/docs/user_management/security_privacy.html](/docs/user_management/security_privacy.html)
 
