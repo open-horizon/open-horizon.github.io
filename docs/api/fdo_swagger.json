@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-      "description": "[Intel FDO](https://software.intel.com/en-us/secure-device-onboard) (Secure Device Onboard) is a technology that is created by Intel to make it easy and secure to configure edge devices and associate them with an IEAM instance. IEAM has added support for FDO-enabled devices so that the agent will be installed on the device and registered to the IEAM management hub with zero touch (by simply powering on the device).<br><br>Examples of using this API:<br><br>`curl -sS $HZN_FDO_SVC_URL/version && echo`<br>`curl -sS -w %{http_code} -u $HZN_ORG_ID/$HZN_EXCHANGE_USER_AUTH $HZN_FDO_SVC_URL/orgs/$HZN_ORG_ID/fdo/vouchers | jq`<br><br>Note: Some of these APIs can also be run via the `hzn` command.",
+      "description": "[FDO](https://software.intel.com/en-us/secure-device-onboard) (Secure Device Onboard) is a technology that is created by Intel to make it easy and secure to configure edge devices and associate them with an IEAM instance. IEAM has added support for FDO-enabled devices so that the agent will be installed on the device and registered to the IEAM management hub with zero touch (by simply powering on the device).<br><br>Examples of using this API:<br><br>`curl -sS $HZN_FDO_SVC_URL/version && echo`<br>`curl -sS -w %{http_code} -u $HZN_ORG_ID/$HZN_EXCHANGE_USER_AUTH $HZN_FDO_SVC_URL/orgs/$HZN_ORG_ID/fdo/vouchers | jq`<br><br>Note: Some of these APIs can also be run via the `hzn` command.",
       "version": "1.0.0",
       "title": "Open Horizon Support for FDO",
       "license": {

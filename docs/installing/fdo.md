@@ -20,7 +20,7 @@ nav_order: 6
 # FDO agent installation and registration
 {: #fdo}
 
-[FIDO Device Onboard (FDO) ](https://github.com/open-horizon/FDO-support/blob/main/README.md){:target="_blank"}{: .externalLink}, created by Intel, makes it easy to add edge devices built with Intel FDO (FIDO Device Onboard) to an {{site.data.keyword.ieam}} instance by simply importing their associated ownership vouchers and then powering on the devices.
+[FIDO Device Onboard (FDO) ](https://github.com/open-horizon/FDO-support/blob/main/README.md){:target="_blank"}{: .externalLink}, created by Intel, makes it easy to add edge devices built with FDO (FIDO Device Onboard) to an {{site.data.keyword.ieam}} instance by simply importing their associated ownership vouchers and then powering on the devices.
 
 ## FDO overview
 {: #fdo-overview}
