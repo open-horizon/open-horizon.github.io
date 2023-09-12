@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-09-12"
 title: "All-in-One Mgmt Hub"
 
 parent: Management Hub
@@ -161,11 +161,11 @@ curl -sSL https://github.com/open-horizon/anax/releases/latest/download/agent-in
 
 When complete, you can run `hzn exchange node list` to see your new nodes.
 
-### <a id="try-sdo">Try Out SDO</a>
+### <a id="try-fdo">Try Out FDO</a>
 
-[The LF Edge SDO (aka FDO) project](https://www.lfedge.org/projects/securedeviceonboard/) (Secure Device Onboard) codebase is embedded in Open Horizon and their technology can configure an edge device and register it with a Horizon instance automatically. Although this is not necessary in this all-in-one environment (because the agent has already been registered), you can easily try out SDO to see it working.
+[The LF Edge FDO project](https://www.lfedge.org/projects/fidodeviceonboard/) (FIDO Device Onboard) codebase is embedded in Open Horizon and their technology can configure an edge device and register it with a Horizon instance automatically. Although this is not necessary in this all-in-one environment (because the agent has already been registered), you can easily try out SDO to see it working.
 
-**Note:** SDO is currently only supported in this all-in-one environment on Ubuntu.
+**Note:** FDO is currently only supported in this all-in-one environment on Ubuntu.
 
 Export these environment variables:
 
@@ -174,10 +174,10 @@ export HZN_ORG_ID=myorg   # or whatever org name you customized it to
 export HZN_EXCHANGE_USER_AUTH=admin:<password>
 ```
 
-Run the SDO test script. If you overrode any variables when running `deploy-mgmt-hub.sh`, pass those same variable values to `test-sdo.sh`, by either exporting them or putting them in a config file that you pass to `test-sdo.sh` using the `-c` flag.
+Run the FDO test script. If you overrode any variables when running `deploy-mgmt-hub.sh`, pass those same variable values to `test-fdo.sh`, by either exporting them or putting them in a config file that you pass to `test-fdo.sh` using the `-c` flag.
 
 ```bash
-./test-sdo.sh
+./test-fdo.sh
 ```
 
 You will see the script do these steps:

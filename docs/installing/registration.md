@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2020 - 2023
-lastupdated: "2023-02-20"
+lastupdated: "2023-09-12"
 title: "Installing the agent"
 
 parent: Edge devices info
@@ -31,13 +31,12 @@ You must complete the steps in [Preparing an edge device](adding_devices.md).
 ## Installing and registering edge devices
 {: #installing_registering}
 
-Six different methods are provided to install the agent on and register edge devices. Each is useful in different circumstances:
+Five different methods are provided to install the agent on and register edge devices. Each is useful in different circumstances:
 
 * [Automated agent installation and registration](automated_install.md) - install and register one edge device with a minimum of steps. **First-time users should use this method.**
 * [Advanced manual agent installation and registration](advanced_man_install.md) - do each step yourself to install and register one edge device. Use this method if you need to do something out of the ordinary and the script that is used in Method 1 does not have the required flexibility. You can also use this method if you want to understand exactly what is required to set up an edge device.
 * [Agent in a Container](/docs/anax/docs/agent_container_manual_deploy/) - start and register the agent in a container.
 * [Bulk agent installation and registration](many_install.md#batch-install) - install and register many edge devices at one time.
-* [SDO agent installation and registration](sdo.md) - automatic install with SDO devices (deprecated).
 * [FDO agent installation and registration](fdo.md) - automatic install with FDO devices.
 
 ## Questions and troubleshooting
