@@ -1,4 +1,4 @@
-# Welcome to Jekyll!
+a# Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole site, values
 # which you are expected to set up once and rarely edit after that. If you find
@@ -138,7 +138,7 @@ nav_external_links:
 back_to_top: true
 back_to_top_text: "Back to top"
 
-footer_content: "Copyright &copy; 2015-2023 Varies per page, see headers. Documentation distributed by an <a href=\"https://github.com/open-horizon/open-horizon.github.io/blob/master/LICENSE\">CC-BY-4.0 license.</a>"
+footer_content: "Copyright &copy; 2015-2023 Varies per page, see headers. Documentation distributed by an <a href=\"https://github.com/open-horizon/open-horizon.github.io/blob/master/LICENSE\">CC-BY-4.0 license.</a> Open Horizon is a <a href= \https://wiki.lfedge.org/display/LE/Stage+2%3A+Growth\">Stage Two project</a> at <a href =\https://www.lfedge.org/\">LF Edge</a>."
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
