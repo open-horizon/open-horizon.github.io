@@ -35,7 +35,7 @@ dev:
 	$(JEKYLL) serve
 	$(JEKYLL) doctor
 
-# make build: build the local documentation site. typically done before "make run"
+# make build: build the local documentation site. typically done before "make run" 
 build:
 	$(JEKYLL) build
 
