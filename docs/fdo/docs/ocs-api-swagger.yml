@@ -1,8 +1,8 @@
 openapi: 3.0.1
 info:
   title: Open Horizon Support for FDO
-  description: '[Intel FDO](https://software.intel.com/en-us/secure-device-onboard)
-    (FIDO Device Onboard) is a technology that is created by Intel to make it easy
+  description: '[FDO](https://software.intel.com/en-us/secure-device-onboard)
+    (FIDO Device Onboard) is a technology that is contributed by Intel to make it easy
     and secure to configure edge devices and associate them with an Open Horizon Management
     Hub instance. Open Horizon has added support for FDO-enabled devices so that the
     agent will be installed on the device and registered to the Open Horizon Management
@@ -13,7 +13,7 @@ info:
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
-  version: 1.2.0
+  version: 1.3.0
 externalDocs:
   description: Find out more about Open Horizon Support for FDO
   url: https://github.com/open-horizon/FDO-support
