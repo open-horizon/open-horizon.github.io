@@ -8,7 +8,7 @@
       "name" : "Apache License Version 2.0",
       "url" : "https://www.apache.org/licenses/LICENSE-2.0"
     },
-    "version" : "2.120.0"
+    "version" : "2.121.0"
   },
   "externalDocs" : {
     "description" : "Open-horizon ExchangeAPI",
@@ -251,6 +251,15 @@
             "type" : "string"
           }
         } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
         "responses" : {
           "200" : {
             "description" : "response body",
@@ -350,6 +359,15 @@
             "type" : "string"
           }
         } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
         "responses" : {
           "204" : {
             "description" : "deleted"
@@ -1373,139 +1391,12 @@
         }
       }
     },
-    "/v1/catalog/{organization}/patterns" : {
-      "get" : {
-        "tags" : [ "catalog" ],
-        "summary" : "Returns all patterns",
-        "description" : "Returns all pattern definitions in this organization and in the IBM organization. Can be run by any user, node, or agbot.",
-        "operationId" : "catalogGetPatternsAll",
-        "parameters" : [ {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization id.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "idfilter",
-          "in" : "query",
-          "description" : "Filter results to only include patterns with this id (can include % for wildcard - the URL encoding for % is %25)",
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "owner",
-          "in" : "query",
-          "description" : "Filter results to only include patterns with this owner (can include % for wildcard - the URL encoding for % is %25)",
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "public",
-          "in" : "query",
-          "description" : "Filter results to only include patterns with this public setting",
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "label",
-          "in" : "query",
-          "description" : "Filter results to only include patterns with this label (can include % for wildcard - the URL encoding for % is %25)",
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "description",
-          "in" : "query",
-          "description" : "Filter results to only include patterns with this description (can include % for wildcard - the URL encoding for % is %25)",
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "response body",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/GetPatternsResponse"
-                },
-                "example" : {
-                  "patterns" : {
-                    "orgid/patternname" : {
-                      "owner" : "string",
-                      "label" : "My Pattern",
-                      "description" : "blah blah",
-                      "public" : true,
-                      "services" : [ {
-                        "serviceUrl" : "string",
-                        "serviceOrgid" : "string",
-                        "serviceArch" : "string",
-                        "agreementLess" : false,
-                        "serviceVersions" : [ {
-                          "version" : "4.5.6",
-                          "deployment_overrides" : "string",
-                          "deployment_overrides_signature" : "a",
-                          "priority" : {
-                            "priority_value" : 50,
-                            "retries" : 1,
-                            "retry_durations" : 3600,
-                            "verified_durations" : 52
-                          },
-                          "upgradePolicy" : {
-                            "lifecycle" : "immediate",
-                            "time" : "01:00AM"
-                          }
-                        } ],
-                        "dataVerification" : {
-                          "metering" : {
-                            "tokens" : 1,
-                            "per_time_unit" : "min",
-                            "notification_interval" : 30
-                          },
-                          "URL" : "",
-                          "enabled" : true,
-                          "interval" : 240,
-                          "check_rate" : 15,
-                          "user" : "",
-                          "password" : ""
-                        },
-                        "nodeHealth" : {
-                          "missing_heartbeat_interval" : 600,
-                          "check_agreement_status" : 120
-                        }
-                      } ],
-                      "userInput" : [ ],
-                      "agreementProtocols" : [ {
-                        "name" : "Basic"
-                      } ],
-                      "lastUpdated" : "2019-05-14T16:34:34.194Z[UTC]"
-                    }
-                  },
-                  "lastIndex" : 0
-                }
-              }
-            }
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      }
-    },
-    "/v1/catalog/patterns" : {
+    "/v1/catalog/patterns/patterns" : {
       "get" : {
         "tags" : [ "catalog" ],
         "summary" : "Returns patterns in the IBM catalog",
         "description" : "Returns public pattern definitions from orgs of the specified orgtype (default is IBM). Can be run by any user, node, or agbot.",
-        "operationId" : "catalogGetPatternsRoute",
+        "operationId" : "getDeploymentPatterns",
         "parameters" : [ {
           "name" : "orgtype",
           "in" : "query",
@@ -1599,12 +1490,148 @@
         }
       }
     },
+    "/v1/catalog/{organization}/patterns" : {
+      "get" : {
+        "tags" : [ "catalog" ],
+        "summary" : "Returns all patterns",
+        "description" : "Returns all pattern definitions in this organization and in the IBM organization. Can be run by any user, node, or agbot.",
+        "operationId" : "getOrganizationDeploymentPatterns",
+        "parameters" : [ {
+          "name" : "organization",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "idfilter",
+          "in" : "query",
+          "description" : "Filter results to only include patterns with this id (can include % for wildcard - the URL encoding for % is %25)",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "owner",
+          "in" : "query",
+          "description" : "Filter results to only include patterns with this owner (can include % for wildcard - the URL encoding for % is %25)",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "public",
+          "in" : "query",
+          "description" : "Filter results to only include patterns with this public setting",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "label",
+          "in" : "query",
+          "description" : "Filter results to only include patterns with this label (can include % for wildcard - the URL encoding for % is %25)",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "description",
+          "in" : "query",
+          "description" : "Filter results to only include patterns with this description (can include % for wildcard - the URL encoding for % is %25)",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Identity"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetPatternsResponse"
+                },
+                "example" : {
+                  "patterns" : {
+                    "orgid/patternname" : {
+                      "owner" : "string",
+                      "label" : "My Pattern",
+                      "description" : "blah blah",
+                      "public" : true,
+                      "services" : [ {
+                        "serviceUrl" : "string",
+                        "serviceOrgid" : "string",
+                        "serviceArch" : "string",
+                        "agreementLess" : false,
+                        "serviceVersions" : [ {
+                          "version" : "4.5.6",
+                          "deployment_overrides" : "string",
+                          "deployment_overrides_signature" : "a",
+                          "priority" : {
+                            "priority_value" : 50,
+                            "retries" : 1,
+                            "retry_durations" : 3600,
+                            "verified_durations" : 52
+                          },
+                          "upgradePolicy" : {
+                            "lifecycle" : "immediate",
+                            "time" : "01:00AM"
+                          }
+                        } ],
+                        "dataVerification" : {
+                          "metering" : {
+                            "tokens" : 1,
+                            "per_time_unit" : "min",
+                            "notification_interval" : 30
+                          },
+                          "URL" : "",
+                          "enabled" : true,
+                          "interval" : 240,
+                          "check_rate" : 15,
+                          "user" : "",
+                          "password" : ""
+                        },
+                        "nodeHealth" : {
+                          "missing_heartbeat_interval" : 600,
+                          "check_agreement_status" : 120
+                        }
+                      } ],
+                      "userInput" : [ ],
+                      "agreementProtocols" : [ {
+                        "name" : "Basic"
+                      } ],
+                      "lastUpdated" : "2019-05-14T16:34:34.194Z[UTC]"
+                    }
+                  },
+                  "lastIndex" : 0
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
     "/v1/catalog/{organization}/services" : {
       "get" : {
         "tags" : [ "catalog" ],
         "summary" : "Returns all services",
         "description" : "Returns all service definitions in this organization and in the IBM organization. Can be run by any user, node, or agbot.",
-        "operationId" : "catalogGetServicesAll",
+        "operationId" : "getOrganizationServices",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -1663,6 +1690,15 @@
             "type" : "string"
           }
         } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Identity"
+              }
+            }
+          }
+        },
         "responses" : {
           "200" : {
             "description" : "response body",
@@ -1767,7 +1803,7 @@
         "tags" : [ "catalog" ],
         "summary" : "Returns services in the IBM catalog",
         "description" : "Returns public service definitions from orgs of the specified orgtype (default is IBM). Can be run by any user, node, or agbot.",
-        "operationId" : "catalogGetServicesRoute",
+        "operationId" : "getServicesCatalog",
         "parameters" : [ {
           "name" : "orgtype",
           "in" : "query",
@@ -1883,266 +1919,12 @@
         }
       }
     },
-    "/v1/orgs/{organization}/patterns/{pattern}/keys/{keyid}" : {
-      "get" : {
-        "tags" : [ "deployment pattern/key" ],
-        "summary" : "Returns a key/cert for this pattern",
-        "description" : "Returns the signing public key/cert with the specified keyid for this pattern. The raw content of the key/cert is returned, not json. Can be run by any credentials able to view the pattern.",
-        "operationId" : "patternGetKeyRoute",
-        "parameters" : [ {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization id.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "pattern",
-          "in" : "path",
-          "description" : "Pattern name.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "keyid",
-          "in" : "path",
-          "description" : "Signing public key/certificate identifier.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "response body",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "type" : "string"
-                }
-              }
-            }
-          },
-          "400" : {
-            "description" : "bad input"
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      },
-      "put" : {
-        "tags" : [ "deployment pattern/key" ],
-        "summary" : "Adds/updates a key/cert for the pattern",
-        "description" : "Adds a new signing public key/cert, or updates an existing key/cert, for this pattern. This can only be run by the pattern owning user.",
-        "operationId" : "patternPutKeyRoute",
-        "parameters" : [ {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization id.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "pattern",
-          "in" : "path",
-          "description" : "ID of the pattern to be updated.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "keyid",
-          "in" : "path",
-          "description" : "ID of the key to be added/updated.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "requestBody" : {
-          "description" : "Note that the input body is just the bytes of the key/cert (not the typical json), so the 'Content-Type' header must be set to 'text/plain'.",
-          "content" : {
-            "application/json" : {
-              "schema" : {
-                "$ref" : "#/components/schemas/PutPatternKeyRequest"
-              },
-              "example" : {
-                "key" : "string"
-              }
-            }
-          },
-          "required" : true
-        },
-        "responses" : {
-          "201" : {
-            "description" : "response body",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/ApiResponse"
-                }
-              }
-            }
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      },
-      "delete" : {
-        "tags" : [ "deployment pattern/key" ],
-        "summary" : "Deletes a key of a pattern",
-        "description" : "Deletes a key/cert for this pattern. This can only be run by the pattern owning user.",
-        "operationId" : "patternDeleteKeyRoute",
-        "parameters" : [ {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization id.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "pattern",
-          "in" : "path",
-          "description" : "Pattern name.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "keyid",
-          "in" : "path",
-          "description" : "ID of the key.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "responses" : {
-          "204" : {
-            "description" : "deleted"
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      }
-    },
-    "/v1/orgs/{organization}/patterns/{pattern}/keys" : {
-      "get" : {
-        "tags" : [ "deployment pattern/key" ],
-        "summary" : "Returns all keys/certs for this pattern",
-        "description" : "Returns all the signing public keys/certs for this pattern. Can be run by any credentials able to view the pattern.",
-        "operationId" : "patternGetKeysRoute",
-        "parameters" : [ {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization id.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "pattern",
-          "in" : "path",
-          "description" : "Pattern name.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "response body",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/List"
-                }
-              }
-            }
-          },
-          "400" : {
-            "description" : "bad input"
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      },
-      "delete" : {
-        "tags" : [ "deployment pattern/key" ],
-        "summary" : "Deletes all keys of a pattern",
-        "description" : "Deletes all of the current keys/certs for this pattern. This can only be run by the pattern owning user.",
-        "operationId" : "patternDeleteKeysRoute",
-        "parameters" : [ {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization id.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "pattern",
-          "in" : "path",
-          "description" : "Pattern name.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "responses" : {
-          "204" : {
-            "description" : "deleted"
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      }
-    },
     "/v1/orgs/{organization}/patterns/{pattern}" : {
       "get" : {
         "tags" : [ "deployment pattern" ],
         "summary" : "Returns a pattern",
         "description" : "Returns the pattern with the specified id. Can be run by a user, node, or agbot.",
-        "operationId" : "patternGetRoute",
+        "operationId" : "getDeploymentPattern",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -2167,6 +1949,15 @@
             "type" : "string"
           }
         } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
         "responses" : {
           "200" : {
             "description" : "response body",
@@ -2249,7 +2040,7 @@
         "tags" : [ "deployment pattern" ],
         "summary" : "Adds a pattern",
         "description" : "Creates a pattern resource. A pattern resource specifies all of the services that should be deployed for a type of node. When a node registers with Horizon, it can specify a pattern name to quickly tell Horizon what should be deployed on it. This can only be called by a user.",
-        "operationId" : "patternPuttRoute",
+        "operationId" : "putDeploymentPattern",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -2376,7 +2167,7 @@
         "tags" : [ "deployment pattern" ],
         "summary" : "Adds a pattern",
         "description" : "Creates a pattern resource. A pattern resource specifies all of the services that should be deployed for a type of node. When a node registers with Horizon, it can specify a pattern name to quickly tell Horizon what should be deployed on it. This can only be called by a user.",
-        "operationId" : "patternPostRoute",
+        "operationId" : "postDeploymentPattern",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -2502,7 +2293,7 @@
         "tags" : [ "deployment pattern" ],
         "summary" : "Deletes a pattern",
         "description" : "Deletes a pattern. Can only be run by the owning user.",
-        "operationId" : "patternDeleteRoute",
+        "operationId" : "deleteDeploymentPattern",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -2520,6 +2311,15 @@
             "type" : "string"
           }
         } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
         "responses" : {
           "204" : {
             "description" : "deleted"
@@ -2539,7 +2339,7 @@
         "tags" : [ "deployment pattern" ],
         "summary" : "Updates 1 attribute of a pattern",
         "description" : "Updates one attribute of a pattern. This can only be called by the user that originally created this pattern resource.",
-        "operationId" : "patternPatchRoute",
+        "operationId" : "patchDeploymentPattern",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -2663,146 +2463,12 @@
         }
       }
     },
-    "/v1/orgs/{organization}/patterns/{pattern}/nodehealth" : {
-      "post" : {
-        "tags" : [ "deployment pattern" ],
-        "summary" : "Returns agreement health of nodes of a particular pattern",
-        "description" : "Returns the lastHeartbeat and agreement times for all nodes that are this pattern and have changed since the specified lastTime. Can be run by a user or agbot (but not a node).",
-        "operationId" : "patternNodeHealthRoute",
-        "parameters" : [ {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization id.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "pattern",
-          "in" : "path",
-          "description" : "Pattern name.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "requestBody" : {
-          "content" : {
-            "application/json" : {
-              "schema" : {
-                "$ref" : "#/components/schemas/PostNodeHealthRequest"
-              },
-              "example" : {
-                "lastTime" : "2017-09-28T13:51:36.629Z[UTC]",
-                "nodeOrgids" : [ "org1", "org2", "..." ]
-              }
-            }
-          },
-          "required" : true
-        },
-        "responses" : {
-          "201" : {
-            "description" : "response body",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/PostNodeHealthResponse"
-                },
-                "example" : {
-                  "nodes" : {
-                    "string" : {
-                      "lastHeartbeat" : "string",
-                      "agreements" : {
-                        "string" : {
-                          "lastUpdated" : "string"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      }
-    },
-    "/v1/orgs/{organization}/patterns/{pattern}/search" : {
-      "post" : {
-        "tags" : [ "deployment pattern" ],
-        "summary" : "Returns matching nodes of a particular pattern",
-        "description" : "Returns the matching nodes that are using this pattern and do not already have an agreement for the specified service. Can be run by a user or agbot (but not a node).",
-        "operationId" : "patternPostSearchRoute",
-        "parameters" : [ {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization id.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "pattern",
-          "in" : "path",
-          "description" : "Pattern name.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "requestBody" : {
-          "content" : {
-            "application/json" : {
-              "schema" : {
-                "$ref" : "#/components/schemas/PostPatternSearchRequest"
-              },
-              "example" : {
-                "arch" : "arm",
-                "nodeOrgids" : [ "org1", "org2", "..." ],
-                "secondsStale" : 60,
-                "serviceUrl" : "myorg/mydomain.com.sdr"
-              }
-            }
-          },
-          "required" : true
-        },
-        "responses" : {
-          "201" : {
-            "description" : "response body",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/PostPatternSearchResponse"
-                }
-              }
-            }
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      }
-    },
     "/v1/orgs/{organization}/patterns" : {
       "get" : {
         "tags" : [ "deployment pattern" ],
         "summary" : "Returns all patterns",
         "description" : "Returns all pattern definitions in this organization. Can be run by any user, node, or agbot.",
-        "operationId" : "patternsGetRoute",
+        "operationId" : "getDeploymentPatterns_1",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -2854,6 +2520,15 @@
             "type" : "string"
           }
         } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Identity"
+              }
+            }
+          }
+        },
         "responses" : {
           "200" : {
             "description" : "response body",
@@ -2933,12 +2608,546 @@
         }
       }
     },
+    "/v1/orgs/{organization}/patterns/{pattern}/nodehealth" : {
+      "post" : {
+        "tags" : [ "deployment pattern" ],
+        "summary" : "Returns agreement health of nodes of a particular pattern",
+        "description" : "Returns the lastHeartbeat and agreement times for all nodes that are this pattern and have changed since the specified lastTime. Can be run by a user or agbot (but not a node).",
+        "operationId" : "postNodeHealth",
+        "parameters" : [ {
+          "name" : "organization",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "pattern",
+          "in" : "path",
+          "description" : "Pattern name.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/PostNodeHealthRequest"
+              },
+              "example" : {
+                "lastTime" : "2017-09-28T13:51:36.629Z[UTC]",
+                "nodeOrgids" : [ "org1", "org2", "..." ]
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "201" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/PostNodeHealthResponse"
+                },
+                "example" : {
+                  "nodes" : {
+                    "string" : {
+                      "lastHeartbeat" : "string",
+                      "agreements" : {
+                        "string" : {
+                          "lastUpdated" : "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
+    "/v1/orgs/{organization}/patterns/{pattern}/search" : {
+      "post" : {
+        "tags" : [ "deployment pattern" ],
+        "summary" : "Returns matching nodes of a particular pattern",
+        "description" : "Returns the matching nodes that are using this pattern and do not already have an agreement for the specified service. Can be run by a user or agbot (but not a node).",
+        "operationId" : "postSearchNode",
+        "parameters" : [ {
+          "name" : "organization",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "pattern",
+          "in" : "path",
+          "description" : "Pattern name.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/PostPatternSearchRequest"
+              },
+              "example" : {
+                "arch" : "arm",
+                "nodeOrgids" : [ "org1", "org2", "..." ],
+                "secondsStale" : 60,
+                "serviceUrl" : "myorg/mydomain.com.sdr"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "201" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/PostPatternSearchResponse"
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
+    "/v1/orgs/{organization}/patterns/{pattern}/keys/{keyid}" : {
+      "get" : {
+        "tags" : [ "deployment pattern/key" ],
+        "summary" : "Returns a key/cert for this pattern",
+        "description" : "Returns the signing public key/cert with the specified keyid for this pattern. The raw content of the key/cert is returned, not json. Can be run by any credentials able to view the pattern.",
+        "operationId" : "getKeyDeploymentPattern",
+        "parameters" : [ {
+          "name" : "organization",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "pattern",
+          "in" : "path",
+          "description" : "Pattern name.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "keyid",
+          "in" : "path",
+          "description" : "Signing public key/certificate identifier.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "deployment pattern/key" ],
+        "summary" : "Adds/updates a key/cert for the pattern",
+        "description" : "Adds a new signing public key/cert, or updates an existing key/cert, for this pattern. This can only be run by the pattern owning user.",
+        "operationId" : "putKeyDeploymentPattern",
+        "parameters" : [ {
+          "name" : "organization",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "pattern",
+          "in" : "path",
+          "description" : "ID of the pattern to be updated.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "keyid",
+          "in" : "path",
+          "description" : "ID of the key to be added/updated.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "description" : "Note that the input body is just the bytes of the key/cert (not the typical json), so the 'Content-Type' header must be set to 'text/plain'.",
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/PutPatternKeyRequest"
+              },
+              "example" : {
+                "key" : "string"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "201" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "deployment pattern/key" ],
+        "summary" : "Deletes a key of a pattern",
+        "description" : "Deletes a key/cert for this pattern. This can only be run by the pattern owning user.",
+        "operationId" : "deleteKeyDeploymentPattern",
+        "parameters" : [ {
+          "name" : "organization",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "pattern",
+          "in" : "path",
+          "description" : "Pattern name.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "keyid",
+          "in" : "path",
+          "description" : "ID of the key.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "204" : {
+            "description" : "deleted"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
+    "/v1/orgs/{organization}/patterns/{pattern}/keys/{pattern}/keys" : {
+      "get" : {
+        "tags" : [ "deployment pattern/key" ],
+        "summary" : "Returns all keys/certs for this pattern",
+        "description" : "Returns all the signing public keys/certs for this pattern. Can be run by any credentials able to view the pattern.",
+        "operationId" : "getKeysDeploymentPattern",
+        "parameters" : [ {
+          "name" : "organization",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "pattern",
+          "in" : "path",
+          "description" : "Pattern name.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/List"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "deployment pattern/key" ],
+        "summary" : "Deletes all keys of a pattern",
+        "description" : "Deletes all of the current keys/certs for this pattern. This can only be run by the pattern owning user.",
+        "operationId" : "deleteKeysDeploymentPattern",
+        "parameters" : [ {
+          "name" : "organization",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "pattern",
+          "in" : "path",
+          "description" : "Pattern name.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "204" : {
+            "description" : "deleted"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
+    "/v1/orgs/{organization}/business/policies" : {
+      "get" : {
+        "tags" : [ "deployment policy" ],
+        "summary" : "Returns all business policies",
+        "description" : "Returns all business policy definitions in this organization. Can be run by any user, node, or agbot.",
+        "operationId" : "getDeploymentPolicies",
+        "parameters" : [ {
+          "name" : "organization",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "idfilter",
+          "in" : "query",
+          "description" : "Filter results to only include Deployment Policies with this Identifier (can include '%' for wildcard - the URL encoding for '%' is '%25')",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "owner",
+          "in" : "query",
+          "description" : "Filter results to only include Deployment Policies with this Owner (can include '%' for wildcard - the URL encoding for '%' is '%25')",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "label",
+          "in" : "query",
+          "description" : "Filter results to only include Deployment Policies with this Label (can include '%' for wildcard - the URL encoding for '%' is '%25')",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "description",
+          "in" : "query",
+          "description" : "Filter results to only include Deployment Policies with this Description (can include '%' for wildcard - the URL encoding for '%' is '%25')",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Identity"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetBusinessPoliciesResponse"
+                },
+                "example" : {
+                  "businessPolicy" : {
+                    "orgid/mybuspol" : {
+                      "owner" : "string",
+                      "label" : "string",
+                      "description" : "string",
+                      "service" : {
+                        "name" : "string",
+                        "org" : "string",
+                        "arch" : "string",
+                        "serviceVersions" : [ {
+                          "version" : "1.2.3",
+                          "priority" : null,
+                          "upgradePolicy" : null
+                        } ],
+                        "nodeHealth" : {
+                          "missing_heartbeat_interval" : 600,
+                          "check_agreement_status" : 120
+                        },
+                        "clusterNamespace" : "MyNamespace"
+                      },
+                      "userInput" : [ ],
+                      "secretBinding" : [ ],
+                      "properties" : [ {
+                        "name" : "string",
+                        "type" : "string",
+                        "value" : "string"
+                      } ],
+                      "constraints" : [ "a == b" ],
+                      "lastUpdated" : "string",
+                      "created" : "string"
+                    }
+                  },
+                  "lastIndex" : 0
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
     "/v1/orgs/{organization}/business/policies/{policy}" : {
       "get" : {
         "tags" : [ "deployment policy" ],
         "summary" : "Returns a business policy",
         "description" : "Returns the business policy with the specified id. Can be run by a user, node, or agbot.",
-        "operationId" : "busPolGetRoute",
+        "operationId" : "getDeploymentPolicy",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -2963,6 +3172,15 @@
             "type" : "string"
           }
         } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
         "responses" : {
           "200" : {
             "description" : "response body",
@@ -3024,7 +3242,7 @@
         "tags" : [ "deployment policy" ],
         "summary" : "Updates a business policy",
         "description" : "Updates a business policy resource. This can only be called by the user that created it.",
-        "operationId" : "busPolPutRoute",
+        "operationId" : "putDeploymentPolicy",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -3137,7 +3355,7 @@
         "tags" : [ "deployment policy" ],
         "summary" : "Adds a business policy",
         "description" : "Creates a business policy resource. A business policy resource specifies the service that should be deployed based on the specified properties and constraints. This can only be called by a user.",
-        "operationId" : "busPolPostRoute",
+        "operationId" : "postDeploymentPolicy",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -3249,7 +3467,7 @@
         "tags" : [ "deployment policy" ],
         "summary" : "Deletes a business policy",
         "description" : "Deletes a business policy. Can only be run by the owning user.",
-        "operationId" : "busPolDeleteRoute",
+        "operationId" : "deleteDeploymentPolicy",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -3267,6 +3485,15 @@
             "type" : "string"
           }
         } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
         "responses" : {
           "204" : {
             "description" : "deleted"
@@ -3286,7 +3513,7 @@
         "tags" : [ "deployment policy" ],
         "summary" : "Updates 1 attribute of a business policy",
         "description" : "Updates one attribute of a business policy. This can only be called by the user that originally created this business policy resource.",
-        "operationId" : "busPolPatchRoute",
+        "operationId" : "patchDeploymentPolicy",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -3396,107 +3623,6 @@
         }
       }
     },
-    "/v1/orgs/{organization}/business/policies" : {
-      "get" : {
-        "tags" : [ "deployment policy" ],
-        "summary" : "Returns all business policies",
-        "description" : "Returns all business policy definitions in this organization. Can be run by any user, node, or agbot.",
-        "operationId" : "busPolsGetRoute",
-        "parameters" : [ {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization id.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "idfilter",
-          "in" : "query",
-          "description" : "Filter results to only include Deployment Policies with this Identifier (can include '%' for wildcard - the URL encoding for '%' is '%25')",
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "owner",
-          "in" : "query",
-          "description" : "Filter results to only include Deployment Policies with this Owner (can include '%' for wildcard - the URL encoding for '%' is '%25')",
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "label",
-          "in" : "query",
-          "description" : "Filter results to only include Deployment Policies with this Label (can include '%' for wildcard - the URL encoding for '%' is '%25')",
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "description",
-          "in" : "query",
-          "description" : "Filter results to only include Deployment Policies with this Description (can include '%' for wildcard - the URL encoding for '%' is '%25')",
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "response body",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/GetBusinessPoliciesResponse"
-                },
-                "example" : {
-                  "businessPolicy" : {
-                    "orgid/mybuspol" : {
-                      "owner" : "string",
-                      "label" : "string",
-                      "description" : "string",
-                      "service" : {
-                        "name" : "string",
-                        "org" : "string",
-                        "arch" : "string",
-                        "serviceVersions" : [ {
-                          "version" : "1.2.3",
-                          "priority" : null,
-                          "upgradePolicy" : null
-                        } ],
-                        "nodeHealth" : {
-                          "missing_heartbeat_interval" : 600,
-                          "check_agreement_status" : 120
-                        },
-                        "clusterNamespace" : "MyNamespace"
-                      },
-                      "userInput" : [ ],
-                      "secretBinding" : [ ],
-                      "properties" : [ {
-                        "name" : "string",
-                        "type" : "string",
-                        "value" : "string"
-                      } ],
-                      "constraints" : [ "a == b" ],
-                      "lastUpdated" : "string",
-                      "created" : "string"
-                    }
-                  },
-                  "lastIndex" : 0
-                }
-              }
-            }
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      }
-    },
     "/v1/orgs/{organization}/business/policies/{policy}/search" : {
       "post" : {
         "tags" : [ "deployment policy" ],
@@ -3572,12 +3698,119 @@
         }
       }
     },
+    "/v1/orgs/{organization}/managementpolicies" : {
+      "get" : {
+        "tags" : [ "management policy" ],
+        "summary" : "Returns all node management policies",
+        "description" : "Returns all management policy definitions in this organization. Can be run by any user, node, or agbot.",
+        "operationId" : "getManagementPolicies",
+        "parameters" : [ {
+          "name" : "description",
+          "in" : "query",
+          "description" : "Filter results to only include management policies with this description (can include % for wildcard - the URL encoding for % is %25)",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "idfilter",
+          "in" : "query",
+          "description" : "Filter results to only include management policies with this id (can include % for wildcard - the URL encoding for % is %25)",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "label",
+          "in" : "query",
+          "description" : "Filter results to only include management policies with this label (can include % for wildcard - the URL encoding for % is %25)",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "manifest",
+          "in" : "query",
+          "description" : "Filter results to only include management policies with this manifest (can include % for wildcard - the URL encoding for % is %25)",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "organization",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "owner",
+          "in" : "query",
+          "description" : "Filter results to only include management policies with this owner (can include % for wildcard - the URL encoding for % is %25)",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetManagementPoliciesResponse"
+                },
+                "example" : {
+                  "managementPolicy" : {
+                    "orgid/mymgmtpol" : {
+                      "owner" : "string",
+                      "label" : "string",
+                      "description" : "string",
+                      "properties" : [ {
+                        "name" : "string",
+                        "type" : "string",
+                        "value" : "string"
+                      } ],
+                      "constraints" : [ "a == b" ],
+                      "patterns" : [ "pat1" ],
+                      "enabled" : true,
+                      "agentUpgradePolicy" : {
+                        "atLeastVersion" : "current",
+                        "start" : "now",
+                        "duration" : 0
+                      },
+                      "lastUpdated" : "string",
+                      "created" : "string"
+                    }
+                  },
+                  "lastIndex" : 0
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
     "/v1/orgs/{organization}/managementpolicies/{mgmtpolicy}" : {
       "get" : {
         "tags" : [ "management policy" ],
         "summary" : "Returns a node management policy",
         "description" : "Returns the management policy with the specified id. Can be run by any user, node, or agbot.",
-        "operationId" : "mgmtPolGetRoute",
+        "operationId" : "getManagementPolicy",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -3602,6 +3835,15 @@
             "type" : "string"
           }
         } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
         "responses" : {
           "200" : {
             "description" : "response body",
@@ -3648,7 +3890,7 @@
         "tags" : [ "management policy" ],
         "summary" : "Updates a node management policy",
         "description" : "Updates a node management policy resource. A node management policy controls the updating of the edge node agents. This can only be called by a user.",
-        "operationId" : "mgmtPolPutRoute",
+        "operationId" : "putManagementPolicy",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -3722,7 +3964,7 @@
         "tags" : [ "management policy" ],
         "summary" : "Adds a node management policy",
         "description" : "Creates a node management policy resource. A node management policy controls the updating of the edge node agents. This can only be called by a user.",
-        "operationId" : "mgmtPolPostRoute",
+        "operationId" : "postManagementPolicy",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -3796,7 +4038,7 @@
         "tags" : [ "management policy" ],
         "summary" : "Deletes a management policy",
         "description" : "Deletes a management policy. Can only be run by the owning user.",
-        "operationId" : "mgmtPolDeleteRoute",
+        "operationId" : "deleteManagementPolicy",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -3814,6 +4056,15 @@
             "type" : "string"
           }
         } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
         "responses" : {
           "204" : {
             "description" : "deleted"
@@ -3830,41 +4081,13 @@
         }
       }
     },
-    "/v1/orgs/{organization}/managementpolicies" : {
-      "get" : {
-        "tags" : [ "management policy" ],
-        "summary" : "Returns all node management policies",
-        "description" : "Returns all management policy definitions in this organization. Can be run by any user, node, or agbot.",
-        "operationId" : "mgmtPolsGetRoute",
+    "/v1/orgs/{organization}/nodes/{node}/services_configstate" : {
+      "post" : {
+        "tags" : [ "node" ],
+        "summary" : "Changes config state of registered services",
+        "description" : "Suspends (or resumes) 1 or more services on this edge node. Can be run by the node owner or the node.",
+        "operationId" : "postConfigurationState",
         "parameters" : [ {
-          "name" : "description",
-          "in" : "query",
-          "description" : "Filter results to only include management policies with this description (can include % for wildcard - the URL encoding for % is %25)",
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "idfilter",
-          "in" : "query",
-          "description" : "Filter results to only include management policies with this id (can include % for wildcard - the URL encoding for % is %25)",
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "label",
-          "in" : "query",
-          "description" : "Filter results to only include management policies with this label (can include % for wildcard - the URL encoding for % is %25)",
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "manifest",
-          "in" : "query",
-          "description" : "Filter results to only include management policies with this manifest (can include % for wildcard - the URL encoding for % is %25)",
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
           "name" : "organization",
           "in" : "path",
           "description" : "Organization id.",
@@ -3873,45 +4096,430 @@
             "type" : "string"
           }
         }, {
-          "name" : "owner",
-          "in" : "query",
-          "description" : "Filter results to only include management policies with this owner (can include % for wildcard - the URL encoding for % is %25)",
+          "name" : "node",
+          "in" : "path",
+          "description" : "ID of the node to be updated.",
+          "required" : true,
           "schema" : {
             "type" : "string"
           }
         } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/PostNodeConfigStateRequest"
+              },
+              "example" : {
+                "org" : "myorg",
+                "url" : "myserviceurl",
+                "configState" : "suspended",
+                "version" : "1.0.0"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "201" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
+    "/v1/orgs/{organization}/node-details" : {
+      "get" : {
+        "tags" : [ "node" ],
+        "summary" : "Returns all nodes (edge devices) with node errors, policy and status. Can be run by any user or agbot.",
+        "description" : "Returns all nodes with node errors, policy and status",
+        "operationId" : "getDetails",
+        "parameters" : [ {
+          "name" : "arch",
+          "in" : "query",
+          "description" : "Filter results to only include nodes with this architecture (can include % for wildcard - the URL encoding for % is %25)",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "node",
+          "in" : "query",
+          "description" : "Filter results to only include nodes with this id (can include % for wildcard - the URL encoding for % is %25)",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "name",
+          "in" : "query",
+          "description" : "Filter results to only include nodes with this name (can include % for wildcard - the URL encoding for % is %25)",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "type",
+          "in" : "query",
+          "description" : "Filter results to only include nodes with this type ('device' or 'cluster')",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "organization",
+          "in" : "path",
+          "description" : "Organization id",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "owner",
+          "in" : "query",
+          "description" : "Filter results to only include nodes with this owner (can include % for wildcard - the URL encoding for % is %25)",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Identity"
+              }
+            }
+          }
+        },
         "responses" : {
           "200" : {
             "description" : "response body",
             "content" : {
               "application/json" : {
                 "schema" : {
-                  "$ref" : "#/components/schemas/GetManagementPoliciesResponse"
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/NodeDetails"
+                  }
                 },
-                "example" : {
-                  "managementPolicy" : {
-                    "orgid/mymgmtpol" : {
-                      "owner" : "string",
-                      "label" : "string",
-                      "description" : "string",
-                      "properties" : [ {
-                        "name" : "string",
-                        "type" : "string",
-                        "value" : "string"
-                      } ],
-                      "constraints" : [ "a == b" ],
-                      "patterns" : [ "pat1" ],
-                      "enabled" : true,
-                      "agentUpgradePolicy" : {
-                        "atLeastVersion" : "current",
-                        "start" : "now",
-                        "duration" : 0
-                      },
-                      "lastUpdated" : "string",
-                      "created" : "string"
-                    }
+                "example" : [ {
+                  "arch" : "string",
+                  "connectivity" : {
+                    "string" : false
                   },
-                  "lastIndex" : 0
+                  "constraints" : [ "string", "string", "string" ],
+                  "errors" : [ {
+                    "event_code" : "string",
+                    "hidden" : true,
+                    "message" : "string",
+                    "record_id" : "string"
+                  } ],
+                  "heartbeatIntervals" : {
+                    "intervalAdjustment" : 0,
+                    "minInterval" : 0,
+                    "maxInterval" : 0
+                  },
+                  "id" : "string",
+                  "lastHeartbeat" : "string",
+                  "lastUpdatedNode" : "string",
+                  "lastUpdatedNodeError" : "string",
+                  "lastUpdatedNodePolicy" : "string",
+                  "lastUpdatedNodeStatus" : "string",
+                  "msgEndPoint" : "",
+                  "name" : "string",
+                  "nodeType" : "device",
+                  "owner" : "string",
+                  "orgid" : "string",
+                  "pattern" : "",
+                  "properties" : [ {
+                    "string" : "string"
+                  }, {
+                    "string" : "string"
+                  }, {
+                    "string" : "string"
+                  } ],
+                  "publicKey" : "string",
+                  "registeredServices" : [ {
+                    "configState" : "active",
+                    "numAgreements" : 0,
+                    "policy" : "",
+                    "properties" : [ ],
+                    "url" : "string"
+                  }, {
+                    "configState" : "active",
+                    "numAgreements" : 0,
+                    "policy" : "",
+                    "properties" : [ ],
+                    "url" : "string"
+                  }, {
+                    "configState" : "active",
+                    "numAgreements" : 0,
+                    "policy" : "",
+                    "properties" : [ ],
+                    "url" : "string"
+                  } ],
+                  "runningServices" : "|orgid/serviceid|",
+                  "services" : [ {
+                    "agreementId" : "string",
+                    "arch" : "string",
+                    "containerStatus" : [ ],
+                    "operatorStatus" : { },
+                    "orgid" : "string",
+                    "serviceUrl" : "string",
+                    "version" : "string",
+                    "configState" : "string"
+                  } ],
+                  "softwareVersions" : { },
+                  "token" : "string",
+                  "userInput" : [ {
+                    "inputs" : [ {
+                      "name" : "var1",
+                      "value" : "someString"
+                    }, {
+                      "name" : "var2",
+                      "value" : 5
+                    }, {
+                      "name" : "var3",
+                      "value" : 22.2
+                    } ],
+                    "serviceArch" : "string",
+                    "serviceOrgid" : "string",
+                    "serviceUrl" : "string",
+                    "serviceVersionRange" : "string",
+                    "ha_group" : "string"
+                  } ]
+                } ]
+              }
+            }
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
+    "/v1/orgs/{organization}/nodes/{node}/errors" : {
+      "get" : {
+        "tags" : [ "node/error" ],
+        "summary" : "Returns the node errors",
+        "description" : "Returns any node errors. Can be run by any user or the node.",
+        "operationId" : "getErrors",
+        "parameters" : [ {
+          "name" : "organization",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "node",
+          "in" : "path",
+          "description" : "ID of the node.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/NodeError"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "node/error" ],
+        "summary" : "Adds/updates node error list",
+        "description" : "Adds or updates any error of a node. This is called by the node or owning user.",
+        "operationId" : "putErrors",
+        "parameters" : [ {
+          "name" : "organization",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "node",
+          "in" : "path",
+          "description" : "ID of the node to be updated.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/PutNodeErrorRequest"
+              },
+              "example" : {
+                "errors" : [ {
+                  "record_id" : "string",
+                  "message" : "string",
+                  "event_code" : "string",
+                  "hidden" : false
+                } ]
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "201" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "node/error" ],
+        "summary" : "Deletes the error list of a node",
+        "description" : "Deletes the error list of a node. Can be run by the owning user or the node.",
+        "operationId" : "deleteErrors",
+        "parameters" : [ {
+          "name" : "organization",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "node",
+          "in" : "path",
+          "description" : "ID of the node.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "204" : {
+            "description" : "deleted"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
+    "/v1/orgs/{organization}/nodes/{node}/heartbeat" : {
+      "post" : {
+        "tags" : [ "node" ],
+        "summary" : "Tells the exchange this node is still operating",
+        "description" : "Lets the exchange know this node is still active so it is still a candidate for contracting. Can be run by the owning user or the node.",
+        "operationId" : "postHeartbeatNode",
+        "parameters" : [ {
+          "name" : "organization",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "node",
+          "in" : "path",
+          "description" : "ID of the node to be updated.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "201" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ApiResponse"
                 }
               }
             }
@@ -4451,772 +5059,12 @@
         }
       }
     },
-    "/v1/orgs/{organization}/nodes/{node}/agreements/{agid}" : {
-      "get" : {
-        "tags" : [ "node/agreement" ],
-        "summary" : "Returns an agreement for a node",
-        "description" : "Returns the agreement with the specified agid for the specified node id. Can be run by a user or the node.",
-        "operationId" : "nodeGetAgreementRoute",
-        "parameters" : [ {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization id.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "node",
-          "in" : "path",
-          "description" : "ID of the node.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "agid",
-          "in" : "path",
-          "description" : "ID of the agreement.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "response body",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/GetNodeAgreementsResponse"
-                },
-                "example" : {
-                  "agreements" : {
-                    "agreementname" : {
-                      "services" : [ {
-                        "orgid" : "string",
-                        "url" : "string"
-                      } ],
-                      "agrService" : {
-                        "orgid" : "string",
-                        "pattern" : "string",
-                        "url" : "string"
-                      },
-                      "state" : "string",
-                      "lastUpdated" : "string"
-                    }
-                  },
-                  "lastIndex" : 0
-                }
-              }
-            }
-          },
-          "400" : {
-            "description" : "bad input"
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      },
-      "put" : {
-        "tags" : [ "node/agreement" ],
-        "summary" : "Adds/updates an agreement of a node",
-        "description" : "Adds a new agreement of a node, or updates an existing agreement. This is called by the node or owning user to give their information about the agreement.",
-        "operationId" : "nodePutAgreementRoute",
-        "parameters" : [ {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization id.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "node",
-          "in" : "path",
-          "description" : "ID of the node to be updated.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "agid",
-          "in" : "path",
-          "description" : "ID of the agreement to be added/updated.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "noheartbeat",
-          "in" : "query",
-          "description" : "If set to 'true', skip the step to update the node's lastHeartbeat field.",
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "requestBody" : {
-          "content" : {
-            "application/json" : {
-              "schema" : {
-                "$ref" : "#/components/schemas/PutNodeAgreementRequest"
-              },
-              "example" : {
-                "services" : [ {
-                  "orgid" : "myorg",
-                  "url" : "mydomain.com.rtlsdr"
-                } ],
-                "agreementService" : {
-                  "orgid" : "myorg",
-                  "pattern" : "myorg/mypattern",
-                  "url" : "myorg/mydomain.com.sdr"
-                },
-                "state" : "negotiating"
-              }
-            }
-          },
-          "required" : true
-        },
-        "responses" : {
-          "201" : {
-            "description" : "response body",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/ApiResponse"
-                }
-              }
-            }
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      },
-      "delete" : {
-        "tags" : [ "node/agreement" ],
-        "summary" : "Deletes an agreement of a node",
-        "description" : "Deletes an agreement of a node. Can be run by the owning user or the node.",
-        "operationId" : "nodeDeleteAgreementRoute",
-        "parameters" : [ {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization id.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "node",
-          "in" : "path",
-          "description" : "ID of the node.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "agid",
-          "in" : "path",
-          "description" : "ID of the agreement to be deleted.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "responses" : {
-          "204" : {
-            "description" : "deleted"
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      }
-    },
-    "/v1/orgs/{organization}/nodes/{node}/agreements" : {
-      "get" : {
-        "tags" : [ "node/agreement" ],
-        "summary" : "Returns all agreements this node is in",
-        "description" : "Returns all agreements that this node is part of. Can be run by a user or the node.",
-        "operationId" : "nodeGetAgreementsRoute",
-        "parameters" : [ {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization id.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "node",
-          "in" : "path",
-          "description" : "ID of the node.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "response body",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/GetNodeAgreementsResponse"
-                },
-                "example" : {
-                  "agreements" : {
-                    "agreementname" : {
-                      "services" : [ {
-                        "orgid" : "string",
-                        "url" : "string"
-                      } ],
-                      "agrService" : {
-                        "orgid" : "string",
-                        "pattern" : "string",
-                        "url" : "string"
-                      },
-                      "state" : "string",
-                      "lastUpdated" : "string"
-                    }
-                  },
-                  "lastIndex" : 0
-                }
-              }
-            }
-          },
-          "400" : {
-            "description" : "bad input"
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      },
-      "delete" : {
-        "tags" : [ "node/agreement" ],
-        "summary" : "Deletes all agreements of a node",
-        "description" : "Deletes all of the current agreements of a node. Can be run by the owning user or the node.",
-        "operationId" : "nodeDeleteAgreementsRoute",
-        "parameters" : [ {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization id.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "node",
-          "in" : "path",
-          "description" : "ID of the node.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "responses" : {
-          "204" : {
-            "description" : "deleted"
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      }
-    },
-    "/v1/orgs/{organization}/nodes/{node}/errors" : {
-      "get" : {
-        "tags" : [ "node/error" ],
-        "summary" : "Returns the node errors",
-        "description" : "Returns any node errors. Can be run by any user or the node.",
-        "operationId" : "nodeGetErrorsRoute",
-        "parameters" : [ {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization id.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "node",
-          "in" : "path",
-          "description" : "ID of the node.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "response body",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/NodeError"
-                }
-              }
-            }
-          },
-          "400" : {
-            "description" : "bad input"
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      },
-      "put" : {
-        "tags" : [ "node/error" ],
-        "summary" : "Adds/updates node error list",
-        "description" : "Adds or updates any error of a node. This is called by the node or owning user.",
-        "operationId" : "nodePutErrorsRoute",
-        "parameters" : [ {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization id.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "node",
-          "in" : "path",
-          "description" : "ID of the node to be updated.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "requestBody" : {
-          "content" : {
-            "application/json" : {
-              "schema" : {
-                "$ref" : "#/components/schemas/PutNodeErrorRequest"
-              },
-              "example" : {
-                "errors" : [ {
-                  "record_id" : "string",
-                  "message" : "string",
-                  "event_code" : "string",
-                  "hidden" : false
-                } ]
-              }
-            }
-          },
-          "required" : true
-        },
-        "responses" : {
-          "201" : {
-            "description" : "response body",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/ApiResponse"
-                }
-              }
-            }
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      },
-      "delete" : {
-        "tags" : [ "node/error" ],
-        "summary" : "Deletes the error list of a node",
-        "description" : "Deletes the error list of a node. Can be run by the owning user or the node.",
-        "operationId" : "nodeDeleteErrorsRoute",
-        "parameters" : [ {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization id.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "node",
-          "in" : "path",
-          "description" : "ID of the node.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "responses" : {
-          "204" : {
-            "description" : "deleted"
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      }
-    },
-    "/v1/orgs/{organization}/nodes/{node}/managementStatus/{mgmtpolicy}" : {
-      "get" : {
-        "tags" : [ "node/management policy" ],
-        "summary" : "Returns status for nodeid",
-        "description" : "Returns the management status of the node (edge device) with the specified id. Can be run by that node, a user, or an agbot.",
-        "operationId" : "nodeGetMgmtPolStatus",
-        "parameters" : [ {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization id.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "node",
-          "in" : "path",
-          "description" : "ID of the node.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "attribute",
-          "in" : "query",
-          "description" : "Which attribute value should be returned. Only 1 attribute can be specified, and it must be 1 of the direct attributes of the node resource (not of the services). If not specified, the entire node resource (including services) will be returned",
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "mgmtpolicy",
-          "in" : "path",
-          "description" : "ID of the node management policy.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "response body",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/GetNMPStatusResponse"
-                },
-                "example" : {
-                  "managementStatus" : {
-                    "mgmtpolicy" : {
-                      "agentUpgradePolicyStatus" : {
-                        "scheduledTime" : "<RFC3339 timestamp>",
-                        "startTime" : "<RFC3339 timestamp>",
-                        "endTime" : "<RFC3339 timestamp>",
-                        "upgradedVersions" : {
-                          "softwareVersion" : "1.1.1",
-                          "certVersion" : "2.2.2",
-                          "configVersion" : "3.3.3"
-                        },
-                        "status" : "success|failed|in progress",
-                        "errorMessage" : "Upgrade process failed",
-                        "lastUpdated" : ""
-                      }
-                    }
-                  },
-                  "lastIndex" : "0"
-                }
-              }
-            }
-          },
-          "400" : {
-            "description" : "bad input"
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      },
-      "put" : {
-        "tags" : [ "node/management policy" ],
-        "summary" : "Adds/updates the status of the Management Policy running on the Node.",
-        "description" : "Adds or updates the run time status of a Management Policy running on a Node. This is called by the Agreement Bot.",
-        "operationId" : "nodePutMgmtPolStatus",
-        "parameters" : [ {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization identifier",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "node",
-          "in" : "path",
-          "description" : "Node identifier",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "mgmtpolicy",
-          "in" : "path",
-          "description" : "Management Policy identifier",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "requestBody" : {
-          "content" : {
-            "application/json" : {
-              "schema" : {
-                "$ref" : "#/components/schemas/PutNodeMgmtPolStatusRequest"
-              },
-              "example" : {
-                "agentUpgradePolicyStatus" : {
-                  "scheduledTime" : "<RFC3339 timestamp>",
-                  "startTime" : "<RFC3339 timestamp>",
-                  "endTime" : "<RFC3339 timestamp>",
-                  "upgradedVersions" : {
-                    "softwareVersion" : "1.1.1",
-                    "certVersion" : "2.2.2",
-                    "configVersion" : "3.3.3"
-                  },
-                  "status" : "success|failed|in progress",
-                  "errorMessage" : "Upgrade process failed"
-                }
-              }
-            }
-          },
-          "required" : true
-        },
-        "responses" : {
-          "201" : {
-            "description" : "response body",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/ApiResponse"
-                }
-              }
-            }
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      },
-      "delete" : {
-        "tags" : [ "node/management policy" ],
-        "summary" : "Deletes the status of the Management Policy running on the Node",
-        "description" : "Deletes the run time status of a Management Policy running on a Node. This is called by the Agreement Bot.",
-        "operationId" : "nodeDeleteMgmtPolStatus",
-        "parameters" : [ {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization identifier.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "node",
-          "in" : "path",
-          "description" : "Node identifier",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "mgmtpolicy",
-          "in" : "path",
-          "description" : "Management Policy identifier",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "responses" : {
-          "204" : {
-            "description" : "deleted"
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      }
-    },
-    "/v1/orgs/{organization}/nodes/{node}/msgs/{msgid}" : {
-      "get" : {
-        "tags" : [ "node/message" ],
-        "summary" : "Returns A specific message that has been sent to this node.",
-        "description" : "Returns A specific message that has been sent to this node. Deleted/post-TTL (Time To Live) messages will not be returned. Can be run by a user or the node.",
-        "operationId" : "nodeGetMsgRoute",
-        "parameters" : [ {
-          "name" : "node",
-          "in" : "path",
-          "description" : "ID of the node.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "msgid",
-          "in" : "path",
-          "description" : "Specific node message.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization id.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "response body",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/GetNodeMsgsResponse"
-                }
-              }
-            }
-          },
-          "400" : {
-            "description" : "bad input"
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      },
-      "delete" : {
-        "tags" : [ "node/message" ],
-        "summary" : "Deletes a msg of an node",
-        "description" : "Deletes a message that was sent to an node. This should be done by the node after each msg is read. Can be run by the owning user or the node.",
-        "operationId" : "nodeDeleteMsgRoute",
-        "parameters" : [ {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization id.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "node",
-          "in" : "path",
-          "description" : "ID of the node.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "msgid",
-          "in" : "path",
-          "description" : "ID of the msg to be deleted.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "responses" : {
-          "204" : {
-            "description" : "deleted"
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      }
-    },
     "/v1/orgs/{organization}/nodes/{node}/policy" : {
       "get" : {
         "tags" : [ "node/policy" ],
         "summary" : "Returns the node policy",
         "description" : "Returns the node run time policy. Can be run by a user or the node.",
-        "operationId" : "nodeGetPolicyRoute",
+        "operationId" : "getPolicyNode",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -5234,6 +5082,15 @@
             "type" : "string"
           }
         } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
         "responses" : {
           "200" : {
             "description" : "response body",
@@ -5263,7 +5120,7 @@
         "tags" : [ "node/policy" ],
         "summary" : "Adds/updates the node policy",
         "description" : "Adds or updates the policy of a node. This is called by the node or owning user.",
-        "operationId" : "nodePutPolicyRoute",
+        "operationId" : "putPolicyNode",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -5350,7 +5207,7 @@
         "tags" : [ "node/policy" ],
         "summary" : "Deletes the policy of a node",
         "description" : "Deletes the policy of a node. Can be run by the owning user or the node.",
-        "operationId" : "nodeDeletePolicyRoute",
+        "operationId" : "deletePolicyNode",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -5368,6 +5225,15 @@
             "type" : "string"
           }
         } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
         "responses" : {
           "204" : {
             "description" : "deleted"
@@ -5389,7 +5255,7 @@
         "tags" : [ "node/status" ],
         "summary" : "Returns the node status",
         "description" : "Returns the node run time status, for example service container status. Can be run by a user or the node.",
-        "operationId" : "nodeGetStatusRoute",
+        "operationId" : "getStatusNode",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -5407,6 +5273,15 @@
             "type" : "string"
           }
         } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
         "responses" : {
           "200" : {
             "description" : "response body",
@@ -5453,7 +5328,7 @@
         "tags" : [ "node/status" ],
         "summary" : "Adds/updates the node status",
         "description" : "Adds or updates the run time status of a node. This is called by the node or owning user.",
-        "operationId" : "nodePutStatusRoute",
+        "operationId" : "putStatusNode",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -5527,7 +5402,7 @@
         "tags" : [ "node/status" ],
         "summary" : "Deletes the status of a node",
         "description" : "Deletes the status of a node. Can be run by the owning user or the node.",
-        "operationId" : "nodeDeleteStatusRoute",
+        "operationId" : "deleteStatusNode",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -5545,6 +5420,356 @@
             "type" : "string"
           }
         } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "204" : {
+            "description" : "deleted"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
+    "/v1/orgs/{organization}/nodes/{node}/agreements/{agid}" : {
+      "get" : {
+        "tags" : [ "node/agreement" ],
+        "summary" : "Returns an agreement for a node",
+        "description" : "Returns the agreement with the specified agid for the specified node id. Can be run by a user or the node.",
+        "operationId" : "getAgreementNode",
+        "parameters" : [ {
+          "name" : "organization",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "node",
+          "in" : "path",
+          "description" : "ID of the node.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "agid",
+          "in" : "path",
+          "description" : "ID of the agreement.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetNodeAgreementsResponse"
+                },
+                "example" : {
+                  "agreements" : {
+                    "agreementname" : {
+                      "services" : [ {
+                        "orgid" : "string",
+                        "url" : "string"
+                      } ],
+                      "agrService" : {
+                        "orgid" : "string",
+                        "pattern" : "string",
+                        "url" : "string"
+                      },
+                      "state" : "string",
+                      "lastUpdated" : "string"
+                    }
+                  },
+                  "lastIndex" : 0
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "node/agreement" ],
+        "summary" : "Adds/updates an agreement of a node",
+        "description" : "Adds a new agreement of a node, or updates an existing agreement. This is called by the node or owning user to give their information about the agreement.",
+        "operationId" : "putAgreementNode",
+        "parameters" : [ {
+          "name" : "organization",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "node",
+          "in" : "path",
+          "description" : "ID of the node to be updated.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "agid",
+          "in" : "path",
+          "description" : "ID of the agreement to be added/updated.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "noheartbeat",
+          "in" : "query",
+          "description" : "If set to 'true', skip the step to update the node's lastHeartbeat field.",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/PutNodeAgreementRequest"
+              },
+              "example" : {
+                "services" : [ {
+                  "orgid" : "myorg",
+                  "url" : "mydomain.com.rtlsdr"
+                } ],
+                "agreementService" : {
+                  "orgid" : "myorg",
+                  "pattern" : "myorg/mypattern",
+                  "url" : "myorg/mydomain.com.sdr"
+                },
+                "state" : "negotiating"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "201" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "node/agreement" ],
+        "summary" : "Deletes an agreement of a node",
+        "description" : "Deletes an agreement of a node. Can be run by the owning user or the node.",
+        "operationId" : "deleteAgreementNode",
+        "parameters" : [ {
+          "name" : "organization",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "node",
+          "in" : "path",
+          "description" : "ID of the node.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "agid",
+          "in" : "path",
+          "description" : "ID of the agreement to be deleted.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "204" : {
+            "description" : "deleted"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
+    "/v1/orgs/{organization}/nodes/{node}/agreements" : {
+      "get" : {
+        "tags" : [ "node/agreement" ],
+        "summary" : "Returns all agreements this node is in",
+        "description" : "Returns all agreements that this node is part of. Can be run by a user or the node.",
+        "operationId" : "getAgreementsNode",
+        "parameters" : [ {
+          "name" : "organization",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "node",
+          "in" : "path",
+          "description" : "ID of the node.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetNodeAgreementsResponse"
+                },
+                "example" : {
+                  "agreements" : {
+                    "agreementname" : {
+                      "services" : [ {
+                        "orgid" : "string",
+                        "url" : "string"
+                      } ],
+                      "agrService" : {
+                        "orgid" : "string",
+                        "pattern" : "string",
+                        "url" : "string"
+                      },
+                      "state" : "string",
+                      "lastUpdated" : "string"
+                    }
+                  },
+                  "lastIndex" : 0
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "node/agreement" ],
+        "summary" : "Deletes all agreements of a node",
+        "description" : "Deletes all of the current agreements of a node. Can be run by the owning user or the node.",
+        "operationId" : "deleteAgreementsNode",
+        "parameters" : [ {
+          "name" : "organization",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "node",
+          "in" : "path",
+          "description" : "ID of the node.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
         "responses" : {
           "204" : {
             "description" : "deleted"
@@ -5566,7 +5791,7 @@
         "tags" : [ "node/management policy" ],
         "summary" : "Returns status for nodeid",
         "description" : "Returns the management status of the node (edge device) with the specified id. Can be run by that node, a user, or an agbot.",
-        "operationId" : "nodeGetAllMgmtPolStatus",
+        "operationId" : "getStatusManagementPolicies",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -5591,6 +5816,15 @@
             "type" : "string"
           }
         } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
         "responses" : {
           "200" : {
             "description" : "response body",
@@ -5652,12 +5886,132 @@
         }
       }
     },
+    "/v1/orgs/{organization}/nodes/{node}/msgs/{msgid}" : {
+      "get" : {
+        "tags" : [ "node/message" ],
+        "summary" : "Returns A specific message that has been sent to this node.",
+        "description" : "Returns A specific message that has been sent to this node. Deleted/post-TTL (Time To Live) messages will not be returned. Can be run by a user or the node.",
+        "operationId" : "getMessageNode",
+        "parameters" : [ {
+          "name" : "node",
+          "in" : "path",
+          "description" : "ID of the node.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "msgid",
+          "in" : "path",
+          "description" : "Specific node message.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "organization",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "response body",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetNodeMsgsResponse"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "node/message" ],
+        "summary" : "Deletes a msg of an node",
+        "description" : "Deletes a message that was sent to an node. This should be done by the node after each msg is read. Can be run by the owning user or the node.",
+        "operationId" : "deleteMessageNode",
+        "parameters" : [ {
+          "name" : "organization",
+          "in" : "path",
+          "description" : "Organization id.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "node",
+          "in" : "path",
+          "description" : "ID of the node.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "msgid",
+          "in" : "path",
+          "description" : "ID of the msg to be deleted.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "204" : {
+            "description" : "deleted"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
     "/v1/orgs/{organization}/nodes/{node}/msgs" : {
       "get" : {
         "tags" : [ "node/message" ],
         "summary" : "Returns all msgs sent to this node",
         "description" : "Returns all msgs that have been sent to this node. They will be returned in the order they were sent. All msgs that have been sent to this node will be returned, unless the node has deleted some, or some are past their TTL. Can be run by a user or the node.",
-        "operationId" : "nodeGetMsgsRoute",
+        "operationId" : "getMessagesNode",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -5682,6 +6036,15 @@
             "type" : "string"
           }
         } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
         "responses" : {
           "200" : {
             "description" : "response body",
@@ -5711,7 +6074,7 @@
         "tags" : [ "node/message" ],
         "summary" : "Sends a msg from an agbot to a node",
         "description" : "Sends a msg from an agbot to a node. The agbot must 1st sign the msg (with its private key) and then encrypt the msg (with the node's public key). Can be run by any agbot.",
-        "operationId" : "nodePostMsgRoute",
+        "operationId" : "postMessagesNode",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -5766,382 +6129,6 @@
         }
       }
     },
-    "/v1/orgs/{organization}/nodes/{node}/heartbeat" : {
-      "post" : {
-        "tags" : [ "node" ],
-        "summary" : "Tells the exchange this node is still operating",
-        "description" : "Lets the exchange know this node is still active so it is still a candidate for contracting. Can be run by the owning user or the node.",
-        "operationId" : "nodeHeartbeatRoute",
-        "parameters" : [ {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization id.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "node",
-          "in" : "path",
-          "description" : "ID of the node to be updated.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "responses" : {
-          "201" : {
-            "description" : "response body",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/ApiResponse"
-                }
-              }
-            }
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      }
-    },
-    "/v1/orgs/{organization}/nodes/{node}/services_configstate" : {
-      "post" : {
-        "tags" : [ "node" ],
-        "summary" : "Changes config state of registered services",
-        "description" : "Suspends (or resumes) 1 or more services on this edge node. Can be run by the node owner or the node.",
-        "operationId" : "nodePostConfigStateRoute",
-        "parameters" : [ {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization id.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "node",
-          "in" : "path",
-          "description" : "ID of the node to be updated.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "requestBody" : {
-          "content" : {
-            "application/json" : {
-              "schema" : {
-                "$ref" : "#/components/schemas/PostNodeConfigStateRequest"
-              },
-              "example" : {
-                "org" : "myorg",
-                "url" : "myserviceurl",
-                "configState" : "suspended",
-                "version" : "1.0.0"
-              }
-            }
-          },
-          "required" : true
-        },
-        "responses" : {
-          "201" : {
-            "description" : "response body",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/ApiResponse"
-                }
-              }
-            }
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      }
-    },
-    "/v1/orgs/{organization}/node-details" : {
-      "get" : {
-        "tags" : [ "node" ],
-        "summary" : "Returns all nodes (edge devices) with node errors, policy and status. Can be run by any user or agbot.",
-        "description" : "Returns all nodes with node errors, policy and status",
-        "operationId" : "nodesGetDetails",
-        "parameters" : [ {
-          "name" : "arch",
-          "in" : "query",
-          "description" : "Filter results to only include nodes with this architecture (can include % for wildcard - the URL encoding for % is %25)",
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "node",
-          "in" : "query",
-          "description" : "Filter results to only include nodes with this id (can include % for wildcard - the URL encoding for % is %25)",
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "name",
-          "in" : "query",
-          "description" : "Filter results to only include nodes with this name (can include % for wildcard - the URL encoding for % is %25)",
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "type",
-          "in" : "query",
-          "description" : "Filter results to only include nodes with this type ('device' or 'cluster')",
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "organization",
-          "in" : "path",
-          "description" : "Organization id",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "owner",
-          "in" : "query",
-          "description" : "Filter results to only include nodes with this owner (can include % for wildcard - the URL encoding for % is %25)",
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "response body",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "type" : "array",
-                  "items" : {
-                    "$ref" : "#/components/schemas/NodeDetails"
-                  }
-                },
-                "example" : [ {
-                  "arch" : "string",
-                  "connectivity" : {
-                    "string" : false
-                  },
-                  "constraints" : [ "string", "string", "string" ],
-                  "errors" : [ {
-                    "event_code" : "string",
-                    "hidden" : true,
-                    "message" : "string",
-                    "record_id" : "string"
-                  } ],
-                  "heartbeatIntervals" : {
-                    "intervalAdjustment" : 0,
-                    "minInterval" : 0,
-                    "maxInterval" : 0
-                  },
-                  "id" : "string",
-                  "lastHeartbeat" : "string",
-                  "lastUpdatedNode" : "string",
-                  "lastUpdatedNodeError" : "string",
-                  "lastUpdatedNodePolicy" : "string",
-                  "lastUpdatedNodeStatus" : "string",
-                  "msgEndPoint" : "",
-                  "name" : "string",
-                  "nodeType" : "device",
-                  "owner" : "string",
-                  "orgid" : "string",
-                  "pattern" : "",
-                  "properties" : [ {
-                    "string" : "string"
-                  }, {
-                    "string" : "string"
-                  }, {
-                    "string" : "string"
-                  } ],
-                  "publicKey" : "string",
-                  "registeredServices" : [ {
-                    "configState" : "active",
-                    "numAgreements" : 0,
-                    "policy" : "",
-                    "properties" : [ ],
-                    "url" : "string"
-                  }, {
-                    "configState" : "active",
-                    "numAgreements" : 0,
-                    "policy" : "",
-                    "properties" : [ ],
-                    "url" : "string"
-                  }, {
-                    "configState" : "active",
-                    "numAgreements" : 0,
-                    "policy" : "",
-                    "properties" : [ ],
-                    "url" : "string"
-                  } ],
-                  "runningServices" : "|orgid/serviceid|",
-                  "services" : [ {
-                    "agreementId" : "string",
-                    "arch" : "string",
-                    "containerStatus" : [ ],
-                    "operatorStatus" : { },
-                    "orgid" : "string",
-                    "serviceUrl" : "string",
-                    "version" : "string",
-                    "configState" : "string"
-                  } ],
-                  "softwareVersions" : { },
-                  "token" : "string",
-                  "userInput" : [ {
-                    "inputs" : [ {
-                      "name" : "var1",
-                      "value" : "someString"
-                    }, {
-                      "name" : "var2",
-                      "value" : 5
-                    }, {
-                      "name" : "var3",
-                      "value" : 22.2
-                    } ],
-                    "serviceArch" : "string",
-                    "serviceOrgid" : "string",
-                    "serviceUrl" : "string",
-                    "serviceVersionRange" : "string",
-                    "ha_group" : "string"
-                  } ]
-                } ]
-              }
-            }
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      }
-    },
-    "/v1/orgs/{org}/hagroups/{hagroup}/nodes/{node}" : {
-      "post" : {
-        "tags" : [ "high availability node group" ],
-        "summary" : "Insert a Node into a High Availablity Node Group",
-        "description" : "Appends to the list of nodes that belong to the specified node group.",
-        "operationId" : "postNodeToNodeGroup",
-        "parameters" : [ {
-          "name" : "org",
-          "in" : "path",
-          "description" : "Organization identifier.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "hagroup",
-          "in" : "path",
-          "description" : "Node Group identifier.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "node",
-          "in" : "path",
-          "description" : "Node Group identifier.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "responses" : {
-          "201" : {
-            "description" : "resource created - response body:",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/ApiResponse"
-                }
-              }
-            }
-          },
-          "400" : {
-            "description" : "bad input"
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied: node isn't owned by caller"
-          },
-          "404" : {
-            "description" : "not found"
-          },
-          "409" : {
-            "description" : "node already belongs to other group"
-          }
-        }
-      },
-      "delete" : {
-        "tags" : [ "high availability node group" ],
-        "summary" : "Deletes a Node from a Node Group",
-        "description" : "Deletes a Node from a Highly Available Node Group",
-        "operationId" : "deleteNodeFromNodeGroup",
-        "parameters" : [ {
-          "name" : "org",
-          "in" : "path",
-          "description" : "Organization identifier.",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "hagroup",
-          "in" : "path",
-          "description" : "Node Group identifier",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        }, {
-          "name" : "node",
-          "in" : "path",
-          "description" : "Node identifier",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "responses" : {
-          "204" : {
-            "description" : "deleted"
-          },
-          "401" : {
-            "description" : "invalid credentials"
-          },
-          "403" : {
-            "description" : "access denied"
-          },
-          "404" : {
-            "description" : "not found"
-          }
-        }
-      }
-    },
     "/v1/orgs/{org}/hagroups/{hagroup}" : {
       "get" : {
         "tags" : [ "high availability node group" ],
@@ -6165,6 +6152,15 @@
             "type" : "string"
           }
         } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
         "responses" : {
           "200" : {
             "description" : "response body",
@@ -6344,6 +6340,15 @@
             "type" : "string"
           }
         } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
         "responses" : {
           "204" : {
             "description" : "deleted"
@@ -6362,10 +6367,9 @@
     },
     "/v1/orgs/{org}/hagroups" : {
       "get" : {
-        "tags" : [ "high availability node group" ],
         "summary" : "Lists all members of all Node Groups (HA Groups)",
         "description" : "Returns all Node Groups in this org along with the member nodes that the caller has permission to view.",
-        "operationId" : "getAllNodeGroup",
+        "operationId" : "getNodeGroups",
         "parameters" : [ {
           "name" : "org",
           "in" : "path",
@@ -6375,6 +6379,15 @@
             "type" : "string"
           }
         } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Identity"
+              }
+            }
+          }
+        },
         "responses" : {
           "200" : {
             "description" : "response body",
@@ -6396,6 +6409,129 @@
                 }
               }
             }
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied"
+          },
+          "404" : {
+            "description" : "not found"
+          }
+        }
+      }
+    },
+    "/v1/orgs/{org}/hagroups/{hagroup}/nodes/{node}" : {
+      "post" : {
+        "tags" : [ "high availability node group" ],
+        "summary" : "Insert a Node into a High Availablity Node Group",
+        "description" : "Appends to the list of nodes that belong to the specified node group.",
+        "operationId" : "postNodeToNodeGroup",
+        "parameters" : [ {
+          "name" : "org",
+          "in" : "path",
+          "description" : "Organization identifier.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "hagroup",
+          "in" : "path",
+          "description" : "Node Group identifier.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "node",
+          "in" : "path",
+          "description" : "Node Group identifier.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "201" : {
+            "description" : "resource created - response body:",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input"
+          },
+          "401" : {
+            "description" : "invalid credentials"
+          },
+          "403" : {
+            "description" : "access denied: node isn't owned by caller"
+          },
+          "404" : {
+            "description" : "not found"
+          },
+          "409" : {
+            "description" : "node already belongs to other group"
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "high availability node group" ],
+        "summary" : "Deletes a Node from a Node Group",
+        "description" : "Deletes a Node from a Highly Available Node Group",
+        "operationId" : "deleteNodeFromNodeGroup",
+        "parameters" : [ {
+          "name" : "org",
+          "in" : "path",
+          "description" : "Organization identifier.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "hagroup",
+          "in" : "path",
+          "description" : "Node Group identifier",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "node",
+          "in" : "path",
+          "description" : "Node identifier",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "204" : {
+            "description" : "deleted"
           },
           "401" : {
             "description" : "invalid credentials"
@@ -7235,7 +7371,7 @@
         "tags" : [ "service/policy" ],
         "summary" : "Returns the service policy",
         "description" : "Returns the service policy. Can be run by a user, node or agbot.",
-        "operationId" : "getPolicy",
+        "operationId" : "getPolicyService",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -7291,7 +7427,7 @@
         "tags" : [ "service/policy" ],
         "summary" : "Adds/updates the service policy",
         "description" : "Adds or updates the policy of a service. This can be called by the owning user.",
-        "operationId" : "putPolicy",
+        "operationId" : "putPolicyService",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -7355,7 +7491,7 @@
         "tags" : [ "service/policy" ],
         "summary" : "Deletes the policy of a service",
         "description" : "Deletes the policy of a service. Can be run by the owning user.",
-        "operationId" : "deletePolicy",
+        "operationId" : "deletePolicyService",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -8362,7 +8498,7 @@
         "tags" : [ "service/key" ],
         "summary" : "Returns a key/cert for this service",
         "description" : "Returns the signing public key/cert with the specified keyid for this service. The raw content of the key/cert is returned, not json. Can be run by any credentials able to view the service.",
-        "operationId" : "getKey",
+        "operationId" : "getKeyService",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -8426,7 +8562,7 @@
         "tags" : [ "service/key" ],
         "summary" : "Adds/updates a key/cert for the service",
         "description" : "Adds a new signing public key/cert, or updates an existing key/cert, for this service. This can only be run by the service owning user.",
-        "operationId" : "putKey",
+        "operationId" : "putKeyService",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -8492,7 +8628,7 @@
         "tags" : [ "service/key" ],
         "summary" : "Deletes a key of a service",
         "description" : "Deletes a key/cert for this service. This can only be run by the service owning user.",
-        "operationId" : "deleteKey",
+        "operationId" : "deleteKeyService",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -8548,7 +8684,7 @@
         "tags" : [ "service/key" ],
         "summary" : "Returns all keys/certs for this service",
         "description" : "Returns all the signing public keys/certs for this service. Can be run by any credentials able to view the service.",
-        "operationId" : "getKeys",
+        "operationId" : "getKeysService",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -8605,7 +8741,7 @@
         "tags" : [ "service/key" ],
         "summary" : "Deletes all keys of a service",
         "description" : "Deletes all of the current keys/certs for this service. This can only be run by the service owning user.",
-        "operationId" : "deleteKeys",
+        "operationId" : "deleteKeysService",
         "parameters" : [ {
           "name" : "organization",
           "in" : "path",
@@ -9267,30 +9403,6 @@
           }
         }
       },
-      "NodeMangementPolicyStatus" : {
-        "required" : [ "scheduledTime" ],
-        "type" : "object",
-        "properties" : {
-          "scheduledTime" : {
-            "type" : "string"
-          },
-          "startTime" : {
-            "type" : "string"
-          },
-          "endTime" : {
-            "type" : "string"
-          },
-          "upgradedVersions" : {
-            "$ref" : "#/components/schemas/UpgradedVersions"
-          },
-          "status" : {
-            "type" : "string"
-          },
-          "errorMessage" : {
-            "type" : "string"
-          }
-        }
-      },
       "MaxChangeIdResponse" : {
         "required" : [ "maxChangeId" ],
         "type" : "object",
@@ -9458,15 +9570,6 @@
       "Identity" : {
         "type" : "object",
         "properties" : {
-          "multiTenantAgbot" : {
-            "type" : "boolean"
-          },
-          "org" : {
-            "type" : "string"
-          },
-          "identity" : {
-            "type" : "string"
-          },
           "superUser" : {
             "type" : "boolean"
           },
@@ -9478,6 +9581,15 @@
           },
           "anonymous" : {
             "type" : "boolean"
+          },
+          "multiTenantAgbot" : {
+            "type" : "boolean"
+          },
+          "org" : {
+            "type" : "string"
+          },
+          "identity" : {
+            "type" : "string"
           }
         }
       },
@@ -9836,6 +9948,7 @@
         }
       },
       "UpgradedVersions" : {
+        "required" : [ "certVersion", "configVersion", "softwareVersion" ],
         "type" : "object",
         "properties" : {
           "softwareVersion" : {
@@ -10495,15 +10608,6 @@
           }
         }
       },
-      "PutNodeMgmtPolStatusRequest" : {
-        "required" : [ "agentUpgradePolicyStatus" ],
-        "type" : "object",
-        "properties" : {
-          "agentUpgradePolicyStatus" : {
-            "$ref" : "#/components/schemas/NodeMangementPolicyStatus"
-          }
-        }
-      },
       "ServiceDockAuth" : {
         "required" : [ "dockAuthId", "lastUpdated", "registry", "token", "username" ],
         "type" : "object",
@@ -11010,19 +11114,7 @@
         }
       },
       "NodeError" : {
-        "required" : [ "errors", "lastUpdated" ],
-        "type" : "object",
-        "properties" : {
-          "errors" : {
-            "type" : "array",
-            "items" : {
-              "type" : "object"
-            }
-          },
-          "lastUpdated" : {
-            "type" : "string"
-          }
-        }
+        "type" : "object"
       },
       "GetUsersResponse" : {
         "required" : [ "lastIndex", "users" ],
