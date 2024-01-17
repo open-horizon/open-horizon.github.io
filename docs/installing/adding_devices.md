@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2019 - 2023
-lastupdated: "2023-05-31"
+years: 2019 - 2024
+lastupdated: "2024-01-17"
 title: "Preparing an edge device"
 
 parent: Edge devices info
@@ -29,16 +29,16 @@ The following instructions guide you through the process of installing the requi
 {{site.data.keyword.ieam}} supports architectures and operating systems with the following hardware architectures:
 
 - x86_64
-  - {{site.data.keyword.linux_bit_notm}} devices or virtual machines that run Ubuntu 22.x (jammy), Ubuntu 20.x (focal), Ubuntu 18.x (bionic), Debian 10 (buster), Debian 9 (stretch)
-  - {{site.data.keyword.rhel}} 8.1 - 8.5 (via Docker), 8.6 - 8.8 and 9.0 - 9.2 (via Podman 4.x).  See Notes.
+  - {{site.data.keyword.linux_bit_notm}} devices or virtual machines that run Ubuntu 22.x (jammy), Ubuntu 20.x (focal), Ubuntu 18.x (bionic), Debian 12 (bookworm), Debian 11 (bullseye), Debian 10 (buster), Debian 9 (stretch)
+  - {{site.data.keyword.rhel}} 8.1 - 8.5 (via Docker), 8.6 - 8.8 and 9.0 - 9.3 (via Podman 4.x).  See Notes.
   - {{site.data.keyword.fedora}} Workstation 36 - 38
   - CentOS 8.1 - 8.5 (via Docker)
   - SuSE 15 SP2
 - ppc64le
   - {{site.data.keyword.linux_ppc64le_notm}} devices or virtual machines that run Ubuntu 20.x (focal) or Ubuntu 18.x (bionic)
-  - {{site.data.keyword.rhel}} 7.6 - 9.2
+  - {{site.data.keyword.rhel}} 7.6 - 9.3
 - ARM (32-bit)
-  - {{site.data.keyword.linux_notm}} on ARM (32-bit), for example Raspberry Pi, running Raspberry Pi OS buster or bullseye
+  - {{site.data.keyword.linux_notm}} on ARM (32-bit), for example Raspberry Pi, running Raspberry Pi OS bookworm, bullseye or buster
 - ARM (64-bit)
   - {{site.data.keyword.linux_notm}} on ARM (64-bit), for example NVIDIA Jetson Nano, TX1, or TX2, running Ubuntu 18.x (bionic)
   - {{site.data.keyword.macOS_notm}} on ARM (64-bit) Apple Silicon M1 / M2
@@ -50,7 +50,7 @@ The following instructions guide you through the process of installing the requi
 - Installation of edge devices with SuSE is only supported by the [Advanced manual agent installation and registration](../installing/advanced_man_install.md) method.
 - CentOS and {{site.data.keyword.rhel}} 8.5 or earlier on {{site.data.keyword.ieam}} {{site.data.keyword.version}} only support Docker as a container engine.
 - While {{site.data.keyword.ieam}} {{site.data.keyword.version}} supports running {{site.data.keyword.rhel}} 8.x with Docker, it is officially unsupported by {{site.data.keyword.rhel}}.
-- {{site.data.keyword.ieam}} {{site.data.keyword.version}} supports Podman 4.x on {{site.data.keyword.rhel}} 8.6 - 8.8, {{site.data.keyword.rhel}} 9.0 - 9.2, and {{site.data.keyword.fedora}} 36 - 38 Workstation.
+- {{site.data.keyword.ieam}} {{site.data.keyword.version}} supports Podman 4.x on {{site.data.keyword.rhel}} 8.6 - 8.8, {{site.data.keyword.rhel}} 9.0 - 9.3, and {{site.data.keyword.fedora}} 36 - 38 Workstation.
 
 ## Sizing
 {: #size}
