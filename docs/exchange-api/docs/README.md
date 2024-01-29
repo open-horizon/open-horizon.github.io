@@ -61,7 +61,7 @@ services in the exchange.
 
   ```json
   {
-    "akka": {
+    "pekko": {
       "loglevel": "DEBUG"
     },
     "api": {
@@ -210,8 +210,7 @@ Project uses Scapegoat. To use:
 
 ### Notes About the Docker Image Build Process
 
-- See https://www.codemunity.io/tutorials/dockerising-akka-http/
-- Uses the sbt-native-packager plugin. See the above URL for what to add to your sbt-related files
+- Uses the sbt-native-packager plugin.
 - Build docker image: `sbt docker:publishLocal`
 - Manually build and run the exchange executable
   - `make runexecutable`
@@ -348,11 +347,11 @@ Now you can disable root by setting `api.root.enabled` to `false` in `/etc/horiz
 
 `src/main/resources/config.json` is the default configuration file for the Exchange. This file is bundled in the Exchange jar. To run the exchange server with different values, copy this to `/etc/horizon/exchange/config.json`. In your version of the config file, you only have to set what you want to override.
 
-### akka
+### pekko
 
-Akka Actor: https://doc.akka.io/docs/akka/current/general/configuration-reference.html
+Pekko Actor: https://pekko.apache.org/docs/pekko/current/general/configuration-reference.html#pekko-actor
 </br>
-Akka-Http: https://doc.akka.io/docs/akka-http/current/configuration.html
+Pekko-Http: https://pekko.apache.org/docs/pekko-http/current/configuration.html
 </br>
 Log Level: http://logback.qos.ch/apidocs/ch/qos/logback/classic/Level.html
 
@@ -360,19 +359,19 @@ Log Level: http://logback.qos.ch/apidocs/ch/qos/logback/classic/Level.html
 |----------------|----------------|-------------|
 | loglevel       | `"INFO"`       |             |
 
- - #### akka.coordinated-shutdown
+ - #### pekko.coordinated-shutdown
 
    | Parameter Name                | Default Value | Description                                                                    |
    |-------------------------------|---------------|--------------------------------------------------------------------------------|
    | phases.service-unbind.timeout | `"60s"`       | Number of seconds to let in-flight requests complete before exiting the server |
 
- - #### akka.http.parsing
+ - #### pekko.http.parsing
 
    | Parameter Name         | Default Value | Description |
    |------------------------|---------------|-------------|
    | max-header-name-length | `128`         |             |
 
- - #### akka.http.server
+ - #### pekko.http.server
 
    | Paramater Name   | Default Value | Description |
    |------------------|---------------|-------------|
@@ -385,9 +384,9 @@ Log Level: http://logback.qos.ch/apidocs/ch/qos/logback/classic/Level.html
    | request-timeout  | `"45s"`       |             |
    | server-header    | `""`          |             |
 
-### akka-http-cors
+### pekko-http-cors
 
-https://github.com/lomigmegard/akka-http-cors#configuration
+https://pekko.apache.org/docs/pekko-http/current/configuration.html
 
 | Parameter Name              | Default Value                                     | Description                                                              |
 |-----------------------------|---------------------------------------------------|--------------------------------------------------------------------------|
