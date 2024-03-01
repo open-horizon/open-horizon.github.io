@@ -1,7 +1,7 @@
 ---
 copyright:
-years: 2020 - 2022
-lastupdated: "2022-06-24"
+years: 2020 - 2024
+lastupdated: "2024-03-01"
 title: "Bulk agent install"
 
 parent: Edge devices info
@@ -143,5 +143,3 @@ Use the bulk installation process to set up multiple edge devices of similar typ
       Now the edge devices are ready, but will not start running edge services until you create a deployment policy (business policy) that specifies that a service should be deployed to this type of edge device (in this example, devices with **nodetype** of **special-node**). See [Using deployment policy](../using_edge_services/detailed_policy.md) for details.
 
 10. If you get **[FAILURE]** in the **pssh** output for any of the edge devices, you can investigate the problem by going to the edge device and viewing **/tmp/agent-install.log** .
-
-11. While the **pssh** command is running, you can view the status of your edge nodes in the {{site.data.keyword.edge_notm}} console. See [Using the management console](../console/accessing_ui.md).
