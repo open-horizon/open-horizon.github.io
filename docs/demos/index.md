@@ -1,0 +1,31 @@
+---
+
+copyright:
+years: 2024
+lastupdated: "2024-03-29"
+title: "Open Horizon feature and integration demonstration videos and code"
+
+nav_order: 13
+has_children: true
+has_toc: false
+---
+
+{:new_window: target="blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:child: .link .ulchildlink}
+{:childlinks: .ullinks}
+
+# Code and video demos
+{: #code_and_video_demos}
+
+This section contains end-to-end code and video examples for {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}).
+
+* [Workload Runtime Security](https://wiki.lfedge.org/display/OH/OH+Agent+and+Edge+Workload+Runtime+Security)
+* [Realtime Workload Metrics](https://wiki.lfedge.org/display/OH/Realtime+Workload+Metrics+-+Feature+Design+Candidate)
+* [Handsfree Device Onboarding]()
+* [Runtime Secrets Binding]()
+* [MLOps Pipeline Integration]()
+* [Application-centric Connectivity]()
