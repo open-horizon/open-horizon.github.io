@@ -112,7 +112,7 @@ This GitHub Pages site is built with Jekyll. Before you can use Jekyll to test a
 
 ## Test your changes locally
 
-> NOTE: Ruby 3.2.0 is [incompatible at the moment](https://www.miskatonic.org/2023/01/02/ruby-jekyll/).  Recommend using `rbenv` and installing and using `rbenv local 3.1.1` as a workaround.
+> NOTE: Ruby 3.2.0 is [incompatible at the moment](https://www.miskatonic.org/2023/01/02/ruby-jekyll/).  Recommend using `rbenv` and installing and using `rbenv local 3.1.1` as a workaround.  On MacOS, `brew install rbenv` then `rbenv install 3.1.1` first.
 
 Change to the repository directory on your computer and execute the following command to run the Jekyll site locally.
 
