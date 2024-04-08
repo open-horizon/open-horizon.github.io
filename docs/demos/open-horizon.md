@@ -34,3 +34,8 @@ Open Horizon securely negotiates and places these workloads and assets as it is 
 * risc-v
 * s390x
 
+## Commercial Adoption
+
+* IBM Edge Application Manager
+* Falcon Tactical Edge
+* IBM Hybrid Cloud Mesh

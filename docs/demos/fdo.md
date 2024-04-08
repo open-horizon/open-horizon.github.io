@@ -36,3 +36,7 @@ This demo show how hardware supporting the FIDO Device Onboard (FDO) specificati
 
 ## Architecture overview
 
+## Commercial Adoption
+
+* IBM Edge Application Manager
+* Falcon Tactical Edge

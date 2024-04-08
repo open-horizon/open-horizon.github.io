@@ -39,3 +39,6 @@ This demo illustrates how a deployed application can be automatically connected 
 
 ## Architecture overview
 
+## Commercial Adoption
+
+* IBM Hybrid Cloud Mesh

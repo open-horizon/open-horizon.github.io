@@ -34,3 +34,8 @@ This demo illustrates not only how values stored in the Secrets Management compo
 
 ## Architecture overview
 
+
+## Commercial Adoption
+
+* IBM Edge Application Manager (planned pending GA, currently testing Alpha release)
+* IOTech EdgeXpert (planned pending GA, currently testing Alpha release)
