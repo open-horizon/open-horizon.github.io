@@ -19,8 +19,8 @@ parent: "Demonstration videos and code"
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
 
-# Realtime Workload Metrics demos
-{: #edgelake_demos}
+# Realtime Workload Metrics demo
+{: #edgelake_demo}
 
 ## Description
 
@@ -30,11 +30,11 @@ This demo show how to deploy an application and make its generated data availabl
 
 ## Code repositories
 
-* [EdgeLake code](https://github.com/EdgeLake/EdgeLake){:target="_blank"}{: .externalLink}
-* EdgeLake [example Open Horizon service](https://github.com/open-horizon-services/service-anylog/){:target="_blank"}{: .externalLink}
+* [EdgeLake code ](https://github.com/EdgeLake/EdgeLake){:target="_blank"}{: .externalLink}
+* EdgeLake [example Open Horizon service ](https://github.com/open-horizon-services/service-anylog/){:target="_blank"}{: .externalLink}
 
 ## Architecture overview
 
 ## Feature Request
 
-[Realtime Workload Metrics](https://wiki.lfedge.org/display/OH/Realtime+Workload+Metrics+-+Feature+Design+Candidate){:target="_blank"}{: .externalLink}
+[Realtime Workload Metrics ](https://wiki.lfedge.org/display/OH/Realtime+Workload+Metrics+-+Feature+Design+Candidate){:target="_blank"}{: .externalLink}

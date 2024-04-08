@@ -39,7 +39,7 @@ Four specific scenarios can demonstrate the power of this approach:
 
 ## Code repositories
 
-* Example [Open Horizon service deploying KubeArmor](https://github.com/open-horizon/kubearmor-integration){:target="_blank"}{: .externalLink}
+* Example [Open Horizon service deploying KubeArmor ](https://github.com/open-horizon/kubearmor-integration){:target="_blank"}{: .externalLink}
 
 ## Architecture overview
 
@@ -47,4 +47,4 @@ Four specific scenarios can demonstrate the power of this approach:
 
 ## Feature Request
 
-[Workload Runtime Security](https://wiki.lfedge.org/display/OH/OH+Agent+and+Edge+Workload+Runtime+Security){:target="_blank"}{: .externalLink}
+[Workload Runtime Security ](https://wiki.lfedge.org/display/OH/OH+Agent+and+Edge+Workload+Runtime+Security){:target="_blank"}{: .externalLink}
