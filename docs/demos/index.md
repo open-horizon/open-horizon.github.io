@@ -28,4 +28,4 @@ This section contains end-to-end code and video examples for {{site.data.keyword
 * [Handsfree Device Onboarding](./fdo.md)
 * [Runtime Secrets Binding](./openbao.md)
 * [MLOps Pipeline Integration]()
-* [Application-centric Connectivity]()
+* [Application-centric Connectivity](./skupper.md)
