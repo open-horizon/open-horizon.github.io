@@ -1,7 +1,7 @@
 --- 
 copyright: 
-years: 2021 - 2023 
-lastupdated: "2023-07-01" 
+years: 2021 - 2024
+lastupdated: "2024-04-08" 
 layout: page 
 title: "Home" 
 description: "Welcome to the Open Horizon Documentation web site" 

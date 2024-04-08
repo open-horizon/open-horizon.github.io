@@ -8,7 +8,7 @@ title: "Open Horizon demonstration video and code"
 nav_order: 1
 has_children: false
 has_toc: false
-parent: "Open Horizon feature and integration demonstration videos and code"
+parent: "Demonstration videos and code"
 ---
 
 {:new_window: target="blank"}
