@@ -24,7 +24,7 @@ has_toc: false
 This section contains end-to-end code and video examples for {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}).
 
 * [Workload Runtime Security demos](./kubearmor.md)
-* [Realtime Workload Metrics](https://wiki.lfedge.org/display/OH/Realtime+Workload+Metrics+-+Feature+Design+Candidate)
+* [Realtime Workload Metrics](./edgelake.md)
 * [Handsfree Device Onboarding]()
 * [Runtime Secrets Binding]()
 * [MLOps Pipeline Integration]()
