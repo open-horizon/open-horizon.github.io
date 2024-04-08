@@ -5,7 +5,7 @@ years: 2024
 lastupdated: "2024-04-08"
 title: "Application-centric Connectivity demo"
 
-nav_order: 6
+nav_order: 7
 has_children: false
 has_toc: false
 parent: "Demonstration videos and code"

@@ -5,7 +5,7 @@ years: 2024
 lastupdated: "2024-04-08"
 title: "Handsfree Device Onboarding demo"
 
-nav_order: 3
+nav_order: 4
 has_children: false
 has_toc: false
 parent: "Demonstration videos and code"

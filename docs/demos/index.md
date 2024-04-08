@@ -27,5 +27,5 @@ This section contains end-to-end code and video examples for {{site.data.keyword
 * [Realtime Workload Metrics](./edgelake.md)
 * [Handsfree Device Onboarding](./fdo.md)
 * [Runtime Secrets Binding](./openbao.md)
-* [MLOps Pipeline Integration]()
+* [MLOps Pipeline Integration](./mlops.md)
 * [Application-centric Connectivity](./skupper.md)
