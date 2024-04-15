@@ -2,7 +2,7 @@
 
 copyright: 
 years: 2024
-lastupdated: "2024-04-08"
+lastupdated: "2024-04-15"
 title: "MLOps Pipeline Integration demo"
 
 nav_order: 6
@@ -26,7 +26,11 @@ parent: "Demonstration videos and code"
 
 
 
-## Video
+## Videos
+
+### Deep Dive (4 minutes)
+
+{% include youtubePlayer.html id="tCe1BTK28xg" %}
 
 ## Code repositories
 
