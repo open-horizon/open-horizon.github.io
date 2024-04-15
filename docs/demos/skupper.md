@@ -2,7 +2,7 @@
 
 copyright: 
 years: 2024
-lastupdated: "2024-04-08"
+lastupdated: "2024-04-15"
 title: "Application-centric Connectivity demo"
 
 nav_order: 7
@@ -33,7 +33,11 @@ This demo illustrates how a deployed application can be automatically connected 
 3. Showing application connectivity resilliency in the face of a network segment going down
 4. Enabling application mobility
 
-## Video
+## Videos
+
+### Deep Dive (8 minutes)
+
+{% include youtubePlayer.html id="Zs1SygjqBts" %}
 
 ## Code repositories
 
