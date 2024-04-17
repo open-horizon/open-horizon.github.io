@@ -2,7 +2,7 @@
 
 copyright: 
 years: 2024
-lastupdated: "2024-04-15"
+lastupdated: "2024-04-17"
 title: "MLOps Pipeline Integration demo"
 
 nav_order: 6
@@ -28,9 +28,9 @@ parent: "Demonstration videos and code"
 
 ## Videos
 
-### Deep Dive (4 minutes)
+### Managing ML deployments without restarting consuming applications (4 minutes)
 
-{% include youtubePlayer.html id="tCe1BTK28xg" %}
+{% include youtubePlayer.html id="pD6UUMtJ3eI" %}
 
 ## Code repositories
 

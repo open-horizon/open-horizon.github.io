@@ -2,7 +2,7 @@
 
 copyright: 
 years: 2024
-lastupdated: "2024-04-08"
+lastupdated: "2024-04-17"
 title: "Workload Runtime Security demo"
 
 nav_order: 2
@@ -35,7 +35,27 @@ Four specific scenarios can demonstrate the power of this approach:
 3. Preventing lateral movements between devices and/or applications
 4. Highlighting preemptive mitigation techniques enabled by KubeArmor + Open Horizon
 
-## Video
+## Videos
+
+### Defending against Cryptojacking attacks (2 minutes)
+
+{% include youtubePlayer.html id="pV43ttC4Ja0" %}
+
+### File Integrity Monitoring (FIM) using policies on a K8s cluster (2 minutes)
+
+{% include youtubePlayer.html id="WJfHmxm8Gg0" %}
+
+### Denying malicious binary process before execution (2 minutes)
+
+{% include youtubePlayer.html id="n1GpkV3KbQQ" %}
+
+### Implementing zero trust security policies on a K8s cluster (2 minutes)
+
+{% include youtubePlayer.html id="Jni8vJ3IrJc" %}
+
+### Deploying KubeArmor with Open Horizon (11 minutes)
+
+{% include youtubePlayer.html id="691AlW_GE1k" %}
 
 ## Code repositories
 
