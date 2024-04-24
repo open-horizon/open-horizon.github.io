@@ -2,7 +2,7 @@
 
 copyright: 
 years: 2024
-lastupdated: "2024-04-08"
+lastupdated: "2024-04-24"
 title: "Runtime Secrets Binding demo"
 
 nav_order: 5
@@ -27,6 +27,10 @@ parent: "Demonstration videos and code"
 This demo illustrates not only how values stored in the Secrets Management component are securely bound to a deployed application, but also how the values can be dynamically updated remotely without restarting the application(s) using the secrets.
 
 ## Video
+
+## OpenBao secrets bound to Open Horizon deployed apps in 1 minute (no audio)
+
+{% include youtubePlayer.html id="IzzD1RmtdTU" %}
 
 ## Code repositories
 

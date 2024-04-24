@@ -2,7 +2,7 @@
 
 copyright: 
 years: 2024
-lastupdated: "2024-04-17"
+lastupdated: "2024-04-24"
 title: "Workload Runtime Security demo"
 
 nav_order: 2
@@ -36,6 +36,10 @@ Four specific scenarios can demonstrate the power of this approach:
 4. Highlighting preemptive mitigation techniques enabled by KubeArmor + Open Horizon
 
 ## Videos
+
+### KubeArmor/Open Horizon demos in one minute (1 minute, no audio)
+
+{% include youtubePlayer.html id="ZwDxLMdt6lI" %}
 
 ### Defending against Cryptojacking attacks (2 minutes)
 

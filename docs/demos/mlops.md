@@ -2,7 +2,7 @@
 
 copyright: 
 years: 2024
-lastupdated: "2024-04-17"
+lastupdated: "2024-04-24"
 title: "MLOps Pipeline Integration demo"
 
 nav_order: 6
@@ -27,6 +27,10 @@ parent: "Demonstration videos and code"
 
 
 ## Videos
+
+### Dynamic delivery of ML models with Open Horizon in 1 minute (no audio)
+
+{% include youtubePlayer.html id="JWvxaFcl8_E" %}
 
 ### Managing ML deployments without restarting consuming applications (4 minutes)
 

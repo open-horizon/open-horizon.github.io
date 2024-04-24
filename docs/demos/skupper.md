@@ -2,7 +2,7 @@
 
 copyright: 
 years: 2024
-lastupdated: "2024-04-15"
+lastupdated: "2024-04-24"
 title: "Application-centric Connectivity demo"
 
 nav_order: 7
@@ -34,6 +34,10 @@ This demo illustrates how a deployed application can be automatically connected 
 4. Enabling application mobility
 
 ## Videos
+
+### Connecting Open Horizon deployed apps using Skupper in 1 minute (1 minute, no audio)
+
+{% include youtubePlayer.html id="BUBIfpecZ7k" %}
 
 ### Deep Dive (8 minutes)
 
