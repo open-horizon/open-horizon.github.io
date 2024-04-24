@@ -2,7 +2,7 @@
 
 copyright: 
 years: 2024
-lastupdated: "2024-04-15"
+lastupdated: "2024-04-24"
 title: "Realtime Workload Metrics demo"
 
 nav_order: 3
@@ -27,6 +27,10 @@ parent: "Demonstration videos and code"
 This demo show how to deploy an application and make its generated data available anywhere, anytime without moving, streaming or otherwise pre-consolidating the data or otherwise explicitly connecting the application to a data store.
 
 ## Videos
+
+### EdgeLake deployed by Open Horizon in one minute (1 minute, no audio)
+
+{% include youtubePlayer.html id="fHVEhv2Bv4E" %}
 
 ### EdgeLake Overview (4 minutes)
 
