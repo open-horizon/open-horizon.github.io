@@ -2,7 +2,7 @@
 
 copyright: 
 years: 2024
-lastupdated: "2024-04-24"
+lastupdated: "2024-04-26"
 title: "Runtime Secrets Binding demo"
 
 nav_order: 5
@@ -30,7 +30,7 @@ This demo illustrates not only how values stored in the Secrets Management compo
 
 ## OpenBao secrets bound to Open Horizon deployed apps in 1 minute (no audio)
 
-{% include youtubePlayer.html id="IzzD1RmtdTU" %}
+{% include youtubePlayer.html id="GdeJh6bq1O0" %}
 
 ## Code repositories
 
