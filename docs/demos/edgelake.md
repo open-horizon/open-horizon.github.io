@@ -2,8 +2,8 @@
 
 copyright: 
 years: 2024
-lastupdated: "2024-04-24"
-title: "Realtime Workload Metrics demo"
+lastupdated: "2024-04-29"
+title: "Realtime Workload Metrics Demo"
 
 nav_order: 3
 has_children: false
@@ -19,7 +19,7 @@ parent: "Demonstration videos and code"
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
 
-# Realtime Workload Metrics demo
+# Realtime Workload Metrics Demo
 {: #edgelake_demo}
 
 ## Description
@@ -46,7 +46,10 @@ This demo show how to deploy an application and make its generated data availabl
 * [EdgeLake code ](https://github.com/EdgeLake/EdgeLake){:target="_blank"}{: .externalLink}
 * EdgeLake [example Open Horizon service ](https://github.com/open-horizon-services/service-anylog/){:target="_blank"}{: .externalLink}
 
-## Architecture overview
+## Deployment Example with Kubearmor
+
+* [Example ](https://wiki.lfedge.org/display/OH/EdgeLake+-+KubeArmor+Integration){:target="_blank"}{: .externalLink}
+* [Deployment architecture ](https://wiki.lfedge.org/display/OH/Getting+Started+-+Install+EdgeLake+%28with+Open+Horizon%29+to+manage+KubeArmor+events){:target="_blank"}{: .externalLink}
 
 ## Feature Request
 
