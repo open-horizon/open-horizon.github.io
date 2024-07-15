@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2020 - 2023
-lastupdated: "2023-03-17"
+years: 2020 - 2024
+lastupdated: "2024-07-15"
 title: "Installing a K3s edge cluster"
 
 parent: Preparing an edge cluster
@@ -26,12 +26,12 @@ has_toc: false
 ## Introduction
 {: #intro}
 
-This content provides a summary of how to install k3s (rancher), a lightweight and small Kubernetes cluster, on Ubuntu Linux AMD64. For more information, see the [k3s documentation ](https://rancher.com/docs/k3s/latest/en/){:target="_blank"}{: .externalLink}.
+This content provides a summary of how to install k3s (rancher), a lightweight and small Kubernetes cluster, on a recent Ubuntu LTS distribution. For more information, see the [k3s documentation ](https://rancher.com/docs/k3s/latest/en/){:target="_blank"}{: .externalLink}.
 
 ## Pre-requisites
 {: #reqs}
 
-* Architecture must be either x86_64 or arm64
+* Architecture must be either x86_64 (amd64) or arm64
 * Operating system must be modern Linux variant with 64-bit and systemd support
 
 **Note**: If installed, uninstall kubectl before completing the following steps.
@@ -187,4 +187,4 @@ This content provides a summary of how to install k3s (rancher), a lightweight a
 
 ## What's next
 
-* [Installing the Cluster Agent](edge_cluster_agent.md)
+* [Installing the Cluster Agent](./edge_cluster_agent.md)

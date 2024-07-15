@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2020 - 2023
-lastupdated: "2023-03-17"
+years: 2020 - 2024
+lastupdated: "2024-07-15"
 title: "Installing an OCP edge cluster"
 
 parent: Preparing an edge cluster
@@ -29,4 +29,4 @@ has_toc: false
 
 ## What's next
 
-* [Installing the Cluster Agent](edge_cluster_agent.md)
+* [Installing the Cluster Agent](./edge_cluster_agent.md)
