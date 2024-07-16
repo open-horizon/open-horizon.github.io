@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2020 - 2023
-lastupdated: "2023-03-17"
+years: 2020 - 2024
+lastupdated: "2024-07-15"
 title: "Installing a microk8s edge cluster"
 
 parent: Preparing an edge cluster
@@ -130,4 +130,4 @@ This content provides a summary of how to install microk8s, a lightweight and sm
 
 ## What's next
 
-* [Installing the Cluster Agent](edge_cluster_agent.md)
+* [Installing the Cluster Agent](./edge_cluster_agent.md)

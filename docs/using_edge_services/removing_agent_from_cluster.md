@@ -1,8 +1,12 @@
 ---
 
 copyright:
-years: 2020 - 2022
-lastupdated: "2022-03-17"
+years: 2022 - 2024
+lastupdated: "2024-06-07"
+title: "Removing the agent from an edge cluster"
+
+parent: Edge clusters
+nav_order: 4
 
 ---
 
@@ -14,7 +18,7 @@ lastupdated: "2022-03-17"
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
 
-# Removing agent from edge cluster
+# Removing the agent from an edge cluster
 {: #remove_agent}
 
 To unregister an edge cluster and remove the {{site.data.keyword.ieam}} agent from that cluster, perform these steps:

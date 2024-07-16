@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021 - 2023
-lastupdated: "2023-03-17"
+years: 2021 - 2024
+lastupdated: "2024-07-15"
 title: "Edge clusters"
 
 nav_order: 12
@@ -25,11 +25,13 @@ has_toc: false
 
 ![{{site.data.keyword.horizon_exchange}}, {{site.data.keyword.agbot}}s and agents](../../images/edge/05b_Installing_edge_agent_on_cluster.svg "{{site.data.keyword.horizon_exchange}}, {{site.data.keyword.agbot}}s and agents")
 
-The following sections describe how to install an edge cluster and install the {{site.data.keyword.ieam}} agent on it.
+The following sections describe how to install an edge cluster, then how to install the {{site.data.keyword.ieam}} agent on the cluster.  Then we provide documentation on how to deploy services to the cluster, followed up by how to remove an agent from a cluster.
 
 - [Preparing an edge cluster](preparing_edge_cluster.md)
    - [Installing an OCP cluster](./install_ocp_edge_cluster.md)
    - [Installing a K3s cluster](./install_k3s_edge_cluster.md)
    - [Installing a microk8s cluster](./install_microk8s_edge_cluster.md)
-- [Installing the agent](edge_cluster_agent.md)
+- [Installing the agent](./edge_cluster_agent.md)
+- [Deploying services to an edge cluster](../using_edge_services/deploying_services_cluster.md)
+- [Removing an agent from an edge cluster](../using_edge_services/removing_agent_from_cluster.md)
 {: childlinks}
