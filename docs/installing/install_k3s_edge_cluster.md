@@ -2,10 +2,11 @@
 
 copyright:
 years: 2020 - 2024
-lastupdated: "2024-07-15"
+lastupdated: "2024-07-17"
 title: "Installing a K3s edge cluster"
 
 parent: Preparing an edge cluster
+grand_parent: Edge clusters
 nav_order: 1
 has_children: false
 has_toc: false

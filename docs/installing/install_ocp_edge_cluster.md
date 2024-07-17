@@ -2,10 +2,11 @@
 
 copyright:
 years: 2020 - 2024
-lastupdated: "2024-07-15"
+lastupdated: "2024-07-17"
 title: "Installing an OCP edge cluster"
 
 parent: Preparing an edge cluster
+grand_parent: Edge clusters
 nav_order: 3
 has_children: false
 has_toc: false
