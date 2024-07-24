@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2022 - 2024
-lastupdated: "2024-04-10"
+lastupdated: "2024-07-25"
 
 title: "All-in-One cluster agent"
 
@@ -178,7 +178,13 @@ export IMAGE_ON_EDGE_CLUSTER_REGISTRY=<remote-image-registry-host>/<repository-n
       ```
       {: codeblock}
 
-   h. Define the registry endpoint:
+   h. Create the K3s configuration file by copying:
+
+      ```bash
+      cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
+      ```
+
+   i. Define the registry endpoint:
 
       ```bash
       export REGISTRY_ENDPOINT=$(kubectl get service docker-registry-service | grep docker-registry-service | awk '{print $3;}'):5000
@@ -191,7 +197,7 @@ export IMAGE_ON_EDGE_CLUSTER_REGISTRY=<remote-image-registry-host>/<repository-n
       ```
       {: codeblock}
 
-   i. Restart K3s to pick up the change to **/etc/rancher/k3s/registries.yaml**:
+   j. Restart K3s to pick up the change to **/etc/rancher/k3s/registries.yaml**:
 
       ```bash
       systemctl restart k3s
@@ -274,14 +280,20 @@ This content provides a summary of how to install MicroK8s, a lightweight and sm
     microk8s.status --wait-ready
     ```
 
-5. The MicroK8s kubectl command is called microk8s.kubectl to prevent conflicts with an already install kubectl command. Assuming that kubectl is not installed, add this alias for microk8s.kubectl:
+5. Form the config file:
+   ```bash
+   cd .kube
+   microk8s config > config
+    ```
+
+6. The MicroK8s kubectl command is called microk8s.kubectl to prevent conflicts with an already install kubectl command. Assuming that kubectl is not installed, add this alias for microk8s.kubectl:
 
     ```bash
     echo 'alias kubectl=microk8s.kubectl' >> ~/.bash_aliases
     source ~/.bash_aliases
     ```
 
-6. Choose the image registry types: remote image registry or edge cluster local registry. Image registry is the place that will hold the agent image and agent cronjob image. 
+7. Choose the image registry types: remote image registry or edge cluster local registry. Image registry is the place that will hold the agent image and agent cronjob image. 
 
 - [Remote image registry](#remote-image-registry)
 - [Setup edge cluster local image registry for MicroK8s](#microk8s-local-image-registry-setup)
