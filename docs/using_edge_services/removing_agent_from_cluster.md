@@ -2,7 +2,7 @@
 
 copyright:
 years: 2022 - 2024
-lastupdated: "2024-06-07"
+lastupdated: "2024-07-29"
 title: "Removing the agent from an edge cluster"
 
 parent: Edge clusters
@@ -33,7 +33,12 @@ To unregister an edge cluster and remove the {{site.data.keyword.ieam}} agent fr
 2. Export your Horizon exchange user credentials:
 
    ```bash
-   export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
+   export HZN_ORG_ID=<your-exchange-organization>
+   export HZN_EXCHANGE_USER_AUTH=<authentication string>
+   export HZN_EXCHANGE_URL= # example http://open-horizon.lfedge.iol.unh.edu:3090/v1
+   export HZN_FSS_CSSURL= # example http://open-horizon.lfedge.iol.unh.edu:9443/
+   export HZN_AGBOT_URL= # example http://open-horizon.lfedge.iol.unh.edu:3111
+   export HZN_FDO_SVC_URL= # example http://open-horizon.lfedge.iol.unh.edu:9008/api
    ```
    {: codeblock}
 

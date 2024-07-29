@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2020 - 2024
-lastupdated: "2024-03-01"
+lastupdated: "2024-07-29"
 title: "Bulk agent install"
 
 parent: Edge devices info
@@ -38,7 +38,12 @@ Use the bulk installation process to set up multiple edge devices of similar typ
 
    ```bash
    export AGENT_TAR_FILE=agentInstallFiles-<edge-device-type>.tar.gz
-   export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
+   export HZN_ORG_ID=<your-exchange-organization>
+   export HZN_EXCHANGE_USER_AUTH=<authentication string>
+   export HZN_EXCHANGE_URL= # example http://open-horizon.lfedge.iol.unh.edu:3090/v1
+   export HZN_FSS_CSSURL= # example http://open-horizon.lfedge.iol.unh.edu:9443/
+   export HZN_AGBOT_URL= # example http://open-horizon.lfedge.iol.unh.edu:3111
+   export HZN_FDO_SVC_URL= # example http://open-horizon.lfedge.iol.unh.edu:9008/api
    ```
   {: codeblock}
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021 - 2023
-lastupdated: "2023-02-25"
+years: 2021 - 2024
+lastupdated: "2024-07-29"
 title: "Manual agent install"
 
 parent: Edge devices info
@@ -311,7 +311,15 @@ Follow these steps:
 
    ```bash
    eval export $(cat agent-install.cfg)
-   export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
+
+   # or 
+
+   export HZN_ORG_ID=<your-exchange-organization>
+   export HZN_EXCHANGE_USER_AUTH=<authentication string>
+   export HZN_EXCHANGE_URL= # example http://open-horizon.lfedge.iol.unh.edu:3090/v1
+   export HZN_FSS_CSSURL= # example http://open-horizon.lfedge.iol.unh.edu:9443/
+   export HZN_AGBOT_URL= # example http://open-horizon.lfedge.iol.unh.edu:3111
+   export HZN_FDO_SVC_URL= # example http://open-horizon.lfedge.iol.unh.edu:9008/api
    ```
    {: codeblock}
 

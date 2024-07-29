@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2020 - 2023
-lastupdated: "2023-01-23"
+years: 2020 - 2024
+lastupdated: "2024-07-29"
 
 ---
 
@@ -24,10 +24,12 @@ Note: These steps are the same for all edge device types (architectures).
 2. Log in to your edge device and set the same environment variables that you obtained in step 1:
 
    ```bash
-   export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
    export HZN_ORG_ID=<your-exchange-organization>
-   export HZN_FSS_CSSURL=https://<management-hub-ingress>/edge-css/
-   export HZN_EXCHANGE_URL=https://<management-hub-ingress>/edge-exchange/v1
+   export HZN_EXCHANGE_USER_AUTH=<authentication string>
+   export HZN_EXCHANGE_URL= # example http://open-horizon.lfedge.iol.unh.edu:3090/v1
+   export HZN_FSS_CSSURL= # example http://open-horizon.lfedge.iol.unh.edu:9443/
+   export HZN_AGBOT_URL= # example http://open-horizon.lfedge.iol.unh.edu:3111
+   export HZN_FDO_SVC_URL= # example http://open-horizon.lfedge.iol.unh.edu:9008/api
    ```
    {: codeblock}
 
