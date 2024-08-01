@@ -1,7 +1,7 @@
 ---
 copyright:
-years: 2020 - 2023
-lastupdated: "2023-07-01"
+years: 2020 - 2024
+lastupdated: "2024-07-29"
 title: "FDO agent install"
 
 parent: Edge devices info
@@ -51,9 +51,12 @@ Before you purchase FDO-enabled edge devices, you can test FDO support in {{site
 2. Contact your {{site.data.keyword.ieam}} administrator to get the values of these environment variables. (You need them in the next step.)
 
    ```bash
-   export HZN_ORG_ID=<exchange-org>
-   export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
-   export HZN_FDO_SVC_URL=https://<mgmt-hub-ingress>/edge-fdo-ocs/api
+   export HZN_ORG_ID=<your-exchange-organization>
+   export HZN_EXCHANGE_USER_AUTH=<authentication string>
+   export HZN_EXCHANGE_URL= # example http://open-horizon.lfedge.iol.unh.edu:3090/v1
+   export HZN_FSS_CSSURL= # example http://open-horizon.lfedge.iol.unh.edu:9443/
+   export HZN_AGBOT_URL= # example http://open-horizon.lfedge.iol.unh.edu:3111
+   export HZN_FDO_SVC_URL= # example http://open-horizon.lfedge.iol.unh.edu:9008/api
    export HZN_MGMT_HUB_CERT_PATH=<path-to-mgmt-hub-self-signed-cert>
    export CURL_CA_BUNDLE=$HZN_MGMT_HUB_CERT_PATH
    ```
@@ -73,9 +76,12 @@ If you have purchased FDO-enabled devices and want to incorporate them into your
    2. Contact your {{site.data.keyword.ieam}} administrator to get the values of these environment variables. (You need them in the next step.)
 
       ```bash
-      export HZN_ORG_ID=<exchange-org>
-      export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
-      export HZN_FDO_SVC_URL=https://<mgmt-hub-ingress>/edge-fdo-ocs/api
+      export HZN_ORG_ID=<your-exchange-organization>
+      export HZN_EXCHANGE_USER_AUTH=<authentication string>
+      export HZN_EXCHANGE_URL= # example http://open-horizon.lfedge.iol.unh.edu:3090/v1
+      export HZN_FSS_CSSURL= # example http://open-horizon.lfedge.iol.unh.edu:9443/
+      export HZN_AGBOT_URL= # example http://open-horizon.lfedge.iol.unh.edu:3111
+      export HZN_FDO_SVC_URL= # example http://open-horizon.lfedge.iol.unh.edu:9008/api
       export HZN_MGMT_HUB_CERT_PATH=<path-to-mgmt-hub-self-signed-cert>
       export CURL_CA_BUNDLE=$HZN_MGMT_HUB_CERT_PATH
       ```

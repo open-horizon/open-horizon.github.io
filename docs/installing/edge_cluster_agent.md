@@ -2,7 +2,7 @@
 
 copyright:
 years: 2022 - 2024
-lastupdated: "2024-07-15"
+lastupdated: "2024-07-29"
 title: "Installing the edge cluster agent"
 
 parent: Edge clusters
@@ -56,9 +56,12 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
 2. If you have not completed the steps in [Creating your API key](../hub/prepare_for_edge_nodes.md), do that now. This process creates an API key, locates some files, and gathers environment variable values that are needed when you set up edge nodes. Set the same environment variables for this edge cluster.  Set the `HZN_NODE_ID` of the edge cluster.
 
    ```bash
-   export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
    export HZN_ORG_ID=<your-exchange-organization>
-   export HZN_FSS_CSSURL=https://<management-hub-ingress>/edge-css/
+   export HZN_EXCHANGE_USER_AUTH=<authentication string>
+   export HZN_EXCHANGE_URL= # example http://open-horizon.lfedge.iol.unh.edu:3090/v1
+   export HZN_FSS_CSSURL= # example http://open-horizon.lfedge.iol.unh.edu:9443/
+   export HZN_AGBOT_URL= # example http://open-horizon.lfedge.iol.unh.edu:3111
+   export HZN_FDO_SVC_URL= # example http://open-horizon.lfedge.iol.unh.edu:9008/api
    export HZN_NODE_ID=<edge-cluster-node-name>
    ```
    {: codeblock}
@@ -248,9 +251,12 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on [K
 2. If you have not completed the steps in [Creating your API key](../hub/prepare_for_edge_nodes.md), do that now. This process creates an API key, locates some files, and gathers environment variable values that are needed when setting up edge nodes. Set the same environment variables on this edge cluster:
 
    ```bash
-   export HZN_EXCHANGE_USER_AUTH=iamapikey:<api-key>
    export HZN_ORG_ID=<your-exchange-organization>
-   export HZN_FSS_CSSURL=https://<ieam-management-hub-ingress>/edge-css/
+   export HZN_EXCHANGE_USER_AUTH=<authentication string>
+   export HZN_EXCHANGE_URL= # example http://open-horizon.lfedge.iol.unh.edu:3090/v1
+   export HZN_FSS_CSSURL= # example http://open-horizon.lfedge.iol.unh.edu:9443/
+   export HZN_AGBOT_URL= # example http://open-horizon.lfedge.iol.unh.edu:3111
+   export HZN_FDO_SVC_URL= # example http://open-horizon.lfedge.iol.unh.edu:9008/api
    ```
    {: codeblock}
 
