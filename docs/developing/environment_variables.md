@@ -1,7 +1,7 @@
 ---
 copyright:
-years: 2021 - 2023
-lastupdated: "2023-03-13"
+years: 2021 - 2024
+lastupdated: "2024-09-03"
 title: Environment variables
 description: ""
 
