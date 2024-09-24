@@ -57,37 +57,20 @@ services in the exchange.
     psql "host=$MY_IP dbname=postgres user=<myuser> password=''"
     ```
 
-- Add a configuration file on your development system at `/etc/horizon/exchange/config.json` with at minimum the following content (this is needed for the automated tests. Defaults and the full list of configuration variables are in `src/main/resources/config.json`):
-
-  ```json
-  {
-    "pekko": {
-      "loglevel": "DEBUG"
-    },
-    "api": {
-      "db": {
-        "jdbcUrl": "jdbc:postgresql://localhost/postgres",    // my local postgres db
-        "user": "myuser",
-        "password": ""
-      },
-      "root": {
-        "password": "myrootpw"
-      }
-    }
-  }
-  ```
-
-- If you want to run the `FrontEndSuite` test class `config.json` should also include `"frontEndHeader": "issuer"` directly after `email` under `root`.
-
-- Set the same exchange root password in your shell environment, for example:
+- The following minimum set of environment variables are required to run an Exchange instance. Additional configuration options are available via TypeSafe Config.
 
   ```bash
-  export EXCHANGE_ROOTPW=myrootpw
+  # Example
+  export EXCHANGE_DB_NAME=openhorizon
+  export EXCHANGE_DB_PW=mydbuserpasswd
+  export EXCHANGE_DB_USER=mydbuser
+  export EXCHANGE_ROOT_PW=myrootpasswd
   ```
 
 - If someone hasn't done it already, create the TLS private key and certificate:
 
   ```bash
+  # Example
   export EXCHANGE_KEY_PW=<pass-phrase>
   make gen-key
   ```
@@ -104,6 +87,7 @@ services in the exchange.
 - A convenience script `src/test/bash/primedb.sh` can be run to prime the DB with some exchange resources to use in manually testing:
 
 ```bash
+# Example
 export EXCHANGE_USER=<my-user-in-IBM-org>
 export EXCHANGE_PW=<my-pw-in-IBM-org>
 src/test/bash/primedb.sh
@@ -113,6 +97,7 @@ src/test/bash/primedb.sh
 - To locally test the exchange against an existing ICP cluster:
 
 ```bash
+# Example
 export ICP_EXTERNAL_MGMT_INGRESS=<icp-external-host>:8443
 ```
 
@@ -131,6 +116,7 @@ When at the `sbt` sub-command prompt:
 - (Optional) To include tests for IBM IAM platform key authentication:
 
 ```bash
+# Example
 export EXCHANGE_IAM_KEY=myiamplatformkey
 export EXCHANGE_IAM_EMAIL=myaccountemail@something.com
 export EXCHANGE_IAM_ACCOUNT=myibmcloudaccountid
@@ -160,18 +146,15 @@ Project uses Scapegoat. To use:
 ## Building and Running the Docker Container in Local Sandbox
 
 - Update the version in `src/main/resources/version.txt`
-- Add a second configuration file that is specific to running in the docker container:
-
-  ```bash
-  sudo mkdir -p /etc/horizon/exchange/docker
-  sudo cp /etc/horizon/exchange/config.json /etc/horizon/exchange/docker/config.json
-  ```
 
   - See [the Preconditions section](#preconditions) for the options for configuring postgresql to listen on an IP address that your exchange docker container will be able to reach. (Docker will not let it reach your host's `localhost` or `127.0.0.1` .)
-  - Set the `jdbcUrl` field in this `config.json` to use that IP address, for example:
+  - Set the `EXCHANGE_DB_...` environment variables to use that IP address, for example:
 
-    ```json
-    "jdbcUrl": "jdbc:postgresql://192.168.1.9/postgres",
+    ```bash
+    # Example
+    export EXCHANGE_DB_HOST=192.168.1.9
+    export EXCHANGE_DB_NAME=postgres
+    export EXCHANGE_DB_PORT=5432
     ```
 
 - To compile your local code, build the exchange container, and run it locally, run:
@@ -192,21 +175,6 @@ Project uses Scapegoat. To use:
 - **Note:** Swagger does not yet work in the local docker container.
 - At this point you probably want to run `docker rm -f amd64_exchange-api` to stop your local docker container so it stops listening on your 8080 port. Otherwise you may be very confused when you go back to running the exchange via `sbt`, but it doesn't seem to be executing your tests.
 
-### Notes About `config/exchange-api.tmpl`
-
-- The `config/exchange-api.tmpl` is a application configuration template much like `/etc/horizon/exchange/config.json`. The template file itself is required for building a Docker image, but the content is not. It is recommend that the default content remain as-is when building a Docker image.
-- The content layout of the template exactly matches that of `/etc/horizon/exchange/config.json`, and the content of the config.json can be directly copied-and-pasted into the template. This will set the default Exchange configuration to the hard-coded specifications defined in the config.json when a Docker container is created.
-- Alternatively, instead of using hard-coded values the template accepts substitution variables (default content of the `config/exchange-api.tmpl`). At container creation the utility `envsubst` will make a value substitution with any corresponding environmental variables passed into the running container by Docker, Kubernetes, OpenShift, or etc. For example:
-  - `config/exchange-api.tmpl`:
-    - "jdbcUrl": "$EXCHANGE_DB_URL"
-  - Kubernetes config-map (environment variable passed to container at creation):
-    - "$EXCHANGE_DB_URL=192.168.0.123"
-  - Default `/etc/horizon/exchange/config.json` inside running container:
-    - "jdbcUrl": "192.168.0.123"
-- It is possible to mix-and-match hard-coded values and substitution values in the template.
-- ***WARNING:*** `envsubst` will attempt to substitute any value containing a `$`, which will include the value of `api.root.password` if it is a hashed password. To prevent this either pass the environmental variable `ENVSUBST_CONFIG` with a garbage value, e.g. `ENVSUBST_CONFIG='$donotsubstituteanything'` (this will effectively disable `envsubst`), or pass it with a value containing the exact substitution variables `envsubst` is to substitute (`ENVSUBST_CONFIG='${EXCHANGE_DB_URL} ${EXCHANGE_DB_USER} ${EXCHANGE_DB_PW} ${EXCHANGE_ROOT_PW} ...'`), and of course you have to pass those environment variables values into the container.
-  - By default `$ENVSUBST_CONFIG` is set to `$ENVSUBST_CONFIG=''` this causes `envsubst` to use its default opportunistic behavior and will attempt to make any/all substitutions where possible.
-- It is also possible to directly pass a `/etc/horizon/exchange/config.json` to a container at creation using a bind/volume mount. This takes precedence over the content of the template `config/exchange-api.tmpl`. The directly passed config.json is still subject to the `envsubst` utility and the above warning still applies.
 
 ### Notes About the Docker Image Build Process
 
@@ -276,13 +244,13 @@ To build an exchange container with code that is targeted for a git branch:
 
 ### Putting Hashed Password in config.json
 
-The exchange root user password is set in the config file (`/etc/horizon/exchange/config.json`). But the password doesn't need to be clear text. You can hash the password with:
+The exchange root user password is set via the environment variable `EXCHANGE_ROOT_PW`. But the password doesn't need to be clear text. You can hash the password with:
 
 ```bash
 curl -sS -X POST -H "Authorization:Basic $HZN_ORG_ID/$HZN_EXCHANGE_USER_AUTH" -H "Content-Type: application/json" -d '{ "password": "PUT-PW-HERE" }' $HZN_EXCHANGE_URL/admin/hashpw | jq
 ```
 
-And then put that hashed value in `/etc/horizon/exchange/config.json` in the `api.root.password` field.
+And then set the environment variable `export EXCHANGE_ROOT_PW=hashedrootuserpassword` and restart the Exchange.
 
 ### Disabling Root User
 
@@ -300,37 +268,36 @@ If you want to reduce the attack surface of the exchange, you can disable the ex
   hzn exchange user setadmin -u "root/root:PUT-ROOT-PW-HERE" -o PUT-IBM-CLOUD-ORG-HERE PUT-USER-HERE true
   ```
 
-Now you can disable root by setting `api.root.enabled` to `false` in `/etc/horizon/exchange/config.json`.
+Now you can disable root by setting the environment variable `export EXCHANGE_ROOT_ENABLED=false` or unsetting the environment variable `unset EXCHANGE_ROOT_PW`.
 
 ## Using TLS With The Exchange
 
 - You need a PKCIS #12 cryptographic store (.pk12). https://en.wikipedia.org/wiki/PKCS_12
   - See Makefile targets `target/localhost.crt` (line 236), `/etc/horizon/exchange/localhost.p12` (line 243), and `truststore` (line 250) for a skeleton to use with OpenSSL.
   - OpenSSL is used for the creation of (1) self-signed certificate stating the application server is who it says it is, (2) the server's private key, and (3) the PKCS #12 which is just a portable secure store for everything.
-  - The PKCS #12 is password protected. Set the environmental variable `EXCHANGE_TRUST_PW` when using the Makefile.
+  - The PKCS #12 is password protected.
     - Set `export EXCHANGE_TRUST_PW=` when wishing to not have a password on the PKCS #12
-- Set `api.tls.truststore` and `api.tls.password` in the Exchange's `/etc/horizon/echange/config.json` file.
+- Set the environement variables `EXCHANGE_TLS_PASSWORD` and `EXCHANGE_TLS_TRUSTSTORE`
+  - ```bash
+    # Example
+    export EXCHANGE_TLS_PASSWORD=mytruststorepassword
+    export EXCHANGE_TLS_TRUSTSTORE=/etc/horizon/exchange/localhost.p12
+    ```
   - `truststore` expects the absolute (full) path to your intended PCKS #12 as a string.
     - Setting this is the mechanism by which the Exchange knows to attempt to set up TLS in the application server.
     - Use `"truststore": null` to disable.
   - `password` expects the PKCS #12's password.
     - The Exchange will throw an error and self terminate on start if this password is not set or set `null`.
-    - `api.tls.password` defaults to `null`.
-    - When using a PKCS #12 that does not have a set password, set `api.tls.password` to `"password": "",` in the `/etc/horizon/exchange/config.json`.
-  - See Makefile target `/etc/horizon/exchange/config-https.json` (line 201) for an idea.
+    - `EXCHANGE_TLS_PASSWORD` defaults to `null`.
+    - When using a PKCS #12 that does not have a set password, set the environment variable `export EXCHANGE_TLS_PASSWORD=""` to an empty string.
 - The default ports are `8080` for unencrypted traffic and `8083` for Encrypted.
-  - These can be adjusted in the Exchange's `/etc/horizon/echange/config.json` file.
-  - `api.service.portEncrypted` for changing the port listening for encrypted traffic.
-  - `api.service.port` for changing the port listening for unencrypted traffic.
-  - See Makefile target `/etc/horizon/exchange/config-https.json` (line 201) for an idea.
+  - These can be adjusted via the environment variables `EXCHANGE_PEKKO_HTTP_PORT` and `EXCHANGE_PEKKO_HTTPS_PORT`.
   - The Exchange is capable of hosting both HTTP and HTTPS traffic at the same time as well as mutually exclusively one. Freedom to mix-and-match.
     - HTTP and HTTPS are required to run on different ports. The Exchange always defaults to HTTP exclusively when in conflict.
-    - If ports are manually undefined in the Exchange's `/etc/horizon/echange/config.json` file then HTTP on port `8080` is defaulted.
+    - If ports are manually undefined in the Exchange's HTTP on port `8080` is defaulted.
   - The Exchange does not support mixing HTTP and HTTPS traffic on either port.
-- Only `TLSv1.3` and `TLSv1.2` HTTPS traffic is supported by the Exchange with TLS enabled.
-  - `TLS_AES_256_GCM_SHA384` is the only supported TLSv1.3 cipher in the Exchange.
-  - The `TLSv1.3` cipher `TLS_CHACHA20_POLY1305_SHA256` is available starting in Java 14.
-  - The supported ciphers for `TLSv1.2` are `TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384` and `TLS_DHE_RSA_WITH_AES_256_GCM_SHA384`.
+- Only `TLSv1.3` is supported by the Exchange with TLS enabled.
+  - `TLS_AES_256_GCM_SHA384` and `TLS_CHACHA20_POLY1305_SHA256` are the only supported TLSv1.3 ciphers in the Exchange.
 - [Optional] When using HTTPS with the Exchange the PostgreSQL database can also be configured with TLS turned on.
   - The Exchange does not require an SSL enabled PostgreSQL database to function with TLS enabled.
   - See https://www.postgresql.org/docs/13/runtime-config-connection.html#RUNTIME-CONFIG-CONNECTION-SSL for more information.
@@ -343,178 +310,6 @@ Now you can disable root by setting `api.root.enabled` to `false` in `/etc/horiz
 - See the Makefile target chain `target/docker/.run-docker-icp-https` (line 272) for idea of a running Exchange and database in docker containers using TLS.
 - Do to technical limitations the Swagger page will only refer to the Exchange's HTTPS traffic port.
 
-## Configuration Parameters
-
-`src/main/resources/config.json` is the default configuration file for the Exchange. This file is bundled in the Exchange jar. To run the exchange server with different values, copy this to `/etc/horizon/exchange/config.json`. In your version of the config file, you only have to set what you want to override.
-
-### pekko
-
-Pekko Actor: https://pekko.apache.org/docs/pekko/current/general/configuration-reference.html#pekko-actor
-</br>
-Pekko-Http: https://pekko.apache.org/docs/pekko-http/current/configuration.html
-</br>
-Log Level: http://logback.qos.ch/apidocs/ch/qos/logback/classic/Level.html
-
-| Parameter Name | Default Value  | Description |
-|----------------|----------------|-------------|
-| loglevel       | `"INFO"`       |             |
-
- - #### pekko.coordinated-shutdown
-
-   | Parameter Name                | Default Value | Description                                                                    |
-   |-------------------------------|---------------|--------------------------------------------------------------------------------|
-   | phases.service-unbind.timeout | `"60s"`       | Number of seconds to let in-flight requests complete before exiting the server |
-
- - #### pekko.http.parsing
-
-   | Parameter Name         | Default Value | Description |
-   |------------------------|---------------|-------------|
-   | max-header-name-length | `128`         |             |
-
- - #### pekko.http.server
-
-   | Paramater Name   | Default Value | Description |
-   |------------------|---------------|-------------|
-   | backlog          | `100`         |             |
-   | bind-timeout     | `"1s"`        |             |
-   | idle-timeout     | `"60s"`       |             |
-   | linger-timeout   | `"1m"`        |             |
-   | max-connections  | `1024`        |             |
-   | pipelining-limit | `1`           |             |
-   | request-timeout  | `"45s"`       |             |
-   | server-header    | `""`          |             |
-
-### pekko-http-cors
-
-https://pekko.apache.org/docs/pekko-http/current/configuration.html
-
-| Parameter Name              | Default Value                                     | Description                                                              |
-|-----------------------------|---------------------------------------------------|--------------------------------------------------------------------------|
-| allow-credentials           | `true`                                            |                                                                          |
-| allow-generic-http-requests | `true`                                            | Do not apply `Origin` header check to non-preflight (`OPTIONS`) requests |
-| allowed-headers             | `["*"]`                                           |                                                                          |
-| allowed-methods             | `["DELETE","GET","OPTIONS","PATCH","POST","PUT"]` |                                                                          |
-| allowed-origins             | `["*"]`                                           |                                                                          |
-| exposed-headers             | `["*"]`                                           |                                                                          |
-| max-age                     | `0s`                                              |                                                                          |
-
-
-### api.acls
-
-| Parameter Name | Description       |
-|----------------|-------------------|
-| AdminUser      |                   |
-| Agbot          |                   |
-| Anonymous      | Not actually used |
-| HubAdmin       |                   |
-| Node           |                   |
-| SuperUser      |                   |
-| User           |                   |
-
-### api.akka [DEPRECATED]
-
-### api.cache
-
-| Parameter Name         | Description                                                     |
-|------------------------|-----------------------------------------------------------------|
-| authDbTimeoutSeconds   | Timeout for db access for critical auth info when cache missing |
-| IAMusersMaxSize        | The users that are backed by IAM users                          |
-| IAMusersTtlSeconds     |                                                                 |
-| idsMaxSize             | Includes: local exchange users, nodes, agbots (all together)    |
-| idsTtlSeconds          |                                                                 |
-| resourcesMaxSize       | Each of: users, agbots, services, patterns, policies            |
-| resourcesTtlSeconds    |                                                                 |
-| type                   | Currently guava is the only option                              |
-
-### api.db
-
-| Parameter Name               | Description                                                          |
-|------------------------------|----------------------------------------------------------------------|
-| acquireIncrement             |                                                                      |
-| driverClass                  |                                                                      |
-| idleConnectionTestPeriod     | In seconds; 0 disables                                               |
-| initialPoolSize              |                                                                      |
-| jdbcUrl                      | The back-end db the exchange uses                                    |
-| maxConnectionAge             | In seconds; 0 is infinite                                            |
-| maxIdleTime                  | In seconds; 0 is infinite                                            |
-| maxIdleTimeExcessConnections | In seconds; 0 is infinite; culls connections down to the minPoolSize |
-| maxPoolSize                  |                                                                      |
-| maxStatementsPerConnection   | 0 disables; prepared statement caching per connection                |
-| minPoolSize                  |                                                                      |
-| numHelperThreads             |                                                                      |
-| password                     |                                                                      |
-| queueSize                    | -1 for unlimited, 0 to disable                                       |
-| testConnectionOnCheckin      |                                                                      |
-| upgradeTimeoutSeconds        |                                                                      |
-| user                         |                                                                      |
-
-#### api.defaults
-
-- ##### api.defaults.businessPolicy
-
-  | Parameter Name             | Description                                       |
-  |----------------------------|---------------------------------------------------|
-  | check_agreement_status     |                                                   |
-  | missing_heartbeat_interval | Used if the service.nodeHealth section is omitted |
-
-- ##### api.defaults.msgs
-
-  | Parameter Name                | Description                                                            |
-  |-------------------------------|------------------------------------------------------------------------|
-  | expired_msgs_removal_interval | Number of seconds between deletions of expired node and agbot messages |
-
-- ##### api.defaults.pattern
-
-  | Parameter Name             | Description                                        |
-  |----------------------------|----------------------------------------------------|
-  | missing_heartbeat_interval | Used if the services.nodeHealth section is omitted |
-  | check_agreement_status     |                                                    |
-
-#### api.limits
-
-| Parameter Name         | Description                                                                                                                 |
-|------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| maxAgbots              | Maximum number of agbots 1 user is allowed to create, 0 for unlimited                                                       |
-| maxAgreements          | Maximum number of agreements 1 node or agbot is allowed to create, 0 for unlimited                                          |
-| maxBusinessPolicies    | Maximum number of business policies 1 user is allowed to create, 0 for unlimited                                            |
-| maxManagementPolicies  | Maximum number of management policies 1 user is allowed to create, 0 for unlimited                                          |
-| maxMessagesInMailbox   | Maximum number of msgs currently in 1 node or agbot mailbox (the sending side is handled by rate limiting), 0 for unlimited |
-| maxNodes               | Maximum number of nodes 1 user is allowed to create, 0 for unlimited                                                        |
-| maxPatterns            | Maximum number of patterns 1 user is allowed to create, 0 for unlimited                                                     |
-| maxServices            | Maximum number of services 1 user is allowed to create, 0 for unlimited                                                     |
-
-#### api.logging [DEPRECATED]
-
-#### api.resourceChanges
-
-| Parameter Name     | Description                                                                                                                                                                                               |
-|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| cleanupInterval    | Number of seconds between pruning the resourcechanges table in the db of expired changes - 3600 is 1 hour                                                                                                 |
-| maxRecordsCap      | Maximum number of records the notification framework route will return                                                                                                                                    |
-| ttl                | Number of seconds to keep the history records of resource changes (14400 is 4 hours). When agents miss 1 or more heartbeats, they reset querying the /changes route, so they do not need very old entries |
-
-#### api.root
-
-| Parameter Name   | Description                                            |
-|------------------|--------------------------------------------------------|
-| enabled          | If set to false it will not honor the root credentials |
-| password         | Set this in your own version of this config file       |
-
-#### api.service
-
-| Parameter Name                                 | Description            |
-|------------------------------------------------|------------------------|
-| host                                           |                        |
-| port                                           | Services HTTP traffic  |
-| portEncrypted                                  | Services HTTPS traffic |
-| shutdownWaitForRequestsToComplete [DEPRECATED] | [DEPRECATED]           |
-
-#### api.tls
-
-| Parameter Name | Description                                                                                                |
-|----------------|------------------------------------------------------------------------------------------------------------|
-| password       | Truststore's password                                                                                      |
-| truststore     | Absolute path and name of your pkcs12 (.p12) truststore that contains your tls certificate and private key |
 
 ## Todos that may be done in future versions
 
