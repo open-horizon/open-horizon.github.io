@@ -1,7 +1,7 @@
 ---
 copyright:
-years: 2021 - 2023
-lastupdated: "2023-02-25"
+years: 2021 - 2024
+lastupdated: "2024-09-27"
 layout: page
 title: "Quick Start"
 description: "A guide to get you using Open Horizon in minutes."
@@ -19,7 +19,7 @@ Open Horizon allows you to install individual tools like the Management Hub cont
 
 ### All-in-one installation instructions
 
-To install a simple, developer-friendly version of [all the services on one device](docs/mgmt-hub/docs/index.md), run the following one-liner as `root` on an x86_64 machine running Ubuntu 18.04 (see [all supported environments](docs/installing/adding_devices.md#suparch-horizon)):
+To install a simple, developer-friendly version of [all the services on one device](docs/mgmt-hub/docs/index.md), run the following one-liner as `root` on an x86_64 machine running Ubuntu 24 (see [all supported environments](docs/installing/adding_devices.md#suparch-horizon)):
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/open-horizon/devops/master/mgmt-hub/deploy-mgmt-hub.sh | bash
