@@ -15,11 +15,21 @@
 
 # Contributing to Open Horizon pages
 
-To visit this Open Horizon documentation site visit [open-horizon.github.io](https://open-horizon.github.io/)
+To visit the Open Horizon documentation site, go to [open-horizon.github.io](https://open-horizon.github.io/)
 
-If you would like to contribute content, read the following documentation for helpful information and guidelines.
+If you would like to contribute to the project, read the following documentation for helpful information and guidelines.
 
-We appreciate and recognize all contributors.
+## How to contribute to Open Horizon
+
+All content, artwork, and code is contained in GitHub repositories.  To see what assistance we need, look for open GitHub issues that have not been assigned to someone already.  If you see one that you would like to work on, please add a comment to that issue and try to `@mention` the person who opened the issue to let them know of your interest.  Do not begin working on an issue unless and until it has been assigned to you.  Likewise, do not submit a Pull Request (code fix or submission) unless it is tied to an existing open issue.
+
+More details can be found on the following pages:
+
+* [Contribution Guidelines](https://github.com/open-horizon/.github/blob/master/CONTRIBUTING.md)
+* [The mechanics of working on an issue](https://open-horizon.github.io/common-requests/contribute/)
+* [Chat with the project team and ask any questions](https://chat.lfx.linuxfoundation.org/#/welcome)
+
+We appreciate and recognize all Contributors.
 
 # Table of Contents
 
