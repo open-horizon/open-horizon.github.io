@@ -28,6 +28,7 @@ More details can be found on the following pages:
 * [Contribution Guidelines](https://github.com/open-horizon/.github/blob/master/CONTRIBUTING.md)
 * [The mechanics of working on an issue](https://open-horizon.github.io/common-requests/contribute/)
 * [Chat with the project team and ask any questions](https://chat.lfx.linuxfoundation.org/#/welcome)
+* [List all unassigned and open issues labelled "Good First Issue"](https://github.com/search?type=issues&q=org%3Aopen-horizon+org%3Aopen-horizon-services+label%3A%22good+first+issue%22+is%3Aopen+no%3Aassignee)
 
 We appreciate and recognize all Contributors.
 
