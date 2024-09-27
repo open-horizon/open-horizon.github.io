@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2020 - 2024
-lastupdated: "2024-04-08"
+lastupdated: "2024-09-27"
 title: Container Registry
 description: ""
 
@@ -55,7 +55,7 @@ These also serve as examples of how you can use any private image registry with 
 2. Determine if a default route for the {{site.data.keyword.open_shift}} image registry has been create such that it is accessible from outside of the cluster:
 
    ```bash
-   oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}'
+   oc get route default-route -n openshift-image-registry --template='\{\{ .spec.host \}\}'
    ```
    {: codeblock}
 
@@ -69,7 +69,7 @@ These also serve as examples of how you can use any private image registry with 
 3. Retrieve the repository route name that you need to use:
 
    ```bash
-   export OCP_DOCKER_HOST=`oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}'`
+   export OCP_DOCKER_HOST=`oc get route default-route -n openshift-image-registry --template='\{\{ .spec.host \}\}'`
    ```
    {: codeblock}
 

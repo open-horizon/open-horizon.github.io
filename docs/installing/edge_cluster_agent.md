@@ -2,7 +2,7 @@
 
 copyright:
 years: 2022 - 2024
-lastupdated: "2024-07-29"
+lastupdated: "2024-09-27"
 title: "Installing the edge cluster agent"
 
 parent: Edge clusters
@@ -84,7 +84,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
 5. Determine whether a default route for the {{site.data.keyword.open_shift}} image registry has been created so that it is accessible from outside of the cluster:
 
    ```bash
-   oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}'
+   oc get route default-route -n openshift-image-registry --template='\{\{ .spec.host \}\}'
    ```
    {: codeblock}
 
@@ -98,7 +98,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
 6. Retrieve the repository route name that you need to use:
 
    ```bash
-   export OCP_IMAGE_REGISTRY=`oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}'`
+   export OCP_IMAGE_REGISTRY=`oc get route default-route -n openshift-image-registry --template='\{\{ .spec.host \}\}'`
    ```
    {: codeblock}
 
