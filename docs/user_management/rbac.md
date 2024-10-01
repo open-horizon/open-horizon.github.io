@@ -2,7 +2,7 @@
 
 copyright:
 years: 2019 - 2024
-lastupdated: "2024-09-27"
+lastupdated: "2024-10-01"
 title: "Role-based access control"
 
 parent: Security
