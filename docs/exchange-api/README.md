@@ -1,7 +1,7 @@
 ---
 copyright:
-years: 2022 - 2023
-lastupdated: "2023-03-14"
+years: 2022 - 2024
+lastupdated: "2024-10-08"
 layout: page
 title: "Exchange API Server"
 description: "Open Horizon Exchange API Documentation"
@@ -276,10 +276,9 @@ Now you can disable root by setting `api.root.enabled` to `false` in `/etc/horiz
     - HTTP and HTTPS are required to run on different ports. The Exchange always defaults to HTTP exclusively when in conflict.
     - If ports are manually undefined in the Exchange's `/etc/horizon/echange/config.json` file then HTTP on port `8080` is defaulted.
   - The Exchange does not support mixing HTTP and HTTPS traffic on either port.
-- Only `TLSv1.3` and `TLSv1.2` HTTPS traffic is supported by the Exchange with TLS enabled.
+- Only `TLSv1.3` HTTPS traffic is supported by the Exchange with TLS enabled.
   - `TLS_AES_256_GCM_SHA384` is the only supported TLSv1.3 cipher in the Exchange.
   - The `TLSv1.3` cipher `TLS_CHACHA20_POLY1305_SHA256` is available starting in Java 14.
-  - The supported ciphers for `TLSv1.2` are `TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384` and `TLS_DHE_RSA_WITH_AES_256_GCM_SHA384`.
 - [Optional] When using HTTPS with the Exchange the PostgreSQL database can also be configured with TLS turned on.
   - The Exchange does not require an SSL enabled PostgreSQL database to function with TLS enabled. 
   - See https://www.postgresql.org/docs/13/runtime-config-connection.html#RUNTIME-CONFIG-CONNECTION-SSL for more information.
