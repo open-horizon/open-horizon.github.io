@@ -2,7 +2,7 @@
 
 copyright:
 years: 2021 - 2024
-lastupdated: "2024-10-01"
+lastupdated: "2024-10-08"
 title: "Security and privacy"
 
 parent: Security
@@ -87,7 +87,7 @@ The {{site.data.keyword.ieam}} management hub is a centralized service. Centrali
 {: #standards}
 
 The following security standards are used within {{site.data.keyword.ieam}}:
-* TLS 1.2 (HTTPS) is used for encryption of data in transit to and from the management hub.
+* TLS 1.3 (HTTPS) is used for encryption of data in transit to and from the management hub.
 * AES 256-bit encryption is used for data in transit, specifically the messages that flow over the secure control plane.
 * 2048-bit RSA key pairs are used for data in transit, specifically the AES 256 symmetric key that flows over the secure control plane.
 * RSA keys provided by a user to sign container deployment configurations when using the **hzn exchange service publish** command.
