@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2020 - 2022
-lastupdated: "2022-06-24"
+years: 2020 - 2024
+lastupdated: "2024-10-15"
 title: "Post-installation"
 
 parent: Install Open Horizon
@@ -33,7 +33,17 @@ nav_order: 3
 ## Post installation configuration
 {: #postconfig}
 
-The following process must run on a host that supports installation of the **hzn** CLI, which currently can be installed on a Debian / apt based Linux, amd64 Red Hat / rpm Linux, or {{site.data.keyword.macOS_notm}} host. These steps use the same media downloaded from PPA in the Installation verification section.
+At the end of a successful installation, credentials and secrets will be shown once on the screen.  Administrators, please capture this information and save it for future use.  There is no way to recover this.
+
+For future users, prepare a file named `agent-install.cfg` and populate it with the following contents, substituting `${HZN_LISTEN_IP}` and `${HZN_TRANSPORT}` with their values.  This further assumes you are using the default port numbers.
+
+```text
+HZN_EXCHANGE_URL=${HZN_TRANSPORT}://${HZN_LISTEN_IP}:3090/v1
+HZN_FSS_CSSURL=${HZN_TRANSPORT}://${HZN_LISTEN_IP}:9443/
+HZN_AGBOT_URL=${HZN_TRANSPORT}://${HZN_LISTEN_IP}:3111
+HZN_SDO_SVC_URL=${HZN_TRANSPORT}://${HZN_LISTEN_IP}:9008/api
+HZN_FDO_SVC_URL=${HZN_TRANSPORT}://${HZN_LISTEN_IP}:9008/api
+```
 
 ## What's Next
 
