@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021 - 2022
-lastupdated: "2022-05-31"
+years: 2021 - 2024
+lastupdated: "2024-10-15"
 title: "Prerequisites"
 
 parent: Install Open Horizon
@@ -26,19 +26,23 @@ You must install and configure a [management hub](../hub/overview.md) before you
 {: #sum}
 
 * This content describes the steps to deploy the following components.
-  * {{site.data.keyword.edge_notm}} Management Hub
-  * {{site.data.keyword.edge_notm}} exchange API
-  * {{site.data.keyword.edge_notm}} agbot
-  * {{site.data.keyword.edge_notm}} Cloud Sync Service (CSS)
-  * {{site.data.keyword.edge_notm}} [commandline interface](../cli/index.md)
-  * {{site.data.keyword.edge_notm}} Secure Device Onboarding (SDO)
+  * {{site.data.keyword.edge_notm}} Exchange API.
+  * {{site.data.keyword.edge_notm}} Agreement Bot (AgBot).
+  * {{site.data.keyword.edge_notm}} Cloud Sync Service (CSS).
+  * {{site.data.keyword.edge_notm}} FIDO Device Onboard (FDO).
+  * {{site.data.keyword.edge_notm}} Secrets Manager.
 
 **Note:** Upgrade from previous versions of {{site.data.keyword.edge_notm}} is not supported.
 
 ## Prerequisites
 {: #prereq}
 
+Ensure you are using a Debian-based Linux distribution such as Ubuntu 20.04 or 22.04 LTS and running on an x86-based micro-architecture. The installation can run on the bare hardware or in a VM.  The Hub **cannot** run on arm64-based hardware.
+
+For installation, you will need to become root, ex. `sudo -i`
+
+Ensure that you know the public or network facing IP address for the local network that other machines will use to connect to the Management Hub. We will set that IP address as `HZN_LISTEN_IP`. If you do not set this in advance, other machines will not be able to connect to the hub.
 
 ## What's Next
 
-Continue setting up your new management hub by performing the steps in [post installation](post_install.md).
+Continue setting up your new management hub by performing the steps in [Install {{site.data.keyword.ieam}}](online_installation.md).

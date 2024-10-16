@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021 - 2023
-lastupdated: "2023-02-17"
+years: 2021 - 2024
+lastupdated: "2024-10-15"
 title: "Gather edge node files"
 
 parent: Install Open Horizon
