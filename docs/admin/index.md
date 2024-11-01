@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2021
-lastupdated: "2021-02-20"
+years: 2024
+lastupdated: "2024-10-15"
 title: Administering functions
 description: Administrative functions that support an edge computing environment.
 
@@ -27,7 +27,6 @@ has_toc: false
 
 * [Multi-tenancy](multi_tenancy.md)
 * [Troubleshooting](troubleshooting.md)
-* [Data backup and recovery](backup_recovery.md)
 * [Monitoring edge nodes and services](monitoring.md)
 * [Accessing management hub logs](accessing_logs.md)
 {: childlinks}
