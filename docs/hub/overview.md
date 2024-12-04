@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2020 - 2022
-lastupdated: "2022-03-17"
+years: 2020 - 2024
+lastupdated: "2024-12-04"
 title: Management Hub
 
 nav_order: 8
@@ -85,5 +85,4 @@ In addition, {{site.data.keyword.ieam}} delivers AI tools for accelerated deep l
 
 ## What's next
 
-- [Sizing and system requirements](cluster_sizing.md)
-- [Installing the management hub](hub.md)
+* [Installing the management hub](hub.md)
