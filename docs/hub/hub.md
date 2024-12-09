@@ -1,7 +1,7 @@
 ---
 copyright:
-years: 2021 - 2023
-lastupdated: "2023-02-22"
+years: 2021 - 2024
+lastupdated: "2024-12-04"
 title: "Installing Management hub"
 
 nav_order: 1
@@ -24,7 +24,6 @@ has_toc: false
 ## Management hub installation overview
 Complete the management hub installation and configuration before starting the {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) node tasks.
 
-* [Sizing and system requirements](cluster_sizing.md)
 * [Configuration](configuration.md)
 * [Installation](installation.md)
   * [Install {{site.data.keyword.ieam}}](online_installation.md)
