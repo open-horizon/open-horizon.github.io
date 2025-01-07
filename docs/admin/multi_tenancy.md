@@ -2,8 +2,8 @@
 
 copyright:
 years: 2020 - 2023
-lastupdated: "2023-02-25"
-title: Multitenacy
+lastupdated: "2024-01-07"
+title: Multi-tenancy
 description: Software architecture in which a single instance of software runs on server and server multiplies tenants.
 
 parent: Administering functions
