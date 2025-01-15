@@ -1,14 +1,13 @@
 ---
 copyright:
 years: 2023 - 2025
-lastupdated: "2025-01-02"
+lastupdated: "2025-01-09"
 layout: page
 title: "Building a Release"
 description: "Open Horizon Release Documentation"
 
-nav_order: 6
-has_children: false
-has_toc: true
+parent: Release notes
+nav_order: 4
 ---
 
 {:new_window: target="blank"}
@@ -23,7 +22,7 @@ has_toc: true
 {: #releasedocs}
 
 <div align="left">
-  <img src="https://github.com/open-horizon/artwork/blob/master/color/open-horizon-color.png" alt="Badge" width="auto" height="50">
+  <img src="https://raw.githubusercontent.com/open-horizon/artwork/refs/heads/master/color/open-horizon-color.png" alt="Badge" width="auto" height="50">
   
 <h1 align="center">Building Open Horizon Releases</h1>
 
@@ -36,7 +35,7 @@ has_toc: true
   </a>
 </p>
 <p align="center">
-  This repository is dedicated to releasing Open Horizon components and tracking their versions across repositories.
+  The [repository](https://github.com/open-horizon/open-horizon-release) is dedicated to releasing Open Horizon components and tracking their versions across repositories.
 </p>
 </div>
 
