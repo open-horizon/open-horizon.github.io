@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2023 - 2025
-lastupdated: "2025-01-09"
+lastupdated: "2025-01-16"
 layout: page
 title: "Building a Release"
 description: "Open Horizon Release Documentation"
@@ -22,7 +22,7 @@ nav_order: 4
 {: #releasedocs}
 
 <div align="left">
-  <img src="https://raw.githubusercontent.com/open-horizon/artwork/refs/heads/master/color/open-horizon-color.png" alt="Badge" width="auto" height="50">
+  <img src="https://raw.githubusercontent.com/open-horizon/artwork/refs/heads/master/color/open-horizon-color.png" alt="logo" width="50" height="50">
   
 <h1 align="center">Building Open Horizon Releases</h1>
 
@@ -34,10 +34,8 @@ nav_order: 4
     <img src="https://img.shields.io/github/release-date/open-horizon/Open-Horizon-Release" alt="Release Date">
   </a>
 </p>
-<p align="center">
-  The [repository](https://github.com/open-horizon/open-horizon-release) is dedicated to releasing Open Horizon components and tracking their versions across repositories.
-</p>
 </div>
+The [repository](https://github.com/open-horizon/open-horizon-release) is dedicated to releasing Open Horizon components and tracking their versions across repositories.
 
 ## Table of Contents
 
