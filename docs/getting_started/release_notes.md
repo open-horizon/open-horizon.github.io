@@ -27,5 +27,5 @@ The following sections document new features, restrictions, and changes that are
 - {: child} [Known issues and limitations for {{site.data.keyword.ieam}}](./known_issues.md)
 - {: child} [Accessibility features](./accessibility.md)
 - {: child} [Conventions used in this document](./document_conventions.md)
-- {: child} [Building {{site.data.keyword.edge_notm}} Releases](/docs/release/docs/index.md)
+- {: child} [Building {{site.data.keyword.edge_notm}} Releases](/docs/release/docs/index)
 {:childlinks}
