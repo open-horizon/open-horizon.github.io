@@ -40,10 +40,6 @@ Use the bulk installation process to set up multiple edge devices of similar typ
    export AGENT_TAR_FILE=agentInstallFiles-<edge-device-type>.tar.gz
    export HZN_ORG_ID=<your-exchange-organization>
    export HZN_EXCHANGE_USER_AUTH=<authentication string>
-   export HZN_EXCHANGE_URL= # example http://open-horizon.lfedge.iol.unh.edu:3090/v1
-   export HZN_FSS_CSSURL= # example http://open-horizon.lfedge.iol.unh.edu:9443/
-   export HZN_AGBOT_URL= # example http://open-horizon.lfedge.iol.unh.edu:3111
-   export HZN_FDO_SVC_URL= # example http://open-horizon.lfedge.iol.unh.edu:9008/api
    ```
   {: codeblock}
 
@@ -125,7 +121,7 @@ Use the bulk installation process to set up multiple edge devices of similar typ
    1. Register the edge devices with a pattern:
 
       ```bash
-      pssh -h nodes.hosts -t 0 "bash -c \"tar -zxf /tmp/$AGENT_TAR_FILE agent-install.sh && sudo -s ./agent-install.sh -i . -u $HZN_EXCHANGE_USER_AUTH -p IBM/pattern-ibm.helloworld -w ibm.helloworld -o IBM -z /tmp/$AGENT_TAR_FILE 2>&1 >/tmp/agent-install.log \" "
+      pssh -h nodes.hosts -t 0 "bash -c \"tar -zxf /tmp/$AGENT_TAR_FILE agent-install.sh && sudo -s ./agent-install.sh -i . -O $HZN_ORG_ID -u $HZN_EXCHANGE_USER_AUTH -p IBM/pattern-ibm.helloworld -w ibm.helloworld -o IBM -z /tmp/$AGENT_TAR_FILE 2>&1 >/tmp/agent-install.log \" "
       ```
       {: codeblock}
 
@@ -141,7 +137,7 @@ Use the bulk installation process to set up multiple edge devices of similar typ
       ```bash
       echo '{ "properties": [ { "name": "nodetype", "value": "special-node" } ] }' > node-policy.json
       pscp -h nodes.hosts -e /tmp/pscp-errors node-policy.json /tmp
-      pssh -h nodes.hosts -t 0 "bash -c \"tar -zxf /tmp/$AGENT_TAR_FILE agent-install.sh && sudo -s ./agent-install.sh -i . -u $HZN_EXCHANGE_USER_AUTH -n /tmp/node-policy.json  -z /tmp/$AGENT_TAR_FILE 2>&1 >/tmp/agent-install.log \" "
+      pssh -h nodes.hosts -t 0 "bash -c \"tar -zxf /tmp/$AGENT_TAR_FILE agent-install.sh && sudo -s ./agent-install.sh -i . -O $HZN_ORG_ID -u $HZN_EXCHANGE_USER_AUTH -n /tmp/node-policy.json  -z /tmp/$AGENT_TAR_FILE 2>&1 >/tmp/agent-install.log \" "
       ```
       {: codeblock}
 
