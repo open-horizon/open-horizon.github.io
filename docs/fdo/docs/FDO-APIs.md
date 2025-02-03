@@ -1,7 +1,7 @@
 ---
 copyright:
-years: 2022 - 2023
-lastupdated: "2023-05-24"
+years: 2022 - 2025
+lastupdated: "2025-02-03"
 title: "FDO API guide"
 description: "FDO API detailed documentation"
 

@@ -1,7 +1,7 @@
 ---
 copyright:
-years: 2022 - 2024
-lastupdated: "2024-03-01"
+years: 2022 - 2025
+lastupdated: "2025-02-03"
 title: "FDO Protocol Reference"
 description: "FDO Protocol Reference Implementation Quick Start"
 
