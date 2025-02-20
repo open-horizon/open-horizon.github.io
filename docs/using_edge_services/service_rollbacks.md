@@ -1,8 +1,8 @@
 ---
 copyright:
-years: 2020 - 2023
-lastupdated: "2023-03-13"
-title: Updating an edge service with rollback
+years: 2020 - 2025
+lastupdated: "2025-02-20"
+title: Automatically updating an edge service with rollback
 description: ""
 
 parent: Edge services for devices
@@ -91,6 +91,8 @@ hzn deploycheck -h
 The {{site.data.keyword.ieam}} {{site.data.keyword.agbot}}s quickly detect the deployment pattern or deployment policy changes. The {{site.data.keyword.agbot}}s then reach out to each agent whose edge node is either registered to run the deployment pattern or is compatible with the updated deployment policy. The {{site.data.keyword.agbot}} and the agent coordinate to download the new containers, stop and remove the old containers, and start the new containers.
 
 As a result, your edge nodes that are either registered to run the updated deployment pattern or are compatible with the deployment policy quickly runs the new edge service version with the top priority value, regardless of where the edge node is geographically located.
+
+A complete example Deployment Policy is available in the [{{site.data.keyword.ieam}} GitHub repository CLI examples](https://github.com/open-horizon/anax/blob/master/cli/samples/business_policy.json).
 
 ## Viewing progress of new service version being rolled out
 {: #viewing_rollback_progress}
