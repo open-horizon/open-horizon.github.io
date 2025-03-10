@@ -1,10 +1,10 @@
 ---
 
 copyright:
-years: 2021 - 2023
-lastupdated: "2023-02-25"
+years: 2021 - 2025
+lastupdated: "2025-03-10"
 title: APIs
-description: ""
+description: "Index of Open Horizon OpenAPI documentation"
 
 nav_order: 7
 has_children: true
@@ -22,6 +22,8 @@ has_toc: false
 # APIs
 {: #edge_rest_apis}
 
+## Introduction
+
 {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) provides RESTful APIs for enabling components to collaborate, and to enable your organization's developers and users to control the components.
 {:shortdesc}
 
@@ -29,10 +31,14 @@ The {{site.data.keyword.ieam}} REST APIs are documented within the {{site.data.k
 
 For most users, the `hzn` command line interface (CLI) tool, which calls these APIs, is sufficient for completing most tasks. If you do use this tool, direct use of the API is unnecessary.
 
-* [Agent API](./agent_api.md)
-* [Agbot API](./agbot_api.md)
-* [Agbot User API](./agbot_secure_api.html)
-* [Exchange API](./exchange_swagger.html)
-* [MMS API](./mms_swagger.html)
-* [SDO API](./sdo_swagger.html)
-* [FDO API](./fdo_swagger.html)
+## Index of APIs
+
+* [Agent API](../anax/docs/api.md)
+  This document contains the {{site.data.keyword.horizon}} REST APIs for the {{site.data.keyword.horizon}} agent running on an edge node. The output of the APIs is in JSON compact format.
+* [Agbot API](../anax/docs/agreement_bot_api.md)
+  This document contains the {{site.data.keyword.horizon}} JSON APIs for the {{site.data.keyword.horizon}} system running an Agreement Bot. The output of the APIs is in JSON compact format.
+* [Exchange User API](../exchange-api/docs/openapi-3-user.json)
+* [Exchange Developer API](../exchange-api/docs/openapi-3-developer.json)
+* [MMS API](../anax/docs/mms_swagger.json)
+* [FDO API](../fdo/docs/FDO-APIs.md)
+  This page describes the FIDO Device Onboard (FDO) REST API interfaces.
