@@ -34,7 +34,6 @@ Review the following questions when you encounter an issue with {{site.data.keyw
 - [Does your published deployment pattern include all required services and versions?](#services_included)
 - [Troubleshooting tips specific to the {{site.data.keyword.open_shift_cp}} environment](#troubleshooting_icp)
 - [Troubleshooting node errors](#troubleshooting_node_errors)
-- [How to uninstall Podman on RHEL?](#uninstall_podman)
 - [Are you encountering HTTP error, while executing deploy-mgmt-hub.sh?](#deploy_mgmt_http_error)
 
 ## Are the currently released versions of the {{site.data.keyword.horizon}} packages installed?
@@ -403,36 +402,6 @@ This error occurs when docker encounters an error when it starts the service con
 
 2. A published port that is specified by the deployment configurations is not a valid port number. Port numbers must be a number in the range 1 -  65535.
 3. A volume name in the deployment configurations is not a valid file path. Volume paths must be specified by their absolute (not relative) paths.
-
-## How to uninstall Podman on RHEL?
-{: #uninstall_podman}
-
-If you currently have Podman installed since it is not yet supported you will need to remove Podman to install Docker on RHEL. Please follow these instructions for doing so to a clean state and ensure you have no other workloads on this device that requires the use of Podman. Podman is planned for future support in future {{site.data.keyword.edge_notm}} versions TBA.
-
-1. Uninstall Packages:
-
-   ```bash
-   yum remove buildah skopeo podman containers-common atomic-registries docker container-tools
-   ```
-   {: codeblock}
-
-2. Remove any left-over artifacts & files:
-
-   ```bash
-   rm -rf /etc/containers/* /var/lib/containers/* /etc/docker /etc/subuid* /etc/subgid*
-   ```
-   {: codeblock}
-
-3. Delete any associated container storage:
-
-   ```bash
-   cd ~ && rm -rf /.local/share/containers/
-   ```
-   {: codeblock}
-
-4. Install Docker by following the instructions for [Docker CENTOS Installation ](https://docs.docker.com/engine/install/centos/){:target="_blank"}{: .externalLink}.
-
-   NOTE: The latest version of Docker is not supported with RHEL 8 by Red Hat, however it is tested to be installable and runs with {{site.data.keyword.edge_notm}} on RHEL 8.
 
 ## Are you encountering HTTP error, while executing deploy-mgmt-hub.sh?
 {: #deploy_mgmt_http_error}
