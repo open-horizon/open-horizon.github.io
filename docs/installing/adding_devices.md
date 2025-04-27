@@ -1,8 +1,8 @@
 ---
 
-copyright:
-years: 2019 - 2024
-lastupdated: "2024-01-17"
+copyright: Contributors to the Open Horizon project
+years: 2019 - 2025
+lastupdated: "2025-04-23"
 title: "Preparing an edge device"
 
 parent: Edge devices info
@@ -26,27 +26,7 @@ The following instructions guide you through the process of installing the requi
 ## Supported architectures and operating systems
 {: #suparch-horizon}
 
-{{site.data.keyword.ieam}} supports architectures and operating systems with the following hardware architectures:
-
-- x86_64
-  - {{site.data.keyword.linux_bit_notm}} devices or virtual machines that run Ubuntu 24.x (noble), Ubuntu 22.x (jammy), Ubuntu 20.x (focal), Ubuntu 18.x (bionic), Debian 12 (bookworm), Debian 11 (bullseye), Debian 10 (buster), Debian 9 (stretch)
-  - {{site.data.keyword.rhel}} 8.1 - 8.5 (via Docker), 8.6 - 8.8 and 9.0 - 9.5 (via Podman 4.x).  See Notes.
-  - {{site.data.keyword.fedora}} Workstation 36 - 41
-  - CentOS 8.1 - 8.5 (via Docker)
-  - SuSE 15 SP2
-- ppc64le
-  - {{site.data.keyword.linux_ppc64le_notm}} devices or virtual machines that run Ubuntu 24.x (noble), Ubuntu 22.x (jammy), Ubuntu 20.x (focal) or Ubuntu 18.x (bionic)
-  - {{site.data.keyword.rhel}} 7.6 - 9.5
-- ARM (32-bit)
-  - {{site.data.keyword.linux_notm}} on ARM (32-bit), for example Raspberry Pi, running Raspberry Pi OS bookworm, bullseye or buster
-- ARM (64-bit)
-  - {{site.data.keyword.linux_notm}} on ARM (64-bit), for example NVIDIA Jetson Nano, TX1, or TX2, running Ubuntu 18.x (bionic)
-  - {{site.data.keyword.macOS_notm}} on ARM (64-bit) Apple Silicon M1 / M2
-- Mac (both {{site.data.keyword.intel}} and M1 / M2 )
-  - {{site.data.keyword.macOS_notm}}
-- s390x
-  - {{site.data.keyword.linux_notm}} on s390x devices or virtual machines that run Ubuntu 24.x (noble), Ubuntu 22.x (jammy), Ubuntu 20.x (focal), Ubuntu 18.x (bionic)
-  - {{site.data.keyword.rhel}} 8.1 - 8.5 (via Docker), 8.6 - 8.8 and 9.0 - 9.5 (via Podman 4.x).  See Notes.
+{{site.data.keyword.ieam}} supports architectures and operating systems with the  hardware architectures documented in [the agent-install requirements](https://open-horizon.github.io/docs/anax/docs/overview/#requirements).
 
 **Notes**:
 
