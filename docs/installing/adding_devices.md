@@ -2,7 +2,7 @@
 
 copyright: Contributors to the Open Horizon project
 years: 2019 - 2025
-lastupdated: "2025-04-23"
+lastupdated: "2025-04-28"
 title: "Preparing an edge device"
 
 parent: Edge devices info
@@ -26,7 +26,7 @@ The following instructions guide you through the process of installing the requi
 ## Supported architectures and operating systems
 {: #suparch-horizon}
 
-{{site.data.keyword.ieam}} supports architectures and operating systems with the  hardware architectures documented in [the agent-install requirements](https://open-horizon.github.io/docs/anax/docs/overview/#requirements).
+{{site.data.keyword.ieam}} supports architectures and operating systems with the  hardware architectures documented in [the agent-install requirements](../anax/docs/overview.md#requirements).
 
 **Notes**:
 
