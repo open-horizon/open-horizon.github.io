@@ -1,9 +1,9 @@
 ---
-
-copyright:
-years: 2021
-lastupdated: "2021-02-20"
-
+copyright: Contributors to the Open Horizon project
+years: 2025
+title: Uninstall
+description: Documentation for Uninstall
+lastupdated: 2025-05-03
 ---
 
 {:new_window: target="blank"}

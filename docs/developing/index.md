@@ -1,13 +1,12 @@
 ---
-
-copyright:
-years: 2021
-lastupdated: "2021-02-20"
-title: "Developing edge services"
-
+copyright: Contributors to the Open Horizon project
+years: 2025
+title: Developing edge services
+description: Documentation for Developing edge services
+lastupdated: 2025-05-03
 nav_order: 14
-has_children: true
-has_toc: false
+has_children: True
+has_toc: False
 ---
 
 {:new_window: target="blank"}

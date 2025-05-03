@@ -1,16 +1,14 @@
 ---
-
-copyright:
-years: 2020 - 2024
-lastupdated: "2024-07-17"
-title: "Installing a microk8s edge cluster"
-
-parent: Preparing an edge cluster
-grand_parent: Edge clusters
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
+title: Installing a microk8s edge cluster
+description: Documentation for Installing and configuring a microk8s edge cluster
+lastupdated: 2025-05-03
 nav_order: 2
-has_children: false
-has_toc: false
-
+parent: Preparing an edge cluster
+has_children: False
+has_toc: False
+grand_parent: Edge clusters
 ---
 
 {:new_window: target="blank"}

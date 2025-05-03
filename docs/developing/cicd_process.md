@@ -1,13 +1,12 @@
 ---
-copyright:
-years: 2020 - 2023
-lastupdated: "2023-02-26"
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
 title: CI-CD process
-description: ""
-
+description: Documentation for CI-CD process for edge services
+lastupdated: 2025-05-03
+nav_order: 2
 parent: Further reading for devices
 grand_parent: Developing edge services
-nav_order: 2
 ---
 
 {:new_window: target="blank"}

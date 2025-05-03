@@ -1,13 +1,12 @@
 ---
-copyright:
-years: 2022 - 2023
-lastupdated: "2023-04-26"
-layout: page
-title: "Exchange API Server"
-description: "Open Horizon Exchange API Documentation"
-
+copyright: Contributors to the Open Horizon project
+years: 2022 - 2025
+title: Exchange API Server
+description: Open Horizon Exchange API Documentation
+lastupdated: 2025-05-03
 nav_order: 3
 parent: Management Hub
+layout: page
 ---
 
 # Open Horizon Exchange Server and REST API

@@ -1,13 +1,12 @@
 ---
-
-copyright:
-years: 2020 - 2022
-lastupdated: "2022-03-17"
-title: "Updating the agent"
-
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
+title: Updating the agent
+description: Documentation for Updating the agent
+lastupdated: 2025-05-03
+nav_order: 3
 parent: Edge devices info
 grand_parent: Edge devices
-nav_order: 3
 ---
 
 {:new_window: target="blank"}

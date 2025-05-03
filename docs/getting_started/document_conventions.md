@@ -1,12 +1,11 @@
 ---
-
-copyright:
-years: 2020 - 2022
-lastupdated: "2022-06-14"
-title: "Conventions used in this document"
-
-parent: Release notes
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
+title: Conventions used in this document
+description: Documentation for Conventions used in this document
+lastupdated: 2025-05-03
 nav_order: 3
+parent: Release notes
 ---
 
 {:new_window: target="blank"}

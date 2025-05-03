@@ -1,12 +1,11 @@
 ---
-
-copyright:
-years: 2020 - 2023
-lastupdated: "2022-02-25"
-title: "Known issues and limitations"
-
-parent: Release notes
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
+title: Known issues and limitations
+description: Documentation for Known issues and limitations
+lastupdated: 2025-05-03
 nav_order: 1
+parent: Release notes
 ---
 
 {:new_window: target="blank"}

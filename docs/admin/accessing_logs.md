@@ -1,14 +1,12 @@
 ---
-
-copyright:
-years: 2020 - 2023
-lastupdated: "2023-02-18"
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
 title: Accessing logs
 description: Accessing management hub logs
-
+lastupdated: 2025-05-03
+nav_order: 5
 parent: Administering functions
 grand_parent: Administering
-nav_order: 5
 ---
 
 {:new_window: target="blank"}

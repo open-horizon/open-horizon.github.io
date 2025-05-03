@@ -1,14 +1,12 @@
 ---
-
-copyright:
+copyright: Contributors to the Open Horizon project
 years: 2021 - 2025
-lastupdated: "2025-03-10"
 title: APIs
-description: "Index of Open Horizon OpenAPI documentation"
-
+description: Index of Open Horizon OpenAPI documentation
+lastupdated: 2025-05-03
 nav_order: 7
-has_children: true
-has_toc: false
+has_children: True
+has_toc: False
 ---
 
 {:new_window: target="blank"}

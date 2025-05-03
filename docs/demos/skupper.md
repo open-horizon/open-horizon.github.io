@@ -1,14 +1,13 @@
 ---
-
-copyright: 
-years: 2024
-lastupdated: "2024-04-24"
-title: "Application-centric Connectivity demo"
-
+copyright: Contributors to the Open Horizon project
+years: 2025
+title: Application-centric Connectivity demo
+description: Documentation for Application-centric Connectivity demo
+lastupdated: 2025-05-03
 nav_order: 7
-has_children: false
-has_toc: false
-parent: "Demonstration videos and code"
+parent: Demonstration videos and code
+has_children: False
+has_toc: False
 ---
 
 {:new_window: target="blank"}

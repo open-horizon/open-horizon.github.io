@@ -1,13 +1,11 @@
 ---
-
-copyright:
-years: 2022
-lastupdated: "2022-06-14"
+copyright: Contributors to the Open Horizon project
+years: 2025
 title: hzn CLI
-description: ""
-
-parent: CLI
+description: Documentation for Installing the hzn CLI
+lastupdated: 2025-05-03
 nav_order: 1
+parent: CLI
 ---
 
 {:new_window: target="blank"}

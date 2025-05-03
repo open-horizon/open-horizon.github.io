@@ -1,13 +1,12 @@
 ---
-
-copyright:
-years: 2020 - 2023
-lastupdated: "2023-02-19"
-title: "Using patterns"
-
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
+title: Using patterns
+description: Documentation for Using patterns
+lastupdated: 2025-05-03
+nav_order: 2
 parent: Deploying edge services
 grand_parent: Using edge services
-nav_order: 2
 ---
 
 {:new_window: target="blank"}

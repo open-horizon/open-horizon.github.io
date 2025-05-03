@@ -1,13 +1,12 @@
 ---
-
-copyright:
-years: 2020 - 2022
-lastupdated: "2022-07-01"
-title: "Disaster recovery"
-
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
+title: Disaster recovery
+description: Documentation for Disaster recovery
+lastupdated: 2025-05-03
+nav_order: 5
 parent: Security
 grand_parent: Administering
-nav_order: 5
 ---
 
 {:new_window: target="blank"}

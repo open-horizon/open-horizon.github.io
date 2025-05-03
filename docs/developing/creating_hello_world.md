@@ -1,13 +1,12 @@
 ---
-copyright:
-years: 2020 - 2023
-lastupdated: "2023-03-13"
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
 title: Creating your own hello world for clusters
 description: To deploy a containerized edge service to an edge cluster, the first step is to build a Kubernetes Operator that deploys the containerized edge service in a Kubernetes cluster.
-
+lastupdated: 2025-05-03
+nav_order: 2
 parent: Edge services for clusters
 grand_parent: Developing edge services
-nav_order: 2
 ---
 
 {:shortdesc: .shortdesc}

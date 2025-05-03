@@ -1,13 +1,12 @@
 ---
-
 copyright: Contributors to the Open Horizon project
 years: 2019 - 2025
-lastupdated: "2025-04-28"
-title: "Preparing an edge device"
-
+title: Preparing an edge device
+description: Documentation for Preparing an edge device
+lastupdated: 2025-05-03
+nav_order: 1
 parent: Edge devices info
 grand_parent: Edge devices
-nav_order: 1
 ---
 
 {:new_window: target="blank"}

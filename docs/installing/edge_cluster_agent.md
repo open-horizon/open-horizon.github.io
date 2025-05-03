@@ -1,12 +1,11 @@
 ---
-
-copyright:
-years: 2022 - 2024
-lastupdated: "2024-09-27"
-title: "Installing the edge cluster agent"
-
-parent: Edge clusters
+copyright: Contributors to the Open Horizon project
+years: 2022 - 2025
+title: Installing the edge cluster agent
+description: Documentation for Installing the edge cluster agent
+lastupdated: 2025-05-03
 nav_order: 2
+parent: Edge clusters
 ---
 
 {:new_window: target="blank"}

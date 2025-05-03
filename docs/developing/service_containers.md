@@ -1,13 +1,12 @@
 ---
-copyright:
-years: 2020 - 2023
-lastupdated: "2023-03-13"
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
 title: Preparing to create an edge service
-description: ""
-
+description: Documentation for Preparing to create an edge service
+lastupdated: 2025-05-03
+nav_order: 1
 parent: Edge services for devices
 grand_parent: Developing edge services
-nav_order: 1
 ---
 
 {:new_window: target="blank"}

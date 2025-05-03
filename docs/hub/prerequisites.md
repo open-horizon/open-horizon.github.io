@@ -1,12 +1,11 @@
 ---
-
-copyright:
-years: 2021 - 2024
-lastupdated: "2024-10-15"
-title: "Prerequisites"
-
-parent: Install Open Horizon
+copyright: Contributors to the Open Horizon project
+years: 2021 - 2025
+title: Prerequisites
+description: Documentation for Install {{site.data.keyword.ieam}}
+lastupdated: 2025-05-03
 nav_order: 1
+parent: Install Open Horizon
 ---
 
 {:new_window: target="blank"}

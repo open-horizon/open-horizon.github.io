@@ -1,13 +1,12 @@
 ---
-
-copyright:
-years: 2020
-lastupdated: "2020-2-2"
+copyright: Contributors to the Open Horizon project
+years: 2025
 title: Monitoring
-
+description: Documentation for Monitoring
+lastupdated: 2025-05-03
+nav_order: 4
 parent: Administering functions
 grand_parent: Administering
-nav_order: 4
 ---
 
 {:new_window: target="blank"}

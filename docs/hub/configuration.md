@@ -1,13 +1,12 @@
 ---
-
-copyright:
-  years: 2020 - 2022
-lastupdated: "2022-07-06"
-title: "Configuration"
-
-grand_parent: Management Hub
-parent: Installing Management hub
+copyright: {'years': '2020 - 2022'}
+years: 2025
+title: Configuration
+description: Documentation for Configure {{site.data.keyword.ieam}}
+lastupdated: 2025-05-03
 nav_order: 2
+parent: Installing Management hub
+grand_parent: Management Hub
 ---
 
 {:new_window: target="blank"}

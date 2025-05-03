@@ -1,13 +1,12 @@
 ---
-copyright:
-years: 2021 - 2023
-lastupdated: "2023-02-25"
+copyright: Contributors to the Open Horizon project
+years: 2021 - 2025
 title: Best Practices
-description: ""
-
+description: Documentation for Edge-native development best practices
+lastupdated: 2025-05-03
+nav_order: 1
 parent: Further reading for clusters
 grand_parent: Developing edge services
-nav_order: 1
 ---
 
 {:new_window: target="blank"}

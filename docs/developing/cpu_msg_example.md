@@ -1,14 +1,13 @@
 ---
-
-copyright:
-yyears: 2020 - 2022
-lastupdated: "2022-03-17"
+copyright: Contributors to the Open Horizon project
+years: 2025
 title: CPU to Apache Kafka service
 description: This example collects CPU load percentage information to send to Apache Kafka. Use this example to help you develop your own edge applications that send data to cloud services.
-
-parent: Edge service examples
-grand_parent: Using edge services
+lastupdated: 2025-05-03
 nav_order: 7
+parent: Edge service examples
+yyears: 2020 - 2022
+grand_parent: Using edge services
 ---
 
 {:new_window: target="blank"}

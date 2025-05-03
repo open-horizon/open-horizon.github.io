@@ -1,9 +1,9 @@
 ---
-
-copyright:
-years: 2020 - 2022
-lastupdated: "2022-03-17"
-
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
+title: Exchange API
+description: Documentation for Exchange API
+lastupdated: 2025-05-03
 ---
 
 {:new_window: target="blank"}

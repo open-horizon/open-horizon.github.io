@@ -1,13 +1,12 @@
 ---
-
-copyright:
-years: 2020 - 2023
-lastupdated: "2023-02-19"
-title: "CPU usage to IBM Event Streams"
-
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
+title: CPU usage to IBM Event Streams
+description: Documentation for CPU usage to {{site.data.keyword.message_hub_notm}}
+lastupdated: 2025-05-03
+nav_order: 2
 parent: Edge service examples
 grand_parent: Using edge services
-nav_order: 2
 ---
 
 {:new_window: target="blank"}

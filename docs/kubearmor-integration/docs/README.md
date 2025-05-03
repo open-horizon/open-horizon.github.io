@@ -1,12 +1,11 @@
 ---
-copyright:
-years: 2022 - 2023
-lastupdated: "2023-03-14"
-title: "KubeArmor Integration"
-description: "KubeArmor Security for Open Horizon workloads / agent"
-
-parent: Integrating
+copyright: Contributors to the Open Horizon project
+years: 2022 - 2025
+title: KubeArmor Integration
+description: KubeArmor Security for Open Horizon workloads / agent
+lastupdated: 2025-05-03
 nav_order: 1
+parent: Integrating
 ---
 
 # KubeArmor security for Open Horizon workloads / agent

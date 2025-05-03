@@ -1,14 +1,12 @@
 ---
-
-copyright:
-years: 2020 - 2023
-lastupdated: "2024-01-07"
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
 title: Multi-tenancy
 description: Software architecture in which a single instance of software runs on server and server multiplies tenants.
-
+lastupdated: 2025-05-03
+nav_order: 1
 parent: Administering functions
 grand_parent: Administering
-nav_order: 1
 ---
 
 {:new_window: target="blank"}

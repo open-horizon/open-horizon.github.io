@@ -1,9 +1,9 @@
 ---
-
-copyright:
-years: 2020 - 2024
-lastupdated: "2024-07-29"
-
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
+title: Automated agent installation and registration
+description: Documentation for Automated agent installation and registration
+lastupdated: 2025-05-03
 ---
 
 {:new_window: target="blank"}

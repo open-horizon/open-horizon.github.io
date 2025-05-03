@@ -1,13 +1,11 @@
 ---
-
-copyright:
-years: 2022 - 2024
-lastupdated: "2024-07-29"
-title: "Removing the agent from an edge cluster"
-
-parent: Edge clusters
+copyright: Contributors to the Open Horizon project
+years: 2022 - 2025
+title: Removing the agent from an edge cluster
+description: Documentation for Removing the agent from an edge cluster
+lastupdated: 2025-05-03
 nav_order: 4
-
+parent: Edge clusters
 ---
 
 {:new_window: target="blank"}

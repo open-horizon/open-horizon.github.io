@@ -1,11 +1,11 @@
 ---
-copyright:
+copyright: Contributors to the Open Horizon project
 years: 2025
-lastupdated: "2025-04-11"
-title: "All-in-One Mgmt Hub"
-
-parent: Management Hub
+title: All-in-One Mgmt Hub
+description: Documentation for Horizon Management Hub
+lastupdated: 2025-05-03
 nav_order: 2
+parent: Management Hub
 ---
 # Horizon Management Hub
 

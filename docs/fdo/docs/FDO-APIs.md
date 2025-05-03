@@ -1,12 +1,11 @@
 ---
-copyright:
+copyright: Contributors to the Open Horizon project
 years: 2022 - 2025
-lastupdated: "2025-02-03"
-title: "FDO API guide"
-description: "FDO API detailed documentation"
-
-parent: FDO Protocol Reference
+title: FDO API guide
+description: FDO API detailed documentation
+lastupdated: 2025-05-03
 nav_order: 1
+parent: FDO Protocol Reference
 grand_parent: Administering
 ---
 

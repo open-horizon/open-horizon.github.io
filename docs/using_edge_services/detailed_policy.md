@@ -1,14 +1,13 @@
 ---
-
-copyright:
-years: 2021
-lastupdated: "2021-07-01"
-title: "Deploying edge services"
-
-parent: Using edge services
+copyright: Contributors to the Open Horizon project
+years: 2025
+title: Deploying edge services
+description: Documentation for Deploying edge services
+lastupdated: 2025-05-03
 nav_order: 2
-has_children: true
-has_toc: false
+parent: Using edge services
+has_children: True
+has_toc: False
 ---
 
 {:new_window: target="blank"}

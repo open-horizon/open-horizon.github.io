@@ -1,15 +1,13 @@
 ---
-
-copyright:
-years: 2020 - 2024
-lastupdated: "2024-07-15"
-title: "Preparing an edge cluster"
-
-parent: Edge clusters
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
+title: Preparing an edge cluster
+description: Documentation for Preparing an edge cluster
+lastupdated: 2025-05-03
 nav_order: 1
-has_children: true
-has_toc: false
-
+parent: Edge clusters
+has_children: True
+has_toc: False
 ---
 
 {:new_window: target="blank"}

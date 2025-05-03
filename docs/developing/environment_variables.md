@@ -1,13 +1,12 @@
 ---
-copyright:
-years: 2021 - 2024
-lastupdated: "2024-09-03"
+copyright: Contributors to the Open Horizon project
+years: 2021 - 2025
 title: Environment variables
-description: ""
-
+description: Documentation for Environment variables that are passed to services
+lastupdated: 2025-05-03
+nav_order: 2
 parent: Further reading for clusters
 grand_parent: Developing edge services
-nav_order: 2
 ---
 
 {:shortdesc: .shortdesc}

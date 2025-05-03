@@ -1,12 +1,11 @@
 ---
-
-copyright:
-years: 2021 - 2022
-lastupdated: "2022-05-31"
-title: "Accessibility features"
-
-parent: Release notes
+copyright: Contributors to the Open Horizon project
+years: 2021 - 2025
+title: Accessibility features
+description: Documentation for Accessibility features
+lastupdated: 2025-05-03
 nav_order: 2
+parent: Release notes
 ---
 
 {:new_window: target="blank"}
