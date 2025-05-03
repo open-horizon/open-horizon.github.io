@@ -1,13 +1,12 @@
 ---
-
-copyright:
-years: 2020 - 2022
-lastupdated: "2022-03-17"
-title: "Monitoring management hub components"
-
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
+title: Monitoring management hub components
+description: Documentation for Monitoring management hub components
+lastupdated: 2025-05-03
+nav_order: 6
 parent: Security
 grand_parent: Administering
-nav_order: 6
 ---
 
 {:new_window: target="blank"}

@@ -1,13 +1,13 @@
 ---
-copyright:
-years: 2020 - 2023
-lastupdated: "2023-02-24"
-title: "Edge devices info"
-
-parent: Edge devices
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
+title: Edge devices info
+description: Documentation for Edge devices
+lastupdated: 2025-05-03
 nav_order: 1
-has_children: true
-has_toc: false
+parent: Edge devices
+has_children: True
+has_toc: False
 ---
 
 {:new_window: target="blank"}

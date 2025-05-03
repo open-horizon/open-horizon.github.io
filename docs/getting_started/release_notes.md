@@ -1,12 +1,12 @@
 ---
-copyright:
+copyright: Contributors to the Open Horizon project
 years: 2020 - 2025
-lastupdated: "2025-01-23"
-title: "Release notes"
-
+title: Release notes
+description: Documentation for Release notes
+lastupdated: 2025-05-03
 nav_order: 18
-has_children: true
-has_toc: false
+has_children: True
+has_toc: False
 ---
 
 {:new_window: target="blank"}

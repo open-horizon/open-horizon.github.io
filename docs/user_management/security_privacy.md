@@ -1,13 +1,12 @@
 ---
-
-copyright:
-years: 2021 - 2024
-lastupdated: "2024-10-08"
-title: "Security and privacy"
-
+copyright: Contributors to the Open Horizon project
+years: 2021 - 2025
+title: Security and privacy
+description: Documentation for Security and privacy
+lastupdated: 2025-05-03
+nav_order: 1
 parent: Security
 grand_parent: Administering
-nav_order: 1
 ---
 
 {:new_window: target="blank"}

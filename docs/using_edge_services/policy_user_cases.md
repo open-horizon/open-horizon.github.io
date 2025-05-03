@@ -1,12 +1,12 @@
 ---
-copyright:
-years: 2020 - 2023
-lastupdated: "2023-02-27"
-title: "Deployment policy use cases"
-
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
+title: Deployment policy use cases
+description: Documentation for Deployment policy use cases
+lastupdated: 2025-05-03
+nav_order: 1
 parent: Deploying edge services
 grand_parent: Using edge services
-nav_order: 1
 ---
 
 {:new_window: target="blank"}

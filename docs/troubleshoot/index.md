@@ -1,9 +1,9 @@
 ---
-
-copyright:
-years: 2021 - 2022
-lastupdated: "2022-06-24"
-
+copyright: Contributors to the Open Horizon project
+years: 2021 - 2025
+title: Troubleshooting tips
+description: Documentation for Troubleshooting tips
+lastupdated: 2025-05-03
 ---
 
 {:new_window: target="blank"}

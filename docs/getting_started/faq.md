@@ -1,11 +1,11 @@
 ---
-copyright:
-years: 2020 - 2022
-lastupdated: "2022-03-17"
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
 title: FAQs
-
-parent: Help and Support
+description: Documentation for Frequently asked questions
+lastupdated: 2025-05-03
 nav_order: 1
+parent: Help and Support
 ---
 
 {:new_window: target="blank"}

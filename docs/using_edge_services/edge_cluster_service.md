@@ -1,14 +1,12 @@
 ---
-
-copyright:
-years: 2020 - 2022
-lastupdated: "2022-03-17"
-title: "Edge cluster service"
-
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
+title: Edge cluster service
+description: Documentation for Edge cluster service
+lastupdated: 2025-05-03
+nav_order: 6
 parent: Edge service examples
 grand_parent: Using edge services
-nav_order: 6
-
 ---
 
 {:new_window: target="blank"}

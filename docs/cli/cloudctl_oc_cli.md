@@ -1,13 +1,11 @@
 ---
-
-copyright:
-years: 2020 - 2023
-lastupdated: "2023-02-25"
-title: "Installing cloudctl, kubectl, and oc"
-description: ""
-
-parent: CLI
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
+title: Installing cloudctl, kubectl, and oc
+description: Documentation for Installing cloudctl, kubectl, and oc
+lastupdated: 2025-05-03
 nav_order: 3
+parent: CLI
 ---
 
 {:new_window: target="blank"}

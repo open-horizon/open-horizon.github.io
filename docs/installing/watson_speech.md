@@ -1,13 +1,12 @@
 ---
-
-copyright:
-years: 2020 - 2023
-lastupdated: "2023-02-20"
-title: "Watson speech to text"
-
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
+title: Watson speech to text
+description: Documentation for Watson speech to text
+lastupdated: 2025-05-03
+nav_order: 5
 parent: Edge service examples
 grand_parent: Using edge services
-nav_order: 5
 ---
 
 {:new_window: target="blank"}

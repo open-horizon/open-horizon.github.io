@@ -1,14 +1,12 @@
 ---
-
-copyright:
-years: 2021 - 2023
-lastupdated: "2023-03-13"
+copyright: Contributors to the Open Horizon project
+years: 2021 - 2025
 title: Development details
 description: The following content provides more details on the software development practices and concepts for Open Horizon (OH) development.
-
+lastupdated: 2025-05-03
+nav_order: 4
 parent: Further reading for clusters
 grand_parent: Developing edge services
-nav_order: 4
 ---
 
 {:new_window: target="blank"}

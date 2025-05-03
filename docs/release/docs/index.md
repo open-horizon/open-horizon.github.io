@@ -1,13 +1,12 @@
 ---
-copyright:
+copyright: Contributors to the Open Horizon project
 years: 2023 - 2025
-lastupdated: "2025-01-16"
-layout: page
-title: "Building a Release"
-description: "Open Horizon Release Documentation"
-
-parent: Release notes
+title: Building a Release
+description: Open Horizon Release Documentation
+lastupdated: 2025-05-03
 nav_order: 4
+parent: Release notes
+layout: page
 ---
 
 {:new_window: target="blank"}

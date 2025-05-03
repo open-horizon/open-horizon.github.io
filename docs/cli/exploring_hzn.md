@@ -1,13 +1,11 @@
 ---
-
-copyright:
-years: 2020 - 2023
-lastupdated: "2023-02-05"
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
 title: hzn Command
-description: ""
-
-parent: CLI
+description: Documentation for Exploring the hzn CLI
+lastupdated: 2025-05-03
 nav_order: 2
+parent: CLI
 ---
 
 {:new_window: target="blank"}

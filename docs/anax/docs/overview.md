@@ -1,12 +1,11 @@
 ---
-copyright:
+copyright: Contributors to the Open Horizon project
 years: 2019 - 2025
-lastupdated: "2025-03-26"
-title: "Agent Installation script"
+title: Agent Installation script
 description: Instructions and flags used by the agent-install script
-
-parent: Agent (anax)
+lastupdated: 2025-05-03
 nav_order: 1
+parent: Agent (anax)
 ---
 
 {:new_window: target="blank"}

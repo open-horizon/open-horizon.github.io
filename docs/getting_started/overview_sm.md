@@ -1,14 +1,13 @@
 ---
-copyright:
-years: 2021 - 2023
-lastupdated: "2023-03-13"
+copyright: Contributors to the Open Horizon project
+years: 2021 - 2025
 title: Secrets Manager
-description: "Overview of Secrets Manager"
-
-parent: Developing edge services
+description: Overview of Secrets Manager
+lastupdated: 2025-05-03
 nav_order: 6
-has_children: true
-has_toc: false
+parent: Developing edge services
+has_children: True
+has_toc: False
 ---
 
 {:new_window: target="blank"}

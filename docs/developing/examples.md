@@ -1,12 +1,11 @@
 ---
-copyright:
-years: 2023
-lastupdated: "2023-02-25"
+copyright: Contributors to the Open Horizon project
+years: 2025
 title: Open Horizon Examples index
-description: ""
-
-parent: Developing edge services
+description: Documentation for Open Horizon examples index
+lastupdated: 2025-05-03
 nav_order: 7
+parent: Developing edge services
 ---
 
 # Open Horizon examples index

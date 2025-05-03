@@ -1,14 +1,12 @@
 ---
-
-copyright:
-years: 2021
-lastupdated: "2021-02-20"
+copyright: Contributors to the Open Horizon project
+years: 2025
 title: CLI
-description: ""
-
+description: Documentation for Using the CLI
+lastupdated: 2025-05-03
 nav_order: 6
-has_children: true
-has_toc: false
+has_children: True
+has_toc: False
 ---
 
 {:new_window: target="blank"}

@@ -1,13 +1,12 @@
 ---
-
-copyright:
-years: 2021 - 2023
-lastupdated: "2023-02-22"
+copyright: Contributors to the Open Horizon project
+years: 2021 - 2025
 title: Overview of Open Horizon
-
+description: Documentation for Overview of {{site.data.keyword.edge_notm}}
+lastupdated: 2025-05-03
 nav_order: 4
-has_children: true
-has_toc: false
+has_children: True
+has_toc: False
 ---
 
 {:new_window: target="blank"}

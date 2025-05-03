@@ -1,14 +1,12 @@
 ---
-
-copyright:
-years: 2021 - 2023
-lastupdated: "2023-02-26"
-layout: page
-title: "Developer learning path"
+copyright: Contributors to the Open Horizon project
+years: 2021 - 2025
+title: Developer learning path
 description: A set of sequential resources for the developer learning about Open Horizon
-
-parent: Quick Start
+lastupdated: 2025-05-03
 nav_order: 5
+parent: Quick Start
+layout: page
 ---
 
 # Edge developer learning path

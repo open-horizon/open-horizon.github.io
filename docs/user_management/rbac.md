@@ -1,13 +1,12 @@
 ---
-
-copyright:
-years: 2019 - 2024
-lastupdated: "2024-10-01"
-title: "Role-based access control"
-
+copyright: Contributors to the Open Horizon project
+years: 2019 - 2025
+title: Role-based access control
+description: Documentation for Role-based access control
+lastupdated: 2025-05-03
+nav_order: 2
 parent: Security
 grand_parent: Administering
-nav_order: 2
 ---
 
 {:new_window: target="blank"}

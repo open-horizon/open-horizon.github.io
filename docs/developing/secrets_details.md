@@ -1,12 +1,12 @@
 ---
-copyright:
-years: 2021 - 2024
-lastupdated: "2024-11-01"
-title: "Secrets Manager details"
-
+copyright: Contributors to the Open Horizon project
+years: 2021 - 2025
+title: Secrets Manager details
+description: Documentation for Developing a service using secrets
+lastupdated: 2025-05-03
+nav_order: 1
 parent: Secrets Manager
 grand_parent: Developing edge services
-nav_order: 1
 ---
 
 {:shortdesc: .shortdesc}

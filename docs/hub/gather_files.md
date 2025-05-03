@@ -1,12 +1,11 @@
 ---
-
-copyright:
-years: 2021 - 2024
-lastupdated: "2024-10-15"
-title: "Gather edge node files"
-
-parent: Install Open Horizon
+copyright: Contributors to the Open Horizon project
+years: 2021 - 2025
+title: Gather edge node files
+description: Documentation for Gather edge node files
+lastupdated: 2025-05-03
 nav_order: 4
+parent: Install Open Horizon
 ---
 
 {:new_window: target="blank"}

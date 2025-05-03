@@ -1,13 +1,12 @@
 ---
-copyright:
+copyright: Contributors to the Open Horizon project
 years: 2022 - 2025
-lastupdated: "2025-02-03"
-title: "FDO Protocol Reference"
-description: "FDO Protocol Reference Implementation Quick Start"
-
-parent: Administering
+title: FDO Protocol Reference
+description: FDO Protocol Reference Implementation Quick Start
+lastupdated: 2025-05-03
 nav_order: 3
-has_children: true
+parent: Administering
+has_children: True
 ---
 
 # FIDO Device Onboard (FDO) Protocol Reference Implementation (PRI) Quick Start

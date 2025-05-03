@@ -1,13 +1,12 @@
 ---
-
-copyright:
-years: 2020 - 2022
-lastupdated: "2022-05-31"
-title: "Edge devices"
-
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
+title: Edge devices
+description: Documentation for Installing edge nodes
+lastupdated: 2025-05-03
 nav_order: 11
-has_children: true
-has_toc: false
+has_children: True
+has_toc: False
 ---
 
 {:new_window: target="blank"}

@@ -1,12 +1,11 @@
 ---
-
-copyright:
-years: 2020 - 2024
-lastupdated: "2024-10-15"
-title: "Installing Open Horizon"
-
-parent: Install Open Horizon
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
+title: Installing Open Horizon
+description: Documentation for Installing {{site.data.keyword.ieam}} Overview
+lastupdated: 2025-05-03
 nav_order: 2
+parent: Install Open Horizon
 ---
 
 {:new_window: target="blank"}

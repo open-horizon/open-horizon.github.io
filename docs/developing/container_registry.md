@@ -1,13 +1,12 @@
 ---
-copyright:
-years: 2020 - 2024
-lastupdated: "2024-09-27"
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
 title: Container Registry
-description: ""
-
+description: Documentation for Using a private container registry
+lastupdated: 2025-05-03
+nav_order: 3
 parent: Further reading for clusters
 grand_parent: Developing edge services
-nav_order: 3
 ---
 
 {:new_window: target="blank"}

@@ -1,12 +1,11 @@
 ---
-
-copyright:
-years: 2021 - 2023
-lastupdated: "2023-02-19"
+copyright: Contributors to the Open Horizon project
+years: 2021 - 2025
 title: Troubleshooting tips
-
-parent: Help and Support
+description: Documentation for Troubleshooting tips and frequently asked questions
+lastupdated: 2025-05-03
 nav_order: 2
+parent: Help and Support
 ---
 
 {:new_window: target="blank"}

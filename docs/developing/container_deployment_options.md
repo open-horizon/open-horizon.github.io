@@ -1,13 +1,12 @@
 ---
-copyright:
-years: 2020 - 2023
-lastupdated: "2023-02-27"
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
 title: Container Deployment
-description: ""
-
+description: Documentation for Container deployment options
+lastupdated: 2025-05-03
+nav_order: 1
 parent: Further reading for devices
 grand_parent: Developing edge services
-nav_order: 1
 ---
 
 {:shortdesc: .shortdesc}

@@ -1,13 +1,13 @@
 ---
-copyright:
-years: 2021 - 2023
-lastupdated: "2023-02-21"
-title: "Edge service examples"
-
-parent: Using edge services
+copyright: Contributors to the Open Horizon project
+years: 2021 - 2025
+title: Edge service examples
+description: Documentation for Edge service examples
+lastupdated: 2025-05-03
 nav_order: 1
-has_children: true
-has_toc: false
+parent: Using edge services
+has_children: True
+has_toc: False
 ---
 
 {:new_window: target="blank"}

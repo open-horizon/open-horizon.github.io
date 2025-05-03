@@ -1,15 +1,13 @@
 ---
-
-copyright:
-years: 2024
-lastupdated: "2024-10-15"
+copyright: Contributors to the Open Horizon project
+years: 2025
 title: Administering functions
 description: Administrative functions that support an edge computing environment.
-
-parent: Administering
+lastupdated: 2025-05-03
 nav_order: 1
-has_children: true
-has_toc: false
+parent: Administering
+has_children: True
+has_toc: False
 ---
 
 {:new_window: target="blank"}

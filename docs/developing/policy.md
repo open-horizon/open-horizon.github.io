@@ -1,13 +1,12 @@
 ---
-
-copyright:
-years: 2020 - 2022
-lastupdated: "2022-03-17"
-title: "Hello world"
-
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
+title: Hello world
+description: Documentation for Hello world
+lastupdated: 2025-05-03
+nav_order: 1
 parent: Edge service examples
 grand_parent: Using edge services
-nav_order: 1
 ---
 
 {:new_window: target="blank"}

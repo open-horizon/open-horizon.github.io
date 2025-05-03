@@ -1,13 +1,12 @@
 ---
-copyright:
-years: 2020 - 2023
-lastupdated: "2023-02-18"
-
-title: "GDPR readiness"
-
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
+title: GDPR readiness
+description: Documentation for {{site.data.keyword.edge_notm}} considerations for GDPR readiness
+lastupdated: 2025-05-03
+nav_order: 3
 parent: Security
 grand_parent: Administering
-nav_order: 3
 ---
 
 {:new_window: target="blank"}

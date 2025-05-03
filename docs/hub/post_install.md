@@ -1,12 +1,11 @@
 ---
-
-copyright:
-years: 2020 - 2024
-lastupdated: "2024-10-15"
-title: "Post-installation"
-
-parent: Install Open Horizon
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
+title: Post-installation
+description: Documentation for Post installation configuration
+lastupdated: 2025-05-03
 nav_order: 3
+parent: Install Open Horizon
 ---
 
 {:new_window: target="blank"}

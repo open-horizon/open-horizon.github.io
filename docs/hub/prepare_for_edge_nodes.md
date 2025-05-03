@@ -1,9 +1,9 @@
 ---
-
-copyright:
-years: 2020 - 2024
-lastupdated: "2024-07-29"
-
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
+title: Prepare for setting up edge nodes
+description: Documentation for Prepare for setting up edge nodes
+lastupdated: 2025-05-03
 ---
 
 {:new_window: target="blank"}

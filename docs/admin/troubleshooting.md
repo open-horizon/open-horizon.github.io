@@ -1,14 +1,12 @@
 ---
-
-copyright:
-years: 2021
-lastupdated: "2021-02-20"
+copyright: Contributors to the Open Horizon project
+years: 2025
 title: Troubleshooting
 description: You can use a variety of procedures for diagnosing and fixing problems that you might encounter when using Open Horizon.
-
+lastupdated: 2025-05-03
+nav_order: 2
 parent: Administering functions
 grand_parent: Administering
-nav_order: 2
 ---
 
 {:new_window: target="blank"}

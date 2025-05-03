@@ -1,13 +1,12 @@
 ---
-copyright:
+copyright: Contributors to the Open Horizon project
 years: 2020 - 2025
-lastupdated: "2025-02-20"
 title: Automatically updating an edge service with rollback
-description: ""
-
+description: Documentation for Updating an edge service with rollback
+lastupdated: 2025-05-03
+nav_order: 4
 parent: Edge services for devices
 grand_parent: Developing edge services
-nav_order: 4
 ---
 
 {:new_window: target="blank"}

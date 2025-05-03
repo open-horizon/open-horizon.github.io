@@ -1,13 +1,12 @@
 ---
-
-copyright:
-years: 2019 - 2022
-lastupdated: "2022-03-17"
-title: "Offline voice assistant"
-
+copyright: Contributors to the Open Horizon project
+years: 2019 - 2025
+title: Offline voice assistant
+description: Documentation for Offline voice assistant
+lastupdated: 2025-05-03
+nav_order: 4
 parent: Edge service examples
 grand_parent: Using edge services
-nav_order: 4
 ---
 
 {:new_window: target="blank"}

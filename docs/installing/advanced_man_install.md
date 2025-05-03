@@ -1,13 +1,12 @@
 ---
-
-copyright:
-years: 2021 - 2024
-lastupdated: "2024-07-29"
-title: "Manual agent install"
-
+copyright: Contributors to the Open Horizon project
+years: 2021 - 2025
+title: Manual agent install
+description: Documentation for Advanced manual agent installation and registration
+lastupdated: 2025-05-03
+nav_order: 4
 parent: Edge devices info
 grand_parent: Edge devices
-nav_order: 4
 ---
 
 {:new_window: target="blank"}
