@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2025
 title: Best Practices
 description: Documentation for Edge-native development best practices
-lastupdated: 2025-05-03
+lastupdated: 2025-05-07
 nav_order: 1
 parent: Further reading for clusters
 grand_parent: Developing edge services
@@ -58,7 +58,7 @@ These differences require different techniques to deploy and manage software on 
 * **Portability:** The world of edge computing spans multiple tiers of the system – including edge devices, edge clusters, and network or metro edge locations. Where your containerized edge workload will eventually be placed depend on a combination of factors, including its dependence on certain resources, such as sensor data and actuators, end latency requirements, and available compute capacity. You should design your workload to tolerate being placed in different tiers of the system depending on the needs of the context in which your application will be used.
 * **Container orchestration:** Further to the previous point about multi-tier portability; typically edge devices will be operated with native Docker runtime – with no local container orchestration. Edge clusters and network/metro edges will be configured with Kubernetes to orchestrate the workload against shared competing resource demands. You should implement your container to avoid any explicit dependence on either Docker or Kubernetes to enable its portability to different tiers of the distributed edge computing world. 
 * **Externalize configuration parameters:** Use the built-in support provided by {{site.data.keyword.ieam}} to externalize any configuration variables and resource dependencies so that these can be supplied and updated to values that are specific to the node to which your container is deployed.
-* **Secure secrets:** Edge services often require integration with on-prem or cloud based services, which require authentication credentials. Exploit the [secrets manager](secrets_details.md) to securely deploy sensitive information to edge nodes.
+* **Secure secrets:** Edge services often require integration with on-prem or cloud based services, which require authentication credentials. Exploit the [secrets manager](../secrets/index.md) to securely deploy sensitive information to edge nodes.
 * **Size considerations:** Your service containers must be as small as possible so that the services can be deployed over potentially slow networks or to small edge devices. To help you develop smaller service containers, use the following techniques:
 
   * Use programming languages that can help you build smaller services:

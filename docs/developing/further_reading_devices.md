@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2025
 title: Further reading for devices
 description: Documentation for Further reading for edge devices
-lastupdated: 2025-05-03
+lastupdated: 2025-05-07
 nav_order: 2
 parent: Developing edge services
 has_children: True
@@ -26,4 +26,4 @@ Review the important principles and best practices for developing edge services 
 * [Model management system](model_management_details.md)
 * [Container deployment options](container_deployment_options.md)
 * [CI-CD process for edge services](cicd_process.md)
-* [Secrets Manager details](secrets_details.md)
+* [Secrets Manager details](../secrets/index.md)
