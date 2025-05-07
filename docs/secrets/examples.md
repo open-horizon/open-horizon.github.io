@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2025
 title: Examples
 description: Examples of using secrets in Open Horizon services
-lastupdated: 2025-05-03
+lastupdated: 2025-05-07
 nav_order: 4
 parent: Secrets Management
 grand_parent: Developing edge services

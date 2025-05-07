@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2025
 title: Developing Services with Secrets
 description: Guide to developing services that use secrets in Open Horizon
-lastupdated: 2025-05-03
+lastupdated: 2025-05-07
 nav_order: 2
 parent: Secrets Management
 grand_parent: Developing edge services
@@ -116,7 +116,7 @@ The secret files contain JSON with both the key and value:
 ## Handling secret updates
 {: #secret_updates}
 
-When a secret is updated in the secrets manager, the file in the container is automatically updated. Your service can detect these changes using the agent's REST API.
+When a secret is updated in the secrets manager, the file in the container is automatically updated. 
 
 Example of checking for secret updates:
 ```bash
@@ -137,6 +137,7 @@ check_secret_updates() {
 }
 
 # Monitor secrets for changes
+# NOTE: two secrets key names are hard-coded in the example below
 while true; do
   if check_secret_updates "api_key"; then
     # Handle API key update

@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2025
 title: Advanced Topics
 description: Advanced topics and considerations for secrets management in Open Horizon
-lastupdated: 2025-05-03
+lastupdated: 2025-05-07
 nav_order: 3
 parent: Secrets Management
 grand_parent: Developing edge services

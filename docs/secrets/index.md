@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2025
 title: Secrets Management
 description: Comprehensive guide to managing secrets in Open Horizon
-lastupdated: 2025-05-03
+lastupdated: 2025-05-07
 nav_order: 1
 parent: Developing edge services
 has_children: True
@@ -50,9 +50,10 @@ Open Horizon's secrets management provides several key benefits:
 The Secrets Manager is a component of Open Horizon that securely stores and manages secrets. Compatible secrets backend providers include OpenBao and HashiCorp Vault.
 
 ### Secret types
-- **Organization-wide secrets**: Accessible to all services in an organization
-- **User private secrets**: Only accessible to services owned by a specific user
-- **Node-specific secrets**: Specific to individual edge nodes
+- **Organization-wide secrets**: Accessible to all services and nodes in an organization
+- **User private secrets**: Only accessible to services and nodes owned by a specific user
+- **Node-specific user private secrets**: Specific to individual edge nodes registered to a specific user
+- **Node-specific organization-wide secrets**: Specific to individual edge nodes in an organization
 
 ### Secret lifecycle
 1. Creation: Secrets are created by organization admins or users

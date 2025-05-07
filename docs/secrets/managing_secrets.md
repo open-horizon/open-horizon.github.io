@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2025
 title: Managing Secrets
 description: Guide to creating, updating, and managing secrets in Open Horizon
-lastupdated: 2025-05-03
+lastupdated: 2025-05-07
 nav_order: 1
 parent: Secrets Management
 grand_parent: Developing edge services
@@ -24,7 +24,7 @@ This guide covers how to create, update, and manage secrets in Open Horizon usin
 {: #creating_secrets}
 
 ### Organization-wide secrets
-Organization-wide secrets are created by organization administrators and can be used by any service in the organization.
+Organization-wide secrets are created by organization administrators and can be used by any service in the organization.  They can be added for all nodes as shown below, or for a specific node.
 
 ```bash
 hzn secretsmanager secret add --secretKey <key> --secretDetail <value> <secret-name>
@@ -36,7 +36,7 @@ hzn secretsmanager secret add --secretKey "api-key" --secretDetail "abc123" my-a
 ```
 
 ### User private secrets
-User private secrets are only accessible to services owned by the creating user. They follow the naming convention `user/<username>/<secret-name>`.
+User private secrets are only accessible to services owned by the creating user or an organization. They follow the naming convention `user/<username>/<secret-name>`.
 
 ```bash
 hzn secretsmanager secret add --secretKey <key> --secretDetail <value> user/<username>/<secret-name>
