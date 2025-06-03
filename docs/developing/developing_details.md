@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2025
 title: Development details
 description: The following content provides more details on the software development practices and concepts for Open Horizon (OH) development.
-lastupdated: 2025-05-03
+lastupdated: 2025-05-07
 nav_order: 4
 parent: Further reading for clusters
 grand_parent: Developing edge services
@@ -65,7 +65,7 @@ MQTT is one of the more popular publishing and subscribing tools that you can us
 
 Another popular publishing and subscribing tool is Apache Kafka, which is also frequently used as a cloud service. {{site.data.keyword.message_hub_notm}}, which is used by the `cpu2evtstreams` example to send data to the {{site.data.keyword.cloud_notm}}, is also based on Kafka. For more information, see [{{site.data.keyword.message_hub_notm}} ](https://www.ibm.com/cloud/event-streams){:target="_blank"}{: .externalLink}.
 
-Any edge service container can provide or consume other local edge services on the same host, and edge services provided on nearby hosts on the local LAN. Containers might communicate with centralized systems in a remote corporate or cloud provider data center. As a service author, you determine with whom and how your services communicate. When communicating with cloud provider services, use secrets to contain the authentication credentials as described in [Developing Secrets](developing_secrets.md).
+Any edge service container can provide or consume other local edge services on the same host, and edge services provided on nearby hosts on the local LAN. Containers might communicate with centralized systems in a remote corporate or cloud provider data center. As a service author, you determine with whom and how your services communicate. When communicating with cloud provider services, use secrets to contain the authentication credentials as described in [Developing Secrets](../secrets/developing_with_secrets.md).
 
 You might find it useful to review the `cpu2evtstreams` example again to see how the example code uses the other two local services. For instance, how the example code specifies dependencies on the two local services, declares and uses configuration variables, and communicates with Kafka. For more information, see [`cpu2evtstreams` example](cpu_msg_example.md).
 

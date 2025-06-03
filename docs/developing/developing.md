@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2025
 title: Edge services for devices
 description: Documentation for Developing an edge service for devices
-lastupdated: 2025-05-03
+lastupdated: 2025-05-07
 nav_order: 1
 parent: Developing edge services
 has_children: True
@@ -43,7 +43,7 @@ Each of these development examples demonstrates a few more aspects of developing
 
 * [Hello world using model management](model_management_system.md) - Demonstrates how to develop an edge service that uses the model management service. The model management service asynchronously provides file updates to edge services on edge nodes, for example to dynamically update a machine learning model each time it evolves.
 
-* [Hello world using secrets](developing_secrets.md) - Demonstrates how to develop an edge service that uses secrets. Secrets are used to protect sensitive data like login credentials or private keys. Secrets are deployed securely to services running on the edge.
+* [Hello world using secrets](../secrets/examples.md) - Demonstrates how to develop an edge service that uses secrets. Secrets are used to protect sensitive data like login credentials or private keys. Secrets are deployed securely to services running on the edge.
 
 * [Updating an edge service with rollback](../using_edge_services/service_rollbacks.md) - Demonstrates how to monitor the success of the deployment, and if it fails on any edge node, revert the node back to the previous version of the edge service.
 
