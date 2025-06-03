@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2025
 title: Examples
 description: Examples of using secrets in Open Horizon services
-lastupdated: 2025-05-07
+lastupdated: 2025-06-03
 nav_order: 4
 parent: Secrets Management
 grand_parent: Developing edge services
@@ -18,7 +18,7 @@ grand_parent: Developing edge services
 # Examples
 {: #examples}
 
-This guide provides practical examples of using secrets in Open Horizon services, including [the Hello Secret World example](https://github.com/open-horizon/examples/tree/master/edge/services/helloSecretWorld).
+This guide provides practical examples of using secrets in {{site.data.keyword.horizon}} services, including [the Hello Secret World example](https://github.com/open-horizon/examples/tree/master/edge/services/helloSecretWorld).
 
 ## Hello Secret World
 {: #hello_secret_world}
@@ -58,7 +58,7 @@ View the service output:
 hzn service log -f ibm.hello-secret
 ```
 
-You should see output like:
+The output looks like this:
 ```
 Hello World says: Hello World!
 ```
@@ -71,7 +71,7 @@ Update the secret value:
 hzn secretsmanager secret add --secretKey "greeting" --secretDetail "Hello Open Horizon" hw-secret-name
 ```
 
-After some time, you should see the output change to:
+After some time, the output changes to:
 ```
 Hello Open Horizon says: Hello Open Horizon!
 ```
@@ -86,6 +86,8 @@ hzn unregister -f
 
 ## Real-world examples
 {: #real_world_examples}
+
+Here are three example code snippets demonstrating how to use secrets for common activities.
 
 ### API Authentication
 {: #api_auth}
@@ -181,6 +183,8 @@ my-service --ssl-cert /etc/ssl/cert.pem --ssl-key /etc/ssl/key.pem
 
 ## Common patterns
 {: #common_patterns}
+
+The following demonstrate three code patterns you may encounter.
 
 ### Configuration injection
 {: #config_injection}

@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2025
 title: Managing Secrets
 description: Guide to creating, updating, and managing secrets in Open Horizon
-lastupdated: 2025-05-07
+lastupdated: 2025-06-03
 nav_order: 1
 parent: Secrets Management
 grand_parent: Developing edge services
@@ -22,6 +22,8 @@ This guide covers how to create, update, and manage secrets in Open Horizon usin
 
 ## Creating secrets
 {: #creating_secrets}
+
+There are several purposes and scopes for secrets.  Outlined below are the main types.
 
 ### Organization-wide secrets
 Organization-wide secrets are created by organization administrators and can be used by any service in the organization.  They can be added for all nodes as shown below, or for a specific node.
@@ -77,7 +79,7 @@ When a secret is updated:
 ## Deleting secrets
 {: #deleting_secrets}
 
-To remove a secret that is no longer needed:
+To remove a secret:
 
 ```bash
 hzn secretsmanager secret remove <secret-name>
@@ -90,6 +92,8 @@ hzn secretsmanager secret remove my-api-secret
 
 ## Listing secrets
 {: #listing_secrets}
+
+The method for listing secrets is different depending on the secret type.
 
 ### List all organization-wide secrets
 ```bash
@@ -109,22 +113,26 @@ hzn secretsmanager secret list node/<node-id>
 ## Access control
 {: #access_control}
 
+Below are listed the capabilities of each role regarding secrets.
+
 ### Organization administrators can:
 - Create, read, update, and delete organization-wide secrets
 - Create, read, update, and delete their own user private secrets
-- Delete (but not read) other users' private secrets
+- Delete other users' private secrets, but not read them
 - List all secrets in the organization
 
 ### Regular users can:
-- List organization-wide secrets (but not read their contents)
+- List organization-wide secrets, but not read their contents
 - Create, read, update, and delete their own user private secrets
 - List their own user private secrets
 
 ## Best practices
 {: #best_practices}
 
+Follow these practices to avoid vulnerabilities.
+
 1. **Naming conventions**
-   - Use descriptive but non-revealing names
+   - Use descriptive names that do not reveal or contain the actual value
    - Follow the naming patterns for user and node secrets
    - Avoid using special characters in secret names
 
@@ -153,7 +161,7 @@ Common issues and solutions:
    - Check if you have permission to access the secret
    - Ensure the secret exists in the correct scope
 
-2. **Secret update not reflected**
+2. **Secret updates not taking effect**
    - Check if the service is properly configured to receive updates
    - Verify the agreement update was received
    - Check service logs for errors

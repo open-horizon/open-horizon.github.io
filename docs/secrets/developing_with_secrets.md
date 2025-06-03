@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2025
 title: Developing Services with Secrets
 description: Guide to developing services that use secrets in Open Horizon
-lastupdated: 2025-05-07
+lastupdated: 2025-06-03
 nav_order: 2
 parent: Secrets Management
 grand_parent: Developing edge services
@@ -55,7 +55,7 @@ Example service definition:
 ## Secret binding
 {: #secret_binding}
 
-Secrets are bound to services in deployment patterns or policies. The `secretBinding` field associates service secret names with actual secrets in the secrets manager.
+Secrets are bound to services in deployment policies. The `secretBinding` field associates service secret names with actual secrets in the secrets manager.
 
 Example pattern with secret binding:
 ```json
@@ -158,6 +158,8 @@ done
 ## Best practices
 {: #development_best_practices}
 
+When using secrets, and developing applications that consume them, consider the following practices to ensure best results.
+
 1. **Secret handling**
    - Never log secret values
    - Use environment variables for secret paths
@@ -180,6 +182,8 @@ done
 
 ## Common patterns
 {: #common_patterns}
+
+Here are three patterns you may encounter.
 
 1. **Configuration injection**
    ```bash
