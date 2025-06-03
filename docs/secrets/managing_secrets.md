@@ -26,7 +26,7 @@ This guide covers how to create, update, and manage secrets in Open Horizon usin
 There are several purposes and scopes for secrets.  Outlined below are the main types.
 
 ### Organization-wide secrets
-Organization-wide secrets are created by organization administrators and can be used by any service in the organization.  They can be added for all nodes as shown below, or for a specific node.
+Organization administrators create organization-wide secrets. Any service in an organization can use them. You can add organization-wide secrets for all nodes or for a specific node.
 
 ```bash
 hzn secretsmanager secret add --secretKey <key> --secretDetail <value> <secret-name>
