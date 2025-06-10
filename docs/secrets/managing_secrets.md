@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2025
 title: Managing Secrets
 description: Guide to creating, updating, and managing secrets in Open Horizon
-lastupdated: 2025-06-03
+lastupdated: 2025-06-10
 nav_order: 1
 parent: Secrets Management
 grand_parent: Developing edge services
@@ -18,7 +18,7 @@ grand_parent: Developing edge services
 # Managing Secrets
 {: #managing_secrets}
 
-This guide covers how to create, update, and manage secrets in Open Horizon using the CLI.
+Learn how to create, update, and manage secrets in Open Horizon by using the CLI.
 
 ## Creating secrets
 {: #creating_secrets}
@@ -38,7 +38,7 @@ hzn secretsmanager secret add --secretKey "api-key" --secretDetail "abc123" my-a
 ```
 
 ### User private secrets
-User private secrets are only accessible to services owned by the creating user or an organization. They follow the naming convention `user/<username>/<secret-name>`.
+User private secrets are only accessible to services that are owned by the creating user or an organization. They follow the naming convention `user/<username>/<secret-name>`.
 
 ```bash
 hzn secretsmanager secret add --secretKey <key> --secretDetail <value> user/<username>/<secret-name>
@@ -64,17 +64,17 @@ hzn secretsmanager secret add --secretKey "cert" --secretDetail "cert-data" node
 ## Updating secrets
 {: #updating_secrets}
 
-Secrets can be updated using the same command as creation. The existing secret will be overwritten.
+To update secrets, use the `add` command. The existing secret is overwritten.
 
 ```bash
 hzn secretsmanager secret add --secretKey <new-key> --secretDetail <new-value> <secret-name>
 ```
 
 When a secret is updated:
-1. The new value is stored in the secrets manager
-2. The agbot detects the change
-3. An agreement update is sent to affected nodes
-4. Services receive the new secret value
+1. The new value is stored in the secrets manager.
+2. The agbot component detects the change.
+3. An agreement update is sent to affected nodes.
+4. Services receive the new secret value.
 
 ## Deleting secrets
 {: #deleting_secrets}

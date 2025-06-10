@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2025
 title: Secrets Management
 description: Comprehensive guide to managing secrets in Open Horizon
-lastupdated: 2025-05-07
+lastupdated: 2025-05-10
 nav_order: 1
 parent: Developing edge services
 has_children: True
@@ -21,7 +21,7 @@ has_toc: True
 # Secrets Management in Open Horizon
 {: #secrets_management}
 
-Open Horizon provides a secure mechanism for managing sensitive information like authentication credentials, certificates, and encryption keys. This documentation will guide you through all aspects of secrets management in Open Horizon.
+Open Horizon provides a secure mechanism for managing sensitive information like authentication credentials, certificates, and encryption keys. This documentation guides you through all aspects of secrets management in Open Horizon.
 
 ## What are secrets?
 {: #what_are_secrets}
@@ -36,7 +36,7 @@ Secrets are sensitive pieces of information that your edge services need to func
 ## Why use secrets management?
 {: #why_secrets_management}
 
-Open Horizon's secrets management provides several key benefits:
+Secrets managent in Open Horizon provides several key benefits:
 - **Security**: Secrets are stored securely and only accessible to authorized services
 - **Flexibility**: Secrets can be updated without redeploying services
 - **Organization**: Secrets can be managed at organization or user level

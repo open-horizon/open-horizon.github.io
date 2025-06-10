@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2025
 title: Advanced Topics
 description: Advanced topics and considerations for secrets management in Open Horizon
-lastupdated: 2025-06-03
+lastupdated: 2025-06-10
 nav_order: 3
 parent: Secrets Management
 grand_parent: Developing edge services
@@ -18,7 +18,7 @@ grand_parent: Developing edge services
 # Advanced Topics
 {: #advanced_topics}
 
-This guide covers advanced topics and considerations for secrets management in Open Horizon.
+Learn about some security considerations, performance implications, migration strategies, troubleshooting tips, and best practices for secrets management in Open Horizon.
 
 ## Security considerations
 {: #security_considerations}
@@ -50,8 +50,8 @@ Several secrets-related activities may impact application performance.  Here are
 
 ### Secret updates
 - Secret updates trigger agreement updates.
-- Multiple secret updates can be batched.
-- Services should handle updates gracefully.
+- You can batch multiple secret updates.
+- Follow best practices when updating services to ensure potential error conditions are addressed.
 - Consider update frequency and impact.
 
 ### Storage considerations
