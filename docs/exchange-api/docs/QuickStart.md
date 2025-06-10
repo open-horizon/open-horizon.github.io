@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2025
 title: Exchange API Server
 description: Quick start
-lastupdated: 2025-05-03
+lastupdated: 2025-06-03
 nav_order: 3
 parent: Management Hub
 layout: page
@@ -22,7 +22,7 @@ local development and debugging environment.
 
 ## Dependencies
 
-* [Java 17](https://www.java.com/en/)
+* [Java 21](https://www.java.com/en/)
 * [SBT](https://www.scala-sbt.org/)
 * [PostgreSQL](https://www.postgresql.org/)
 
@@ -39,11 +39,11 @@ sudo passwd new_user
 usermod -aG sudo new_user
 ```
 
-### Install Java 17
+### Install Java 21
 
 ```bash
 sudo apt-get update
-sudo apt install openjdk-17-jdk -y
+sudo apt install openjdk-21-jdk -y
 ```
 
 ### Install SBT
