@@ -27,7 +27,7 @@ This content provides instructions on installing the cluster agent on common Kub
 ## Pre-requisites
 {: #reqs}
 
-* Architecture must be either x86_64 (amd64) or arm64
+* Architecture must be either x86_64 (amd64), arm64 (aarch64), or s390x
 * Operating system must be modern Linux variant with 64-bit and systemd support
 
 **Note**: {{site.data.keyword.ieam}} cluster agent installation requires cluster admin access on the edge cluster.  Additionally, the "jq" command-line JSON processor must be installed prior to running the agent install script.
