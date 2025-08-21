@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2022 - 2025
 title: Installing the edge cluster agent
 description: Documentation for Installing the edge cluster agent
-lastupdated: 2025-05-03
+lastupdated: 2025-08-21
 nav_order: 2
 parent: Edge clusters
 ---
