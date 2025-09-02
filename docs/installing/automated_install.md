@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2020 - 2025
 title: Automated agent installation and registration
 description: Documentation for Automated agent installation and registration
-lastupdated: 2025-05-03
+lastupdated: 2025-09-02
 ---
 
 {:new_window: target="blank"}
@@ -19,7 +19,7 @@ lastupdated: 2025-05-03
 
 Note: These steps are the same for all edge device types (architectures).
 
-1. If you do not already have an API key, create one by following the steps in [Creating your API key](../hub/prepare_for_edge_nodes.md). This process creates an API key, locates some files, and gathers environment variable values that are needed when you are setting up edge nodes.
+1. If you do not already have your authorization information, that should be obtained first. See [Authentication overview](../anax/docs/authentication_overview.md). 
 
 2. Log in to your edge device and set the same environment variables that you obtained in step 1:
 
