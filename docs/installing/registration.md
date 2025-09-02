@@ -35,7 +35,7 @@ Five different methods are provided to install the agent on and register edge de
 
 * [Automated agent installation and registration](automated_install.md) - install and register one edge device with a minimum of steps. **First-time users should use this method.**
 * [Advanced manual agent installation and registration](advanced_man_install.md) - do each step yourself to install and register one edge device. Use this method if you need to do something out of the ordinary and the script that is used in Method 1 does not have the required flexibility. You can also use this method if you want to understand exactly what is required to set up an edge device.
-* [Agent in a Container](../docs/anax/docs/agent_container_manual_deploy.md) - start and register the agent in a container.
+* [Agent in a Container](../anax/docs/agent_container_manual_deploy.md) - start and register the agent in a container.
 * [Bulk agent installation and registration](many_install.md#batch-install) - install and register many edge devices at one time.
 * [FDO agent installation and registration](fdo.md) - automatic install with FDO devices.
 
