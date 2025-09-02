@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2020 - 2025
 title: FDO agent install
 description: Documentation for FDO agent installation and registration
-lastupdated: 2025-05-03
+lastupdated: 2025-09-02
 nav_order: 6
 parent: Edge devices info
 grand_parent: Edge devices
@@ -89,12 +89,14 @@ If you have purchased FDO-enabled devices and want to incorporate them into your
 
    3. To download the public key for FDO, use the device alias you received from the manufacturer device initialization. Then, use that device alias to download the corresponding public key. For more information, see [Generate Owner Key Pairs ](https://github.com/open-horizon/FDO-support/blob/main/README.md){:target="_blank"}{: .externalLink}.
 
-2. [Log in to the {{site.data.keyword.ieam}} management console](../console/accessing_ui.md).
+2. Using the `hzn` CLI, import the voucher using the following pattern.
+  ```bash
+  hzn fdo voucher import [<flags>] <voucher-file>
+  ```
+  {: codeblock}
 
-3. On the **Nodes** tab, click **Add node**.
-
-4. Fill in the necessary information to import the ownership vouchers you received when you purchased the devices.
+4. Use the ownership vouchers you received as `<voucher-file>` when you purchased the devices.  The files must have a file type extension of txt, tar, tar.gz, tgz, or zip. If it is any of the tar/zip formats, all .txt files within it will be imported (other files/dirs will be silently ignored).
 
 5. Connect the devices to the network and power them on.
 
-6. Back in the management console, watch the progress of the devices as they come online by viewing the **Node** overview page and filtering on the installation name.
+6. Using the `hzn` CLI, monitor the progress of the devices as they come online using `hzn fdo voucher list` to confirm the voucher is listed, and `hzn fdo key list` to see the registered devices.
