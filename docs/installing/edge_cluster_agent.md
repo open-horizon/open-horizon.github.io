@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2022 - 2025
 title: Installing the edge cluster agent
 description: Documentation for Installing the edge cluster agent
-lastupdated: 2025-08-21
+lastupdated: 2025-09-02
 nav_order: 2
 parent: Edge clusters
 ---
@@ -52,7 +52,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
    ```
    {: codeblock}
 
-2. If you have not completed the steps in [Creating your API key](../hub/prepare_for_edge_nodes.md), do that now. This process creates an API key, locates some files, and gathers environment variable values that are needed when you set up edge nodes. Set the same environment variables for this edge cluster.  Set the `HZN_NODE_ID` of the edge cluster.
+2. If you don't already have your authorization information, get it now. For details about how to get the authorization information, see [Authentication overview](../anax/docs/authentication_overview.md).
 
    ```bash
    export HZN_ORG_ID=<your-exchange-organization>
@@ -247,7 +247,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on [K
 
 1. Log in to your edge cluster as **root**.
 
-2. If you have not completed the steps in [Creating your API key](../hub/prepare_for_edge_nodes.md), do that now. This process creates an API key, locates some files, and gathers environment variable values that are needed when setting up edge nodes. Set the same environment variables on this edge cluster:
+2. If you don't already have your authorization information, get it now. For details about how to get the authorization information, see [Authentication overview](../anax/docs/authentication_overview.md).
 
    ```bash
    export HZN_ORG_ID=<your-exchange-organization>

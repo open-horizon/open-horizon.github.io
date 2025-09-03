@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2020 - 2025
 title: Prepare for setting up edge nodes
 description: Documentation for Prepare for setting up edge nodes
-lastupdated: 2025-05-03
+lastupdated: 2025-09-02
 ---
 
 {:new_window: target="blank"}
@@ -33,6 +33,8 @@ This content explains how to use your issued authentication credentials and rela
    {: codeblock}
 
    Note the optional `-A` flag which grants organization admin privileges.  The authentication string will be a combination of `username` and `password` separated by a colon.  Both values should begin with an alpha character, not a number.  Neither should contain spaces.
+
+   See [Authentication overview](../anax/docs/authentication_overview.md) for other authentication options.
 
 2. If you have not already installed the **horizon-cli** package on this host, do that now. See [Post installation configuration](post_install.md#postconfig) for an example of this process.
 
