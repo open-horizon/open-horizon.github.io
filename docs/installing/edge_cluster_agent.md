@@ -52,7 +52,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
    ```
    {: codeblock}
 
-2. If you do not already have your authorization information, that should be obtained first. See [Authentication overview](../anax/docs/authentication_overview.md).
+2. If you don't already have your authorization information, get it now. For details about how to get the authorization information, see [Authentication overview](../anax/docs/authentication_overview.md).
 
    ```bash
    export HZN_ORG_ID=<your-exchange-organization>
@@ -247,7 +247,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on [K
 
 1. Log in to your edge cluster as **root**.
 
-2. If you do not already have your authorization information, that should be obtained first. See [Authentication overview](../anax/docs/authentication_overview.md).
+2. If you don't already have your authorization information, get it now. For details about how to get the authorization information, see [Authentication overview](../anax/docs/authentication_overview.md).
 
    ```bash
    export HZN_ORG_ID=<your-exchange-organization>

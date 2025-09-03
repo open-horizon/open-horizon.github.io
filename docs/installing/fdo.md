@@ -46,7 +46,7 @@ FDO requires that the agent files are stored in the {{site.data.keyword.ieam}} C
 
 Before you purchase FDO-enabled edge devices, you can test FDO support in {{site.data.keyword.ieam}} with a VM that simulates an FDO-enabled device:
 
-1. If you do not already have your authorization information, that should be obtained first. See [Authentication overview](../anax/docs/authentication_overview.md).
+1. If you don't already have your authorization information, get it now. For details about how to get the authorization information, see [Authentication overview](../anax/docs/authentication_overview.md).
 
 2. Contact your {{site.data.keyword.ieam}} administrator to get the values of these environment variables. (You need them in the next step.)
 
@@ -71,7 +71,7 @@ If you have purchased FDO-enabled devices and want to incorporate them into your
 
 1. If you did not create FDO owner key pairs when trying out FDO in the previous section, perform these steps:
 
-   1. If you do not already have your authorization information, that should be obtained first. See [Authentication overview](../anax/docs/authentication_overview.md).
+   1. If you don't already have your authorization information, get it now. For details about how to get the authorization information, see [Authentication overview](../anax/docs/authentication_overview.md).
    2. Contact your {{site.data.keyword.ieam}} administrator to get the values of these environment variables. (You need them in the next step.)
 
       ```bash

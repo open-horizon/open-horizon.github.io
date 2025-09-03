@@ -19,7 +19,7 @@ lastupdated: 2025-09-02
 
 Note: These steps are the same for all edge device types (architectures).
 
-1. If you do not already have your authorization information, that should be obtained first. See [Authentication overview](../anax/docs/authentication_overview.md). 
+1. If you don't already have your authorization information, get it now. For details about how to get the authorization information, see [Authentication overview](../anax/docs/authentication_overview.md).
 
 2. Log in to your edge device and set the same environment variables that you obtained in step 1:
 
