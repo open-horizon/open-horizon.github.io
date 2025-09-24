@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2020 - 2025
 title: Known issues and limitations
 description: Documentation for Known issues and limitations
-lastupdated: 2025-09-23
+lastupdated: 2025-09-24
 nav_order: 1
 parent: Release notes
 ---
@@ -29,8 +29,6 @@ For a full list of open issues for the {{site.data.keyword.ieam}} open source la
 
 These are known issues and limitations for {{site.data.keyword.ieam}}.
 
-* [Private image repositories](../developing/container_registry.md) are now supported for service image hosting.
-
 * {{site.data.keyword.ieam}} does not perform a malware or virus scan on data that is uploaded to the model management system (MMS). For more information about MMS security, see [Security and privacy](../user_management/security_privacy.md#malware).
 
 * The **-f &lt;directory&gt;** flag of **edgeNodeFiles.sh** does not have the intended effect. Instead, the files are collected in the current directory. For more information, see [issue 2187 ](https://github.com/open-horizon/anax/issues/2187){:target="_blank"}{: .externalLink}. The work-around is to run the command like this:
@@ -52,7 +50,7 @@ These are known issues and limitations for {{site.data.keyword.ieam}}.
 
 * The agent does not support the [Model Management System](../developing/model_management_system.md) (MMS) for dependent services.
 
-* The secret binding does not work for an agreement-less service defined in a pattern, since secrets management functionality was added after patterns were no longer recommended for production usage.
+* The secret binding does not work for an agreement-less service defined in a pattern, because secrets management functionality was added after patterns were no longer recommended for production usage.
  
 * The edge cluster agent does not support K3S v1.21.3+k3s1 because the mounted volume directory only has 0700 permission. See [Cannot write data to local PVC ](https://github.com/k3s-io/k3s/issues/3704){:target="_blank"}{: .externalLink} for a temporary solution.
  
