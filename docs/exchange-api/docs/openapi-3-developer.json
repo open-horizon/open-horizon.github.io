@@ -8,7 +8,7 @@
       "name": "Apache License Version 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0"
     },
-    "version": "2.149.0"
+    "version": "2.150.0"
   },
   "externalDocs": {
     "description": "Open-horizon ExchangeAPI",
@@ -2958,7 +2958,7 @@
         }
       }
     },
-    "/v1/orgs/{organization}/business/policies/{policy}": {
+    "/v1/orgs/{organization}/deployment/policies/{policy}": {
       "get": {
         "tags": [
           "deployment policy"
