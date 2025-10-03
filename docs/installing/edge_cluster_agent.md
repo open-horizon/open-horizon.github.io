@@ -27,7 +27,12 @@ This content provides instructions on installing the cluster agent on common Kub
 ## Pre-requisites
 {: #reqs}
 
-* Architecture must be either x86_64 (amd64), arm64 (aarch64), or s390x
+* The architecture of the cluster must be one of the following:
+- AMD64 (x86_64)
+- ARM64 (AArch64)
+- ppc64le
+- s390x
+
 * Operating system must be modern Linux variant with 64-bit and systemd support
 
 **Note**: {{site.data.keyword.ieam}} cluster agent installation requires cluster admin access on the edge cluster.  Additionally, the "jq" command-line JSON processor must be installed prior to running the agent install script.
@@ -196,7 +201,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
     ```
     {: codeblock}
 
-   **Note**: The {{site.data.keyword.ieam}} agent image is stored in the local edge cluster registry because the edge cluster Kubernetes needs ongoing access to it, in case it needs to restart it or move it to another pod.
+     **Note**: The {{site.data.keyword.ieam}} agent image is stored in the local edge cluster registry because the edge cluster Kubernetes needs ongoing access to it, in case it needs to restart it or move it to another pod.
 
 17. Download the **agent-install.sh** script from the Cloud Sync Service (CSS) and make it executable:
 
