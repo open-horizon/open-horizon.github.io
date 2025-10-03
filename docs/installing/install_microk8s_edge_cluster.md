@@ -30,7 +30,12 @@ This content provides a summary of how to install microk8s, a lightweight and sm
 ## Pre-requisites
 {: #reqs}
 
-* Architecture must be x86_64
+* The architecture of the cluster must be one of the following:
+- AMD64 (x86_64)
+- ARM64 (AArch64)
+- ppc64le
+- s390x
+
 * Operating system must be an Ubuntu LTS distribution
 
 **Note**: This type of single node edge cluster is meant for development and test only. A single worker node Kubernetes cluster does not provide the scalability or high availability performance characteristics that a production system should have.

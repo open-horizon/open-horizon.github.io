@@ -30,7 +30,12 @@ This content provides a summary of how to install k3s (rancher), a lightweight a
 ## Pre-requisites
 {: #reqs}
 
-* Architecture must be either x86_64 (amd64) or arm64
+* The architecture of the cluster must be one of the following:
+- AMD64 (x86_64)
+- ARM64 (AArch64)
+- ppc64le
+- s390x
+
 * Operating system must be modern Linux variant with 64-bit and systemd support
 
 **Note**: If installed, uninstall kubectl before completing the following steps.
