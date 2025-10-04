@@ -30,6 +30,7 @@ The software in the FDO git repository provides integration between FDO and {{si
 * A docker image of of the FDO Owner service (those that run on the {{site.data.keyword.edge_notm}} management hub).
 * An `hzn fdo voucher` sub-command to import one or more ownership vouchers into Owner service. (An ownership voucher is a file that the device manufacturer gives to the purchaser (owner) along with the physical device.)
 * A sample script called `start-mfg.sh` to start the development manufacturing service so that the ownership voucher can be extended to the user to enable them to run through the FDO-enabling steps on a Virtual Machine (VM) device that a device manufacturer would run on a physical device. This allows you to try out the FDO process with your Horizon instance before purchasing FDO-enabled devices.
+* A sample script called start-rv.sh that you use to set up a development version of the FDO Rendezvous server. The script creates an environment where you can test the Rendezvous server and simulate the FDO onboarding process. You can also test the voucher exchange process for the device ownership transfer before you deploy FDO-enabled devices. To download the start-rv.sh script, see FDO support (https://github.com/open-horizon/FDO-support/blob/main/sample-rv/start-rv.sh).
 * A REST API that authenticates users through the Horizon Exchange and enables importing and querying ownership vouchers.
 
 **Note**: FDO only supports edge devices, not edge clusters.
