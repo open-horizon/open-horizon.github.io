@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2022 - 2025
 title: Installing the edge cluster agent
 description: Documentation for Installing the edge cluster agent
-lastupdated: 2025-09-02
+lastupdated: 2025-10-07
 nav_order: 2
 parent: Edge clusters
 ---
@@ -218,10 +218,10 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
     ```
     {: codeblock}
 
-   **Notes**:
-   * To see all of the available flags, run: **./agent-install.sh -h**
-   * If an error causes **agent-install.sh** to fail, correct the error and run **agent-install.sh** again. If that does not work, run **agent-uninstall.sh** (see [Removing agent from edge cluster](../using_edge_services/removing_agent_from_cluster.md)) before running **agent-install.sh** again.
-
+       **Notes**:
+       * To see all of the available flags, run: **./agent-install.sh -h**
+       * If an error causes **agent-install.sh** to fail, correct the error and run **agent-install.sh** again. If that does not work, run **agent-uninstall.sh** (see [Removing agent from edge cluster](../using_edge_services/removing_agent_from_cluster.md)) before running **agent-install.sh** again.
+    
 19. Change to the agent namespace (also known as project) and verify that the agent pod is running:
 
     ```bash
