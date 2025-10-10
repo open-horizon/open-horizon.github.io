@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2025
 title: Developing Services with Secrets
 description: Guide to developing services that use secrets in Open Horizon
-lastupdated: 2025-06-03
+lastupdated: 2025-10-10
 nav_order: 2
 parent: Secrets Management
 grand_parent: Developing edge services
@@ -44,7 +44,7 @@ Example service definition:
         "image": "my-service:1.0.0",
         "secrets": {
           "api_key": { "description": "API key for external service" },
-          "db_password": { "description": "Database password" }
+          "db_password": { "description": "Database password" },
           "db_name": { "description": "Database name" , "format": "value_only" }
         }
       }
