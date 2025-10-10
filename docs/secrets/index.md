@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2025
 title: Secrets Management
 description: Comprehensive guide to managing secrets in Open Horizon
-lastupdated: 2025-05-10
+lastupdated: 2025-10-10
 nav_order: 1
 parent: Developing edge services
 has_children: True
@@ -62,6 +62,10 @@ The Secrets Manager is a component of Open Horizon that securely stores and mana
 4. Usage: Services access secrets through [mounted files](https://github.com/open-horizon/examples/blob/master/edge/services/helloSecretWorld/CreateService.md#using-secrets-in-the-service-code)
 5. Updates: Secrets can be updated without service redeployment
 6. Deletion: Secrets can be removed when no longer needed
+
+### Format of secret in service
+- **json**: Mounted in service as a json file with a key and value. This is the default.
+- **value only**: Mounted in service in a file with only the value if `format:value_only` is used in service definition.
 
 ## Quick start
 {: #quick_start}
