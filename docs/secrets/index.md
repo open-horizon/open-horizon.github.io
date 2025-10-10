@@ -63,7 +63,7 @@ The Secrets Manager is a component of Open Horizon that securely stores and mana
 5. Updates: Secrets can be updated without service redeployment
 6. Deletion: Secrets can be removed when no longer needed
 
-### Format of secret in service
+### Format of secret in a service
 - **json**: Mounted in service as a json file with a key and value. This is the default.
 - **value only**: Mounted in service in a file with only the value if `format:value_only` is used in service definition.
 
