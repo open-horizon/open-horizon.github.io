@@ -8,7 +8,7 @@
       "name": "Apache License Version 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0"
     },
-    "version": "2.150.0"
+    "version": "2.151.0"
   },
   "externalDocs": {
     "description": "Open-horizon ExchangeAPI",
@@ -1173,6 +1173,637 @@
         }
       }
     },
+    "/v1/orgs/{organization}/agbots/{agreementbot}/patterns/{deploymentpattern}": {
+      "get": {
+        "tags": [
+          "agreement bot/deployment pattern"
+        ],
+        "summary": "Returns a Pattern this Agreement Bot is serving",
+        "description": "Returns the specified Pattern with the for the specified Agreement Bot (AgBot). The deploymentpattern should be in the form patternOrgid_pattern. Can be run by the owning User or the AgBot.",
+        "operationId": "getDeploymentPattern",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "path",
+            "description": "Organization identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementbot",
+            "in": "path",
+            "description": "Agreement Bot identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "deploymentpattern",
+            "in": "path",
+            "description": "Deployment Pattern identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "response body",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAgbotPatternsResponse"
+                },
+                "example": {
+                  "patterns": {
+                    "patternname": {
+                      "patternOrgid": "string",
+                      "pattern": "string",
+                      "nodeOrgid": "string",
+                      "lastUpdated": "2019-05-14T16:34:36.397Z[UTC]"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "bad input"
+          },
+          "401": {
+            "description": "invalid credentials"
+          },
+          "403": {
+            "description": "access denied"
+          },
+          "404": {
+            "description": "not found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "agreement bot/deployment pattern"
+        ],
+        "summary": "Deletes a Deployment Pattern of an Agreement Bot",
+        "description": "Deletes a Deployment Pattern that this Agreement Bot (AgBot) was serving. Can be run by the owning User or the AgBot.",
+        "operationId": "deleteDeploymentPattern",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "path",
+            "description": "Organization identifier.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementbot",
+            "in": "path",
+            "description": "Agreement Bot identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "deploymentpattern",
+            "in": "path",
+            "description": "Deployment Pattern identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "deleted"
+          },
+          "401": {
+            "description": "invalid credentials"
+          },
+          "403": {
+            "description": "access denied"
+          },
+          "404": {
+            "description": "not found"
+          }
+        }
+      }
+    },
+    "/v1/orgs/{organization}/agbots/{agreementbot}/patterns": {
+      "get": {
+        "tags": [
+          "agreement bot/deployment pattern"
+        ],
+        "summary": "Returns all patterns served by this agbot",
+        "description": "Returns all patterns that this agbot is finding nodes for to make agreements with them. Can be run by the owning user or the agbot.",
+        "operationId": "getDeploymentPatterns",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "path",
+            "description": "Organization identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementbot",
+            "in": "path",
+            "description": "Agreement Bot identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "deployment_pattern",
+            "in": "query",
+            "description": "Filter by a Deployment Pattern",
+            "allowEmptyValue": true
+          },
+          {
+            "name": "deployment_pattern_organization",
+            "in": "query",
+            "description": "Filter by the Organization of a Deployment Pattern",
+            "allowEmptyValue": true
+          },
+          {
+            "name": "node_organization",
+            "in": "query",
+            "description": "Filter by the Organization of a Node",
+            "allowEmptyValue": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "response body",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAgbotPatternsResponse"
+                },
+                "example": {
+                  "patterns": {
+                    "pattern1": {
+                      "patternOrgid": "string",
+                      "pattern": "string",
+                      "nodeOrgid": "string",
+                      "lastUpdated": "2019-05-14T16:34:36.295Z[UTC]"
+                    },
+                    "pattern2": {
+                      "patternOrgid": "string",
+                      "pattern": "string",
+                      "nodeOrgid": "string",
+                      "lastUpdated": "2019-05-14T16:34:36.397Z[UTC]"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "bad input"
+          },
+          "401": {
+            "description": "invalid credentials"
+          },
+          "403": {
+            "description": "access denied"
+          },
+          "404": {
+            "description": "not found"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "agreement bot/deployment pattern"
+        ],
+        "summary": "Adds a Deployment Pattern that the Agreement Bot should serve",
+        "description": "Adds a new Deployment Pattern and Organization that this Agreement Bot (AgBot) should find Nodes for to make agreements with them. This is called by the owning User or the AgBot to give their information about the Deployment Pattern.",
+        "operationId": "postDeploymentPatterns",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "path",
+            "description": "Organization identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementbot",
+            "in": "path",
+            "description": "Agreement Bot identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostAgbotPatternRequest"
+              },
+              "example": {
+                "patternOrgid": "string",
+                "pattern": "string",
+                "nodeOrgid": "string"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "response body",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "invalid credentials"
+          },
+          "403": {
+            "description": "access denied"
+          },
+          "404": {
+            "description": "not found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "agreement bot/deployment pattern"
+        ],
+        "summary": "Deletes all Deployement Patterns of an Agreement Bot",
+        "description": "Deletes all of the current Deployment Patterns that this Agreement Bot (AgBot) was serving. Can be run by the owning User or the AgBot.",
+        "operationId": "deleteDeploymentPatterns",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "path",
+            "description": "Organization identifier.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementbot",
+            "in": "path",
+            "description": "Agreement Bot identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "deleted"
+          },
+          "401": {
+            "description": "invalid credentials"
+          },
+          "403": {
+            "description": "access denied"
+          },
+          "404": {
+            "description": "not found"
+          }
+        }
+      }
+    },
+    "/v1/orgs/{organization}/agbots/{agreementbot}/businesspols": {
+      "get": {
+        "tags": [
+          "agreement bot/deployment policy"
+        ],
+        "summary": "Returns all Deployment Policies served by this Agreement Bot (AgBot)",
+        "description": "Can be run by the owning User or the AgBot.",
+        "operationId": "getDeploymentPolicies",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "path",
+            "description": "Organization identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementbot",
+            "in": "path",
+            "description": "Agreement Bot identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "deployment_policy",
+            "in": "query",
+            "description": "Filter by a Deployment Policy",
+            "allowEmptyValue": true
+          },
+          {
+            "name": "deployment_policy_organization",
+            "in": "query",
+            "description": "Filter by the Organization of a Deployment Policy",
+            "allowEmptyValue": true
+          },
+          {
+            "name": "node_organization",
+            "in": "query",
+            "description": "Filter by the Organization of a Node",
+            "allowEmptyValue": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "response body",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAgbotBusinessPolsResponse"
+                },
+                "example": {
+                  "businessPols": {
+                    "buspolid": {
+                      "businessPolOrgid": "string",
+                      "businessPol": "string",
+                      "deployment_policy": "string",
+                      "nodeOrgid": "string",
+                      "lastUpdated": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "bad input"
+          },
+          "401": {
+            "description": "invalid credentials"
+          },
+          "403": {
+            "description": "access denied"
+          },
+          "404": {
+            "description": "not found"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "agreement bot/deployment policy"
+        ],
+        "summary": "Adds a Deployment Policy that this Agreement Bot (AgBot) should serve",
+        "description": "This AgBot should find Nodes for this Deployment Policy to make agreements with. This is called by the owning User or the AgBot to give their information about the Deployment Policy.",
+        "operationId": "postDeploymentPolicies",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "path",
+            "description": "Organization identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementbot",
+            "in": "path",
+            "description": "Agreement Bot identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostAgbotBusinessPolRequest"
+              },
+              "example": {
+                "businessPolOrgid": "string",
+                "businessPol": "string",
+                "nodeOrgid": "string"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "response body",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "invalid credentials"
+          },
+          "403": {
+            "description": "access denied"
+          },
+          "404": {
+            "description": "not found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "agreement bot/deployment policy"
+        ],
+        "summary": "Deletes all Deployment Policies this Agreement Bot (AgBot) is serving.",
+        "description": "Can be run by the owning User or the AgBot.",
+        "operationId": "deleteDeploymentPolicies",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "path",
+            "description": "Organization identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementbot",
+            "in": "path",
+            "description": "Agreement Bot identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "deleted"
+          },
+          "401": {
+            "description": "invalid credentials"
+          },
+          "403": {
+            "description": "access denied"
+          },
+          "404": {
+            "description": "not found"
+          }
+        }
+      }
+    },
+    "/v1/orgs/{organization}/agbots/{agreementbot}/businesspols/{deploymentpolicy}": {
+      "get": {
+        "tags": [
+          "agreement bot/deployment policy"
+        ],
+        "summary": "Returns a Deployment Policy this Agreement Bot (AgBot) is serving",
+        "description": "The buspolid should be in the form businessPolOrgid_businessPol. Can be run by the owning User or the AgBot.",
+        "operationId": "getDeploymentPolicy",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "path",
+            "description": "Organization identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementbot",
+            "in": "path",
+            "description": "Agreement Bot identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "deploymentpolicy",
+            "in": "path",
+            "description": "Deployment Policy identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "response body",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAgbotBusinessPolsResponse"
+                },
+                "example": {
+                  "businessPols": {
+                    "buspolid": {
+                      "businessPolOrgid": "string",
+                      "businessPol": "string",
+                      "nodeOrgid": "string",
+                      "lastUpdated": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "bad input"
+          },
+          "401": {
+            "description": "invalid credentials"
+          },
+          "403": {
+            "description": "access denied"
+          },
+          "404": {
+            "description": "not found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "agreement bot/deployment policy"
+        ],
+        "summary": "Deletes a Deployment Policy this Agreement Bot (AgBot) is serving",
+        "description": "Can be run by the owning User or the AgBot.",
+        "operationId": "deleteDeploymentPolicy",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "path",
+            "description": "Organization identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementbot",
+            "in": "path",
+            "description": "Agreement Bot identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "deploymentpolicy",
+            "in": "path",
+            "description": "Deployment Policy identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "deleted"
+          },
+          "401": {
+            "description": "invalid credentials"
+          },
+          "403": {
+            "description": "access denied"
+          },
+          "404": {
+            "description": "not found"
+          }
+        }
+      }
+    },
     "/v1/orgs/{organization}/agbots/{agreementbot}/msgs/{message}": {
       "get": {
         "tags": [
@@ -1419,7 +2050,7 @@
         ],
         "summary": "Returns patterns in the IBM catalog",
         "description": "Returns public pattern definitions from orgs of the specified orgtype (default is IBM). Can be run by any user, node, or agbot.",
-        "operationId": "getDeploymentPatterns",
+        "operationId": "getDeploymentPatterns_1",
         "parameters": [
           {
             "name": "orgtype",
@@ -1661,7 +2292,7 @@
         ],
         "summary": "Returns a pattern",
         "description": "Returns the pattern with the specified id. Can be run by a user, node, or agbot.",
-        "operationId": "getDeploymentPattern",
+        "operationId": "getDeploymentPattern_1",
         "parameters": [
           {
             "name": "organization",
@@ -2073,7 +2704,7 @@
         ],
         "summary": "Deletes a pattern",
         "description": "Deletes a pattern. Can only be run by the owning user.",
-        "operationId": "deleteDeploymentPattern",
+        "operationId": "deleteDeploymentPattern_1",
         "parameters": [
           {
             "name": "organization",
@@ -2264,7 +2895,7 @@
         ],
         "summary": "Returns all patterns",
         "description": "Returns all pattern definitions in this organization. Can be run by any user, node, or agbot.",
-        "operationId": "getDeploymentPatterns_1",
+        "operationId": "getDeploymentPatterns_2",
         "parameters": [
           {
             "name": "organization",
@@ -2850,7 +3481,7 @@
         ],
         "summary": "Returns all business policies",
         "description": "Returns all business policy definitions in this organization. Can be run by any user, node, or agbot.",
-        "operationId": "getDeploymentPolicies",
+        "operationId": "getDeploymentPolicies_1",
         "parameters": [
           {
             "name": "organization",
@@ -2965,7 +3596,7 @@
         ],
         "summary": "Returns a business policy",
         "description": "Returns the business policy with the specified id. Can be run by a user, node, or agbot.",
-        "operationId": "getDeploymentPolicy",
+        "operationId": "getDeploymentPolicy_1",
         "parameters": [
           {
             "name": "organization",
@@ -3328,7 +3959,7 @@
         ],
         "summary": "Deletes a business policy",
         "description": "Deletes a business policy. Can only be run by the owning user.",
-        "operationId": "deleteDeploymentPolicy",
+        "operationId": "deleteDeploymentPolicy_1",
         "parameters": [
           {
             "name": "organization",
@@ -10139,6 +10770,29 @@
           }
         }
       },
+      "AgbotBusinessPol": {
+        "required": [
+          "businessPol",
+          "businessPolOrgid",
+          "lastUpdated",
+          "nodeOrgid"
+        ],
+        "type": "object",
+        "properties": {
+          "businessPolOrgid": {
+            "type": "string"
+          },
+          "businessPol": {
+            "type": "string"
+          },
+          "lastUpdated": {
+            "type": "string"
+          },
+          "nodeOrgid": {
+            "type": "string"
+          }
+        }
+      },
       "PostPutManagementPolicyRequest": {
         "required": [
           "enabled",
@@ -11288,6 +11942,29 @@
           }
         }
       },
+      "AgbotPattern": {
+        "required": [
+          "lastUpdated",
+          "nodeOrgid",
+          "pattern",
+          "patternOrgid"
+        ],
+        "type": "object",
+        "properties": {
+          "lastUpdated": {
+            "type": "string"
+          },
+          "nodeOrgid": {
+            "type": "string"
+          },
+          "pattern": {
+            "type": "string"
+          },
+          "patternOrgid": {
+            "type": "string"
+          }
+        }
+      },
       "PutNodeStatusRequest": {
         "required": [
           "jsonFormats",
@@ -12028,6 +12705,24 @@
           }
         }
       },
+      "PostAgbotPatternRequest": {
+        "required": [
+          "pattern",
+          "patternOrgid"
+        ],
+        "type": "object",
+        "properties": {
+          "patternOrgid": {
+            "type": "string"
+          },
+          "pattern": {
+            "type": "string"
+          },
+          "nodeOrgid": {
+            "type": "string"
+          }
+        }
+      },
       "NodeMsg": {
         "required": [
           "agbotId",
@@ -12202,6 +12897,20 @@
             "type": "integer",
             "format": "int32",
             "default": 0
+          }
+        }
+      },
+      "GetAgbotPatternsResponse": {
+        "required": [
+          "patterns"
+        ],
+        "type": "object",
+        "properties": {
+          "patterns": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/AgbotPattern"
+            }
           }
         }
       },
@@ -12599,6 +13308,20 @@
           },
           "lastUpdated": {
             "type": "string"
+          }
+        }
+      },
+      "GetAgbotBusinessPolsResponse": {
+        "required": [
+          "businessPols"
+        ],
+        "type": "object",
+        "properties": {
+          "businessPols": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/AgbotBusinessPol"
+            }
           }
         }
       },
@@ -13151,6 +13874,24 @@
             "additionalProperties": {
               "$ref": "#/components/schemas/NodeHealthAgreementElement"
             }
+          }
+        }
+      },
+      "PostAgbotBusinessPolRequest": {
+        "required": [
+          "businessPol",
+          "businessPolOrgid"
+        ],
+        "type": "object",
+        "properties": {
+          "businessPolOrgid": {
+            "type": "string"
+          },
+          "businessPol": {
+            "type": "string"
+          },
+          "nodeOrgid": {
+            "type": "string"
           }
         }
       }
