@@ -30,7 +30,7 @@ RELEASE="v2.32.0-1739"     # Set to whatever release is desired
 
 PKG="oh-packages"
 
-EXCHANGE_ROOT_PW=""
+EXCHANGE_ROOT_PW=<FILL_IN>
 export HZN_EXCHANGE_USER_AUTH=root/root:${EXCHANGE_ROOT_PW}
 
 export HZN_LISTEN_IP=<FILL_IN>
