@@ -8,7 +8,7 @@
       "name": "Apache License Version 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0"
     },
-    "version": "2.151.0"
+    "version": "2.152.0"
   },
   "externalDocs": {
     "description": "Open-horizon ExchangeAPI",
@@ -1173,7 +1173,7 @@
         }
       }
     },
-    "/v1/orgs/{organization}/agbots/{agreementbot}/patterns/{deploymentpattern}": {
+    "/v1/orgs/{organization}/agbots/{agreementbot}/deployment/patterns/{deploymentpattern}": {
       "get": {
         "tags": [
           "agreement bot/deployment pattern"
@@ -1297,7 +1297,7 @@
         }
       }
     },
-    "/v1/orgs/{organization}/agbots/{agreementbot}/patterns": {
+    "/v1/orgs/{organization}/agbots/{agreementbot}/deployment/patterns": {
       "get": {
         "tags": [
           "agreement bot/deployment pattern"
@@ -1491,7 +1491,7 @@
         }
       }
     },
-    "/v1/orgs/{organization}/agbots/{agreementbot}/businesspols": {
+    "/v1/orgs/{organization}/agbots/{agreementbot}/deployment/policies": {
       "get": {
         "tags": [
           "agreement bot/deployment policy"
@@ -1680,7 +1680,7 @@
         }
       }
     },
-    "/v1/orgs/{organization}/agbots/{agreementbot}/businesspols/{deploymentpolicy}": {
+    "/v1/orgs/{organization}/agbots/{agreementbot}/deployment/policies/{deploymentpolicy}": {
       "get": {
         "tags": [
           "agreement bot/deployment policy"
@@ -2285,7 +2285,7 @@
         }
       }
     },
-    "/v1/orgs/{organization}/patterns/{pattern}": {
+    "/v1/orgs/{organization}/deployment/patterns/{pattern}": {
       "get": {
         "tags": [
           "deployment pattern"
@@ -2888,7 +2888,7 @@
         }
       }
     },
-    "/v1/orgs/{organization}/patterns": {
+    "/v1/orgs/{organization}/deployment/patterns": {
       "get": {
         "tags": [
           "deployment pattern"
@@ -3040,7 +3040,7 @@
         }
       }
     },
-    "/v1/orgs/{organization}/patterns/{pattern}/nodehealth": {
+    "/v1/orgs/{organization}/deployment/patterns/{pattern}/nodehealth": {
       "post": {
         "tags": [
           "deployment pattern"
@@ -3121,7 +3121,7 @@
         }
       }
     },
-    "/v1/orgs/{organization}/patterns/{pattern}/search": {
+    "/v1/orgs/{organization}/deployment/patterns/{pattern}/search": {
       "post": {
         "tags": [
           "deployment pattern"
@@ -3192,7 +3192,7 @@
         }
       }
     },
-    "/v1/orgs/{organization}/patterns/{pattern}/keys/{keyid}": {
+    "/v1/orgs/{organization}/deployment/patterns/{pattern}/keys/{keyid}": {
       "get": {
         "tags": [
           "deployment pattern/key"
@@ -3378,7 +3378,7 @@
         }
       }
     },
-    "/v1/orgs/{organization}/patterns/{pattern}/keys/{pattern}/keys": {
+    "/v1/orgs/{organization}/deployment/patterns/{pattern}/keys/{pattern}/keys": {
       "get": {
         "tags": [
           "deployment pattern/key"
@@ -3474,13 +3474,13 @@
         }
       }
     },
-    "/v1/orgs/{organization}/business/policies": {
+    "/v1/orgs/{organization}/deployment/policies": {
       "get": {
         "tags": [
           "deployment policy"
         ],
-        "summary": "Returns all business policies",
-        "description": "Returns all business policy definitions in this organization. Can be run by any user, node, or agbot.",
+        "summary": "Returns all deployment policies",
+        "description": "Returns all deployment policy definitions in this organization. Can be run by any user, node, or agbot.",
         "operationId": "getDeploymentPolicies_1",
         "parameters": [
           {
@@ -3594,8 +3594,8 @@
         "tags": [
           "deployment policy"
         ],
-        "summary": "Returns a business policy",
-        "description": "Returns the business policy with the specified id. Can be run by a user, node, or agbot.",
+        "summary": "Returns a deployment policy",
+        "description": "Returns the deployment policy with the specified id. Can be run by a user, node, or agbot.",
         "operationId": "getDeploymentPolicy_1",
         "parameters": [
           {
@@ -3610,7 +3610,7 @@
           {
             "name": "policy",
             "in": "path",
-            "description": "Business Policy name.",
+            "description": "Deployment Policy name.",
             "required": true,
             "schema": {
               "type": "string"
@@ -3619,7 +3619,7 @@
           {
             "name": "description",
             "in": "query",
-            "description": "Which attribute value should be returned. Only 1 attribute can be specified. If not specified, the entire business policy resource will be returned.",
+            "description": "Which attribute value should be returned. Only 1 attribute can be specified. If not specified, the entire deployment policy resource will be returned.",
             "schema": {
               "type": "string"
             }
@@ -3692,8 +3692,8 @@
         "tags": [
           "deployment policy"
         ],
-        "summary": "Updates a business policy",
-        "description": "Updates a business policy resource. This can only be called by the user that created it.",
+        "summary": "Updates a deployment policy",
+        "description": "Updates a deployment policy resource. This can only be called by the user that created it.",
         "operationId": "putDeploymentPolicy",
         "parameters": [
           {
@@ -3716,14 +3716,14 @@
           }
         ],
         "requestBody": {
-          "description": "Business Policy object that needs to be updated. See details in the POST route above.",
+          "description": "Deployment Policy object that needs to be updated. See details in the POST route above.",
           "content": {
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/PostPutBusinessPolicyRequest"
               },
               "example": {
-                "label": "name of the business policy",
+                "label": "name of the deployment policy",
                 "description": "descriptive text",
                 "service": {
                   "name": "mydomain.com.weather",
@@ -3825,8 +3825,8 @@
         "tags": [
           "deployment policy"
         ],
-        "summary": "Adds a business policy",
-        "description": "Creates a business policy resource. A business policy resource specifies the service that should be deployed based on the specified properties and constraints. This can only be called by a user.",
+        "summary": "Adds a deployment policy",
+        "description": "Creates a deployment policy resource. A deployment policy resource specifies the service that should be deployed based on the specified properties and constraints. This can only be called by a user.",
         "operationId": "postDeploymentPolicy",
         "parameters": [
           {
@@ -3841,7 +3841,7 @@
           {
             "name": "policy",
             "in": "path",
-            "description": "Business Policy name.",
+            "description": "Deployment Policy name.",
             "required": true,
             "schema": {
               "type": "string"
@@ -3855,7 +3855,7 @@
                 "$ref": "#/components/schemas/PostPutBusinessPolicyRequest"
               },
               "example": {
-                "label": "name of the business policy",
+                "label": "name of the deployment policy",
                 "description": "descriptive text",
                 "service": {
                   "name": "mydomain.com.weather",
@@ -3957,8 +3957,8 @@
         "tags": [
           "deployment policy"
         ],
-        "summary": "Deletes a business policy",
-        "description": "Deletes a business policy. Can only be run by the owning user.",
+        "summary": "Deletes a deployment policy",
+        "description": "Deletes a deployment policy. Can only be run by the owning user.",
         "operationId": "deleteDeploymentPolicy_1",
         "parameters": [
           {
@@ -3973,7 +3973,7 @@
           {
             "name": "policy",
             "in": "path",
-            "description": "Business Policy name.",
+            "description": "Deployment Policy name.",
             "required": true,
             "schema": {
               "type": "string"
@@ -3999,8 +3999,8 @@
         "tags": [
           "deployment policy"
         ],
-        "summary": "Updates 1 attribute of a business policy",
-        "description": "Updates one attribute of a business policy. This can only be called by the user that originally created this business policy resource.",
+        "summary": "Updates 1 attribute of a deployment policy",
+        "description": "Updates one attribute of a deployment policy. This can only be called by the user that originally created this deployment policy resource.",
         "operationId": "patchDeploymentPolicy",
         "parameters": [
           {
@@ -4030,7 +4030,7 @@
                 "$ref": "#/components/schemas/PostPutBusinessPolicyRequest"
               },
               "example": {
-                "label": "name of the business policy",
+                "label": "name of the deployment policy",
                 "description": "descriptive text",
                 "service": {
                   "name": "mydomain.com.weather",
@@ -4129,13 +4129,13 @@
         }
       }
     },
-    "/v1/orgs/{organization}/business/policies/{policy}/search": {
+    "/v1/orgs/{organization}/deployment/policies/{policy}/search": {
       "post": {
         "tags": [
           "deployment policy"
         ],
-        "summary": "Returns matching nodes for this business policy",
-        "description": "Returns the matching nodes for this business policy that do not already have an agreement for the specified service. Can be run by a user or agbot (but not a node).",
+        "summary": "Returns matching nodes for this deployment policy",
+        "description": "Returns the matching nodes for this deployment policy that do not already have an agreement for the specified service. Can be run by a user or agbot (but not a node).",
         "operationId": "postDeploymentPolicySearch",
         "parameters": [
           {
@@ -4150,7 +4150,7 @@
           {
             "name": "policy",
             "in": "path",
-            "description": "Pattern name.",
+            "description": "Deployment Policy name",
             "required": true,
             "schema": {
               "type": "string"
