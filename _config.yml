@@ -46,6 +46,7 @@ exclude:
   # specific to Open Horizon
    - MAINTAINERS.md
    - LICENSE
+   - AGENTS.md
 
 # Secondary Parameters
 header-img: img/hero-dark.jpg
