@@ -22,4 +22,3 @@ jobs:
             https://open-horizon.github.io/
           uploadArtifacts: true
           temporaryPublicStorage: true
-          artifactName: lighthouse-results
