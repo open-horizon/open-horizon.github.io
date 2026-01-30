@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2021 - 2025
+years: 2021 - 2026
 title: Overview of Open Horizon
 description: Documentation for Overview of {{site.data.keyword.edge_notm}}
 lastupdated: 2025-05-03
@@ -25,13 +25,13 @@ This section provides an overview of {{site.data.keyword.edge_notm}} ({{site.dat
 ## {{site.data.keyword.ieam}} capabilities
 {: #capabilities}
 
-{{site.data.keyword.ieam}} provides you with edge computing features to help you manage and deploy workloads from a management hub cluster to edge devices and remote instances of OpenShift Container Platform or other Kubernetes-based clusters.
+{{site.data.keyword.ieam}} provides you with edge computing features to help you manage and deploy workloads from a management hub cluster to edge devices and remote instances of {{site.data.keyword.open_shift_cp}} or other Kubernetes-based clusters.
 
 ## Architecture
 
 The goal of edge computing is to harness the disciplines that have been created for hybrid cloud computing to support remote operations of edge computing facilities. {{site.data.keyword.ieam}} is designed for that purpose.
 
-The deployment of {{site.data.keyword.ieam}} includes the management hub that runs in an instance of OpenShift Container Platform installed in your data center. The management hub is where the management of all of your remote edge nodes (edge devices and edge clusters) occurs.
+The deployment of {{site.data.keyword.ieam}} includes the management hub that runs in an instance of {{site.data.keyword.open_shift_cp}} installed in your data center. The management hub is where the management of all of your remote edge nodes (edge devices and edge clusters) occurs.
 
 These edge nodes can be installed in remote on-premises locations to make your application workloads local to where your critical business operations physically occur, such as at your factories, warehouses, retail outlets, distribution centers, and more.
 

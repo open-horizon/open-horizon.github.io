@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
+years: 2020 - 2026
 title: Container Registry
 description: Documentation for Using a private container registry
 lastupdated: 2025-05-03
@@ -20,7 +20,7 @@ grand_parent: Developing edge services
 # Using a private container registry
 {: #container_registry}
 
-If an edge service image includes assets that are not appropriate to include in a public registry, you can use a private Docker container registry, for example, the {{site.data.keyword.open_shift}} Image Registry or the {{site.data.keyword.ibm_cloud}} Container Registry, where access is tightly controlled.
+If an edge service image includes assets that are not appropriate to include in a public registry, you can use a private {{site.data.keyword.docker}} container registry, for example, the {{site.data.keyword.open_shift}} Image Registry or the {{site.data.keyword.ibm_cloud}} Container Registry, where access is tightly controlled.
 {:shortdesc}
 
 If you have not done so already, follow the steps in [Developing an edge service for devices](developing.md) to create and deploy at least one example edge service to ensure you are familiar with the basic process.
@@ -36,7 +36,7 @@ These also serve as examples of how you can use any private image registry with 
 
 ### Before you begin
 
-* If you have not already done so, install the [IBM Cloud Pak CLI (**cloudctl**) and OpenShift client CLI (**oc**)](../cli/cloudctl_oc_cli.md) commands.
+* If you have not already done so, install the [{{site.data.keyword.ibm_cloud}} Pak CLI (**cloudctl**) and {{site.data.keyword.open_shift}} client CLI (**oc**)](../cli/cloudctl_oc_cli.md) commands.
 
 **Note**: Because the local registry usually has a smaller disk, it might fill quickly. In some cases, this can adversely affect the management hub to the point that it could become non-functional. Due to this, consider using {{site.data.keyword.open_shift}} local image registries only if preventative monitoring is implemented in your environment; otherwise, use external image registries.
 
@@ -128,7 +128,7 @@ These also serve as examples of how you can use any private image registry with 
 
    On {{site.data.keyword.macOS_notm}}, restart docker by clicking on the whale icon on the right-hand side of the desktop menu bar and selecting **Restart**.
 
-9. Log in to the {{site.data.keyword.ocp}} Docker host:
+9. Log in to the {{site.data.keyword.ocp}} {{site.data.keyword.docker}} host:
 
    ```bash
    echo "$OCP_TOKEN" | docker login -u $OCP_USER --password-stdin $OCP_DOCKER_HOST
@@ -188,11 +188,11 @@ These also serve as examples of how you can use any private image registry with 
 
    The command completes these tasks:
 
-   * Pushes the Docker images to your {{site.data.keyword.cloud_notm}} Container Registry, and get the digest of the image in the process.
+   * Pushes the {{site.data.keyword.docker}} images to your {{site.data.keyword.cloud_notm}} Container Registry, and get the digest of the image in the process.
    * Signs the digest and the deployment information with your private key.
    * Puts the service metadata (including the signature) into {{site.data.keyword.horizon}} exchange.
    * Puts your public key into {{site.data.keyword.horizon}} exchange under the service definition so {{site.data.keyword.horizon}} edge nodes can automatically retrieve the definition to verify your signatures when needed.
-   * Puts the OpenShift user and token into {{site.data.keyword.horizon}} exchange under the service definition so {{site.data.keyword.horizon}} edge nodes can automatically retrieve the definition when needed.
+* Puts the {{site.data.keyword.open_shift}} user and token into {{site.data.keyword.horizon}} exchange under the service definition so {{site.data.keyword.horizon}} edge nodes can automatically retrieve the definition when needed.
    
 ### Using your service on {{site.data.keyword.horizon}} edge nodes
 {: #using_service}
@@ -314,7 +314,7 @@ Now {{site.data.keyword.horizon}} has everything that it needs to get this edge 
 
    The command completes these tasks:
 
-   * Pushes the Docker images to your {{site.data.keyword.cloud_notm}} Container Registry, and get the digest of the image in the process.
+   * Pushes the {{site.data.keyword.docker}} images to your {{site.data.keyword.cloud_notm}} Container Registry, and get the digest of the image in the process.
    * Signs the digest and the deployment information with your private key.
    * Puts the service metadata (including the signature) into {{site.data.keyword.horizon}} exchange.
    * Puts your public key into {{site.data.keyword.horizon}} exchange under the service definition so {{site.data.keyword.horizon}} edge nodes can automatically retrieve the definition to verify your signatures when needed.

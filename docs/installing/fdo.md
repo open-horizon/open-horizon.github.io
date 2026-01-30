@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
+years: 2020 - 2026
 title: FDO agent install
 description: Documentation for FDO agent installation and registration
 lastupdated: 2025-09-02
@@ -20,7 +20,7 @@ grand_parent: Edge devices
 # FDO agent installation and registration
 {: #fdo}
 
-[FIDO Device Onboard (FDO) ](https://github.com/open-horizon/FDO-support/blob/main/README.md){:target="_blank"}{: .externalLink}, created by Intel, makes it easy to add edge devices built with Intel FDO (FIDO Device Onboard) to an {{site.data.keyword.ieam}} instance by simply importing their associated ownership vouchers and then powering on the devices.
+[FIDO Device Onboard (FDO) ](https://github.com/open-horizon/FDO-support/blob/main/README.md){:target="_blank"}{: .externalLink}, created by {{site.data.keyword.intel}}, makes it easy to add edge devices built with {{site.data.keyword.intel}} FDO (FIDO Device Onboard) to an {{site.data.keyword.ieam}} instance by simply importing their associated ownership vouchers and then powering on the devices.
 
 ## FDO overview
 {: #fdo-overview}

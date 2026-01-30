@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
+years: 2020 - 2026
 title: Installing Open Horizon
 description: Documentation for Installing {{site.data.keyword.ieam}} Overview
 lastupdated: 2025-05-03
@@ -46,7 +46,7 @@ export CSS_IMAGE_TAG=1.10.1-1577
 export HZN_LISTEN_IP=132.177.125.232 # <-- use your IP address, not this one
 ```
 
-NOTE: If you'd like to use TLS 1.3 (https) for secure services, and you're not using macOS, set the following variables.
+NOTE: If you'd like to use TLS 1.3 (https) for secure services, and you're not using {{site.data.keyword.macOS}}, set the following variables.
 
 ```shell
 export HZN_TRANSPORT=https
@@ -80,7 +80,7 @@ Flags:
 
 ### Followup
 
-To ensure that the user on the host can see Docker containers, run the following command:
+To ensure that the user on the host can see {{site.data.keyword.docker}} containers, run the following command:
 
 ```shell
 sudo usermod -aG docker $USER

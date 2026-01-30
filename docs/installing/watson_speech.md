@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
+years: 2020 - 2026
 title: Watson speech to text
 description: Documentation for Watson speech to text
 lastupdated: 2025-05-03
@@ -50,7 +50,7 @@ export EVTSTREAMS_TOPIC=<your-topic-name>
 
 If an instance is deployed currently, obtain the access information and set the environment variables, or follow these steps:
 
-1. Navigate to the IBM Cloud.
+1. Navigate to the {{site.data.keyword.ibm_cloud}}.
 2. Click **Create resource**.
 3. Enter `Speech to Text` in the search box.
 4. Select the `Speech to Text` tile.

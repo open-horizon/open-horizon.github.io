@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2019 - 2025
+years: 2019 - 2026
 title: Preparing an edge device
 description: Documentation for Preparing an edge device
 lastupdated: 2025-05-03
@@ -30,8 +30,8 @@ The following instructions guide you through the process of installing the requi
 **Notes**:
 
 - Installation of edge devices with SuSE is only supported by the [Advanced manual agent installation and registration](../installing/advanced_man_install.md) method.
-- CentOS and {{site.data.keyword.rhel}} 8.5 or earlier on {{site.data.keyword.ieam}} {{site.data.keyword.version}} only support Docker as a container engine.
-- While {{site.data.keyword.ieam}} {{site.data.keyword.version}} supports running {{site.data.keyword.rhel}} 8.x with Docker, it is officially unsupported by {{site.data.keyword.rhel}}.
+- CentOS and {{site.data.keyword.rhel}} 8.5 or earlier on {{site.data.keyword.ieam}} {{site.data.keyword.version}} only support {{site.data.keyword.docker}} as a container engine.
+- While {{site.data.keyword.ieam}} {{site.data.keyword.version}} supports running {{site.data.keyword.rhel}} 8.x with {{site.data.keyword.docker}}, it is officially unsupported by {{site.data.keyword.rhel}}.
 - {{site.data.keyword.ieam}} {{site.data.keyword.version}} supports Podman 4.x on {{site.data.keyword.rhel}} 8.6 - 8.8, {{site.data.keyword.rhel}} 9.0 - 9.5, and {{site.data.keyword.fedora}} 36 - 41 Workstation.
 
 ## Sizing
@@ -65,7 +65,7 @@ To install and configure your edge device, click the link that represents your e
 ### Hardware requirements
 {: #hard-req-x86}
 
-- 64-bit Intel&reg; or AMD device or virtual machine
+- 64-bit {{site.data.keyword.intel}} or AMD device or virtual machine
 - An internet connection for your device (wired or WiFi)
 - (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware
 
@@ -74,7 +74,7 @@ To install and configure your edge device, click the link that represents your e
 
 Prepare your device by installing a Debian, {{site.data.keyword.rhel}}, or Ubuntu {{site.data.keyword.linux_notm}}. The instructions in this content are based on a device that uses Ubuntu 18.x.
 
-Install the most recent version of Docker or Podman on your device. For more information, see [Install Docker ](https://docs.docker.com/engine/install/ubuntu/){:target="_blank"}{: .externalLink} or [Podman.io ](https://podman.io/){:target="_blank"}{: .externalLink}.
+Install the most recent version of Docker or Podman on your device. For more information, see [Install {{site.data.keyword.docker}} ](https://docs.docker.com/engine/install/ubuntu/){:target="_blank"}{: .externalLink} or [Podman.io ](https://podman.io/){:target="_blank"}{: .externalLink}.
 
 Now that your edge device is prepared, continue on to [Installing the agent](registration.md).
 
@@ -84,7 +84,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 ### Hardware requirements
 {: #hard-req-rhel8}
 
-- 64-bit Intel&reg; device, AMD device, ppc64le device, or virtual machine
+- 64-bit {{site.data.keyword.intel}} device, AMD device, ppc64le device, or virtual machine
 - An internet connection for your device (wired or WiFi)
 - (optional) Sensor hardware: Many {{site.data.keyword.horizon}} edge services require specialized sensor hardware
 
@@ -110,7 +110,7 @@ Prepare your device by installing {{site.data.keyword.rhel}} 8.x or 9.x
 
 2. Switch the network stack from Container Network Interface (CNI) to Netavark. The {{site.data.keyword.horizon}} agent requires the network backend to be configured to use Netavark instead of CNI so that the agent can set up networking scenarios such as dependent services between containers. Follow the steps in the Red Hat documentation [switching the network stack ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/building_running_and_managing_containers/index#proc_switching-the-network-stack-from-cni-to-netavark_assembly_setting-container-network-modes){:target="_blank"}{: .externalLink} chapter.
 
-If you are running {{site.data.keyword.rhel}} 8.5 (or earlier), remove Podman and other pre-included packages, then install Docker as described here.
+If you are running {{site.data.keyword.rhel}} 8.5 (or earlier), remove Podman and other pre-included packages, then install {{site.data.keyword.docker}} as described here.
 
 1. Uninstall packages:
 
@@ -133,9 +133,9 @@ If you are running {{site.data.keyword.rhel}} 8.5 (or earlier), remove Podman an
    ```
    {: codeblock}
 
-4. Install Docker by following the instructions for [Docker CENTOS Installation ](https://docs.docker.com/engine/install/centos/){:target="_blank"}{: .externalLink}.
+4. Install Docker by following the instructions for [{{site.data.keyword.docker}} CENTOS Installation ](https://docs.docker.com/engine/install/centos/){:target="_blank"}{: .externalLink}.
 
-5. Configure Docker to start on boot by default and follow any other [Docker post installation steps ](https://docs.docker.com/engine/install/linux-postinstall/){:target="_blank"}{: .externalLink}.
+5. Configure Docker to start on boot by default and follow any other [{{site.data.keyword.docker}} post installation steps ](https://docs.docker.com/engine/install/linux-postinstall/){:target="_blank"}{: .externalLink}.
 
    ```bash
    sudo systemctl enable docker.service
@@ -160,7 +160,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 
 Prepare your device by installing {{site.data.keyword.rhel}}.
 
-Install the most recent version of Docker on your device.
+Install the most recent version of {{site.data.keyword.docker}} on your device.
 
 Now that your edge device is prepared, continue on to [Installing the agent](registration.md).
 
@@ -228,7 +228,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
       ```
       {: codeblock}
 
-   8. Install the most recent version of Docker on your device. For more information, see [Install Docker ](https://docs.docker.com/engine/install/debian/){:target="_blank"}{: .externalLink}.
+   8. Install the most recent version of Docker on your device. For more information, see [Install {{site.data.keyword.docker}} ](https://docs.docker.com/engine/install/debian/){:target="_blank"}{: .externalLink}.
 
 Now that your edge device is prepared, continue on to [Installing the agent](registration.md).
 
@@ -268,7 +268,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
       ```
       {: codeblock}
 
-   3. Install the most recent version of Docker on your device. For more information, see [Install Docker ](https://docs.docker.com/engine/install/debian/){:target="_blank"}{: .externalLink}.
+   3. Install the most recent version of Docker on your device. For more information, see [Install {{site.data.keyword.docker}} ](https://docs.docker.com/engine/install/debian/){:target="_blank"}{: .externalLink}.
 
 Now that your edge device is prepared, continue on to [Installing the agent](registration.md).
 
@@ -289,9 +289,9 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 {: #proc-mac}
 
 1. Prepare your device.
-   1. Purchase a Docker Desktop license, if necessary, and install the most recent version of Docker on your device. For more information, see the [Docker installation for Mac ](https://docs.docker.com/docker-for-mac/install/){:target="_blank"}{: .externalLink} documentation.
+   1. Purchase a Docker Desktop license, if necessary, and install the most recent version of Docker on your device. For more information, see the [{{site.data.keyword.docker}} installation for Mac ](https://docs.docker.com/docker-for-mac/install/){:target="_blank"}{: .externalLink} documentation.
 
-   2. [Use Homebrew to install socat ](https://macappstore.org/socat/){:target="_blank"}{: .externalLink}
+   2. [Use {{site.data.keyword.homebrew}} to install socat ](https://macappstore.org/socat/){:target="_blank"}{: .externalLink}
 
 ## What's next
 

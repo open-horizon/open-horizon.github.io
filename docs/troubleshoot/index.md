@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2021 - 2025
+years: 2021 - 2026
 title: Troubleshooting tips
 description: Documentation for Troubleshooting tips
 lastupdated: 2025-05-03
@@ -23,10 +23,10 @@ Review the following questions when you encounter an issue with {{site.data.keyw
 - [Are the currently released versions of the {{site.data.keyword.horizon}} packages installed?](#install_horizon)
 - [Is the {{site.data.keyword.horizon}} agent currently up and actively running?](#setup_horizon)
 - [Is the edge node configured to interact with the {{site.data.keyword.horizon_exchange}}?](#node_configured)
-- [Are the required Docker containers started for the edge node running?](#node_running)
+- [Are the required {{site.data.keyword.docker}} containers started for the edge node running?](#node_running)
 - [Are the expected service containers versions running?](#run_user_containers)
 - [Are the expected containers stable?](#containers_stable)
-- [Are your Docker containers networked correctly?](#container_networked)
+- [Are your {{site.data.keyword.docker}} containers networked correctly?](#container_networked)
 - [Are the dependency containers reachable within the context of your container?](#setup_correct)
 - [Are your user-defined containers emitting error messages to the log?](#log_user_container_errors)
 - [Can you use your organization's instance of {{site.data.keyword.message_hub_notm}} Kafka broker?](#kafka_subscription)
@@ -103,7 +103,7 @@ hzn node list | jq .configuration.exchange_api
 ```
 {: codeblock}
 
-## Are the required Docker containers for the edge node running?
+## Are the required {{site.data.keyword.docker}} containers for the edge node running?
 {: #node_running}
 
 When your edge node is registered with {{site.data.keyword.horizon}}, a {{site.data.keyword.horizon}} {{site.data.keyword.agbot}} creates an agreement with your edge node to run the services that are referenced in your gateway type (deployment pattern). If that agreement is not created, complete these checks to troubleshoot the issue.
@@ -147,8 +147,8 @@ The event log can include:
 
 Replace `<service-id>` with the ID for your service. This ID can resemble the following sample format: `workload-cpu2wiotp_${CPU2WIOTP_VERSION}_${ARCH2}`.
 
-- The path of Docker image in the service `deployment` field is incorrect. Confirm that your edge node can `docker pull` that image path.
-- The {{site.data.keyword.horizon}} agent on your edge node does not have access to the Docker registry that holds your Docker images. If the Docker images in the remote Docker registry are not world-readable, you must add the credentials to your edge node by using the `docker login` command. You need to complete this step once as the credentials are remembered on the edge node.
+- The path of {{site.data.keyword.docker}} image in the service `deployment` field is incorrect. Confirm that your edge node can `docker pull` that image path.
+- The {{site.data.keyword.horizon}} agent on your edge node does not have access to the Docker registry that holds your Docker images. If the Docker images in the remote {{site.data.keyword.docker}} registry are not world-readable, you must add the credentials to your edge node by using the `docker login` command. You need to complete this step once as the credentials are remembered on the edge node.
 - If a container is continually restarting, review the container log for details. A container can be continually restarting when it is listed for only a few seconds or remains listed as restarting when you run the `docker ps` command. You can view the container log for details by running this command:
 
   ```bash
@@ -213,10 +213,10 @@ grep --text -E 'YOURSERVICENAME\[[0-9]+\]' /var/log/syslog
 ```
 {: codeblock}
 
-## Are your containers Docker networked correctly?
+## Are your containers {{site.data.keyword.docker}} networked correctly?
 {: #container_networked}
 
-Ensure that your containers are properly Docker networked, so they can access required services. Run this command to ensure that you can view the Docker virtual networks active on your edge node:
+Ensure that your containers are properly Docker networked, so they can access required services. Run this command to ensure that you can view the {{site.data.keyword.docker}} virtual networks active on your edge node:
 
 ```bash
 docker network list
@@ -229,7 +229,7 @@ You can also run the `docker inspect Y` command on each container, where `Y` is 
 
 Alias names are available to all of the containers on this virtual network, and these names are typically used by the containers in your code deployment pattern for discovering other containers on the virtual network. For example, you can name your service `myservice`. Then, other containers can use that name directly to access it on the network, such as with the command `ping myservice`. The alias name of your container is specified in the `deployment` field of its service definition file that you passed to the `hzn exchange service publish` command.
 
-For more information about the commands supported by the Docker command line interface, see [Docker command reference ](https://docs.docker.com/engine/reference/commandline/docker/#child-commands){:target="_blank"}{: .externalLink}.
+For more information about the commands supported by the Docker command line interface, see [{{site.data.keyword.docker}} command reference ](https://docs.docker.com/engine/reference/commandline/docker/#child-commands){:target="_blank"}{: .externalLink}.
 
 ## Are the dependency containers reachable within the context of your container?
 {: #setup_correct}
@@ -245,7 +245,7 @@ If your container includes bash, you might want to specify `/bin/bash` at the en
 
 When inside the container context, you can use commands like `ping` or `curl` to interact with the containers it requires and verify connectivity.
 
-For more information about the commands supported by the Docker command line interface, see [Docker command reference ](https://docs.docker.com/engine/reference/commandline/docker/#child-commands){:target="_blank"}{: .externalLink}.
+For more information about the commands supported by the Docker command line interface, see [{{site.data.keyword.docker}} command reference ](https://docs.docker.com/engine/reference/commandline/docker/#child-commands){:target="_blank"}{: .externalLink}.
 
 ## Are your user-defined containers emitting error messages to the log?
 {: #log_user_container_errors}

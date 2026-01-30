@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2021 - 2025
+years: 2021 - 2026
 title: Edge services for devices
 description: Documentation for Developing an edge service for devices
 lastupdated: 2025-05-07
@@ -56,11 +56,11 @@ Review the important principles and best practices for {{site.data.keyword.ieam}
 
 * [Edge-native development best practices](best_practices.md)
 
-With {{site.data.keyword.ieam}}, you can optionally put service container images into the IBM private secure container registry instead of the public Docker Hub. For example, if you have a software image that includes assets that are not appropriate to include in a public registry.
+With {{site.data.keyword.ieam}}, you can optionally put service container images into the IBM private secure container registry instead of the public {{site.data.keyword.docker}} Hub. For example, if you have a software image that includes assets that are not appropriate to include in a public registry.
 
 * [Using a private container registry](container_registry.md)
 
-You can {{site.data.keyword.ieam}} use to put your service containers into the IBM private secure container registry instead of the public Docker Hub.
+You can {{site.data.keyword.ieam}} use to put your service containers into the IBM private secure container registry instead of the public {{site.data.keyword.docker}} Hub.
 
 * [Development details](developing_details.md)
 

@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2021 - 2025
+years: 2021 - 2026
 title: Manual agent install
 description: Documentation for Advanced manual agent installation and registration
 lastupdated: 2025-05-03
@@ -43,9 +43,9 @@ This content describes each manual step to install the {{site.data.keyword.edge_
 
 4. Use whichever following section that applies to your type of edge device.
 
-**Note**: If your Linux is not one of the supported distributions and it supports containers, see [Container Agent Installation](../anax/docs/agent_container_manual_deploy.md) for instructions about how to use the containerized agent.
+**Note**: If your {{site.data.keyword.linux}} is not one of the supported distributions and it supports containers, see [Container Agent Installation](../anax/docs/agent_container_manual_deploy.md) for instructions about how to use the containerized agent.
 
-### Installing the agent on Linux (ARM 32-bit, ARM 64-bit, ppc64le, or x86_64) edge devices or virtual machines
+### Installing the agent on {{site.data.keyword.linux}} (ARM 32-bit, ARM 64-bit, ppc64le, or x86_64) edge devices or virtual machines
 {: #agent_install_linux}
 
 Follow these steps:
@@ -59,14 +59,14 @@ Follow these steps:
 
 2. Query the OCI container runtime version to check whether it is recent enough:
 
-   - Docker
+   - {{site.data.keyword.docker}}
 
      ```bash
      docker --version
      ```
      {: codeblock}
 
-     If docker is not installed, or the version is older than `18.06.01`, install the most recent version of Docker.
+     If docker is not installed, or the version is older than `18.06.01`, install the most recent version of {{site.data.keyword.docker}}.
 
      ```bash
      curl -fsSL get.docker.com | sh

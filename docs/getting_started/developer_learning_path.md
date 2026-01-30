@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2021 - 2025
+years: 2021 - 2026
 title: Developer learning path
 description: A set of sequential resources for the developer learning about Open Horizon
 lastupdated: 2025-05-03
@@ -83,7 +83,7 @@ Here is a suggested list that is designed to progressively create familiarity wi
 
 3. **Get published**: Create a service definition file for an existing container and publish it to the exchange, then register your node for the service.
 
-4. **Get containerized**: Take an existing (micro-)service and turn it into a Docker container, then publish and register.
+4. **Get containerized**: Take an existing (micro-)service and turn it into a {{site.data.keyword.docker}} container, then publish and register.
 
 5. **Get patterned**: Compose a pattern definition file of several existing services, publish, register.
 

@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
+years: 2020 - 2026
 title: Preparing to create an edge service
 description: Documentation for Preparing to create an edge service
 lastupdated: 2025-05-03
@@ -34,7 +34,7 @@ Edge services often use cloud ingest services to store and further process edge 
 
 1. Configure your development host for use with {{site.data.keyword.ieam}} by installing the {{site.data.keyword.horizon}} agent on your host and register your host with {{site.data.keyword.horizon_exchange}}. See [Install the {{site.data.keyword.horizon}} agent on your edge device and register it with the hello world example](../installing/registration.md).
 
-2. Create a [Docker Hub ](https://hub.docker.com/){:target="_blank"}{: .externalLink} ID. This is required because the instructions in this section include publishing your service container image to Docker Hub.
+2. Create a [Docker Hub ](https://hub.docker.com/){:target="_blank"}{: .externalLink} ID. This is required because the instructions in this section include publishing your service container image to {{site.data.keyword.docker}} Hub.
 
 ## Procedure
 {: #service_containers_procedure}
@@ -48,21 +48,21 @@ Edge services often use cloud ingest services to store and further process edge 
    ```
    {: codeblock}
 
-2. If you are using {{site.data.keyword.macOS_notm}} as your development host, configure Docker to store credentials in `~/.docker`:
+2. If you are using {{site.data.keyword.macOS_notm}} as your development host, configure {{site.data.keyword.docker}} to store credentials in `~/.docker`:
 
-   1. Open the Docker **Preferences** dialog.
-   2. Uncheck **Securely store Docker logins in {{site.data.keyword.macOS_notm}} keychain**.
+   1. Open the {{site.data.keyword.docker}} **Preferences** dialog.
+   2. Uncheck **Securely store {{site.data.keyword.docker}} logins in {{site.data.keyword.macOS_notm}} keychain**.
 
       * If you cannot uncheck this box follow these steps:
 
         1. Check **Include VM in Time Machine backups**.
-        2. Uncheck **Securely store Docker logins in {{site.data.keyword.macOS_notm}} keychain**.
+        2. Uncheck **Securely store {{site.data.keyword.docker}} logins in {{site.data.keyword.macOS_notm}} keychain**.
         3. (Optional) Uncheck **Include VM in Time Machine backups**.
         4. Click **Apply & Restart**.
 
    3. If you have a file that is called `~/.docker/plaintext-passwords.json`, remove it.
 
-3. Log in to Docker Hub with the Docker Hub ID that you previously created:
+3. Log in to Docker Hub with the {{site.data.keyword.docker}} Hub ID that you previously created:
 
    ```bash
    export DOCKER_HUB_ID="<dockerhubid>"

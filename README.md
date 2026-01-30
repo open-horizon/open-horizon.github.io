@@ -123,7 +123,7 @@ This GitHub Pages site is built with Jekyll. Before you can use Jekyll to test a
 
 ## Test your changes locally
 
-> NOTE: Ruby 3.2.0 is [incompatible at the moment](https://www.miskatonic.org/2023/01/02/ruby-jekyll/).  Recommend using `rbenv` and installing and using `rbenv local 3.1.1` as a workaround.  On MacOS, `brew install rbenv` then `rbenv install 3.1.1` first.
+> NOTE: Ruby 3.2.0 is [incompatible at the moment](https://www.miskatonic.org/2023/01/02/ruby-jekyll/).  Recommend using `rbenv` and installing and using `rbenv local 3.1.1` as a workaround.  On {{site.data.keyword.macOS}}, `brew install rbenv` then `rbenv install 3.1.1` first.
 
 Change to the repository directory on your computer and execute the following command to run the Jekyll site locally.
 
@@ -141,7 +141,7 @@ Change to the repository directory on your computer and execute the following co
    make run
    ```
 
-   **Note**: This runs a local web server with live reload enabled. When running the make command on Windows, an error might occur that identifies the installed command as unrecognized. This can happen when the binary path is set incorrectly.
+**Note**: This runs a local web server with live reload enabled. When running the make command on {{site.data.keyword.windows}}, an error might occur that identifies the installed command as unrecognized. This can happen when the binary path is set incorrectly.
 
    To preview the site in your web browser navigate to [http://localhost:4000](http://localhost:4000).
 
