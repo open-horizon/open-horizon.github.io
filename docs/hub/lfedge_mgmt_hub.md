@@ -1,8 +1,8 @@
 ---
 copyright: Contributors to the Open Horizon project
 years: 2022 - 2025
-title: {{site.data.keyword.ieam}} Management Hub Developer Instance
-description: Documentation for {{site.data.keyword.ieam}} Management Hub Developer Instance
+title: "{{site.data.keyword.ieam}} Management Hub Developer Instance"
+description: "Documentation for {{site.data.keyword.ieam}} Management Hub Developer Instance"
 lastupdated: 2025-05-03
 ---
 
