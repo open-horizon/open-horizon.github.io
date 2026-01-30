@@ -68,7 +68,25 @@ make build
 ```
 
 #### Front Matter Updates
-Always update the `lastupdated: "YYYY-MM-DD"` date in front matter when modifying content.
+
+**CRITICAL**: When modifying any file with front matter, you MUST:
+1. Update the `lastupdated` field to today's date in ISO format (YYYY-MM-DD)
+2. Update the `years` field to include the current year if not already present
+   - If years is a single year (e.g., `2024`), change to range: `2024 - 2026`
+   - If years is already a range (e.g., `2021 - 2024`), update end year: `2021 - 2026`
+
+Example front matter updates:
+```yaml
+# Before modification
+copyright:
+  years: 2021 - 2024
+lastupdated: "2024-09-27"
+
+# After modification (in 2026)
+copyright:
+  years: 2021 - 2026
+lastupdated: "2026-01-30"
+```
 
 #### Copyright Notices
 Copyright notices should span from start year through current year and be updated annually in January:
