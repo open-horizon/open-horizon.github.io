@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
+years: 2020 - 2026
 title: CI-CD process
 description: Documentation for CI-CD process for edge services
 lastupdated: 2025-05-03
@@ -34,7 +34,7 @@ At the time of service deployment, you can override the configuration variable d
 ## Cross-compiling
 {: #cross_compiling}
 
-You can use Docker to build a containerized service for multiple architectures from a single amd64 machine. Similarly, you can develop edge services with compiled programming languages that support cross-compilation, such as Go. For example, if you are writing code on your Mac (an amd64 architecture device) for an arm device (a Raspberry Pi), you might need to build a Docker container that specifies parameters like GOARCH to target arm. This set up can prevent deployment errors. See [open-horizon gps service ](https://github.com/open-horizon/examples/tree/master/edge/services/gps){:target="_blank"}{: .externalLink}.
+You can use Docker to build a containerized service for multiple architectures from a single amd64 machine. Similarly, you can develop edge services with compiled programming languages that support cross-compilation, such as Go. For example, if you are writing code on your Mac (an amd64 architecture device) for an arm device (a Raspberry Pi), you might need to build a {{site.data.keyword.docker}} container that specifies parameters like GOARCH to target arm. This set up can prevent deployment errors. See [open-horizon gps service ](https://github.com/open-horizon/examples/tree/master/edge/services/gps){:target="_blank"}{: .externalLink}.
 
 ## Testing
 {: #testing}
@@ -74,7 +74,7 @@ You can automate testing whenever a pull request (PR) is opened to your GitHub r
 
 Continue reading this content to learn how to leverage Travis and the techniques in the open-horizon examples GitHub repository.
 
-In the examples repository, Travis CI is used to build, test, and publish samples. In the [`.travis.yml` file ](https://github.com/open-horizon/examples/blob/master/.travis.yml){:target="_blank"}{: .externalLink}, a virtual environment is set up to run as a Linux amd64 machine with hzn, Docker, and [qemu ](https://github.com/multiarch/qemu-user-static){:target="_blank"}{: .externalLink} for building on multiple architectures.
+In the examples repository, Travis CI is used to build, test, and publish samples. In the [`.travis.yml` file ](https://github.com/open-horizon/examples/blob/master/.travis.yml){:target="_blank"}{: .externalLink}, a virtual environment is set up to run as a {{site.data.keyword.linux}} amd64 machine with hzn, {{site.data.keyword.docker}}, and [qemu ](https://github.com/multiarch/qemu-user-static){:target="_blank"}{: .externalLink} for building on multiple architectures.
 
 In this scenario, kafkacat is also installed to let cpu2evtstreams send data to IBM Event Streams. Similar to using the command line, Travis can use environment variables like `EVTSTREAMS_TOPIC` and `HZN_DEVICE_ID` for use with the sample edge services. The HZN_EXCHANGE_URL is set to point to the staging exchange for publishing any modified services. 
 
@@ -88,7 +88,7 @@ See [helloworld Makefile ](https://github.com/open-horizon/examples/blob/afd4a58
 
 The following scenario demonstrates a more thorough end-to-end test. If one of the modified samples includes `cpu2evtstreams`, an instance of IBM Event Streams can be monitored in the background and checked for HZN_DEVICE_ID. It can pass the test and be added to a list of all the passing services, only if it finds the **travis-test** node ID in the data read from the cpu2evtstreams topic. This requires an IBM Event Streams API key and broker url that are set as secret environment variables.
 
-After the PR is merged, this process is repeated, and the list of passing services is used to identify which services can be published to the exchange. The Travis secret environment variables that are used in this example include everything that is needed to push, sign, and publish services to the exchange. This includes Docker credentials, HZN_EXCHANGE_USER_AUTH, and a cryptographic signing key pair that can be obtained with the `hzn key create` command. In order to save the signing keys as secure environment variables, they must be base64 encoded.
+After the PR is merged, this process is repeated, and the list of passing services is used to identify which services can be published to the exchange. The Travis secret environment variables that are used in this example include everything that is needed to push, sign, and publish services to the exchange. This includes {{site.data.keyword.docker}} credentials, HZN_EXCHANGE_USER_AUTH, and a cryptographic signing key pair that can be obtained with the `hzn key create` command. In order to save the signing keys as secure environment variables, they must be base64 encoded.
 
 The list of services that passed the functional test is used to identify which services should be published with the dedicated publish `Makefile` target. See [helloworld sample ](https://github.com/open-horizon/examples/blob/afd4a5822aede44616eb5da7cd9dafd4d78f12ec/edge/services/helloworld/Makefile#L45){:target="_blank"}{: .externalLink}.
 

@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2021 - 2025
+years: 2021 - 2026
 title: Security and privacy
 description: Documentation for Security and privacy
 lastupdated: 2025-05-03
@@ -24,7 +24,7 @@ grand_parent: Administering
 {:shortdesc}
 
 ## Management Hub
-The {{site.data.keyword.ieam}} management hub is deployed into an OpenShift Container platform; thus, it inherits all of the inherent security mechanism benefits. All of the {{site.data.keyword.ieam}} management hub network traffic traverses a TLS-secured entry point. Management hub network communication between the {{site.data.keyword.ieam}} management hub components is performed without TLS.
+The {{site.data.keyword.ieam}} management hub is deployed into an {{site.data.keyword.open_shift_cp}}; thus, it inherits all of the inherent security mechanism benefits. All of the {{site.data.keyword.ieam}} management hub network traffic traverses a TLS-secured entry point. Management hub network communication between the {{site.data.keyword.ieam}} management hub components is performed without TLS.
 
 ## Secure Control Plane
 {: #dc_pane}

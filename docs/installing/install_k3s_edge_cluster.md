@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
+years: 2020 - 2026
 title: Installing a K3s edge cluster
 description: Documentation for Installing and configuring a K3s edge cluster
 lastupdated: 2025-05-03
@@ -31,7 +31,7 @@ This content provides a summary of how to install k3s (rancher), a lightweight a
 {: #reqs}
 
 * Architecture must be either x86_64 (amd64) or arm64
-* Operating system must be modern Linux variant with 64-bit and systemd support
+* Operating system must be modern {{site.data.keyword.linux}} variant with 64-bit and systemd support
 
 **Note**: If installed, uninstall kubectl before completing the following steps.
 
@@ -157,9 +157,9 @@ This content provides a summary of how to install k3s (rancher), a lightweight a
       ```
       {: codeblock}
 
-5. Define this registry in Docker as an insecure registry:
+5. Define this registry in {{site.data.keyword.docker}} as an insecure registry:
 
-   1. Install Docker (if not already installed):
+   1. Install {{site.data.keyword.docker}} (if not already installed):
 
       NOTE: If `docker --version` responds with a version number, then it is installed.
 
@@ -177,7 +177,7 @@ This content provides a summary of how to install k3s (rancher), a lightweight a
       ```
       {: codeblock}
 
-   3. Restart Docker to pick up the change:
+   3. Restart {{site.data.keyword.docker}} to pick up the change:
 
       ```bash
       systemctl restart docker

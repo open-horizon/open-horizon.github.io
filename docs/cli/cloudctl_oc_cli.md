@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
+years: 2020 - 2026
 title: Installing cloudctl, kubectl, and oc
 description: Documentation for Installing cloudctl, kubectl, and oc
 lastupdated: 2025-05-03
@@ -25,7 +25,7 @@ Follow these steps to install the command line tools that are needed to manage a
 
 1. Browse your {{site.data.keyword.ieam}} web UI at: `https://<CLUSTER_URL>/common-nav/cli`
 
-2. Expand the **IBM Cloud Pak CLI** section and select your **OS**.
+2. Expand the **{{site.data.keyword.ibm_cloud}} Pak CLI** section and select your **OS**.
 
 3. Copy the displayed **curl** command and run it to download the **cloudctl** binary.
 
@@ -46,7 +46,7 @@ Follow these steps to install the command line tools that are needed to manage a
 
 ## oc
 
-1. Download the {{site.data.keyword.open_shift_cp}} CLI tar file from [OpenShift client CLI (oc) ](https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/){:target="_blank"}{: .externalLink}. Select the file **openshift-client-\*-\*.tar.gz** for your operating system.
+1. Download the {{site.data.keyword.open_shift_cp}} CLI tar file from [{{site.data.keyword.open_shift}} client CLI (oc) ](https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/){:target="_blank"}{: .externalLink}. Select the file **openshift-client-\*-\*.tar.gz** for your operating system.
 
 2. Find the downloaded tar file and unpack it:
 

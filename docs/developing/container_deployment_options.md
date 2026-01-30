@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
+years: 2020 - 2026
 title: Container Deployment
 description: Documentation for Container deployment options
 lastupdated: 2025-05-03
@@ -20,7 +20,7 @@ grand_parent: Developing edge services
 # Container deployment options
 {: #container_deployment_options}
 
-When your developers publish services to {{site.data.keyword.horizon_exchange}}, they need to specify how the agent communicates with Docker to deploy the services at run time on the edge node. Your developers must specify the data within the {{site.data.keyword.horizon}} service definition `deployment` field. For more information, see [{{site.data.keyword.horizon}} deployment strings ](/docs/anax/docs/deployment_string/).
+When your developers publish services to {{site.data.keyword.horizon_exchange}}, they need to specify how the agent communicates with {{site.data.keyword.docker}} to deploy the services at run time on the edge node. Your developers must specify the data within the {{site.data.keyword.horizon}} service definition `deployment` field. For more information, see [{{site.data.keyword.horizon}} deployment strings ](/docs/anax/docs/deployment_string/).
 
 ## Related information
 

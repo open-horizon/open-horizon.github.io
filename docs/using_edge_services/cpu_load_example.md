@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
+years: 2020 - 2026
 title: CPU usage to IBM Event Streams
 description: Documentation for CPU usage to {{site.data.keyword.message_hub_notm}}
 lastupdated: 2025-05-03
@@ -101,8 +101,8 @@ To run the cpu2evtstreams service example on your edge node, you must register y
 The CPU example source code is available in the [{{site.data.keyword.horizon_open}} examples repository ](https://github.com/open-horizon/examples){:target="_blank"}{: .externalLink} as an example for {{site.data.keyword.edge_notm}} edge service development. This source includes
 the code for all three of the services that run on the edge node for this example:
 
-* The cpu service that provides the CPU load percentage data as a REST service on a local private Docker network. For more information, see [Horizon CPU Percent Service ](https://github.com/open-horizon/examples/tree/master/edge/services/cpu_percent){:target="_blank"}{: .externalLink}.
-* The gps service that provides location information from GPS hardware (if available) or a location that is estimated from the edge nodes IP address. The location data is provided as a REST service on a local private Docker network. For more information, see [Horizon GPS Service ](https://github.com/open-horizon/examples/tree/master/edge/services/gps){:target="_blank"}{: .externalLink}.
+* The cpu service that provides the CPU load percentage data as a REST service on a local private {{site.data.keyword.docker}} network. For more information, see [Horizon CPU Percent Service ](https://github.com/open-horizon/examples/tree/master/edge/services/cpu_percent){:target="_blank"}{: .externalLink}.
+* The gps service that provides location information from GPS hardware (if available) or a location that is estimated from the edge nodes IP address. The location data is provided as a REST service on a local private {{site.data.keyword.docker}} network. For more information, see [Horizon GPS Service ](https://github.com/open-horizon/examples/tree/master/edge/services/gps){:target="_blank"}{: .externalLink}.
 * The cpu2evtstreams service that uses the REST APIs that are provided by the other two services. This service sends the combined data to an {{site.data.keyword.message_hub_notm}} kafka broker in the cloud. For more information about the service, see [{{site.data.keyword.horizon}} CPU To {{site.data.keyword.message_hub_notm}} Service ](https://github.com/open-horizon/examples/blob/master/edge/evtstreams/cpu2evtstreams/cpu2evtstreams.md){:target="_blank"}{: .externalLink}.
 * For more information about the {{site.data.keyword.message_hub_notm}}, see [Event Streams - Overview ](https://www.ibm.com/cloud/event-streams?mhsrc=ibmsearch_a&mhq=event%20streams){:target="_blank"}{: .externalLink}.
 

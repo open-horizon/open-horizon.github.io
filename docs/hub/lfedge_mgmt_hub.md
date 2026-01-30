@@ -1,9 +1,9 @@
 ---
-copyright: Contributors to the Open Horizon project
-years: 2022 - 2026
+copyright:
+  years: 2022 - 2026
+lastupdated: "2026-01-30"
 title: "{{site.data.keyword.ieam}} Management Hub Developer Instance"
 description: "Documentation for {{site.data.keyword.ieam}} Management Hub Developer Instance"
-lastupdated: "2026-01-30"
 ---
 
 {:new_window: target="blank"}

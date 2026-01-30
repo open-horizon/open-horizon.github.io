@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2021 - 2025
+years: 2021 - 2026
 title: Gather edge node files
 description: Documentation for Gather edge node files
 lastupdated: 2025-10-17
@@ -57,8 +57,8 @@ FILES=(
   horizon-agent-linux-rpm-ppc64le.tar.gz
   horizon-agent-linux-rpm-s390x.tar.gz
   horizon-agent-linux-rpm-x86_64.tar.gz
-  horizon-agent-macos-pkg-arm64.tar.gz
-  horizon-agent-macos-pkg-x86_64.tar.gz
+  horizon-agent-{{site.data.keyword.macOS_notm}}-pkg-arm64.tar.gz
+  horizon-agent-{{site.data.keyword.macOS_notm}}-pkg-x86_64.tar.gz
 )
 
 for FILE in ${FILES[@]}; do

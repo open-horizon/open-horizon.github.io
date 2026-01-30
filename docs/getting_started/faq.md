@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
+years: 2020 - 2026
 title: FAQs
 description: Documentation for Frequently asked questions
 lastupdated: 2025-05-03
@@ -56,25 +56,25 @@ See [Using edge services](../using_edge_services/using_edge_services.md).
 ## What edge node hardware platforms does {{site.data.keyword.ieam}} support?
 {: #hw_plat}
 
-{{site.data.keyword.ieam}} supports different hardware architectures through the Debian {{site.data.keyword.linux_notm}} binary package for {{site.data.keyword.horizon}} or through Docker containers. For more information, see [Installing {{site.data.keyword.horizon}} software](../installing/installing_edge_nodes.md).
+{{site.data.keyword.ieam}} supports different hardware architectures through the Debian {{site.data.keyword.linux_notm}} binary package for {{site.data.keyword.horizon}} or through {{site.data.keyword.docker}} containers. For more information, see [Installing {{site.data.keyword.horizon}} software](../installing/installing_edge_nodes.md).
 
 ## Can I run any {{site.data.keyword.linux_notm}} distribution on my edge nodes with {{site.data.keyword.ieam}}?
 {: #lin_dist}
 
 Yes, and no.
 
-You can develop edge software that uses any {{site.data.keyword.linux_notm}} distribution as the base image of the Docker containers (if it uses the Dockerfile `FROM` statement) if that base functions on the host {{site.data.keyword.linux_notm}} kernel on your edge nodes. This means that you can use any distribution for your containers that Docker is able to run on your edge hosts.
+You can develop edge software that uses any {{site.data.keyword.linux_notm}} distribution as the base image of the Docker containers (if it uses the Dockerfile `FROM` statement) if that base functions on the host {{site.data.keyword.linux_notm}} kernel on your edge nodes. This means that you can use any distribution for your containers that {{site.data.keyword.docker}} is able to run on your edge hosts.
 
-However, your edge node host operating system must be able to run a recent version of Docker and be able to run the {{site.data.keyword.horizon}} software. Currently, the {{site.data.keyword.horizon}} software is provided only as a Debian and RPM packages for edge nodes that run {{site.data.keyword.linux_notm}}. For Apple Macintosh machines, a Docker container version is provided. The {{site.data.keyword.horizon}} development team primarily uses Apple Macintosh, or the Ubuntu or Raspberry Pi OS {{site.data.keyword.linux_notm}} distributions.
+However, your edge node host operating system must be able to run a recent version of Docker and be able to run the {{site.data.keyword.horizon}} software. Currently, the {{site.data.keyword.horizon}} software is provided only as a Debian and RPM packages for edge nodes that run {{site.data.keyword.linux_notm}}. For Apple Macintosh machines, a {{site.data.keyword.docker}} container version is provided. The {{site.data.keyword.horizon}} development team primarily uses Apple Macintosh, or the Ubuntu or Raspberry Pi OS {{site.data.keyword.linux_notm}} distributions.
 
-Additionally, RPM package installation was tested on edge nodes configured with Red Hat Enterprise Linux (RHEL) Version 8.2.
+Additionally, RPM package installation was tested on edge nodes configured with {{site.data.keyword.rhel}} (RHEL) Version 8.2.
 
 ## Which programming languages and environments are supported by {{site.data.keyword.ieam}}?
 {: #pro_env}
 
-{{site.data.keyword.ieam}} supports almost any programming language and software library that you are able to configure to run in an appropriate Docker container on your edge nodes.
+{{site.data.keyword.ieam}} supports almost any programming language and software library that you are able to configure to run in an appropriate {{site.data.keyword.docker}} container on your edge nodes.
 
-If your software requires access to specific hardware or operating system services, you might need to provide `docker run`-equivalent arguments to support that access. You can specify supported arguments within the `deployment` section of your Docker container definition file.
+If your software requires access to specific hardware or operating system services, you might need to provide `docker run`-equivalent arguments to support that access. You can specify supported arguments within the `deployment` section of your {{site.data.keyword.docker}} container definition file.
 
 ## Is there detailed documentation for the REST APIs provided by the components in {{site.data.keyword.ieam}}?
 {: #rest_doc}
@@ -150,6 +150,6 @@ See [Security at the Edge ](https://www.ibm.com/cloud/blog/security-at-the-edge)
 ## How do I manage AI at the Edge with models vs AI on the Cloud?
 {: #ai_cloud}
 
-Typically, AI at the edge enables you to perform on-the-spot machine inferencing with subsecond latency, which enables real-time response based on use case and hardware (for example, RaspberryPi, Intel x86, and Nvidia Jetson nano). {{site.data.keyword.ieam}} model management system enables you to deploy updated AI models without any service downtime.
+Typically, AI at the edge enables you to perform on-the-spot machine inferencing with subsecond latency, which enables real-time response based on use case and hardware (for example, RaspberryPi, {{site.data.keyword.intel}} x86, and Nvidia Jetson nano). {{site.data.keyword.ieam}} model management system enables you to deploy updated AI models without any service downtime.
 
 See [Models Deployed at the Edge ](https://www.ibm.com/cloud/blog/models-deployed-at-the-edge){:target="_blank"}{: .externalLink}.

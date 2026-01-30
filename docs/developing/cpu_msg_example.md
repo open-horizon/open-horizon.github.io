@@ -1,12 +1,12 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2025
+years: 2025 - 2026
 title: CPU to Apache Kafka service
 description: This example collects CPU load percentage information to send to Apache Kafka. Use this example to help you develop your own edge applications that send data to cloud services.
 lastupdated: 2025-05-03
 nav_order: 7
 parent: Edge service examples
-yyears: 2020 - 2022
+yyears: 2020 - 2026
 grand_parent: Using edge services
 ---
 
@@ -87,7 +87,7 @@ The **cpu2evtstreams** service requires some configuration before it can run. Ed
         },
         {
             "name": "EVTSTREAMS_CERT_ENCODED",
-            "label": "The base64-encoded self-signed certificate to use when sending messages to your ICP instance of IBM Event Streams. Not needed for IBM Cloud Event Streams.",
+            "label": "The base64-encoded self-signed certificate to use when sending messages to your ICP instance of IBM Event Streams. Not needed for {{site.data.keyword.ibm_cloud}} Event Streams.",
             "type": "string",
             "defaultValue": "-"
         },

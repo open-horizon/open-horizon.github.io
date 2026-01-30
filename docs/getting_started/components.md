@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2019 - 2025
+years: 2019 - 2026
 title: Components
 description: Documentation for Components
 lastupdated: 2025-05-03
@@ -32,7 +32,7 @@ View the following table for a description of the {{site.data.keyword.ieam}} com
 | Exchange API                                  | 2.110.1-1003 | The Exchange API provides a REST API to all of the {{site.data.keyword.ieam}} resources (patterns, policies, services, nodes, and so on) used by all the other components in {{site.data.keyword.ieam}}.                           |
 | Model Management System (MMS)                 | 1.9.10-1177  | The Model Management System (MMS) facilitates the storage, delivery, and security of models and files needed by edge services. This enables edge nodes to easily send and receive models and files to and from the management hub. |
 | Secure Device Onboard (SDO)                   | 1.11.16-913  | The Secure Device Onboarding (SDO) service enables SDO-enabled edge devices to be configured with zero touch.                                                                                                                      |
-| FIDO Device Onboard (FDO)                     | 1.0.0-110    | The FDO component, FIDO Device Onboard, is a device onboarding scheme from the FIDO Alliance that enables technology created by Intel, which makes it simple and secure to configure edge devices and associate them with an edge management hub.|
+| FIDO Device Onboard (FDO)                     | 1.0.0-110    | The FDO component, FIDO Device Onboard, is a device onboarding scheme from the FIDO Alliance that enables technology created by {{site.data.keyword.intel}}, which makes it simple and secure to configure edge devices and associate them with an edge management hub.|
 | Secrets Manager                               | 1.1.1-641    | The Secrets Manager is the repository for secrets deployed to edge devices, enabling services to securely receive credentials used to authenticate to their upstream dependencies.                                                 |
 | **Edge node**                                 |              | Any edge device, edge cluster, or edge gateway where edge computing takes place.                                                                                                                                                   |
 | Edge cluster agent                            | 2.30.0-1177  | The agent that is installed on edge clusters to enable node workload management by {{site.data.keyword.ieam}}.                                                                                                                     |

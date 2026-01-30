@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
+years: 2020 - 2026
 title: Installing a microk8s edge cluster
 description: Documentation for Installing and configuring a microk8s edge cluster
 lastupdated: 2025-05-03
@@ -25,7 +25,7 @@ grand_parent: Edge clusters
 ## Introduction
 {: #intro}
 
-This content provides a summary of how to install microk8s, a lightweight and small Kubernetes cluster, on an Ubuntu Linux AMD64-based system. (For more detailed instructions, see the [microk8s documentation ](https://microk8s.io/docs){:target="_blank"}{: .externalLink}.)
+This content provides a summary of how to install microk8s, a lightweight and small Kubernetes cluster, on an Ubuntu {{site.data.keyword.linux}} AMD64-based system. (For more detailed instructions, see the [microk8s documentation ](https://microk8s.io/docs){:target="_blank"}{: .externalLink}.)
 
 ## Pre-requisites
 {: #reqs}
@@ -91,7 +91,7 @@ This content provides a summary of how to install microk8s, a lightweight and sm
    ```
    {: codeblock}
 
-6. Enable the container registry and configure Docker to tolerate the insecure registry:
+6. Enable the container registry and configure {{site.data.keyword.docker}} to tolerate the insecure registry:
 
    1. Enable the container registry:
 

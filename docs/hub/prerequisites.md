@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2021 - 2025
+years: 2021 - 2026
 title: Prerequisites
 description: Documentation for Install {{site.data.keyword.ieam}}
 lastupdated: 2025-05-03
@@ -36,7 +36,7 @@ You must install and configure a [management hub](../hub/overview.md) before you
 ## Prerequisites
 {: #prereq}
 
-Ensure you are using a Debian-based Linux distribution such as Ubuntu 20.04 or 22.04 LTS and running on an x86-based micro-architecture. The installation can run on the bare hardware or in a VM.  The Hub **cannot** run on arm64-based hardware.
+Ensure you are using a Debian-based {{site.data.keyword.linux}} distribution such as Ubuntu 20.04 or 22.04 LTS and running on an x86-based micro-architecture. The installation can run on the bare hardware or in a VM.  The Hub **cannot** run on arm64-based hardware.
 
 For installation, you will need to become root, ex. `sudo -i`
 

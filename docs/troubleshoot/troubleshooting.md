@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2021 - 2025
+years: 2021 - 2026
 title: Troubleshooting tips
 description: Documentation for Troubleshooting tips and frequently asked questions
 lastupdated: 2025-05-03
@@ -32,7 +32,7 @@ The following troubleshooting content describes the main components of {{site.da
 
 Many interfaces that are included with {{site.data.keyword.ieam}} provide information that can be used to diagnose problems. This information is available through the {{site.data.keyword.gui}}, and HTTP REST APIs and a {{site.data.keyword.linux_notm}} shell tool, `hzn`.
 
-On an edge node you might need to troubleshoot host issues, Horizon software issues, Docker issues, or issues in your configuration or the code in service containers. Edge node host issues are beyond the scope of this document. If you need to troubleshoot Docker issues, you can use many Docker commands and interfaces. For more information, see the Docker documentation.
+On an edge node you might need to troubleshoot host issues, Horizon software issues, Docker issues, or issues in your configuration or the code in service containers. Edge node host issues are beyond the scope of this document. If you need to troubleshoot Docker issues, you can use many Docker commands and interfaces. For more information, see the {{site.data.keyword.docker}} documentation.
 
 If the service containers you are running use {{site.data.keyword.message_hub_notm}} (which is based on Kafka) for messaging, you can manually connect to the Kafka streams for {{site.data.keyword.ieam}} to diagnose problems. You can either subscribe to a message topic to observe what was received by {{site.data.keyword.message_hub_notm}}, or you can publish to a message topic to simulate messages from another device. The `kafkacat` {{site.data.keyword.linux_notm}} command is a way to publish or subscribe to {{site.data.keyword.message_hub_notm}}. Use the most recent version of this tool. {{site.data.keyword.message_hub_notm}} also provides graphical web pages that you can use to access some information.
 

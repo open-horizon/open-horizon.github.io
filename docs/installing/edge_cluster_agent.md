@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2022 - 2025
+years: 2022 - 2026
 title: Installing the edge cluster agent
 description: Documentation for Installing the edge cluster agent
 lastupdated: 2025-10-07
@@ -33,7 +33,7 @@ This content provides instructions on installing the cluster agent on common Kub
 - ppc64le
 - s390x
 
-* Operating system must be modern Linux variant with 64-bit and systemd support
+* Operating system must be modern {{site.data.keyword.linux}} variant with 64-bit and systemd support
 
 **Note**: {{site.data.keyword.ieam}} cluster agent installation requires cluster admin access on the edge cluster.  Additionally, the "jq" command-line JSON processor must be installed prior to running the agent install script.
 
@@ -136,7 +136,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
     ```
     {: codeblock}
 
-11. Get the {{site.data.keyword.open_shift}} certificate and configure Docker to trust it:
+11. Get the {{site.data.keyword.open_shift}} certificate and configure {{site.data.keyword.docker}} to trust it:
 
     ```bash
     echo | openssl s_client -connect $OCP_IMAGE_REGISTRY:443 -showcerts | sed -n "/-----BEGIN CERTIFICATE-----/,/-----END CERTIFICATE-----/p" > ca.crt
@@ -160,9 +160,9 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
     ```
     {: codeblock}
 
-    On {{site.data.keyword.macOS_notm}}, use the Docker Desktop icon on the right side of the desktop menu bar to restart Docker by clicking **Restart** in the dropdown menu.
+    On {{site.data.keyword.macOS_notm}}, use the Docker Desktop icon on the right side of the desktop menu bar to restart {{site.data.keyword.docker}} by clicking **Restart** in the dropdown menu.
 
-12. Log in to the {{site.data.keyword.ocp}} Docker host:
+12. Log in to the {{site.data.keyword.ocp}} {{site.data.keyword.docker}} host:
 
     ```bash
     echo "$OCP_TOKEN" | docker login -u $OCP_USER --password-stdin $OCP_IMAGE_REGISTRY

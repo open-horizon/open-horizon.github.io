@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
+years: 2020 - 2026
 title: GDPR readiness
 description: Documentation for {{site.data.keyword.edge_notm}} considerations for GDPR readiness
 lastupdated: 2025-05-03
@@ -75,7 +75,7 @@ As such, {{site.data.keyword.ieam}} works primarily with technical data that is 
 
 This data is persisted on the {{site.data.keyword.ieam}} on local or remote file systems as configuration files or in databases. Applications that are developed to run on {{site.data.keyword.ieam}} might use other forms of personal data subject to GDPR. The mechanisms that are used to protect and manage data are also available to applications that run on {{site.data.keyword.ieam}}. More mechanisms might be needed to manage and protect personal data that is collected by applications that are run on {{site.data.keyword.ieam}}.
 
-To understand {{site.data.keyword.ieam}} data flows, you must understand how Kubernetes, Docker, and Operators work. These open source components are fundamental to the {{site.data.keyword.ieam}}. You use {{site.data.keyword.ieam}} to place instances of application containers (edge services) on edge nodes. The edge services contain the details about the application, and the Docker images contain all the software packages that your applications need to run.
+To understand {{site.data.keyword.ieam}} data flows, you must understand how Kubernetes, Docker, and Operators work. These open source components are fundamental to the {{site.data.keyword.ieam}}. You use {{site.data.keyword.ieam}} to place instances of application containers (edge services) on edge nodes. The edge services contain the details about the application, and the {{site.data.keyword.docker}} images contain all the software packages that your applications need to run.
 
 {{site.data.keyword.ieam}} includes a set of open source edge service examples. To view a list of all the {{site.data.keyword.ieam}} charts, see [open-horizon/examples ](https://github.com/open-horizon/examples){:target="_blank"}{: .externalLink}{:new_window}. It is the client’s responsibility to determine and implement any appropriate GDPR controls for open source software.
 

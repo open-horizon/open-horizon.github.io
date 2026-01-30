@@ -1,6 +1,6 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
+years: 2020 - 2026
 title: Transform image to edge service
 description: Documentation for Transform image to edge service
 lastupdated: 2025-05-03
@@ -20,7 +20,7 @@ grand_parent: Developing edge services
 # Transform image to edge service
 {: #transform_image}
 
-This example guides you through the steps to publish an existing Docker image as an edge service, create an associated deployment pattern, and register your edge nodes to run that deployment pattern.
+This example guides you through the steps to publish an existing {{site.data.keyword.docker}} image as an edge service, create an associated deployment pattern, and register your edge nodes to run that deployment pattern.
 {:shortdesc}
 
 ## Before you begin
@@ -43,7 +43,7 @@ cat /etc/default/horizon
 
 1. Create a project directory.
 
-   1. On your development host, change to your existing Docker project directory. **If you don't have an existing Docker project, but still want to continue with this example**, use these commands to create a simple Dockerfile that can be used with the rest of this procedure:
+   1. On your development host, change to your existing Docker project directory. **If you don't have an existing {{site.data.keyword.docker}} project, but still want to continue with this example**, use these commands to create a simple Dockerfile that can be used with the rest of this procedure:
 
    ```bash
    cat << EndOfContent > Dockerfile
@@ -120,7 +120,7 @@ cat /etc/default/horizon
 
 3. Publish your service to {{site.data.keyword.edge_notm}}. Now that you verified that your service code runs as expected in the simulated agent environment, publish the service to {{site.data.keyword.horizon_exchange}} so that it becomes available for deployment to your edge nodes.
 
-   The following **publish** command uses the **horizon/service.definition.json** file and your key pair to sign and publish your service to {{site.data.keyword.horizon_exchange}}. It also pushes your image to Docker Hub.
+   The following **publish** command uses the **horizon/service.definition.json** file and your key pair to sign and publish your service to {{site.data.keyword.horizon_exchange}}. It also pushes your image to {{site.data.keyword.docker}} Hub.
 
    ```bash
    hzn exchange service publish -f horizon/service.definition.json
