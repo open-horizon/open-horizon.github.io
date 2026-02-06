@@ -1,11 +1,11 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2022 - 2025
+years: 2022 - 2026
 title: Removing the agent from an edge cluster
 description: Documentation for Removing the agent from an edge cluster
-lastupdated: 2025-05-03
-nav_order: 4
-parent: Edge clusters
+lastupdated: 2026-01-30
+nav_order: 22
+parent: Agent (anax)
 ---
 
 {:new_window: target="blank"}

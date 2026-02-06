@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="setting_up_cluster_local_reg_ocp" xml:lang="en-US">
+<title>Setting up a local image registry for a <ph keyref="rh-ocp"/> edge cluster </title>
+<shortdesc>The image registry is the location of the agent image and agent cronjob image. If an edge
+service image includes assets that are not appropriate to include in a public registry, you can use
+a local image registry, where access is tightly controlled. Use this procedure to specify the local
+image registry that you want to use.</shortdesc>
+<taskbody>
+<context><p>Organization administrators can see all the organization users and their API keys in the
+<ph keyref="short-product-name"/> console, and can delete keys too.</p></context>
+<steps>
+<step>
+<cmd>Verify that a default route for the <ph keyref="rh-openshift"/> image registry is created and
+that it is accessible from outside of the cluster:</cmd>
+<info><codeblock outputclass="language-bash">oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}'
+</codeblock><p>If the command response indicates the <codeph>default-route</codeph> is not found, you need to
+expose it (see <xref keyref="rh-ocp-exposing-registry"/> for
+details):</p>
+<codeblock outputclass="language-bash">oc patch configs.imageregistry.operator.openshift.io/cluster --patch '{"spec":{"defaultRoute":true}}' --type=merge
+</codeblock></info>
+</step>
+<step>
+<cmd>Retrieve the repository route name that you need to use:</cmd>
+<info><codeblock outputclass="language-bash">export OCP_IMAGE_REGISTRY=`oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}'`
+</codeblock></info>
+</step>
+<step>
+<cmd>Create a new project to store your images:</cmd>
+<info><codeblock outputclass="language-bash">export OCP_PROJECT=$AGENT_NAMESPACE
+oc new-project $OCP_PROJECT
+</codeblock></info>
+</step>
+<step>
+<cmd>Create a service account with a name of your choosing:</cmd>
+<info><codeblock outputclass="language-bash">export OCP_USER=&lt;service-account-name&gt;
+oc create serviceaccount $OCP_USER
+</codeblock></info>
+</step>
+<step>
+<cmd>Add a role to your service account for the current project:</cmd>
+<info><codeblock outputclass="language-bash">oc policy add-role-to-user edit system:serviceaccount:$OCP_PROJECT:$OCP_USER
+</codeblock></info>
+</step>
+<step>
+<cmd>Set your service account token to the following environment variable:</cmd>
+<substeps>
+<substep>
+<cmd>Determine if you can extract the token with this command: </cmd>
+<info><codeblock outputclass="language-bash">oc serviceaccounts get-token $OCP_USER
+</codeblock></info>
+</substep>
+<substep>
+<cmd>If the above command returns a token, run: </cmd>
+<info><codeblock outputclass="language-bash">export OCP_TOKEN=`oc serviceaccounts get-token $OCP_USER`
+</codeblock></info>
+</substep>
+<substep>
+<cmd>If the command from the step 1 did not return a token, run: </cmd>
+<info><codeblock outputclass="language-bash">export OCP_TOKEN=`oc serviceaccounts new-token $OCP_USER`
+</codeblock></info>
+</substep>
+</substeps>
+</step>
+<step>
+<cmd>Get the <ph keyref="rh-openshift"/> certificate and allow docker to trust it:</cmd>
+<info><codeblock outputclass="language-bash">echo | openssl s_client -connect $OCP_IMAGE_REGISTRY:443 -showcerts | sed -n "/-----BEGIN CERTIFICATE-----/,/-----END CERTIFICATE-----/p" &gt; ca.crt
+</codeblock><dl>
+<dlentry>
+<dt><tm tmtype="reg" trademark="Linux">Linux</tm></dt>
+<dd><codeblock outputclass="language-bash">mkdir -p /etc/docker/certs.d/$OCP_IMAGE_REGISTRY
+cp ca.crt /etc/docker/certs.d/$OCP_IMAGE_REGISTRY
+systemctl restart docker.service
+</codeblock></dd>
+</dlentry>
+<dlentry>
+<dt>macOS</dt>
+<dd><codeblock outputclass="language-bash">mkdir -p ~/.docker/certs.d/$OCP_IMAGE_REGISTRY
+cp ca.crt ~/.docker/certs.d/$OCP_IMAGE_REGISTRY
+</codeblock>Use the Docker Desktop icon on the right side of the desktop menu bar to restart Docker
+by clicking <uicontrol>Restart</uicontrol> in the dropdown menu.</dd>
+</dlentry>
+</dl></info>
+</step>
+<step>
+<cmd>Log in to the <ph keyref="rh-ocp"/> Docker host:</cmd>
+<info><codeblock outputclass="language-bash">echo "$OCP_TOKEN" | docker login -u $OCP_USER --password-stdin $OCP_IMAGE_REGISTRY
+</codeblock></info>
+</step>
+<step>
+<cmd>Configure additional trust stores for image registry access:</cmd>
+<info><codeblock outputclass="language-bash">oc create configmap registry-config --from-file=$OCP_IMAGE_REGISTRY=ca.crt -n openshift-config
+</codeblock></info>
+</step>
+<step>
+<cmd>Edit the new <codeph>registry-config</codeph>:</cmd>
+<info><codeblock outputclass="language-bash">oc edit image.config.openshift.io cluster
+</codeblock></info>
+</step>
+<step>
+<cmd>Update the <codeph>spec:</codeph> section:</cmd>
+<info><codeblock outputclass="language-bash">spec:
+  additionalTrustedCA:
+    name: registry-config
+</codeblock></info>
+</step>
+<step>
+<cmd>The <filepath>agent-install.sh</filepath> script stores the <ph keyref="short-product-name"/> agent in the
+edge cluster container registry. Set the registry user, password, and the full image path without
+the tag:</cmd>
+<info><codeblock outputclass="language-bash">export EDGE_CLUSTER_REGISTRY_USERNAME=$OCP_USER
+export EDGE_CLUSTER_REGISTRY_TOKEN="$OCP_TOKEN"
+export IMAGE_ON_EDGE_CLUSTER_REGISTRY=$OCP_IMAGE_REGISTRY/$OCP_PROJECT/amd64_anax_k8s
+or 
+export IMAGE_ON_EDGE_CLUSTER_REGISTRY=$OCP_IMAGE_REGISTRY/$OCP_PROJECT/s390x_anax_k8s
+</codeblock><note>The <ph keyref="short-product-name"/> agent image is stored in the local edge
+cluster registry because the edge cluster Kubernetes needs ongoing access to it, in case it needs to
+restart it or move it to another pod.</note></info>
+</step>
+</steps>
+</taskbody>
+</task>

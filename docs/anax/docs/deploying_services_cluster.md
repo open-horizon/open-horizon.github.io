@@ -1,14 +1,14 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2022 - 2025
-title: Deploying services to an edge cluster
+years: 2022 - 2026
+title: Deploying services to your edge cluster
 description: Documentation for Deploying services to an edge cluster
-lastupdated: 2025-05-03
-nav_order: 3
-parent: Edge clusters
+lastupdated: 2026-01-30
+nav_order: 20
+parent: Agent (anax)
 ---
 
-# Deploying services to an edge cluster
+# Deploying services to your edge cluster
 
 ## How to deploy services to an edge cluster
 {: #deploying_services}
