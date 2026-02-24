@@ -288,8 +288,11 @@ Documentation content is sourced from multiple Open Horizon repositories:
 - **Core docs**: `docs/anax/docs/` ← sourced from `open-horizon/anax`
 - **Management Hub**: `docs/mgmt-hub/docs/` ← sourced from `open-horizon/devops`
 - **KubeArmor integration**: `docs/kubearmor-integration/docs/` ← sourced from `open-horizon/kubearmor-integration`
+- **FDO support**: `docs/fdo/docs/` ← sourced from `open-horizon/FDO-support`
+- **Exchange API**: `docs/exchange-api/docs/` ← sourced from `open-horizon/exchange-api`
+- **Release documentation**: `docs/release/docs/` ← sourced from `open-horizon/open-horizon-release`
 
-**Important**: Never modify markdown files in sourced directories. Changes must be made in the originating repository and copied via automated workflows.
+**Important**: Never modify markdown files in sourced directories. Changes must be made in the originating repository and are automatically copied via automated workflows using GitHub Actions when merged.
 
 #### File Exclusion
 
