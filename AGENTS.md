@@ -257,7 +257,7 @@ has_toc: false     # enable/disable table of contents
 - **Signed commits**: All commits must use `git commit -s` (signed-off)
 - **Commit messages**: Descriptive but concise, focus on "what" and "why"
 - **Atomic commits**: One logical change per commit
-- **Branch naming**: `issue-###` or `feature/descriptive-name`
+- **Branch naming**: `issue-###`
 
 #### Pull Request Process
 
@@ -282,17 +282,23 @@ has_toc: false     # enable/disable table of contents
 ### Documentation Source Management
 
 #### Multi-Repository Sources
+Some of the documentation content in this repository is copied from other Open Horizon repositories by using automated workflows. The following directory listing shows the directories that receive content in this way, and the other Open Horizon repositories from which the content is copied:
 
-Documentation content is sourced from multiple Open Horizon repositories:
+docs/
+├── anax/
+│   ├─ docs/                  # Copied from `open-horizon/anax`
+├── mgmt-hub/
+│   ├─ docs/                  # Copied from `open-horizon/devops`
+├── kubearmor-integration/
+│   ├─ docs/                  # Copied from `open-horizon/kubearmor-integration`
+├── fdo/
+│   ├─ docs/                  # Copied from `open-horizon/FDO-support`
+├── exchange-api/
+│   ├─ docs/                  # Copied from `open-horizon/exchange-api`
+├── release/
+│   ├─ docs/                  # Copied from `open-horizon/open-horizon-release`
 
-- **Core docs**: `docs/anax/docs/` ← sourced from `open-horizon/anax`
-- **Management Hub**: `docs/mgmt-hub/docs/` ← sourced from `open-horizon/devops`
-- **KubeArmor integration**: `docs/kubearmor-integration/docs/` ← sourced from `open-horizon/kubearmor-integration`
-- **FDO support**: `docs/fdo/docs/` ← sourced from `open-horizon/FDO-support`
-- **Exchange API**: `docs/exchange-api/docs/` ← sourced from `open-horizon/exchange-api`
-- **Release documentation**: `docs/release/docs/` ← sourced from `open-horizon/open-horizon-release`
-
-**Important**: Never modify markdown files in sourced directories. Changes must be made in the originating repository and are automatically copied via automated workflows using GitHub Actions when merged.
+**Important**: Never modify markdown files in the directories in this repository that receive content from other Open Horizon repositories. Make changes only in the repositories from which the content is copied.  This will ensure that the content is kept in sync with the source repositories.  Instead, to make changes to the content in this repository, you must make the changes in the source repositories, and then wait for the automated workflows to copy the changes to this repository.
 
 #### File Exclusion
 
