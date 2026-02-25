@@ -115,6 +115,15 @@ Copyright notices should span from start year through current year and be update
 - **Caching**: Leverage browser caching for static assets
 - **Lazy loading**: Implement lazy loading for images and non-critical content
 
+### Copyright statement in footer
+The copyright statement that appears at the bottom of each page is configured in `_config.yml`. The years stated in the footer copyright statement are formatted like this:
+- Year 1[-Current Year]
+For example, if the first year of availability is 2025 and the current year is 2025, the years in the copyright statement are stated like this:
+- 2025
+Another example is, if the first year of availability is 2015 and the current year is 2025, the years in the copyright statement are stated like this:
+- 2015-2025
+Updated the years in the copyright statement annually in January.
+
 ## Code Style Guidelines
 
 ### Markdown and Content Structure
