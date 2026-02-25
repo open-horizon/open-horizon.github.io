@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2020 - 2026
 title: Installing an OCP edge cluster
 description: Documentation for Installing an OCP edge cluster
-lastupdated: 2025-05-03
+lastupdated: 2026-02-11
 nav_order: 3
 parent: Preparing an edge cluster
 has_children: False
@@ -28,4 +28,4 @@ grand_parent: Edge clusters
 
 ## What's next
 
-* [Installing the Cluster Agent](./edge_cluster_agent.md)
+* [Installing the edge cluster agent](./edge_cluster_agent.md)
