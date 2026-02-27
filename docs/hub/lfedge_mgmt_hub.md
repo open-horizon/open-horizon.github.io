@@ -1,11 +1,3 @@
----
-copyright:
-  years: 2022 - 2026
-lastupdated: "2026-01-30"
-title: "{{site.data.keyword.ieam}} Management Hub Developer Instance"
-description: "Documentation for {{site.data.keyword.ieam}} Management Hub Developer Instance"
----
-
 {:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
