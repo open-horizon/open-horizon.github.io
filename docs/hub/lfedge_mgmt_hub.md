@@ -1,9 +1,12 @@
 ---
-copyright:
-  years: 2022 - 2026
-lastupdated: "2026-01-30"
-title: "{{site.data.keyword.ieam}} Management Hub Developer Instance"
-description: "Documentation for {{site.data.keyword.ieam}} Management Hub Developer Instance"
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2025
+title: Multi-tenancy
+description: Software architecture in which a single instance of software runs on server and server multiplies tenants.
+lastupdated: 2025-05-03
+nav_order: 3
+parent: Administering functions
+grand_parent: Administering
 ---
 
 {:new_window: target="blank"}
