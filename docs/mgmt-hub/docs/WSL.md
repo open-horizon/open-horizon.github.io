@@ -1,12 +1,23 @@
+---
+copyright: Contributors to the Open Horizon project
+years: 2025
+title: All-in-One Mgmt Hub
+description: Documentation for Horizon Management Hub
+lastupdated: 2025-05-03
+nav_order: 3
+parent: Management Hub
+---
+
 # Windows WSL2 Installation Instructions
 
 ## Pre-requisites
 
-Use a Windows computer, or download an official VM: https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/.
+Use a Windows computer, or download an official VM: [https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/).
 
 Ensure VxT and Virtualization enabled in BIOS
 
 In "Control Panel" -> "Programs" -> "Turn Windows features on or off" enable the following features.  You may be required to reboot your machine or VM afterwards.
+
 * Hyper-V
 * Containers
 * Virtual Machine Platform
@@ -85,7 +96,7 @@ Test that the `systemd` support is working by running this command. It should ru
 ### Other Required `systemd` Units?
 
 It is recommended that you also run the command below to discover any `systemd` units that did not start up in this simulated environment:
- 
+
 ```systemctl list-units --failed```
 
 If you see any units in that list that you think are required, you may be able to fix them using recipes in this wiki:
@@ -100,16 +111,16 @@ If you have previously setup a Management Hub on this node, use  Docker Desktop 
 
 ### Become `root` to install the Management Hub
 
-In a **WSL2 terminal shell**, run 
+In a **WSL2 terminal shell**, run:
 
-```
+```bash
 sudo -i
 ```
 
 ### Download, modify, then run the installer
 
-Instead of using the command shown in the main README.md to start the All-In-One setup, it is recommnded in the WSL2 environment to first install only the Manageement Hub, then separately install the Agent, if desired. Follow these steps to install the Management Hub (as `root`). First, download the installer script: 
- 
+Instead of using the command shown in the main README.md to start the All-In-One setup, it is recommnded in the WSL2 environment to first install only the Manageement Hub, then separately install the Agent, if desired. Follow these steps to install the Management Hub (as `root`). First, download the installer script:
+
 ```bash
 curl -sSL https://raw.githubusercontent.com/open-horizon/devops/master/mgmt-hub/deploy-mgmt-hub.sh -o deploy-mgmt-hub.sh
 ```
@@ -194,4 +205,3 @@ If you are getting errors running commands in your WSL2 terminal, ensure you are
 ## Credits
 
 Thanks to [Demopans](https://github.com/Demopans) for figuring out how to use this tooling uunder WSL2.
-
