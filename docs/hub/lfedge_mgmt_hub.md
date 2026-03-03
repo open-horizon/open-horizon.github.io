@@ -1,9 +1,9 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
-title: Multi-tenancy
+years: 2020 - 2026
+title: Management Hub Developer Instance
 description: Software architecture in which a single instance of software runs on server and server multiplies tenants.
-lastupdated: 2025-05-03
+lastupdated: 2026-03-03
 nav_order: 3
 parent: Administering functions
 grand_parent: Administering
@@ -20,7 +20,7 @@ grand_parent: Administering
 # {{site.data.keyword.ieam}} Management Hub Developer Instance
 {: #lfedge_mgmt_hub}
 
-The LF Edge's Open Horizon project delivers containerized services and ML assets, and manages the service software lifecycle on edge nodes and clusters.  The project's Management Hub components store the metadata for describing the services, deployment policies, and encrypted communications.  They also propose agreements to edge nodes for potential deployments.  For an edge node or cluster to manage workloads, they must be registered with a Hub instance.  The Open Horizon project is providing a public Hub instance for the LF Edge community to use, provide working examples, and to assist developers.  This Hub instance will be the current release of Open Horizon, and will be replaced whenever a new release is deployed every few months.
+The LF Edge's {{site.data.keyword.ieam}} project delivers containerized services and ML assets, and manages the service software lifecycle on edge nodes and clusters.  The project's Management Hub components store the metadata for describing the services, deployment policies, and encrypted communications.  They also propose agreements to edge nodes for potential deployments.  For an edge node or cluster to manage workloads, they must be registered with a Hub instance.  The {{site.data.keyword.ieam}} project is providing a public Hub instance for the LF Edge community to use, provide working examples, and to assist developers.  This Hub instance will be the current release of {{site.data.keyword.ieam}}, and will be replaced whenever a new release is deployed every few months.
 {: .text-justify}
 
 ## Requesting user account
