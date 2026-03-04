@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2026
 title: Edge clusters
 description: Documentation for Edge clusters
-lastupdated: 2025-05-03
+lastupdated: 2026-03-04
 nav_order: 12
 has_children: True
 has_toc: False
@@ -30,7 +30,7 @@ The following sections describe how to install an edge cluster, then how to inst
    - [Installing an OCP cluster](./install_ocp_edge_cluster.md)
    - [Installing a K3s cluster](./install_k3s_edge_cluster.md)
    - [Installing a microk8s cluster](./install_microk8s_edge_cluster.md)
-- [Installing the agent](./edge_cluster_agent.md)
+- [Installing the agent](../anax/docs/cluster_install.md#install-agent-on-edge-cluster)
 - [Deploying services to an edge cluster](../using_edge_services/deploying_services_cluster.md)
 - [Removing an agent from an edge cluster](../using_edge_services/removing_agent_from_cluster.md)
 {: childlinks}

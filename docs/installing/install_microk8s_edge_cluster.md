@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2020 - 2026
 title: Installing a microk8s edge cluster
 description: Documentation for Installing and configuring a microk8s edge cluster
-lastupdated: 2026-02-11
+lastupdated: 2026-03-04
 nav_order: 2
 parent: Preparing an edge cluster
 has_children: False
@@ -129,4 +129,4 @@ This content provides a summary of how to install microk8s, a lightweight and sm
 
 ## What's next
 
-* [Installing the edge cluster agent](./edge_cluster_agent.md)
+* [Installing the edge cluster agent](../anax/docs/cluster_install.md#install-agent-on-edge-cluster)
