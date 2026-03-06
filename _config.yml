@@ -47,6 +47,7 @@ exclude:
    - MAINTAINERS.md
    - LICENSE
    - AGENTS.md
+   - "**/AGENTS.md"  # Excludes AGENTS.md in any subdirectory
 
 # Secondary Parameters
 header-img: img/hero-dark.jpg
