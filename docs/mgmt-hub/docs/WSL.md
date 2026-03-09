@@ -1,9 +1,9 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2025
-title: All-in-One Mgmt Hub
+years: 2025 - 2026
+title: Windows WSL2 Installation
 description: Documentation for Horizon Management Hub
-lastupdated: 2025-05-03
+lastupdated: 2026-03-03
 nav_order: 3
 parent: Management Hub
 ---
