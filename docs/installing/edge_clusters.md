@@ -30,7 +30,9 @@ The following sections describe how to install an edge cluster, then how to inst
    - [Installing an OCP cluster](./install_ocp_edge_cluster.md)
    - [Installing a K3s cluster](./install_k3s_edge_cluster.md)
    - [Installing a microk8s cluster](./install_microk8s_edge_cluster.md)
-- [Installing the agent](./edge_cluster_agent.md)
+- [Installing the agent on an edge cluster](../anax/docs/installing_agent_on_edge_cluster.md)
+   - [Installing the agent on a Red Hat OpenShift Container Platform Kubernetes edge cluster](../anax/docs/installing_ocp_edge_cluster_agent.md)
+   - [Installing the agent on K3s and MicroK8s edge clusters](../anax/docs/installing_k3s_microk8s_agent.md)
 - [Deploying services to an edge cluster](../using_edge_services/deploying_services_cluster.md)
 - [Removing an agent from an edge cluster](../using_edge_services/removing_agent_from_cluster.md)
 {: childlinks}

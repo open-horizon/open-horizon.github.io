@@ -28,4 +28,4 @@ grand_parent: Edge clusters
 
 ## What's next
 
-* [Installing the edge cluster agent](./edge_cluster_agent.md)
+* [Installing the agent on a Red Hat OpenShift Container Platform Kubernetes edge cluster](../anax/docs/installing_ocp_edge_cluster_agent.md)

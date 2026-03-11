@@ -129,4 +129,4 @@ This content provides a summary of how to install microk8s, a lightweight and sm
 
 ## What's next
 
-* [Installing the edge cluster agent](./edge_cluster_agent.md)
+* [Installing the agent on K3s and MicroK8s edge clusters](../anax/docs/installing_k3s_microk8s_agent.md)
