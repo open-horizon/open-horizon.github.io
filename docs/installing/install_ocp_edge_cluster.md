@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2020 - 2026
 title: Installing an OCP edge cluster
 description: Documentation for Installing an OCP edge cluster
-lastupdated: 2026-02-11
+lastupdated: 2026-03-23
 nav_order: 3
 parent: Preparing an edge cluster
 has_children: False
@@ -22,7 +22,7 @@ grand_parent: Edge clusters
 # Installing an OCP edge cluster
 {: #install_ocp_edge_cluster}
 
-1. Install OCP by following the installation instructions in the [{{site.data.keyword.open_shift_cp}} Documentation ](https://docs.openshift.com/container-platform/4.6/welcome/index.html){:target="_blank"}{: .externalLink}. ({{site.data.keyword.ieam}} only supports OCP on x86_64 platforms.)
+1. Install OCP by following the installation instructions in the [{{site.data.keyword.open_shift_cp}} Documentation ](https://docs.openshift.com/container-platform/4.6/welcome/index.html){:target="_blank"}{: .externalLink}. {{site.data.keyword.ieam}} only supports {{site.data.keyword.ocp}} on AMD64 and s390x platforms.
 
 2. Install the Kubernetes CLI (**kubectl**), Openshift client CLI (**oc**) and {{site.data.keyword.docker}} on the admin host where you administer your OCP edge cluster. This is the same host where you run the agent installation script. For more information, see [Installing cloudctl, kubectl, and oc](../cli/cloudctl_oc_cli.md).
 
