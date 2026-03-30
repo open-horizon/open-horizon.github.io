@@ -1,8 +1,10 @@
 ---
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2026
 layout: page
 title: "How to use Open Horizon"
 description: "Basic instructions and examples for using the Open Horizon projects CLI"
-
+lastupdated: 2026-03-27
 parent: Quick Start
 nav_order: 2
 ---
@@ -133,26 +135,9 @@ To use the exchange communication commands, set up two environment variables.
 
 ### Pre-requisite
 
-You need this information from the all-in-one installation summary message displayed when you installed the management hub, agent, and CLI.  The summary message is similar to this example:
+You need information from the All-in-One installation summary message that was displayed when you installed the {{site.data.keyword.mgmt_hub}}, agent, and CLI. This message begins with `----------- Summary of what was done:` and includes several generated passwords and tokens.
 
-```text
------------ Summary of what was done:
-  1. Started Horizon management hub services: agbot, exchange, postgres DB, CSS, mongo DB
-  2. Created exchange resources: system org (IBM) admin user, user org (myorg) and admin user, and agbot
-     - Exchange root user generated password: 1234567890
-     - System org admin user generated password: AbcDEfg
-     - Agbot generated token: Abc123YZ
-     - User org admin user generated password: XLmdsg236
-     - Node generated token: uingtw398J
-     Important: save these generated passwords/tokens in a safe place. You will not be able to query them from Horizon.
-  3. Installed the Horizon agent and CLI (hzn)
-  4. Created a Horizon developer key pair
-  5. Installed the Horizon examples
-  6. Created and registered an edge node to run the helloworld example edge service
-For what to do next, see: https://github.com/open-horizon/devops/blob/master/mgmt-hub/README.md#all-in-1-what-next
-```
-
-Use the "User org admin user generated password" in the previous message to export the following environment variables, using the substitution shown below:
+Use the "User org admin user generated password" from the All-in-One installation summary message to export the following environment variables, using the substitution shown below:
 
 ```bash
 export HZN_ORG_ID=myorg
