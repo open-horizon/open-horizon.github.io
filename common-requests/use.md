@@ -135,18 +135,9 @@ To use the exchange communication commands, set up two environment variables.
 
 ### Pre-requisite
 
-You need information from the all-in-one installation summary message that was displayed when you installed the management hub, agent, and CLI. This message begins with `----------- Summary of what was done:` and includes the following details:
+You need information from the All-in-One installation summary message that was displayed when you installed the {{site.data.keyword.mgmt_hub}}, agent, and CLI. This message begins with `----------- Summary of what was done:` and includes several generated passwords and tokens.
 
-- Started Horizon management hub services
-- Created exchange resources with generated passwords and tokens
-- Installed the Horizon agent and CLI
-- Created a Horizon developer key pair
-- Installed the Horizon examples
-- Created and registered an edge node
-
-The summary message includes several generated passwords and tokens. Locate the "User org admin user generated password" value from this message to use in the next step.
-
-Use the "User org admin user generated password" from the all-in-one installation summary message to export the following environment variables, using the substitution shown below:
+Use the "User org admin user generated password" from the All-in-One installation summary message to export the following environment variables, using the substitution shown below:
 
 ```bash
 export HZN_ORG_ID=myorg
