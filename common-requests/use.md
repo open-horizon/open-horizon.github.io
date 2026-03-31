@@ -4,7 +4,7 @@ years: 2020 - 2026
 layout: page
 title: "How to use Open Horizon"
 description: "Basic instructions and examples for using the Open Horizon projects CLI"
-lastupdated: 2026-03-27
+lastupdated: 2026-03-30
 parent: Quick Start
 nav_order: 2
 ---
@@ -133,7 +133,7 @@ After you see the `agreement_execution_start_time` value, you can run `docker ps
 
 To use the exchange communication commands, set up two environment variables.
 
-### Pre-requisite
+### Prerequisite
 
 You need information from the All-in-One installation summary message that was displayed when you installed the {{site.data.keyword.mgmt_hub}}, agent, and CLI. This message begins with `----------- Summary of what was done:` and includes several generated passwords and tokens.
 
@@ -144,7 +144,7 @@ export HZN_ORG_ID=myorg
 export HZN_EXCHANGE_USER_AUTH=admin:[User org admin user generated password]
 ```
 
-> Now, you should be able to connect to the exchange with the CLI.
+Now, you can connect to the exchange by using the CLI.
 
 Use `hzn exchange status` or `hzn exchange node list` to confirm that it works with no errors. Additionally, `hzn exchange user list` displays the user account that you are currently using and if it is authenticated successfully.
 
