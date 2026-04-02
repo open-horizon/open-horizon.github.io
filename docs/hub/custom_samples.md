@@ -4,18 +4,20 @@ years: 2026
 layout: page
 title: "Using custom sample services"
 description: "How to publish your own sample services with the All-in-One Management Hub"
-lastupdated: 2026-03-27
+lastupdated: 2026-03-30
 parent: Quick Start
 nav_order: 3
+parent: Installing Management hub
+grand_parent: Management Hub
 ---
 
 # Using custom sample services
 
-The {{site.data.keyword.ieam}} All-in-One {{site.data.keyword.mgmt_hub}} deployment includes a set of default example services that demonstrate edge computing capabilities. You can extend this by publishing your own custom sample services during the deployment process.
+The {{site.data.keyword.ieam}} All-in-One {{site.data.keyword.mgmt_hub}} deployment includes a set of default sample services that demonstrate edge computing capabilities. You can extend this by publishing your own custom sample services during the deployment process.
 
 ## Overview
 
-The Bring Your Own (BYO) Samples feature allows you to specify additional service repositories that are published to the Exchange during the All-in-One deployment. This is useful for:
+You can specify additional service repositories that are published to the Exchange during the All-in-One deployment. This is useful for:
 
 - Testing your own edge services in a development environment
 - Demonstrating custom solutions to stakeholders
@@ -31,7 +33,7 @@ When you set the `BYO_SAMPLES` environment variable, the deployment script:
 3. Publishes the service definition, service policy, and deployment policy to the Exchange
 4. Makes the services available for deployment to edge nodes
 
-Your custom samples are published in addition to the default {{site.data.keyword.ieam}} example services (CPU, GPS, and Hello World).
+Your custom samples are published in addition to the default {{site.data.keyword.ieam}} sample services (CPU, GPS, and Hello World).
 
 ## Prerequisites
 
@@ -42,13 +44,13 @@ Before using custom samples, ensure that:
   - `publish-service`: Publishes the service definition
   - `publish-service-policy`: Publishes the service policy
   - `publish-deployment-policy`: Publishes the deployment policy
-- Services are compatible with your target edge node architecture (AMD64, ARM, etc.)
+- Services are compatible with your target edge node architecture (AMD64, ARM, and so on.)
 
 ## Step-by-step instructions
 
 ### 1. Create a samples file
 
-Create a text file containing the GitHub URLs of your service repositories, one per line:
+Create a text file that contains the GitHub URLs of your service repositories. Each URL must be on a separate line. For example:
 
 ```text
 https://github.com/open-horizon/open-horizon-services/tree/main/web-helloworld-python
@@ -57,27 +59,27 @@ https://github.com/your-organization/another-service
 ```
 {: codeblock}
 
-Save this file (for example, as `my-samples.txt`) in a location accessible during deployment.
+Save this file (for example, as `samples.txt`) in a location that is accessible during deployment.
 
 ### 2. Set the environment variable
 
-Before running the deployment script, export the `BYO_SAMPLES` variable:
+Before you run the deployment script, export the `BYO_SAMPLES` variable:
 
 ```bash
-export BYO_SAMPLES=my-samples.txt
+export BYO_SAMPLES=samples.txt
 ```
 {: codeblock}
 
 ### 3. Run the deployment
 
-Run the All-in-One deployment script as usual:
+Run the All-in-One deployment script:
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/open-horizon/devops/master/mgmt-hub/deploy-mgmt-hub.sh | bash
 ```
 {: codeblock}
 
-The script automatically detects the `BYO_SAMPLES` variable and publishes your custom services along with the default examples.
+The script automatically detects the `BYO_SAMPLES` variable and publishes your custom services with the default samples.
 
 ### 4. Verify the deployment
 
@@ -90,9 +92,9 @@ hzn exchange service list
 ```
 {: codeblock}
 
-You should see your custom services listed along with the default IBM examples.
+Verify that your custom services are listed along with the default samples.
 
-## Example service repository structure
+## Sample service repository structure
 
 Your service repository must follow this structure:
 

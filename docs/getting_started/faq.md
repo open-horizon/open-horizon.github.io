@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2020 - 2026
 title: FAQs
 description: Documentation for Frequently asked questions
-lastupdated: 2026-03-27
+lastupdated: 2026-03-30
 nav_order: 1
 parent: Help and Support
 ---
@@ -43,7 +43,7 @@ The following are answers to some frequently asked questions (FAQs) about {{site
 
 You can install the open source {{site.data.keyword.mgmt_hub}} (without the {{site.data.keyword.ieam}} management console) with the All-in-One installer for developers. The All-in-One installer creates a complete but minimal {{site.data.keyword.mgmt_hub}}, not suitable for production use. It also configures an example edge node. This tool enables open source component developers to get started quickly without the time it takes to configure a complete production {{site.data.keyword.ieam}} {{site.data.keyword.mgmt_hub}}. For information about the All-in-One installer, see [{{site.data.keyword.ieam}} - Devops ](https://github.com/open-horizon/devops/tree/master/mgmt-hub){:target="_blank"}{: .externalLink} GitHub repository.
 
-The All-in-One installer publishes a default set of example services during deployment. You can customize which sample services are published by setting the `BYO_SAMPLES` environment variable to point to a text file containing GitHub URLs of your own service repositories. This enables you to test and develop with your own custom services in addition to the default examples. For detailed instructions, see the [Using Custom Sample Services ](https://github.com/open-horizon/devops/tree/master/mgmt-hub#using-custom-samples){:target="_blank"}{: .externalLink} section in the {{site.data.keyword.mgmt_hub}} documentation.
+The All-in-One installer publishes a default set of sample services during deployment. You can customize which sample services are published by setting the `BYO_SAMPLES` environment variable to point to a text file that contains GitHub URLs of your own service repositories. This enables you to test and develop with your own custom services in addition to the default samples. For detailed instructions, see the [Using Custom Sample Services](../hub/custom_samples.md).
 
 ## Is {{site.data.keyword.ieam}} software open-sourced?
 {: #open_sourced}
