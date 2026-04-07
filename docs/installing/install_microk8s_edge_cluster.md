@@ -1,14 +1,14 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2026
-title: Installing a microk8s edge cluster
-description: Documentation for Installing and configuring a microk8s edge cluster
-lastupdated: 2026-02-11
-nav_order: 2
-parent: Preparing an edge cluster
-has_children: False
-has_toc: False
-grand_parent: Edge clusters
+years: 2022 - 2026
+title: Installing a microk8s cluster
+description: Documentation for installing a MicroK8s edge cluster
+lastupdated: 2026-04-07
+nav_order: 3
+parent: Installing edge clusters
+grand_parent: Installing
+has_children: false
+has_toc: false
 ---
 
 {:new_window: target="blank"}
@@ -19,62 +19,50 @@ grand_parent: Edge clusters
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
 
-# Installing and configuring a microk8s edge cluster
-{: #install_microk8s_edge_cluster}
+# Installing a microk8s cluster
+{: #install_microk8s_cluster}
 
-## Introduction
-{: #intro}
+This content provides a summary of how to install MicroK8s, a lightweight and small Kubernetes cluster, on Ubuntu 22.04.4 LTS. (For more information, see the MicroK8s documentation.)
+{:shortdesc}
 
-This content provides a summary of how to install microk8s, a lightweight and small Kubernetes cluster, on an Ubuntu {{site.data.keyword.linux}} AMD64-based system. (For more detailed instructions, see the [microk8s documentation ](https://microk8s.io/docs){:target="_blank"}{: .externalLink}.)
+**Note**: This type of edge cluster is meant for development and test because a single worker node Kubernetes cluster does not provide scalability or high availability.
 
-## Pre-requisites
-{: #reqs}
+## Procedure
 
-* Architecture must be x86_64
-* Operating system must be an Ubuntu LTS distribution
-
-**Note**: This type of single node edge cluster is meant for development and test only. A single worker node Kubernetes cluster does not provide the scalability or high availability performance characteristics that a production system should have.
-
-## Installing
-{: #steps}
-
-1. Install microk8s:
+1. Install MicroK8s:
 
    ```bash
    sudo snap install microk8s --classic --channel=stable
    ```
    {: codeblock}
 
-2. If you are not running as **root**, add your user to the **microk8s** group:
+2. If you are not running as root, add your user to the MicroK8s group:
 
    ```bash
    sudo usermod -a -G microk8s $USER
    sudo chown -f -R $USER ~/.kube
-   su - $USER   # create new session for group update to take place
+   su - $USER
    ```
    {: codeblock}
 
-3. Enable "dns" and "storage" modules in microk8s:
+3. Enable dns and storage modules in MicroK8s:
 
    ```bash
    microk8s.enable dns
-   microk8s.enable storage
+   microk8s.enable hostpath-storage
    ```
    {: codeblock}
 
-   **Note**: Microk8s uses `8.8.8.8` and `8.8.4.4` as upstream name servers by default. If these name servers cannot resolve the management hub hostname, you must change the name servers that microk8s is using:
+   **Note**: MicroK8s uses 8.8.8.8 and 8.8.4.4 as upstream name servers by default. If these name servers cannot resolve the management hub hostname, you must change the name servers that MicroK8s is using:
 
-   1. Retrieve the list of upstream name servers in `/etc/resolv.conf` or `/run/systemd/resolve/resolv.conf`.
+   a. Retrieve the list of upstream name servers in `/etc/resolv.conf` or `/run/system/resolve/resolv.conf`
 
-   2. Edit `coredns` configmap in the `kube-system` namespace. Set the upstream nameservers in the `forward` section.
+   b. Edit coredns configmap in the kube-system namespace. Set the upstream nameservers in the forward section:
 
-      ```bash
-      microk8s.kubectl edit -n kube-system cm/coredns
-      ```
-      {: codeblock}
-
-   3. For more information about Kubernetes DNS, see the [Kubernetes documentation ](https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/){:target="_blank"}{: .externalLink}.
-
+   ```bash
+   microk8s.kubectl edit -n kube-system cm/coredns
+   ```
+   {: codeblock}
 
 4. Check the status:
 
@@ -83,7 +71,7 @@ This content provides a summary of how to install microk8s, a lightweight and sm
    ```
    {: codeblock}
 
-5. The microK8s kubectl command is called **microk8s.kubectl** to prevent conflicts with an already installed **kubectl** command. Assuming that  **kubectl** is not installed, add this alias for **microk8s.kubectl**:
+5. The MicroK8s kubectl command is called microk8s.kubectl to prevent conflicts with an already install kubectl command. Assuming that kubectl is not installed, add this alias for microk8s.kubectl:
 
    ```bash
    echo 'alias kubectl=microk8s.kubectl' >> ~/.bash_aliases
@@ -91,42 +79,12 @@ This content provides a summary of how to install microk8s, a lightweight and sm
    ```
    {: codeblock}
 
-6. Enable the container registry and configure {{site.data.keyword.docker}} to tolerate the insecure registry:
+6. Choose the image registry types: remote image registry or edge cluster local registry. Image registry is the place that will hold the agent image and agent cronjob image.
 
-   1. Enable the container registry:
-
-      ```bash
-      microk8s.enable registry
-      export REGISTRY_ENDPOINT=localhost:32000
-      export REGISTRY_IP_ENDPOINT=$(kubectl get service registry -n container-registry | grep registry | awk '{print $3;}'):5000
-      ```
-      {: codeblock}
-
-   2. Install docker (if not already installed):
-
-      ```bash
-      curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-      add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-      apt-get install docker-ce docker-ce-cli containerd.io
-      ```
-      {: codeblock}
-
-   3. Define this registry as insecure to docker. Create or add to **/etc/docker/daemon.json** by replacing `<registry-endpoint>` with the `$REGISTRY_ENDPOINT` environment variable value that you obtained in a previous step. Also, replace `<registry-ip-endpoint>` with the value of the `$REGISTRY_IP_ENDPOINT` environment variable value that you obtained in a previous step.
-
-      ```json
-      {
-        "insecure-registries": [ "<registry-endpoint>", "<registry-ip-endpoint>" ]
-      }
-      ```
-      {: codeblock}
-
-   4. Restart docker to pick up the change:
-
-      ```bash
-      sudo systemctl restart docker
-      ```
-      {: codeblock}
+   - [Setting variables to use a remote image registry](../anax/docs/setting_remote_image_registry.md)
+   - [Setup edge cluster local image registry for MicroK8s](../anax/docs/setup_microk8s_image_registry.md)
 
 ## What's next
 
+* [Setup edge cluster local image registry for MicroK8s](../anax/docs/setup_microk8s_image_registry.md)
 * [Installing the agent on K3s and MicroK8s edge clusters](../anax/docs/installing_k3s_microk8s_agent.md)
