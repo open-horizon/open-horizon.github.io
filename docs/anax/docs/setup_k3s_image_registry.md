@@ -36,24 +36,7 @@ has_toc: false
    ```
    {: codeblock}
 
-   b. Create a file called **k3s-persistent-claim.yaml** with this content:
-
-   ```yaml
-   apiVersion: v1
-   kind: PersistentVolumeClaim
-   metadata:
-     name: docker-registry-pvc
-   spec:
-     storageClassName: "local-path"
-     accessModes:
-       - ReadWriteOnce
-     resources:
-       requests:
-         storage: 10Gi
-   ```
-   {: codeblock}
-
-   Or download it from the server:
+   b. Download the configuration file for the persistent volume claim from the server:
 
    ```bash
    curl -sSLO https://raw.githubusercontent.com/open-horizon/open-horizon.github.io/master/docs/installing/k3s-persistent-claim.yaml
