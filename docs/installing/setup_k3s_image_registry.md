@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2022 - 2026
 title: Setup edge cluster local image registry for K3s
 description: Documentation for setting up local image registry for K3s edge clusters
-lastupdated: 2026-04-07
+lastupdated: 2026-04-21
 nav_order: 4
 parent: Installing edge clusters
 has_children: false
@@ -35,24 +35,7 @@ has_toc: false
    ```
    {: codeblock}
 
-   b. Create a file called **k3s-persistent-claim.yaml** with this content:
-
-   ```yaml
-   apiVersion: v1
-   kind: PersistentVolumeClaim
-   metadata:
-     name: docker-registry-pvc
-   spec:
-     storageClassName: "local-path"
-     accessModes:
-       - ReadWriteOnce
-     resources:
-       requests:
-         storage: 10Gi
-   ```
-   {: codeblock}
-
-   Or download it from the server:
+   b. Download the configuration file for the persistent volume claim from the server:
 
    ```bash
    curl -sSLO https://raw.githubusercontent.com/open-horizon/open-horizon.github.io/master/docs/installing/k3s-persistent-claim.yaml
