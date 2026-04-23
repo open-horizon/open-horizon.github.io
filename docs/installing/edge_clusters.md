@@ -1,9 +1,9 @@
 ---
 copyright: Contributors to the Open Horizon project
 years: 2021 - 2026
-title: Edge clusters
-description: Documentation for Edge clusters
-lastupdated: 2025-05-03
+title: Installing edge clusters
+description: Documentation for Installing edge clusters
+lastupdated: 2026-04-07
 nav_order: 12
 has_children: True
 has_toc: False
@@ -17,22 +17,20 @@ has_toc: False
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
 
-# Edge clusters
-{: #edge_clusters}
+# Installing edge clusters
+{: #installing_edge_clusters}
 
 {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) edge cluster capability helps you manage and deploy workloads from a management hub cluster to remote instances of {{site.data.keyword.open_shift}}® Container Platform or other Kubernetes-based clusters. Edge clusters are {{site.data.keyword.ieam}} edge nodes that are Kubernetes clusters. An edge cluster enables use cases at the edge, which require colocation of compute with business operations, or that require more scalability, availability, and compute capability than what can be supported by an edge device. Further, it is not uncommon for edge clusters to provide application services that are needed to support services running on edge devices due to their close proximity to edge devices. {{site.data.keyword.ieam}} deploys edge services to an edge cluster, via a Kubernetes operator, enabling the same autonomous deployment mechanisms used with edge devices. The full power of Kubernetes as a container management platform is available for edge services that are deployed by {{site.data.keyword.ieam}}.
 
 ![{{site.data.keyword.horizon_exchange}}, {{site.data.keyword.agbot}}s and agents](../../images/edge/05b_Installing_edge_agent_on_cluster.svg "{{site.data.keyword.horizon_exchange}}, {{site.data.keyword.agbot}}s and agents")
 
-The following sections describe how to install an edge cluster, then how to install the {{site.data.keyword.ieam}} agent on the cluster.  Then we provide documentation on how to deploy services to the cluster, followed up by how to remove an agent from a cluster.
+The following sections describe how to install an edge cluster and configure image registries as prerequisites for installing the {{site.data.keyword.ieam}} agent on the cluster.
 
-- [Preparing an edge cluster](preparing_edge_cluster.md)
-   - [Installing an OCP cluster](./install_ocp_edge_cluster.md)
-   - [Installing a K3s cluster](./install_k3s_edge_cluster.md)
-   - [Installing a microk8s cluster](./install_microk8s_edge_cluster.md)
-- [Installing the agent on an edge cluster](../anax/docs/installing_agent_on_edge_cluster.md)
-   - [Installing the agent on a Red Hat OpenShift Container Platform Kubernetes edge cluster](../anax/docs/installing_ocp_edge_cluster_agent.md)
-   - [Installing the agent on K3s and MicroK8s edge clusters](../anax/docs/installing_k3s_microk8s_agent.md)
-- [Deploying services to an edge cluster](../using_edge_services/deploying_services_cluster.md)
-- [Removing an agent from an edge cluster](../using_edge_services/removing_agent_from_cluster.md)
+- [Installing an OCP cluster](./install_ocp_edge_cluster.md)
+- [Setting up a local image registry for a Red Hat OpenShift Container Platform edge cluster](./setting_up_ocp_image_registry.md)
+- [Installing a K3s cluster](./install_k3s_edge_cluster.md)
+- [Setup edge cluster local image registry for K3s](./setup_k3s_image_registry.md)
+- [Installing a microk8s cluster](./install_microk8s_edge_cluster.md)
+- [Setup edge cluster local image registry for MicroK8s](./setup_microk8s_image_registry.md)
+- [Setting variables to use a remote image registry](./setting_remote_image_registry.md)
 {: childlinks}
