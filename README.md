@@ -9,7 +9,7 @@
 <img src="https://github.com/open-horizon/open-horizon.github.io/actions/workflows/Check_broken_link.yml/badge.svg"/></a>
 <a href="https://github.com/open-horizon/open-horizon.github.io" alt="Twitter Follow">
 <img src="https://github.com/open-horizon/open-horizon.github.io/actions/workflows/orphan_pages_checker.yml/badge.svg"/></a>
-<a href="https://matrix.to/#/#open-horizon-docs:chat.lfx.linuxfoundation.org" alt="chat on matrix">
+<a href="https://linuxfoundation.zulipchat.com/#narrow/channel/527924-lfedge-open-horizon-discussion" alt="chat on Zulip">
 <img src="https://matrix.to/img/matrix-badge.svg"/></a>
 </p>
 
@@ -27,7 +27,7 @@ More details can be found on the following pages:
 
 * [Contribution Guidelines](https://github.com/open-horizon/.github/blob/master/CONTRIBUTING.md)
 * [The mechanics of working on an issue](https://open-horizon.github.io/common-requests/contribute/)
-* [Chat with the project team and ask any questions](https://chat.lfx.linuxfoundation.org/#/welcome)
+* [Chat with the project team and ask any questions](https://linuxfoundation.zulipchat.com/#narrow/channel/527924-lfedge-open-horizon-discussion)
 * [List all unassigned and open issues labelled "Good First Issue"](https://github.com/search?type=issues&q=org%3Aopen-horizon+org%3Aopen-horizon-services+label%3A%22good+first+issue%22+is%3Aopen+no%3Aassignee)
 
 We appreciate and recognize all Contributors.
