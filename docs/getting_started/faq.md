@@ -164,7 +164,7 @@ Typically, AI at the edge enables you to perform on-the-spot machine inferencing
 
 See [Models Deployed at the Edge ](https://www.ibm.com/cloud/blog/models-deployed-at-the-edge){:target="_blank"}{: .externalLink}.
 
-## How can I include text an in {{site.data.keyword.ieam}} resource that contains a `$` character?
+## How can I include text in an {{site.data.keyword.ieam}} resource that contains a `$` character?
 {: #env_variable}
 
 When using `hzn` commands to publish resources like service definitions or deployment policies, the `hzn` CLI expects the `$` character to indicate an environment variable. 
