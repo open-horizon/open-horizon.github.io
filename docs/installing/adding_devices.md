@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2019 - 2026
 title: Preparing an edge device
 description: Documentation for Preparing an edge device
-lastupdated: 2025-05-03
+lastupdated: 2026-04-24
 nav_order: 1
 parent: Edge devices info
 grand_parent: Edge devices
@@ -30,16 +30,16 @@ The following instructions guide you through the process of installing the requi
 **Notes**:
 
 - Installation of edge devices with SuSE is only supported by the [Advanced manual agent installation and registration](../installing/advanced_man_install.md) method.
-- CentOS and {{site.data.keyword.rhel}} 8.5 or earlier on {{site.data.keyword.ieam}} {{site.data.keyword.version}} only support {{site.data.keyword.docker}} as a container engine.
-- While {{site.data.keyword.ieam}} {{site.data.keyword.version}} supports running {{site.data.keyword.rhel}} 8.x with {{site.data.keyword.docker}}, it is officially unsupported by {{site.data.keyword.rhel}}.
-- {{site.data.keyword.ieam}} {{site.data.keyword.version}} supports Podman 4.x on {{site.data.keyword.rhel}} 8.6 - 8.8, {{site.data.keyword.rhel}} 9.0 - 9.5, and {{site.data.keyword.fedora}} 36 - 41 Workstation.
+- CentOS and {{site.data.keyword.rhel}} 8.5 or earlier on {{site.data.keyword.ieam}} only support {{site.data.keyword.docker}} as a container engine.
+- While {{site.data.keyword.ieam}} supports running {{site.data.keyword.rhel}} 8.x with {{site.data.keyword.docker}}, it is officially unsupported by {{site.data.keyword.rhel}}.
+- {{site.data.keyword.ieam}} supports Podman on {{site.data.keyword.rhel}} 8.x, 9.x, 10.x and {{site.data.keyword.fedora}} 36 - 43 Workstation.
 
 ## Sizing
 {: #size}
 
 The agent requires:
 
-- 100 MB random access memory (RAM), including docker. RAM increases this amount by approximately 100 K per agreement, plus any additional memory that is required by workloads that run on the device.
+- 100 MB random access memory (RAM), including docker or podman. RAM increases this amount by approximately 100 K per agreement, plus any additional memory that is required by workloads that run on the device.
 - 400 MB disk (including docker). Disk increases this amount based on the size of the container images that are used by workloads and the size of the model objects (times 2) that are deployed to the device.
 
 # Installing the agent
@@ -53,7 +53,7 @@ The following instructions guide you through the process of installing the requi
 To install and configure your edge device, click the link that represents your edge device type:
 
 - [{{site.data.keyword.linux_bit_notm}} devices or virtual machines](#x86-machines)
-- [{{site.data.keyword.rhel}} 8.x / 9.x devices or virtual machines](#rhel8)
+- [{{site.data.keyword.rhel}} 8.x / 9.x / 10.x devices or virtual machines](#rhel8)
 - [{{site.data.keyword.linux_ppc64le_notm}} devices or virtual machines](#ppc64le-machines)
 - [{{site.data.keyword.linux_notm}} on ARM (32-bit)](#arm-32-bit); for example, Raspberry Pi running Raspberry Pi OS
 - [{{site.data.keyword.linux_notm}} on ARM (64-bit)](#arm-64-bit); for example, NVIDIA Jetson Nano, TX1, or TX2
@@ -72,13 +72,13 @@ To install and configure your edge device, click the link that represents your e
 ### Procedure
 {: #proc-x86}
 
-Prepare your device by installing a Debian, {{site.data.keyword.rhel}}, or Ubuntu {{site.data.keyword.linux_notm}}. The instructions in this content are based on a device that uses Ubuntu 18.x.
+Prepare your device by installing a Debian, {{site.data.keyword.rhel}}, or Ubuntu {{site.data.keyword.linux_notm}}. The instructions in this content are based on a device that uses Ubuntu 24.x.
 
 Install the most recent version of Docker or Podman on your device. For more information, see [Install {{site.data.keyword.docker}} ](https://docs.docker.com/engine/install/ubuntu/){:target="_blank"}{: .externalLink} or [Podman.io ](https://podman.io/){:target="_blank"}{: .externalLink}.
 
 Now that your edge device is prepared, continue on to [Installing the agent](registration.md).
 
-## {{site.data.keyword.rhel}} 8.x / 9.x devices or virtual machines
+## {{site.data.keyword.rhel}} 8.x / 9.x / 10.x devices or virtual machines
 {: #rhel8}
 
 ### Hardware requirements
@@ -91,18 +91,18 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 ### Procedure
 {: #proc-rhel8}
 
-Prepare your device by installing {{site.data.keyword.rhel}} 8.x or 9.x
+Prepare your device by installing {{site.data.keyword.rhel}} 8.x or 9.x or 10.x
 
 1. Install packages:
 
-   If you are running {{site.data.keyword.rhel}} 9.0 or above, install the required Podman 4.x and Netavark packages.
+   If you are running {{site.data.keyword.rhel}} 9.0 or above, install the required Podman and Netavark packages.
 
    ```bash
    dnf install podman netavark
    ```
    {: codeblock}
 
-   If you are running {{site.data.keyword.rhel}} 8.6 or above, install the Podman 4.x packages by installing the `container-tools:rhel8` module.
+   If you are running {{site.data.keyword.rhel}} 8.6 or above, install the Podman packages by installing the `container-tools:rhel8` module.
 
    ```bash
    dnf module install container-tools:rhel8
@@ -160,7 +160,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 
 Prepare your device by installing {{site.data.keyword.rhel}}.
 
-Install the most recent version of {{site.data.keyword.docker}} on your device.
+Install the most recent version of Podman on your device.
 
 Now that your edge device is prepared, continue on to [Installing the agent](registration.md).
 
@@ -279,7 +279,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 {: #hard-req-mac}
 
 - 2010 or later 64-bit {{site.data.keyword.intel}} Mac device
-- 2020 or later 64-bit arm64 Apple M1 / M2 Mac device
+- 2020 or later 64-bit arm64 Apple M1 / M2 / M3 / M4  Mac device
 - MMU virtualization is required
 - {{site.data.keyword.macOS_notm}} X version 10.11 ("El Capitan") or later
 - An internet connection for your machine (wired or WiFi)
