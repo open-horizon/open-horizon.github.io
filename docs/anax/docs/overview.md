@@ -1,11 +1,10 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2019 - 2025
-lastupdated: "2025-05-19"
-title: "Agent Installation script"
+years: 2019 - 2026
+lastupdated: 2026-04-08
+title: Installing an agent on an edge device
 description: Instructions and flags used by the agent-install script
-
-parent: Agent (anax)
+parent: Edge node agents (anax)
 nav_order: 1
 ---
 
@@ -17,11 +16,11 @@ nav_order: 1
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
 
-# Edge node agent-install script
+# Installing an agent on an edge device
 
 ## Overview
 
-This script:
+The edge node agent-install script script:
 
 - Verifies prerequisites and configuration information
 - Installs the agent packages appropriate for the edge node
