@@ -37,6 +37,7 @@ The following are answers to some frequently asked questions (FAQs) about {{site
 - [What happens if a container image download is interrupted by a network outage?](#image_download)
 - [How is {{site.data.keyword.ieam}} secure?](#ieam_secure)
 - [How do I manage AI at the Edge with models vs AI on the Cloud?](#ai_cloud)
+- [How can I include text in an {{site.data.keyword.ieam}} resource that contains a `$` character?](#env_variable)
 
 ## Is there a way to create a self-contained environment for development purposes?
 {: #one_click}
