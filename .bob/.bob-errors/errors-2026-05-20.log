@@ -1,0 +1,90 @@
+
+================================================================================
+ERROR LOGGED: 2026-05-20T12:30:53.754Z
+================================================================================
+Error Name: Error
+Error Message: Connection failed for 'figma': fetch failed
+
+Stack Trace:
+Error: Connection failed for 'figma': fetch failed
+    at qlr (file:///Users/josephapearson/.nvm/versions/node/v22.22.0/lib/node_modules/bobshell/bundle/bob.js:3502:10291)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async txe.connect (file:///Users/josephapearson/.nvm/versions/node/v22.22.0/lib/node_modules/bobshell/bundle/bob.js:3502:13137)
+    at async file:///Users/josephapearson/.nvm/versions/node/v22.22.0/lib/node_modules/bobshell/bundle/bob.js:3502:17293
+================================================================================
+
+
+================================================================================
+ERROR LOGGED: 2026-05-20T12:30:53.929Z
+================================================================================
+Error Name: Error
+Error Message: Connection failed for 'carbon': Streamable HTTP error: Error POSTing to endpoint: {"error":"Invalid token","detail":"\"exp\" claim timestamp check failed | Re-auth required: re-run the authorization flow to obtain a new auth code and session ID, then retry with the new Bearer token and X-MCP-Session."}
+
+Stack Trace:
+Error: Connection failed for 'carbon': Streamable HTTP error: Error POSTing to endpoint: {"error":"Invalid token","detail":"\"exp\" claim timestamp check failed | Re-auth required: re-run the authorization flow to obtain a new auth code and session ID, then retry with the new Bearer token and X-MCP-Session."}
+    at qlr (file:///Users/josephapearson/.nvm/versions/node/v22.22.0/lib/node_modules/bobshell/bundle/bob.js:3502:10291)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async txe.connect (file:///Users/josephapearson/.nvm/versions/node/v22.22.0/lib/node_modules/bobshell/bundle/bob.js:3502:13137)
+    at async file:///Users/josephapearson/.nvm/versions/node/v22.22.0/lib/node_modules/bobshell/bundle/bob.js:3502:17293
+================================================================================
+
+
+================================================================================
+ERROR LOGGED: 2026-05-20T12:30:53.999Z
+================================================================================
+Error Name: Error
+Error Message: Connection failed for 'product-knowledge': SSE error: TypeError: fetch failed: unable to get local issuer certificate
+
+Stack Trace:
+Error: Connection failed for 'product-knowledge': SSE error: TypeError: fetch failed: unable to get local issuer certificate
+    at qlr (file:///Users/josephapearson/.nvm/versions/node/v22.22.0/lib/node_modules/bobshell/bundle/bob.js:3502:10291)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async txe.connect (file:///Users/josephapearson/.nvm/versions/node/v22.22.0/lib/node_modules/bobshell/bundle/bob.js:3502:13137)
+    at async file:///Users/josephapearson/.nvm/versions/node/v22.22.0/lib/node_modules/bobshell/bundle/bob.js:3502:17293
+================================================================================
+
+
+================================================================================
+ERROR LOGGED: 2026-05-20T12:44:28.048Z
+================================================================================
+Error Name: Error
+Error Message: Connection failed for 'figma': fetch failed
+
+Stack Trace:
+Error: Connection failed for 'figma': fetch failed
+    at qlr (file:///Users/josephapearson/.nvm/versions/node/v22.22.0/lib/node_modules/bobshell/bundle/bob.js:3502:10291)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async txe.connect (file:///Users/josephapearson/.nvm/versions/node/v22.22.0/lib/node_modules/bobshell/bundle/bob.js:3502:13137)
+    at async file:///Users/josephapearson/.nvm/versions/node/v22.22.0/lib/node_modules/bobshell/bundle/bob.js:3502:17293
+================================================================================
+
+
+================================================================================
+ERROR LOGGED: 2026-05-20T12:44:28.250Z
+================================================================================
+Error Name: Error
+Error Message: Connection failed for 'carbon': Streamable HTTP error: Error POSTing to endpoint: {"error":"Invalid token","detail":"\"exp\" claim timestamp check failed | Re-auth required: re-run the authorization flow to obtain a new auth code and session ID, then retry with the new Bearer token and X-MCP-Session."}
+
+Stack Trace:
+Error: Connection failed for 'carbon': Streamable HTTP error: Error POSTing to endpoint: {"error":"Invalid token","detail":"\"exp\" claim timestamp check failed | Re-auth required: re-run the authorization flow to obtain a new auth code and session ID, then retry with the new Bearer token and X-MCP-Session."}
+    at qlr (file:///Users/josephapearson/.nvm/versions/node/v22.22.0/lib/node_modules/bobshell/bundle/bob.js:3502:10291)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async txe.connect (file:///Users/josephapearson/.nvm/versions/node/v22.22.0/lib/node_modules/bobshell/bundle/bob.js:3502:13137)
+    at async file:///Users/josephapearson/.nvm/versions/node/v22.22.0/lib/node_modules/bobshell/bundle/bob.js:3502:17293
+================================================================================
+
+
+================================================================================
+ERROR LOGGED: 2026-05-20T12:44:28.323Z
+================================================================================
+Error Name: Error
+Error Message: Connection failed for 'product-knowledge': SSE error: TypeError: fetch failed: unable to get local issuer certificate
+
+Stack Trace:
+Error: Connection failed for 'product-knowledge': SSE error: TypeError: fetch failed: unable to get local issuer certificate
+    at qlr (file:///Users/josephapearson/.nvm/versions/node/v22.22.0/lib/node_modules/bobshell/bundle/bob.js:3502:10291)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async txe.connect (file:///Users/josephapearson/.nvm/versions/node/v22.22.0/lib/node_modules/bobshell/bundle/bob.js:3502:13137)
+    at async file:///Users/josephapearson/.nvm/versions/node/v22.22.0/lib/node_modules/bobshell/bundle/bob.js:3502:17293
+================================================================================
+

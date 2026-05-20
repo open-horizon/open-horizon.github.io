@@ -2,6 +2,133 @@
 
 This is the primary AGENTS file for the Open Horizon documentation repository. This repository contains the documentation site for Open Horizon, built with Jekyll and hosted on GitHub Pages.
 
+
+## Prerequisites and First-Time Setup
+
+Before you can build and run the documentation site locally, you need to set up your development environment with the correct Ruby version and dependencies.
+
+### Required Software
+
+- **Ruby 3.2.0** (specified in `.ruby-version`)
+- **Bundler** (Ruby gem package manager)
+- **Git** (for version control)
+
+### Step 1: Install Ruby
+
+This project requires Ruby 3.2.0. We recommend using a Ruby version manager to install and manage Ruby versions.
+
+#### Option A: Using rbenv (Recommended)
+
+1. **Install rbenv** (if not already installed):
+   
+   **macOS (using Homebrew)**:
+   ```bash
+   brew install rbenv ruby-build
+   ```
+   
+   **Linux**:
+   ```bash
+   curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
+   ```
+
+2. **Add rbenv to your shell** (add to `~/.bashrc`, `~/.zshrc`, or equivalent):
+   ```bash
+   eval "$(rbenv init -)"
+   ```
+
+3. **Install Ruby 3.2.0**:
+   ```bash
+   rbenv install 3.2.0
+   rbenv local 3.2.0
+   ```
+
+4. **Verify installation**:
+   ```bash
+   ruby --version
+   # Should output: ruby 3.2.0
+   ```
+
+#### Option B: Using rvm
+
+1. **Install rvm**:
+   ```bash
+   \curl -sSL https://get.rvm.io | bash -s stable
+   ```
+
+2. **Install Ruby 3.2.0**:
+   ```bash
+   rvm install 3.2.0
+   rvm use 3.2.0
+   ```
+
+3. **Verify installation**:
+   ```bash
+   ruby --version
+   # Should output: ruby 3.2.0
+   ```
+
+#### Option C: System Package Manager
+
+**Note**: System package managers may not have Ruby 3.2.0 available. Using rbenv or rvm is recommended for version-specific installations.
+
+### Step 2: Install Dependencies
+
+Once Ruby 3.2.0 is installed, run the initialization command to install all required dependencies:
+
+```bash
+make init
+```
+
+This command will:
+- Update the RubyGems system
+- Install Bundler (if not already installed)
+- Install all Ruby gems specified in `Gemfile`
+- Configure Bundler for local deployment
+
+**Note**: Run `make init` once before starting work each day to ensure all dependencies are up to date.
+
+### Step 3: Verify Setup
+
+After running `make init`, verify your setup is complete:
+
+1. **Check Jekyll installation**:
+   ```bash
+   bundle exec jekyll --version
+   ```
+
+2. **Install any missing packages**:
+   ```bash
+   bundle install
+   ```
+
+3. **Build the site** (optional test):
+   ```bash
+   make test
+   make build
+   ```
+
+
+If all commands complete without errors, your environment is ready for local development.
+
+### Troubleshooting
+
+**Issue**: `ruby: command not found`
+- **Solution**: Ensure Ruby is installed and your shell is configured to use rbenv/rvm
+
+**Issue**: `bundle: command not found`
+- **Solution**: Run `gem install bundler` manually, then retry `make init`
+
+**Issue**: Permission errors during `make init`
+- **Solution**: Never use `sudo` with rbenv/rvm. Reinstall Ruby using a version manager if needed
+
+**Issue**: Wrong Ruby version
+- **Solution**: Run `ruby --version` to check. Use `rbenv local 3.2.0` or `rvm use 3.2.0` to switch versions
+
+### Next Steps
+
+Once your environment is set up, proceed to the [Local Development Commands](#local-development-commands) section to start building and serving the documentation site.
+
+
 ## Build/Lint/Test Commands
 
 ### Local Development Commands

@@ -1,0 +1,4 @@
+{"id":"99c0eab2-c0cd-4142-b9f6-a369b424dd1a","ts":"2026-05-20T12:37:59.856Z","path":"/Users/josephapearson/dev/open-horizon.github.io/prerequisites-draft.md","version":"1.0.0","taskID":"6e233eb0-e9f6-4e8b-8035-23c213419e76"}
+{"id":"29ae5b8f-8a86-4224-a779-630182174c6c","ts":"2026-05-20T12:38:20.962Z","path":"/Users/josephapearson/dev/open-horizon.github.io/AGENTS.md","version":"1.0.0","taskID":"6e233eb0-e9f6-4e8b-8035-23c213419e76"}
+{"id":"97ec5d72-3a0f-49b7-a99c-c3c954031593","ts":"2026-05-20T13:44:59.203Z","path":"/Users/josephapearson/dev/open-horizon.github.io/README.md","version":"1.0.0","taskID":"52ef0484-033a-47e8-91f7-9e8cf7187ea2"}
+{"id":"93663c0c-acf3-4386-8b18-d44b07775d43","ts":"2026-05-20T13:45:15.151Z","path":"/Users/josephapearson/dev/open-horizon.github.io/README.md","version":"1.0.0","taskID":"52ef0484-033a-47e8-91f7-9e8cf7187ea2"}
