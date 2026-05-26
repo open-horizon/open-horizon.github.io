@@ -9,3 +9,5 @@ vendor
 .bundle
 .vscode/
 .cursor/
+.bob/.bob-errors/
+.bob/notes/
