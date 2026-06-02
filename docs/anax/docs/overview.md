@@ -1,11 +1,10 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2019 - 2025
-lastupdated: "2025-05-19"
-title: "Agent Installation script"
+years: 2019 - 2026
+lastupdated: 2026-05-05
+title: Installing an agent on an edge device
 description: Instructions and flags used by the agent-install script
-
-parent: Agent (anax)
+parent: Edge node agents (anax)
 nav_order: 1
 ---
 
@@ -17,11 +16,11 @@ nav_order: 1
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
 
-# Edge node agent-install script
+# Installing an agent on an edge device
 
 ## Overview
 
-This script:
+The edge node agent-install script script:
 
 - Verifies prerequisites and configuration information
 - Installs the agent packages appropriate for the edge node
@@ -35,20 +34,20 @@ Operating systems and architectures explicitly supported by the installation scr
 - Device
   - Ubuntu: xenial (16.x), bionic (18.x), focal (20.x), jammy (22.x), noble (24.x), resolute (26.x)
     - **amd64, arm64, s390x**
-  - Raspbian/RaspberryPi OS: stretch (9), buster (10), bullseye (11), bookworm (12)
+  - Raspbian/RaspberryPi OS: stretch (9), buster (10), bullseye (11), bookworm (12), trixie (13)
     - **armhf, arm64**
-  - Debian: stretch (9), buster (10), bullseye (11), bookworm (12)
+  - Debian: stretch (9), buster (10), bullseye (11), bookworm (12), trixie (13)
     - **amd64, armhf, arm64, s390x**
-  - RHEL: 7.6, 7.9, 8.1 - 8.5 (via Docker), 8.6 - 8.10 and 9.0 - 9.7 (via Podman 4.x or 5.x), 10.0, 10.1 (via Podman 4.x or 5.x)
+  - RHEL: 7.6, 7.9, 8.1 - 8.5 (via Docker), 8.6 - 8.10 and 9.0 - 9.8 (via Podman 4.x or 5.x), 10.0 - 10.2 (via Podman 4.x or 5.x)
     - **amd64, ppc64le**, aarch64, riscv64, **s390x**
   - CentOS: 8.1 - 8.5 (via Docker)
     - **amd64, ppc64le**, aarch64, riscv64
-  - Fedora: 32, 35 - 43
+  - Fedora: 32, 35 - 44
     - **amd64, ppc64le**, aarch64, riscv64
   - macOS
     - **amd64, M1, M2, M4**
 - Cluster - currently supported versions
-  - OpenShift Container Platform (OCP)
+  - {{site.data.keyword.open_shift_cp}}
     - **amd64, ppc64le, s390x**
   - Microk8s
     - **amd64, ppc64le**
@@ -125,7 +124,7 @@ Command line flags override the corresponding environment variables or config fi
 
 `-k <path>` - path to the agent-install.cfg file that contains the horizon defaults. Default: `./agent-install.cfg`
 
-`-i <path>` - path to the packages. Specify `css:` to get packages from the management hub MMS. Specify `https://github.com/open-horizon/anax/releases` to get latest packages from open horizon anax github repository. Default: current directory
+`-i <path>` - path to the packages. Specify `css:` to get packages from the management hub MMS. Specify `https://github.com/open-horizon/anax/releases` to get latest packages from {{site.data.keyword.edge_notm}} `anax` github repository. Default: current directory
 
 `-z <name>` - specifies the name of your agent installation tar file. Default is ./agent-install-files.tar.gz
 
@@ -153,7 +152,7 @@ Command line flags override the corresponding environment variables or config fi
 
 `-D <type>` - Node type of agent being installed: device, cluster. Default: device
 
-`-U <url>` - Internal url for edge cluster registry. If not specified, this script will auto-detect the value if it is a small, single-node cluster (e.g. k3s or microk8s). For OCP use: image-registry.openshift-image-registry.svc:5000
+`-U <url>` - Internal url for edge cluster registry. If not specified, this script will auto-detect the value if it is a small, single-node cluster (e.g. k3s or microk8s). For use in {{site.data.keyword.open_shift_cp}}: image-registry.openshift-image-registry.svc:5000
 
 `-l` - logging verbosity level (0: silent, 1: critical, 2: error, 3: warning, 4: info, 5: debug), the default is (3: warning)
 
