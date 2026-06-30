@@ -1,10 +1,11 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2019 - 2026
-lastupdated: 2026-05-05
-title: Installing an agent on an edge device
+years: 2019 - 2025
+lastupdated: "2025-05-19"
+title: "Agent Installation script"
 description: Instructions and flags used by the agent-install script
-parent: Edge node agents (anax)
+
+parent: Agent (anax)
 nav_order: 1
 ---
 
@@ -16,11 +17,11 @@ nav_order: 1
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
 
-# Installing an agent on an edge device
+# Edge node agent-install script
 
 ## Overview
 
-The edge node agent-install script script:
+This script:
 
 - Verifies prerequisites and configuration information
 - Installs the agent packages appropriate for the edge node
@@ -47,7 +48,7 @@ Operating systems and architectures explicitly supported by the installation scr
   - macOS
     - **amd64, M1, M2, M4**
 - Cluster - currently supported versions
-  - {{site.data.keyword.open_shift_cp}}
+  - OpenShift Container Platform (OCP)
     - **amd64, ppc64le, s390x**
   - Microk8s
     - **amd64, ppc64le**
@@ -124,7 +125,7 @@ Command line flags override the corresponding environment variables or config fi
 
 `-k <path>` - path to the agent-install.cfg file that contains the horizon defaults. Default: `./agent-install.cfg`
 
-`-i <path>` - path to the packages. Specify `css:` to get packages from the management hub MMS. Specify `https://github.com/open-horizon/anax/releases` to get latest packages from {{site.data.keyword.edge_notm}} `anax` github repository. Default: current directory
+`-i <path>` - path to the packages. Specify `css:` to get packages from the management hub MMS. Specify `https://github.com/open-horizon/anax/releases` to get latest packages from open horizon anax github repository. Default: current directory
 
 `-z <name>` - specifies the name of your agent installation tar file. Default is ./agent-install-files.tar.gz
 
@@ -152,7 +153,7 @@ Command line flags override the corresponding environment variables or config fi
 
 `-D <type>` - Node type of agent being installed: device, cluster. Default: device
 
-`-U <url>` - Internal url for edge cluster registry. If not specified, this script will auto-detect the value if it is a small, single-node cluster (e.g. k3s or microk8s). For use in {{site.data.keyword.open_shift_cp}}: image-registry.openshift-image-registry.svc:5000
+`-U <url>` - Internal url for edge cluster registry. If not specified, this script will auto-detect the value if it is a small, single-node cluster (e.g. k3s or microk8s). For OCP use: image-registry.openshift-image-registry.svc:5000
 
 `-l` - logging verbosity level (0: silent, 1: critical, 2: error, 3: warning, 4: info, 5: debug), the default is (3: warning)
 
