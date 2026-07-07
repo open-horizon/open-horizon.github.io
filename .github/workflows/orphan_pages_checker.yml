@@ -13,11 +13,11 @@ jobs:
     checker:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
             - uses: ruby/setup-ruby@v1
               with:
-                  ruby-version: '3.2.1' # Not needed with a .ruby-version file
-                  bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+                  ruby-version: '3.2.1'
+                  bundler-cache: true
             - run: |
                   make init
                   bundle exec jekyll serve >/dev/null 2>&1 &
@@ -32,8 +32,17 @@ jobs:
                   kill -15 $pid
                   printf "Killed the Server\n"
                   printf "Finding Orphan Pages\n"
-                  diff -qr 127.0.0.1\:4000/ ./_site | grep Only | grep .html | grep -v 404.html | grep -v dir.html | grep -v oauth2-redirect.html
+                  orphans=$(diff -qr 127.0.0.1\:4000/ ./_site | grep Only | grep .html | grep -v 404.html | grep -v dir.html | grep -v oauth2-redirect.html || true)
+                  if [ -n "$orphans" ]; then
+                    echo "Found orphan pages:"
+                    echo "$orphans"
+                    exit 1
+                  else
+                    echo "No orphan pages found - site is clean!"
+                    exit 0
+                  fi
             - name: Creating issue
+              if: failure()
               uses: JasonEtco/create-an-issue@v2.4.0
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
