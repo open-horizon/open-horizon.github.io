@@ -1,11 +1,10 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2019 - 2025
-lastupdated: "2025-05-19"
-title: "Agent Installation script"
+years: 2019 - 2026
+lastupdated: 2026-05-05
+title: Installing an agent on an edge device
 description: Instructions and flags used by the agent-install script
-
-parent: Agent (anax)
+parent: Edge node agents (anax)
 nav_order: 1
 ---
 
@@ -17,11 +16,11 @@ nav_order: 1
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
 
-# Edge node agent-install script
+# Installing an agent on an edge device
 
 ## Overview
 
-This script:
+The edge node agent-install script script:
 
 - Verifies prerequisites and configuration information
 - Installs the agent packages appropriate for the edge node
@@ -48,7 +47,7 @@ Operating systems and architectures explicitly supported by the installation scr
   - macOS
     - **amd64, M1, M2, M4**
 - Cluster - currently supported versions
-  - OpenShift Container Platform (OCP)
+  - {{site.data.keyword.open_shift_cp}}
     - **amd64, ppc64le, s390x**
   - Microk8s
     - **amd64, ppc64le**
@@ -67,7 +66,7 @@ The script will first extract files from a given tar file specified with `-z`. T
 
 The script then detects the active operation system, version, and architecture, and begins the agent installation process. If there is a node id mapping file, the script will check for its node id using its hostname then ip address if its hostname is not found. If a node id mapping file is found this is assumed to be a batch install and there will be no user prompts.
 
-For container installs on Linux, the script checks for Docker or Podman and jq. On Ubuntu, Debian and Raspbian installs, the script will install these if missing. On RHEL, CentOS and Fedora installs, the user must install these before running this script. On MacOS installs, which are always installed in a Docker container, the script checks for Docker, jq and socat, exiting if any are not installed.
+For container installs on Linux, the script checks for Docker or Podman and jq. On Ubuntu, Debian and Raspbian installs, the script will install these if missing. On RHEL, CentOS and Fedora installs, the user must install these before running this script. On MacOS installs, which is always installed as container, the script checks for Docker or Podman, jq and socat, exiting if any are not installed.
 
 Before starting the installation, `agent-install.sh` checks if the node is already registered. In that case, it queries if a user wants to overwrite the current node configuration. If the response is `yes`, the node is unregistered, and the packages and configuration are updated. If it is a batch install, or the user responds `no` to the prompt, the script will install without overwriting the existing node configuration.
 
@@ -125,7 +124,7 @@ Command line flags override the corresponding environment variables or config fi
 
 `-k <path>` - path to the agent-install.cfg file that contains the horizon defaults. Default: `./agent-install.cfg`
 
-`-i <path>` - path to the packages. Specify `css:` to get packages from the management hub MMS. Specify `https://github.com/open-horizon/anax/releases` to get latest packages from open horizon anax github repository. Default: current directory
+`-i <path>` - path to the packages. Specify `css:` to get packages from the management hub MMS. Specify `https://github.com/open-horizon/anax/releases` to get latest packages from {{site.data.keyword.edge_notm}} `anax` github repository. Default: current directory
 
 `-z <name>` - specifies the name of your agent installation tar file. Default is ./agent-install-files.tar.gz
 
@@ -135,7 +134,7 @@ Command line flags override the corresponding environment variables or config fi
 
 `-O <exchange org>` - The exchange organization id
 
-`-u <exchange credentials>` -  specifies your exchange user credentials in the form `apikey:<api-key>` or `username:password`
+`-u <exchange credentials>` -  specifies your exchange user credentials in the form `iamapikey:<api-key>` or `username:password`
 
 `-d <node id>` - the node id to register with. For individual not batch install only.
 
@@ -153,7 +152,7 @@ Command line flags override the corresponding environment variables or config fi
 
 `-D <type>` - Node type of agent being installed: device, cluster. Default: device
 
-`-U <url>` - Internal url for edge cluster registry. If not specified, this script will auto-detect the value if it is a small, single-node cluster (e.g. k3s or microk8s). For OCP use: image-registry.openshift-image-registry.svc:5000
+`-U <url>` - Internal url for edge cluster registry. If not specified, this script will auto-detect the value if it is a small, single-node cluster (e.g. k3s or microk8s). For use in {{site.data.keyword.open_shift_cp}}: image-registry.openshift-image-registry.svc:5000
 
 `-l` - logging verbosity level (0: silent, 1: critical, 2: error, 3: warning, 4: info, 5: debug), the default is (3: warning)
 
