@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2019 - 2026
 title: Preparing an edge device
 description: Documentation for Preparing an edge device
-lastupdated: 2026-08-20
+lastupdated: "2026-08-19"
 nav_order: 1
 parent: Installing edge device agents
 ---
@@ -71,7 +71,7 @@ To install and configure your edge device, click the link that represents your e
 ### Procedure
 {: #proc-x86}
 
-Prepare your device by installing a Debian, {{site.data.keyword.rhel}}, or Ubuntu {{site.data.keyword.linux_notm}}. The instructions in this content are based on a device that uses Ubuntu 24.x.
+Prepare your device by installing an operating system that meets the requirements specified in [System requirements](../hub/requirements.md).
 
 Install the most recent version of Docker or Podman on your device. For more information, see [Install {{site.data.keyword.docker}} ](https://docs.docker.com/engine/install/ubuntu/){:target="_blank"}{: .externalLink} or [Podman.io ](https://podman.io/){:target="_blank"}{: .externalLink}.
 

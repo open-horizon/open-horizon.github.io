@@ -2,7 +2,7 @@
 layout: page
 title: "Installation"
 description: "Instructions for installing the Open Horizon project's Management Hub, Agent, and CLI all in one VM"
-
+lastupdated: "2026-08-19"
 parent: Quick Start
 nav_order: 1
 ---
@@ -11,26 +11,22 @@ nav_order: 1
 
 ## Pre-requisites
 
-To run the [all-in-one instructions](../../docs/mgmt-hub/docs/) for the Management Hub, Agent, and [CLI](../docs/cli/index.md) all in one VM, you need a VM with:
+To run the [all-in-one instructions](../../docs/mgmt-hub/docs/) for the Management Hub, Agent, and [CLI](../docs/cli/index.md) all in one VM, ensure that the requirements specified in [System requirements](../../docs/hub/requirements.md) are met.
 
-* &gt;= 4GB RAM
-* 20GB storage
-* Ubuntu Server 18.04 LTS
+<!-- This video shows an example of installing Ubuntu Server on VirtualBox 6.1 on OSX Catalina. -->
 
-This video shows an example of installing Ubuntu Server on VirtualBox 6.1 on OSX Catalina.
+<!-- {% include youtubePlayer.html id="YQqFnRNL98s" %} -->
 
-{% include youtubePlayer.html id="YQqFnRNL98s" %}
-
-The links for above installation.
+<!-- The links for above installation.
 
 * [Ubuntu Server 18.04 LTS for AMD64 ](https://releases.ubuntu.com/18.04/){:target="_blank"}{: .externalLink}
 * [VirtualBox 6.1 ](https://www.virtualbox.org/wiki/Downloads){:target="_blank"}{: .externalLink}
 * [Open Horizon Management Hub installation instructions](../../docs/mgmt-hub/docs/)
-* [Open Horizon project ](https://www.lfedge.org/projects/openhorizon/){:target="_blank"}{: .externalLink}
+* [Open Horizon project ](https://www.lfedge.org/projects/openhorizon/){:target="_blank"}{: .externalLink} -->
 
 ## Installation
 
-* After Ubuntu Server 18.04 is running, run the installation as root:
+* Run the installation as root:
 
 ```bash
 sudo -i
@@ -38,9 +34,9 @@ sudo -i
 
 * Follow the steps in the [all-in-one instructions](../../docs/mgmt-hub/docs/) to install the Management Hub/Agent/CLI in a single VM.
 
-This video shows an installation process example.
+<!-- This video shows an installation process example. -->
 
-{% include youtubePlayer.html id="q4wwaE7z9v8" %}
+<!-- {% include youtubePlayer.html id="q4wwaE7z9v8" %} -->
 
 ## What to do next
 

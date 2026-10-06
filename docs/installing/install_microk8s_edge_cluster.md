@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2022 - 2026
 title: Installing a microk8s cluster
 description: Documentation for installing a MicroK8s edge cluster
-lastupdated: 2026-04-07
+lastupdated: "2026-08-19"
 nav_order: 5
 parent: Installing edge clusters
 has_children: false
@@ -21,7 +21,7 @@ has_toc: false
 # Installing a microk8s cluster
 {: #install_microk8s_cluster}
 
-This content provides a summary of how to install MicroK8s, a lightweight and small Kubernetes cluster, on Ubuntu 22.04.4 LTS. (For more information, see the MicroK8s documentation.)
+This content provides a summary of how to install MicroK8s, a lightweight and small Kubernetes cluster, on Ubuntu. (For more information, see the MicroK8s documentation.)
 {:shortdesc}
 
 **Note**: This type of edge cluster is meant for development and test because a single worker node Kubernetes cluster does not provide scalability or high availability.
