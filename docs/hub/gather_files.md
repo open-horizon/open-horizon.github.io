@@ -1,11 +1,11 @@
 ---
 copyright: Contributors to the Open Horizon project
 years: 2021 - 2026
-title: Gather edge node files
+title: Gathering edge node files
 description: Documentation for Gather edge node files
-lastupdated: 2025-10-17
+lastupdated: 2026-08-19
 nav_order: 4
-parent: Install Open Horizon
+parent: Installing Open Horizon
 ---
 
 {:new_window: target="blank"}
@@ -16,7 +16,7 @@ parent: Install Open Horizon
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
 
-# Gather edge node files
+# Gathering edge node files
 {: #prereq_horizon}
 
 Several files are needed to install the {{site.data.keyword.edge_notm}} ({{site.data.keyword.ieam}}) agent on your edge devices and edge clusters and register them with {{site.data.keyword.ieam}}. This content guides you through bundling the files that are needed for your edge nodes. The following script can be used to push the {{site.data.keyword.horizon}} packages into the CSS (Cloud Sync Service) component of the Model Management System. Copy the contents of the script and save them in a file. Fill in the correct values for variables that are marked with `<FILL_IN>` before executing. 

@@ -1,10 +1,10 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2025
+years: 2025 - 2026
 title: Demonstration videos and code
 description: Documentation for Code and video demos
-lastupdated: 2025-05-03
-nav_order: 13
+lastupdated: 2026-08-20
+nav_order: 15
 has_children: True
 has_toc: False
 ---

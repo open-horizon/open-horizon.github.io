@@ -4,10 +4,13 @@ years: 2020 - 2026
 title: Edge devices info
 description: Documentation for Edge devices
 lastupdated: 2025-05-03
-nav_order: 1
+
 parent: Edge devices
 has_children: True
 has_toc: False
+nav_exclude: true
+search_exclude: true
+
 ---
 
 {:new_window: target="blank"}

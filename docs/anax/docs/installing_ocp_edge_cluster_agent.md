@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2022 - 2026
 title: Installing the agent on Red Hat OpenShift Container Platform Kubernetes edge cluster
 description: Documentation for installing the agent on OpenShift edge clusters
-lastupdated: 2026-04-07
+lastupdated: 2026-08-21
 nav_order: 1
 parent: Installing the agent on an edge cluster
 grand_parent: Edge node agents (anax)
@@ -75,7 +75,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
 5. Determine whether a default route for the {{site.data.keyword.open_shift}} image registry has been created so that it is accessible from outside of the cluster:
 
    ```bash
-   oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}'
+   oc get route default-route -n openshift-image-registry --template='{% raw %}{{ .spec.host }}{% endraw %}'
    ```
    {: codeblock}
 
@@ -89,7 +89,7 @@ This content describes how to install the {{site.data.keyword.ieam}} agent on yo
 6. Retrieve the repository route name that you need to use:
 
    ```bash
-   export OCP_IMAGE_REGISTRY=`oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}'`
+   export OCP_IMAGE_REGISTRY=`oc get route default-route -n openshift-image-registry --template='{% raw %}{{ .spec.host }}{% endraw %}'`
    ```
    {: codeblock}
 

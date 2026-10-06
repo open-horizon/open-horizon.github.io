@@ -3,8 +3,8 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2026
 title: Overview of Open Horizon
 description: Documentation for Overview of {{site.data.keyword.edge_notm}}
-lastupdated: 2025-05-03
-nav_order: 4
+lastupdated: 2026-08-20
+nav_order: 3
 has_children: True
 has_toc: False
 ---

@@ -1,11 +1,11 @@
 ---
 copyright: Contributors to the Open Horizon project
 years: 2022 - 2026
-title: How to set-up the Open Horizon All-in-1 Horizon Management Hub for edge clusters
+title: Deploying the management hub
 description: Documentation for How to set-up the Open Horizon All-in-1 Horizon Management Hub for edge clusters
-lastupdated: 2026-04-24
-nav_order: 5
-parent: Install Open Horizon
+lastupdated: 2026-08-19
+nav_order: 2
+parent: Installing the management hub only
 ---
 # How to set-up the Open Horizon All-in-1 Horizon Management Hub for edge clusters
 

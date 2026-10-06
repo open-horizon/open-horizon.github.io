@@ -1,12 +1,11 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2025
-title: Exchange API Server
+years: 2025 - 2026
+title: Creating a local development environment
 description: Quick start
-lastupdated: 2025-06-03
-nav_order: 3
-parent: Management Hub
-layout: page
+lastupdated: 2026-08-20
+nav_order: 5
+parent: Installing the management hub only
 ---
 
 # Exchange API Server quick start

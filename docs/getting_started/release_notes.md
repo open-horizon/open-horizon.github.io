@@ -1,10 +1,10 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
+years: 2020 - 2026
 title: Release notes
 description: Documentation for Release notes
-lastupdated: 2025-05-03
-nav_order: 18
+lastupdated: 2026-08-20
+nav_order: 2
 has_children: True
 has_toc: False
 ---

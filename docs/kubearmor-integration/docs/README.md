@@ -1,11 +1,10 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2022 - 2025
+years: 2022 - 2026
 title: KubeArmor Integration
 description: KubeArmor Security for Open Horizon workloads / agent
-lastupdated: 2025-05-03
-nav_order: 1
-parent: Integrating
+lastupdated: 2026-08-21
+nav_order: 16
 ---
 
 # KubeArmor security for Open Horizon workloads / agent

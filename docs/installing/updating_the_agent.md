@@ -1,12 +1,11 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
-title: Updating the agent
+years: 2020 - 2026
+title: Updating the device agent
 description: Documentation for Updating the agent
-lastupdated: 2025-05-03
-nav_order: 3
-parent: Edge devices info
-grand_parent: Edge devices
+lastupdated: 2026-08-20
+nav_order: 7
+parent: Installing edge device agents
 ---
 
 {:new_window: target="blank"}

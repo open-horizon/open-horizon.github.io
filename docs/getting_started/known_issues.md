@@ -1,9 +1,9 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
+years: 2020 - 2026
 title: Known issues and limitations
 description: Documentation for Known issues and limitations
-lastupdated: 2025-09-24
+lastupdated: 2026-08-20
 nav_order: 1
 parent: Release notes
 ---

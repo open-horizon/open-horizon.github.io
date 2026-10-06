@@ -3,10 +3,9 @@ copyright:
 years: 2021 - 2026
 lastupdated: "2026-08-19"
 layout: page
-title: "Quick Start"
+title: Quick Start
 description: "A guide to get you using Open Horizon in minutes."
-
-nav_order: 2
+nav_order: 4
 has_children: true
 has_toc: false
 ---

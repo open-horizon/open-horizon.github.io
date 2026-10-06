@@ -1,12 +1,11 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
-title: Bulk agent install
+years: 2020 - 2026
+title: Bulk device agent install
 description: Documentation for Bulk agent installation and registration
-lastupdated: 2025-05-03
+lastupdated: 2026-08-20
 nav_order: 5
-parent: Edge devices info
-grand_parent: Edge devices
+parent: Installing edge device agents
 ---
 
 {:new_window: target="blank"}

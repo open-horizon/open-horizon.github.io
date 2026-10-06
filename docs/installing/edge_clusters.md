@@ -3,8 +3,8 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2026
 title: Installing edge clusters
 description: Documentation for Installing edge clusters
-lastupdated: 2026-04-07
-nav_order: 12
+lastupdated: 2026-08-20
+nav_order: 6
 has_children: True
 has_toc: False
 ---

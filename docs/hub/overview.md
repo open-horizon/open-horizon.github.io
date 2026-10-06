@@ -1,12 +1,11 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
-title: Management Hub
+years: 2020 - 2026
+title: Overview of edge computing
 description: Documentation for Overview of edge computing
-lastupdated: 2025-05-03
-nav_order: 8
-has_children: True
-has_toc: False
+lastupdated: 2026-08-21
+parent: Overview of Open Horizon
+nav_order: 1
 ---
 
 {:new_window: target="blank"}

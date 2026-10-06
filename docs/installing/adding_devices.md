@@ -5,8 +5,7 @@ title: Preparing an edge device
 description: Documentation for Preparing an edge device
 lastupdated: "2026-08-19"
 nav_order: 1
-parent: Edge devices info
-grand_parent: Edge devices
+parent: Installing edge device agents
 ---
 
 {:new_window: target="blank"}

@@ -1,11 +1,11 @@
 ---
 copyright: Contributors to the Open Horizon project
 years: 2020 - 2026
-title: Installing Open Horizon
+title: Completing a full installation
 description: Documentation for Installing {{site.data.keyword.ieam}} Overview
-lastupdated: 2025-05-03
+lastupdated: 2026-08-20
 nav_order: 2
-parent: Install Open Horizon
+parent: Installing Open Horizon
 ---
 
 {:new_window: target="blank"}
@@ -19,9 +19,9 @@ parent: Install Open Horizon
 # Installing {{site.data.keyword.ieam}} Overview
 {: #hub_install_overview}
 
-The [Open Horizon](https://open-horizon.github.io/docs/) [All-in-One (AIO) script](https://open-horizon.github.io/quick-start/) is a tool for installing, restarting, upgrading, and removing all [Open Horizon components](https://open-horizon.github.io/docs/getting_started/overview_oh/).  This includes the Management Hub, the anax Agent, the CLI, and [example services and deployment policies](https://open-horizon.github.io/docs/developing/examples/).  Please note that Open Horizon does not include [a container or model registry](https://open-horizon.github.io/docs/developing/container_registry/), nor an automation solution like Ansible Automation Platform.
+The {{site.data.keyword.edge_notm}} [All-in-One (AIO) script](https://open-horizon.github.io/quick-start/) is a tool for installing, restarting, upgrading, and removing all [Open Horizon components](https://open-horizon.github.io/docs/getting_started/overview_oh/).  This includes the Management Hub, the anax Agent, the CLI, and [example services and deployment policies](https://open-horizon.github.io/docs/developing/examples/).  Please note that {{site.data.keyword.edge_notm}} does not include [a container or model registry](https://open-horizon.github.io/docs/developing/container_registry/), nor an automation solution like Ansible Automation Platform.
 
-Once Open Horizon's Management Hub is running, and at least one Agent is registered with that Hub, you will be able to automatically deploy containerized applications and ML models to the Agent's host.  This is activated by publishing, at minimum, [a Service Definition file](https://open-horizon.github.io/docs/developing/developing_details/#service_definition) describing [a microservice or distributed application](https://open-horizon.github.io/docs/developing/developing_details/#services_deploy_patterns), and [a Deployment Policy](https://open-horizon.github.io/docs/anax/docs/deployment_policy/#deployment-policy) describing the circumstances under which a service can be matched to an edge node.  Once those exist, the act of publishing a deployment policy, or registering a node, will cause services and policies to be evaluated by the AgreementBot looking for potential matches.  If matches are found, proposed, and accepted by all parties, the deployment process begins.
+Once {{site.data.keyword.edge_notm}}'s Management Hub is running, and at least one Agent is registered with that Hub, you will be able to automatically deploy containerized applications and ML models to the Agent's host.  This is activated by publishing, at minimum, [a Service Definition file](https://open-horizon.github.io/docs/developing/developing_details/#service_definition) describing [a microservice or distributed application](https://open-horizon.github.io/docs/developing/developing_details/#services_deploy_patterns), and [a Deployment Policy](https://open-horizon.github.io/docs/anax/docs/deployment_policy/#deployment-policy) describing the circumstances under which a service can be matched to an edge node.  Once those exist, the act of publishing a deployment policy, or registering a node, will cause services and policies to be evaluated by the AgreementBot looking for potential matches.  If matches are found, proposed, and accepted by all parties, the deployment process begins.
 
 ## Installation summary
 {: #sum}
@@ -57,26 +57,18 @@ export VAULT_DISABLE_TLS=false
 
 IMPORTANT: At the end of a successful installation, credentials and secrets will be shown once on the screen.  Administrators, please capture this information and save it for future use.  There is no way to recover this.
 
-Here is the one-liner to download and run the install script to install ONLY the Hub, not the Agent and the Examples:
+Use the `deploy-mgmt-hub.sh` script to deploy the {{site.data.keyword.edge_notm}} management hub services, agent, and CLI on this host. To deploy the management hub services (`agbot`, `exchange`, `css`, `fdo`, `postgre`, `mongo`), the agent, and the CLI on the current host, run the following command:
 
 ```shell
 curl -sSL https://raw.githubusercontent.com/open-horizon/devops/master/mgmt-hub/deploy-mgmt-hub.sh | bash -s -- -A -R -E
 ```
 
-```text
-Flags:
-  -c <config-file>   A config file with lines in the form variable=value that set any of the environment variables supported by this script. Takes precedence over the same variables passed in through the environment.
-  -A    Do not install the horizon agent package. (It will still install the horizon-cli package.) Without this flag, it will install and register the horizon agent (as well as all of the management hub services).
-  -R    Skip registering the edge node. If -A is not specified, it will install the horizon agent.
-  -E    Skip loading the horizon example services, policies, and patterns.
-  -S    Stop the management hub services and agent (instead of starting them). This flag is necessary instead of you simply running 'docker-compose down' because docker-compose.yml contains environment variables that must be set.
-  -P    Purge (delete) the persistent volumes and images of the Horizon services and uninstall the Horizon agent. Can only be used with -S.
-  -s    Start the management hub services and agent, without installing software or creating configuration. Intended to be run to restart the services and agent at some point after you have stopped them using -S. (If you want to change the configuration, run this script without any flags.)
-  -u    Update any container whose specified version is not currently running.
-  -r <container>   Have docker-compose restart the specified container.
-  -v    Verbose output.
-  -h    Show this usage.
-  ```
+This command also registers the edge node and loads the {{site.data.keyword.edge_notm}} custom sample services, policies, and patterns.
+
+To read about the script and the flags that you can use, see [https://github.com/open-horizon/devops/blob/master/mgmt-hub/deploy-mgmt-hub.sh](https://github.com/open-horizon/devops/blob/master/mgmt-hub/deploy-mgmt-hub.sh).
+
+
+
 
 ### Followup
 

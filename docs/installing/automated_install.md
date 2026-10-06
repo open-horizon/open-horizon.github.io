@@ -1,9 +1,11 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
-title: Automated agent installation and registration
+years: 2020 - 2026
+title: Automated device agent installation and registration
 description: Documentation for Automated agent installation and registration
-lastupdated: 2025-09-02
+lastupdated: 2026-08-21
+nav_order: 3
+parent: Installing edge device agents
 ---
 
 {:new_window: target="blank"}

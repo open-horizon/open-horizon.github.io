@@ -1,12 +1,11 @@
 ---
-copyright: {'years': '2020 - 2022'}
-years: 2025
-title: Configuration
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2026
+title: Configuring Open Horizon for high scale environments
 description: Documentation for Configure {{site.data.keyword.ieam}}
-lastupdated: 2025-05-03
-nav_order: 2
-parent: Installing Management hub
-grand_parent: Management Hub
+lastupdated: 2026-08-19
+nav_order: 6
+parent: Installing Open Horizon
 ---
 
 {:new_window: target="blank"}
@@ -17,9 +16,7 @@ grand_parent: Management Hub
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
 
-# Configure {{site.data.keyword.ieam}}
-
-## Additional ORG level configuration for high scale environments
+# Additional ORG level configuration for high scale environments
 
 To support high scale environments greater than 10,000 edge nodes, adjust the heartbeat intervals that the edge nodes use to check for changes. 
 

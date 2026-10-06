@@ -1,11 +1,11 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
-title: Post-installation
+years: 2020 - 2026
+title: Post-installation configuration
 description: Documentation for Post installation configuration
-lastupdated: 2025-05-03
+lastupdated: 2026-08-19
 nav_order: 3
-parent: Install Open Horizon
+parent: Installing Open Horizon
 ---
 
 {:new_window: target="blank"}
@@ -17,19 +17,6 @@ parent: Install Open Horizon
 {:childlinks: .ullinks}
 
 # Post installation configuration
-
-## Prerequisites
-
-- [**jq** ](https://stedolan.github.io/jq/download/){:target="_blank"}{: .externalLink}
-- [**git** ](https://git-scm.com/downloads){:target="_blank"}{: .externalLink}
-- [**docker** ](https://docs.docker.com/get-docker/){:target="_blank"}{: .externalLink} version 1.13 or greater
-- **make**
-
-## Installation verification
-
-1. Complete the steps in [Install {{site.data.keyword.ieam}}](online_installation.md)
-
-## Post installation configuration
 {: #postconfig}
 
 At the end of a successful installation, credentials and secrets will be shown once on the screen.  Administrators, please capture this information and save it for future use.  There is no way to recover this.

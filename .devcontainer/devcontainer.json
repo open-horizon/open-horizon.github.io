@@ -1,0 +1,28 @@
+{
+  "name": "Open Horizon Docs",
+  "dockerPath": "podman",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [4000],
+  "portsAttributes": {
+    "4000": {
+      "label": "Jekyll docs",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postCreateCommand": "bundle _2.5.23_ config unset deployment && bundle _2.5.23_ install && bundle _2.5.23_ exec jekyll doctor && bundle _2.5.23_ exec jekyll build",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "rubyLsp.rubyVersionManager": "none"
+      },
+      "extensions": [
+        "rebornix.Ruby",
+        "Shopify.ruby-lsp",
+        "github.vscode-github-actions"
+      ]
+    }
+  },
+  "remoteUser": "vscode"
+}

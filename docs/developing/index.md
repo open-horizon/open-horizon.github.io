@@ -1,10 +1,10 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2025
+years: 2025 - 2026
 title: Developing edge services
 description: Documentation for Developing edge services
-lastupdated: 2025-05-03
-nav_order: 14
+lastupdated: 2026-08-20
+nav_order: 12
 has_children: True
 has_toc: False
 ---

@@ -3,9 +3,9 @@ copyright: Contributors to the Open Horizon project
 years: 2020 - 2025
 title: Support
 description: Documentation for Support
-lastupdated: 2025-05-03
+lastupdated: 2026-08-21
 nav_order: 3
-parent: Help and Support
+parent: Troubleshooting
 ---
 
 {:new_window: target="blank"}

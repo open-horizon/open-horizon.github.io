@@ -1,9 +1,11 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
+years: 2020 - 2026
 title: Exchange API
 description: Documentation for Exchange API
-lastupdated: 2025-05-03
+lastupdated: 2026-08-21
+nav_exclude: true
+search_exclude: true
 ---
 
 {:new_window: target="blank"}

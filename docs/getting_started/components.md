@@ -3,9 +3,9 @@ copyright: Contributors to the Open Horizon project
 years: 2019 - 2026
 title: Components
 description: Documentation for Components
-lastupdated: 2025-05-03
+lastupdated: 2026-08-21
 parent: Overview of Open Horizon
-nav_bar: 1
+nav_order: 2
 ---
 
 {:new_window: target="blank"}
@@ -35,8 +35,8 @@ View the following table for a description of the {{site.data.keyword.ieam}} com
 | FIDO Device Onboard (FDO)                     | 1.0.0-110    | The FDO component, FIDO Device Onboard, is a device onboarding scheme from the FIDO Alliance that enables technology created by {{site.data.keyword.intel}}, which makes it simple and secure to configure edge devices and associate them with an edge management hub.|
 | Secrets Manager                               | 1.1.1-641    | The Secrets Manager is the repository for secrets deployed to edge devices, enabling services to securely receive credentials used to authenticate to their upstream dependencies.                                                 |
 | **Edge node**                                 |              | Any edge device, edge cluster, or edge gateway where edge computing takes place.                                                                                                                                                   |
-| Edge cluster agent                            | 2.30.0-1177  | The agent that is installed on edge clusters to enable node workload management by {{site.data.keyword.ieam}}.                                                                                                                     |
-| Edge device agent                             | 2.30.0-1177  | The agent that is installed on edge devices to enable node workload management by {{site.data.keyword.ieam}}.                                                                                                                      |
+| Edge cluster agent                            | 2.30.0-1177  | The agent that is installed on edge clusters to enable node workload management by {{site.data.keyword.ieam}}. This component includes the CLI package.                                                                            |
+| Edge device agent                             | 2.30.0-1177  | The agent that is installed on edge devices to enable node workload management by {{site.data.keyword.ieam}}. This component includes the CLI package.                                                                             |
 | ESS                                           | 1.9.10-1177  | The edge node part of MMS that makes AI models and files available to the edge services.                                                                                                                                           |
 | Example edge services                         | 2.27.0       | Edge service examples that are useful when exploring {{site.data.keyword.ieam}} and learning how to write your own services.                                                                                                       |
 {: caption="Table 1. {{site.data.keyword.ieam}} components" caption-side="top"}

@@ -3,9 +3,9 @@ copyright: Contributors to the Open Horizon project
 years: 2020 - 2026
 title: FAQs
 description: Documentation for Frequently asked questions
-lastupdated: 2026-04-23
-nav_order: 1
-parent: Help and Support
+lastupdated: 2026-08-21
+nav_order: 2
+parent: Troubleshooting
 ---
 
 {:new_window: target="blank"}
@@ -110,7 +110,7 @@ To observe the agreement negotiation process phases, you can use the `hzn agreem
 For an edge device agent, after an agreement list is finalized, you can use the `docker ps` or (`podman ps`) command to view the running containers. You can also issue `docker inspect <container>` 
 (or `podman inspect <container>`) to see more detailed information about the deployment of any specific `<container>`.
 
-## Can the {{{site.data.keyword.ieam}} software and all other software or data that is related to {{site.data.keyword.ieam}} be removed from an edge node host?
+## Can the {{site.data.keyword.ieam}} software and all other software or data that is related to {{site.data.keyword.ieam}} be removed from an edge node host?
 {: #sw_rem}
 
 Yes. If your edge node is registered, unregister the edge node by running:

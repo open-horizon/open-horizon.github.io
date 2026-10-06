@@ -3,7 +3,11 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2026
 title: Troubleshooting tips
 description: Documentation for Troubleshooting tips
-lastupdated: 2025-05-03
+lastupdated: 2026-08-21
+nav_order: 1
+parent: Troubleshooting
+
+
 ---
 
 {:new_window: target="blank"}

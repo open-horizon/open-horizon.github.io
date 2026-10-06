@@ -1,12 +1,11 @@
 ---
 copyright: Contributors to the Open Horizon project
 years: 2021 - 2026
-title: Manual agent install
+title: Manual device agent install
 description: Documentation for Advanced manual agent installation and registration
-lastupdated: 2025-05-03
+lastupdated: 2026-08-20
 nav_order: 4
-parent: Edge devices info
-grand_parent: Edge devices
+parent: Installing edge device agents
 ---
 
 {:new_window: target="blank"}
@@ -17,7 +16,7 @@ grand_parent: Edge devices
 {:child: .link .ulchildlink}
 {:childlinks: .ullinks}
 
-# Advanced manual agent installation and registration
+# Advanced manual device agent installation and registration
 {: #advanced_man_install}
 
 This content describes each manual step to install the {{site.data.keyword.edge_notm}} agent on an edge device and register it. For a more automated method, see [Automated agent installation and registration](automated_install.md).

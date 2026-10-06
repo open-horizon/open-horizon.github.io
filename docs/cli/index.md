@@ -1,10 +1,10 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2025
+years: 2025 - 2026
 title: CLI
 description: Documentation for Using the CLI
-lastupdated: 2025-05-03
-nav_order: 6
+lastupdated: 2026-08-20
+nav_order: 13
 has_children: True
 has_toc: False
 ---

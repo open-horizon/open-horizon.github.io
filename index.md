@@ -1,11 +1,12 @@
 --- 
-copyright: 
-years: 2021 - 2024
-lastupdated: "2024-04-08" 
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2026
+lastupdated: 2026-08-20
 layout: page 
 title: "Home" 
 description: "Welcome to the Open Horizon Documentation web site" 
-nav_order: 1 
+nav_exclude: true
+search_exclude: true
 ---   
 
 Open Horizon is a platform for managing the service software lifecycle of containerized workloads and related machine learning assets.  It enables autonomous management of applications deployed to distributed webscale fleets of edge computing nodes and devices without requiring on-premise administrators.

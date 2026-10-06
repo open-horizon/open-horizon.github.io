@@ -1,16 +1,16 @@
 ---
 copyright: Contributors to the Open Horizon project
 years: 2025 - 2026
-title: Windows WSL2 Installation
+title: Installing the management hub only by using WSL2
 description: Documentation for Horizon Management Hub
-lastupdated: 2026-03-03
+lastupdated: 2026-08-20
 nav_order: 3
-parent: Management Hub
+parent: Installing the management hub only
 ---
 
 # Windows WSL2 Installation Instructions
 
-## Pre-requisites
+## Prerequisites
 
 Use a Windows computer, or download an official VM: [https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/).
 

@@ -3,8 +3,8 @@ copyright: Contributors to the Open Horizon project
 years: 2022 - 2026
 title: Edge node agents (anax)
 description: Open Horizon Edge Node Agent Documentation
-lastupdated: 2026-04-08
-nav_order: 5
+lastupdated: 2026-08-21
+nav_order: 7
 has_children: True
 has_toc: False
 layout: page

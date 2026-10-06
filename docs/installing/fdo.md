@@ -1,12 +1,11 @@
 ---
 copyright: Contributors to the Open Horizon project
 years: 2020 - 2026
-title: FDO agent install
+title: FDO device agent install
 description: Documentation for FDO agent installation and registration
-lastupdated: 2025-09-02
+lastupdated: 2026-08-20
 nav_order: 6
-parent: Edge devices info
-grand_parent: Edge devices
+parent: Installing edge device agents
 ---
 
 {:new_window: target="blank"}

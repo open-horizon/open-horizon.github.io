@@ -1,10 +1,10 @@
 ---
 copyright: Contributors to the Open Horizon project
-years: 2020 - 2025
+years: 2020 - 2026
 title: Using edge services
 description: Documentation for Using edge services
-lastupdated: 2025-05-03
-nav_order: 13
+lastupdated: 2026-08-20
+nav_order: 11
 has_children: True
 has_toc: False
 ---

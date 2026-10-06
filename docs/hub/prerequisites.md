@@ -1,11 +1,11 @@
 ---
 copyright: Contributors to the Open Horizon project
 years: 2021 - 2026
-title: Prerequisites
+title: Prerequisites for full installation
 description: Documentation for Install {{site.data.keyword.ieam}}
 lastupdated: "2026-08-19"
 nav_order: 1
-parent: Install Open Horizon
+parent: Installing Open Horizon
 ---
 
 {:new_window: target="blank"}
@@ -21,26 +21,13 @@ parent: Install Open Horizon
 
 You must install and configure a [management hub](../hub/overview.md) before you start the {{site.data.keyword.edge_notm}} node tasks.
 
-## Installation summary
-{: #sum}
-
-* This content describes the steps to deploy the following components.
-  * {{site.data.keyword.edge_notm}} Exchange API.
-  * {{site.data.keyword.edge_notm}} Agreement Bot (AgBot).
-  * {{site.data.keyword.edge_notm}} Cloud Sync Service (CSS).
-  * {{site.data.keyword.edge_notm}} FIDO Device Onboard (FDO).
-  * {{site.data.keyword.edge_notm}} Secrets Manager.
-
-**Note:** Upgrade from previous versions of {{site.data.keyword.edge_notm}} is not supported.
-
-## Prerequisites
+## Prerequisites for full installation
 {: #prereq}
 
 Ensure that the requirements specified in [System requirements](requirements.md) are met. The installation can run on the bare hardware or in a VM.  The Hub **cannot** run on arm64-based hardware.
 
-For installation, you will need to become root, ex. `sudo -i`
+Several files are needed to install the {{site.data.keyword.edge_notm}} agent on your edge devices and edge clusters and register them with {{site.data.keyword.edge_notm}}. These agent files are stored in the CSS Cloud Sync Service (CSS) component of the Model Management System (MMS). If you know the components of the Exchange that you want to use, and their IP addresses and ports, you can bundle those edge node files now. However, if you are uncertain of those details, you might want to bundle those files after you install {{site.data.keyword.edge_notm}}. For more information, see [Gather edge node files](gather_files.md).
 
-Ensure that you know the public or network facing IP address for the local network that other machines will use to connect to the Management Hub. We will set that IP address as `HZN_LISTEN_IP`. If you do not set this in advance, other machines will not be able to connect to the hub.
 
 ## What's Next
 
