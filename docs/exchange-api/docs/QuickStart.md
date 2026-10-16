@@ -3,12 +3,13 @@ copyright: Contributors to the Open Horizon project
 years: 2025 - 2026
 title: Creating a local development environment
 description: Quick start
-lastupdated: 2026-08-20
+lastupdated: 2026-10-16
 nav_order: 5
 parent: Installing the management hub only
+layout: page
 ---
 
-# Exchange API Server quick start
+# Creating a local development environment
 
 ## Intro
 
@@ -17,7 +18,7 @@ local development and debugging environment.
 
 ## Prerequisites
 
-* OS: Ubuntu 24.04 LTS.
+* OS: Any officially supported versions of Ubuntu. For more information, see [System Requirements](../../docs/hub/requirements.md).
 
 ## Dependencies
 
