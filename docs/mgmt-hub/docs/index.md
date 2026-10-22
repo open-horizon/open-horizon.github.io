@@ -1,11 +1,11 @@
 ---
 copyright: Contributors to the Open Horizon project
 years: 2025 - 2026
-title: Getting to know the management hub
+title: All-in-One Mgmt Hub
 description: Documentation for Horizon Management Hub
-lastupdated: 2026-08-20
-nav_order: 4
-parent: Installing the management hub only
+lastupdated: 2026-10-22
+nav_order: 2
+parent: Management Hub
 ---
 # Horizon Management Hub
 
@@ -17,7 +17,7 @@ Read the notes and then run the following command to deploy the Horizon componen
 
 **Notes:**
 
-- Currently **only supported on Fedora 36+, Red Hat Enterprise Linux 8.x+ ppc64le, Ubuntu 20.x+, and {{site.data.keyword.macOS_notm}}**
+- For information about the requirements for installing the management hub, see [System requirements](../../hub/requirements.md).
 - This script is not yet compatible with Docker installed via Snap. If Docker has already been installed via Snap, remove the existing Docker snap and allow the script to reinstall the latest version of Docker.
 - The {{site.data.keyword.macOS_notm}} support is considered **experimental** due to this [docker bug](https://github.com/docker/for-mac/issues/3499). Making some of the recommended changes to my Docker version and settings enables progress past the problem.
 - Support for Windows Subsystem for Linux (WSL 1&2) should also considered **experimental** at this time. WSL2's Ubuntu is based on `init.d` instead of the `systemd` used in standard Ubuntu distributions. The Open Horizon Agent requires `systemd` support so workarounds will simulate systemd usiing [this script](https://gist.githubusercontent.com/djfdyuruiry/6720faa3f9fc59bfdf6284ee1f41f950/raw/952347f805045ba0e6ef7868b18f4a9a8dd2e47a/install-sg.sh). This technique may not be stable and reliable.
@@ -39,7 +39,7 @@ curl -sSL https://raw.githubusercontent.com/open-horizon/devops/master/mgmt-hub/
 
 The All-in-One environment is intended for use on devices or virtual machines with **at least 4GB RAM and 20GB of storage space**.
 
-Ubuntu Server 20.04 and 22.04 are the preferred operating systems for evaluating and learning Open Horizon for now. You can download Ubuntu Server from [Ubuntu Releases](https://releases.ubuntu.com/).
+For information about the requirements for installing the management hub, see [System requirements](../../hub/requirements.md).
 
 If you wish to use the All-in-One environment in a virtual machine, please read the [VM setup notes](#setup-vm) further down for details.
 
@@ -166,7 +166,7 @@ When complete, you can run `hzn exchange node list` to see your new nodes.
 
 [The LF Edge FDO project](https://www.lfedge.org/projects/securedeviceonboard/) (FIDO Device Onboard) codebase is embedded in Open Horizon and their technology can configure an edge device and register it with a Horizon instance automatically. Although this is not necessary in this all-in-one environment (because the agent has already been registered), you can easily try out FDO to see it working.
 
-**Note:** FDO is currently only supported in this all-in-one environment on Fedora 36+ and Ubuntu 20.04+. Currently, TLS/https is not supported.
+**Note:** For information about FDO support, see [System requirements](../../fdo/docs/README-FDO.md).
 
 Export these environment variables:
 
