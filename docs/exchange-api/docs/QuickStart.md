@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2025 - 2026
 title: Creating a local development environment
 description: Quick start
-lastupdated: 2026-10-16
+lastupdated: 2026-10-22
 nav_order: 5
 parent: Installing the management hub only
 layout: page
@@ -18,7 +18,7 @@ local development and debugging environment.
 
 ## Prerequisites
 
-* OS: Any officially supported versions of Ubuntu. For more information, see [System Requirements](../../docs/hub/requirements.md).
+* OS: Any officially supported versions of Ubuntu. For more information, see [System requirements](../../hub/requirements.md).
 
 ## Dependencies
 
