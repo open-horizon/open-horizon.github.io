@@ -4,8 +4,8 @@ years: 2026
 layout: page
 title: "Using custom sample services"
 description: "How to publish your own sample services with the All-in-One Management Hub"
-lastupdated: 2026-08-19
-nav_order: 5
+lastupdated: 2026-10-21
+nav_order: 6
 parent: Installing Open Horizon
 
 ---
