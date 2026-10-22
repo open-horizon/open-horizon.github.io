@@ -3,8 +3,8 @@ copyright: Contributors to the Open Horizon project
 years: 2020 - 2026
 title: Prepare for setting up edge nodes
 description: Documentation for Prepare for setting up edge nodes
-lastupdated: 2026-08-21
-nav_order: 1
+lastupdated: 2026-10-21
+nav_order: 2
 parent: Edge node agents (anax)
 ---
 

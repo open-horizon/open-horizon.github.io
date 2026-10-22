@@ -3,8 +3,8 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2026
 title: Prerequisites for full installation
 description: Documentation for Install {{site.data.keyword.ieam}}
-lastupdated: "2026-08-19"
-nav_order: 1
+lastupdated: "2026-10-21"
+nav_order: 2
 parent: Installing Open Horizon
 ---
 

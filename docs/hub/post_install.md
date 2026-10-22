@@ -3,8 +3,8 @@ copyright: Contributors to the Open Horizon project
 years: 2020 - 2026
 title: Post-installation configuration
 description: Documentation for Post installation configuration
-lastupdated: 2026-08-19
-nav_order: 3
+lastupdated: 2026-10-21
+nav_order: 4
 parent: Installing Open Horizon
 ---
 

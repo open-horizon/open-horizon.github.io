@@ -3,9 +3,9 @@ copyright: Contributors to the Open Horizon project
 years: 2026
 title: System requirements
 description: System requirements for installing Open Horizon components
-lastupdated: "2026-08-19"
-nav_order: 3
-parent: Install Open Horizon
+lastupdated: "2026-10-21"
+nav_order: 1
+parent: Installing Open Horizon
 ---
 
 {:new_window: target="blank"}

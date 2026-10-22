@@ -2,7 +2,7 @@
 layout: page
 title: "Installation"
 description: "Instructions for installing the Open Horizon project's Management Hub, Agent, and CLI all in one VM"
-lastupdated: "2026-08-19"
+lastupdated: "2026-10-21"
 parent: Quick Start
 nav_order: 1
 ---
@@ -11,7 +11,7 @@ nav_order: 1
 
 ## Pre-requisites
 
-To run the [all-in-one instructions](../../docs/mgmt-hub/docs/) for the Management Hub, Agent, and [CLI](../docs/cli/index.md) all in one VM, ensure that the requirements specified in [System requirements](../../docs/hub/requirements.md) are met.
+To run the [all-in-one instructions](../docs/mgmt-hub/docs/index.md) for the Management Hub, Agent, and [CLI](../docs/cli/index.md) all in one VM, ensure that the requirements specified in [System requirements](../docs/hub/requirements.md) are met.
 
 <!-- This video shows an example of installing Ubuntu Server on VirtualBox 6.1 on OSX Catalina. -->
 
@@ -32,7 +32,7 @@ To run the [all-in-one instructions](../../docs/mgmt-hub/docs/) for the Manageme
 sudo -i
 ```
 
-* Follow the steps in the [all-in-one instructions](../../docs/mgmt-hub/docs/) to install the Management Hub/Agent/CLI in a single VM.
+* Follow the steps in the [all-in-one instructions](../docs/mgmt-hub/docs/index.md) to install the Management Hub/Agent/CLI in a single VM.
 
 <!-- This video shows an installation process example. -->
 
