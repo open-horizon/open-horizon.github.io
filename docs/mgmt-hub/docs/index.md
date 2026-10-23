@@ -1,15 +1,15 @@
 ---
 copyright: Contributors to the Open Horizon project
 years: 2025 - 2026
-title: All-in-One Mgmt Hub
+title: Getting to know the management hub
 description: Documentation for Horizon Management Hub
-lastupdated: 2026-10-22
+lastupdated: 2026-10-23
 nav_order: 2
-parent: Management Hub
+parent: Installing the management hub only
 ---
 # Horizon Management Hub
 
-## <a id="deploy-all-in-one">Deploy All-in-One Horizon Management Hub, Agent and CLI</a>
+## <a id="deploy-all-in-one">Getting to know the management hub</a>
 
 This enables you to quickly set up a host with all of the Open Horizon components to facilitate learning and doing development.
 
