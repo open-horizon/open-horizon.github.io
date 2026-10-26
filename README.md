@@ -1,401 +1,73 @@
-<p style="text-align:center;" align="center">
-  <img align="center" src="https://github.com/open-horizon/open-horizon.github.io/blob/master/img/logos/open-horizon-color.png" width="45%"/>
-</p>
+# Open Horizon Documentation
 
-<p align="center">
-<a href="https://github.com/open-horizon/open-horizon.github.io" alt="GitHub contributors">
-<img src="https://img.shields.io/github/contributors/open-horizon/open-horizon.github.io.svg"/></a>
-<a href="https://github.com/open-horizon/open-horizon.github.io" alt="Check_broken_link.yml">
-<img src="https://github.com/open-horizon/open-horizon.github.io/actions/workflows/Check_broken_link.yml/badge.svg"/></a>
-<a href="https://github.com/open-horizon/open-horizon.github.io" alt="Twitter Follow">
-<img src="https://github.com/open-horizon/open-horizon.github.io/actions/workflows/orphan_pages_checker.yml/badge.svg"/></a>
-<a href="https://linuxfoundation.zulipchat.com/#narrow/channel/527924-lfedge-open-horizon-discussion" alt="chat on Zulip">
-<img src="https://matrix.to/img/matrix-badge.svg"/></a>
-</p>
+Documentation site for [Open Horizon](https://github.com/open-horizon) — autonomous management of containerized workloads and machine learning assets across fleets of edge devices.
 
-# Contributing to Open Horizon pages
+**Stack:** MkDocs + Material theme (same approach as [open-horizon-services.github.io](https://github.com/open-horizon-services/open-horizon-services.github.io)). Reference docs from child repositories are **pulled at build time**, replacing the former CopyDocs GitHub Actions that pushed markdown into this repo.
 
-To visit the Open Horizon documentation site, go to [open-horizon.github.io](https://open-horizon.github.io/)
+**Live site (after Pages is configured):** <https://open-horizon.github.io>
 
-If you would like to contribute to the project, read the following documentation for helpful information and guidelines.
+---
 
-## How to contribute to Open Horizon
+## Local development
 
-All content, artwork, and code is contained in GitHub repositories.  To see what assistance we need, look for open GitHub issues that have not been assigned to someone already.  If you see one that you would like to work on, please add a comment to that issue and try to `@mention` the person who opened the issue to let them know of your interest.  Do not begin working on an issue unless and until it has been assigned to you.  Likewise, do not submit a Pull Request (code fix or submission) unless it is tied to an existing open issue.
+### Prerequisites
 
-More details can be found on the following pages:
+- Python 3.9+
+- Git
 
-* [Contribution Guidelines](https://github.com/open-horizon/.github/blob/master/CONTRIBUTING.md)
-* [The mechanics of working on an issue](https://open-horizon.github.io/common-requests/contribute/)
-* [Chat with the project team and ask any questions](https://linuxfoundation.zulipchat.com/#narrow/channel/527924-lfedge-open-horizon-discussion)
-* [List all unassigned and open issues labelled "Good First Issue"](https://github.com/search?type=issues&q=org%3Aopen-horizon+org%3Aopen-horizon-services+label%3A%22good+first+issue%22+is%3Aopen+no%3Aassignee)
-
-We appreciate and recognize all Contributors.
-
-# Table of Contents
-
-- [Contributing to Open Horizon Pages](#contributing-to-open-horizon-pages)
-- [Table of Contents](#table-of-contents)
-- [Fork the Repository](#fork-the-repository)
-- [Make Necessary Changes](#make-necessary-changes)
-  - [Clone the repository](#clone-the-repository)
-  - [Create a branch](#create-a-branch)
-  - [Make necessary changes](#make-necessary-changes-1)
-  - [Identifying Documentation Source](#identifying-documentation-source)
-- [Test in Local and Push Changes to GitHub](#test-in-local-and-push-changes-to-github)
-  - [Prerequisites and First-Time Setup](#prerequisites-and-first-time-setup)
-  - [Test your changes locally](#test-your-changes-locally)
-  - [Commit changes](#commit-changes)
-  - [Push changes to GitHub](#push-changes-to-github)
-  - [Possible errors](#possible-errors)
-- [Submit a Pull Request for Review](#submit-a-pull-request-for-review)
-- [Clean Up](#clean-up)
-  - [Delete the branch](#delete-the-branch)
-  - [Syncing a fork](#syncing-a-fork)
-
-# Fork the Repository
-
-Fork this repository by clicking on the fork button on the top of this page. This will create a copy of this repository in your account.
-
-# Make Necessary Changes
-
-To make changes, clone the forked repository to your machine.
-
-## Clone the repository
-
-<img align="right" width="300" src="img/clone.jpg" alt="clone this repository"/>
-
-Go to your GitHub account, open the forked repository, click **Code**, and then **copy to clipboard**.
-
-Open a terminal and run the following git command:
+### Setup
 
 ```bash
-git clone "url you just copied"
-```
-
-where "url you just copied" (without the quotation marks) is the url to this repository (your fork of this project).
-
-## Create a branch
-
-Change to the repository directory on your computer:
-
-```bash
+git clone https://github.com/open-horizon/open-horizon.github.io
 cd open-horizon.github.io
+
+python3 -m venv .venv
+source .venv/bin/activate
+
+pip install -r requirements.txt
+
+# Optional: avoid GitHub API rate limits when staging source repos
+export ORG_READ_TOKEN=ghp_...
+
+make serve
 ```
 
-Now create a branch using the `git checkout` command:
+Preview: <http://127.0.0.1:8765>
 
-```bash
-git checkout -b <name-your-new-branch-name-after-your-issue>
-```
+### Make targets
 
-For example:
+| Command        | Description                                      |
+|----------------|--------------------------------------------------|
+| `make stage`   | Fetch source-repo docs and write `mkdocs_build.yml` |
+| `make serve`   | Stage then start the preview server              |
+| `make build`   | Stage then build static HTML into `site/`        |
+| `make dry-run` | Show configured sources without cloning          |
+| `make test`    | Run unit tests                                   |
+| `make clean`   | Remove staged docs and build output              |
 
-```bash
-git checkout -b issue-329
-```
+### Dev Container / Codespaces
 
-## Make necessary changes
+Open this repository in VS Code with the Dev Containers extension or in GitHub Codespaces. Dependencies install automatically. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Now, you can suggest contributions, make necessary changes to existing files, or add new files.
+---
 
-## Identifying Documentation Source
+## Documentation sources
 
-Some markdown pages under [open-horizon.github.io/docs](https://github.com/open-horizon/open-horizon.github.io/tree/master/docs) can have their source markdown in other repositories in the Open Horizon GitHub organization.
+| Path / nav | Source |
+| --- | --- |
+| `/`, `/quick-start/` | This repository (`docs/index.md`, `docs/quick-start.md`) |
+| `/docs/...` guides | This repository (`docs/docs/`) |
+| `/docs/anax/docs/` | [`open-horizon/anax`](https://github.com/open-horizon/anax) `docs/` (+ `agent-install/README.md`) |
+| `/docs/mgmt-hub/docs/` | [`open-horizon/devops`](https://github.com/open-horizon/devops) `docs/` |
+| `/docs/kubearmor-integration/docs/` | [`open-horizon/kubearmor-integration`](https://github.com/open-horizon/kubearmor-integration) `docs/` |
+| `/docs/fdo/docs/` | [`open-horizon/FDO-support`](https://github.com/open-horizon/FDO-support) `docs/` |
+| `/docs/exchange-api/docs/` | [`open-horizon/exchange-api`](https://github.com/open-horizon/exchange-api) `docs/` |
+| `/docs/release/docs/` | [`open-horizon/open-horizon-release`](https://github.com/open-horizon/open-horizon-release) `docs/` |
 
-Use the URL path to identify if the source is [open-horizon.github.io/docs](https://github.com/open-horizon/open-horizon.github.io/tree/master/docs) or another repository. If the source is in different repository then sourced repo name is used `open-horizon.github.io/docs/<SOURCE_REPO_NAME>/docs`.
+Configure sources in `mkdocs.yml` under `extra.doc_sources`.
 
-- [`/docs/anax/docs/`](https://github.com/open-horizon/open-horizon.github.io/tree/master/docs/anax/docs) markdown pages are sourced from https://github.com/open-horizon/anax/tree/master/docs/
-- [`/docs/mgmt-hub/docs/`](https://github.com/open-horizon/open-horizon.github.io/tree/master/docs/mgmt-hub/docs/) markdown pages are sourced from https://github.com/open-horizon/devops/blob/master/docs/
-- [`/docs/kubearmor-integration/docs/`](https://github.com/open-horizon/open-horizon.github.io/tree/master/docs/kubearmor-integration/docs/) markdown pages are sourced from https://github.com/open-horizon/kubearmor-integration/tree/main/docs/
+---
 
-It is important that any changes to docs sourced from another repository be made in the corresponding repository and not in the `open-horizon.github.io` repository.
+## Contributing
 
-CopyDocs GitHub Actions, in each of the respective repos, will trigger on a PR merge and the source markdown files will be copied.
-
-# Test in local and push changes to GitHub
-
-Before you push changes to GitHub, build this GitHub pages site locally to preview and test the changes.
-
-## Prerequisites and First-Time Setup
-
-Before you can build and test the documentation site locally, you need to set up your development environment with the correct Ruby version and dependencies.
-
-### Required Software
-
-- **Ruby 3.2.0** (specified in `.ruby-version`)
-- **Bundler** (Ruby gem package manager)
-- **Git** (for version control)
-
-### Step 1: Install Ruby
-
-This project requires Ruby 3.2.0. We recommend using a Ruby version manager to install and manage Ruby versions.
-
-#### Option A: Using rbenv (Recommended)
-
-1. **Install rbenv** (if not already installed):
-   
-   **macOS (using Homebrew)**:
-   ```bash
-   brew install rbenv ruby-build
-   ```
-   
-   **Linux**:
-   ```bash
-   curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
-   ```
-
-2. **Add rbenv to your shell** (add to `~/.bashrc`, `~/.zshrc`, or equivalent):
-   ```bash
-   eval "$(rbenv init -)"
-   ```
-
-3. **Install Ruby 3.2.0**:
-   ```bash
-   rbenv install 3.2.0
-   rbenv local 3.2.0
-   ```
-
-4. **Verify installation**:
-   ```bash
-   ruby --version
-   # Should output: ruby 3.2.0
-   ```
-
-#### Option B: Using rvm
-
-1. **Install rvm**:
-   ```bash
-   \curl -sSL https://get.rvm.io | bash -s stable
-   ```
-
-2. **Install Ruby 3.2.0**:
-   ```bash
-   rvm install 3.2.0
-   rvm use 3.2.0
-   ```
-
-3. **Verify installation**:
-   ```bash
-   ruby --version
-   # Should output: ruby 3.2.0
-   ```
-
-#### Option C: System Package Manager
-
-**Note**: System package managers may not have Ruby 3.2.0 available. Using rbenv or rvm is recommended for version-specific installations.
-
-### Step 2: Install Dependencies
-
-Once Ruby 3.2.0 is installed, run the initialization command to install all required dependencies:
-
-```bash
-make init
-bundle install
-```
-
-This command will:
-- Update the RubyGems system
-- Install Bundler (if not already installed)
-- Install all Ruby gems specified in `Gemfile`
-- Configure Bundler for local deployment
-
-**Note**: Run `make init` once before starting work each day to ensure all dependencies are up to date.
-
-### Step 3: Verify Setup
-
-After running `make init`, verify your setup is complete:
-
-1. **Check Jekyll installation**:
-   ```bash
-   bundle exec jekyll --version
-   ```
-
-2. **Build the site** (optional test):
-   ```bash
-   make test
-   make build
-   ```
-
-If all commands complete without errors, your environment is ready for local development.
-
-### Troubleshooting
-
-**Issue**: `ruby: command not found`
-- **Solution**: Ensure Ruby is installed and your shell is configured to use rbenv/rvm
-
-**Issue**: `bundle: command not found`
-- **Solution**: Run `gem install bundler` manually, then retry `make init`
-
-**Issue**: Permission errors during `make init`
-- **Solution**: Never use `sudo` with rbenv/rvm. Reinstall Ruby using a version manager if needed
-
-**Issue**: Wrong Ruby version
-- **Solution**: Run `ruby --version` to check. Use `rbenv local 3.2.0` or `rvm use 3.2.0` to switch versions
-
-## Test your changes locally
-
-After completing the prerequisites setup above, you can test your changes locally.
-
-Change to the repository directory on your computer and execute the following commands to run the Jekyll site locally.
-
-1. To install and update all dependencies.
-
-   ```bash
-   make init
-   ```
-
-   **Note**: Run the above command one time before using the tools each day.
-
-2. Start the local web server, do not build the site first
-
-   ```bash
-   make run
-   ```
-
-**Note**: This runs a local web server with live reload enabled. When running the make command on {{site.data.keyword.windows}}, an error might occur that identifies the installed command as unrecognized. This can happen when the binary path is set incorrectly.
-
-   To preview the site in your web browser navigate to [http://localhost:4000](http://localhost:4000).
-
-3. To build and test the local documentation site:
-
-   ```bash
-   make dev
-   ```
-
-4. To Build the local documentation site:
-
-   ```bash
-   make build
-   ```
-
-5. Test the local documentation site locally:
-
-   ```bash
-   make test
-   ```
-
-   **Note**: This is typically done before `make run`
-
-## Commit changes
-
-After you have a successful testing in local with your changes, you are ready to commit those changes.
-
-If you go to the project directory and execute the command `git status`, you'll see your changes.
-
-Add those changes to the branch you just created using the `git add` command:
-
-```bash
-git add <file>
-```
-
-All commits should be signed off (`-s` flag on `git commit`). To use the `-s` option, follow the [guidance](common-requests/contribute.md#how-to-attest) to make sure you configure your git name (user.name) and email address (user.email).
-
-Now commit those changes using the git commit command:
-
-```bash
-git commit -s -m "Add README.md"
-```
-
-## Push changes to GitHub
-
-Push your changes using the command `git push`:
-
-```bash
-git push origin <add-your-branch-name>
-```
-
-replacing `<add-your-branch-name>` with the name of the branch you created earlier.
-
-## Possible Errors
-
-When setting up a project locally, some errors can occur. Some of those are listed below.
-
-- Missing `webrick` and `wdm` in `Gemfile`
-
-Change to:
-
-Some users use the latest version of `ruby`, which is `>2.7` that does not have pre-added `webrick` support. If they are using `ruby` versions `>= 3.0.0`, they might see the error listed below.
-
-```text
-  Add the following to your Gemfile to avoid polling for changes:
-    gem 'wdm', '>= 0.1.0' if Gem.win_platform?
- Auto-regeneration: enabled for 'C:/Users/yourUserName/Desktop/open-horizon/open-horizon.github.io'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve/servlet.rb:3:in `require': cannot load such file -- webrick (LoadError)
-        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve/servlet.rb:3:in `<top (required)>'
-        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve.rb:184:in `require_relative'
-        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve.rb:184:in `setup'
-        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve.rb:102:in `process'
-        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve.rb:93:in `block in start'
-        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve.rb:93:in `each'
-        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve.rb:93:in `start'
-        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve.rb:75:in `block (2 levels) in init_with_program'
-        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/mercenary-0.3.6/lib/mercenary/command.rb:220:in `block in execute'
-        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/mercenary-0.3.6/lib/mercenary/command.rb:220:in `each'
-        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/mercenary-0.3.6/lib/mercenary/command.rb:220:in `execute'
-        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/mercenary-0.3.6/lib/mercenary/program.rb:42:in `go'
-        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/mercenary-0.3.6/lib/mercenary.rb:19:in `program'
-        from C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/exe/jekyll:15:in `<top (required)>'
-        from C:/Ruby30-x64/bin/jekyll:25:in `load'
-        from C:/Ruby30-x64/bin/jekyll:25:in `<main>'
-```
-
-To solve this error, add `webrick` and `wdm` to your local `Gemfile` by using the commands listed below and re-run the serve.
-
-add webrick:
-
-```bash
-bundle add webrick
-```
-
-add wdm:
-
-```bash
-gem install wdm
-```
-
-# Submit a Pull Request for Review
-
-If you go to your repository on GitHub, you'll see a `Compare & pull request button`. Click on that button.
-
-<img style="float: right;" src="img/compare-and-pull.jpg" alt="create a pull request"/>
-
-Now submit the pull request by clicking `Create pull request`.
-
-<img style="float: right;" src="img/submit-pull-request.jpg" alt="submit pull request"/>
-
-You will get a notification email after the changes have been merged.
-
-# Clean Up
-
-## Delete the branch
-
-After your Pull Request has been approved/merged, you are safe to delete the branch created earlier. Change to the repository directory on your computer and execute the following commands to delete the branch:
-
-Delete the local branch:
-
-```bash
-git branch -d <branch-name>
-```
-
-Delete remote branch:
-
-```bash
-git push origin :<branch-name>
-```
-
-## Syncing a fork
-
-Connect your local repository to the original, upstream repository by adding it as a remote. You should pull in changes from upstream often, so that you stay up-to-date. This helps avoid merge conflicts when you submit pull requests.
-
-For more information, see [Sync a fork of a repository to keep it up-to-date with the upstream repository.](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork)
-
-## 📌 Our valuable contributors👩‍💻👨‍💻
-
-<table>
-  <tr>
-    <a href="https://github.com/open-horizon/open-horizon.github.io/graphs/contributors">
-      <img src="https://contrib.rocks/image?repo=open-horizon/open-horizon.github.io" />
-    </a>
-  </tr>
-</table>
+See [CONTRIBUTING.md](CONTRIBUTING.md) and [AGENTS.md](AGENTS.md).

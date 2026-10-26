@@ -1,0 +1,34 @@
+---
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2026
+title: Installing the device agent
+description: Documentation for Installing the agent
+lastupdated: 2026-08-20
+nav_order: 2
+parent: Installing edge device agents
+---
+
+# Installing the agent
+
+When you install the Horizon agent software on your edge device, you can register your edge device with Open Horizon (Open Horizon) to add your device into the edge computing management domain and run edge services. The following instructions register your new edge device with the minimal helloworld example edge service to confirm the edge device is working properly. The helloworld edge service can easily be stopped when you are ready to run your own edge services on the edge device.
+
+## Before you begin
+
+You must complete the steps in [Preparing an edge device](adding_devices.md).
+
+## Installing and registering edge devices
+
+Five different methods are provided to install the agent on and register edge devices. Each is useful in different circumstances:
+
+* [Automated agent installation and registration](automated_install.md) - install and register one edge device with a minimum of steps. **First-time users should use this method.**
+* [Advanced manual agent installation and registration](advanced_man_install.md) - do each step yourself to install and register one edge device. Use this method if you need to do something out of the ordinary and the script that is used in Method 1 does not have the required flexibility. You can also use this method if you want to understand exactly what is required to set up an edge device.
+* [Agent in a Container](../anax/docs/agent_container_manual_deploy.md) - start and register the agent in a container.
+* [Bulk agent installation and registration](many_install.md#batch-install) - install and register many edge devices at one time.
+* [FDO agent installation and registration](fdo.md) - automatic install with FDO devices.
+
+## Questions and troubleshooting
+
+If you have any difficulties with any of these steps, review the provided troubleshooting and frequently asked question topics. For more information, see:
+
+* [Troubleshooting](../troubleshoot/troubleshooting.md)
+* [Frequently asked questions](../getting_started/faq.md)
