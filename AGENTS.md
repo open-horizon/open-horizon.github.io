@@ -84,6 +84,29 @@ MkDocs Material uses optional YAML front matter. Left-nav contents are built fro
 
 During staging, `build_nav.py` merges `repo_url`, `repo_name`, `repo_stars`, and `repo_forks` into every staged reference markdown page so the header source widget (`overrides/partials/source.html`) links to that page’s origin repository. Authors must not add those `repo_*` keys in child repos. First-party pages fall back to `repo_url` / `repo_name` in `mkdocs.yml`.
 
+### Heading anchors
+
+Put an explicit anchor on a heading when other pages link to it. Use the Material `attr_list` syntax at the end of the heading line:
+
+```markdown
+## Install the agent {: #install-agent }
+
+See [Install the agent](installing.md#install-agent).
+```
+
+Do **not** use the Kramdown form from the Jekyll site, which puts the id on the next line:
+
+```markdown
+## Install the agent
+{: #install-agent}
+```
+
+- Python-Markdown only reads the attribute list on the same line as the heading, so the Kramdown form is ignored.
+- During staging, `build_nav.py` converts a Kramdown heading id in a source repository into the Material form. Other Kramdown attributes (`{:target="_blank"}`, `{: .externalLink}`) are dropped. Do not rely on this conversion in new content.
+- Without an explicit id, MkDocs generates one from the heading text: lowercase, punctuation removed, runs of spaces collapsed into one hyphen. Kramdown kept the double hyphen in headings such as `### **API:** POST /attribute`, so a link to `#api-post--attribute` breaks. Link to `#api-post-attribute`, or add an explicit id.
+- An explicit id replaces the generated one. Update links that used the generated id.
+- Use lowercase letters, digits, hyphens, and underscores in ids.
+
 ---
 
 ## Code and project conventions
