@@ -206,14 +206,28 @@ class TestPreprocessMarkdown:
     def test_strips_attribute_lines(self):
         text = "# Title\n{: #title}\n\nBody\n{:codeblock}\n"
         result = build_nav.preprocess_markdown(text, {})
-        assert "{:" not in result
-        assert "Title" in result
+        assert "{:codeblock}" not in result
+        assert "# Title {: #title }" in result
         assert "Body" in result
 
     def test_strips_inline_attributes(self):
         text = "[Kubernetes](https://k8s.io/){:target=\"_blank\"}{: .externalLink}"
         result = build_nav.preprocess_markdown(text, {})
         assert result == "[Kubernetes](https://k8s.io/)"
+
+    def test_converts_heading_id_to_attr_list(self):
+        text = "## Title\n{: #my_id}\n\nBody\n"
+        result = build_nav.preprocess_markdown(text, {})
+        assert "## Title {: #my_id }" in result
+        assert "\n{:" not in result
+
+    def test_keeps_inline_heading_id_and_drops_classes(self):
+        text = "## Title {: #my_id .class}\n"
+        assert build_nav.preprocess_markdown(text, {}) == "## Title {: #my_id }\n"
+
+    def test_heading_id_ignored_inside_code_fence(self):
+        text = "```\n## Not a heading\n{: #x}\n```\n"
+        assert "#x" not in build_nav.preprocess_markdown(text, {}).replace("{: #x}", "")
 
     def test_leaves_unknown_keywords(self):
         text = "{{site.data.keyword.unknown_key}}"
@@ -224,7 +238,7 @@ class TestPreprocessMarkdown:
         md.write_text("# {{site.data.keyword.edge_notm}}\n{: #x}\n")
         changed = build_nav.preprocess_staged_tree(tmp_path, {"edge_notm": "Open Horizon"})
         assert changed == 1
-        assert md.read_text() == "# Open Horizon\n"
+        assert md.read_text() == "# Open Horizon {: #x }\n"
 
 
 class TestDocsDirExists:

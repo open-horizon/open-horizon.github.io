@@ -57,7 +57,10 @@ def staged_nav_prefix(dest_name: str) -> str:
 # Jekyll Liquid / Just-the-Docs artifacts commonly left in source-repo markdown
 _LIQUID_KEYWORD_RE = re.compile(r"\{\{\s*site\.data\.keyword\.([A-Za-z0-9_-]+)\s*\}\}")
 _JEKYLL_ATTR_LINE_RE = re.compile(r"^\{:.*?\}\s*$", re.MULTILINE)
-_JEKYLL_INLINE_ATTR_RE = re.compile(r"\s*\{:[^}]+\}")
+# Leaves the "{: #id }" anchors written by _convert_heading_ids in place
+_JEKYLL_INLINE_ATTR_RE = re.compile(r"\s*\{:(?!\s#[A-Za-z0-9_-]+\s\})[^}]+\}")
+_JEKYLL_ID_RE = re.compile(r"#([A-Za-z0-9_-]+)")
+_HEADING_RE = re.compile(r"^#{1,6}\s")
 
 # ---------------------------------------------------------------------------
 # GitHub API helpers
@@ -76,12 +79,43 @@ def load_keywords(path: str = KEYWORD_FILE) -> dict[str, str]:
         return {}
 
 
+def _convert_heading_ids(text: str) -> str:
+    """
+    Move a Kramdown id onto its heading so in-page #anchor links keep working.
+
+    Kramdown puts "{: #id}" on the line after a heading (or at the end of the
+    heading line); Python-Markdown's attr_list wants it on the heading line.
+    """
+    lines = text.split("\n")
+    out: list[str] = []
+    in_fence = False
+    for line in lines:
+        if line.lstrip().startswith("```"):
+            in_fence = not in_fence
+        attr = re.match(r"^\{:(.*?)\}\s*$", line)
+        if not in_fence and attr and out and _HEADING_RE.match(out[-1]):
+            ident = _JEKYLL_ID_RE.search(attr.group(1))
+            if ident and "{:" not in out[-1]:
+                out[-1] = f"{out[-1].rstrip()} {{: #{ident.group(1)} }}"
+            continue
+        if not in_fence and _HEADING_RE.match(line):
+            inline = re.search(r"\{:([^}]*)\}\s*$", line)
+            ident = _JEKYLL_ID_RE.search(inline.group(1)) if inline else None
+            if inline:
+                line = line[: inline.start()].rstrip()
+                if ident:
+                    line += f" {{: #{ident.group(1)} }}"
+        out.append(line)
+    return "\n".join(out)
+
+
 def preprocess_markdown(text: str, keywords: Optional[dict[str, str]] = None) -> str:
     """
     Convert common Jekyll / Just-the-Docs markdown into MkDocs-friendly text.
 
     - Substitute {{site.data.keyword.*}} using data/keyword.yml
-    - Strip {: attribute} lines and trailing inline attribute lists
+    - Keep heading ids from {: #id} attribute lists as Material {: #id } anchors
+    - Strip all other {: attribute} lines and trailing inline attribute lists
     """
     keywords = keywords if keywords is not None else load_keywords()
 
@@ -90,6 +124,7 @@ def preprocess_markdown(text: str, keywords: Optional[dict[str, str]] = None) ->
         return keywords.get(key, match.group(0))
 
     text = _LIQUID_KEYWORD_RE.sub(_replace, text)
+    text = _convert_heading_ids(text)
     text = _JEKYLL_ATTR_LINE_RE.sub("", text)
     text = _JEKYLL_INLINE_ATTR_RE.sub("", text)
     # Collapse runs of blank lines left by stripped attribute lines
