@@ -637,9 +637,19 @@ def _collect_nav_pages() -> list[dict[str, Any]]:
                 order = int(order_raw)
             except (TypeError, ValueError):
                 order = 999
+            grand_parent = fm.get("grand_parent")
+            grand_parent = (
+                str(grand_parent).strip().strip('"').strip("'") if grand_parent else None
+            )
             nav_path = f"{url_prefix}/{rel.as_posix()}"
             pages.append(
-                {"title": title, "parent": parent, "order": order, "path": nav_path}
+                {
+                    "title": title,
+                    "parent": parent,
+                    "grand_parent": grand_parent,
+                    "order": order,
+                    "path": nav_path,
+                }
             )
     return pages
 
@@ -652,21 +662,29 @@ def build_jekyll_style_nav() -> list:
     lists the same sections and pages as the legacy Jekyll site.
     """
     pages = _collect_nav_pages()
-    by_title: dict[str, dict[str, Any]] = {}
-    for p in pages:
-        # Last write wins on duplicate titles (rare); prefer lower path length
-        existing = by_title.get(p["title"])
-        if existing and len(existing["path"]) <= len(p["path"]):
-            continue
-        by_title[p["title"]] = {**p, "children": []}
+    # Key nodes by path: titles are not unique (for example an "Administering"
+    # Troubleshooting page and a top-level Troubleshooting section).
+    nodes = {p["path"]: {**p, "children": []} for p in pages}
+    by_title: dict[str, list[dict[str, Any]]] = {}
+    for node in nodes.values():
+        by_title.setdefault(node["title"], []).append(node)
+
+    def resolve_parent(node: dict[str, Any]) -> Optional[dict[str, Any]]:
+        """Find the parent page, using grand_parent as Just the Docs does."""
+        candidates = [c for c in by_title.get(node["parent"], []) if c is not node]
+        if len(candidates) > 1:
+            # A page without grand_parent belongs under a top-level section.
+            narrowed = [c for c in candidates if c.get("parent") == node.get("grand_parent")]
+            candidates = narrowed or candidates
+        return candidates[0] if candidates else None
 
     roots: list[dict[str, Any]] = []
-    for p in by_title.values():
-        parent = p.get("parent")
-        if parent and parent in by_title and parent != p["title"]:
-            by_title[parent]["children"].append(p)
+    for node in nodes.values():
+        parent = resolve_parent(node) if node.get("parent") else None
+        if parent:
+            parent["children"].append(node)
         else:
-            roots.append(p)
+            roots.append(node)
 
     def sort_key(node: dict[str, Any]) -> tuple:
         return (node.get("order", 999), node.get("title", "").lower())

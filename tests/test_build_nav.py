@@ -252,3 +252,32 @@ class TestGetRepoMetadata:
         with patch("build_nav.requests.get") as mock_get:
             mock_get.return_value = MagicMock(status_code=404)
             assert build_nav.get_repo_metadata("nope") is None
+
+
+class TestNavDuplicateTitles:
+    def test_duplicate_titles_resolved_by_grand_parent(self, tmp_path, monkeypatch):
+        docs = tmp_path / "docs" / "docs"
+        (docs / "admin").mkdir(parents=True)
+        (docs / "ts").mkdir()
+        (docs / "admin" / "admin.md").write_text("---\ntitle: Administering\nnav_order: 1\n---\n")
+        (docs / "admin" / "functions.md").write_text(
+            "---\ntitle: Administering functions\nparent: Administering\nnav_order: 1\n---\n"
+        )
+        (docs / "admin" / "ts.md").write_text(
+            "---\ntitle: Troubleshooting\nparent: Administering functions\n"
+            "grand_parent: Administering\nnav_order: 1\n---\n"
+        )
+        (docs / "ts" / "section.md").write_text("---\ntitle: Troubleshooting\nnav_order: 2\n---\n")
+        (docs / "ts" / "tips.md").write_text(
+            "---\ntitle: Tips\nparent: Troubleshooting\nnav_order: 1\n---\n"
+        )
+        monkeypatch.setattr(build_nav, "DOCS_CONTENT_ROOT", str(docs))
+        monkeypatch.chdir(tmp_path)
+
+        nav = build_nav.build_jekyll_style_nav()
+
+        flat = yaml.safe_dump(nav)
+        assert "docs/admin/ts.md" in flat
+        assert "docs/ts/section.md" in flat
+        section = next(n for n in nav if "Troubleshooting" in n)
+        assert {"Tips": "docs/ts/tips.md"} in section["Troubleshooting"]
