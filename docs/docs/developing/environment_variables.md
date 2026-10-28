@@ -11,4 +11,4 @@ grand_parent: Developing edge services
 
 # Environment variables that are passed to services
 
-When the Horizon agent runs your service containers on an edge node, it provides useful data in the form of environment variables. For more information, including a detailed list of these variables and the values that you can expect find for the variables, see [Horizon service environment variables ](/docs/anax/docs/managed_workloads/#service-environment-variables).
+When the Horizon agent runs your service containers on an edge node, it provides useful data in the form of environment variables. For more information, including a detailed list of these variables and the values that you can expect find for the variables, see [Horizon service environment variables ](../anax/docs/managed_workloads.md#service-environment-variables).

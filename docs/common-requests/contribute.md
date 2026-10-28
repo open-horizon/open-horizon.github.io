@@ -55,7 +55,7 @@ To ensure all your commits are signed, you may choose to add this alias to your 
 
 Or you may configure your IDE, for example, Visual Studio Code to automatically sign-off commits for you:
 
-![git-signoff-vscode](../../img/git-signoff-vscode.png)
+![git-signoff-vscode](../img/git-signoff-vscode.png)
 
 #### Check
 

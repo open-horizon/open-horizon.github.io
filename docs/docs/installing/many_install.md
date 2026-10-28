@@ -8,7 +8,7 @@ nav_order: 5
 parent: Installing edge device agents
 ---
 
-# Bulk agent installation and registration
+# Bulk agent installation and registration {: #batch-install }
 
 Use the bulk installation process to set up multiple edge devices of similar types (in other words, same architecture, operating system, and pattern or policy).
 

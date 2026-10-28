@@ -30,7 +30,7 @@ This document is intended to help you prepare for GDPR readiness. It provides Op
 * [Capability for Restricting Use of Personal Data](#datasubjectrights)
 * [Appendix](#appendix)
 
-## GDPR
+## GDPR {: #overview }
 
 <!-- This is boilerplate text provided by the GDPR team. It cannot be changed. -->
 General Data Protection Regulation (GDPR) was adopted by the European Union (EU) and applies from 25 May 2018.
@@ -52,11 +52,11 @@ IBM established a global readiness program that is tasked with preparing IBM's i
 * [EU GDPR Information Portal ](https://gdpr.eu/)
 * [ibm.com/GDPR website ](https://www.ibm.com/data-responsibility/gdpr/)
 
-## Product Configuration – considerations for GDPR Readiness
+## Product Configuration – considerations for GDPR Readiness {: #productconfig }
 
 The following sections describe aspects of Open Horizon and provide information on capabilities to help clients with GDPR requirements.
 
-### Data Life Cycle
+### Data Life Cycle {: #datalifecycle }
 
 Open Horizon is an application for developing and managing on-premises, containerized applications. It is an integrated environment for managing container workloads at the edge. It includes the container orchestrator Kubernetes, a private image registry, a management console, an edge node agent, and monitoring frameworks.
 
@@ -106,7 +106,7 @@ Open Horizon supports role-based access control (RBAC). In the role-mapping stag
 
 Pod security policies are used to set up management hub or edge cluster control over what a pod can do or what it can access. For more information about pods, see [Installing the management hub](../hub/hub.md) and [Edge clusters](../installing/edge_clusters.md).
 
-## Data Processing
+## Data Processing {: #dataprocessing }
 
 Users of Open Horizon can control the way that technical data that is related to configuration and management is processed and secured through system configuration.
 
@@ -120,7 +120,7 @@ These same mechanisms that are used to manage and secure Open Horizon technical 
 
 For more information about certificates, see [Install Open Horizon](../hub/installation.md).
 
-## Capability for Restricting Use of Personal Data
+## Capability for Restricting Use of Personal Data {: #datasubjectrights }
 
 Using the facilities summarized in this document, Open Horizon enables a user to restrict usage of any technical data within the application that is considered personal data.
 
@@ -135,7 +135,7 @@ Under GDPR, users have rights to access, modify, and restrict processing. Refer 
 * Right to restrict processing
   * Open Horizon administrators can use Open Horizon features to stop processing an individual's data.
 
-## Appendix - Data logged by Open Horizon
+## Appendix - Data logged by Open Horizon {: #appendix }
 
 As an application, Open Horizon deals with several categories of technical data that might be considered as personal data:
 

@@ -9,7 +9,7 @@ parent: Secrets Management
 grand_parent: Developing edge services
 ---
 
-# Examples
+# Examples {: #examples }
 
 This guide provides practical examples of using secrets in Horizon services, including [the Hello Secret World example](https://github.com/open-horizon/examples/tree/master/edge/services/helloSecretWorld).
 

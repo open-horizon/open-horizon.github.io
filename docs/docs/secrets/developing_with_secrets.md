@@ -13,7 +13,7 @@ grand_parent: Developing edge services
 
 This guide explains how to develop services that use secrets in Open Horizon, including how to configure services to use secrets and how to access them in your containerized applications.
 
-## Service definition
+## Service definition {: #service_definition }
 
 To use secrets in your service, you need to declare them in your service definition. The `secrets` field specifies which secrets your service needs and provides descriptions for them.
 

@@ -14,7 +14,7 @@ has_toc: false
 # Open Horizon Secrets Management with open-horizon
 
 The open-horizon secrets management mechanism allows agents to securely recieve the necessary information required to run needed services. Secrets provide a similar capability to user inputs, however the mechanism is designed for keeping the data private. To achieve this, secret data is stored in an additional component, the secret manager which is only directly accessed by the agbot. Currently the secret manager capability is provided using a Vault instance. 
-Services that require secrets specify the name of the expected secret in the deployment section of the service description. A description of what the secret is for is optional to include here also. For more about this, see [here](./deployment_string.md).
+Services that require secrets specify the name of the expected secret in the deployment section of the service description. A description of what the secret is for is optional to include here also. For more about this, see [here](../anax/docs/deployment_string.md).
 ```
 "secrets": {
   "service_token": { 

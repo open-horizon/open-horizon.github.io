@@ -13,7 +13,7 @@ grand_parent: Using edge services
 
 This section highlights a real-world scenario where policy types are described.
 
-![Defining an edge policy](../../images/edge/04_Defining_an_edge_policy.svg "Defining an edge policy")
+![Defining an edge policy](../images/edge/04_Defining_an_edge_policy.svg "Defining an edge policy")
 
 Consider a customer who has installed ATM cameras to detect theft (the customer has other types of edge nodes as well). The customer uses a combination of walk-up (still) and drive-through (motion) ATMs. In this case, two third-party services are available. Each service can detect suspicious activity at the ATMs, but customer testing has determined that service atm1 more reliably detects suspicious activity at walk-up (still) ATMs and service atm2 more reliably detects suspicious activity at drive-through (motion) ATMs.
 
@@ -96,7 +96,7 @@ Properties are essentially statements of facts that are expressed as name=value 
 
 Built-in properties provide well-defined names for common properties so that constraints can all refer to them in the same way. For example, if a service needs `x` CPUs in order to execute properly or efficiently, it can use the `openhorizon.cpu` property in its constraint. Most of these properties cannot be set, but instead are read from the underlying system and ignores any values set by a user.
 
-### Node built-in properties
+### Node built-in properties {: #node_builtins }
 
 |Name|Type|Description|Policy type|
 |----|----|-----------|-----------|
@@ -106,7 +106,7 @@ Built-in properties provide well-defined names for common properties so that con
 |openhorizon.hardwareId|String|The node hardware serial number if available via linux API; otherwise, it is a crypto-secure random number that does not change for the life of node registration|Node|
 |openhorizon.allowPrivileged|Boolean|Allow containers to use privileged capability such as running privileged or having the host's network that is attached to the container.|Node|
 
-### Service built-in properties
+### Service built-in properties {: #service_builtins }
 
 |Name|Type|Description|Policy type|
 |----|----|-----------|-----------|

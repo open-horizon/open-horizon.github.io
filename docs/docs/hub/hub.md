@@ -18,7 +18,7 @@ Complete the management hub installation and configuration before starting the O
 
 ## Management hub installation flow
 
-![Management hub installation overview](../../images/edge/06_OH_management_hub_install.svg "Management hub installation overview")
+![Management hub installation overview](../images/edge/06_OH_management_hub_install.svg "Management hub installation overview")
 
 ## Related information
 

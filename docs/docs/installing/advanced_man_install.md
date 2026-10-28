@@ -165,7 +165,7 @@ Follow these steps:
 
 10. Continue on to [Registering the agent](#agent_reg).
 
-### Installing the agent on a macOS (Intel&reg; or Apple Silicon M1 / M2) edge device
+### Installing the agent on a macOS (Intel&reg; or Apple Silicon M1 / M2) edge device {: #mac-os-x }
 
 1. Import the `horizon-cli` package certificate into your macOS keychain:
 
@@ -265,7 +265,7 @@ Follow these steps:
 
 9. Continue on to [Registering the agent](#agent_reg).
 
-## Registering the agent
+## Registering the agent {: #agent_reg }
 
 1. Set your specific information as **environment variables**:
 

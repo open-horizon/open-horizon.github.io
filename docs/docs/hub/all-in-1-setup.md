@@ -38,7 +38,7 @@ parent: Installing the management hub only
    If you would like to use different credentials to connect your agent, use the hzn exchange org create and hzn exchange user create commands to add a new org and user, respectively. Export these variables and/or take note of them.
 
    **Notes**:
-   - For more information about the all-in-1 hub, visit the [all-in-one deployment page](/docs/mgmt-hub/docs/).
+   - For more information about the all-in-1 hub, visit the [all-in-one deployment page](../mgmt-hub/docs/index.md).
    - The following section on installing and configuring a cluster currently has separate directions for two solutions - k3s and microk8s.  Please choose one of those two supported solutions or use your own and translate our directions accordingly.
 
-3. Now that the Management Hub is up and running, an edge cluster agent can be installed following the instructions [on the Cluster Agent installations instructions page](/docs/anax/docs/cluster_install/).
+3. Now that the Management Hub is up and running, an edge cluster agent can be installed following the instructions [on the Cluster Agent installations instructions page](../anax/docs/installing_agent_on_edge_cluster.md).

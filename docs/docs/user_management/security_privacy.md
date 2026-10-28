@@ -29,7 +29,7 @@ Open Horizon agents and Agbots are the primary actors within the control plane. 
 
 By default, agents and Agbots communicate with the exchange via TLS 1.3. But TLS itself does not provide enough security. Open Horizon encrypts every control message that flows between agents and Agbots before it is sent over the network. Each agent and Agbot generates a 2048-bit RSA key pair and publishes its public key in the exchange. The private key is stored in each actor's root-protected storage. Other actors in the system use the message receiver's public key to encrypt a symmetric key that is used to encrypt control plane messages. This ensures that only the intended receiver can decrypt the symmetric key; thus, the message itself. Perfect Forward Secrecy use in the control plane provides extra security, such as preventing man-in-the-middle attacks, which TLS does not prevent.
 
-### Agents
+### Agents {: #agents }
 
 Open Horizon agents outnumber all of the other actors in Open Horizon. An agent runs on each of the managed edge nodes. Each agent has authority to manage only that edge node. A compromised agent does not have any authority to affect any other edge nodes, or any other component of the system. Each node has unique credentials that are stored in its own root protected storage. The Horizon exchange ensures that a node can only access its own resources. When a node is registered, by using the `hzn register` command, it is possible to provide an authentication token. However, it is best practice to allow the agent to generate its own token so that no person is aware of the node credentials, which reduces the potential for compromising the edge node.
 
@@ -57,7 +57,7 @@ On a host machine, some tasks can only be performed by an account with root acce
 
 The Open Horizon management hub is a centralized service. Centralized services in typical cloud based environments are generally vulnerable to denial-of-service attacks. The agent requires a connection only when it is first registered to the hub or when it is negotiating the deployment of a workload. At all other times, the agent continues to operate normally even while disconnected from the Open Horizon management hub.  This ensures that the Open Horizon agent remains active on edge node even if the management hub is under attack.
 
-## Model Management System
+## Model Management System {: #malware }
 
 Open Horizon does not perform a malware or virus scan on data that is uploaded to the MMS. Ensure that any uploaded data has been scanned before uploading it to the MMS.
 

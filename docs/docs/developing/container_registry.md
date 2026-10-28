@@ -21,7 +21,7 @@ This page describes two registries you can store edge service images in:
 
 These also serve as examples of how you can use any private image registry with Open Horizon (Open Horizon).
 
-## Using the OpenShift image registry
+## Using the OpenShift image registry {: #ocp_image_registry }
 
 ### Before you begin
 
@@ -188,7 +188,7 @@ On macOS restart docker by clicking on the whale icon on the right hand side of 
 
 Now Horizon has everything that it needs to get this edge service image from the OpenShift image registry and deploy it to edge nodes as specified by the deployment pattern or policy you have created.
 
-## Using the IBM Cloud Container Registry
+## Using the IBM Cloud Container Registry {: #ibm_cloud_container_registry }
 
 ### Before you begin
 

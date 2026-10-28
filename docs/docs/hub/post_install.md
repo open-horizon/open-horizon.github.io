@@ -8,7 +8,7 @@ nav_order: 4
 parent: Installing Open Horizon
 ---
 
-# Post installation configuration
+# Post installation configuration {: #postconfig }
 
 At the end of a successful installation, credentials and secrets will be shown once on the screen.  Administrators, please capture this information and save it for future use.  There is no way to recover this.
 

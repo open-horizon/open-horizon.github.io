@@ -8,7 +8,7 @@ nav_order: 3
 parent: Installing edge device agents
 ---
 
-# Automated agent installation and registration
+# Automated agent installation and registration {: #method_one }
 
 Note: These steps are the same for all edge device types (architectures).
 

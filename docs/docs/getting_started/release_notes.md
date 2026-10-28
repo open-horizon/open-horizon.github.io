@@ -18,4 +18,4 @@ The following sections document new features, restrictions, and changes that are
 - [Known issues and limitations for Open Horizon](./known_issues.md)
 - [Accessibility features](./accessibility.md)
 - [Conventions used in this document](./document_conventions.md)
-- [Building Open Horizon Releases](/docs/release/docs/index)
+- [Building Open Horizon Releases](../release/docs/index.md)

@@ -36,7 +36,7 @@ For example, run the `curl` utility to check the status of your edge node:
 curl localhost:8510/status
 ```
 
-## Troubleshooting tips
+## Troubleshooting tips {: #ts_tips }
 
 To help troubleshoot specific issues, review the questions about your system state and any associated tips about the following topics. For each question, a description is provided of why the question is relevant to troubleshooting your system. For some questions, tips or a detailed guide is provided to learn how to obtain the related information for your system.
 

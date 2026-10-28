@@ -29,7 +29,7 @@ Review the following questions when you encounter an issue with Open Horizon. Th
 - [Troubleshooting node errors](#troubleshooting_node_errors)
 - [Are you encountering HTTP error, while executing deploy-mgmt-hub.sh?](#deploy_mgmt_http_error)
 
-## Are the currently released versions of the Horizon packages installed?
+## Are the currently released versions of the Horizon packages installed? {: #install_horizon }
 
 Ensure that the Horizon software that is installed on your edge nodes is always on the latest released version.
 
@@ -46,7 +46,7 @@ sudo apt update
 sudo apt install -y blue horizon
 ```
 
-## Is the Horizon agent up and actively running?
+## Is the Horizon agent up and actively running? {: #setup_horizon }
 
 You can verify that the agent is running by using this Horizon CLI command:
 
@@ -66,7 +66,7 @@ A line similar to the following is shown if the agent is active:
 Active: active (running) since Thu 2020-10-01 17:56:12 UTC; 2 weeks 0 days ago
 ```
 
-## Is the edge node configured to interact with the Horizon exchange?
+## Is the edge node configured to interact with the Horizon exchange? {: #node_configured }
 
 To verify that you can communicate with the Horizon exchange, run this command:
 
@@ -86,7 +86,7 @@ After your edge node is registered with Horizon, you can verify whether the node
 hzn node list | jq .configuration.exchange_api
 ```
 
-## Are the required Docker&reg; containers for the edge node running?
+## Are the required Docker&reg; containers for the edge node running? {: #node_running }
 
 When your edge node is registered with Horizon, a Horizon Agbot creates an agreement with your edge node to run the services that are referenced in your gateway type (deployment pattern). If that agreement is not created, complete these checks to troubleshoot the issue.
 
@@ -132,7 +132,7 @@ Replace `<service-id>` with the ID for your service. This ID can resemble the fo
   grep --text -E ' <service-id>\[[0-9]+\]' /var/log/syslog
   ```
 
-## Are the expected service container versions running?
+## Are the expected service container versions running? {: #run_user_containers }
 
 Your container versions are governed by an agreement that is created after you add your service to the deployment pattern, and after you register your edge node for that pattern. Verify that your edge node has a current agreement for your pattern, by running this command:
 
@@ -148,7 +148,7 @@ docker ps
 
 The Horizon agent can take several minutes after the agreement is accepted before the corresponding containers are downloaded, verified, and start to run. This agreement is mostly dependent upon the sizes of the containers themselves, which must be pulled from remote repositories.
 
-## Are the expected containers stable?
+## Are the expected containers stable? {: #containers_stable }
 
 Check whether your containers are stable by running this command:
 
@@ -182,7 +182,7 @@ If individual service logging is not configured, your service logs are added to 
 grep --text -E 'YOURSERVICENAME\[[0-9]+\]' /var/log/syslog
 ```
 
-## Are your containers Docker&reg; networked correctly?
+## Are your containers Docker&reg; networked correctly? {: #container_networked }
 
 Ensure that your containers are properly Docker networked, so they can access required services. Run this command to ensure that you can view the Docker&reg; virtual networks active on your edge node:
 
@@ -198,7 +198,7 @@ Alias names are available to all of the containers on this virtual network, and 
 
 For more information about the commands supported by the Docker command line interface, see [Docker&reg; command reference ](https://docs.docker.com/engine/reference/commandline/docker/#child-commands).
 
-## Are the dependency containers reachable within the context of your container?
+## Are the dependency containers reachable within the context of your container? {: #setup_correct }
 
 Enter the context of a running container to troubleshoot issues at run time by using the `docker exec` command. Use the `docker ps` command to find the identifier of your running container, then use a command that resembles the following to enter the context. Replace `CONTAINERID` with your container's identifier:
 
@@ -212,7 +212,7 @@ When inside the container context, you can use commands like `ping` or `curl` to
 
 For more information about the commands supported by the Docker command line interface, see [Docker&reg; command reference ](https://docs.docker.com/engine/reference/commandline/docker/#child-commands).
 
-## Are your user-defined containers emitting error messages to the log?
+## Are your user-defined containers emitting error messages to the log? {: #log_user_container_errors }
 
 If you configured individual service logging, each of your containers log in to a separate file within the `/var/log/workload/` directory. Use the `docker ps` command to find the full names of your containers. Then, look for a file of that name, and that includes the `.log` suffix, within this directory.
 
@@ -222,7 +222,7 @@ If individual service logging is not configured, your service logs to the system
 grep --text -E 'YOURSERVICENAME\[[0-9]+\]' /var/log/syslog
 ```
 
-## Can you use your organization's instance of Apache Kafka Kafka broker?
+## Can you use your organization's instance of Apache Kafka Kafka broker? {: #kafka_subscription }
 
 Subscribing to the Kafka instance for your organization from Apache Kafka can help you verify that your Kafka user credentials are correct. This subscription can also help you verify that your Kafka service instance is running in the cloud, and that your edge node is sending data when data is being published.
 
@@ -256,7 +256,7 @@ For example, to review the log for the `cpu2evtstreams` service, run this comman
   docker logs -f $(docker ps --filter 'name=-cpu2evtstreams' | tail -n +2 | awk '{print $1}')
   ```
 
-## Are your containers published to Horizon exchange?
+## Are your containers published to Horizon exchange? {: #publish_containers }
 
 Horizon exchange is the central warehouse for metadata about the code that is published for your edge nodes. If you have not signed and published your code to the Horizon exchange, the code cannot be pulled to your edge nodes, which are verified, and run.
 
@@ -269,7 +269,7 @@ hzn exchange service list $ORG_ID/$SERVICE | jq .
 
 The parameter `$ORG_ID` is your organization ID, and `$SERVICE` is the name of the service you are obtaining information about.
 
-## Does your published deployment pattern include all required services and versions?
+## Does your published deployment pattern include all required services and versions? {: #services_included }
 
 On any edge node where the `hzn` command is installed, you can use this command to get details about any deployment pattern. Run the `hzn` command with the following arguments to pull the listing of deployment patterns from the Horizon exchange:
 
@@ -280,7 +280,7 @@ hzn exchange pattern list $ORG_ID/$PATTERN | jq .
 
 The parameter `$ORG_ID` is your organization ID, and `$PATTERN` is the name of the deployment pattern you are obtaining information about.
 
-## Troubleshooting tips specific to the OpenShift Container Platform environment
+## Troubleshooting tips specific to the OpenShift Container Platform environment {: #troubleshooting_icp }
 
 Review this content to help you troubleshoot common issues with OpenShift Container Platform environments related to Open Horizon. These tips can help you resolve common issues and obtain information to identify root causes.
 
@@ -302,7 +302,7 @@ If the error message indicates an incorrect API key, you can create a new API ke
 
 See [Gather the necessary information and files](../hub/prepare_for_edge_nodes.md).
 
-## Troubleshooting node errors
+## Troubleshooting node errors {: #troubleshooting_node_errors }
 
 Open Horizon publishes a subset of event logs to the exchange that is viewable in the management console. These errors link to troubleshooting guidance.
 
@@ -311,7 +311,7 @@ Open Horizon publishes a subset of event logs to the exchange that is viewable i
 - [Container start error](#esc)
 - [OCP edge cluster TLS internal error](#tls_internal)
 
-### Image load error
+### Image load error {: #eil }
 
 This error occurs when the service image that is referenced in the service definition does not exist in the image repository. To resolve this error:
 
@@ -327,14 +327,14 @@ This error occurs when the service image that is referenced in the service defin
    docker push <image name>
    ```
 
-### Deployment configuration error
+### Deployment configuration error {: #eidc }
 
 This error occurs when the service definitions deployment configurations specify a bind to a root-protected file. To resolve this error:
 
 1. Bind the container to a file that is not root protected.
 2. Change the file permissions to allow users to read and write to the file.
 
-### Container start error
+### Container start error {: #esc }
 
 This error occurs when docker encounters an error when it starts the service container. The error message might contain details that indicate why the container start failed. Error resolution steps depend on the error. The following errors can occur:
 
@@ -346,7 +346,7 @@ This error occurs when docker encounters an error when it starts the service con
 2. A published port that is specified by the deployment configurations is not a valid port number. Port numbers must be a number in the range 1 -  65535.
 3. A volume name in the deployment configurations is not a valid file path. Volume paths must be specified by their absolute (not relative) paths.
 
-## Are you encountering HTTP error, while executing deploy-mgmt-hub.sh?
+## Are you encountering HTTP error, while executing deploy-mgmt-hub.sh? {: #deploy_mgmt_http_error }
 
 If you are encountering following error while executing `deploy-mgmt-hub.sh`
 

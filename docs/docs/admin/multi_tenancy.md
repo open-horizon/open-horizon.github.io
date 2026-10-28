@@ -24,7 +24,7 @@ Two broad use cases are used to leverage multi-tenancy in Open Horizon:
 
 The use case that you choose determines how you configure Open Horizon and Identity and Access Manager ([IAM ](https://www.ibm.com/support/knowledgecenter/SSHKN6/iam/landing_iam.html)).
 
-### Types of Open Horizon users
+### Types of Open Horizon users {: #user-types }
 
 Open Horizon supports these user roles:
 

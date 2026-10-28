@@ -8,7 +8,7 @@ nav_order: 5
 parent: Installing Open Horizon
 ---
 
-# Gathering edge node files
+# Gathering edge node files {: #prereq_horizon }
 
 Several files are needed to install the Open Horizon (Open Horizon) agent on your edge devices and edge clusters and register them with Open Horizon. This content guides you through bundling the files that are needed for your edge nodes. The following script can be used to push the Horizon packages into the CSS (Cloud Sync Service) component of the Model Management System. Copy the contents of the script and save them in a file. Fill in the correct values for variables that are marked with `<FILL_IN>` before executing. 
 

@@ -27,7 +27,7 @@ These edge nodes can be installed in remote on-premises locations to make your a
 
 The following diagram depicts the high-level topology for a typical edge computing setup:
 
-![Open Horizon overview](../../images/edge/01_OH_overview.svg "Open Horizon overview")
+![Open Horizon overview](../images/edge/01_OH_overview.svg "Open Horizon overview")
 
 The Open Horizon management hub is designed specifically for edge node management to minimize deployment risks and to manage the service software lifecycle on edge nodes fully autonomously. A Cloud installer installs and manages the Open Horizon management hub components. Software developers develop and publish edge services to the management hub. Administrators define the deployment policies that control where edge services are deployed. Open Horizon handles everything else.
 
@@ -37,7 +37,7 @@ Open Horizon (Open Horizon) includes several components that are required for fu
 
 ## What's next
 
-For more information about using Open Horizon and developing edge services, review the topics that are listed in Open Horizon (Open Horizon) [Welcome page](../index.html) and in the following sections:
+For more information about using Open Horizon and developing edge services, review the topics that are listed in Open Horizon (Open Horizon) [Welcome page](../index.md) and in the following sections:
 
 * [Accessibility](../getting_started/accessibility.md)
 * [Components](../getting_started/components.md)

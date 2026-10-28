@@ -27,7 +27,7 @@ All edge devices (edge nodes) require the Horizon agent software to be installed
 
 Focusing in on the edge device, the following diagram shows the flow of the steps you perform to set up the edge device, and what the agent does after it is started.
 
-![Horizon exchange, Agbot and agents](../../images/edge/05a_Installing_edge_agent_on_device.svg "Horizon exchange, Agbot and agents")
+![Horizon exchange, Agbot and agents](../images/edge/05a_Installing_edge_agent_on_device.svg "Horizon exchange, Agbot and agents")
 
 For more information about installing the required software for Open Horizon for nodes, see:
 

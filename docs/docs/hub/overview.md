@@ -22,13 +22,13 @@ Open Horizon provides you with edge computing features to help you manage and de
 
 Open Horizon also includes support for an edge computing manager profile. This supported profile can help you reduce the resource usage of OpenShift Container Platform when OpenShift Container Platform is installed for use in hosting a remote edge cluster. This profile places the minimum services that are needed to support robust remote management of these server environments and the enterprise-critical applications you are hosting there. With this profile, you are still able to authenticate users, collect log and event data, and deploy workloads in a single or set of clustered worker nodes.
 
-## Benefits of edge computing
+## Benefits of edge computing {: #edge_benefits }
 
 * Value-added change for your organization: Moving application workloads to edge nodes for supporting operations at remote locations where the data is collected instead of sending the data to the central data center for processing.
 
 * Reduce IT staff dependencies: Using Open Horizon can potentially help you to reduce your IT staff dependencies. Use Open Horizon to deploy and manage critical workloads on edge clusters securely and reliably to hundreds of remote locations from a central location. This capability eliminates the need for full-time IT staff at each remote location to manage the workloads onsite.
 
-## Examples
+## Examples {: #examples }
 
 Edge computing is about placing enterprise applications closer to where data is created. For example, if you operate a factory, your factory floor equipment can include sensors for recording any number of data points that provide details about how your plant is operating. The sensors can record the number of parts that are being assembled per hour, the time that is required for a stacker to return to its starting position, or the operating temperature of a fabricating machine. The information from these data points can be beneficial in helping you determine whether you are operating at peak efficiency, identify the quality levels that you are achieving, or predict when a machine is likely to fail and require preventive maintenance.
 
@@ -44,7 +44,7 @@ Alternatively, if any collected data is also sensitive, such as personal informa
 
 Additionally, if any of your network connections are unreliable, you also run the risk of interrupting critical operations.
 
-## Concepts
+## Concepts {: #concepts }
 
 **edge device**: A piece of equipment, such as an assembly machine on a factory floor, an ATM, an intelligent camera, or an automobile, that has integrated compute capacity on which meaningful work can be performed and data that is collected or produced.
 

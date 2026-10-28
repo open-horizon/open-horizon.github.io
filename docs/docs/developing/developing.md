@@ -16,9 +16,9 @@ To begin developing edge services for Open Horizon (Open Horizon), you need to f
 
 This diagram shows the typical interactions between the components within Horizon.
 
-![Edge devices](../../images/edge/03a_Developing_edge_service_for_device.svg "Edge devices")
+![Edge devices](../images/edge/03a_Developing_edge_service_for_device.svg "Edge devices")
 
-## Examples
+## Examples {: #edge_devices_ex_examples }
 
 Use your credentials and signing keys to complete the development examples. These examples show you how to build simple services and help you learn about Open Horizon development basics.
 

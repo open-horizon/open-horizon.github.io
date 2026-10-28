@@ -29,28 +29,28 @@ The following are answers to some frequently asked questions (FAQs) about Open H
 - [How do I manage AI at the Edge with models vs AI on the Cloud?](#ai_cloud)
 - [How can I include text in an Open Horizon resource that contains a `$` character?](#env_variable)
 
-## Is there a way to create a self-contained environment for development purposes?
+## Is there a way to create a self-contained environment for development purposes? {: #one_click }
 
 You can install the open source management hub with the All-in-One installer for developers. The All-in-One installer creates a complete but minimal management hub, not suitable for production use. It also configures an example edge node. This tool enables open source component developers to get started quickly without the time it takes to configure a complete production Open Horizon management hub. For information about the All-in-One installer, see [Open Horizon - Devops ](https://github.com/open-horizon/devops/tree/master/mgmt-hub) GitHub repository.
 
 The All-in-One installer publishes a default set of sample services during deployment. You can customize which sample services are published by setting the `BYO_SAMPLES` environment variable to point to a text file that contains GitHub URLs of your own service repositories. This enables you to test and develop with your own custom services in addition to the default samples. For detailed instructions, see the [Using Custom Sample Services](../hub/custom_samples.md).
 
-## Is Open Horizon software open-sourced?
+## Is Open Horizon software open-sourced? {: #open_sourced }
 
 Yes [Open Horizon ](https://www.lfedge.org/projects/openhorizon/) is an open source project. 
 For more information about the Open Horizon project see the [GitHub repository ](https://github.com/openhorizon/).
 
 There are also commercial downstream products such as IBM&reg; Edge Application Manager which is an IBM product whose core components heavily use the [Open Horizon ](https://www.lfedge.org/projects/openhorizon/) open source project. 
 
-## How can I develop and deploy edge services with Open Horizon?
+## How can I develop and deploy edge services with Open Horizon? {: #dev_dep }
 
 See [Using edge services](../using_edge_services/using_edge_services.md).
 
-## What edge node hardware platforms does Open Horizon support?
+## What edge node hardware platforms does Open Horizon support? {: #hw_plat }
 
 Open Horizon supports different hardware architectures through the Debian Linux and RPM binary packages for Horizon or through Docker&reg; or Podman containers. For more information, see [Installing Horizon software](../installing/installing_edge_nodes.md).
 
-## Can I run any Linux distribution on my edge nodes with Open Horizon?
+## Can I run any Linux distribution on my edge nodes with Open Horizon? {: #lin_dist }
 
 Yes, and no.
 
@@ -60,26 +60,26 @@ However, your edge node host operating system must be able to run a recent versi
 
 Additionally, RPM package installation was tested on edge nodes configured with Red Hat Enterprise Linux&reg; (RHEL).
 
-## Which programming languages and environments are supported by Open Horizon?
+## Which programming languages and environments are supported by Open Horizon? {: #pro_env }
 
 Open Horizon supports almost any programming language and software library that you are able to configure to run in an appropriate Docker&reg; container on your edge nodes.
 
 If your software requires access to specific hardware or operating system services, you might need to provide `docker run`-equivalent arguments to support that access. You can specify supported arguments within the `deployment` section of your Docker&reg; container definition file.
 
-## Is there detailed documentation for the REST APIs provided by the components in Open Horizon?
+## Is there detailed documentation for the REST APIs provided by the components in Open Horizon? {: #rest_doc }
 
 Yes. For more information, see [Open Horizon APIs](../api/index.md).
 
-## Does Open Horizon use Kubernetes?
+## Does Open Horizon use Kubernetes? {: #use_kube }
 
 Yes. The Open Horizon management hub can run in a Kubernetes environment and Open Horizon supports an edge cluster agent that
 runs in Kubernetes. See [Installing edge clusters](../installing/edge_clusters.md).
 
-## Does Open Horizon use MQTT?
+## Does Open Horizon use MQTT? {: #use_mqtt }
 
 Open Horizon does not use Message Queuing Telemetry Transport (MQTT) to support its own internal functions, however the programs you deploy on your edge nodes are free to use MQTT for their own purposes. Example programs are available that use MQTT and other technologies (for example, Apache Kafka, based on the Apache Kafka) to transport data to and from edge nodes.
 
-## How long does it normally take after registering an edge node before agreements are formed, and the corresponding containers start running?
+## How long does it normally take after registering an edge node before agreements are formed, and the corresponding containers start running? {: #agree_run }
 
 Typically, it takes under a minute after registration for the agent and a remote Agbot to finalize an agreement to deploy software. After that occurs, the Horizon agent downloads (`docker pull`) your containers to the edge node, verify their cryptographic signatures with Horizon exchange, and run them. Depending on the sizes of your containers, and the time it takes them to start and be functional, it can take from just a few more seconds, to many minutes before the edge node is fully operational.
 
@@ -90,7 +90,7 @@ To observe the agreement negotiation process phases, you can use the `hzn agreem
 For an edge device agent, after an agreement list is finalized, you can use the `docker ps` or (`podman ps`) command to view the running containers. You can also issue `docker inspect <container>` 
 (or `podman inspect <container>`) to see more detailed information about the deployment of any specific `<container>`.
 
-## Can the Open Horizon software and all other software or data that is related to Open Horizon be removed from an edge node host?
+## Can the Open Horizon software and all other software or data that is related to Open Horizon be removed from an edge node host? {: #sw_rem }
 
 Yes. If your edge node is registered, unregister the edge node by running:
 
@@ -108,7 +108,7 @@ and for Red Hat Enterprise Linux&reg; (RHEL)
 sudo dnf remove  -y horizon horizon-cli
 ```
 
-## Is there a dashboard for visualizing the agreements and services that are active on an edge node?
+## Is there a dashboard for visualizing the agreements and services that are active on an edge node? {: #db_node }
 
 No. There is not a web UI to observe your edge nodes and services provided with Open Horizon.
 
@@ -119,11 +119,11 @@ hzn node list
 hzn agreement list
 ```
 
-## What happens if a container image download is interrupted by a network outage?
+## What happens if a container image download is interrupted by a network outage? {: #image_download }
 
 The docker API is used to download container images. If the docker API terminates the download, it returns an error to the agent. In turn, the agent cancels the current deployment attempt. When the Agbot detects the cancellation, it initiates a new deployment attempt with the agent. During the subsequent deployment attempt, the docker API resumes the download from where it left off. This process continues until the image is fully downloaded and the deployment can proceed. The docker binding API is responsible for the image pull, and in case of failure, the agreement is canceled.
 
-## How is Open Horizon secure?
+## How is Open Horizon secure? {: #ieam_secure }
 
 - Open Horizon automates and uses cryptographically signed public-private key authentication of edge devices as it communicates with the Open Horizon management hub during provisioning. Communication is always initiated and controlled by the edge node.
 - System has node and service credentials.
@@ -131,13 +131,13 @@ The docker API is used to download container images. If the docker API terminate
 
 See [Security at the Edge ](https://www.ibm.com/cloud/blog/security-at-the-edge).
 
-## How do I manage AI at the Edge with models vs AI on the Cloud?
+## How do I manage AI at the Edge with models vs AI on the Cloud? {: #ai_cloud }
 
 Typically, AI at the edge enables you to perform on-the-spot machine inferencing with subsecond latency, which enables real-time response based on use case and hardware (for example, RaspberryPi, Intel&reg; x86, ppc64le, and Nvidia Jetson nano). Open Horizon model management system enables you to deploy updated AI models without any service downtime.
 
 See [Models Deployed at the Edge ](https://www.ibm.com/cloud/blog/models-deployed-at-the-edge).
 
-## How can I include text in an Open Horizon resource that contains a `$` character?
+## How can I include text in an Open Horizon resource that contains a `$` character? {: #env_variable }
 
 When using `hzn` commands to publish resources like service definitions or deployment policies, the `hzn` CLI expects the `$` character to indicate an environment variable. 
 To include text that actually includes the `$` character, you can use

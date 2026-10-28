@@ -45,7 +45,7 @@ To install and configure your edge device, click the link that represents your e
 - [Linux on ARM (64-bit)](#arm-64-bit); for example, NVIDIA Jetson Nano, TX1, or TX2
 - [macOS](#mac-os-x)
 
-## Linux x86_64 devices or virtual machines
+## Linux x86_64 devices or virtual machines {: #x86-machines }
 
 ### Hardware requirements
 
@@ -61,7 +61,7 @@ Install the most recent version of Docker or Podman on your device. For more inf
 
 Now that your edge device is prepared, continue on to [Installing the agent](registration.md).
 
-## Red Hat Enterprise Linux&reg; 8.x / 9.x / 10.x devices or virtual machines
+## Red Hat Enterprise Linux&reg; 8.x / 9.x / 10.x devices or virtual machines {: #rhel8 }
 
 ### Hardware requirements
 
@@ -120,7 +120,7 @@ If you are running Red Hat Enterprise Linux&reg; 8.5 (or earlier), remove Podman
 
 Now that your edge device is prepared, continue on to [Installing the agent](registration.md).
 
-## Linux ppc64le devices or virtual machines
+## Linux ppc64le devices or virtual machines {: #ppc64le-machines }
 
 ### Hardware requirements
 
@@ -136,7 +136,7 @@ Install the most recent version of Podman on your device.
 
 Now that your edge device is prepared, continue on to [Installing the agent](registration.md).
 
-## Linux on ARM (32-bit)
+## Linux on ARM (32-bit) {: #arm-32-bit }
 
 ### Hardware requirements
 
@@ -199,7 +199,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 
 Now that your edge device is prepared, continue on to [Installing the agent](registration.md).
 
-## Linux on ARM (64-bit)
+## Linux on ARM (64-bit) {: #arm-64-bit }
 
 ### Hardware requirements
 
@@ -235,7 +235,7 @@ Now that your edge device is prepared, continue on to [Installing the agent](reg
 
 Now that your edge device is prepared, continue on to [Installing the agent](registration.md).
 
-## macOS
+## macOS {: #mac-os-x }
 
 ### Hardware requirements
 

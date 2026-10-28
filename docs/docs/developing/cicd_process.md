@@ -31,7 +31,7 @@ Frequent and automated testing is an important part of the development process. 
 
 Run **make test** to build and run the service that uses **hzn dev service start**. After that is running, [serviceTest.sh ](https://github.com/open-horizon/examples/blob/master/tools/serviceTest.sh) monitors the service logs to locate data that indicates the service is running correctly.
 
-## Testing deployment
+## Testing deployment {: #testing_deployment }
 
 When you are developing a new service version, access to a full, real-world test is ideal. To do this, you can deploy your service to edge nodes; however, because this is a test, you might not want to initially deploy your service to all of your edge nodes.
 
@@ -39,7 +39,7 @@ To do this, create a deployment policy or pattern that refers only to your new s
 
 Note: You can create a deployment policy or pattern using the Open Horizon CLI.
 
-## Production deployment
+## Production deployment {: #production_deployment }
 
 After you move the new version of your service from a testing to a production environment, issues that were not encountered during testing can occur. Your deployment policy or pattern rollback settings are useful in addressing these issues. In a pattern or deployment policy `serviceVersions` section, you can specify multiple, older versions of your service. Give each version a priority for your edge node to roll back to if there is an error with your new version. In addition to assigning a priority to each rollback version, you can specify things like number and duration of retry attempts before falling back to a lower priority version of the specified service. For the specific syntax, see [this deployment policy example ](https://github.com/open-horizon/anax/blob/master/cli/samples/business_policy.json).
 

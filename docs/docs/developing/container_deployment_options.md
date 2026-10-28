@@ -11,7 +11,7 @@ grand_parent: Developing edge services
 
 # Container deployment options
 
-When your developers publish services to Horizon exchange, they need to specify how the agent communicates with Docker&reg; to deploy the services at run time on the edge node. Your developers must specify the data within the Horizon service definition `deployment` field. For more information, see [Horizon deployment strings ](/docs/anax/docs/deployment_string/).
+When your developers publish services to Horizon exchange, they need to specify how the agent communicates with Docker&reg; to deploy the services at run time on the edge node. Your developers must specify the data within the Horizon service definition `deployment` field. For more information, see [Horizon deployment strings ](../anax/docs/deployment_string.md).
 
 ## Related information
 
