@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2025 - 2026
 title: Getting to know the management hub
 description: Documentation for Horizon Management Hub
-lastupdated: 2026-10-23
+lastupdated: 2026-10-28
 nav_order: 2
 parent: Installing the management hub only
 ---
@@ -166,7 +166,7 @@ When complete, you can run `hzn exchange node list` to see your new nodes.
 
 [The LF Edge FDO project](https://www.lfedge.org/projects/securedeviceonboard/) (FIDO Device Onboard) codebase is embedded in Open Horizon and their technology can configure an edge device and register it with a Horizon instance automatically. Although this is not necessary in this all-in-one environment (because the agent has already been registered), you can easily try out FDO to see it working.
 
-**Note:** For information about FDO support, see [System requirements](../../fdo/docs/README-FDO.md).
+**Note:** For information about FDO support, see [FDO Protocol Reference Implementation Quick Start](../../fdo/docs/README-FDO.md).
 
 Export these environment variables:
 
