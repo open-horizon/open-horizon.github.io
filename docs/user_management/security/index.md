@@ -1,6 +1,6 @@
 # Security
 
-Open Horizon (Open Horizon), based on [Open Horizon](https://github.com/open-horizon) , uses several security technologies to ensure that it is secure against attacks and safeguards privacy. For more information about Open Horizon security and roles, see:
+Open Horizon, based on [Open Horizon](https://github.com/open-horizon) , uses several security technologies to ensure that it is secure against attacks and safeguards privacy. For more information about Open Horizon security and roles, see:
 
 - [Security and privacy](https://open-horizon.github.io/docs/user_management/security_privacy/index.md)
 - [Role-based access control](https://open-horizon.github.io/docs/user_management/rbac/index.md)

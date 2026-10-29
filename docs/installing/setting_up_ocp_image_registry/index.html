@@ -6812,7 +6812,7 @@
 <ol>
 <li>Verify that a default route for the OpenShift image registry is created and that it is accessible from outside of the cluster:</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>oc<span class="w"> </span>get<span class="w"> </span>route<span class="w"> </span>default-route<span class="w"> </span>-n<span class="w"> </span>openshift-image-registry<span class="w"> </span>--template<span class="o">=</span><span class="s1">'{% raw %}{{ .spec.host }}{% endraw %}'</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>oc<span class="w"> </span>get<span class="w"> </span>route<span class="w"> </span>default-route<span class="w"> </span>-n<span class="w"> </span>openshift-image-registry<span class="w"> </span>--template<span class="o">=</span><span class="s1">'{{ .spec.host }}'</span>
 </code></pre></div>
 <p>If the command response indicates the <code>default-route</code> is not found, you need to expose it (see <a href="https://docs.openshift.com/container-platform/4.6/registry/securing-exposing-registry.html">Exposing the registry </a> for details):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>oc<span class="w"> </span>patch<span class="w"> </span>configs.imageregistry.operator.openshift.io/cluster<span class="w"> </span>--patch<span class="w"> </span><span class="s1">'{"spec":{"defaultRoute":true}}'</span><span class="w"> </span>--type<span class="o">=</span>merge
@@ -6820,7 +6820,7 @@
 <ol>
 <li>Retrieve the repository route name that you need to use:</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">OCP_IMAGE_REGISTRY</span><span class="o">=</span><span class="sb">`</span>oc<span class="w"> </span>get<span class="w"> </span>route<span class="w"> </span>default-route<span class="w"> </span>-n<span class="w"> </span>openshift-image-registry<span class="w"> </span>--template<span class="o">=</span><span class="s1">'{% raw %}{{ .spec.host }}{% endraw %}'</span><span class="sb">`</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">OCP_IMAGE_REGISTRY</span><span class="o">=</span><span class="sb">`</span>oc<span class="w"> </span>get<span class="w"> </span>route<span class="w"> </span>default-route<span class="w"> </span>-n<span class="w"> </span>openshift-image-registry<span class="w"> </span>--template<span class="o">=</span><span class="s1">'{{ .spec.host }}'</span><span class="sb">`</span>
 </code></pre></div>
 <ol>
 <li>Create a new project to store your images:</li>

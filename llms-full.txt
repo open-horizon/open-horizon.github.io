@@ -53,13 +53,13 @@ Accessibility features assist users who have a disability, such as restricted mo
 
 ## Overview
 
-Open Horizon (Open Horizon) includes the following major accessibility features:
+Open Horizon includes the following major accessibility features:
 
 - [Commandline interface (CLI)](https://open-horizon.github.io/docs/cli/index.md) to manage the Open Horizon cluster
 
 # Components
 
-Open Horizon (Open Horizon) includes several components that are bundled with the product.
+Open Horizon includes several components that are bundled with the product.
 
 View the following table for a description of the Open Horizon components:
 
@@ -188,7 +188,7 @@ If you examine the `service.sh` code, you see that it uses these, and other conf
 
 # Frequently asked questions
 
-The following are answers to some frequently asked questions (FAQs) about Open Horizon (Open Horizon).
+The following are answers to some frequently asked questions (FAQs) about Open Horizon.
 
 - [Is there a way to create a self-contained environment for development purposes?](#one_click)
 - [Is Open Horizon software open-sourced?](#open_sourced)
@@ -343,7 +343,7 @@ EOF
 
 # Known issues and limitations
 
-These are known issues and limitations for Open Horizon (Open Horizon).
+These are known issues and limitations for Open Horizon.
 
 For a full list of open issues for the Open Horizon open source layer, review the GitHub issues in each of the [Open Horizon repositories](https://github.com/open-horizon/) .
 
@@ -395,11 +395,11 @@ The Open Horizon management hub is designed specifically for edge node managemen
 
 # Components
 
-Open Horizon (Open Horizon) includes several components that are required for functionality. For more information about such components, please see [Components](https://open-horizon.github.io/docs/getting_started/components/index.md).
+Open Horizon includes several components that are required for functionality. For more information about such components, please see [Components](https://open-horizon.github.io/docs/getting_started/components/index.md).
 
 ## What's next
 
-For more information about using Open Horizon and developing edge services, review the topics that are listed in Open Horizon (Open Horizon) [Welcome page](https://open-horizon.github.io/docs/index.md) and in the following sections:
+For more information about using Open Horizon and developing edge services, review the topics that are listed in Open Horizon [Welcome page](https://open-horizon.github.io/docs/index.md) and in the following sections:
 
 - [Accessibility](https://open-horizon.github.io/docs/getting_started/accessibility/index.md)
 - [Components](https://open-horizon.github.io/docs/getting_started/components/index.md)
@@ -411,7 +411,7 @@ For more information about using Open Horizon and developing edge services, revi
 
 # Release notes
 
-The following sections document new features, restrictions, and changes that are included for this release of Open Horizon (Open Horizon). Unless otherwise noted, all changes are compatible with earlier releases and are automatically and transparently available to all new and existing Open Horizon users.
+The following sections document new features, restrictions, and changes that are included for this release of Open Horizon. Unless otherwise noted, all changes are compatible with earlier releases and are automatically and transparently available to all new and existing Open Horizon users.
 
 - [Frequently asked questions](https://open-horizon.github.io/docs/getting_started/faq/index.md)
 - [Developer learning path](https://open-horizon.github.io/docs/getting_started/developer_learning_path/index.md)
@@ -423,7 +423,7 @@ The following sections document new features, restrictions, and changes that are
 
 # Preparing an edge device
 
-The following instructions guide you through the process of installing the required software on your edge device and registering it with Open Horizon (Open Horizon).
+The following instructions guide you through the process of installing the required software on your edge device and registering it with Open Horizon.
 
 ## Supported architectures and operating systems
 
@@ -1074,7 +1074,7 @@ hzn --help
 
 # Installing edge clusters
 
-Open Horizon (Open Horizon) edge cluster capability helps you manage and deploy workloads from a management hub cluster to remote instances of OpenShift® Container Platform or other Kubernetes-based clusters. Edge clusters are Open Horizon edge nodes that are Kubernetes clusters. An edge cluster enables use cases at the edge, which require colocation of compute with business operations, or that require more scalability, availability, and compute capability than what can be supported by an edge device. Further, it is not uncommon for edge clusters to provide application services that are needed to support services running on edge devices due to their close proximity to edge devices. Open Horizon deploys edge services to an edge cluster, via a Kubernetes operator, enabling the same autonomous deployment mechanisms used with edge devices. The full power of Kubernetes as a container management platform is available for edge services that are deployed by Open Horizon.
+Open Horizon edge cluster capability helps you manage and deploy workloads from a management hub cluster to remote instances of OpenShift® Container Platform or other Kubernetes-based clusters. Edge clusters are Open Horizon edge nodes that are Kubernetes clusters. An edge cluster enables use cases at the edge, which require colocation of compute with business operations, or that require more scalability, availability, and compute capability than what can be supported by an edge device. Further, it is not uncommon for edge clusters to provide application services that are needed to support services running on edge devices due to their close proximity to edge devices. Open Horizon deploys edge services to an edge cluster, via a Kubernetes operator, enabling the same autonomous deployment mechanisms used with edge devices. The full power of Kubernetes as a container management platform is available for edge services that are deployed by Open Horizon.
 
 The following sections describe how to install an edge cluster and configure image registries as prerequisites for installing the Open Horizon agent on the cluster.
 
@@ -1090,7 +1090,7 @@ The following sections describe how to install an edge cluster and configure ima
 
 An edge device provides an entry point into enterprise or service provider core networks. Examples include smartphones, security cameras, or even an internet-connected microwave oven.
 
-Open Horizon (Open Horizon) is available for management hub or servers, including distributed devices. See the following sections for details about how to install the Open Horizon lightweight agent on edge devices:
+Open Horizon is available for management hub or servers, including distributed devices. See the following sections for details about how to install the Open Horizon lightweight agent on edge devices:
 
 - [Preparing an edge device](https://open-horizon.github.io/docs/installing/adding_devices/index.md)
 - [Installing the agent](https://open-horizon.github.io/docs/installing/registration/index.md)
@@ -1280,7 +1280,7 @@ source ~/.bash_aliases
 
 # Installing edge nodes
 
-Edge computing places enterprise applications closer to where the data is created, and where actions need to be taken. More importantly, the negotiation, agreement, execution, and validation of management actions is autonomously carried out between the Open Horizon (Open Horizon) hub and each edge endpoint that is running a lightweight agent. This autonomous management is a new form of management that addresses the scale, variability, and rate of change of edge topologies including edge nodes: devices and clusters, edge gateways, and network edges.
+Edge computing places enterprise applications closer to where the data is created, and where actions need to be taken. More importantly, the negotiation, agreement, execution, and validation of management actions is autonomously carried out between the Open Horizon hub and each edge endpoint that is running a lightweight agent. This autonomous management is a new form of management that addresses the scale, variability, and rate of change of edge topologies including edge nodes: devices and clusters, edge gateways, and network edges.
 
 Typically, edge devices have a prescriptive purpose, provide (often limited) compute capabilities, and are located near or at the data source. Edge clusters usually run workloads in remote, sometimes disconnected, locations near the data source (outside of a data center or cloud environment).
 
@@ -1416,7 +1416,7 @@ pscp -h nodes.hosts -e /tmp/pscp-errors $AGENT_TAR_FILE /tmp
 
 # Installing the agent
 
-When you install the Horizon agent software on your edge device, you can register your edge device with Open Horizon (Open Horizon) to add your device into the edge computing management domain and run edge services. The following instructions register your new edge device with the minimal helloworld example edge service to confirm the edge device is working properly. The helloworld edge service can easily be stopped when you are ready to run your own edge services on the edge device.
+When you install the Horizon agent software on your edge device, you can register your edge device with Open Horizon to add your device into the edge computing management domain and run edge services. The following instructions register your new edge device with the minimal helloworld example edge service to confirm the edge device is working properly. The helloworld edge service can easily be stopped when you are ready to run your own edge services on the edge device.
 
 ## Before you begin
 
@@ -1472,7 +1472,7 @@ Organization administrators can see all the organization users and their API key
 1. Verify that a default route for the OpenShift image registry is created and that it is accessible from outside of the cluster:
 
 ```
-oc get route default-route -n openshift-image-registry --template='{% raw %}{{ .spec.host }}{% endraw %}'
+oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}'
 ```
 
 If the command response indicates the `default-route` is not found, you need to expose it (see [Exposing the registry](https://docs.openshift.com/container-platform/4.6/registry/securing-exposing-registry.html) for details):
@@ -1484,7 +1484,7 @@ oc patch configs.imageregistry.operator.openshift.io/cluster --patch '{"spec":{"
 1. Retrieve the repository route name that you need to use:
 
 ```
-export OCP_IMAGE_REGISTRY=`oc get route default-route -n openshift-image-registry --template='{% raw %}{{ .spec.host }}{% endraw %}'`
+export OCP_IMAGE_REGISTRY=`oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}'`
 ```
 
 1. Create a new project to store your images:
@@ -1788,7 +1788,7 @@ systemctl restart docker
 
 # Updating the agent
 
-If you received updated Open Horizon (Open Horizon) agent packages, you can easily update your edge device:
+If you received updated Open Horizon agent packages, you can easily update your edge device:
 
 1. Perform the steps in [Gather the necessary information and files for edge devices](https://open-horizon.github.io/docs/hub/gather_files/#prereq_horizon) to create the updated **agentInstallFiles-<edge-device-type>.tar.gz** file with the newer agent packages.
 1. For each edge device, perform the steps in [Automated agent installation and registration](https://open-horizon.github.io/docs/installing/automated_install/#method_one), except that when running the **agent-install.sh** command, specify the service and pattern or policy you want to run on the edge device.
@@ -1860,7 +1860,7 @@ These services include:
 
 # Developing edge services
 
-This section teaches you how to develop edge services for Open Horizon (Open Horizon).
+This section teaches you how to develop edge services for Open Horizon.
 
 Edge computing moves application workloads from a centralized location to remote locations, such as factory floors, warehouses, distribution centers, retail stores, transportation centers, and more. Essentially, edge computing provides you with the capability to move application workloads anywhere that computing is needed outside of your data centers and cloud hosting environment.
 
@@ -1948,7 +1948,7 @@ These differences require different techniques to deploy and manage software on 
 
 # CI-CD process for edge services
 
-A set of evolving edge services is essential for the effective use of Open Horizon (Open Horizon), and a robust Continuous Integration and Continuous Deployment (CI/CD) process is a critical component.
+A set of evolving edge services is essential for the effective use of Open Horizon, and a robust Continuous Integration and Continuous Deployment (CI/CD) process is a critical component.
 
 Use this content to lay out the building blocks available for you to create your own CI/CD process. Then, learn more about this process in the [`open-horizon/examples` repository](https://github.com/open-horizon/examples) .
 
@@ -2030,7 +2030,7 @@ If you have not done so already, follow the steps in [Developing an edge service
 
 This page describes two registries you can store edge service images in: * [Using the OpenShift image registry](#ocp_image_registry) * [Using the IBM Cloud Container Registry](#ibm_cloud_container_registry)
 
-These also serve as examples of how you can use any private image registry with Open Horizon (Open Horizon).
+These also serve as examples of how you can use any private image registry with Open Horizon.
 
 ## Using the OpenShift image registry
 
@@ -2450,7 +2450,7 @@ To run the published `nginx-operator` service, see [Using the Operator Example E
 
 # Developing an edge service for devices
 
-To begin developing edge services for Open Horizon (Open Horizon), you need to first set up your credentials for publishing content. Because all services must be signed, you must also create a cryptographic signing key pair. Make sure to complete the prerequisite steps, [Preparing to create an edge service](https://open-horizon.github.io/docs/developing/service_containers/index.md).
+To begin developing edge services for Open Horizon, you need to first set up your credentials for publishing content. Because all services must be signed, you must also create a cryptographic signing key pair. Make sure to complete the prerequisite steps, [Preparing to create an edge service](https://open-horizon.github.io/docs/developing/service_containers/index.md).
 
 This diagram shows the typical interactions between the components within Horizon.
 
@@ -2491,7 +2491,7 @@ Open Horizon provides RESTful APIs for enabling components to collaborate, and t
 
 # Developing an edge service for clusters
 
-Open Horizon (Open Horizon) edge cluster capability provides you with edge computing features to help you manage and deploy workloads from a management hub cluster to remote instances of OpenShift® Container Platform or other Kubernetes-based clusters. Edge clusters are Open Horizon edge nodes that are Kubernetes clusters. An edge cluster enables use cases at the edge, which require co-location of compute with business operations, or that require more scalability, availability, and compute capability than what can be supported by an edge device. Further, it is not uncommon for edge clusters to provide application services that are needed to support services running on edge devices due to their close proximity to edge devices, resulting in a multi-tier edge application. Open Horizon deploys edge services to an edge cluster via a Kubernetes operator, enabling the same autonomous deployment mechanisms used with edge devices. The full power of Kubernetes as a container management platform is available for edge services that are deployed by Open Horizon.
+Open Horizon edge cluster capability provides you with edge computing features to help you manage and deploy workloads from a management hub cluster to remote instances of OpenShift® Container Platform or other Kubernetes-based clusters. Edge clusters are Open Horizon edge nodes that are Kubernetes clusters. An edge cluster enables use cases at the edge, which require co-location of compute with business operations, or that require more scalability, availability, and compute capability than what can be supported by an edge device. Further, it is not uncommon for edge clusters to provide application services that are needed to support services running on edge devices due to their close proximity to edge devices, resulting in a multi-tier edge application. Open Horizon deploys edge services to an edge cluster via a Kubernetes operator, enabling the same autonomous deployment mechanisms used with edge devices. The full power of Kubernetes as a container management platform is available for edge services that are deployed by Open Horizon.
 
 - [Developing a Kubernetes operator](https://open-horizon.github.io/docs/developing/service_operators/index.md)
 - [Creating your own hello world for clusters](https://open-horizon.github.io/docs/developing/creating_hello_world/index.md)
@@ -2611,7 +2611,7 @@ This example is part of the [Open Horizon](https://github.com/open-horizon/) ope
 
 # Creating your own hello world edge service
 
-The following example uses a simple `Hello World` service to help you learn more about developing for Open Horizon (Open Horizon). With this example, you develop a single edge service that supports three hardware architectures and uses the Horizon development tools.
+The following example uses a simple `Hello World` service to help you learn more about developing for Open Horizon. With this example, you develop a single edge service that supports three hardware architectures and uses the Horizon development tools.
 
 ## Before you begin
 
@@ -2689,7 +2689,7 @@ When the Horizon agent runs your service containers on an edge node, it provides
 
 # Further reading
 
-Review the important principles and best practices for [Developing edge services](https://open-horizon.github.io/docs/developing/developing/index.md) for Open Horizon (Open Horizon) devices.
+Review the important principles and best practices for [Developing edge services](https://open-horizon.github.io/docs/developing/developing/index.md) for Open Horizon devices.
 
 For more information, see:
 
@@ -2702,7 +2702,7 @@ For more information, see:
 
 # Further reading for edge devices
 
-Review the important principles and best practices for developing edge services for Open Horizon (Open Horizon) devices. For more information, see:
+Review the important principles and best practices for developing edge services for Open Horizon devices. For more information, see:
 
 - [Model management system](https://open-horizon.github.io/docs/developing/model_management_details/index.md)
 - [Container deployment options](https://open-horizon.github.io/docs/developing/container_deployment_options/index.md)
@@ -2713,7 +2713,7 @@ Review the important principles and best practices for developing edge services 
 
 The model management system (MMS) eases the burden of Artificial Intelligence (AI) model management for cognitive services that run on edge nodes. The MMS can also be used to deliver other data file types to edge nodes. The MMS facilitates the storage, delivery, and security of models, data, and other metadata packages needed by edge services. This enables edge nodes to easily send and receive models and metadata to and from the cloud.
 
-The MMS runs in the Open Horizon (Open Horizon) hub and on edge nodes. The Cloud Sync Service(CSS), delivers models, metadata, or data to specific nodes or groups of nodes within an organization. After the objects are delivered to the edge nodes, an API is available that enables the edge service to obtain the models or data from the Edge Sync Service (ESS).
+The MMS runs in the Open Horizon hub and on edge nodes. The Cloud Sync Service(CSS), delivers models, metadata, or data to specific nodes or groups of nodes within an organization. After the objects are delivered to the edge nodes, an API is available that enables the edge service to obtain the models or data from the Edge Sync Service (ESS).
 
 Objects are populated in the MMS by service developers, devops administrators, and model authors. The MMS components facilitate integration between AI model tools and the cognitive services running on the edge. As authors complete models, the models are published to the MMS, which makes them immediately available to edge nodes. By default, integrity of the model is ensured by hashing and signing the model, and then uploading the signature and verification key before publishing the model. The MMS uses the signature and key to verify that the uploaded model has not been tampered with. This same procedure is also used when the MMS deploys the model to edge nodes.
 
@@ -3092,7 +3092,7 @@ This example is part of the [Open Horizon](https://github.com/open-horizon/) ope
 
 # Hello world
 
-Open Horizon (Open Horizon) uses policies to establish and manage service and model deployments, which give administrators the flexibility and scalability that is needed to work with large numbers of edge nodes. Open Horizon policy is an alternative to deployment patterns. It provides a greater separation of concerns, allowing edge nodes owners, service code developers, and business owners to independently articulate policies.
+Open Horizon uses policies to establish and manage service and model deployments, which give administrators the flexibility and scalability that is needed to work with large numbers of edge nodes. Open Horizon policy is an alternative to deployment patterns. It provides a greater separation of concerns, allowing edge nodes owners, service code developers, and business owners to independently articulate policies.
 
 This is a minimal "Hello, world" example to introduce you to Open Horizon deployment policies.
 
@@ -3115,9 +3115,9 @@ See [Using the Hello World Example Edge Service with Deployment Policy](https://
 
 # Preparing to create an edge service
 
-Use Open Horizon (Open Horizon) to develop services within Docker® containers for your edge devices. You can use any appropriate Linux base, programming languages, libraries, or utilities to create your edge services.
+Use Open Horizon to develop services within Docker® containers for your edge devices. You can use any appropriate Linux base, programming languages, libraries, or utilities to create your edge services.
 
-After you push, sign, and publish your services, Open Horizon (Open Horizon) uses fully autonomous agents on your edge devices to download, validate, configure, install, and monitor your services.
+After you push, sign, and publish your services, Open Horizon uses fully autonomous agents on your edge devices to download, validate, configure, install, and monitor your services.
 
 Edge services often use cloud ingest services to store and further process edge analysis results. This process includes the development workflow for edge and cloud code.
 
@@ -3211,7 +3211,7 @@ brew install git jq make
 
 In general, developing a service to run in an edge cluster is similar to developing an edge service that runs on an edge device. The edge service is developed by using [Edge-native development best practices](https://open-horizon.github.io/docs/developing/best_practices/index.md) development, and it is packaged in a container. The difference is in how the edge service is deployed.
 
-To deploy a containerized edge service to an edge cluster, a developer must first build a Kubernetes operator that deploys the containerized edge service in a Kubernetes cluster. After the operator is written and tested, the developer creates and publishes the operator as an Open Horizon (Open Horizon) service. This process enables an Open Horizon administrator to deploy the operator service as would be done for any Open Horizon service, with policy or patterns. There is no need to create an Open Horizon service definition for the edge service. When the Open Horizon administrator deploys the operator service, the operator deploys the edge service.
+To deploy a containerized edge service to an edge cluster, a developer must first build a Kubernetes operator that deploys the containerized edge service in a Kubernetes cluster. After the operator is written and tested, the developer creates and publishes the operator as an Open Horizon service. This process enables an Open Horizon administrator to deploy the operator service as would be done for any Open Horizon service, with policy or patterns. There is no need to create an Open Horizon service definition for the edge service. When the Open Horizon administrator deploys the operator service, the operator deploys the edge service.
 
 Several sources of information are available when you write a Kubernetes operator. First, read [Kubernetes Concepts - Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/) . This site is a good resource to learn about operators. After you are familiar with the operator concepts, writing an operator is accomplished by using the [Operator Framework](https://operatorframework.io/) . This web site provides more details about what an operator is and gives a walk-through for creating a simple operator, using the operator Software Development Kit (SDK).
 
@@ -3409,7 +3409,7 @@ hzn unregister -f
 
 # Administering
 
-Open Horizon (Open Horizon) supports various administrative functions that are needed to support an edge computing environment, including the following.
+Open Horizon supports various administrative functions that are needed to support an edge computing environment, including the following.
 
 - [Multi-tenancy](https://open-horizon.github.io/docs/admin/multi_tenancy/index.md)
 - [Troubleshooting](https://open-horizon.github.io/docs/admin/troubleshooting/index.md)
@@ -3431,7 +3431,7 @@ To set up OpenShift Container Platform a cluster logging service, see the docume
 
 ## Basic logging
 
-Each Open Horizon (Open Horizon) pod sends logs to STDOUT, so they can be read with the `oc logs` command. Basic logging capacity is limited, and log-rotation is based on time and log output quantity.
+Each Open Horizon pod sends logs to STDOUT, so they can be read with the `oc logs` command. Basic logging capacity is limited, and log-rotation is based on time and log output quantity.
 
 Determine the pod that you want to obtain the logs for:
 
@@ -3481,7 +3481,7 @@ TBD
 
 ## Tenants in Open Horizon
 
-Open Horizon (Open Horizon) supports the general IT concept of multi-tenancy through organizations, where each tenant has their own organization. Organizations separate resources; therefore, users within each organization cannot create or modify resources in a different organization. Furthermore, resources in an organization can be viewed only by users in that organization, unless the resources are marked as public.
+Open Horizon supports the general IT concept of multi-tenancy through organizations, where each tenant has their own organization. Organizations separate resources; therefore, users within each organization cannot create or modify resources in a different organization. Furthermore, resources in an organization can be viewed only by users in that organization, unless the resources are marked as public.
 
 ### Common use cases
 
@@ -3590,7 +3590,7 @@ For more information about recovering and restoring data assets using Kubernetes
 
 ## Notice
 
-This document is intended to help you prepare for GDPR readiness. It provides Open Horizon (Open Horizon) feature information that you can configure, and aspects of the product's use to consider when you are preparing your organization for GDPR. This information is not an exhaustive list. Clients can choose and configure features many different ways and use the product in many ways and with third-party applications and systems.
+This document is intended to help you prepare for GDPR readiness. It provides Open Horizon feature information that you can configure, and aspects of the product's use to consider when you are preparing your organization for GDPR. This information is not an exhaustive list. Clients can choose and configure features many different ways and use the product in many ways and with third-party applications and systems.
 
 Clients are responsible for ensuring their own compliance with various laws and regulations, including the European Union General Data Protection Regulation. Clients are solely responsible for obtaining advice of competent legal counsel as to the identification and interpretation of any relevant laws and regulations that might affect the clients' business and any actions the clients might need to take to comply with such laws and regulations.
 
@@ -3833,7 +3833,7 @@ For more information, see [Kubernetes kubectl](https://kubernetes.io/docs/refere
 
 # Role-based access control
 
-Open Horizon (Open Horizon) supports several roles. Your role determines the actions that you can perform.
+Open Horizon supports several roles. Your role determines the actions that you can perform.
 
 ## Organizations
 
@@ -3874,7 +3874,7 @@ See [Security](https://open-horizon.github.io/docs/user_management/security/inde
 
 # Security
 
-Open Horizon (Open Horizon), based on [Open Horizon](https://github.com/open-horizon) , uses several security technologies to ensure that it is secure against attacks and safeguards privacy. For more information about Open Horizon security and roles, see:
+Open Horizon, based on [Open Horizon](https://github.com/open-horizon) , uses several security technologies to ensure that it is secure against attacks and safeguards privacy. For more information about Open Horizon security and roles, see:
 
 - [Security and privacy](https://open-horizon.github.io/docs/user_management/security_privacy/index.md)
 - [Role-based access control](https://open-horizon.github.io/docs/user_management/rbac/index.md)
@@ -3887,7 +3887,7 @@ For more information about creating workload signing keys if you do not already 
 
 # Security and privacy
 
-Open Horizon (Open Horizon), based on [Open Horizon](https://github.com/open-horizon) , uses several different security technologies to ensure that it is secure against attacks and safeguards privacy. Open Horizon relies on geographically distributed autonomous agent processes for edge software management. As a result, both the Open Horizon management hub and the agents represent potential targets for security breaches. This document explains how Open Horizon mitigates or eliminates threats.
+Open Horizon, based on [Open Horizon](https://github.com/open-horizon) , uses several different security technologies to ensure that it is secure against attacks and safeguards privacy. Open Horizon relies on geographically distributed autonomous agent processes for edge software management. As a result, both the Open Horizon management hub and the agents represent potential targets for security breaches. This document explains how Open Horizon mitigates or eliminates threats.
 
 ## Management Hub
 

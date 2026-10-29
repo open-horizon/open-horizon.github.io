@@ -1,6 +1,6 @@
 # Known issues and limitations
 
-These are known issues and limitations for Open Horizon (Open Horizon).
+These are known issues and limitations for Open Horizon.
 
 For a full list of open issues for the Open Horizon open source layer, review the GitHub issues in each of the [Open Horizon repositories](https://github.com/open-horizon/) .
 

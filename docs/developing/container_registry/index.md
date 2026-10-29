@@ -6,7 +6,7 @@ If you have not done so already, follow the steps in [Developing an edge service
 
 This page describes two registries you can store edge service images in: * [Using the OpenShift image registry](#ocp_image_registry) * [Using the IBM Cloud Container Registry](#ibm_cloud_container_registry)
 
-These also serve as examples of how you can use any private image registry with Open Horizon (Open Horizon).
+These also serve as examples of how you can use any private image registry with Open Horizon.
 
 ## Using the OpenShift image registry
 

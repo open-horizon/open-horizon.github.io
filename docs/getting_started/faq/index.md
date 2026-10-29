@@ -1,6 +1,6 @@
 # Frequently asked questions
 
-The following are answers to some frequently asked questions (FAQs) about Open Horizon (Open Horizon).
+The following are answers to some frequently asked questions (FAQs) about Open Horizon.
 
 - [Is there a way to create a self-contained environment for development purposes?](#one_click)
 - [Is Open Horizon software open-sourced?](#open_sourced)

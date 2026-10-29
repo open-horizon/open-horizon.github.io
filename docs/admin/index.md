@@ -1,6 +1,6 @@
 # Administering
 
-Open Horizon (Open Horizon) supports various administrative functions that are needed to support an edge computing environment, including the following.
+Open Horizon supports various administrative functions that are needed to support an edge computing environment, including the following.
 
 - [Multi-tenancy](https://open-horizon.github.io/docs/admin/multi_tenancy/index.md)
 - [Troubleshooting](https://open-horizon.github.io/docs/admin/troubleshooting/index.md)

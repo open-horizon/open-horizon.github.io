@@ -1,6 +1,6 @@
 # Hello world
 
-Open Horizon (Open Horizon) uses policies to establish and manage service and model deployments, which give administrators the flexibility and scalability that is needed to work with large numbers of edge nodes. Open Horizon policy is an alternative to deployment patterns. It provides a greater separation of concerns, allowing edge nodes owners, service code developers, and business owners to independently articulate policies.
+Open Horizon uses policies to establish and manage service and model deployments, which give administrators the flexibility and scalability that is needed to work with large numbers of edge nodes. Open Horizon policy is an alternative to deployment patterns. It provides a greater separation of concerns, allowing edge nodes owners, service code developers, and business owners to independently articulate policies.
 
 This is a minimal "Hello, world" example to introduce you to Open Horizon deployment policies.
 

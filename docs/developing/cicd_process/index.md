@@ -1,6 +1,6 @@
 # CI-CD process for edge services
 
-A set of evolving edge services is essential for the effective use of Open Horizon (Open Horizon), and a robust Continuous Integration and Continuous Deployment (CI/CD) process is a critical component.
+A set of evolving edge services is essential for the effective use of Open Horizon, and a robust Continuous Integration and Continuous Deployment (CI/CD) process is a critical component.
 
 Use this content to lay out the building blocks available for you to create your own CI/CD process. Then, learn more about this process in the [`open-horizon/examples` repository](https://github.com/open-horizon/examples) .
 

@@ -1,6 +1,6 @@
 # Creating your own hello world edge service
 
-The following example uses a simple `Hello World` service to help you learn more about developing for Open Horizon (Open Horizon). With this example, you develop a single edge service that supports three hardware architectures and uses the Horizon development tools.
+The following example uses a simple `Hello World` service to help you learn more about developing for Open Horizon. With this example, you develop a single edge service that supports three hardware architectures and uses the Horizon development tools.
 
 ## Before you begin
 

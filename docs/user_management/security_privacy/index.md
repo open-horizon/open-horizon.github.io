@@ -1,6 +1,6 @@
 # Security and privacy
 
-Open Horizon (Open Horizon), based on [Open Horizon](https://github.com/open-horizon) , uses several different security technologies to ensure that it is secure against attacks and safeguards privacy. Open Horizon relies on geographically distributed autonomous agent processes for edge software management. As a result, both the Open Horizon management hub and the agents represent potential targets for security breaches. This document explains how Open Horizon mitigates or eliminates threats.
+Open Horizon, based on [Open Horizon](https://github.com/open-horizon) , uses several different security technologies to ensure that it is secure against attacks and safeguards privacy. Open Horizon relies on geographically distributed autonomous agent processes for edge software management. As a result, both the Open Horizon management hub and the agents represent potential targets for security breaches. This document explains how Open Horizon mitigates or eliminates threats.
 
 ## Management Hub
 

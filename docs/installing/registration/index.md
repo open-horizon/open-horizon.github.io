@@ -1,6 +1,6 @@
 # Installing the agent
 
-When you install the Horizon agent software on your edge device, you can register your edge device with Open Horizon (Open Horizon) to add your device into the edge computing management domain and run edge services. The following instructions register your new edge device with the minimal helloworld example edge service to confirm the edge device is working properly. The helloworld edge service can easily be stopped when you are ready to run your own edge services on the edge device.
+When you install the Horizon agent software on your edge device, you can register your edge device with Open Horizon to add your device into the edge computing management domain and run edge services. The following instructions register your new edge device with the minimal helloworld example edge service to confirm the edge device is working properly. The helloworld edge service can easily be stopped when you are ready to run your own edge services on the edge device.
 
 ## Before you begin
 

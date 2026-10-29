@@ -1,6 +1,6 @@
 # Developing an edge service for devices
 
-To begin developing edge services for Open Horizon (Open Horizon), you need to first set up your credentials for publishing content. Because all services must be signed, you must also create a cryptographic signing key pair. Make sure to complete the prerequisite steps, [Preparing to create an edge service](https://open-horizon.github.io/docs/developing/service_containers/index.md).
+To begin developing edge services for Open Horizon, you need to first set up your credentials for publishing content. Because all services must be signed, you must also create a cryptographic signing key pair. Make sure to complete the prerequisite steps, [Preparing to create an edge service](https://open-horizon.github.io/docs/developing/service_containers/index.md).
 
 This diagram shows the typical interactions between the components within Horizon.
 

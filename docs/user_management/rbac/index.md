@@ -1,6 +1,6 @@
 # Role-based access control
 
-Open Horizon (Open Horizon) supports several roles. Your role determines the actions that you can perform.
+Open Horizon supports several roles. Your role determines the actions that you can perform.
 
 ## Organizations
 

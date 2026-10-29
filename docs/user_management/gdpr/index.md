@@ -2,7 +2,7 @@
 
 ## Notice
 
-This document is intended to help you prepare for GDPR readiness. It provides Open Horizon (Open Horizon) feature information that you can configure, and aspects of the product's use to consider when you are preparing your organization for GDPR. This information is not an exhaustive list. Clients can choose and configure features many different ways and use the product in many ways and with third-party applications and systems.
+This document is intended to help you prepare for GDPR readiness. It provides Open Horizon feature information that you can configure, and aspects of the product's use to consider when you are preparing your organization for GDPR. This information is not an exhaustive list. Clients can choose and configure features many different ways and use the product in many ways and with third-party applications and systems.
 
 Clients are responsible for ensuring their own compliance with various laws and regulations, including the European Union General Data Protection Regulation. Clients are solely responsible for obtaining advice of competent legal counsel as to the identification and interpretation of any relevant laws and regulations that might affect the clients' business and any actions the clients might need to take to comply with such laws and regulations.
 

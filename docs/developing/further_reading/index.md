@@ -1,6 +1,6 @@
 # Further reading
 
-Review the important principles and best practices for [Developing edge services](https://open-horizon.github.io/docs/developing/developing/index.md) for Open Horizon (Open Horizon) devices.
+Review the important principles and best practices for [Developing edge services](https://open-horizon.github.io/docs/developing/developing/index.md) for Open Horizon devices.
 
 For more information, see:
 

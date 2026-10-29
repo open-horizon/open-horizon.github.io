@@ -2,7 +2,7 @@
 
 ## Tenants in Open Horizon
 
-Open Horizon (Open Horizon) supports the general IT concept of multi-tenancy through organizations, where each tenant has their own organization. Organizations separate resources; therefore, users within each organization cannot create or modify resources in a different organization. Furthermore, resources in an organization can be viewed only by users in that organization, unless the resources are marked as public.
+Open Horizon supports the general IT concept of multi-tenancy through organizations, where each tenant has their own organization. Organizations separate resources; therefore, users within each organization cannot create or modify resources in a different organization. Furthermore, resources in an organization can be viewed only by users in that organization, unless the resources are marked as public.
 
 ### Common use cases
 
