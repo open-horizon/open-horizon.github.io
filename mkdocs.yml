@@ -60,6 +60,26 @@ plugins:
   - redirects:
       redirect_maps:
         docs/using_edge_services/removing_agent_from_cluster.md: docs/anax/docs/removing_agent_from_cluster.md
+  - llmstxt:
+      full_output: llms-full.txt
+      sections:
+        Getting started:
+          - quick-start.md
+          - docs/getting_started/*.md
+        Installing:
+          - docs/installing/*.md
+        Developing:
+          - docs/developing/*.md
+        Administering:
+          - docs/admin/*.md
+          - docs/user_management/*.md
+        Reference:
+          - docs/anax/docs/*.md
+          - docs/exchange-api/docs/*.md
+          - docs/mgmt-hub/docs/*.md
+          - docs/fdo/docs/*.md
+          - docs/kubearmor-integration/docs/*.md
+          - docs/release/docs/*.md
 
 # Suppress warnings for broken relative links inside staged third-party repo
 # content — those docs may reference files that weren't pulled into the staging
