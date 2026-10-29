@@ -1,0 +1,93 @@
+# Creating a local development environment
+
+## Intro
+
+This document describes the environment and the set of steps aiming to create a local development and debugging environment.
+
+## Prerequisites
+
+- OS: Any officially supported versions of Ubuntu. For more information, see [System requirements](https://open-horizon.github.io/docs/hub/requirements/index.md).
+
+## Dependencies
+
+- [Java 21](https://www.java.com/en/)
+- [SBT](https://www.scala-sbt.org/)
+- [PostgreSQL](https://www.postgresql.org/)
+
+## Installation
+
+### Create a new user (optional)
+
+For development purposes recommended not to use root user. Command below will create a new Ubuntu user.
+
+```
+useradd -d /home/new_user -s /bin/bash -m new_user
+sudo passwd new_user
+usermod -aG sudo new_user
+```
+
+### Install Java 21
+
+```
+sudo apt-get update
+sudo apt install openjdk-21-jdk -y
+```
+
+### Install SBT
+
+```
+sudo apt-get update
+sudo apt-get install apt-transport-https curl gnupg -yqq
+echo "deb https://repo.scala-sbt.org/scalasbt/debian all main" | sudo tee /etc/apt/sources.list.d/sbt.list
+echo "deb https://repo.scala-sbt.org/scalasbt/debian /" | sudo tee /etc/apt/sources.list.d/sbt_old.list
+curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | sudo -H gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/scalasbt-release.gpg --import
+sudo chmod 644 /etc/apt/trusted.gpg.d/scalasbt-release.gpg
+sudo apt-get update
+sudo apt-get install sbt
+```
+
+### Install Postgresql
+
+```
+sudo apt-get update
+sudo apt-get install postgresql
+sudo systemctl status postgresql
+```
+
+### Configure firewall rule for Postgresql port 5432
+
+```
+sudo iptables -A INPUT -p tcp --dport 5432 -m state --state NEW,ESTABLISHED -j ACCEPT
+```
+
+### Create a new DB
+
+```
+sudo -u postgres psql
+postgres=# CREATE USER new_user WITH PASSWORD 'password';
+postgres=# CREATE DATABASE horizon OWNER new_user;
+\q
+```
+
+### Test connection to DB
+
+```
+psql "host=localhost dbname=horizon user=kevin password='password'"
+```
+
+### Export environment variables
+
+```
+export EXCHANGE_DB_NAME=openhorizon
+export EXCHANGE_DB_PW=password
+export EXCHANGE_DB_USER=new_user
+export EXCHANGE_ROOT_PW=root_password
+```
+
+### Clone exchange-api and run it
+
+```
+https://github.com/open-horizon/exchange-api.git
+~/exchange-api$ sbt
+sbt:amd64_exchange-api> reStart
+```

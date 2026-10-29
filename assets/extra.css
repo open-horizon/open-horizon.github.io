@@ -1,0 +1,22 @@
+/*
+ * Hide the duplicate star/fork fact pills that appear in the left-nav drawer
+ * source widget (.md-nav__source). The Material theme renders partials/source.html
+ * twice — once in the header and once in the drawer — so our per-page override
+ * produces two identical widgets. The header copy (.md-header__source) is the
+ * canonical one; suppress the stats in the drawer copy to avoid the doubling.
+ */
+.md-nav__source .md-source__facts {
+  display: none;
+}
+
+/* Soft brand atmosphere without relying on a flat single-color canvas */
+.md-main {
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(42, 214, 255, 0.12), transparent 60%),
+    radial-gradient(900px 500px at 100% 0%, rgba(0, 113, 188, 0.08), transparent 55%);
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
