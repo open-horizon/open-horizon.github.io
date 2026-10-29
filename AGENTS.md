@@ -60,6 +60,8 @@ Previously, child repositories used CopyDocs GitHub Actions (`andstor/copycat-ac
 | `/docs/exchange-api/docs/` | `open-horizon/exchange-api` (`docs/`) |
 | `/docs/release/docs/` | `open-horizon/open-horizon-release` (`docs/`) |
 
+`AGENTS.md` files in staged trees are excluded from the build through `exclude_docs` in `mkdocs.yml`, matching the old Jekyll `exclude` list. Moved or removed pages that readers may still link to get a `redirect_maps` entry under the `redirects` plugin in `mkdocs.yml`.
+
 **Important:** Never edit generated files under `docs/docs/<name>/docs/`. Change content only in the source repositories. After this site is the production docs host, remove the CopyDocs workflows from those child repositories so they stop pushing into this repo, and update each child repo’s `docs/AGENTS.md` so it describes pull-at-build (not CopyDocs push). Tracking issues for that cleanup live in the child repos and reference [#729](https://github.com/open-horizon/open-horizon.github.io/issues/729).
 
 ---

@@ -6,6 +6,8 @@ site_description: >-
 site_author: Open Horizon
 
 docs_dir: docs
+exclude_docs: |
+  AGENTS.md
 
 theme:
   name: material
@@ -55,6 +57,9 @@ markdown_extensions:
 plugins:
   - search
   - monorepo
+  - redirects:
+      redirect_maps:
+        docs/using_edge_services/removing_agent_from_cluster.md: docs/anax/docs/removing_agent_from_cluster.md
 
 # Suppress warnings for broken relative links inside staged third-party repo
 # content — those docs may reference files that weren't pulled into the staging
