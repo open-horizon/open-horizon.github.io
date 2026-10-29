@@ -27,11 +27,15 @@ This demo illustrates how a deployed application can be automatically connected 
 
 ### Connecting Open Horizon deployed apps using Skupper in 1 minute (1 minute, no audio)
 
-{% include youtubePlayer.html id="BUBIfpecZ7k" %}
+<div class="embed-youtube">
+<iframe src="https://www.youtube.com/embed/BUBIfpecZ7k" title="YouTube video" width="560" height="315" loading="lazy" allowfullscreen></iframe>
+</div>
 
 ### Deep Dive (8 minutes)
 
-{% include youtubePlayer.html id="Zs1SygjqBts" %}
+<div class="embed-youtube">
+<iframe src="https://www.youtube.com/embed/Zs1SygjqBts" title="YouTube video" width="560" height="315" loading="lazy" allowfullscreen></iframe>
+</div>
 
 ## Code repositories
 

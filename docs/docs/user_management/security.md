@@ -12,7 +12,7 @@ has_toc: False
 
 # Security 
 
-Open Horizon (Open Horizon), based on [Open Horizon ](https://github.com/open-horizon), uses several security technologies to ensure that it is secure against attacks and safeguards privacy. For more information about Open Horizon security and roles, see:
+Open Horizon, based on [Open Horizon ](https://github.com/open-horizon), uses several security technologies to ensure that it is secure against attacks and safeguards privacy. For more information about Open Horizon security and roles, see:
 
 * [Security and privacy](./security_privacy.md)
 * [Role-based access control](./rbac.md)

@@ -11,7 +11,7 @@ has_toc: False
 
 # Release notes
 
-The following sections document new features, restrictions, and changes that are included for this release of Open Horizon (Open Horizon). Unless otherwise noted, all changes are compatible with earlier releases and are automatically and transparently available to all new and existing Open Horizon users.
+The following sections document new features, restrictions, and changes that are included for this release of Open Horizon. Unless otherwise noted, all changes are compatible with earlier releases and are automatically and transparently available to all new and existing Open Horizon users.
 
 - [Frequently asked questions](./faq.md)
 - [Developer learning path](./developer_learning_path.md)

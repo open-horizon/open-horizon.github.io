@@ -12,7 +12,7 @@ has_toc: False
 
 # Further reading for edge devices
 
-Review the important principles and best practices for developing edge services for Open Horizon (Open Horizon) devices. For more information, see:
+Review the important principles and best practices for developing edge services for Open Horizon devices. For more information, see:
 
 * [Model management system](model_management_details.md)
 * [Container deployment options](container_deployment_options.md)

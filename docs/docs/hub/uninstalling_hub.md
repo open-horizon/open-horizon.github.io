@@ -10,5 +10,5 @@ search_exclude: true
 
 # Uninstall
 
-See the [backup and recovery](../admin/backup_recovery.md) page if this uninstallation is being performed to facilitate a restoration to a previous state.
+See the [disaster recovery](../user_management/disaster_recovery.md) page if this uninstallation is being performed to facilitate a restoration to a previous state.
 

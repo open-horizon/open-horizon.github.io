@@ -29,27 +29,39 @@ Four specific scenarios can demonstrate the power of this approach:
 
 ### KubeArmor/Open Horizon demos in one minute (1 minute, no audio)
 
-{% include youtubePlayer.html id="ZwDxLMdt6lI" %}
+<div class="embed-youtube">
+<iframe src="https://www.youtube.com/embed/ZwDxLMdt6lI" title="YouTube video" width="560" height="315" loading="lazy" allowfullscreen></iframe>
+</div>
 
 ### Defending against Cryptojacking attacks (2 minutes)
 
-{% include youtubePlayer.html id="pV43ttC4Ja0" %}
+<div class="embed-youtube">
+<iframe src="https://www.youtube.com/embed/pV43ttC4Ja0" title="YouTube video" width="560" height="315" loading="lazy" allowfullscreen></iframe>
+</div>
 
 ### File Integrity Monitoring (FIM) using policies on a K8s cluster (2 minutes)
 
-{% include youtubePlayer.html id="WJfHmxm8Gg0" %}
+<div class="embed-youtube">
+<iframe src="https://www.youtube.com/embed/WJfHmxm8Gg0" title="YouTube video" width="560" height="315" loading="lazy" allowfullscreen></iframe>
+</div>
 
 ### Denying malicious binary process before execution (2 minutes)
 
-{% include youtubePlayer.html id="n1GpkV3KbQQ" %}
+<div class="embed-youtube">
+<iframe src="https://www.youtube.com/embed/n1GpkV3KbQQ" title="YouTube video" width="560" height="315" loading="lazy" allowfullscreen></iframe>
+</div>
 
 ### Implementing zero trust security policies on a K8s cluster (2 minutes)
 
-{% include youtubePlayer.html id="Jni8vJ3IrJc" %}
+<div class="embed-youtube">
+<iframe src="https://www.youtube.com/embed/Jni8vJ3IrJc" title="YouTube video" width="560" height="315" loading="lazy" allowfullscreen></iframe>
+</div>
 
 ### Deploying KubeArmor with Open Horizon (11 minutes)
 
-{% include youtubePlayer.html id="691AlW_GE1k" %}
+<div class="embed-youtube">
+<iframe src="https://www.youtube.com/embed/691AlW_GE1k" title="YouTube video" width="560" height="315" loading="lazy" allowfullscreen></iframe>
+</div>
 
 ## Code repositories
 

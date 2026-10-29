@@ -12,7 +12,7 @@ has_toc: False
 
 # Further reading
 
-Review the important principles and best practices for [Developing edge services](developing.md) for Open Horizon (Open Horizon) devices.
+Review the important principles and best practices for [Developing edge services](developing.md) for Open Horizon devices.
 
 For more information, see:
 

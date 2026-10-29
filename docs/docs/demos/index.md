@@ -11,7 +11,7 @@ has_toc: False
 
 # Code and video demos
 
-This section contains end-to-end code and video examples for Open Horizon (Open Horizon).
+This section contains end-to-end code and video examples for Open Horizon.
 
 * [Workload Runtime Security](./kubearmor.md)
 * [Realtime Workload Metrics](./edgelake.md)

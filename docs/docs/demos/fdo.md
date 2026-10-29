@@ -20,11 +20,15 @@ This demo show how hardware supporting the FIDO Device Onboard (FDO) specificati
 
 ### Zero touch edge onboard in 1 minute (no audio)
 
-{% include youtubePlayer.html id="QBxuucDkgmQ" %}
+<div class="embed-youtube">
+<iframe src="https://www.youtube.com/embed/QBxuucDkgmQ" title="YouTube video" width="560" height="315" loading="lazy" allowfullscreen></iframe>
+</div>
 
 ### Zero touch edge onboard with demo (4 minutes)
 
-{% include youtubePlayer.html id="OWqZIC6yRI4" %}
+<div class="embed-youtube">
+<iframe src="https://www.youtube.com/embed/OWqZIC6yRI4" title="YouTube video" width="560" height="315" loading="lazy" allowfullscreen></iframe>
+</div>
 
 ## Code repositories
 

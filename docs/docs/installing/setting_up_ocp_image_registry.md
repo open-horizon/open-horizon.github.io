@@ -21,7 +21,7 @@ Organization administrators can see all the organization users and their API key
 1. Verify that a default route for the OpenShift image registry is created and that it is accessible from outside of the cluster:
 
    ```bash
-   oc get route default-route -n openshift-image-registry --template='{% raw %}{{ .spec.host }}{% endraw %}'
+   oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}'
    ```
 
    If the command response indicates the `default-route` is not found, you need to expose it (see [Exposing the registry ](https://docs.openshift.com/container-platform/4.6/registry/securing-exposing-registry.html) for details):
@@ -33,7 +33,7 @@ Organization administrators can see all the organization users and their API key
 2. Retrieve the repository route name that you need to use:
 
    ```bash
-   export OCP_IMAGE_REGISTRY=`oc get route default-route -n openshift-image-registry --template='{% raw %}{{ .spec.host }}{% endraw %}'`
+   export OCP_IMAGE_REGISTRY=`oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}'`
    ```
 
 3. Create a new project to store your images:
