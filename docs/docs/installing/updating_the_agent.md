@@ -1,0 +1,17 @@
+---
+copyright: Contributors to the Open Horizon project
+years: 2020 - 2026
+title: Updating the device agent
+description: Documentation for Updating the agent
+lastupdated: 2026-08-20
+nav_order: 7
+parent: Installing edge device agents
+---
+
+# Updating the agent
+
+If you received updated Open Horizon (Open Horizon) agent packages, you can easily update your edge device:
+
+1. Perform the steps in [Gather the necessary information and files for edge devices](../hub/gather_files.md#prereq_horizon) to create the updated **agentInstallFiles-&lt;edge-device-type&gt;.tar.gz** file with the newer agent packages.
+  
+2. For each edge device, perform the steps in [Automated agent installation and registration](automated_install.md#method_one), except that when running the **agent-install.sh** command, specify the service and pattern or policy you want to run on the edge device.

@@ -1,0 +1,148 @@
+site_name: Open Horizon Documentation
+site_url: https://open-horizon.github.io
+site_description: >-
+  Documentation for Open Horizon — autonomous management of containerized
+  workloads and machine learning assets across fleets of edge devices.
+site_author: Open Horizon
+
+docs_dir: docs
+exclude_docs: |
+  AGENTS.md
+
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    - scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    # No navigation.tabs — keep a persistent left sidebar like Just the Docs.
+    - navigation.sections
+    - navigation.indexes
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+
+extra_css:
+  - assets/extra.css
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+
+plugins:
+  - search
+  - monorepo
+  - redirects:
+      redirect_maps:
+        docs/using_edge_services/removing_agent_from_cluster.md: docs/anax/docs/removing_agent_from_cluster.md
+  - llmstxt:
+      full_output: llms-full.txt
+      sections:
+        Getting started:
+          - quick-start.md
+          - docs/getting_started/*.md
+        Installing:
+          - docs/installing/*.md
+        Developing:
+          - docs/developing/*.md
+        Administering:
+          - docs/admin/*.md
+          - docs/user_management/*.md
+        Reference:
+          - docs/anax/docs/*.md
+          - docs/exchange-api/docs/*.md
+          - docs/mgmt-hub/docs/*.md
+          - docs/fdo/docs/*.md
+          - docs/kubearmor-integration/docs/*.md
+          - docs/release/docs/*.md
+
+# Suppress warnings for broken relative links inside staged third-party repo
+# content — those docs may reference files that weren't pulled into the staging
+# directory. Keeping these at 'info' prevents --strict builds from failing on
+# content we don't control.
+validation:
+  links:
+    not_found: info
+    unrecognized_links: info
+
+# Minimal stub nav — scripts/build_nav.py replaces this with a Just-the-Docs–
+# compatible tree built from title/parent/nav_order front matter across
+# first-party and staged pages.
+nav:
+  - Home: index.md
+  - Documentation: docs/index.md
+
+# Explicit source repositories that previously pushed docs via CopyDocs
+# GitHub Actions in each child repo. Docs are now pulled at build time.
+# Add or remove entries here without changing scripts/build_nav.py logic.
+extra:
+  doc_sources:
+    - repo: anax
+      branch: master
+      src_path: docs
+      dest_name: anax
+      nav_label: Agent (anax)
+      section: Reference
+      extras:
+        - src: agent-install/README.md
+          dest: overview.md
+    - repo: devops
+      branch: master
+      src_path: docs
+      dest_name: mgmt-hub
+      nav_label: Management Hub
+      section: Reference
+    - repo: kubearmor-integration
+      branch: main
+      src_path: docs
+      dest_name: kubearmor-integration
+      nav_label: Kubearmor integration
+      section: Reference
+    - repo: FDO-support
+      branch: main
+      src_path: docs
+      dest_name: fdo
+      nav_label: FDO support
+      section: Reference
+    - repo: exchange-api
+      branch: master
+      src_path: docs
+      dest_name: exchange-api
+      nav_label: Exchange API
+      section: Reference
+    - repo: open-horizon-release
+      branch: main
+      src_path: docs
+      dest_name: release
+      nav_label: Release
+      section: Reference
+
+repo_url: https://github.com/open-horizon/open-horizon.github.io
+repo_name: open-horizon/open-horizon.github.io
+
+copyright: Copyright &copy; Contributors to the Open Horizon project 2020–2026

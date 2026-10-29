@@ -1,0 +1,50 @@
+name: Build and Deploy Docs
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+  # Rebuild periodically so staged source-repo docs stay fresh even when
+  # this repository has no commits of its own.
+  schedule:
+    - cron: "0 6 * * *"
+
+# Least-privilege permissions: write to this repo's contents (gh-pages push).
+# Read access to public org repos uses ORG_READ_TOKEN when configured.
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Stage source-repo docs and generate mkdocs_build.yml
+        env:
+          ORG_READ_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
+        run: python scripts/build_nav.py
+
+      - name: Build MkDocs site
+        run: mkdocs build -f mkdocs_build.yml
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          publish_branch: gh-pages
+          commit_message: "docs: deploy ${{ github.sha }}"

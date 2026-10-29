@@ -1,13 +1,31 @@
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
+# Staged reference docs from source repos (docs/docs/<name>/docs/)
+# and the generated Reference overview page.
+docs/docs/*/docs/
+docs/docs/reference/
+docs/docs/_clone_*/
+
+# Legacy staging paths (pre URL-alignment)
+docs/_repos/
+docs/_sections/
+
+# MkDocs build output
+site/
+
+# Dynamically generated MkDocs build config
+mkdocs_build.yml
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+
+# Local environment variables (never commit real tokens)
+.env
+
+# macOS
 .DS_Store
-**/.DS_Store
-.tree.txt.swp
-vendor
-.bundle
-.vscode/
-.cursor/
-.bob/.bob-errors/
-.bob/notes/

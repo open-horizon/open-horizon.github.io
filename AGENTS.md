@@ -1,479 +1,132 @@
-# Open Horizon Documentation - Agent Guidelines
+# Open Horizon Documentation — Agent Guidelines
 
-This is the primary AGENTS file for the Open Horizon documentation repository. This repository contains the documentation site for Open Horizon, built with Jekyll and hosted on GitHub Pages.
+This repository is the Open Horizon documentation site. It is built with **MkDocs** and the **Material** theme (same stack as [open-horizon-services.github.io](https://github.com/open-horizon-services/open-horizon-services.github.io)), and is intended for GitHub Pages.
 
+It replaces the previous Jekyll + Just the Docs + Ruby toolchain.
 
-## Prerequisites and First-Time Setup
+---
 
-Before you can build and run the documentation site locally, you need to set up your development environment with the correct Ruby version and dependencies.
+## Prerequisites and first-time setup
 
-### Required Software
+### Required software
 
-- **Ruby 3.2.0** (specified in `.ruby-version`)
-- **Bundler** (Ruby gem package manager)
-- **Git** (for version control)
+- **Python 3.11+**
+- **Git**
+- (Optional) **Make**
 
-### Step 1: Install Ruby
-
-This project requires Ruby 3.2.0. We recommend using a Ruby version manager to install and manage Ruby versions.
-
-#### Option A: Using rbenv (Recommended)
-
-1. **Install rbenv** (if not already installed):
-   
-   **macOS (using Homebrew)**:
-   ```bash
-   brew install rbenv ruby-build
-   ```
-   
-   **Linux**:
-   ```bash
-   curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
-   ```
-
-2. **Add rbenv to your shell** (add to `~/.bashrc`, `~/.zshrc`, or equivalent):
-   ```bash
-   eval "$(rbenv init -)"
-   ```
-
-3. **Install Ruby 3.2.0**:
-   ```bash
-   rbenv install 3.2.0
-   rbenv local 3.2.0
-   ```
-
-4. **Verify installation**:
-   ```bash
-   ruby --version
-   # Should output: ruby 3.2.0
-   ```
-
-#### Option B: Using rvm
-
-1. **Install rvm**:
-   ```bash
-   \curl -sSL https://get.rvm.io | bash -s stable
-   ```
-
-2. **Install Ruby 3.2.0**:
-   ```bash
-   rvm install 3.2.0
-   rvm use 3.2.0
-   ```
-
-3. **Verify installation**:
-   ```bash
-   ruby --version
-   # Should output: ruby 3.2.0
-   ```
-
-#### Option C: System Package Manager
-
-**Note**: System package managers may not have Ruby 3.2.0 available. Using rbenv or rvm is recommended for version-specific installations.
-
-### Step 2: Install Dependencies
-
-Once Ruby 3.2.0 is installed, run the initialization command to install all required dependencies:
+### Setup
 
 ```bash
-make init
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+export ORG_READ_TOKEN=ghp_...   # optional; avoids GitHub API rate limits
+make serve
 ```
 
-This command will:
-- Update the RubyGems system
-- Install Bundler (if not already installed)
-- Install all Ruby gems specified in `Gemfile`
-- Configure Bundler for local deployment
+Preview: <http://127.0.0.1:8765>
 
-**Note**: Run `make init` once before starting work each day to ensure all dependencies are up to date.
+| Make target | Purpose |
+| --- | --- |
+| `make stage` | Run `scripts/build_nav.py` to clone source-repo docs and write `mkdocs_build.yml` |
+| `make serve` | Stage, then `mkdocs serve` on port 8765 |
+| `make build` | Stage, then `mkdocs build` into `site/` |
+| `make dry-run` | Print configured sources without cloning |
+| `make test` | Run `pytest` |
+| `make clean` | Remove generated staged trees under `docs/docs/*/docs/`, `site/`, `mkdocs_build.yml` |
 
-### Step 3: Verify Setup
+---
 
-After running `make init`, verify your setup is complete:
+## Architecture
 
-1. **Check Jekyll installation**:
-   ```bash
-   bundle exec jekyll --version
-   ```
+### First-party docs
 
-2. **Install any missing packages**:
-   ```bash
-   bundle install
-   ```
+Markdown under `docs/docs/` (getting started, installing, developing, administering) is authored in this repository and publishes at `/docs/...`. Root pages `docs/index.md` and `docs/quick-start.md` publish at `/` and `/quick-start/`. Navigation is declared in `mkdocs.yml` under `nav:`.
 
-3. **Build the site** (optional test):
-   ```bash
-   make test
-   make build
-   ```
+### Reference docs from child repositories
 
+Previously, child repositories used CopyDocs GitHub Actions (`andstor/copycat-action`) to **push** their `docs/` trees into this repo on every merge. That model is replaced by **pull-at-build-time**:
 
-If all commands complete without errors, your environment is ready for local development.
+1. `extra.doc_sources` in `mkdocs.yml` lists each source repository, branch, source path, destination name, and nav label.
+2. `scripts/build_nav.py` clones those trees into `docs/docs/<dest_name>/docs/`, injects per-repo front matter, and appends a **Reference** section to `mkdocs_build.yml`. Published URLs match the legacy shape `/docs/<dest_name>/docs/`.
+3. CI (`.github/workflows/deploy.yml`) runs the script before `mkdocs build` and deploys `site/` to `gh-pages`.
 
-### Troubleshooting
+| Destination (URL) | Source repository |
+| --- | --- |
+| `/docs/anax/docs/` | `open-horizon/anax` (`docs/` + `agent-install/README.md` → `overview.md`) |
+| `/docs/mgmt-hub/docs/` | `open-horizon/devops` (`docs/`) |
+| `/docs/kubearmor-integration/docs/` | `open-horizon/kubearmor-integration` (`docs/`) |
+| `/docs/fdo/docs/` | `open-horizon/FDO-support` (`docs/`) |
+| `/docs/exchange-api/docs/` | `open-horizon/exchange-api` (`docs/`) |
+| `/docs/release/docs/` | `open-horizon/open-horizon-release` (`docs/`) |
 
-**Issue**: `ruby: command not found`
-- **Solution**: Ensure Ruby is installed and your shell is configured to use rbenv/rvm
+`AGENTS.md` files in staged trees are excluded from the build through `exclude_docs` in `mkdocs.yml`, matching the old Jekyll `exclude` list. Moved or removed pages that readers may still link to get a `redirect_maps` entry under the `redirects` plugin in `mkdocs.yml`.
 
-**Issue**: `bundle: command not found`
-- **Solution**: Run `gem install bundler` manually, then retry `make init`
+The `llmstxt` plugin writes `/llms.txt`, `/llms-full.txt`, and a Markdown copy of each listed page. Add new top-level content directories to its `sections` in `mkdocs.yml`, or the pages are left out of those files.
 
-**Issue**: Permission errors during `make init`
-- **Solution**: Never use `sudo` with rbenv/rvm. Reinstall Ruby using a version manager if needed
+**Important:** Never edit generated files under `docs/docs/<name>/docs/`. Change content only in the source repositories. After this site is the production docs host, remove the CopyDocs workflows from those child repositories so they stop pushing into this repo, and update each child repo’s `docs/AGENTS.md` so it describes pull-at-build (not CopyDocs push). Tracking issues for that cleanup live in the child repos and reference [#729](https://github.com/open-horizon/open-horizon.github.io/issues/729).
 
-**Issue**: Wrong Ruby version
-- **Solution**: Run `ruby --version` to check. Use `rbenv local 3.2.0` or `rvm use 3.2.0` to switch versions
+---
 
-### Next Steps
+## Content style
 
-Once your environment is set up, proceed to the [Local Development Commands](#local-development-commands) section to start building and serving the documentation site.
+- Prefer third-person, active voice.
+- Use "adopter" rather than "customer" when referring to people who use Open Horizon.
+- Headings: sentence case (capitalize the first word and proper nouns only).
+- Numbered lists for sequences; bullets for unordered items.
+- Avoid directional or visual-only instructions ("click the blue button above").
+- Prefer plain English over Latin abbreviations (for example, "for example" instead of "e.g.").
 
+### Front matter
 
-## Build/Lint/Test Commands
+MkDocs Material uses optional YAML front matter. Left-nav contents are built from Just-the-Docs–compatible keys on **first-party and staged** pages:
 
-### Local Development Commands
+| Keep in source `docs/` | Drop (Just-the-Docs only) |
+| --- | --- |
+| `title`, `parent`, `nav_order` | `layout`, `has_children`, `has_toc` |
+| Optional: `description`, `copyright`, `years`, `lastupdated` | |
 
-Use the provided Makefile for all local development tasks:
+During staging, `build_nav.py` merges `repo_url`, `repo_name`, `repo_stars`, and `repo_forks` into every staged reference markdown page so the header source widget (`overrides/partials/source.html`) links to that page’s origin repository. Authors must not add those `repo_*` keys in child repos. First-party pages fall back to `repo_url` / `repo_name` in `mkdocs.yml`.
 
-- **`make init`**: Install and update all Ruby dependencies. Run this once before using other tools each day.
-- **`make build`**: Build the Jekyll site locally using `jekyll build`. This generates the static site in the `_site` directory.
-- **`make test`**: Run Jekyll's built-in tests using `jekyll doctor` to check for configuration issues.
-- **`make dev`**: Complete development workflow - builds, serves, and tests the site (`jekyll build && jekyll serve && jekyll doctor`).
-- **`make run`**: Start the local development server with live reload using `jekyll serve`. Access at http://localhost:4000.
+### Heading anchors
 
-### Testing Individual Components
+Put an explicit anchor on a heading when other pages link to it. Use the Material `attr_list` syntax at the end of the heading line:
 
-- **Single page validation**: Run `jekyll build` and check the `_site` directory for the specific page
-- **Link validation**: GitHub Actions automatically check for broken links monthly
-- **Orphan page detection**: Automated workflow identifies pages not linked in navigation
-- **Performance testing**: Lighthouse CI runs weekly performance audits
-- **Security scanning**: CodeQL security analysis runs on pushes to master
-
-### Prose and Content Quality
-
-The repository uses write-good for prose quality checking:
-- **writeGood**: Checks for passive voice, wordy phrases, and common writing issues
-- **alex**: Checks for insensitive or inconsiderate language
-- **spellchecker**: Validates spelling across documentation
-
-Configuration is in `.github/write-good.yml`.
-
-## Content and Writing Guidelines
-
-### Grammar and Style
-
-- **Voice and tone**: Write in third-person, active voice
-- **Avoid compound phrases**: Replace "and/or" and similar compound joining word/phrases with clearer alternatives
-- **Replace Latin phrases**: Use plain English instead of Latin abbreviations:
-  - "i.e." → "that is"
-  - "e.g." → "for example"
-  - "etc." → "and so on"
-- **Capitalization**: Headlines and titles should only capitalize the first word and proper nouns
-- **Sequences**: Use numbered lists for sequential steps, bullet points for non-sequential items
-- **Accessibility**: Avoid directional content ("above", "below") and visual cues ("click the blue button")
-
-### Terminology Conventions
-
-- **User references**: When referring to persons or groups who use Open Horizon, use "adopter" instead of "customer" or "user"
-- **Jargon**: Identify and replace technical jargon and cultural references with clearer alternatives
-- **Proper names**: All proper names and trademarks should be inserted via variables for consistency
-
-### Formatting Standards
-
-#### External Links
-Mark up all external links with target and externalLink class:
 ```markdown
-[Kubernetes debugging](https://kubernetes.io/){:target="_blank"}{: .externalLink}
-```
-Leave a space in the linked text after the last character so the external link glyph doesn't butt against the hyperlink.
+## Install the agent {: #install-agent }
 
-#### Code Blocks
-End all code blocks with `{: codeblock}` on a new line at the same indent level:
-```bash
-make build
-{: codeblock}
+See [Install the agent](installing.md#install-agent).
 ```
 
-#### Front Matter Updates
+Do **not** use the Kramdown form from the Jekyll site, which puts the id on the next line:
 
-**CRITICAL**: When modifying any file with front matter, you MUST:
-1. Update the `lastupdated` field to today's date in ISO format (YYYY-MM-DD)
-2. Update the `years` field to include the current year if not already present
-   - If years is a single year (e.g., `2024`), change to range: `2024 - 2026`
-   - If years is already a range (e.g., `2021 - 2024`), update end year: `2021 - 2026`
-
-Example front matter updates:
-```yaml
-# Before modification
-copyright:
-  years: 2021 - 2024
-lastupdated: "2024-09-27"
-
-# After modification (in 2026)
-copyright:
-  years: 2021 - 2026
-lastupdated: "2026-01-30"
+```markdown
+## Install the agent
+{: #install-agent}
 ```
 
-#### Copyright Notices
-Copyright notices should span from start year through current year and be updated annually in January:
-- First year: `Copyright Foo, 2020`
-- Second year: `Copyright Foo, 2020 - 2021`
+- Python-Markdown only reads the attribute list on the same line as the heading, so the Kramdown form is ignored.
+- During staging, `build_nav.py` converts a Kramdown heading id in a source repository into the Material form. Other Kramdown attributes (`{:target="_blank"}`, `{: .externalLink}`) are dropped. Do not rely on this conversion in new content.
+- Without an explicit id, MkDocs generates one from the heading text: lowercase, punctuation removed, runs of spaces collapsed into one hyphen. Kramdown kept the double hyphen in headings such as `### **API:** POST /attribute`, so a link to `#api-post--attribute` breaks. Link to `#api-post-attribute`, or add an explicit id.
+- An explicit id replaces the generated one. Update links that used the generated id.
+- Use lowercase letters, digits, hyphens, and underscores in ids.
 
-### Information Architecture
-
-- **Personas**: Content should be created with specific user personas in mind (app developer, model developer, admin, DevSecNetOps, architect)
-- **User journeys**: Structure content around identified user journey paths
-- **Navigation**: Use breadcrumbs for section identification and navigation
-- **Page titles**: Titles should accurately reflect page content
-- **SEO**: Use og-meta tags for social media sharing, SEO optimization, and machine-readability
-- **Responsive design**: Ensure content works across devices with proper responsive web design principles
-
-### Content Re-usability
-
-- **Variables**: Use variables for proper names, trademarks, and repeated content
-- **Conditional rendering**: Surround environment- and feature-specific sections with conditional rendering tags
-- **Includes**: Headers, footers, and navigation should be included at page generation, not embedded directly
-
-### Performance and Optimization
-
-- **Image optimization**: All images should be optimized for web (72 dpi) with proper compression
-- **Asset minification**: All text-based markup (JS, CSS, SVG) should be minified for production
-- **Caching**: Leverage browser caching for static assets
-- **Lazy loading**: Implement lazy loading for images and non-critical content
-
-### Copyright statement in footer
-The copyright statement that appears at the bottom of each page is configured in `_config.yml`. The years stated in the footer copyright statement are formatted like this:
-- Year 1[-Current Year]
-For example, if the first year of availability is 2025 and the current year is 2025, the years in the copyright statement are stated like this:
-- 2025
-Another example is, if the first year of availability is 2015 and the current year is 2025, the years in the copyright statement are stated like this:
-- 2015-2025
-Updated the years in the copyright statement annually in January.
-
-## Code Style Guidelines
-
-### Markdown and Content Structure
-
-#### Front Matter Requirements
-
-All Markdown files must include proper Jekyll front matter:
-
-```yaml
 ---
-copyright:
-  years: 2021 - 2024
-lastupdated: "2024-09-27"
-layout: page
-title: "Page Title"
-description: "Brief description for SEO and navigation"
-nav_order: 2
-has_children: true  # if this page has child pages
-has_toc: false     # enable/disable table of contents
+
+## Code and project conventions
+
+- Python: keep `scripts/build_nav.py` testable; add coverage in `tests/test_build_nav.py` for new helpers.
+- Do not commit secrets. Use `ORG_READ_TOKEN` via environment or GitHub Actions secrets.
+- Generated artifacts are gitignored: `docs/docs/*/docs/`, `docs/docs/reference/`, `site/`, `mkdocs_build.yml`, `.env`.
+
+### Git / contribution notes for upstream Open Horizon
+
+- Prefer signed-off commits (`git commit -s`) when contributing to the upstream project.
+- Open an issue before large changes; link PRs to issues.
+- Branch naming in the upstream project often follows `issue-###`.
+
 ---
-```
 
-- **copyright.years**: Must be updated annually to reflect current year
-- **lastupdated**: ISO date format (YYYY-MM-DD) - update when modifying content
-- **title**: Use sentence case, quoted
-- **description**: Keep under 160 characters for SEO
-- **nav_order**: Numeric ordering for navigation (lower numbers appear first)
+## Updating these guidelines
 
-#### Content Organization
-
-- Use H2 (`##`) and H3 (`###`) headers for main sections
-- Avoid H1 headers (reserved for page title from front matter)
-- Include table of contents for pages with multiple sections (`has_toc: true`)
-- Use numbered lists for sequential steps, bullet points for non-sequential items
-
-#### Code Examples
-
-- Use fenced code blocks with language specification:
-  ```bash
-  # Correct
-  ```bash
-  make build
-  ```
-
-  ```javascript
-  // Incorrect - missing language
-  make build
-  ```
-- Enable syntax highlighting for all code blocks
-- Include comments in code examples for clarity
-- Use `$` prefix for command examples to indicate shell prompts
-
-#### Links and References
-
-- Use relative links within the documentation: `[link text](relative/path)`
-- Use absolute URLs for external references: `[Open Horizon](https://github.com/open-horizon)`
-- Reference files with proper extensions: `file.md`, `image.png`
-- Cross-reference other documentation pages using Jekyll collections
-
-### Jekyll Configuration
-
-#### Site Structure
-
-- **Root pages**: Place in repository root (e.g., `quick-start.md`)
-- **Documentation pages**: Place in `_docs/` directory
-- **Includes**: Custom components in `_includes/`
-- **Layouts**: Page templates in `_layouts/`
-- **Assets**: CSS in `css/`, JavaScript in `js/`, images in `img/`
-
-#### Theme and Styling
-
-- **Theme**: Just the Docs (configured in `_config.yml`)
-- **Custom styling**: Add to `css/style.scss` or `css/colorscheme.scss`
-- **Color scheme**: Uses `open-horizon-theme` defined in theme configuration
-- **Mermaid diagrams**: Enabled for architecture and flow diagrams
-- **Syntax highlighting**: Kramdown with Rouge, line numbers disabled
-
-#### Configuration Conventions
-
-- **HTML compression**: Enabled for production builds
-- **Search**: Enabled with custom tokenization for hyphenated terms
-- **Analytics**: Google Analytics configured (GDPR compliant)
-- **SEO**: Jekyll SEO tag plugin enabled
-
-### CSS/SCSS Guidelines
-
-#### File Organization
-
-- **style.scss**: Main stylesheet importing Jekyll theme
-- **colorscheme.scss**: Custom color variables and overrides
-- **Individual styles**: Component-specific styles in separate files
-
-#### Naming Conventions
-
-- Use BEM methodology: `block__element--modifier`
-- CSS variables for theme colors: `--header-color`, `--accent-color`
-- Class names: kebab-case (e.g., `.site-header`, `.nav-link`)
-
-#### Best Practices
-
-- Minimize custom CSS - prefer theme defaults
-- Use theme variables for colors and spacing
-- Ensure responsive design with mobile-first approach
-- Test styles across different browsers
-
-### JavaScript Guidelines
-
-#### File Organization
-
-- **js/**: Directory for all JavaScript files
-- **Vendor scripts**: Third-party libraries (e.g., `lunr.min.js`, `reveal.min.js`)
-- **Custom scripts**: Site-specific functionality (e.g., `search.js`, `clean-blog.js`)
-
-#### Code Style
-
-- Use modern ES6+ syntax where supported
-- Include JSDoc comments for functions
-- Minify production assets
-- Ensure cross-browser compatibility
-
-### Image and Asset Guidelines
-
-#### File Naming
-
-- **Logos**: `open-horizon.png`, `open-horizon-color.png`, `open-horizon-white.svg`
-- **Screenshots**: Descriptive names with hyphens: `git-signoff-vscode.png`
-- **Icons**: Semantic names: `launch-glyph.svg`, `favicon.png`
-
-#### Optimization
-
-- Use appropriate formats: SVG for logos/icons, PNG/JPG for photos
-- Compress images for web delivery
-- Provide multiple sizes for responsive images
-- Include alt text for accessibility
-
-### Git and Contribution Guidelines
-
-#### Commit Standards
-
-- **Signed commits**: All commits must use `git commit -s` (signed-off)
-- **Commit messages**: Descriptive but concise, focus on "what" and "why"
-- **Atomic commits**: One logical change per commit
-- **Branch naming**: `issue-###`
-
-#### Pull Request Process
-
-- Always open an issue before beginning to contribute. No bare PRs, please.
-- Try to use the appropriate issue template. If unsure, just ask in the chat room.
-- Make issues as atomic as possible. Do not put unrelated bugs into a single issue.
-- Create PRs from feature branches to `master`
-- Include description of changes and testing performed
-- Ensure all CI checks pass before merging
-- Update front matter `lastupdated` dates on content changes
-- Follow the standard process:
-  - Fork the repo
-  - Create a local branch with the issue in the format `issue-###`
-  - Commit often, each time with the `-s` or `--sign-off` flag
-  - Test your committed code before creating a PR. If unsure how to test, ask in the chat room.
-  - Create the PR by prefixing the title with `Issue: ## - <title of PR less than 72 characters>`
-  - Label the PR with the same labels as the issue
-  - "@" mention one or more Maintainers in a PR comment, and assign it to them if you can.
-  - Link the PR to the issue.
-  - Be prepared to answer any questions and make any changes.
-
-### Documentation Source Management
-
-#### Multi-Repository Sources
-Some of the documentation content in this repository is copied from other Open Horizon repositories by using automated workflows. The following directory listing shows the directories that receive content in this way, and the other Open Horizon repositories from which the content is copied:
-
-docs/
-├── anax/
-│   ├─ docs/                  # Copied from `open-horizon/anax`
-├── mgmt-hub/
-│   ├─ docs/                  # Copied from `open-horizon/devops`
-├── kubearmor-integration/
-│   ├─ docs/                  # Copied from `open-horizon/kubearmor-integration`
-├── fdo/
-│   ├─ docs/                  # Copied from `open-horizon/FDO-support`
-├── exchange-api/
-│   ├─ docs/                  # Copied from `open-horizon/exchange-api`
-├── release/
-│   ├─ docs/                  # Copied from `open-horizon/open-horizon-release`
-
-**Important**: Never modify markdown files in the directories in this repository that receive content from other Open Horizon repositories. Make changes only in the repositories from which the content is copied.  This will ensure that the content is kept in sync with the source repositories.  Instead, to make changes to the content in this repository, you must make the changes in the source repositories, and then wait for the automated workflows to copy the changes to this repository.
-
-#### File Exclusion
-
-The following files are excluded from Jekyll builds (defined in `_config.yml`):
-- Development files: `Gemfile*`, `Makefile`, `README.md`
-- Maintenance files: `MAINTAINERS.md`, `LICENSE`, `AGENTS.md`
-- Build artifacts: `vendor/`, `node_modules/`, `.sass-cache/`
-
-### Testing and Validation
-
-#### Automated Checks
-
-- **GitHub Actions**: Run on push to master and scheduled intervals
-- **Link checking**: Monthly validation of all hyperlinks
-- **Orphan detection**: Identifies unlinked documentation pages
-- **Performance**: Weekly Lighthouse audits
-- **Security**: CodeQL analysis for vulnerabilities
-
-#### Manual Testing
-
-- **Local build**: Always test with `make dev` before committing
-- **Cross-browser**: Test in Chrome, Firefox, Safari, Edge
-- **Mobile responsive**: Verify layout on mobile devices
-- **Accessibility**: Check with screen readers and keyboard navigation
-
-### Performance Optimization
-
-#### Build Optimization
-
-- **HTML compression**: Enabled in production builds
-- **Asset minification**: CSS and JavaScript are minified
-- **Image optimization**: Use appropriate formats and compression
-- **Caching**: Leverage browser caching for static assets
-
-#### Content Optimization
-
-- **Lazy loading**: Images and non-critical content
-- **Minimal JavaScript**: Only load necessary scripts
-- **Efficient CSS**: Minimize unused styles
-- **Fast search**: Lunr.js provides client-side search
-
-This guidelines document should be updated whenever new tools, workflows, or conventions are introduced to the repository.
+Update this file whenever the build toolchain, source-repo list, or contribution workflow changes.

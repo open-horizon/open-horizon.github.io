@@ -1,0 +1,8 @@
+mkdocs>=1.6.0
+mkdocs-material>=9.5.0
+mkdocs-monorepo-plugin>=1.1.0
+mkdocs-redirects>=1.2.1
+mkdocs-llmstxt>=0.5.1
+requests>=2.31.0
+PyYAML>=6.0
+pytest>=8.0.0

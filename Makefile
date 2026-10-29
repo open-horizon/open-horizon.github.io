@@ -1,47 +1,26 @@
-# Command variables 
-JEKYLL=bundle exec jekyll
-BUNDLE=bundle 
-GEM=gem
+.PHONY: stage serve clean test help dry-run build
 
-# default command/output 
-default: show-args
+help: ## Show this help
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-12s\033[0m %s\n", $$1, $$2}'
 
-# default output in user just type "make"
-show-args: 
-	@echo Follow these instructions:
-	@echo make init: Install and update all dependencies., and run one time before using the tools each day
-	@echo make run: start the local web server. does not build the site first.
-	@echo make dev: build and test the local documentation site
-	@echo make build: build the local documentation site. typically done before "make run"}
-	@echo make test: test the local documentation site
+PYTHON ?= python3
 
+stage: ## Fetch source-repo docs into docs/docs/<name>/docs/ and write mkdocs_build.yml
+	$(PYTHON) scripts/build_nav.py
 
-# make init: install and update all dependencies. run once before using tools each day
-init:
-	$(GEM) update --system
-	$(GEM) install bundler
-	$(BUNDLE) config unset deployment
-	$(BUNDLE) update --bundler
-	$(BUNDLE) install
-	$(BUNDLE) config set --local deployment 'true'
+serve: stage ## Stage docs then start the MkDocs preview server
+	mkdocs serve -f mkdocs_build.yml -a 127.0.0.1:8765
 
-#  make run: start the local web server. does not build the site first. 
-run:
-	$(JEKYLL) serve
+build: stage ## Stage docs then build the static site into site/
+	mkdocs build -f mkdocs_build.yml
 
-# make dev: build and test the local documentation site 
-dev: 
-	$(JEKYLL) build
-	$(JEKYLL) serve
-	$(JEKYLL) doctor
+dry-run: ## Show which repositories would be included without cloning
+	$(PYTHON) scripts/build_nav.py --dry-run
 
-# make build: build the local documentation site. typically done before "make run" 
-build:
-	$(JEKYLL) build
+test: ## Run unit tests
+	$(PYTHON) -m pytest tests/ -v
 
-# make test: test the local documentation site
-test: 
-	$(JEKYLL) doctor
-
-# These special targets are referred to as PHONY, which explicitly tells the make file that they are not associated with files.
-.PHONY : default show-args init run dev build test
+clean: ## Remove staged docs, build output, and generated config
+	rm -rf docs/docs/*/docs/ docs/docs/reference/ docs/docs/_clone_*/ docs/_repos/ docs/_sections/ site/ mkdocs_build.yml __pycache__ .pytest_cache
+	# Remove empty staged repo parent dirs left after deleting .../docs/
+	-find docs/docs -mindepth 1 -maxdepth 1 -type d -empty -delete

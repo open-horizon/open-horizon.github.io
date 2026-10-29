@@ -1,0 +1,38 @@
+{#-
+  Material source widget in the top header — points at the repository the
+  current page's docs come from.
+
+  Per-page front matter (injected by scripts/build_nav.py for staged repos):
+    repo_url:   https://github.com/open-horizon/<repo-name>
+    repo_name:  open-horizon/<repo-name>
+    repo_stars: <int>   — stargazers_count at build time
+    repo_forks: <int>   — forks_count at build time
+
+  First-party pages fall back to config.repo_url / config.repo_name
+  (this documentation site). Home/empty pages with no repo still hide the widget.
+-#}
+{% set effective_repo_url  = page.meta.get('repo_url',  config.repo_url)  if page and page.meta else config.repo_url %}
+{% set effective_repo_name = page.meta.get('repo_name', config.repo_name) if page and page.meta else config.repo_name %}
+{% if effective_repo_url %}
+  {% set repo_stars = page.meta.get('repo_stars', none) if page and page.meta else none %}
+  {% set repo_forks = page.meta.get('repo_forks', none) if page and page.meta else none %}
+<a href="{{ effective_repo_url }}" title="{{ lang.t('source') }}" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    {% set icon = config.theme.icon.repo or "fontawesome/brands/github" %}
+    {% include ".icons/" ~ icon ~ ".svg" %}
+  </div>
+  <div class="md-source__repository{% if repo_stars is not none or repo_forks is not none %} md-source__repository--active{% endif %}">
+    {{ effective_repo_name }}
+    {% if repo_stars is not none or repo_forks is not none %}
+    <ul class="md-source__facts">
+      {% if repo_stars is not none %}
+      <li class="md-source__fact md-source__fact--stars">{{ repo_stars }}</li>
+      {% endif %}
+      {% if repo_forks is not none %}
+      <li class="md-source__fact md-source__fact--forks">{{ repo_forks }}</li>
+      {% endif %}
+    </ul>
+    {% endif %}
+  </div>
+</a>
+{% endif %}
