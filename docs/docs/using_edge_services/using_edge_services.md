@@ -11,7 +11,7 @@ has_toc: False
 
 # Using edge services
 
-Open Horizon (Open Horizon) includes a centralized service: the exchange. This service supports the fully autonomous work of the agents and agbots. Additionally, an edge service can let you create an associated deployment pattern, and register your edge nodes to run that deployment pattern.
+Open Horizon includes a centralized service: the exchange. This service supports the fully autonomous work of the agents and agbots. Additionally, an edge service can let you create an associated deployment pattern, and register your edge nodes to run that deployment pattern.
 
 These examples show you how to deploy and use edge services:
 

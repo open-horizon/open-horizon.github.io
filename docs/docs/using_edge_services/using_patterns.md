@@ -11,7 +11,7 @@ grand_parent: Using edge services
 
 # Using patterns
 
-Typically, service deployment patterns can be published to the Open Horizon (Open Horizon) hub after a developer published an edge service in the horizon exchange.
+Typically, service deployment patterns can be published to the Open Horizon hub after a developer published an edge service in the horizon exchange.
 
 The hzn CLI provides capabilities to list and manage patterns in the Horizon exchange, including commands to list, publish, verify, update, and remove service deployment patterns. It also provides a way to list and remove cryptographic keys that are associated with a specific deployment pattern.
 

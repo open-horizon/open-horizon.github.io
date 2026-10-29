@@ -18,11 +18,15 @@ has_toc: False
 
 ### Dynamic delivery of ML models with Open Horizon in 1 minute (no audio)
 
-{% include youtubePlayer.html id="JWvxaFcl8_E" %}
+<div class="embed-youtube">
+<iframe src="https://www.youtube.com/embed/JWvxaFcl8_E" title="YouTube video" width="560" height="315" loading="lazy" allowfullscreen></iframe>
+</div>
 
 ### Managing ML deployments without restarting consuming applications (4 minutes)
 
-{% include youtubePlayer.html id="pD6UUMtJ3eI" %}
+<div class="embed-youtube">
+<iframe src="https://www.youtube.com/embed/pD6UUMtJ3eI" title="YouTube video" width="560" height="315" loading="lazy" allowfullscreen></iframe>
+</div>
 
 ## Code repositories
 

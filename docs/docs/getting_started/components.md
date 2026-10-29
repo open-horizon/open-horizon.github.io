@@ -10,7 +10,7 @@ nav_order: 2
 
 # Components
 
-Open Horizon (Open Horizon) includes several components that are bundled with the product.
+Open Horizon includes several components that are bundled with the product.
 
 View the following table for a description of the Open Horizon components:
 

@@ -20,7 +20,9 @@ This demo illustrates not only how values stored in the Secrets Management compo
 
 ## OpenBao secrets bound to Open Horizon deployed apps in 1 minute (no audio)
 
-{% include youtubePlayer.html id="GdeJh6bq1O0" %}
+<div class="embed-youtube">
+<iframe src="https://www.youtube.com/embed/GdeJh6bq1O0" title="YouTube video" width="560" height="315" loading="lazy" allowfullscreen></iframe>
+</div>
 
 ## Code repositories
 

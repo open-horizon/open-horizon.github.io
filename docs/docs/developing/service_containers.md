@@ -11,9 +11,9 @@ grand_parent: Developing edge services
 
 # Preparing to create an edge service
 
-Use Open Horizon (Open Horizon) to develop services within Docker&reg; containers for your edge devices. You can use any appropriate Linux base, programming languages, libraries, or utilities to create your edge services.
+Use Open Horizon to develop services within Docker&reg; containers for your edge devices. You can use any appropriate Linux base, programming languages, libraries, or utilities to create your edge services.
 
-After you push, sign, and publish your services, Open Horizon (Open Horizon) uses fully autonomous agents on your edge devices to download, validate, configure, install, and monitor your services.
+After you push, sign, and publish your services, Open Horizon uses fully autonomous agents on your edge devices to download, validate, configure, install, and monitor your services.
 
 Edge services often use cloud ingest services to store and further process edge analysis results. This process includes the development workflow for edge and cloud code.
 

@@ -11,7 +11,7 @@ nav_order: 14
 
 ## Introduction
 
-Open Horizon (Open Horizon) provides RESTful APIs for enabling components to collaborate, and to enable your organization's developers and users to control the components.
+Open Horizon provides RESTful APIs for enabling components to collaborate, and to enable your organization's developers and users to control the components.
 
 The Open Horizon REST APIs are documented within the Horizon project documentation. For more information, see the [Open Horizon ](https://github.com/open-horizon) GitHub source code.
 

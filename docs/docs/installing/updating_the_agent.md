@@ -10,7 +10,7 @@ parent: Installing edge device agents
 
 # Updating the agent
 
-If you received updated Open Horizon (Open Horizon) agent packages, you can easily update your edge device:
+If you received updated Open Horizon agent packages, you can easily update your edge device:
 
 1. Perform the steps in [Gather the necessary information and files for edge devices](../hub/gather_files.md#prereq_horizon) to create the updated **agentInstallFiles-&lt;edge-device-type&gt;.tar.gz** file with the newer agent packages.
   

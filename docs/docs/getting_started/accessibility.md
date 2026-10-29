@@ -14,6 +14,6 @@ Accessibility features assist users who have a disability, such as restricted mo
 
 ## Overview
 
-Open Horizon (Open Horizon) includes the following major accessibility features:
+Open Horizon includes the following major accessibility features:
 
 * [Commandline interface (CLI)](../cli/index.md) to manage the Open Horizon cluster

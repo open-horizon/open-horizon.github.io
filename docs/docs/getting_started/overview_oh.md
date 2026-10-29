@@ -33,11 +33,11 @@ The Open Horizon management hub is designed specifically for edge node managemen
 
 # Components
 
-Open Horizon (Open Horizon) includes several components that are required for functionality. For more information about such components, please see [Components](./components.md).
+Open Horizon includes several components that are required for functionality. For more information about such components, please see [Components](./components.md).
 
 ## What's next
 
-For more information about using Open Horizon and developing edge services, review the topics that are listed in Open Horizon (Open Horizon) [Welcome page](../index.md) and in the following sections:
+For more information about using Open Horizon and developing edge services, review the topics that are listed in Open Horizon [Welcome page](../index.md) and in the following sections:
 
 * [Accessibility](../getting_started/accessibility.md)
 * [Components](../getting_started/components.md)

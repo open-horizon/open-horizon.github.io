@@ -10,7 +10,7 @@ parent: Installing edge device agents
 
 # Preparing an edge device
 
-The following instructions guide you through the process of installing the required software on your edge device and registering it with Open Horizon (Open Horizon).
+The following instructions guide you through the process of installing the required software on your edge device and registering it with Open Horizon.
 
 ## Supported architectures and operating systems
 

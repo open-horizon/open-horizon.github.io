@@ -20,3 +20,8 @@
   font-weight: 700;
   letter-spacing: -0.02em;
 }
+
+.embed-youtube iframe {
+  max-width: 100%;
+  border: 0;
+}

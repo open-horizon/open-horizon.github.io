@@ -12,7 +12,7 @@ has_toc: False
 # Installing the management hub
 
 ## Management hub installation overview
-Complete the management hub installation and configuration before starting the Open Horizon (Open Horizon) node tasks.
+Complete the management hub installation and configuration before starting the Open Horizon node tasks.
 
 * [Configuration](configuration.md)
 

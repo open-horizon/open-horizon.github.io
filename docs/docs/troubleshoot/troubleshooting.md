@@ -16,7 +16,7 @@ Review the troubleshooting tips and frequently asked questions to help you troub
 * [Troubleshooting tips](#ts_tips)
 * [Frequently asked questions](../getting_started/faq.md)
 
-The following troubleshooting content describes the main components of Open Horizon (Open Horizon) and how to investigate the included interfaces to determine the state of the system.
+The following troubleshooting content describes the main components of Open Horizon and how to investigate the included interfaces to determine the state of the system.
 
 ## Troubleshooting tools
 

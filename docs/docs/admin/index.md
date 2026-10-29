@@ -12,7 +12,7 @@ has_toc: False
 
 # Administering
 
-Open Horizon (Open Horizon) supports various administrative functions that are needed to support an edge computing environment, including the following.
+Open Horizon supports various administrative functions that are needed to support an edge computing environment, including the following.
 
 * [Multi-tenancy](multi_tenancy.md)
 * [Troubleshooting](troubleshooting.md)

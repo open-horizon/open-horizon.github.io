@@ -25,7 +25,7 @@ To set up OpenShift Container Platform a cluster logging service, see the docume
 
 ## Basic logging
 
-Each Open Horizon (Open Horizon) pod sends logs to STDOUT, so they can be read with the `oc logs` command. Basic logging capacity is limited, and log-rotation is based on time and log output quantity.
+Each Open Horizon pod sends logs to STDOUT, so they can be read with the `oc logs` command. Basic logging capacity is limited, and log-rotation is based on time and log output quantity.
 
 Determine the pod that you want to obtain the logs for:
 

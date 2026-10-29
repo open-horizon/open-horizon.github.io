@@ -10,7 +10,7 @@ parent: CLI
 
 # Installing cloudctl, kubectl, and oc
 
-Follow these steps to install the command line tools that are needed to manage aspects of the Open Horizon (Open Horizon) management hub and edge clusters:
+Follow these steps to install the command line tools that are needed to manage aspects of the Open Horizon management hub and edge clusters:
 
 ## cloudctl
 

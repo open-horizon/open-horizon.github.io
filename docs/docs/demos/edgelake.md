@@ -20,15 +20,21 @@ This demo show how to deploy an application and make its generated data availabl
 
 ### EdgeLake deployed by Open Horizon in one minute (1 minute, no audio)
 
-{% include youtubePlayer.html id="fHVEhv2Bv4E" %}
+<div class="embed-youtube">
+<iframe src="https://www.youtube.com/embed/fHVEhv2Bv4E" title="YouTube video" width="560" height="315" loading="lazy" allowfullscreen></iframe>
+</div>
 
 ### EdgeLake Overview (4 minutes)
 
-{% include youtubePlayer.html id="lXcy1NUlIJI" %}
+<div class="embed-youtube">
+<iframe src="https://www.youtube.com/embed/lXcy1NUlIJI" title="YouTube video" width="560" height="315" loading="lazy" allowfullscreen></iframe>
+</div>
 
 ### EdgeLake + Open Horizon (3 minutes)
 
-{% include youtubePlayer.html id="eqXoRafyw9k" %}
+<div class="embed-youtube">
+<iframe src="https://www.youtube.com/embed/eqXoRafyw9k" title="YouTube video" width="560" height="315" loading="lazy" allowfullscreen></iframe>
+</div>
 
 ## Code repositories
 
