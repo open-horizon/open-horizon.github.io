@@ -4,7 +4,7 @@ years: 2020 - 2025
 title: Installing Open Horizon
 description: Documentation for Installation
 lastupdated: 2025-05-03
-nav_order: 8
+nav_order: 9
 has_children: True
 has_toc: False
 ---

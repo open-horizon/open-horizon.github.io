@@ -4,8 +4,8 @@ years: 2022 - 2025
 title: Deploying services to an edge cluster
 description: Documentation for Deploying services to an edge cluster
 lastupdated: 2025-05-03
-nav_order: 3
-parent: Edge clusters
+nav_order: 8
+parent: Installing edge clusters
 ---
 
 # Deploying services to an edge cluster

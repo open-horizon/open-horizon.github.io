@@ -663,6 +663,9 @@ def _collect_nav_pages() -> list[dict[str, Any]]:
                 continue
             text = md.read_text(encoding="utf-8", errors="replace")
             fm = _parse_front_matter(text)
+            # Just the Docs hides these pages from the sidebar
+            if str(fm.get("nav_exclude", "")).strip().lower() == "true":
+                continue
             title = fm.get("title") or _nav_label_for_md(md)
             title = str(title).strip().strip('"').strip("'")
             parent = fm.get("parent")
@@ -687,6 +690,72 @@ def _collect_nav_pages() -> list[dict[str, Any]]:
                 }
             )
     return pages
+
+
+NAV_ISSUE_TITLE = "Sidebar: pages with an unresolved parent"
+
+
+def find_unresolved_parents(pages: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Return pages whose ``parent`` title matches no page in *pages*."""
+    titles = {p["title"] for p in pages}
+    return [p for p in pages if p.get("parent") and p["parent"] not in titles]
+
+
+def format_unresolved_parents(problems: list[dict[str, Any]]) -> str:
+    """Render the issue body listing pages that the sidebar cannot place."""
+    rows = "\n".join(
+        f"| {p['title']} | `{p['parent']}` | `{p['path']}` |"
+        for p in sorted(problems, key=lambda p: p["path"])
+    )
+    return (
+        "The sidebar is built from `title` / `parent` front matter. These pages name a "
+        "`parent` that no page has as its `title`, so they appear at the top level "
+        "instead of under their section.\n\n"
+        "| Page | Missing parent | Source file |\n| --- | --- | --- |\n"
+        f"{rows}\n\n"
+        "Fix each page by setting `parent` to the exact title of an existing page, or "
+        "add the missing parent page. Pages under `docs/docs/<name>/docs/` are staged "
+        "from another repository and must be fixed there.\n\n"
+        "This issue is opened and updated by `scripts/build_nav.py` in the deploy workflow."
+    )
+
+
+def open_nav_issue(
+    problems: list[dict[str, Any]], repo: str, token: str, title: str = NAV_ISSUE_TITLE
+) -> Optional[str]:
+    """
+    Create (or refresh) the GitHub issue that lists unresolved sidebar parents.
+
+    An open issue with the same title is updated in place so scheduled builds do
+    not file duplicates. Returns the issue URL, or None if the request failed.
+    """
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+        "Authorization": f"Bearer {token}",
+    }
+    body = format_unresolved_parents(problems)
+    api = f"{GITHUB_API}/repos/{repo}/issues"
+    try:
+        resp = requests.get(api, headers=headers, params={"state": "open", "per_page": 100}, timeout=30)
+        resp.raise_for_status()
+        existing = next(
+            (i for i in resp.json() if i.get("title") == title and "pull_request" not in i),
+            None,
+        )
+        if existing:
+            if existing.get("body") != body:
+                resp = requests.patch(
+                    f"{api}/{existing['number']}", headers=headers, json={"body": body}, timeout=30
+                )
+                resp.raise_for_status()
+            return existing["html_url"]
+        resp = requests.post(api, headers=headers, json={"title": title, "body": body}, timeout=30)
+        resp.raise_for_status()
+        return resp.json()["html_url"]
+    except requests.RequestException as exc:
+        print(f"  ⚠ could not open the sidebar issue: {exc}", file=sys.stderr)
+        return None
 
 
 def build_jekyll_style_nav() -> list:
@@ -768,6 +837,20 @@ def write_build_config(
 # ---------------------------------------------------------------------------
 
 
+def report_nav_problems(problems: list[dict[str, Any]], open_issue: bool) -> None:
+    """File the sidebar issue, but only from a trusted CI run with a token."""
+    repo = os.environ.get("GITHUB_REPOSITORY", "")
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN") or ""
+    if not open_issue:
+        return
+    if os.environ.get("GITHUB_EVENT_NAME") == "pull_request" or not (repo and token):
+        print("  – skipping the sidebar issue (not a push/schedule run with a token)")
+        return
+    url = open_nav_issue(problems, repo, token)
+    if url:
+        print(f"  Sidebar issue: {url}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Stage Open Horizon source-repo docs and generate mkdocs_build.yml"
@@ -781,6 +864,11 @@ def main() -> None:
         "--org",
         default=ORG,
         help=f"GitHub organization name (default: {ORG})",
+    )
+    parser.add_argument(
+        "--open-issue",
+        action="store_true",
+        help="Open a GitHub issue in GITHUB_REPOSITORY when pages have an unresolved parent",
     )
     args = parser.parse_args()
 
@@ -833,6 +921,13 @@ def main() -> None:
         {"Documentation": "docs/index.md"},
     ] + content_nav
     print(f"  {len(content_nav)} top-level sidebar sections")
+
+    problems = find_unresolved_parents(_collect_nav_pages())
+    if problems:
+        print(f"  ⚠ {len(problems)} page(s) name a parent that does not exist:", file=sys.stderr)
+        for p in problems:
+            print(f"    - {p['title']!r} → parent {p['parent']!r} ({p['path']})", file=sys.stderr)
+        report_nav_problems(problems, args.open_issue)
 
     write_build_config(nav, dry_run=args.dry_run)
 
