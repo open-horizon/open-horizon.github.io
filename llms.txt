@@ -65,6 +65,7 @@
 
 - [Administering functions](https://open-horizon.github.io/docs/admin/index.md)
 - [Accessing logs](https://open-horizon.github.io/docs/admin/accessing_logs/index.md)
+- [Administering](https://open-horizon.github.io/docs/admin/administering/index.md)
 - [Monitoring](https://open-horizon.github.io/docs/admin/monitoring/index.md)
 - [Multi-tenancy](https://open-horizon.github.io/docs/admin/multi_tenancy/index.md)
 - [Troubleshooting](https://open-horizon.github.io/docs/admin/troubleshooting/index.md)
