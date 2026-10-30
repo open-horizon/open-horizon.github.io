@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2020 - 2025
 title: Installing Open Horizon
 description: Documentation for Installation
-lastupdated: 2025-05-03
+lastupdated: 2026-10-30
 nav_order: 9
 has_children: True
 has_toc: False

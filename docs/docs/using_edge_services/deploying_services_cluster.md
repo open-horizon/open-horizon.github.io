@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2022 - 2025
 title: Deploying services to an edge cluster
 description: Documentation for Deploying services to an edge cluster
-lastupdated: 2025-05-03
+lastupdated: 2026-10-30
 nav_order: 8
 parent: Installing edge clusters
 ---

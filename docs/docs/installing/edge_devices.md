@@ -3,7 +3,7 @@ copyright: Contributors to the Open Horizon project
 years: 2020 - 2026
 title: Edge devices info
 description: Documentation for Edge devices
-lastupdated: 2025-05-03
+lastupdated: 2026-10-30
 
 parent: Installing edge device agents
 nav_order: 0
