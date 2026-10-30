@@ -586,6 +586,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#heading-anchors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heading anchors
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6901,6 +6912,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#heading-anchors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heading anchors
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6932,6 +6954,23 @@
 <p>Content that you see on the management hub or in code is a literal string. This content is shown as <strong>bold</strong> text.</p>
 <h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
 <p>If you examine the <code>service.sh</code> code, you see that it uses these, and other configuration variables to control its behavior. <strong>PUBLISH</strong> controls if the code attempts to send messages to IBM Event Streams. <strong>MOCK</strong> controls if service.sh attempts to contact the REST APIs and its dependent services (cpu and gps) or if <code>service.sh</code> creates fake data.</p>
+<h2 id="heading-anchors">Heading anchors<a class="headerlink" href="#heading-anchors" title="Permanent link">&para;</a></h2>
+<p>Authors put an explicit anchor on a heading when other pages link to it. Use the Material <code>attr_list</code> syntax at the end of the heading line:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gu">## Install the agent {: #install-agent }</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>See [<span class="nt">Install the agent</span>](<span class="na">installing.md#install-agent</span>).
+</code></pre></div>
+<p>Do not use the Kramdown form from the earlier Jekyll site, which puts the id on the next line:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gu">## Install the agent</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>{: <span class="ni">#install-agent</span>}
+</code></pre></div>
+<ul>
+<li>The Markdown processor only reads the attribute list on the same line as the heading, so the Kramdown form is ignored.</li>
+<li>During the site build, a Kramdown heading id in a source repository is converted into the Material form. Other Kramdown attributes, such as <code>{:target="_blank"}</code> and <code>{: .externalLink}</code>, are dropped. New content should not rely on this conversion.</li>
+<li>Without an explicit id, MkDocs generates one from the heading text: lowercase, punctuation removed, and runs of spaces collapsed into one hyphen. Kramdown kept the double hyphen in headings such as <code>### **API:** POST /attribute</code>, so a link to <code>#api-post--attribute</code> breaks. Link to <code>#api-post-attribute</code> or add an explicit id.</li>
+<li>An explicit id replaces the generated one. Update links that used the generated id.</li>
+<li>Use lowercase letters, digits, hyphens, and underscores in ids.</li>
+</ul>
 
 
 
