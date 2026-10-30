@@ -3,8 +3,8 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2026
 title: Installing the management hub only
 description: Documentation for installing the management hub
-lastupdated: 2026-08-19
-nav_order: 9
+lastupdated: 2026-10-30
+nav_order: 8
 has_children: True
 has_toc: False
 ---
