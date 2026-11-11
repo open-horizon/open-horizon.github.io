@@ -3,8 +3,8 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2026
 title: Prerequisites for installing management hub only
 description: Documentation for Install Open Horizon
-lastupdated: 2026-08-19
-nav_order: 1
+lastupdated: 2026-11-11
+nav_order: 2
 parent: Installing the management hub only
 ---
 
