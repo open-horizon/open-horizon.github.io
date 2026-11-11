@@ -15,6 +15,7 @@ on:
 # Read access to public org repos uses ORG_READ_TOKEN when configured.
 permissions:
   contents: write
+  issues: write # build_nav.py --open-issue files the sidebar problem report
 
 jobs:
   build-and-deploy:
@@ -36,7 +37,8 @@ jobs:
       - name: Stage source-repo docs and generate mkdocs_build.yml
         env:
           ORG_READ_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
-        run: python scripts/build_nav.py
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/build_nav.py --open-issue
 
       - name: Build MkDocs site
         run: mkdocs build -f mkdocs_build.yml

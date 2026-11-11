@@ -295,3 +295,65 @@ class TestNavDuplicateTitles:
         assert "docs/ts/section.md" in flat
         section = next(n for n in nav if "Troubleshooting" in n)
         assert {"Tips": "docs/ts/tips.md"} in section["Troubleshooting"]
+
+
+class TestNavExclude:
+    def test_nav_exclude_pages_are_left_out(self, tmp_path, monkeypatch):
+        docs = tmp_path / "docs" / "docs"
+        docs.mkdir(parents=True)
+        (docs / "shown.md").write_text("---\ntitle: Shown\nnav_order: 1\n---\n")
+        (docs / "hidden.md").write_text("---\ntitle: Hidden\nnav_exclude: true\n---\n")
+        monkeypatch.setattr(build_nav, "DOCS_CONTENT_ROOT", str(docs))
+        monkeypatch.chdir(tmp_path)
+
+        titles = [p["title"] for p in build_nav._collect_nav_pages()]
+
+        assert "Shown" in titles
+        assert "Hidden" not in titles
+
+
+class TestUnresolvedParents:
+    PAGES = [
+        {"title": "Section", "parent": None, "path": "docs/a.md"},
+        {"title": "Child", "parent": "Section", "path": "docs/b.md"},
+        {"title": "Orphan", "parent": "Missing", "path": "docs/c.md"},
+    ]
+
+    def test_finds_only_pages_with_missing_parent(self):
+        problems = build_nav.find_unresolved_parents(self.PAGES)
+        assert [p["title"] for p in problems] == ["Orphan"]
+
+    def test_report_lists_page_parent_and_path(self):
+        body = build_nav.format_unresolved_parents(build_nav.find_unresolved_parents(self.PAGES))
+        assert "| Orphan | `Missing` | `docs/c.md` |" in body
+
+    def test_creates_issue_when_none_is_open(self):
+        problems = build_nav.find_unresolved_parents(self.PAGES)
+        with patch.object(build_nav.requests, "get") as get, patch.object(
+            build_nav.requests, "post"
+        ) as post:
+            get.return_value = MagicMock(json=lambda: [])
+            post.return_value = MagicMock(json=lambda: {"html_url": "https://example/1"})
+            url = build_nav.open_nav_issue(problems, "o/r", "tok")
+        assert url == "https://example/1"
+        assert post.call_args.kwargs["json"]["title"] == build_nav.NAV_ISSUE_TITLE
+
+    def test_updates_existing_open_issue_instead_of_duplicating(self):
+        problems = build_nav.find_unresolved_parents(self.PAGES)
+        existing = {"number": 7, "title": build_nav.NAV_ISSUE_TITLE, "body": "old", "html_url": "https://example/7"}
+        with patch.object(build_nav.requests, "get") as get, patch.object(
+            build_nav.requests, "post"
+        ) as post, patch.object(build_nav.requests, "patch") as patch_:
+            get.return_value = MagicMock(json=lambda: [existing])
+            url = build_nav.open_nav_issue(problems, "o/r", "tok")
+        assert url == "https://example/7"
+        post.assert_not_called()
+        assert patch_.call_args.args[0].endswith("/issues/7")
+
+    def test_pull_request_runs_do_not_open_an_issue(self, monkeypatch):
+        monkeypatch.setenv("GITHUB_REPOSITORY", "o/r")
+        monkeypatch.setenv("GITHUB_TOKEN", "tok")
+        monkeypatch.setenv("GITHUB_EVENT_NAME", "pull_request")
+        with patch.object(build_nav, "open_nav_issue") as opener:
+            build_nav.report_nav_problems([{"title": "x"}], open_issue=True)
+        opener.assert_not_called()

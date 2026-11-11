@@ -3,9 +3,9 @@ copyright: Contributors to the Open Horizon project
 years: 2021 - 2025
 title: Hello world with a secret
 description: This example teaches you how to develop an Open Horizon service that uses secrets. Secrets ensure that login credentials and other sensitive information are kept secure.
-lastupdated: 2025-05-07
-nav_order: 2
-parent: Secrets Manager
+lastupdated: 2026-10-30
+nav_order: 6
+parent: Secrets Management
 grand_parent: Developing edge services
 ---
 
